@@ -1,0 +1,15 @@
+package oserror // import "internal/oserror"
+
+Package oserror defines errors values used in the os package.
+
+These types are defined here to permit the syscall package to reference them.
+
+VARIABLES
+
+var (
+	ErrInvalid    = errors.New("invalid argument")
+	ErrPermission = errors.New("permission denied")
+	ErrExist      = errors.New("file already exists")
+	ErrNotExist   = errors.New("file does not exist")
+	ErrClosed     = errors.New("file already closed")
+)

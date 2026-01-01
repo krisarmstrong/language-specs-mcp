@@ -1,0 +1,55 @@
+{
+  "name": "language-specs-mcp",
+  "version": "1.0.0",
+  "description": "MCP server providing authoritative language specifications",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "commitlint": "commitlint --edit",
+    "prepare": "husky",
+    "fetch:go": "bash scripts/fetch-go.sh",
+    "fetch:typescript": "bash scripts/fetch-typescript.sh",
+    "fetch:c": "bash scripts/fetch-c.sh",
+    "fetch:cpp": "bash scripts/fetch-cpp.sh",
+    "fetch:python": "bash scripts/fetch-python.sh",
+    "fetch:assembly": "bash scripts/fetch-assembly.sh",
+    "fetch:basic": "bash scripts/fetch-basic.sh",
+    "fetch:bash": "bash scripts/fetch-bash.sh",
+    "fetch:batch": "bash scripts/fetch-batch.sh",
+    "fetch:csharp": "bash scripts/fetch-csharp.sh",
+    "fetch:css": "bash scripts/fetch-css.sh",
+    "fetch:html": "bash scripts/fetch-html.sh",
+    "fetch:git": "bash scripts/fetch-git.sh",
+    "fetch:javascript": "bash scripts/fetch-javascript.sh",
+    "fetch:java": "bash scripts/fetch-java.sh",
+    "fetch:kotlin": "bash scripts/fetch-kotlin.sh",
+    "fetch:lua": "bash scripts/fetch-lua.sh",
+    "fetch:powershell": "bash scripts/fetch-powershell.sh",
+    "fetch:rust": "bash scripts/fetch-rust.sh",
+    "fetch:sql": "bash scripts/fetch-sql.sh",
+    "fetch:swift": "bash scripts/fetch-swift.sh",
+    "fetch:all": "npm run fetch:assembly && npm run fetch:basic && npm run fetch:bash && npm run fetch:batch && npm run fetch:c && npm run fetch:cpp && npm run fetch:csharp && npm run fetch:css && npm run fetch:go && npm run fetch:html && npm run fetch:git && npm run fetch:javascript && npm run fetch:java && npm run fetch:kotlin && npm run fetch:lua && npm run fetch:powershell && npm run fetch:python && npm run fetch:rust && npm run fetch:sql && npm run fetch:swift && npm run fetch:typescript",
+    "fetch:stdlib": "npm run fetch:all",
+    "fetch:linters": "npm run fetch:all",
+    "fetch:formatters": "npm run fetch:all"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.10",
+    "@types/node": "^25.0.3",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "husky": "^9.0.11",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

@@ -1,0 +1,12 @@
+package goversion // import "internal/goversion"
+
+
+CONSTANTS
+
+const Version = 25
+    Version is the Go 1.x version which is currently in development and will
+    eventually get released.
+
+    It should be updated at the start of each development cycle to be the
+    version of the next Go 1.x release. See go.dev/issue/40705.
+

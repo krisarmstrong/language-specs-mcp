@@ -1,0 +1,1 @@
+# no-iterator\n\nSee: https://eslint.org/docs/latest/rules/no-iterator

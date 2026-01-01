@@ -1,0 +1,1 @@
+# large_const_arrays\n\nSee: https://rust-lang.github.io/rust-clippy/master/#large_const_arrays
