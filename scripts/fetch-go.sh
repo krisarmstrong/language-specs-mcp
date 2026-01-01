@@ -13,17 +13,23 @@ mkdir -p "$SPECS_DIR"/{stdlib,linters/golangci-lint,formatters,patterns}
 
 # Go Language Specification
 echo "Fetching Go spec..."
-curl -sL "https://go.dev/ref/spec" | \
+if ! curl -sL "https://go.dev/ref/spec" | \
   sed -n '/<article/,/<\/article>/p' | \
-  pandoc -f html -t markdown -o "$SPECS_DIR/spec.md" 2>/dev/null || \
-  curl -sL "https://raw.githubusercontent.com/golang/go/master/doc/go_spec.html" > "$SPECS_DIR/spec.html"
+  pandoc -f html -t markdown -o "$SPECS_DIR/spec.md" 2>/dev/null; then
+  if ! curl -sL "https://raw.githubusercontent.com/golang/go/master/doc/go_spec.html" > "$SPECS_DIR/spec.html" 2>/dev/null; then
+    echo "# Go Language Specification\n\nSee: https://go.dev/ref/spec" > "$SPECS_DIR/spec.md"
+  fi
+fi
 
 # Effective Go
 echo "Fetching Effective Go..."
-curl -sL "https://go.dev/doc/effective_go" | \
+if ! curl -sL "https://go.dev/doc/effective_go" | \
   sed -n '/<article/,/<\/article>/p' | \
-  pandoc -f html -t markdown -o "$SPECS_DIR/effective-go.md" 2>/dev/null || \
-  curl -sL "https://go.dev/doc/effective_go" > "$SPECS_DIR/effective-go.html"
+  pandoc -f html -t markdown -o "$SPECS_DIR/effective-go.md" 2>/dev/null; then
+  if ! curl -sL "https://go.dev/doc/effective_go" > "$SPECS_DIR/effective-go.html" 2>/dev/null; then
+    echo "# Effective Go\n\nSee: https://go.dev/doc/effective_go" > "$SPECS_DIR/effective-go.md"
+  fi
+fi
 
 # Go Proverbs (idiomatic patterns)
 cat > "$SPECS_DIR/patterns/proverbs.md" << 'EOF'
