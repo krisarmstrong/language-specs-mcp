@@ -87,6 +87,11 @@ This project follows SemVer. See `VERSIONING.md`.
 
 Use the GitHub issue templates for bugs and feature requests.
 
+## CI and Releases
+
+- CI runs on every push and PR.
+- Tag a release with `vX.Y.Z` to publish GitHub releases.
+
 ## Claude Desktop Configuration
 
 Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
