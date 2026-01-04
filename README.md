@@ -192,6 +192,18 @@ Search indexes are written to `specs/<language>/search.json` for context search 
 Every fetched document is traced to its source URL and a SHA-256 hash in `specs/<language>/sources.json`.
 Run `npm run generate:manifests` to refresh these provenance records and audit the upstream sources we cite.
 
+## Health Dashboard
+
+Generate a machine-readable health summary and serve a lightweight dashboard for quick inspection.
+
+```
+npm run generate:health
+npm run dashboard
+```
+
+The dashboard is available at `http://localhost:9000/health.html` and the data lives in `docs/site/health.json`.
+LLMs can also call the data file directly to see freshness, linter/formatter coverage, and tooling sources for each language.
+
 ## How To Use With LLMs
 
 Add a short instruction so the model always queries the MCP server first:

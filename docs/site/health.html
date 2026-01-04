@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Language Specs Health Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="glow glow-a"></div>
+    <div class="glow glow-b"></div>
+    <main class="shell">
+      <header class="top">
+        <div>
+          <p class="eyebrow">Health Dashboard</p>
+          <h1>Language Specs MCP</h1>
+          <p class="subtitle">Freshness, fetch status, and source provenance for every language.</p>
+        </div>
+        <div class="meta health-meta">
+          <div class="stat">
+            <span class="label">Generated</span>
+            <span id="healthGenerated">Loading…</span>
+          </div>
+          <div class="stat">
+            <span class="label">Languages</span>
+            <span id="healthLanguages">0</span>
+          </div>
+          <div class="stat">
+            <span class="label">Stale</span>
+            <span id="healthStale">0</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="panel health-panel">
+        <table class="health-table">
+          <thead>
+            <tr>
+              <th>Language</th>
+              <th>Last fetched</th>
+              <th>Freshness</th>
+              <th>Spec / Stdlib / Linters / Formatters</th>
+              <th>Version</th>
+              <th>Sources</th>
+            </tr>
+          </thead>
+          <tbody id="healthTableBody"></tbody>
+        </table>
+      </section>
+    </main>
+    <script src="./health.js"></script>
+  </body>
+</html>

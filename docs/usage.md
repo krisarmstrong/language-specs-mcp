@@ -40,6 +40,7 @@ Use the language-specs MCP server for authoritative references. Prefer MCP resul
 
 - `search_specs` supports `allow_fallback` (boolean). Set to `false` to skip full-file scanning when indexes are missing.
 - `list_resources` is paginated. Use the `cursor` field from the response to request the next page.
+- `health.json` summarizes every language's freshness, spec coverage, and default linter/formatter counts. Use it or the `health.html` dashboard (via `npm run dashboard`) when you want a bird's-eye view.
 
 ## Provenance
 

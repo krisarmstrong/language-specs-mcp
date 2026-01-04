@@ -182,6 +182,52 @@ h1 {
   padding: 20px;
 }
 
+.health-panel {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(29, 26, 22, 0.08);
+}
+
+.health-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.health-table th,
+.health-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.health-table tr.status-good {
+  background: rgba(13, 110, 253, 0.08);
+}
+
+.health-table tr.status-warning {
+  background: rgba(255, 193, 7, 0.1);
+}
+
+.health-table tr.status-stale {
+  background: rgba(220, 53, 69, 0.1);
+}
+
+.health-table tr.status-missing {
+  background: rgba(108, 117, 125, 0.1);
+}
+
+.health-notes {
+  font-size: 0.75rem;
+  color: rgba(29, 26, 22, 0.7);
+  margin-top: 0.25rem;
+}
+
+.health-counts {
+  font-size: 0.85rem;
+  color: rgba(29, 26, 22, 0.7);
+}
+
 .languages .list {
   display: flex;
   flex-direction: column;
