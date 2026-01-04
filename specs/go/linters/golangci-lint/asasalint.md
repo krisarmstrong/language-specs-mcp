@@ -1,1 +1,3 @@
-# asasalint\n\nSee: https://golangci-lint.run/docs/linters/asasalint/
+# asasalint
+
+See: https://golangci-lint.run/docs/linters/asasalint/

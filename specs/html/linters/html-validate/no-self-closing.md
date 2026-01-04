@@ -1,1 +1,3 @@
-# no-self-closing\n\nSee: https://html-validate.org/rules/no-self-closing
+# no-self-closing
+
+See: https://html-validate.org/rules/no-self-closing

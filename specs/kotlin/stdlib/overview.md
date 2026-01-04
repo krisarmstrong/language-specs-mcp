@@ -1,1 +1,3 @@
-# Kotlin Standard Library\n\nSee: https://kotlinlang.org/api/latest/jvm/stdlib/
+# Kotlin Standard Library
+
+See: https://kotlinlang.org/api/latest/jvm/stdlib/

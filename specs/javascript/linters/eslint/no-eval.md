@@ -1,1 +1,3 @@
-# no-eval\n\nSee: https://eslint.org/docs/latest/rules/no-eval
+# no-eval
+
+See: https://eslint.org/docs/latest/rules/no-eval

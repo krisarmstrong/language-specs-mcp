@@ -1,1 +1,3 @@
-# multi_assignments\n\nSee: https://rust-lang.github.io/rust-clippy/master/#multi_assignments
+# multi_assignments
+
+See: https://rust-lang.github.io/rust-clippy/master/#multi_assignments

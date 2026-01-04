@@ -1,1 +1,3 @@
-# no-multi-str\n\nSee: https://eslint.org/docs/latest/rules/no-multi-str
+# no-multi-str
+
+See: https://eslint.org/docs/latest/rules/no-multi-str

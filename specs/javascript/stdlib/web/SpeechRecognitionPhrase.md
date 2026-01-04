@@ -1,1 +1,3 @@
-# SpeechRecognitionPhrase\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionPhrase
+# SpeechRecognitionPhrase
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionPhrase

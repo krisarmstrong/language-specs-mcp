@@ -1,1 +1,3 @@
-# lll\n\nSee: https://golangci-lint.run/docs/linters/lll/
+# lll
+
+See: https://golangci-lint.run/docs/linters/lll/

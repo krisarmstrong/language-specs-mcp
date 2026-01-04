@@ -1,1 +1,3 @@
-# no-regex-spaces\n\nSee: https://eslint.org/docs/latest/rules/no-regex-spaces
+# no-regex-spaces
+
+See: https://eslint.org/docs/latest/rules/no-regex-spaces

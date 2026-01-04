@@ -1,1 +1,3 @@
-# transmute_ptr_to_ptr\n\nSee: https://rust-lang.github.io/rust-clippy/master/#transmute_ptr_to_ptr
+# transmute_ptr_to_ptr
+
+See: https://rust-lang.github.io/rust-clippy/master/#transmute_ptr_to_ptr

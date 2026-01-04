@@ -1,1 +1,3 @@
-# Blob\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Blob
+# Blob
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Blob

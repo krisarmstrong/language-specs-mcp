@@ -1,1 +1,3 @@
-# unused_async\n\nSee: https://rust-lang.github.io/rust-clippy/master/#unused_async
+# unused_async
+
+See: https://rust-lang.github.io/rust-clippy/master/#unused_async

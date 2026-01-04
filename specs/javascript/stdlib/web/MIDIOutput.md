@@ -1,1 +1,3 @@
-# MIDIOutput\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MIDIOutput
+# MIDIOutput
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MIDIOutput

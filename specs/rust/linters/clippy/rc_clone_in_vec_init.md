@@ -1,1 +1,3 @@
-# rc_clone_in_vec_init\n\nSee: https://rust-lang.github.io/rust-clippy/master/#rc_clone_in_vec_init
+# rc_clone_in_vec_init
+
+See: https://rust-lang.github.io/rust-clippy/master/#rc_clone_in_vec_init

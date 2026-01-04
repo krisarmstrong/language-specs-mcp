@@ -1,1 +1,3 @@
-# noinlineerr\n\nSee: https://golangci-lint.run/docs/linters/noinlineerr/
+# noinlineerr
+
+See: https://golangci-lint.run/docs/linters/noinlineerr/

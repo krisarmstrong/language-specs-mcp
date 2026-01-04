@@ -1,1 +1,3 @@
-# container-name-pattern\n\nSee: https://stylelint.io/user-guide/rules/container-name-pattern
+# container-name-pattern
+
+See: https://stylelint.io/user-guide/rules/container-name-pattern

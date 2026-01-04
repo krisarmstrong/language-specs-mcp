@@ -1,1 +1,3 @@
-# SpeechGrammarList\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList
+# SpeechGrammarList
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList

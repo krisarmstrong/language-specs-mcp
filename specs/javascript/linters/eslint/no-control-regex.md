@@ -1,1 +1,3 @@
-# no-control-regex\n\nSee: https://eslint.org/docs/latest/rules/no-control-regex
+# no-control-regex
+
+See: https://eslint.org/docs/latest/rules/no-control-regex

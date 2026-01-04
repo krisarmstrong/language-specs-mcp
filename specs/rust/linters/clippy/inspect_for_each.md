@@ -1,1 +1,3 @@
-# inspect_for_each\n\nSee: https://rust-lang.github.io/rust-clippy/master/#inspect_for_each
+# inspect_for_each
+
+See: https://rust-lang.github.io/rust-clippy/master/#inspect_for_each

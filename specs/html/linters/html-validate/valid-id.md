@@ -1,1 +1,3 @@
-# valid-id\n\nSee: https://html-validate.org/rules/valid-id
+# valid-id
+
+See: https://html-validate.org/rules/valid-id

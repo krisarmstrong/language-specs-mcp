@@ -1,1 +1,3 @@
-# prefer-native-element\n\nSee: https://html-validate.org/rules/prefer-native-element
+# prefer-native-element
+
+See: https://html-validate.org/rules/prefer-native-element

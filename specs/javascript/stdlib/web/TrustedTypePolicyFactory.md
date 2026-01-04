@@ -1,1 +1,3 @@
-# TrustedTypePolicyFactory\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory
+# TrustedTypePolicyFactory
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicyFactory

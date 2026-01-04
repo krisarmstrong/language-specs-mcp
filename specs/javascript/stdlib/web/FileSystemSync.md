@@ -1,1 +1,3 @@
-# FileSystemSync\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/FileSystemSync
+# FileSystemSync
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/FileSystemSync

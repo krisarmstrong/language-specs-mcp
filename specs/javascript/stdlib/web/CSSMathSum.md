@@ -1,1 +1,3 @@
-# CSSMathSum\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSMathSum
+# CSSMathSum
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSMathSum

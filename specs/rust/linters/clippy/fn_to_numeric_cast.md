@@ -1,1 +1,3 @@
-# fn_to_numeric_cast\n\nSee: https://rust-lang.github.io/rust-clippy/master/#fn_to_numeric_cast
+# fn_to_numeric_cast
+
+See: https://rust-lang.github.io/rust-clippy/master/#fn_to_numeric_cast

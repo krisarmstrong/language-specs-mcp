@@ -1,1 +1,3 @@
-# CanvasCaptureMediaStreamTrack\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CanvasCaptureMediaStreamTrack
+# CanvasCaptureMediaStreamTrack
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CanvasCaptureMediaStreamTrack

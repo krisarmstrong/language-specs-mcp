@@ -1,1 +1,3 @@
-# WebGLBuffer\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/WebGLBuffer
+# WebGLBuffer
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/WebGLBuffer

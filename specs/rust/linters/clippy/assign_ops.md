@@ -1,1 +1,3 @@
-# assign_ops\n\nSee: https://rust-lang.github.io/rust-clippy/master/#assign_ops
+# assign_ops
+
+See: https://rust-lang.github.io/rust-clippy/master/#assign_ops

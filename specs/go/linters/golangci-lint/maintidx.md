@@ -1,1 +1,3 @@
-# maintidx\n\nSee: https://golangci-lint.run/docs/linters/maintidx/
+# maintidx
+
+See: https://golangci-lint.run/docs/linters/maintidx/

@@ -1,1 +1,3 @@
-# keyframes-name-pattern\n\nSee: https://stylelint.io/user-guide/rules/keyframes-name-pattern
+# keyframes-name-pattern
+
+See: https://stylelint.io/user-guide/rules/keyframes-name-pattern

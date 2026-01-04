@@ -1,1 +1,3 @@
-# PerformancePaintTiming\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming
+# PerformancePaintTiming
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming

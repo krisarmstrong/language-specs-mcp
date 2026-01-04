@@ -1,1 +1,3 @@
-# WebGLVertexArrayObject\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/WebGLVertexArrayObject
+# WebGLVertexArrayObject
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/WebGLVertexArrayObject

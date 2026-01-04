@@ -1,1 +1,3 @@
-# RISC-V Specifications\n\nSee: https://riscv.org/technical/specifications/
+# RISC-V Specifications
+
+See: https://riscv.org/technical/specifications/

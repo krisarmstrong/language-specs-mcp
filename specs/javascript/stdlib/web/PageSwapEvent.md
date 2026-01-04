@@ -1,1 +1,3 @@
-# PageSwapEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PageSwapEvent
+# PageSwapEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PageSwapEvent

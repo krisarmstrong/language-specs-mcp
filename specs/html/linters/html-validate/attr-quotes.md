@@ -1,1 +1,3 @@
-# attr-quotes\n\nSee: https://html-validate.org/rules/attr-quotes
+# attr-quotes
+
+See: https://html-validate.org/rules/attr-quotes

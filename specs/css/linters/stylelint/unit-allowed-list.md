@@ -1,1 +1,3 @@
-# unit-allowed-list\n\nSee: https://stylelint.io/user-guide/rules/unit-allowed-list
+# unit-allowed-list
+
+See: https://stylelint.io/user-guide/rules/unit-allowed-list

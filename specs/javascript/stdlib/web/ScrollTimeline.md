@@ -1,1 +1,3 @@
-# ScrollTimeline\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/ScrollTimeline
+# ScrollTimeline
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/ScrollTimeline

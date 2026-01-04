@@ -1,1 +1,7 @@
-# Kotlin Language Specification\n\nSee: https://kotlinlang.org/spec/
+# Kotlin Language Specification
+Version: unknown
+
+Source: https://kotlinlang.org/spec/
+
+
+See: https://kotlinlang.org/spec/

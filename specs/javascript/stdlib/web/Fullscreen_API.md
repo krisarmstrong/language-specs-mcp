@@ -1,1 +1,3 @@
-# Fullscreen_API\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API
+# Fullscreen_API
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API

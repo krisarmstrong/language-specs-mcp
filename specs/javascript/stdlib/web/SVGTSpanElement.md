@@ -1,1 +1,3 @@
-# SVGTSpanElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGTSpanElement
+# SVGTSpanElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGTSpanElement

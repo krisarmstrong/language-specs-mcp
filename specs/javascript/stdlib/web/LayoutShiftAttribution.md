@@ -1,1 +1,3 @@
-# LayoutShiftAttribution\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/LayoutShiftAttribution
+# LayoutShiftAttribution
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/LayoutShiftAttribution

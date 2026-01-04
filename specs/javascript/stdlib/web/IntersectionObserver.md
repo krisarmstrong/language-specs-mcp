@@ -1,1 +1,3 @@
-# IntersectionObserver\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver
+# IntersectionObserver
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver

@@ -1,1 +1,3 @@
-# thelper\n\nSee: https://golangci-lint.run/docs/linters/thelper/
+# thelper
+
+See: https://golangci-lint.run/docs/linters/thelper/

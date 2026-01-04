@@ -1,1 +1,3 @@
-# mem_forget\n\nSee: https://rust-lang.github.io/rust-clippy/master/#mem_forget
+# mem_forget
+
+See: https://rust-lang.github.io/rust-clippy/master/#mem_forget

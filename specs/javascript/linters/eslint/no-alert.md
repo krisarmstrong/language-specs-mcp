@@ -1,1 +1,3 @@
-# no-alert\n\nSee: https://eslint.org/docs/latest/rules/no-alert
+# no-alert
+
+See: https://eslint.org/docs/latest/rules/no-alert

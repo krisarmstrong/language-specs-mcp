@@ -1,1 +1,3 @@
-# tel-non-breaking\n\nSee: https://html-validate.org/rules/tel-non-breaking
+# tel-non-breaking
+
+See: https://html-validate.org/rules/tel-non-breaking

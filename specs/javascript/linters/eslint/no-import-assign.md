@@ -1,1 +1,3 @@
-# no-import-assign\n\nSee: https://eslint.org/docs/latest/rules/no-import-assign
+# no-import-assign
+
+See: https://eslint.org/docs/latest/rules/no-import-assign

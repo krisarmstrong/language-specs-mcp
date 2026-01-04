@@ -1,1 +1,3 @@
-# HTMLBaseElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLBaseElement
+# HTMLBaseElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLBaseElement

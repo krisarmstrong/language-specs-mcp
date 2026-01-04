@@ -1,1 +1,3 @@
-# testifylint\n\nSee: https://golangci-lint.run/docs/linters/testifylint/
+# testifylint
+
+See: https://golangci-lint.run/docs/linters/testifylint/

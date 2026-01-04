@@ -1,1 +1,3 @@
-# CSSFontFaceRule\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFaceRule
+# CSSFontFaceRule
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSFontFaceRule

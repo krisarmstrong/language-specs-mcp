@@ -1,1 +1,3 @@
-# require-atomic-updates\n\nSee: https://eslint.org/docs/latest/rules/require-atomic-updates
+# require-atomic-updates
+
+See: https://eslint.org/docs/latest/rules/require-atomic-updates

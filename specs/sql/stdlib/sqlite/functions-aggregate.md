@@ -1,1 +1,3 @@
-# SQLite Aggregate Functions\n\nSee: https://www.sqlite.org/lang_aggfunc.html
+# SQLite Aggregate Functions
+
+See: https://www.sqlite.org/lang_aggfunc.html

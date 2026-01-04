@@ -1,1 +1,3 @@
-# declaration-empty-line-before\n\nSee: https://stylelint.io/user-guide/rules/declaration-empty-line-before
+# declaration-empty-line-before
+
+See: https://stylelint.io/user-guide/rules/declaration-empty-line-before

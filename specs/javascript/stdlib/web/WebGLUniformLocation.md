@@ -1,1 +1,3 @@
-# WebGLUniformLocation\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/WebGLUniformLocation
+# WebGLUniformLocation
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/WebGLUniformLocation

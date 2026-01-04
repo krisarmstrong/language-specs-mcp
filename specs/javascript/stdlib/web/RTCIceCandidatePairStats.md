@@ -1,1 +1,3 @@
-# RTCIceCandidatePairStats\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats
+# RTCIceCandidatePairStats
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats

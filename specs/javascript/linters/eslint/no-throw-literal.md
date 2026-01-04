@@ -1,1 +1,3 @@
-# no-throw-literal\n\nSee: https://eslint.org/docs/latest/rules/no-throw-literal
+# no-throw-literal
+
+See: https://eslint.org/docs/latest/rules/no-throw-literal

@@ -1,1 +1,3 @@
-# godot\n\nSee: https://golangci-lint.run/docs/linters/godot/
+# godot
+
+See: https://golangci-lint.run/docs/linters/godot/

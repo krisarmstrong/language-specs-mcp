@@ -1,1 +1,3 @@
-# SVGAnimatedPreserveAspectRatio\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedPreserveAspectRatio
+# SVGAnimatedPreserveAspectRatio
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedPreserveAspectRatio

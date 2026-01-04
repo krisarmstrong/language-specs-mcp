@@ -1,6 +1,9 @@
 # Biome Linter - Complete Rules Reference
+Version: unknown
+Source: https://biomejs.dev/linter/rules/
 
-**Source:** https://biomejs.dev/linter/rules/
+
+**Source:** https://biomejs.dev/linter/
 
 Biome is a fast formatter and linter for JavaScript, TypeScript, JSX, JSON, CSS.
 
@@ -27,7 +30,7 @@ Biome is a fast formatter and linter for JavaScript, TypeScript, JSX, JSON, CSS.
 
 ```json
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
   "linter": {
     "enabled": true,
     "rules": {

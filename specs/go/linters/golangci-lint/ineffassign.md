@@ -1,1 +1,3 @@
-# ineffassign\n\nSee: https://golangci-lint.run/docs/linters/ineffassign/
+# ineffassign
+
+See: https://golangci-lint.run/docs/linters/ineffassign/

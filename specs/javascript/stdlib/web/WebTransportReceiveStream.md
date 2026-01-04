@@ -1,1 +1,3 @@
-# WebTransportReceiveStream\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/WebTransportReceiveStream
+# WebTransportReceiveStream
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/WebTransportReceiveStream

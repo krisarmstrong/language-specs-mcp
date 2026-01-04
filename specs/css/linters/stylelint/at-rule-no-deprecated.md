@@ -1,1 +1,3 @@
-# at-rule-no-deprecated\n\nSee: https://stylelint.io/user-guide/rules/at-rule-no-deprecated
+# at-rule-no-deprecated
+
+See: https://stylelint.io/user-guide/rules/at-rule-no-deprecated

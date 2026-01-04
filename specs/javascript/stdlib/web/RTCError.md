@@ -1,1 +1,3 @@
-# RTCError\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCError
+# RTCError
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCError

@@ -1,1 +1,3 @@
-# NotRestoredReasonDetails\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/NotRestoredReasonDetails
+# NotRestoredReasonDetails
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/NotRestoredReasonDetails

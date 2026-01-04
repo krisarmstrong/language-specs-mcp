@@ -1,1 +1,3 @@
-# PerformanceMark\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceMark
+# PerformanceMark
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceMark

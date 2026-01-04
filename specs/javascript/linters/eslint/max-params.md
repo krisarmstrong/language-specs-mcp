@@ -1,1 +1,3 @@
-# max-params\n\nSee: https://eslint.org/docs/latest/rules/max-params
+# max-params
+
+See: https://eslint.org/docs/latest/rules/max-params

@@ -1,1 +1,3 @@
-# HTMLAudioElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement
+# HTMLAudioElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement

@@ -1,1 +1,3 @@
-# VRFrameData\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/VRFrameData
+# VRFrameData
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/VRFrameData

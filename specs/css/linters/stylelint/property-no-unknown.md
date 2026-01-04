@@ -1,1 +1,3 @@
-# property-no-unknown\n\nSee: https://stylelint.io/user-guide/rules/property-no-unknown
+# property-no-unknown
+
+See: https://stylelint.io/user-guide/rules/property-no-unknown

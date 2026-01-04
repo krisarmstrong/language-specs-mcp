@@ -1,1 +1,3 @@
-# Keyboard\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Keyboard
+# Keyboard
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Keyboard

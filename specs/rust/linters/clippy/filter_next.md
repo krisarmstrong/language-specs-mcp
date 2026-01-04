@@ -1,1 +1,3 @@
-# filter_next\n\nSee: https://rust-lang.github.io/rust-clippy/master/#filter_next
+# filter_next
+
+See: https://rust-lang.github.io/rust-clippy/master/#filter_next

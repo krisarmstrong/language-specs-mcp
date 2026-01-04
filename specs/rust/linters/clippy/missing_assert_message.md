@@ -1,1 +1,3 @@
-# missing_assert_message\n\nSee: https://rust-lang.github.io/rust-clippy/master/#missing_assert_message
+# missing_assert_message
+
+See: https://rust-lang.github.io/rust-clippy/master/#missing_assert_message

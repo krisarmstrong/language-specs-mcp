@@ -1,1 +1,3 @@
-# index\n\nSee: https://html-validate.org/rules/index
+# index
+
+See: https://html-validate.org/rules/index

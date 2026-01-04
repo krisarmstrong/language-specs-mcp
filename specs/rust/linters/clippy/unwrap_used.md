@@ -1,1 +1,3 @@
-# unwrap_used\n\nSee: https://rust-lang.github.io/rust-clippy/master/#unwrap_used
+# unwrap_used
+
+See: https://rust-lang.github.io/rust-clippy/master/#unwrap_used

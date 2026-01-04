@@ -1,1 +1,3 @@
-# dogsled\n\nSee: https://golangci-lint.run/docs/linters/dogsled/
+# dogsled
+
+See: https://golangci-lint.run/docs/linters/dogsled/

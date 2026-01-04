@@ -1,1 +1,3 @@
-# disallowed_methods\n\nSee: https://rust-lang.github.io/rust-clippy/master/#disallowed_methods
+# disallowed_methods
+
+See: https://rust-lang.github.io/rust-clippy/master/#disallowed_methods

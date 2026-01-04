@@ -1,4 +1,11 @@
 # SQL Overview
+Version: vendor
+
+Source: https://www.postgresql.org/docs/current/sql.html
+Source: https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html
+Source: https://www.sqlite.org/lang.html
+Source: https://learn.microsoft.com/en-us/sql/t-sql/language-reference?view=sql-server-ver16
+
 
 The SQL standard is copyrighted; use vendor references for authoritative details.
 

@@ -1,1 +1,3 @@
-# gochecknoglobals\n\nSee: https://golangci-lint.run/docs/linters/gochecknoglobals/
+# gochecknoglobals
+
+See: https://golangci-lint.run/docs/linters/gochecknoglobals/

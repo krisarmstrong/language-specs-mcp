@@ -1,1 +1,3 @@
-# map_clone\n\nSee: https://rust-lang.github.io/rust-clippy/master/#map_clone
+# map_clone
+
+See: https://rust-lang.github.io/rust-clippy/master/#map_clone

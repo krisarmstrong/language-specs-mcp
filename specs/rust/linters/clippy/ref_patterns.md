@@ -1,1 +1,3 @@
-# ref_patterns\n\nSee: https://rust-lang.github.io/rust-clippy/master/#ref_patterns
+# ref_patterns
+
+See: https://rust-lang.github.io/rust-clippy/master/#ref_patterns

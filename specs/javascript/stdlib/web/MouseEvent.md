@@ -1,1 +1,3 @@
-# MouseEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent
+# MouseEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent

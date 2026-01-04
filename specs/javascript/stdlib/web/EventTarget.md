@@ -1,1 +1,3 @@
-# EventTarget\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget
+# EventTarget
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget

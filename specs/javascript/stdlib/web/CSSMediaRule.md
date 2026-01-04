@@ -1,1 +1,3 @@
-# CSSMediaRule\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSMediaRule
+# CSSMediaRule
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSMediaRule

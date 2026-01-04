@@ -1,1 +1,3 @@
-# property-no-deprecated\n\nSee: https://stylelint.io/user-guide/rules/property-no-deprecated
+# property-no-deprecated
+
+See: https://stylelint.io/user-guide/rules/property-no-deprecated

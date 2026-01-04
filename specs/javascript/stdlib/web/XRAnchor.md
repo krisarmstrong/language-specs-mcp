@@ -1,1 +1,3 @@
-# XRAnchor\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/XRAnchor
+# XRAnchor
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/XRAnchor

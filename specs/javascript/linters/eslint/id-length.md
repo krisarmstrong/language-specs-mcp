@@ -1,1 +1,3 @@
-# id-length\n\nSee: https://eslint.org/docs/latest/rules/id-length
+# id-length
+
+See: https://eslint.org/docs/latest/rules/id-length

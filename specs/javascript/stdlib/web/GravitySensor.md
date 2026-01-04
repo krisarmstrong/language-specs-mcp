@@ -1,1 +1,3 @@
-# GravitySensor\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GravitySensor
+# GravitySensor
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GravitySensor

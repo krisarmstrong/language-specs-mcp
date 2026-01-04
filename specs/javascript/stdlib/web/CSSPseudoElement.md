@@ -1,1 +1,3 @@
-# CSSPseudoElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement
+# CSSPseudoElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement

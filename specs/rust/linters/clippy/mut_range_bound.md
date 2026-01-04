@@ -1,1 +1,3 @@
-# mut_range_bound\n\nSee: https://rust-lang.github.io/rust-clippy/master/#mut_range_bound
+# mut_range_bound
+
+See: https://rust-lang.github.io/rust-clippy/master/#mut_range_bound

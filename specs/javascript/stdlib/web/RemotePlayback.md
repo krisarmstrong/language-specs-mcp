@@ -1,1 +1,3 @@
-# RemotePlayback\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RemotePlayback
+# RemotePlayback
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RemotePlayback

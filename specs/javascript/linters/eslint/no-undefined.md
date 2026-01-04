@@ -1,1 +1,3 @@
-# no-undefined\n\nSee: https://eslint.org/docs/latest/rules/no-undefined
+# no-undefined
+
+See: https://eslint.org/docs/latest/rules/no-undefined

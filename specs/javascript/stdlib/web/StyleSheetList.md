@@ -1,1 +1,3 @@
-# StyleSheetList\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/StyleSheetList
+# StyleSheetList
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/StyleSheetList

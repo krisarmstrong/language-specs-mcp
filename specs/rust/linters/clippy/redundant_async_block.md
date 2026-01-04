@@ -1,1 +1,3 @@
-# redundant_async_block\n\nSee: https://rust-lang.github.io/rust-clippy/master/#redundant_async_block
+# redundant_async_block
+
+See: https://rust-lang.github.io/rust-clippy/master/#redundant_async_block

@@ -1,1 +1,3 @@
-# BeforeInstallPromptEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent
+# BeforeInstallPromptEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent

@@ -1,1 +1,3 @@
-# MediaMetadata\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata
+# MediaMetadata
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata

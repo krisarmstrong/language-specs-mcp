@@ -1,1 +1,7 @@
-# BASIC Language Reference\n\nSee: https://www.qbasic.net/en/reference/qbasic/
+# BASIC Language Reference
+Version: classic
+
+Source: https://www.qbasic.net/en/reference/qbasic/
+
+
+See: https://www.qbasic.net/en/reference/qbasic/

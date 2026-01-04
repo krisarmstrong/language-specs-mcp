@@ -1,1 +1,3 @@
-# CSSMathNegate\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSMathNegate
+# CSSMathNegate
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSMathNegate

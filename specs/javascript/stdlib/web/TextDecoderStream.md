@@ -1,1 +1,3 @@
-# TextDecoderStream\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream
+# TextDecoderStream
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/TextDecoderStream

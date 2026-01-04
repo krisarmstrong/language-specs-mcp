@@ -1,1 +1,3 @@
-# gomoddirectives\n\nSee: https://golangci-lint.run/docs/linters/gomoddirectives/
+# gomoddirectives
+
+See: https://golangci-lint.run/docs/linters/gomoddirectives/

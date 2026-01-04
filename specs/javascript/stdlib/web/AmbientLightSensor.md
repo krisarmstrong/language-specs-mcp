@@ -1,1 +1,3 @@
-# AmbientLightSensor\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/AmbientLightSensor
+# AmbientLightSensor
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/AmbientLightSensor

@@ -1,1 +1,3 @@
-# prefer-named-capture-group\n\nSee: https://eslint.org/docs/latest/rules/prefer-named-capture-group
+# prefer-named-capture-group
+
+See: https://eslint.org/docs/latest/rules/prefer-named-capture-group

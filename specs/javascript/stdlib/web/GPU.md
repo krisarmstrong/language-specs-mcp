@@ -1,1 +1,3 @@
-# GPU\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GPU
+# GPU
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GPU

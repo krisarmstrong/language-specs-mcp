@@ -1,1 +1,3 @@
-# no-loss-of-precision\n\nSee: https://eslint.org/docs/latest/rules/no-loss-of-precision
+# no-loss-of-precision
+
+See: https://eslint.org/docs/latest/rules/no-loss-of-precision

@@ -1,1 +1,3 @@
-# RTCDTMFSender\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender
+# RTCDTMFSender
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender

@@ -1,1 +1,3 @@
-# HTMLBRElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLBRElement
+# HTMLBRElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLBRElement

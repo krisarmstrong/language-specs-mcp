@@ -1,1 +1,3 @@
-# attribute-empty-style\n\nSee: https://html-validate.org/rules/attribute-empty-style
+# attribute-empty-style
+
+See: https://html-validate.org/rules/attribute-empty-style

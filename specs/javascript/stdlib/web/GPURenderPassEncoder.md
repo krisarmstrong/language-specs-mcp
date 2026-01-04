@@ -1,1 +1,3 @@
-# GPURenderPassEncoder\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder
+# GPURenderPassEncoder
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GPURenderPassEncoder

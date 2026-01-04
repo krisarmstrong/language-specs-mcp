@@ -1,1 +1,3 @@
-# SVGMarkerElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement
+# SVGMarkerElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGMarkerElement

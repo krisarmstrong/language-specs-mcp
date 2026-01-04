@@ -1,1 +1,3 @@
-# wcag\n\nSee: https://html-validate.org/rules/wcag
+# wcag
+
+See: https://html-validate.org/rules/wcag

@@ -1,1 +1,3 @@
-# misaligned_transmute\n\nSee: https://rust-lang.github.io/rust-clippy/master/#misaligned_transmute
+# misaligned_transmute
+
+See: https://rust-lang.github.io/rust-clippy/master/#misaligned_transmute

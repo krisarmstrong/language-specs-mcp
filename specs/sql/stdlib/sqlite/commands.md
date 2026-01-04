@@ -1,1 +1,3 @@
-# SQLite SQL Language\n\nSee: https://www.sqlite.org/lang.html
+# SQLite SQL Language
+
+See: https://www.sqlite.org/lang.html

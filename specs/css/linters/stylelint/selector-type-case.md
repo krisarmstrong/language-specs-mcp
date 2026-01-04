@@ -1,1 +1,3 @@
-# selector-type-case\n\nSee: https://stylelint.io/user-guide/rules/selector-type-case
+# selector-type-case
+
+See: https://stylelint.io/user-guide/rules/selector-type-case

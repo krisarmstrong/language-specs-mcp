@@ -1,1 +1,3 @@
-# canonicalheader\n\nSee: https://golangci-lint.run/docs/linters/canonicalheader/
+# canonicalheader
+
+See: https://golangci-lint.run/docs/linters/canonicalheader/

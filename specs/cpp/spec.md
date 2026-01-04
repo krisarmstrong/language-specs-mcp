@@ -1,4 +1,8 @@
 # C++ Language Specification Summary
+Version: c++23
+
+Source: https://en.cppreference.com/w/cpp
+
 
 Based on C++23 (ISO/IEC 14882:2024)
 

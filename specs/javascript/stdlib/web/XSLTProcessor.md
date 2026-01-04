@@ -1,1 +1,3 @@
-# XSLTProcessor\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor
+# XSLTProcessor
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/XSLTProcessor

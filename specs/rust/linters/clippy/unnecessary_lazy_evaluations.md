@@ -1,1 +1,3 @@
-# unnecessary_lazy_evaluations\n\nSee: https://rust-lang.github.io/rust-clippy/master/#unnecessary_lazy_evaluations
+# unnecessary_lazy_evaluations
+
+See: https://rust-lang.github.io/rust-clippy/master/#unnecessary_lazy_evaluations

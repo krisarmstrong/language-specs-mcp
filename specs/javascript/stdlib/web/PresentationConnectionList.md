@@ -1,1 +1,3 @@
-# PresentationConnectionList\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PresentationConnectionList
+# PresentationConnectionList
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PresentationConnectionList

@@ -1,1 +1,3 @@
-# TrackEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent
+# TrackEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent

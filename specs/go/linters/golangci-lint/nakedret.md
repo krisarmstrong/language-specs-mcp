@@ -1,1 +1,3 @@
-# nakedret\n\nSee: https://golangci-lint.run/docs/linters/nakedret/
+# nakedret
+
+See: https://golangci-lint.run/docs/linters/nakedret/

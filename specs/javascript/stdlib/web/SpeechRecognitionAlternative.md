@@ -1,1 +1,3 @@
-# SpeechRecognitionAlternative\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative
+# SpeechRecognitionAlternative
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative

@@ -1,1 +1,3 @@
-# PushEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PushEvent
+# PushEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PushEvent

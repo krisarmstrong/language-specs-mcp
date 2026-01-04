@@ -1,1 +1,3 @@
-# ContactAddress\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/ContactAddress
+# ContactAddress
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/ContactAddress

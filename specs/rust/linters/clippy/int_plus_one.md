@@ -1,1 +1,3 @@
-# int_plus_one\n\nSee: https://rust-lang.github.io/rust-clippy/master/#int_plus_one
+# int_plus_one
+
+See: https://rust-lang.github.io/rust-clippy/master/#int_plus_one

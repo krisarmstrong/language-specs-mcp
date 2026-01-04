@@ -1,1 +1,3 @@
-# HTMLSpanElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLSpanElement
+# HTMLSpanElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLSpanElement

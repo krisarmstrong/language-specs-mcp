@@ -1,1 +1,3 @@
-# mem_replace_with_default\n\nSee: https://rust-lang.github.io/rust-clippy/master/#mem_replace_with_default
+# mem_replace_with_default
+
+See: https://rust-lang.github.io/rust-clippy/master/#mem_replace_with_default

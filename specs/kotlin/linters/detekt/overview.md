@@ -1,1 +1,7 @@
-# detekt Rules\n\nSee: https://detekt.dev/docs/rules/
+# detekt Rules
+Version: unknown
+
+Source: https://detekt.dev/docs/rules/
+
+
+See: https://detekt.dev/docs/rules/

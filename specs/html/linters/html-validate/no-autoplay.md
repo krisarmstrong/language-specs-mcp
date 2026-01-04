@@ -1,1 +1,3 @@
-# no-autoplay\n\nSee: https://html-validate.org/rules/no-autoplay
+# no-autoplay
+
+See: https://html-validate.org/rules/no-autoplay

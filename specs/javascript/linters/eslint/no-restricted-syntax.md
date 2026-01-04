@@ -1,1 +1,3 @@
-# no-restricted-syntax\n\nSee: https://eslint.org/docs/latest/rules/no-restricted-syntax
+# no-restricted-syntax
+
+See: https://eslint.org/docs/latest/rules/no-restricted-syntax

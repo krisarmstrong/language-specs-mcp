@@ -1,1 +1,3 @@
-# cmp_null\n\nSee: https://rust-lang.github.io/rust-clippy/master/#cmp_null
+# cmp_null
+
+See: https://rust-lang.github.io/rust-clippy/master/#cmp_null

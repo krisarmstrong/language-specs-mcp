@@ -1,1 +1,3 @@
-# MediaDevices\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices
+# MediaDevices
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices

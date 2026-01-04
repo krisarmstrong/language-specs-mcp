@@ -1,1 +1,3 @@
-# AuthenticatorResponse\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorResponse
+# AuthenticatorResponse
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorResponse

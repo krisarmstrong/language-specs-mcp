@@ -1,1 +1,3 @@
-# promlinter\n\nSee: https://golangci-lint.run/docs/linters/promlinter/
+# promlinter
+
+See: https://golangci-lint.run/docs/linters/promlinter/

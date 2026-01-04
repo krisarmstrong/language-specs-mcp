@@ -1,1 +1,3 @@
-# HTMLAllCollection\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAllCollection
+# HTMLAllCollection
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAllCollection

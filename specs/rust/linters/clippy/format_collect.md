@@ -1,1 +1,3 @@
-# format_collect\n\nSee: https://rust-lang.github.io/rust-clippy/master/#format_collect
+# format_collect
+
+See: https://rust-lang.github.io/rust-clippy/master/#format_collect

@@ -1,1 +1,3 @@
-# ToggleEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/ToggleEvent
+# ToggleEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/ToggleEvent

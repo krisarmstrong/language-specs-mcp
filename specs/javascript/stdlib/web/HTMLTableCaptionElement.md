@@ -1,1 +1,3 @@
-# HTMLTableCaptionElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCaptionElement
+# HTMLTableCaptionElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCaptionElement

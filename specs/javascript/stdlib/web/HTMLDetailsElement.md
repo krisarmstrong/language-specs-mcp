@@ -1,1 +1,3 @@
-# HTMLDetailsElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement
+# HTMLDetailsElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement

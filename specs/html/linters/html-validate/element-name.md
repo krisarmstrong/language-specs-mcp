@@ -1,1 +1,3 @@
-# element-name\n\nSee: https://html-validate.org/rules/element-name
+# element-name
+
+See: https://html-validate.org/rules/element-name

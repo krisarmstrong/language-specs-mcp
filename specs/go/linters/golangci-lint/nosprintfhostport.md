@@ -1,1 +1,3 @@
-# nosprintfhostport\n\nSee: https://golangci-lint.run/docs/linters/nosprintfhostport/
+# nosprintfhostport
+
+See: https://golangci-lint.run/docs/linters/nosprintfhostport/

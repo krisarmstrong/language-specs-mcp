@@ -1,1 +1,3 @@
-# redundant_static_lifetimes\n\nSee: https://rust-lang.github.io/rust-clippy/master/#redundant_static_lifetimes
+# redundant_static_lifetimes
+
+See: https://rust-lang.github.io/rust-clippy/master/#redundant_static_lifetimes

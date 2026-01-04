@@ -1,1 +1,3 @@
-# double_comparisons\n\nSee: https://rust-lang.github.io/rust-clippy/master/#double_comparisons
+# double_comparisons
+
+See: https://rust-lang.github.io/rust-clippy/master/#double_comparisons

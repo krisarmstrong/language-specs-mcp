@@ -1,1 +1,3 @@
-# NamedNodeMap\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap
+# NamedNodeMap
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap

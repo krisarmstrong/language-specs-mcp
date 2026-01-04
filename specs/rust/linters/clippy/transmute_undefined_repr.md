@@ -1,1 +1,3 @@
-# transmute_undefined_repr\n\nSee: https://rust-lang.github.io/rust-clippy/master/#transmute_undefined_repr
+# transmute_undefined_repr
+
+See: https://rust-lang.github.io/rust-clippy/master/#transmute_undefined_repr

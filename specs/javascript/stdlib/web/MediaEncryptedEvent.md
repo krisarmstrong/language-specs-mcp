@@ -1,1 +1,3 @@
-# MediaEncryptedEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MediaEncryptedEvent
+# MediaEncryptedEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MediaEncryptedEvent

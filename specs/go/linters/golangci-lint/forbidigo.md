@@ -1,1 +1,3 @@
-# forbidigo\n\nSee: https://golangci-lint.run/docs/linters/forbidigo/
+# forbidigo
+
+See: https://golangci-lint.run/docs/linters/forbidigo/

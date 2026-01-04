@@ -1,1 +1,3 @@
-# PageRevealEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PageRevealEvent
+# PageRevealEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PageRevealEvent

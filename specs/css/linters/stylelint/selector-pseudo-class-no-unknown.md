@@ -1,1 +1,3 @@
-# selector-pseudo-class-no-unknown\n\nSee: https://stylelint.io/user-guide/rules/selector-pseudo-class-no-unknown
+# selector-pseudo-class-no-unknown
+
+See: https://stylelint.io/user-guide/rules/selector-pseudo-class-no-unknown

@@ -1,1 +1,3 @@
-# StorageEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent
+# StorageEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent

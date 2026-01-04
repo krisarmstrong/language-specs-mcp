@@ -1,1 +1,3 @@
-# pub_without_shorthand\n\nSee: https://rust-lang.github.io/rust-clippy/master/#pub_without_shorthand
+# pub_without_shorthand
+
+See: https://rust-lang.github.io/rust-clippy/master/#pub_without_shorthand

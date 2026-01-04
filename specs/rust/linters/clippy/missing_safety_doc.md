@@ -1,1 +1,3 @@
-# missing_safety_doc\n\nSee: https://rust-lang.github.io/rust-clippy/master/#missing_safety_doc
+# missing_safety_doc
+
+See: https://rust-lang.github.io/rust-clippy/master/#missing_safety_doc

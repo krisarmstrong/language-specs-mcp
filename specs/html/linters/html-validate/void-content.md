@@ -1,1 +1,3 @@
-# void-content\n\nSee: https://html-validate.org/rules/void-content
+# void-content
+
+See: https://html-validate.org/rules/void-content

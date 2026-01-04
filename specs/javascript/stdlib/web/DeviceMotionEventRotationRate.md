@@ -1,1 +1,3 @@
-# DeviceMotionEventRotationRate\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate
+# DeviceMotionEventRotationRate
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate

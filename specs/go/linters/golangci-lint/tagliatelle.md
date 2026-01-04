@@ -1,1 +1,3 @@
-# tagliatelle\n\nSee: https://golangci-lint.run/docs/linters/tagliatelle/
+# tagliatelle
+
+See: https://golangci-lint.run/docs/linters/tagliatelle/

@@ -1,1 +1,3 @@
-# manual_range_contains\n\nSee: https://rust-lang.github.io/rust-clippy/master/#manual_range_contains
+# manual_range_contains
+
+See: https://rust-lang.github.io/rust-clippy/master/#manual_range_contains

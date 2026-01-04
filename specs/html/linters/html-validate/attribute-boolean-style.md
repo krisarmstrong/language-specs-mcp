@@ -1,1 +1,3 @@
-# attribute-boolean-style\n\nSee: https://html-validate.org/rules/attribute-boolean-style
+# attribute-boolean-style
+
+See: https://html-validate.org/rules/attribute-boolean-style

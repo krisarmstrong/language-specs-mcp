@@ -1,1 +1,3 @@
-# SharedStorage\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SharedStorage
+# SharedStorage
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SharedStorage

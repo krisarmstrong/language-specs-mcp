@@ -1,1 +1,3 @@
-# no-debugger\n\nSee: https://eslint.org/docs/latest/rules/no-debugger
+# no-debugger
+
+See: https://eslint.org/docs/latest/rules/no-debugger

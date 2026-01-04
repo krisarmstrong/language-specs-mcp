@@ -1,1 +1,3 @@
-# element-required-attributes\n\nSee: https://html-validate.org/rules/element-required-attributes
+# element-required-attributes
+
+See: https://html-validate.org/rules/element-required-attributes

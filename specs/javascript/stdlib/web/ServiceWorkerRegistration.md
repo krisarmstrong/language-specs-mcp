@@ -1,1 +1,3 @@
-# ServiceWorkerRegistration\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration
+# ServiceWorkerRegistration
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration

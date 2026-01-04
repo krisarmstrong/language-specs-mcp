@@ -1,1 +1,3 @@
-# wsl\n\nSee: https://golangci-lint.run/docs/linters/wsl/
+# wsl
+
+See: https://golangci-lint.run/docs/linters/wsl/

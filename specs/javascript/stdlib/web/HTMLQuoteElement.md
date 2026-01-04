@@ -1,1 +1,3 @@
-# HTMLQuoteElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLQuoteElement
+# HTMLQuoteElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLQuoteElement

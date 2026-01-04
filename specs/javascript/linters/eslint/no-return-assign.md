@@ -1,1 +1,3 @@
-# no-return-assign\n\nSee: https://eslint.org/docs/latest/rules/no-return-assign
+# no-return-assign
+
+See: https://eslint.org/docs/latest/rules/no-return-assign

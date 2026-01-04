@@ -1,1 +1,3 @@
-# exhaustive\n\nSee: https://golangci-lint.run/docs/linters/exhaustive/
+# exhaustive
+
+See: https://golangci-lint.run/docs/linters/exhaustive/

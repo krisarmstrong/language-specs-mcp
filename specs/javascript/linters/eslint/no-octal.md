@@ -1,1 +1,3 @@
-# no-octal\n\nSee: https://eslint.org/docs/latest/rules/no-octal
+# no-octal
+
+See: https://eslint.org/docs/latest/rules/no-octal

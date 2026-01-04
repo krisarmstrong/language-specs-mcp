@@ -1,1 +1,3 @@
-# cmp_owned\n\nSee: https://rust-lang.github.io/rust-clippy/master/#cmp_owned
+# cmp_owned
+
+See: https://rust-lang.github.io/rust-clippy/master/#cmp_owned

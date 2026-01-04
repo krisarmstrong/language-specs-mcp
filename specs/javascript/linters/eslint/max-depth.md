@@ -1,1 +1,3 @@
-# max-depth\n\nSee: https://eslint.org/docs/latest/rules/max-depth
+# max-depth
+
+See: https://eslint.org/docs/latest/rules/max-depth

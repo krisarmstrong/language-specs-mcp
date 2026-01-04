@@ -1,1 +1,3 @@
-# HTMLMetaElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLMetaElement
+# HTMLMetaElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLMetaElement

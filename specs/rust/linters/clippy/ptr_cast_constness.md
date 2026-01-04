@@ -1,1 +1,3 @@
-# ptr_cast_constness\n\nSee: https://rust-lang.github.io/rust-clippy/master/#ptr_cast_constness
+# ptr_cast_constness
+
+See: https://rust-lang.github.io/rust-clippy/master/#ptr_cast_constness

@@ -1,1 +1,3 @@
-# asciicheck\n\nSee: https://golangci-lint.run/docs/linters/asciicheck/
+# asciicheck
+
+See: https://golangci-lint.run/docs/linters/asciicheck/

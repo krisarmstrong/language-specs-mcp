@@ -1,1 +1,3 @@
-# CreateMonitor\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CreateMonitor
+# CreateMonitor
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CreateMonitor

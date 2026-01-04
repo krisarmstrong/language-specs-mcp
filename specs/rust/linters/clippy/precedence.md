@@ -1,1 +1,3 @@
-# precedence\n\nSee: https://rust-lang.github.io/rust-clippy/master/#precedence
+# precedence
+
+See: https://rust-lang.github.io/rust-clippy/master/#precedence

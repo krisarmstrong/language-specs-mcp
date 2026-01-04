@@ -1,1 +1,3 @@
-# FileSystemSyncAccessHandle\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/FileSystemSyncAccessHandle
+# FileSystemSyncAccessHandle
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/FileSystemSyncAccessHandle

@@ -1,1 +1,3 @@
-# exhaustruct\n\nSee: https://golangci-lint.run/docs/linters/exhaustruct/
+# exhaustruct
+
+See: https://golangci-lint.run/docs/linters/exhaustruct/

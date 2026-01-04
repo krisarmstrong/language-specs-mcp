@@ -1,1 +1,3 @@
-# HIDInputReportEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HIDInputReportEvent
+# HIDInputReportEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HIDInputReportEvent

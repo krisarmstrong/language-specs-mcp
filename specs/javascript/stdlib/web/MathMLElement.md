@@ -1,1 +1,3 @@
-# MathMLElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement
+# MathMLElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MathMLElement

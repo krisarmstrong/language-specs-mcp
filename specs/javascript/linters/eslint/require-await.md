@@ -1,1 +1,3 @@
-# require-await\n\nSee: https://eslint.org/docs/latest/rules/require-await
+# require-await
+
+See: https://eslint.org/docs/latest/rules/require-await

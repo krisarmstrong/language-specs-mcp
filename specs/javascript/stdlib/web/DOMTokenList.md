@@ -1,1 +1,3 @@
-# DOMTokenList\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList
+# DOMTokenList
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList

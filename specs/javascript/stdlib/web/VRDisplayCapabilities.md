@@ -1,1 +1,3 @@
-# VRDisplayCapabilities\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/VRDisplayCapabilities
+# VRDisplayCapabilities
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/VRDisplayCapabilities

@@ -1,1 +1,3 @@
-# nilerr\n\nSee: https://golangci-lint.run/docs/linters/nilerr/
+# nilerr
+
+See: https://golangci-lint.run/docs/linters/nilerr/

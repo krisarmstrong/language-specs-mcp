@@ -1,1 +1,3 @@
-# java.base.javax.security.auth.callback\n\nSee: https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/security/auth/callback/package-summary.html
+# java.base.javax.security.auth.callback
+
+See: https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/security/auth/callback/package-summary.html

@@ -1,1 +1,3 @@
-# MediaRecorder\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder
+# MediaRecorder
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder

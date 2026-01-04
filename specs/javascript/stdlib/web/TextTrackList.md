@@ -1,1 +1,3 @@
-# TextTrackList\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList
+# TextTrackList
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList

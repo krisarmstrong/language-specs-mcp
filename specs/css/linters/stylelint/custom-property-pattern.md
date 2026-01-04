@@ -1,1 +1,3 @@
-# custom-property-pattern\n\nSee: https://stylelint.io/user-guide/rules/custom-property-pattern
+# custom-property-pattern
+
+See: https://stylelint.io/user-guide/rules/custom-property-pattern

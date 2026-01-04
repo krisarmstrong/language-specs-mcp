@@ -1,1 +1,3 @@
-# sqlclosecheck\n\nSee: https://golangci-lint.run/docs/linters/sqlclosecheck/
+# sqlclosecheck
+
+See: https://golangci-lint.run/docs/linters/sqlclosecheck/

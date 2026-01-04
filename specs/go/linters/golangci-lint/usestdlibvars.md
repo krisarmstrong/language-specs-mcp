@@ -1,1 +1,3 @@
-# usestdlibvars\n\nSee: https://golangci-lint.run/docs/linters/usestdlibvars/
+# usestdlibvars
+
+See: https://golangci-lint.run/docs/linters/usestdlibvars/

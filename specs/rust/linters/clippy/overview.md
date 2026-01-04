@@ -1,1 +1,3 @@
-# Clippy Lints\n\nSee: https://rust-lang.github.io/rust-clippy/master/
+# Clippy Lints
+
+See: https://rust-lang.github.io/rust-clippy/master/

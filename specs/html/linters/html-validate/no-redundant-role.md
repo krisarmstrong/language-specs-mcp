@@ -1,1 +1,3 @@
-# no-redundant-role\n\nSee: https://html-validate.org/rules/no-redundant-role
+# no-redundant-role
+
+See: https://html-validate.org/rules/no-redundant-role

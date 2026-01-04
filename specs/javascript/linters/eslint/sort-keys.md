@@ -1,1 +1,3 @@
-# sort-keys\n\nSee: https://eslint.org/docs/latest/rules/sort-keys
+# sort-keys
+
+See: https://eslint.org/docs/latest/rules/sort-keys

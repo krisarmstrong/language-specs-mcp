@@ -1,1 +1,3 @@
-# close-attr\n\nSee: https://html-validate.org/rules/close-attr
+# close-attr
+
+See: https://html-validate.org/rules/close-attr

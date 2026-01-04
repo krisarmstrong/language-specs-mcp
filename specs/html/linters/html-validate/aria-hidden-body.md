@@ -1,1 +1,3 @@
-# aria-hidden-body\n\nSee: https://html-validate.org/rules/aria-hidden-body
+# aria-hidden-body
+
+See: https://html-validate.org/rules/aria-hidden-body

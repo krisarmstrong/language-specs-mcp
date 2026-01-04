@@ -1,1 +1,3 @@
-# no-unreachable\n\nSee: https://eslint.org/docs/latest/rules/no-unreachable
+# no-unreachable
+
+See: https://eslint.org/docs/latest/rules/no-unreachable

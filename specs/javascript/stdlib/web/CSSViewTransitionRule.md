@@ -1,1 +1,3 @@
-# CSSViewTransitionRule\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSViewTransitionRule
+# CSSViewTransitionRule
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSViewTransitionRule

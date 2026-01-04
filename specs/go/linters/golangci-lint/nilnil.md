@@ -1,1 +1,3 @@
-# nilnil\n\nSee: https://golangci-lint.run/docs/linters/nilnil/
+# nilnil
+
+See: https://golangci-lint.run/docs/linters/nilnil/

@@ -1,1 +1,3 @@
-# no-void\n\nSee: https://eslint.org/docs/latest/rules/no-void
+# no-void
+
+See: https://eslint.org/docs/latest/rules/no-void

@@ -1,1 +1,3 @@
-# HTMLHeadingElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLHeadingElement
+# HTMLHeadingElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLHeadingElement

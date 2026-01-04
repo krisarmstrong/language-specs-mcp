@@ -1,1 +1,3 @@
-# ImageTrackList\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/ImageTrackList
+# ImageTrackList
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/ImageTrackList

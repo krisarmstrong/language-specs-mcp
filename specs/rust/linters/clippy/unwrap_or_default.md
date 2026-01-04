@@ -1,1 +1,3 @@
-# unwrap_or_default\n\nSee: https://rust-lang.github.io/rust-clippy/master/#unwrap_or_default
+# unwrap_or_default
+
+See: https://rust-lang.github.io/rust-clippy/master/#unwrap_or_default

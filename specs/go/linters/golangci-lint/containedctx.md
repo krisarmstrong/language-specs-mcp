@@ -1,1 +1,3 @@
-# containedctx\n\nSee: https://golangci-lint.run/docs/linters/containedctx/
+# containedctx
+
+See: https://golangci-lint.run/docs/linters/containedctx/

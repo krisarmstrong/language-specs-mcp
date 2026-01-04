@@ -1,1 +1,3 @@
-# forcetypeassert\n\nSee: https://golangci-lint.run/docs/linters/forcetypeassert/
+# forcetypeassert
+
+See: https://golangci-lint.run/docs/linters/forcetypeassert/

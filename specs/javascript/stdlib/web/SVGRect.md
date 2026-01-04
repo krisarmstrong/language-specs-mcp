@@ -1,1 +1,3 @@
-# SVGRect\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGRect
+# SVGRect
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGRect

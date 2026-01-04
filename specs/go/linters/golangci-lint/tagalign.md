@@ -1,1 +1,3 @@
-# tagalign\n\nSee: https://golangci-lint.run/docs/linters/tagalign/
+# tagalign
+
+See: https://golangci-lint.run/docs/linters/tagalign/

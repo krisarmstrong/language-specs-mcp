@@ -1,1 +1,3 @@
-# VideoColorSpace\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/VideoColorSpace
+# VideoColorSpace
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/VideoColorSpace

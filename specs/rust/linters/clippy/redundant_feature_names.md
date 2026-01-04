@@ -1,1 +1,3 @@
-# redundant_feature_names\n\nSee: https://rust-lang.github.io/rust-clippy/master/#redundant_feature_names
+# redundant_feature_names
+
+See: https://rust-lang.github.io/rust-clippy/master/#redundant_feature_names

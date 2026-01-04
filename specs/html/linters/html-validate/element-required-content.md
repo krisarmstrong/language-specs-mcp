@@ -1,1 +1,3 @@
-# element-required-content\n\nSee: https://html-validate.org/rules/element-required-content
+# element-required-content
+
+See: https://html-validate.org/rules/element-required-content

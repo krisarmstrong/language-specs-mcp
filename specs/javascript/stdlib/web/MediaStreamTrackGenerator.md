@@ -1,1 +1,3 @@
-# MediaStreamTrackGenerator\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackGenerator
+# MediaStreamTrackGenerator
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackGenerator

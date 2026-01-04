@@ -1,1 +1,3 @@
-# RTCIceParameters\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters
+# RTCIceParameters
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters

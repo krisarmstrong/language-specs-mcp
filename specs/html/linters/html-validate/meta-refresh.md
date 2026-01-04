@@ -1,1 +1,3 @@
-# meta-refresh\n\nSee: https://html-validate.org/rules/meta-refresh
+# meta-refresh
+
+See: https://html-validate.org/rules/meta-refresh

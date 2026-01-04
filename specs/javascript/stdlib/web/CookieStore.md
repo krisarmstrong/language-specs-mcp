@@ -1,1 +1,3 @@
-# CookieStore\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CookieStore
+# CookieStore
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CookieStore

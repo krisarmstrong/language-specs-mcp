@@ -1,1 +1,3 @@
-# no-constant-condition\n\nSee: https://eslint.org/docs/latest/rules/no-constant-condition
+# no-constant-condition
+
+See: https://eslint.org/docs/latest/rules/no-constant-condition

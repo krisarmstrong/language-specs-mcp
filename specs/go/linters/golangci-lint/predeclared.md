@@ -1,1 +1,3 @@
-# predeclared\n\nSee: https://golangci-lint.run/docs/linters/predeclared/
+# predeclared
+
+See: https://golangci-lint.run/docs/linters/predeclared/

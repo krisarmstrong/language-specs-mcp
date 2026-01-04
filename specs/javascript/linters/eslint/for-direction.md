@@ -1,1 +1,3 @@
-# for-direction\n\nSee: https://eslint.org/docs/latest/rules/for-direction
+# for-direction
+
+See: https://eslint.org/docs/latest/rules/for-direction

@@ -1,1 +1,3 @@
-# Web API Reference\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API
+# Web API Reference
+
+See: https://developer.mozilla.org/en-US/docs/Web/API

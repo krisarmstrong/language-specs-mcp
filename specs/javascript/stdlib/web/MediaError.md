@@ -1,1 +1,3 @@
-# MediaError\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MediaError
+# MediaError
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MediaError

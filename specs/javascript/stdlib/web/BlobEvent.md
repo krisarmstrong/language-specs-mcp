@@ -1,1 +1,3 @@
-# BlobEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/BlobEvent
+# BlobEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/BlobEvent

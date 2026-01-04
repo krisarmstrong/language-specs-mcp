@@ -1,1 +1,3 @@
-# comment-whitespace-inside\n\nSee: https://stylelint.io/user-guide/rules/comment-whitespace-inside
+# comment-whitespace-inside
+
+See: https://stylelint.io/user-guide/rules/comment-whitespace-inside

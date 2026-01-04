@@ -1,1 +1,3 @@
-# unnecessary_safety_comment\n\nSee: https://rust-lang.github.io/rust-clippy/master/#unnecessary_safety_comment
+# unnecessary_safety_comment
+
+See: https://rust-lang.github.io/rust-clippy/master/#unnecessary_safety_comment

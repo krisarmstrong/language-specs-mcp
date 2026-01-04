@@ -1,1 +1,3 @@
-# HTMLButtonElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement
+# HTMLButtonElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement

@@ -1,1 +1,3 @@
-# DoNotCall\n\nSee: https://errorprone.info/bugpattern/DoNotCall
+# DoNotCall
+
+See: https://errorprone.info/bugpattern/DoNotCall

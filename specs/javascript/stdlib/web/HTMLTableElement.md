@@ -1,1 +1,3 @@
-# HTMLTableElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement
+# HTMLTableElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement

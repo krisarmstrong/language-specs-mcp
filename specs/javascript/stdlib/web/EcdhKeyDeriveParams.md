@@ -1,1 +1,3 @@
-# EcdhKeyDeriveParams\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/EcdhKeyDeriveParams
+# EcdhKeyDeriveParams
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/EcdhKeyDeriveParams

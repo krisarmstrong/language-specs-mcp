@@ -1,1 +1,3 @@
-# UIEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/UIEvent
+# UIEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/UIEvent

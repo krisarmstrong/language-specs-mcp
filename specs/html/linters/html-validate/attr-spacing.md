@@ -1,1 +1,3 @@
-# attr-spacing\n\nSee: https://html-validate.org/rules/attr-spacing
+# attr-spacing
+
+See: https://html-validate.org/rules/attr-spacing

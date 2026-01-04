@@ -1,1 +1,3 @@
-# unused\n\nSee: https://golangci-lint.run/docs/linters/unused/
+# unused
+
+See: https://golangci-lint.run/docs/linters/unused/

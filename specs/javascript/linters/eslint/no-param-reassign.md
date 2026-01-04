@@ -1,1 +1,3 @@
-# no-param-reassign\n\nSee: https://eslint.org/docs/latest/rules/no-param-reassign
+# no-param-reassign
+
+See: https://eslint.org/docs/latest/rules/no-param-reassign

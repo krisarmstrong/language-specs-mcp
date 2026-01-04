@@ -1,1 +1,3 @@
-# IntegrityViolationReportBody\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/IntegrityViolationReportBody
+# IntegrityViolationReportBody
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/IntegrityViolationReportBody

@@ -1,1 +1,3 @@
-# GPUTextureView\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GPUTextureView
+# GPUTextureView
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GPUTextureView

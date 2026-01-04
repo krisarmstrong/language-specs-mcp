@@ -1,1 +1,3 @@
-# EcKeyGenParams\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/EcKeyGenParams
+# EcKeyGenParams
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/EcKeyGenParams

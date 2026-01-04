@@ -1,1 +1,3 @@
-# multiple_bound_locations\n\nSee: https://rust-lang.github.io/rust-clippy/master/#multiple_bound_locations
+# multiple_bound_locations
+
+See: https://rust-lang.github.io/rust-clippy/master/#multiple_bound_locations

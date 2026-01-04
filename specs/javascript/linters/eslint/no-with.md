@@ -1,1 +1,3 @@
-# no-with\n\nSee: https://eslint.org/docs/latest/rules/no-with
+# no-with
+
+See: https://eslint.org/docs/latest/rules/no-with

@@ -1,1 +1,3 @@
-# large_include_file\n\nSee: https://rust-lang.github.io/rust-clippy/master/#large_include_file
+# large_include_file
+
+See: https://rust-lang.github.io/rust-clippy/master/#large_include_file

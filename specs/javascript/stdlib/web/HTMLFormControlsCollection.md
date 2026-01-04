@@ -1,1 +1,3 @@
-# HTMLFormControlsCollection\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection
+# HTMLFormControlsCollection
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection

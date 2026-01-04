@@ -1,1 +1,3 @@
-# no-await-in-loop\n\nSee: https://eslint.org/docs/latest/rules/no-await-in-loop
+# no-await-in-loop
+
+See: https://eslint.org/docs/latest/rules/no-await-in-loop

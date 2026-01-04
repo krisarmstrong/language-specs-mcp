@@ -1,1 +1,3 @@
-# InputDeviceCapabilities_API\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/InputDeviceCapabilities_API
+# InputDeviceCapabilities_API
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/InputDeviceCapabilities_API

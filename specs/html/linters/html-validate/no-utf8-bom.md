@@ -1,1 +1,3 @@
-# no-utf8-bom\n\nSee: https://html-validate.org/rules/no-utf8-bom
+# no-utf8-bom
+
+See: https://html-validate.org/rules/no-utf8-bom

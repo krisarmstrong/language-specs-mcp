@@ -1,1 +1,3 @@
-# no-new-wrappers\n\nSee: https://eslint.org/docs/latest/rules/no-new-wrappers
+# no-new-wrappers
+
+See: https://eslint.org/docs/latest/rules/no-new-wrappers

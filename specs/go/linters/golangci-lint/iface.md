@@ -1,1 +1,3 @@
-# iface\n\nSee: https://golangci-lint.run/docs/linters/iface/
+# iface
+
+See: https://golangci-lint.run/docs/linters/iface/

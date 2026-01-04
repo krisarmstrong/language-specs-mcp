@@ -1,1 +1,3 @@
-# no-async-promise-executor\n\nSee: https://eslint.org/docs/latest/rules/no-async-promise-executor
+# no-async-promise-executor
+
+See: https://eslint.org/docs/latest/rules/no-async-promise-executor

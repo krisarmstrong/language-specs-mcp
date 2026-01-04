@@ -1,1 +1,3 @@
-# Cache\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Cache
+# Cache
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Cache

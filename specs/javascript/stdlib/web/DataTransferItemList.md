@@ -1,1 +1,3 @@
-# DataTransferItemList\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList
+# DataTransferItemList
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList

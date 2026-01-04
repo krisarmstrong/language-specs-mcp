@@ -1,1 +1,3 @@
-# text-content\n\nSee: https://html-validate.org/rules/text-content
+# text-content
+
+See: https://html-validate.org/rules/text-content

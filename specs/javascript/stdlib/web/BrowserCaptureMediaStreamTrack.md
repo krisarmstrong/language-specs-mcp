@@ -1,1 +1,3 @@
-# BrowserCaptureMediaStreamTrack\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/BrowserCaptureMediaStreamTrack
+# BrowserCaptureMediaStreamTrack
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/BrowserCaptureMediaStreamTrack

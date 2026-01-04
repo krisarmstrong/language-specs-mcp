@@ -1,1 +1,3 @@
-# CredentialsContainer\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer
+# CredentialsContainer
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer

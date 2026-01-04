@@ -1,1 +1,3 @@
-# dupl\n\nSee: https://golangci-lint.run/docs/linters/dupl/
+# dupl
+
+See: https://golangci-lint.run/docs/linters/dupl/

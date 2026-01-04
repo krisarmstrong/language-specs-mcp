@@ -1,4 +1,8 @@
 # C Language Specification Summary
+Version: c23
+
+Source: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf
+
 
 Based on C23 (ISO/IEC 9899:2024)
 

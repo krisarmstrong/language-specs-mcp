@@ -1,1 +1,3 @@
-# no-var\n\nSee: https://eslint.org/docs/latest/rules/no-var
+# no-var
+
+See: https://eslint.org/docs/latest/rules/no-var

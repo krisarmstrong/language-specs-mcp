@@ -1,1 +1,3 @@
-# no-bitwise\n\nSee: https://eslint.org/docs/latest/rules/no-bitwise
+# no-bitwise
+
+See: https://eslint.org/docs/latest/rules/no-bitwise

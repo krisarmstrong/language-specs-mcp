@@ -1,1 +1,3 @@
-# XRCompositionLayer\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/XRCompositionLayer
+# XRCompositionLayer
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/XRCompositionLayer

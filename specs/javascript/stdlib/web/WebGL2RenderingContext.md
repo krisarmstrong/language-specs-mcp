@@ -1,1 +1,3 @@
-# WebGL2RenderingContext\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext
+# WebGL2RenderingContext
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext

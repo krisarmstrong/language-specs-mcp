@@ -1,1 +1,3 @@
-# consistent-return\n\nSee: https://eslint.org/docs/latest/rules/consistent-return
+# consistent-return
+
+See: https://eslint.org/docs/latest/rules/consistent-return

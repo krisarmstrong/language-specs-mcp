@@ -1,1 +1,3 @@
-# gocyclo\n\nSee: https://golangci-lint.run/docs/linters/gocyclo/
+# gocyclo
+
+See: https://golangci-lint.run/docs/linters/gocyclo/

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Language Specs MCP</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="glow glow-a"></div>
+    <div class="glow glow-b"></div>
+    <main class="shell">
+      <header class="top">
+        <div>
+          <p class="eyebrow">Language Specs MCP</p>
+          <h1>Specs, stdlib, linters, formatters, patterns.</h1>
+          <p class="subtitle">
+            Browse the repository-backed knowledge base. Search filters match file names and
+            paths.
+          </p>
+        </div>
+        <div class="meta">
+          <div class="stat">
+            <span class="label">Generated</span>
+            <span id="generatedAt">Loading...</span>
+          </div>
+          <div class="stat">
+            <span class="label">Languages</span>
+            <span id="languageCount">0</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="controls">
+        <input
+          id="search"
+          type="search"
+          placeholder="Search by file name, category, or path"
+          autocomplete="off"
+        />
+        <label class="toggle">
+          <input id="contentSearch" type="checkbox" />
+          <span>Context search (file content)</span>
+        </label>
+        <div class="pill-group">
+          <button class="pill active" data-filter="all">All</button>
+          <button class="pill" data-filter="spec">Spec</button>
+          <button class="pill" data-filter="stdlib">Stdlib</button>
+          <button class="pill" data-filter="linters">Linters</button>
+          <button class="pill" data-filter="formatters">Formatters</button>
+          <button class="pill" data-filter="patterns">Patterns</button>
+        </div>
+      </section>
+
+      <section class="grid">
+        <aside class="panel languages">
+          <h2>Languages</h2>
+          <div id="languageList" class="list"></div>
+        </aside>
+        <section class="panel content">
+          <div class="content-header">
+            <h2 id="activeLanguage">Select a language</h2>
+            <span id="fetchedAt" class="tag">Fetched: --</span>
+          </div>
+          <div id="fileList" class="files"></div>
+          <div id="preview" class="preview">
+            <p>Select a file to preview its raw Markdown.</p>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

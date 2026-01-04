@@ -1,1 +1,3 @@
-# unit-no-unknown\n\nSee: https://stylelint.io/user-guide/rules/unit-no-unknown
+# unit-no-unknown
+
+See: https://stylelint.io/user-guide/rules/unit-no-unknown

@@ -1,1 +1,3 @@
-# lossy_float_literal\n\nSee: https://rust-lang.github.io/rust-clippy/master/#lossy_float_literal
+# lossy_float_literal
+
+See: https://rust-lang.github.io/rust-clippy/master/#lossy_float_literal

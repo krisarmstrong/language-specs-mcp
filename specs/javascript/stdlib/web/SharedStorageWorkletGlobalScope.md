@@ -1,1 +1,3 @@
-# SharedStorageWorkletGlobalScope\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SharedStorageWorkletGlobalScope
+# SharedStorageWorkletGlobalScope
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SharedStorageWorkletGlobalScope

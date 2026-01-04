@@ -1,1 +1,3 @@
-# MediaKeyMessageEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent
+# MediaKeyMessageEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent

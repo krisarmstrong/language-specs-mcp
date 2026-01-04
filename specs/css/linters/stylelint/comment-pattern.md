@@ -1,1 +1,3 @@
-# comment-pattern\n\nSee: https://stylelint.io/user-guide/rules/comment-pattern
+# comment-pattern
+
+See: https://stylelint.io/user-guide/rules/comment-pattern

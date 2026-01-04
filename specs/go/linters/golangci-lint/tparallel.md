@@ -1,1 +1,3 @@
-# tparallel\n\nSee: https://golangci-lint.run/docs/linters/tparallel/
+# tparallel
+
+See: https://golangci-lint.run/docs/linters/tparallel/

@@ -1,1 +1,3 @@
-# CanvasRenderingContext2D\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
+# CanvasRenderingContext2D
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D

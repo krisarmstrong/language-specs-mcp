@@ -1,1 +1,3 @@
-# heading-level\n\nSee: https://html-validate.org/rules/heading-level
+# heading-level
+
+See: https://html-validate.org/rules/heading-level

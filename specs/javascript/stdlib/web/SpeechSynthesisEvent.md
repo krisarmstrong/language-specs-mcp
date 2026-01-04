@@ -1,1 +1,3 @@
-# SpeechSynthesisEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent
+# SpeechSynthesisEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent

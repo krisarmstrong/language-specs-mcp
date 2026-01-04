@@ -1,1 +1,3 @@
-# unparam\n\nSee: https://golangci-lint.run/docs/linters/unparam/
+# unparam
+
+See: https://golangci-lint.run/docs/linters/unparam/

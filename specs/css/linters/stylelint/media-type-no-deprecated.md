@@ -1,1 +1,3 @@
-# media-type-no-deprecated\n\nSee: https://stylelint.io/user-guide/rules/media-type-no-deprecated
+# media-type-no-deprecated
+
+See: https://stylelint.io/user-guide/rules/media-type-no-deprecated

@@ -1,1 +1,3 @@
-# OffscreenCanvas\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas
+# OffscreenCanvas
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas

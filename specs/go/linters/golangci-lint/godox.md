@@ -1,1 +1,3 @@
-# godox\n\nSee: https://golangci-lint.run/docs/linters/godox/
+# godox
+
+See: https://golangci-lint.run/docs/linters/godox/

@@ -1,1 +1,3 @@
-# hue-degree-notation\n\nSee: https://stylelint.io/user-guide/rules/hue-degree-notation
+# hue-degree-notation
+
+See: https://stylelint.io/user-guide/rules/hue-degree-notation

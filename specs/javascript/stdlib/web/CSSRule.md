@@ -1,1 +1,3 @@
-# CSSRule\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSRule
+# CSSRule
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSRule

@@ -1,1 +1,3 @@
-# selector-id-pattern\n\nSee: https://stylelint.io/user-guide/rules/selector-id-pattern
+# selector-id-pattern
+
+See: https://stylelint.io/user-guide/rules/selector-id-pattern

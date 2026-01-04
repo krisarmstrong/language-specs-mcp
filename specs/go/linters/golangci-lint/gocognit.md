@@ -1,1 +1,3 @@
-# gocognit\n\nSee: https://golangci-lint.run/docs/linters/gocognit/
+# gocognit
+
+See: https://golangci-lint.run/docs/linters/gocognit/

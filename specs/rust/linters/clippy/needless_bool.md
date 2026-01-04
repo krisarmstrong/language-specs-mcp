@@ -1,1 +1,3 @@
-# needless_bool\n\nSee: https://rust-lang.github.io/rust-clippy/master/#needless_bool
+# needless_bool
+
+See: https://rust-lang.github.io/rust-clippy/master/#needless_bool

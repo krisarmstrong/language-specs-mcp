@@ -1,1 +1,3 @@
-# RTCDataChannelStats\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelStats
+# RTCDataChannelStats
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelStats

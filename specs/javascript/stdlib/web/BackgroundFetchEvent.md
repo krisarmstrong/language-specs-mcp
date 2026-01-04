@@ -1,1 +1,3 @@
-# BackgroundFetchEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchEvent
+# BackgroundFetchEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchEvent

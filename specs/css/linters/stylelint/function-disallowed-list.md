@@ -1,1 +1,3 @@
-# function-disallowed-list\n\nSee: https://stylelint.io/user-guide/rules/function-disallowed-list
+# function-disallowed-list
+
+See: https://stylelint.io/user-guide/rules/function-disallowed-list

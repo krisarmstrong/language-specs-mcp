@@ -1,1 +1,3 @@
-# require-csp-nonce\n\nSee: https://html-validate.org/rules/require-csp-nonce
+# require-csp-nonce
+
+See: https://html-validate.org/rules/require-csp-nonce

@@ -1,1 +1,3 @@
-# NDEFMessage\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/NDEFMessage
+# NDEFMessage
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/NDEFMessage

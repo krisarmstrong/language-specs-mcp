@@ -1,1 +1,3 @@
-# Translator\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Translator
+# Translator
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Translator

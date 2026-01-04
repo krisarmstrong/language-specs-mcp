@@ -1,1 +1,3 @@
-# media-feature-name-value-allowed-list\n\nSee: https://stylelint.io/user-guide/rules/media-feature-name-value-allowed-list
+# media-feature-name-value-allowed-list
+
+See: https://stylelint.io/user-guide/rules/media-feature-name-value-allowed-list

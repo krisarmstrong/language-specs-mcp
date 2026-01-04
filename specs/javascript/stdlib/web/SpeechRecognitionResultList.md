@@ -1,1 +1,3 @@
-# SpeechRecognitionResultList\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList
+# SpeechRecognitionResultList
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList

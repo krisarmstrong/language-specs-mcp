@@ -1,1 +1,3 @@
-# HTMLLinkElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement
+# HTMLLinkElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement

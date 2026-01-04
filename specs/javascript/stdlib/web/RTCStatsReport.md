@@ -1,1 +1,3 @@
-# RTCStatsReport\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport
+# RTCStatsReport
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport

@@ -1,1 +1,3 @@
-# Gyroscope\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope
+# Gyroscope
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope

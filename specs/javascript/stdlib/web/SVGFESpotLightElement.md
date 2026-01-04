@@ -1,1 +1,3 @@
-# SVGFESpotLightElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpotLightElement
+# SVGFESpotLightElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpotLightElement

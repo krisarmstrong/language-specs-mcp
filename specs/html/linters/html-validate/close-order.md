@@ -1,1 +1,3 @@
-# close-order\n\nSee: https://html-validate.org/rules/close-order
+# close-order
+
+See: https://html-validate.org/rules/close-order

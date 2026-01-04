@@ -1,1 +1,3 @@
-# arangolint\n\nSee: https://golangci-lint.run/docs/linters/arangolint/
+# arangolint
+
+See: https://golangci-lint.run/docs/linters/arangolint/

@@ -1,1 +1,3 @@
-# no-inline-style\n\nSee: https://html-validate.org/rules/no-inline-style
+# no-inline-style
+
+See: https://html-validate.org/rules/no-inline-style

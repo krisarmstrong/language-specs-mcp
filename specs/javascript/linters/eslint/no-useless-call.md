@@ -1,1 +1,3 @@
-# no-useless-call\n\nSee: https://eslint.org/docs/latest/rules/no-useless-call
+# no-useless-call
+
+See: https://eslint.org/docs/latest/rules/no-useless-call

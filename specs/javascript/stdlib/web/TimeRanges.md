@@ -1,1 +1,3 @@
-# TimeRanges\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges
+# TimeRanges
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges

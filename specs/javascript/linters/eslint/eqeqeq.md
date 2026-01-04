@@ -1,1 +1,3 @@
-# eqeqeq\n\nSee: https://eslint.org/docs/latest/rules/eqeqeq
+# eqeqeq
+
+See: https://eslint.org/docs/latest/rules/eqeqeq

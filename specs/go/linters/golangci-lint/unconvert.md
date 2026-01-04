@@ -1,1 +1,3 @@
-# unconvert\n\nSee: https://golangci-lint.run/docs/linters/unconvert/
+# unconvert
+
+See: https://golangci-lint.run/docs/linters/unconvert/

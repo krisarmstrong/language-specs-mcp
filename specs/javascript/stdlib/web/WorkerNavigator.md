@@ -1,1 +1,3 @@
-# WorkerNavigator\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator
+# WorkerNavigator
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator

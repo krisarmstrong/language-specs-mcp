@@ -1,1 +1,3 @@
-# RTCEncodedAudioFrame\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCEncodedAudioFrame
+# RTCEncodedAudioFrame
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCEncodedAudioFrame

@@ -1,1 +1,3 @@
-# HTMLBodyElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement
+# HTMLBodyElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement

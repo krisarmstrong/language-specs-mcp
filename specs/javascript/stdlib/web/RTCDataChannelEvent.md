@@ -1,1 +1,3 @@
-# RTCDataChannelEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent
+# RTCDataChannelEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent

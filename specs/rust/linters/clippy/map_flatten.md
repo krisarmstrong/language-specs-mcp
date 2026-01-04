@@ -1,1 +1,3 @@
-# map_flatten\n\nSee: https://rust-lang.github.io/rust-clippy/master/#map_flatten
+# map_flatten
+
+See: https://rust-lang.github.io/rust-clippy/master/#map_flatten

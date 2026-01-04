@@ -1,1 +1,3 @@
-# MediaKeys\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys
+# MediaKeys
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys

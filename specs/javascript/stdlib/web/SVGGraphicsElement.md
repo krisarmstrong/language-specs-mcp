@@ -1,1 +1,3 @@
-# SVGGraphicsElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement
+# SVGGraphicsElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement

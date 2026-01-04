@@ -1,1 +1,3 @@
-# CSSFunctionDescriptors\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSFunctionDescriptors
+# CSSFunctionDescriptors
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSFunctionDescriptors

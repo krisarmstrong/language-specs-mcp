@@ -1,1 +1,3 @@
-# copyloopvar\n\nSee: https://golangci-lint.run/docs/linters/copyloopvar/
+# copyloopvar
+
+See: https://golangci-lint.run/docs/linters/copyloopvar/

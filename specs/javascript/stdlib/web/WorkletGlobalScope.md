@@ -1,1 +1,3 @@
-# WorkletGlobalScope\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/WorkletGlobalScope
+# WorkletGlobalScope
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/WorkletGlobalScope

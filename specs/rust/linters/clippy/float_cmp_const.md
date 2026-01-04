@@ -1,1 +1,3 @@
-# float_cmp_const\n\nSee: https://rust-lang.github.io/rust-clippy/master/#float_cmp_const
+# float_cmp_const
+
+See: https://rust-lang.github.io/rust-clippy/master/#float_cmp_const

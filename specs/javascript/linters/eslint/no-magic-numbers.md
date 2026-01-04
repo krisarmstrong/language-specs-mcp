@@ -1,1 +1,3 @@
-# no-magic-numbers\n\nSee: https://eslint.org/docs/latest/rules/no-magic-numbers
+# no-magic-numbers
+
+See: https://eslint.org/docs/latest/rules/no-magic-numbers

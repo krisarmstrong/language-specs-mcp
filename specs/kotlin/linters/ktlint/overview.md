@@ -1,1 +1,7 @@
-# ktlint Rules\n\nSee: https://pinterest.github.io/ktlint/latest/rules/
+# ktlint Rules
+Version: unknown
+
+Source: https://pinterest.github.io/ktlint/latest/rules/
+
+
+See: https://pinterest.github.io/ktlint/latest/rules/

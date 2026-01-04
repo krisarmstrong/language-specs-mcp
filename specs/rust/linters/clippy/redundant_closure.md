@@ -1,1 +1,3 @@
-# redundant_closure\n\nSee: https://rust-lang.github.io/rust-clippy/master/#redundant_closure
+# redundant_closure
+
+See: https://rust-lang.github.io/rust-clippy/master/#redundant_closure

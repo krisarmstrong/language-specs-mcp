@@ -1,1 +1,3 @@
-# testpackage\n\nSee: https://golangci-lint.run/docs/linters/testpackage/
+# testpackage
+
+See: https://golangci-lint.run/docs/linters/testpackage/

@@ -1,1 +1,3 @@
-# AudioDecoder\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder
+# AudioDecoder
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/AudioDecoder

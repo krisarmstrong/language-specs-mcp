@@ -1,1 +1,3 @@
-# PositionSensorVRDevice\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PositionSensorVRDevice
+# PositionSensorVRDevice
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PositionSensorVRDevice

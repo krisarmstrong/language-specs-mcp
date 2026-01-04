@@ -1,1 +1,3 @@
-# field_reassign_with_default\n\nSee: https://rust-lang.github.io/rust-clippy/master/#field_reassign_with_default
+# field_reassign_with_default
+
+See: https://rust-lang.github.io/rust-clippy/master/#field_reassign_with_default

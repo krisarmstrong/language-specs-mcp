@@ -1,1 +1,3 @@
-# named-grid-areas-no-invalid\n\nSee: https://stylelint.io/user-guide/rules/named-grid-areas-no-invalid
+# named-grid-areas-no-invalid
+
+See: https://stylelint.io/user-guide/rules/named-grid-areas-no-invalid

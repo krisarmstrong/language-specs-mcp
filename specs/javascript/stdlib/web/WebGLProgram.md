@@ -1,1 +1,3 @@
-# WebGLProgram\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/WebGLProgram
+# WebGLProgram
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/WebGLProgram

@@ -1,1 +1,3 @@
-# USBIsochronousInTransferResult\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/USBIsochronousInTransferResult
+# USBIsochronousInTransferResult
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/USBIsochronousInTransferResult

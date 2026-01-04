@@ -1,1 +1,3 @@
-# default-param-last\n\nSee: https://eslint.org/docs/latest/rules/default-param-last
+# default-param-last
+
+See: https://eslint.org/docs/latest/rules/default-param-last

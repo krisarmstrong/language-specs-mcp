@@ -1,1 +1,3 @@
-# CSSMathProduct\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSMathProduct
+# CSSMathProduct
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSMathProduct

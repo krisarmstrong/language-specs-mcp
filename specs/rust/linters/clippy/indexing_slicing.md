@@ -1,1 +1,3 @@
-# indexing_slicing\n\nSee: https://rust-lang.github.io/rust-clippy/master/#indexing_slicing
+# indexing_slicing
+
+See: https://rust-lang.github.io/rust-clippy/master/#indexing_slicing

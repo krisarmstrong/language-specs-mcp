@@ -1,1 +1,3 @@
-# SVGPathElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement
+# SVGPathElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement

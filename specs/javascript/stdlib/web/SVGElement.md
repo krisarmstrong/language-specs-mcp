@@ -1,1 +1,3 @@
-# SVGElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGElement
+# SVGElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGElement

@@ -1,1 +1,3 @@
-# TouchList\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/TouchList
+# TouchList
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/TouchList

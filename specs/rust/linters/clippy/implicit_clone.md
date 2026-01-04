@@ -1,1 +1,3 @@
-# implicit_clone\n\nSee: https://rust-lang.github.io/rust-clippy/master/#implicit_clone
+# implicit_clone
+
+See: https://rust-lang.github.io/rust-clippy/master/#implicit_clone

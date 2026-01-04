@@ -1,1 +1,3 @@
-# manual_ok_or\n\nSee: https://rust-lang.github.io/rust-clippy/master/#manual_ok_or
+# manual_ok_or
+
+See: https://rust-lang.github.io/rust-clippy/master/#manual_ok_or

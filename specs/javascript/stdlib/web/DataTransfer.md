@@ -1,1 +1,3 @@
-# DataTransfer\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer
+# DataTransfer
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer

@@ -1,1 +1,3 @@
-# input-attributes\n\nSee: https://html-validate.org/rules/input-attributes
+# input-attributes
+
+See: https://html-validate.org/rules/input-attributes

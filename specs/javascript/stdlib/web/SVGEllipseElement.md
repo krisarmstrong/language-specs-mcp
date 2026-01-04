@@ -1,1 +1,3 @@
-# SVGEllipseElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement
+# SVGEllipseElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement

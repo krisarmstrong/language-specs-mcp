@@ -1,1 +1,3 @@
-# PopStateEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent
+# PopStateEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent

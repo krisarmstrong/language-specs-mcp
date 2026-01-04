@@ -1,1 +1,3 @@
-# PermissionStatus\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PermissionStatus
+# PermissionStatus
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PermissionStatus

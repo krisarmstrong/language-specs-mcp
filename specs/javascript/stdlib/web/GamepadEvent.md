@@ -1,1 +1,3 @@
-# GamepadEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GamepadEvent
+# GamepadEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GamepadEvent

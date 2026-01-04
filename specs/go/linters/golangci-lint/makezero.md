@@ -1,1 +1,3 @@
-# makezero\n\nSee: https://golangci-lint.run/docs/linters/makezero/
+# makezero
+
+See: https://golangci-lint.run/docs/linters/makezero/

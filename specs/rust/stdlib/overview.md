@@ -1,1 +1,3 @@
-# Rust Standard Library\n\nSee: https://doc.rust-lang.org/std/
+# Rust Standard Library
+
+See: https://doc.rust-lang.org/std/

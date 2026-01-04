@@ -1,5 +1,5 @@
 import { readdir, readFile, stat } from "node:fs/promises";
-import { join, relative } from "node:path";
+import { join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
@@ -11,7 +11,7 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
-const SPECS_DIR = join(__dirname, "..", "specs");
+const SPECS_DIR = resolve(process.env.SPECS_DIR ?? join(__dirname, "..", "specs"));
 
 interface SpecFile {
   path: string;
@@ -38,6 +38,20 @@ type SupportedLanguage =
   | "java"
   | "kotlin"
   | "lua"
+  | "php"
+  | "ruby"
+  | "dart"
+  | "r"
+  | "julia"
+  | "scala"
+  | "elixir"
+  | "clojure"
+  | "haskell"
+  | "zig"
+  | "ocaml"
+  | "markdown"
+  | "yaml"
+  | "dockerfile"
   | "python"
   | "rust"
   | "swift"
@@ -59,6 +73,20 @@ const LANGUAGES: SupportedLanguage[] = [
   "java",
   "kotlin",
   "lua",
+  "php",
+  "ruby",
+  "dart",
+  "r",
+  "julia",
+  "scala",
+  "elixir",
+  "clojure",
+  "haskell",
+  "zig",
+  "ocaml",
+  "markdown",
+  "yaml",
+  "dockerfile",
   "powershell",
   "python",
   "rust",
@@ -67,6 +95,88 @@ const LANGUAGES: SupportedLanguage[] = [
   "typescript",
 ];
 const CATEGORIES = ["spec", "stdlib", "linters", "patterns", "formatters"] as const;
+const LANGUAGE_SET = new Set<SupportedLanguage>(LANGUAGES);
+const CATEGORY_SET = new Set<(typeof CATEGORIES)[number]>(CATEGORIES);
+const SPECS_CACHE_TTL_MS = 60_000;
+const SEARCH_INDEX_CACHE_TTL_MS = 60_000;
+const RESOURCE_PAGE_SIZE = Number.parseInt(process.env.RESOURCE_PAGE_SIZE ?? "500", 10) || 500;
+
+type SearchIndexEntry = {
+  path: string;
+  category: string;
+  name: string;
+  content: string;
+};
+
+type SearchIndexFile = {
+  language: string;
+  generatedAt: string;
+  entries: SearchIndexEntry[];
+};
+
+type CachedSpecs = {
+  items: SpecFile[];
+  loadedAt: number;
+};
+
+const specsCache: CachedSpecs = {
+  items: [],
+  loadedAt: 0,
+};
+
+type CachedSearchIndex = {
+  entries: SearchIndexEntry[];
+  loadedAt: number;
+};
+
+const searchIndexCache = new Map<string, CachedSearchIndex>();
+
+function isSupportedLanguage(value: string | undefined): value is SupportedLanguage {
+  return !!value && LANGUAGE_SET.has(value as SupportedLanguage);
+}
+
+function isSupportedCategory(value: string | undefined): value is (typeof CATEGORIES)[number] {
+  return !!value && CATEGORY_SET.has(value as (typeof CATEGORIES)[number]);
+}
+
+function isNonEmptyString(value: unknown): value is string {
+  return typeof value === "string" && value.trim().length > 0;
+}
+
+function parseBoolean(value: unknown): boolean | undefined {
+  if (typeof value === "boolean") {
+    return value;
+  }
+  if (typeof value === "string") {
+    const normalized = value.trim().toLowerCase();
+    if (normalized === "true") {
+      return true;
+    }
+    if (normalized === "false") {
+      return false;
+    }
+  }
+  return undefined;
+}
+
+function parseString(value: unknown): string {
+  return typeof value === "string" ? value : "";
+}
+
+function hasTraversal(segment: string): boolean {
+  return segment.split(/[\\/]+/).some((part) => part === "..");
+}
+
+function resolveSpecPath(...segments: string[]): string | null {
+  if (segments.some((segment) => segment.includes("\0") || hasTraversal(segment))) {
+    return null;
+  }
+  const resolved = resolve(SPECS_DIR, ...segments);
+  if (resolved === SPECS_DIR || resolved.startsWith(`${SPECS_DIR}${sep}`)) {
+    return resolved;
+  }
+  return null;
+}
 
 async function fileExists(path: string): Promise<boolean> {
   try {
@@ -123,57 +233,157 @@ async function getAllSpecs(): Promise<SpecFile[]> {
   return specs;
 }
 
-async function searchSpecs(query: string): Promise<string> {
+async function getAllSpecsCached(): Promise<SpecFile[]> {
+  const now = Date.now();
+  if (specsCache.items.length > 0 && now - specsCache.loadedAt < SPECS_CACHE_TTL_MS) {
+    return specsCache.items;
+  }
   const specs = await getAllSpecs();
+  specsCache.items = specs;
+  specsCache.loadedAt = now;
+  return specs;
+}
+
+function extractLineMatches(content: string, queryLower: string): string[] {
+  const lines = content.split("\n");
+  const matches: string[] = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (line?.toLowerCase().includes(queryLower)) {
+      const start = Math.max(0, i - 2);
+      const end = Math.min(lines.length, i + 3);
+      const context = lines.slice(start, end).join("\n");
+      matches.push(`Line ${i + 1}:\n${context}`);
+
+      if (matches.length >= 3) {
+        break;
+      }
+    }
+  }
+
+  return matches;
+}
+
+async function loadSearchIndex(language: string): Promise<SearchIndexEntry[] | null> {
+  const cached = searchIndexCache.get(language);
+  const now = Date.now();
+  if (cached && now - cached.loadedAt < SEARCH_INDEX_CACHE_TTL_MS) {
+    return cached.entries;
+  }
+  const searchPath = resolveSpecPath(language, "search.json");
+  if (!searchPath || !(await fileExists(searchPath))) {
+    return null;
+  }
+  try {
+    const raw = await readFile(searchPath, "utf-8");
+    const index = JSON.parse(raw) as SearchIndexFile;
+    searchIndexCache.set(language, { entries: index.entries, loadedAt: now });
+    return index.entries;
+  } catch (error) {
+    console.error("Search index load failed:", language, error);
+    return null;
+  }
+}
+
+type SearchOptions = {
+  allowFallback?: boolean;
+};
+
+async function searchSpecs(query: string, options: SearchOptions = {}): Promise<string> {
+  if (!isNonEmptyString(query)) {
+    return "Query must be a non-empty string.";
+  }
+  const allowFallback = options.allowFallback ?? true;
+  const specs = await getAllSpecsCached();
   const results: string[] = [];
   const queryLower = query.toLowerCase();
+  const missingIndexLanguages: string[] = [];
 
-  for (const spec of specs) {
-    try {
-      const content = await readFile(spec.path, "utf-8");
-      const lines = content.split("\n");
-      const matches: string[] = [];
+  for (const language of LANGUAGES) {
+    const entries = await loadSearchIndex(language);
+    if (!entries) {
+      missingIndexLanguages.push(language);
+      if (!allowFallback) {
+        continue;
+      }
+      continue;
+    }
+    for (const entry of entries) {
+      if (!entry.content.toLowerCase().includes(queryLower)) {
+        continue;
+      }
+      const matches = extractLineMatches(entry.content, queryLower);
+      if (matches.length === 0) {
+        continue;
+      }
+      results.push(
+        `## ${language}/${entry.category}/${entry.name}\n\n${matches.join("\n\n---\n\n")}`,
+      );
+      if (results.length >= 10) {
+        return results.join("\n\n===\n\n");
+      }
+    }
+  }
 
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        if (line?.toLowerCase().includes(queryLower)) {
-          const start = Math.max(0, i - 2);
-          const end = Math.min(lines.length, i + 3);
-          const context = lines.slice(start, end).join("\n");
-          matches.push(`Line ${i + 1}:\n${context}`);
+  if (allowFallback) {
+    for (const spec of specs) {
+      if (results.length >= 10) {
+        break;
+      }
+      try {
+        const content = await readFile(spec.path, "utf-8");
+        const matches = extractLineMatches(content, queryLower);
 
-          if (matches.length >= 3) {
-            break;
-          }
+        if (matches.length > 0) {
+          results.push(
+            `## ${spec.language}/${spec.category}/${spec.name}\n\n${matches.join("\n\n---\n\n")}`,
+          );
         }
+      } catch (error) {
+        console.error("Search read failed:", spec.path, error);
       }
-
-      if (matches.length > 0) {
-        results.push(
-          `## ${spec.language}/${spec.category}/${spec.name}\n\n${matches.join("\n\n---\n\n")}`,
-        );
-      }
-    } catch {}
+    }
   }
 
   if (results.length === 0) {
-    return `No results found for: ${query}`;
+    const warning =
+      !allowFallback && missingIndexLanguages.length > 0
+        ? `\n\nSearch fallback skipped; missing indexes for: ${missingIndexLanguages.join(", ")}`
+        : "";
+    return `No results found for: ${query}${warning}`;
+  }
+
+  if (!allowFallback && missingIndexLanguages.length > 0) {
+    results.push(
+      `Search fallback skipped; missing indexes for: ${missingIndexLanguages.join(", ")}`,
+    );
   }
 
   return results.slice(0, 10).join("\n\n===\n\n");
 }
 
 async function getSpec(language: string, category: string, topic: string): Promise<string> {
+  if (!isSupportedLanguage(language)) {
+    return `Unsupported language: ${language}`;
+  }
+  if (!isSupportedCategory(category)) {
+    return `Unsupported category: ${category}`;
+  }
+  if (!isNonEmptyString(topic)) {
+    return "Topic must be a non-empty string.";
+  }
   const categories = category === "stdlib" ? [category, "lib"] : [category];
+  const allowCategoryRoot = topic === category;
   const possiblePaths = categories.flatMap((cat) => [
-    join(SPECS_DIR, language, cat, `${topic}.md`),
-    join(SPECS_DIR, language, `${cat}.md`),
-    join(SPECS_DIR, language, cat, topic, "index.md"),
+    resolveSpecPath(language, cat, `${topic}.md`),
+    ...(allowCategoryRoot ? [resolveSpecPath(language, `${cat}.md`)] : []),
+    resolveSpecPath(language, cat, topic, "index.md"),
   ]);
 
-  for (const path of possiblePaths) {
-    if (await fileExists(path)) {
-      return await readFile(path, "utf-8");
+  for (const specPath of possiblePaths) {
+    if (specPath && (await fileExists(specPath))) {
+      return await readFile(specPath, "utf-8");
     }
   }
 
@@ -182,12 +392,21 @@ async function getSpec(language: string, category: string, topic: string): Promi
 }
 
 async function listCategorySpecs(language: string, category: string): Promise<string> {
-  const languageDir = join(SPECS_DIR, language);
+  if (!isSupportedLanguage(language)) {
+    return `Unsupported language: ${language}`;
+  }
+  if (!isSupportedCategory(category)) {
+    return `Unsupported category: ${category}`;
+  }
+  const languageDir = resolveSpecPath(language);
+  if (!languageDir) {
+    return `Invalid language path: ${language}`;
+  }
   const fallbackCategory = category === "stdlib" ? "lib" : "";
-  const categoryDir = join(languageDir, category);
-  const fallbackDir = fallbackCategory ? join(languageDir, fallbackCategory) : "";
+  const categoryDir = resolveSpecPath(language, category);
+  const fallbackDir = fallbackCategory ? resolveSpecPath(language, fallbackCategory) : "";
 
-  if (!(await fileExists(categoryDir))) {
+  if (!categoryDir || !(await fileExists(categoryDir))) {
     if (category === "spec" && (await fileExists(languageDir))) {
       const entries = await readdir(languageDir, { withFileTypes: true });
       const items = entries
@@ -219,14 +438,20 @@ async function listCategorySpecs(language: string, category: string): Promise<st
 }
 
 async function getLinterRule(language: string, linter: string, rule: string): Promise<string> {
-  const path = join(SPECS_DIR, language, "linters", linter, `${rule}.md`);
+  if (!isSupportedLanguage(language)) {
+    return `Unsupported language: ${language}`;
+  }
+  if (!isNonEmptyString(linter) || !isNonEmptyString(rule)) {
+    return "Linter and rule must be non-empty strings.";
+  }
+  const path = resolveSpecPath(language, "linters", linter, `${rule}.md`);
 
-  if (await fileExists(path)) {
+  if (path && (await fileExists(path))) {
     return await readFile(path, "utf-8");
   }
 
-  const altPath = join(SPECS_DIR, language, "linters", `${rule}.md`);
-  if (await fileExists(altPath)) {
+  const altPath = resolveSpecPath(language, "linters", `${rule}.md`);
+  if (altPath && (await fileExists(altPath))) {
     return await readFile(altPath, "utf-8");
   }
 
@@ -307,6 +532,10 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
             type: "string",
             description: "Search term",
           },
+          allow_fallback: {
+            type: "boolean",
+            description: "When false, only use search indexes and skip file scanning fallback",
+          },
         },
         required: ["query"],
       },
@@ -336,27 +565,67 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
 
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
   const { name, arguments: args } = request.params;
-  const typedArgs = args as Record<string, string>;
+  const typedArgs = args as Record<string, unknown>;
 
   switch (name) {
     case "get_spec": {
-      const content = await getSpec(typedArgs.language, typedArgs.category, typedArgs.topic);
+      const language = parseString(typedArgs.language);
+      const category = parseString(typedArgs.category);
+      const topic = parseString(typedArgs.topic);
+      if (!isSupportedLanguage(language) || !isSupportedCategory(category)) {
+        return {
+          content: [
+            {
+              type: "text",
+              text: `Invalid language or category. language=${language}, category=${category}`,
+            },
+          ],
+        };
+      }
+      const content = await getSpec(language, category, topic);
       return { content: [{ type: "text", text: content }] };
     }
 
     case "get_linter_rule": {
-      const content = await getLinterRule(typedArgs.language, typedArgs.linter, typedArgs.rule);
+      const language = parseString(typedArgs.language);
+      const linter = parseString(typedArgs.linter);
+      const rule = parseString(typedArgs.rule);
+      if (!isSupportedLanguage(language)) {
+        return {
+          content: [
+            {
+              type: "text",
+              text: `Invalid language: ${language}`,
+            },
+          ],
+        };
+      }
+      const content = await getLinterRule(language, linter, rule);
       return { content: [{ type: "text", text: content }] };
     }
 
     case "search_specs": {
-      const content = await searchSpecs(typedArgs.query);
+      const allowFallback = parseBoolean(typedArgs.allow_fallback);
+      const content = await searchSpecs(parseString(typedArgs.query), {
+        allowFallback,
+      });
       return { content: [{ type: "text", text: content }] };
     }
 
     case "list_available": {
-      const category = typedArgs.category ?? "spec";
-      const content = await listCategorySpecs(typedArgs.language, category);
+      const language = parseString(typedArgs.language);
+      const category = parseString(typedArgs.category) || "spec";
+      if (!isSupportedLanguage(language) || !isSupportedCategory(category)) {
+        return {
+          content: [
+            {
+              type: "text",
+              text: `Invalid language or category. language=${language}, category=${category}`,
+            },
+          ],
+        };
+      }
+      const content = await listCategorySpecs(language, category);
       return { content: [{ type: "text", text: content }] };
     }
 
@@ -365,14 +634,20 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   }
 });
 
-server.setRequestHandler(ListResourcesRequestSchema, async () => {
-  const specs = await getAllSpecs();
+server.setRequestHandler(ListResourcesRequestSchema, async (request) => {
+  const cursorRaw = request.params?.cursor;
+  const cursorValue = Number.parseInt(cursorRaw ?? "0", 10);
+  const offset = Number.isFinite(cursorValue) && cursorValue >= 0 ? cursorValue : 0;
+  const specs = await getAllSpecsCached();
+  const page = specs.slice(offset, offset + RESOURCE_PAGE_SIZE);
   return {
-    resources: specs.map((spec) => ({
+    resources: page.map((spec) => ({
       uri: `spec://${spec.language}/${spec.category}/${spec.name}`,
       name: `${spec.language}/${spec.category}/${spec.name}`,
       mimeType: "text/markdown",
     })),
+    nextCursor:
+      offset + RESOURCE_PAGE_SIZE < specs.length ? String(offset + RESOURCE_PAGE_SIZE) : undefined,
   };
 });
 
@@ -400,7 +675,22 @@ async function main(): Promise<void> {
   console.error("Language Specs MCP Server running");
 }
 
-main().catch((error: unknown) => {
-  console.error("Fatal error:", error);
-  process.exit(1);
-});
+const isEntrypoint =
+  !!process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1]);
+
+if (isEntrypoint) {
+  main().catch((error: unknown) => {
+    console.error("Fatal error:", error);
+    process.exit(1);
+  });
+}
+
+export {
+  getSpec,
+  getLinterRule,
+  listCategorySpecs,
+  searchSpecs,
+  resolveSpecPath,
+  isSupportedLanguage,
+  isSupportedCategory,
+};

@@ -1,1 +1,3 @@
-# QuotaExceededError\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/QuotaExceededError
+# QuotaExceededError
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/QuotaExceededError

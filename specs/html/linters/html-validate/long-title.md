@@ -1,1 +1,3 @@
-# long-title\n\nSee: https://html-validate.org/rules/long-title
+# long-title
+
+See: https://html-validate.org/rules/long-title

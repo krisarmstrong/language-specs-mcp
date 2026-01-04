@@ -1,1 +1,3 @@
-# shadow_same\n\nSee: https://rust-lang.github.io/rust-clippy/master/#shadow_same
+# shadow_same
+
+See: https://rust-lang.github.io/rust-clippy/master/#shadow_same

@@ -1,1 +1,3 @@
-# SVGFEBlendElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGFEBlendElement
+# SVGFEBlendElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGFEBlendElement

@@ -1,1 +1,3 @@
-# no-unknown-elements\n\nSee: https://html-validate.org/rules/no-unknown-elements
+# no-unknown-elements
+
+See: https://html-validate.org/rules/no-unknown-elements

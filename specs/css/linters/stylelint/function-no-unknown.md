@@ -1,1 +1,3 @@
-# function-no-unknown\n\nSee: https://stylelint.io/user-guide/rules/function-no-unknown
+# function-no-unknown
+
+See: https://stylelint.io/user-guide/rules/function-no-unknown

@@ -1,1 +1,3 @@
-# RTCRemoteInboundRtpStreamStats\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats
+# RTCRemoteInboundRtpStreamStats
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats

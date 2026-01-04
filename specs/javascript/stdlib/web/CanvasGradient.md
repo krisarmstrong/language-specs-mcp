@@ -1,1 +1,3 @@
-# CanvasGradient\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CanvasGradient
+# CanvasGradient
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CanvasGradient

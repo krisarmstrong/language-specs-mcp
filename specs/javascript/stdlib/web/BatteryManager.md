@@ -1,1 +1,3 @@
-# BatteryManager\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager
+# BatteryManager
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager

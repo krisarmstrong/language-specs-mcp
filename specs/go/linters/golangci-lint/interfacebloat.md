@@ -1,1 +1,3 @@
-# interfacebloat\n\nSee: https://golangci-lint.run/docs/linters/interfacebloat/
+# interfacebloat
+
+See: https://golangci-lint.run/docs/linters/interfacebloat/

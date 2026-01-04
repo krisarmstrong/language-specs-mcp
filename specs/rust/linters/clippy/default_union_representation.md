@@ -1,1 +1,3 @@
-# default_union_representation\n\nSee: https://rust-lang.github.io/rust-clippy/master/#default_union_representation
+# default_union_representation
+
+See: https://rust-lang.github.io/rust-clippy/master/#default_union_representation

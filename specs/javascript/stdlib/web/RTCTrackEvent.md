@@ -1,1 +1,3 @@
-# RTCTrackEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent
+# RTCTrackEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent

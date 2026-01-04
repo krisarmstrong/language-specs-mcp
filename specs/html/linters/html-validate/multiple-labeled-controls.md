@@ -1,1 +1,3 @@
-# multiple-labeled-controls\n\nSee: https://html-validate.org/rules/multiple-labeled-controls
+# multiple-labeled-controls
+
+See: https://html-validate.org/rules/multiple-labeled-controls

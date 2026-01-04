@@ -1,1 +1,3 @@
-# ireturn\n\nSee: https://golangci-lint.run/docs/linters/ireturn/
+# ireturn
+
+See: https://golangci-lint.run/docs/linters/ireturn/

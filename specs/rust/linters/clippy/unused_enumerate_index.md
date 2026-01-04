@@ -1,1 +1,3 @@
-# unused_enumerate_index\n\nSee: https://rust-lang.github.io/rust-clippy/master/#unused_enumerate_index
+# unused_enumerate_index
+
+See: https://rust-lang.github.io/rust-clippy/master/#unused_enumerate_index

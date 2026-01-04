@@ -1,1 +1,3 @@
-# SVGLineElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGLineElement
+# SVGLineElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGLineElement

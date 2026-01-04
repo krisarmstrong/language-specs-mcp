@@ -1,1 +1,3 @@
-# default-case-last\n\nSee: https://eslint.org/docs/latest/rules/default-case-last
+# default-case-last
+
+See: https://eslint.org/docs/latest/rules/default-case-last

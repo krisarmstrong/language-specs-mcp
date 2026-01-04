@@ -1,1 +1,3 @@
-# HTMLAnchorElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement
+# HTMLAnchorElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement

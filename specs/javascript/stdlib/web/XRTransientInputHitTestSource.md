@@ -1,1 +1,3 @@
-# XRTransientInputHitTestSource\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/XRTransientInputHitTestSource
+# XRTransientInputHitTestSource
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/XRTransientInputHitTestSource

@@ -1,1 +1,3 @@
-# void-style\n\nSee: https://html-validate.org/rules/void-style
+# void-style
+
+See: https://html-validate.org/rules/void-style

@@ -1,1 +1,3 @@
-# SVGAnimatedAngle\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedAngle
+# SVGAnimatedAngle
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedAngle

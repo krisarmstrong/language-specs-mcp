@@ -1,4 +1,8 @@
 # golangci-lint Rules (from .golangci.yml)
+Version: unknown
+
+Source: https://golangci-lint.run/usage/linters/
+
 
 Source: https://raw.githubusercontent.com/maratori/golangci-lint-config/main/.golangci.yml
 

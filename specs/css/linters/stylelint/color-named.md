@@ -1,1 +1,3 @@
-# color-named\n\nSee: https://stylelint.io/user-guide/rules/color-named
+# color-named
+
+See: https://stylelint.io/user-guide/rules/color-named

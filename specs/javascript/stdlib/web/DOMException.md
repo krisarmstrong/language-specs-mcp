@@ -1,1 +1,3 @@
-# DOMException\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/DOMException
+# DOMException
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/DOMException

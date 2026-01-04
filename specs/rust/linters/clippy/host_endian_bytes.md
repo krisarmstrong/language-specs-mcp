@@ -1,1 +1,3 @@
-# host_endian_bytes\n\nSee: https://rust-lang.github.io/rust-clippy/master/#host_endian_bytes
+# host_endian_bytes
+
+See: https://rust-lang.github.io/rust-clippy/master/#host_endian_bytes

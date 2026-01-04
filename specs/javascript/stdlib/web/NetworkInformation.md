@@ -1,1 +1,3 @@
-# NetworkInformation\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation
+# NetworkInformation
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation

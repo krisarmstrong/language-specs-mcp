@@ -1,1 +1,3 @@
-# MediaTrackSettings\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings
+# MediaTrackSettings
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings

@@ -1,1 +1,3 @@
-# modernize\n\nSee: https://golangci-lint.run/docs/linters/modernize/
+# modernize
+
+See: https://golangci-lint.run/docs/linters/modernize/

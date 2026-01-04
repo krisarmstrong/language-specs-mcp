@@ -1,1 +1,3 @@
-# grouped-accessor-pairs\n\nSee: https://eslint.org/docs/latest/rules/grouped-accessor-pairs
+# grouped-accessor-pairs
+
+See: https://eslint.org/docs/latest/rules/grouped-accessor-pairs

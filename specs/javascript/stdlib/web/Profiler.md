@@ -1,1 +1,3 @@
-# Profiler\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Profiler
+# Profiler
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Profiler
