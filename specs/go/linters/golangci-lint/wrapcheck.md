@@ -1,1 +1,3 @@
-# wrapcheck\n\nSee: https://golangci-lint.run/docs/linters/wrapcheck/
+# wrapcheck
+
+See: https://golangci-lint.run/docs/linters/wrapcheck/

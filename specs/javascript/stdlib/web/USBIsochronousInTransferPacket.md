@@ -1,1 +1,3 @@
-# USBIsochronousInTransferPacket\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/USBIsochronousInTransferPacket
+# USBIsochronousInTransferPacket
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/USBIsochronousInTransferPacket

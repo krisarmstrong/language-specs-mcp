@@ -4,7 +4,7 @@ These instructions apply to any coding or review task in this repo.
 
 ## Required Tool Use
 
-Before writing or modifying code, you MUST consult the `language-specs` MCP server.
+Before writing or modifying code, you MUST consult the `SpecForge` MCP server.
 
 - Use `get_spec` for language/stdlib/formatter questions.
 - Use `get_linter_rule` for lint guidance.

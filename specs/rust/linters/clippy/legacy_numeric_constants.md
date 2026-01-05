@@ -1,1 +1,3 @@
-# legacy_numeric_constants\n\nSee: https://rust-lang.github.io/rust-clippy/master/#legacy_numeric_constants
+# legacy_numeric_constants
+
+See: https://rust-lang.github.io/rust-clippy/master/#legacy_numeric_constants

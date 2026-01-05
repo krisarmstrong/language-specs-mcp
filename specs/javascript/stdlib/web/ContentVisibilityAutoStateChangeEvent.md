@@ -1,1 +1,3 @@
-# ContentVisibilityAutoStateChangeEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent
+# ContentVisibilityAutoStateChangeEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/ContentVisibilityAutoStateChangeEvent

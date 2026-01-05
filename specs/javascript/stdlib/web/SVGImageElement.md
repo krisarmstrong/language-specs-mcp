@@ -1,1 +1,3 @@
-# SVGImageElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement
+# SVGImageElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement

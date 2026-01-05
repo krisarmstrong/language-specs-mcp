@@ -1,1 +1,3 @@
-# no-useless-backreference\n\nSee: https://eslint.org/docs/latest/rules/no-useless-backreference
+# no-useless-backreference
+
+See: https://eslint.org/docs/latest/rules/no-useless-backreference

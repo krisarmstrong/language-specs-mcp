@@ -1,1 +1,3 @@
-# valid-autocomplete\n\nSee: https://html-validate.org/rules/valid-autocomplete
+# valid-autocomplete
+
+See: https://html-validate.org/rules/valid-autocomplete

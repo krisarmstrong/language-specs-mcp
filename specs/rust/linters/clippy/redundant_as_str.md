@@ -1,1 +1,3 @@
-# redundant_as_str\n\nSee: https://rust-lang.github.io/rust-clippy/master/#redundant_as_str
+# redundant_as_str
+
+See: https://rust-lang.github.io/rust-clippy/master/#redundant_as_str

@@ -1,1 +1,3 @@
-# SanitizerConfig\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig
+# SanitizerConfig
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SanitizerConfig

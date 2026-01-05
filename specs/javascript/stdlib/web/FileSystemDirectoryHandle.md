@@ -1,1 +1,3 @@
-# FileSystemDirectoryHandle\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle
+# FileSystemDirectoryHandle
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/FileSystemDirectoryHandle

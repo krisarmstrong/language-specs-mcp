@@ -1,0 +1,1505 @@
+{
+  "language": "css",
+  "fetchedAt": "2026-01-04T18:24:27Z",
+  "counts": {
+    "spec": 1,
+    "stdlib": 1,
+    "linters": 143,
+    "formatters": 2,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-nested-pattern.md",
+        "name": "linters/stylelint/selector-nested-pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-max-combinators.md",
+        "name": "linters/stylelint/selector-max-combinators"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-pseudo-class-disallowed-list.md",
+        "name": "linters/stylelint/selector-pseudo-class-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/at-rule-no-vendor-prefix.md",
+        "name": "linters/stylelint/at-rule-no-vendor-prefix"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/font-weight-notation.md",
+        "name": "linters/stylelint/font-weight-notation"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-block-single-line-max-declarations.md",
+        "name": "linters/stylelint/declaration-block-single-line-max-declarations"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/property-disallowed-list.md",
+        "name": "linters/stylelint/property-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/container-name-pattern.md",
+        "name": "linters/stylelint/container-name-pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/media-feature-name-disallowed-list.md",
+        "name": "linters/stylelint/media-feature-name-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/media-feature-name-value-no-unknown.md",
+        "name": "linters/stylelint/media-feature-name-value-no-unknown"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/no-invalid-position-declaration.md",
+        "name": "linters/stylelint/no-invalid-position-declaration"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/at-rule-allowed-list.md",
+        "name": "linters/stylelint/at-rule-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/no-unknown-custom-properties.md",
+        "name": "linters/stylelint/no-unknown-custom-properties"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/property-no-unknown.md",
+        "name": "linters/stylelint/property-no-unknown"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-property-unit-disallowed-list.md",
+        "name": "linters/stylelint/declaration-property-unit-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/overview.md",
+        "name": "linters/stylelint/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/no-unknown-custom-media.md",
+        "name": "linters/stylelint/no-unknown-custom-media"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/unit-no-unknown.md",
+        "name": "linters/stylelint/unit-no-unknown"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/custom-media-pattern.md",
+        "name": "linters/stylelint/custom-media-pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-no-important.md",
+        "name": "linters/stylelint/declaration-no-important"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/function-calc-no-unspaced-operator.md",
+        "name": "linters/stylelint/function-calc-no-unspaced-operator"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/property-no-vendor-prefix.md",
+        "name": "linters/stylelint/property-no-vendor-prefix"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-pseudo-element-no-unknown.md",
+        "name": "linters/stylelint/selector-pseudo-element-no-unknown"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/comment-no-empty.md",
+        "name": "linters/stylelint/comment-no-empty"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-property-value-disallowed-list.md",
+        "name": "linters/stylelint/declaration-property-value-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-block-no-redundant-longhand-properties.md",
+        "name": "linters/stylelint/declaration-block-no-redundant-longhand-properties"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/color-hex-length.md",
+        "name": "linters/stylelint/color-hex-length"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/value-keyword-case.md",
+        "name": "linters/stylelint/value-keyword-case"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-disallowed-list.md",
+        "name": "linters/stylelint/selector-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/at-rule-empty-line-before.md",
+        "name": "linters/stylelint/at-rule-empty-line-before"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/function-url-scheme-allowed-list.md",
+        "name": "linters/stylelint/function-url-scheme-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/font-family-name-quotes.md",
+        "name": "linters/stylelint/font-family-name-quotes"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-anb-no-unmatchable.md",
+        "name": "linters/stylelint/selector-anb-no-unmatchable"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-not-notation.md",
+        "name": "linters/stylelint/selector-not-notation"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-max-universal.md",
+        "name": "linters/stylelint/selector-max-universal"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/no-invalid-double-slash-comments.md",
+        "name": "linters/stylelint/no-invalid-double-slash-comments"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/color-no-hex.md",
+        "name": "linters/stylelint/color-no-hex"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/custom-property-pattern.md",
+        "name": "linters/stylelint/custom-property-pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-type-case.md",
+        "name": "linters/stylelint/selector-type-case"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/color-no-invalid-hex.md",
+        "name": "linters/stylelint/color-no-invalid-hex"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/comment-whitespace-inside.md",
+        "name": "linters/stylelint/comment-whitespace-inside"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/no-invalid-position-at-import-rule.md",
+        "name": "linters/stylelint/no-invalid-position-at-import-rule"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/no-duplicate-selectors.md",
+        "name": "linters/stylelint/no-duplicate-selectors"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-property-max-values.md",
+        "name": "linters/stylelint/declaration-property-max-values"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/property-allowed-list.md",
+        "name": "linters/stylelint/property-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/nesting-selector-no-missing-scoping-root.md",
+        "name": "linters/stylelint/nesting-selector-no-missing-scoping-root"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/lightness-notation.md",
+        "name": "linters/stylelint/lightness-notation"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/font-family-no-duplicate-names.md",
+        "name": "linters/stylelint/font-family-no-duplicate-names"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/media-feature-name-value-allowed-list.md",
+        "name": "linters/stylelint/media-feature-name-value-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/max-nesting-depth.md",
+        "name": "linters/stylelint/max-nesting-depth"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-max-specificity.md",
+        "name": "linters/stylelint/selector-max-specificity"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-combinator-disallowed-list.md",
+        "name": "linters/stylelint/selector-combinator-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-id-pattern.md",
+        "name": "linters/stylelint/selector-id-pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-combinator-allowed-list.md",
+        "name": "linters/stylelint/selector-combinator-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-pseudo-element-disallowed-list.md",
+        "name": "linters/stylelint/selector-pseudo-element-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-attribute-operator-allowed-list.md",
+        "name": "linters/stylelint/selector-attribute-operator-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/rule-selector-property-disallowed-list.md",
+        "name": "linters/stylelint/rule-selector-property-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-attribute-name-disallowed-list.md",
+        "name": "linters/stylelint/selector-attribute-name-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/no-descending-specificity.md",
+        "name": "linters/stylelint/no-descending-specificity"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/time-min-milliseconds.md",
+        "name": "linters/stylelint/time-min-milliseconds"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/block-no-empty.md",
+        "name": "linters/stylelint/block-no-empty"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-no-qualifying-type.md",
+        "name": "linters/stylelint/selector-no-qualifying-type"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-class-pattern.md",
+        "name": "linters/stylelint/selector-class-pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/string-no-newline.md",
+        "name": "linters/stylelint/string-no-newline"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/no-empty-source.md",
+        "name": "linters/stylelint/no-empty-source"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-type-no-unknown.md",
+        "name": "linters/stylelint/selector-type-no-unknown"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-max-id.md",
+        "name": "linters/stylelint/selector-max-id"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/function-allowed-list.md",
+        "name": "linters/stylelint/function-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-pseudo-element-allowed-list.md",
+        "name": "linters/stylelint/selector-pseudo-element-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/at-rule-no-deprecated.md",
+        "name": "linters/stylelint/at-rule-no-deprecated"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/value-no-vendor-prefix.md",
+        "name": "linters/stylelint/value-no-vendor-prefix"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/keyframe-declaration-no-important.md",
+        "name": "linters/stylelint/keyframe-declaration-no-important"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-max-type.md",
+        "name": "linters/stylelint/selector-max-type"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/function-linear-gradient-no-nonstandard-direction.md",
+        "name": "linters/stylelint/function-linear-gradient-no-nonstandard-direction"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/length-zero-no-unit.md",
+        "name": "linters/stylelint/length-zero-no-unit"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/keyframe-block-no-duplicate-selectors.md",
+        "name": "linters/stylelint/keyframe-block-no-duplicate-selectors"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/no-duplicate-at-import-rules.md",
+        "name": "linters/stylelint/no-duplicate-at-import-rules"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/color-named.md",
+        "name": "linters/stylelint/color-named"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/custom-property-no-missing-var-function.md",
+        "name": "linters/stylelint/custom-property-no-missing-var-function"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-pseudo-class-allowed-list.md",
+        "name": "linters/stylelint/selector-pseudo-class-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-property-value-keyword-no-deprecated.md",
+        "name": "linters/stylelint/declaration-property-value-keyword-no-deprecated"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/at-rule-descriptor-value-no-unknown.md",
+        "name": "linters/stylelint/at-rule-descriptor-value-no-unknown"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/function-disallowed-list.md",
+        "name": "linters/stylelint/function-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/function-no-unknown.md",
+        "name": "linters/stylelint/function-no-unknown"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/media-feature-range-notation.md",
+        "name": "linters/stylelint/media-feature-range-notation"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-pseudo-class-no-unknown.md",
+        "name": "linters/stylelint/selector-pseudo-class-no-unknown"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/media-feature-name-unit-allowed-list.md",
+        "name": "linters/stylelint/media-feature-name-unit-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/shorthand-property-no-redundant-values.md",
+        "name": "linters/stylelint/shorthand-property-no-redundant-values"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/function-url-no-scheme-relative.md",
+        "name": "linters/stylelint/function-url-no-scheme-relative"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/block-no-redundant-nested-style-rules.md",
+        "name": "linters/stylelint/block-no-redundant-nested-style-rules"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/rule-nesting-at-rule-required-list.md",
+        "name": "linters/stylelint/rule-nesting-at-rule-required-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/keyframe-selector-notation.md",
+        "name": "linters/stylelint/keyframe-selector-notation"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/font-family-no-missing-generic-family-keyword.md",
+        "name": "linters/stylelint/font-family-no-missing-generic-family-keyword"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/media-feature-name-no-vendor-prefix.md",
+        "name": "linters/stylelint/media-feature-name-no-vendor-prefix"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/import-notation.md",
+        "name": "linters/stylelint/import-notation"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/named-grid-areas-no-invalid.md",
+        "name": "linters/stylelint/named-grid-areas-no-invalid"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-empty-line-before.md",
+        "name": "linters/stylelint/declaration-empty-line-before"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/keyframes-name-pattern.md",
+        "name": "linters/stylelint/keyframes-name-pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/unit-allowed-list.md",
+        "name": "linters/stylelint/unit-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/custom-property-empty-line-before.md",
+        "name": "linters/stylelint/custom-property-empty-line-before"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/alpha-value-notation.md",
+        "name": "linters/stylelint/alpha-value-notation"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/no-unknown-animations.md",
+        "name": "linters/stylelint/no-unknown-animations"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/color-function-alias-notation.md",
+        "name": "linters/stylelint/color-function-alias-notation"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/at-rule-prelude-no-invalid.md",
+        "name": "linters/stylelint/at-rule-prelude-no-invalid"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/annotation-no-unknown.md",
+        "name": "linters/stylelint/annotation-no-unknown"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/media-feature-name-no-unknown.md",
+        "name": "linters/stylelint/media-feature-name-no-unknown"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/layer-name-pattern.md",
+        "name": "linters/stylelint/layer-name-pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/function-url-quotes.md",
+        "name": "linters/stylelint/function-url-quotes"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/media-type-no-deprecated.md",
+        "name": "linters/stylelint/media-type-no-deprecated"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/function-url-scheme-disallowed-list.md",
+        "name": "linters/stylelint/function-url-scheme-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-max-class.md",
+        "name": "linters/stylelint/selector-max-class"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/number-max-precision.md",
+        "name": "linters/stylelint/number-max-precision"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/at-rule-disallowed-list.md",
+        "name": "linters/stylelint/at-rule-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/function-name-case.md",
+        "name": "linters/stylelint/function-name-case"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/comment-word-disallowed-list.md",
+        "name": "linters/stylelint/comment-word-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/unit-disallowed-list.md",
+        "name": "linters/stylelint/unit-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-block-no-duplicate-properties.md",
+        "name": "linters/stylelint/declaration-block-no-duplicate-properties"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-attribute-operator-disallowed-list.md",
+        "name": "linters/stylelint/selector-attribute-operator-disallowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/color-function-notation.md",
+        "name": "linters/stylelint/color-function-notation"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/media-query-no-invalid.md",
+        "name": "linters/stylelint/media-query-no-invalid"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/property-no-deprecated.md",
+        "name": "linters/stylelint/property-no-deprecated"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/no-irregular-whitespace.md",
+        "name": "linters/stylelint/no-irregular-whitespace"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-pseudo-element-colon-notation.md",
+        "name": "linters/stylelint/selector-pseudo-element-colon-notation"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/at-rule-descriptor-no-unknown.md",
+        "name": "linters/stylelint/at-rule-descriptor-no-unknown"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/comment-pattern.md",
+        "name": "linters/stylelint/comment-pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/rule-empty-line-before.md",
+        "name": "linters/stylelint/rule-empty-line-before"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-attribute-quotes.md",
+        "name": "linters/stylelint/selector-attribute-quotes"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-max-attribute.md",
+        "name": "linters/stylelint/selector-max-attribute"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-max-pseudo-class.md",
+        "name": "linters/stylelint/selector-max-pseudo-class"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/at-rule-property-required-list.md",
+        "name": "linters/stylelint/at-rule-property-required-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/syntax-string-no-invalid.md",
+        "name": "linters/stylelint/syntax-string-no-invalid"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/at-rule-no-unknown.md",
+        "name": "linters/stylelint/at-rule-no-unknown"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-property-unit-allowed-list.md",
+        "name": "linters/stylelint/declaration-property-unit-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-block-no-shorthand-property-overrides.md",
+        "name": "linters/stylelint/declaration-block-no-shorthand-property-overrides"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-no-vendor-prefix.md",
+        "name": "linters/stylelint/selector-no-vendor-prefix"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-property-value-allowed-list.md",
+        "name": "linters/stylelint/declaration-property-value-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/color-hex-alpha.md",
+        "name": "linters/stylelint/color-hex-alpha"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-block-no-duplicate-custom-properties.md",
+        "name": "linters/stylelint/declaration-block-no-duplicate-custom-properties"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/hue-degree-notation.md",
+        "name": "linters/stylelint/hue-degree-notation"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/declaration-property-value-no-unknown.md",
+        "name": "linters/stylelint/declaration-property-value-no-unknown"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/comment-empty-line-before.md",
+        "name": "linters/stylelint/comment-empty-line-before"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/media-feature-name-allowed-list.md",
+        "name": "linters/stylelint/media-feature-name-allowed-list"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylelint/selector-max-compound-selectors.md",
+        "name": "linters/stylelint/selector-max-compound-selectors"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/prettier.md",
+        "name": "formatters/prettier"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-nested-pattern.md",
+      "name": "linters/stylelint/selector-nested-pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-max-combinators.md",
+      "name": "linters/stylelint/selector-max-combinators"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-pseudo-class-disallowed-list.md",
+      "name": "linters/stylelint/selector-pseudo-class-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/at-rule-no-vendor-prefix.md",
+      "name": "linters/stylelint/at-rule-no-vendor-prefix"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/font-weight-notation.md",
+      "name": "linters/stylelint/font-weight-notation"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-block-single-line-max-declarations.md",
+      "name": "linters/stylelint/declaration-block-single-line-max-declarations"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/property-disallowed-list.md",
+      "name": "linters/stylelint/property-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/container-name-pattern.md",
+      "name": "linters/stylelint/container-name-pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/media-feature-name-disallowed-list.md",
+      "name": "linters/stylelint/media-feature-name-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/media-feature-name-value-no-unknown.md",
+      "name": "linters/stylelint/media-feature-name-value-no-unknown"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/no-invalid-position-declaration.md",
+      "name": "linters/stylelint/no-invalid-position-declaration"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/at-rule-allowed-list.md",
+      "name": "linters/stylelint/at-rule-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/no-unknown-custom-properties.md",
+      "name": "linters/stylelint/no-unknown-custom-properties"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/property-no-unknown.md",
+      "name": "linters/stylelint/property-no-unknown"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-property-unit-disallowed-list.md",
+      "name": "linters/stylelint/declaration-property-unit-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/overview.md",
+      "name": "linters/stylelint/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/no-unknown-custom-media.md",
+      "name": "linters/stylelint/no-unknown-custom-media"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/unit-no-unknown.md",
+      "name": "linters/stylelint/unit-no-unknown"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/custom-media-pattern.md",
+      "name": "linters/stylelint/custom-media-pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-no-important.md",
+      "name": "linters/stylelint/declaration-no-important"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/function-calc-no-unspaced-operator.md",
+      "name": "linters/stylelint/function-calc-no-unspaced-operator"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/property-no-vendor-prefix.md",
+      "name": "linters/stylelint/property-no-vendor-prefix"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-pseudo-element-no-unknown.md",
+      "name": "linters/stylelint/selector-pseudo-element-no-unknown"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/comment-no-empty.md",
+      "name": "linters/stylelint/comment-no-empty"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-property-value-disallowed-list.md",
+      "name": "linters/stylelint/declaration-property-value-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-block-no-redundant-longhand-properties.md",
+      "name": "linters/stylelint/declaration-block-no-redundant-longhand-properties"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/color-hex-length.md",
+      "name": "linters/stylelint/color-hex-length"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/value-keyword-case.md",
+      "name": "linters/stylelint/value-keyword-case"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-disallowed-list.md",
+      "name": "linters/stylelint/selector-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/at-rule-empty-line-before.md",
+      "name": "linters/stylelint/at-rule-empty-line-before"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/function-url-scheme-allowed-list.md",
+      "name": "linters/stylelint/function-url-scheme-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/font-family-name-quotes.md",
+      "name": "linters/stylelint/font-family-name-quotes"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-anb-no-unmatchable.md",
+      "name": "linters/stylelint/selector-anb-no-unmatchable"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-not-notation.md",
+      "name": "linters/stylelint/selector-not-notation"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-max-universal.md",
+      "name": "linters/stylelint/selector-max-universal"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/no-invalid-double-slash-comments.md",
+      "name": "linters/stylelint/no-invalid-double-slash-comments"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/color-no-hex.md",
+      "name": "linters/stylelint/color-no-hex"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/custom-property-pattern.md",
+      "name": "linters/stylelint/custom-property-pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-type-case.md",
+      "name": "linters/stylelint/selector-type-case"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/color-no-invalid-hex.md",
+      "name": "linters/stylelint/color-no-invalid-hex"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/comment-whitespace-inside.md",
+      "name": "linters/stylelint/comment-whitespace-inside"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/no-invalid-position-at-import-rule.md",
+      "name": "linters/stylelint/no-invalid-position-at-import-rule"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/no-duplicate-selectors.md",
+      "name": "linters/stylelint/no-duplicate-selectors"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-property-max-values.md",
+      "name": "linters/stylelint/declaration-property-max-values"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/property-allowed-list.md",
+      "name": "linters/stylelint/property-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/nesting-selector-no-missing-scoping-root.md",
+      "name": "linters/stylelint/nesting-selector-no-missing-scoping-root"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/lightness-notation.md",
+      "name": "linters/stylelint/lightness-notation"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/font-family-no-duplicate-names.md",
+      "name": "linters/stylelint/font-family-no-duplicate-names"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/media-feature-name-value-allowed-list.md",
+      "name": "linters/stylelint/media-feature-name-value-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/max-nesting-depth.md",
+      "name": "linters/stylelint/max-nesting-depth"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-max-specificity.md",
+      "name": "linters/stylelint/selector-max-specificity"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-combinator-disallowed-list.md",
+      "name": "linters/stylelint/selector-combinator-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-id-pattern.md",
+      "name": "linters/stylelint/selector-id-pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-combinator-allowed-list.md",
+      "name": "linters/stylelint/selector-combinator-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-pseudo-element-disallowed-list.md",
+      "name": "linters/stylelint/selector-pseudo-element-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-attribute-operator-allowed-list.md",
+      "name": "linters/stylelint/selector-attribute-operator-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/rule-selector-property-disallowed-list.md",
+      "name": "linters/stylelint/rule-selector-property-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-attribute-name-disallowed-list.md",
+      "name": "linters/stylelint/selector-attribute-name-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/no-descending-specificity.md",
+      "name": "linters/stylelint/no-descending-specificity"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/time-min-milliseconds.md",
+      "name": "linters/stylelint/time-min-milliseconds"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/block-no-empty.md",
+      "name": "linters/stylelint/block-no-empty"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-no-qualifying-type.md",
+      "name": "linters/stylelint/selector-no-qualifying-type"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-class-pattern.md",
+      "name": "linters/stylelint/selector-class-pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/string-no-newline.md",
+      "name": "linters/stylelint/string-no-newline"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/no-empty-source.md",
+      "name": "linters/stylelint/no-empty-source"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-type-no-unknown.md",
+      "name": "linters/stylelint/selector-type-no-unknown"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-max-id.md",
+      "name": "linters/stylelint/selector-max-id"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/function-allowed-list.md",
+      "name": "linters/stylelint/function-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-pseudo-element-allowed-list.md",
+      "name": "linters/stylelint/selector-pseudo-element-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/at-rule-no-deprecated.md",
+      "name": "linters/stylelint/at-rule-no-deprecated"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/value-no-vendor-prefix.md",
+      "name": "linters/stylelint/value-no-vendor-prefix"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/keyframe-declaration-no-important.md",
+      "name": "linters/stylelint/keyframe-declaration-no-important"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-max-type.md",
+      "name": "linters/stylelint/selector-max-type"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/function-linear-gradient-no-nonstandard-direction.md",
+      "name": "linters/stylelint/function-linear-gradient-no-nonstandard-direction"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/length-zero-no-unit.md",
+      "name": "linters/stylelint/length-zero-no-unit"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/keyframe-block-no-duplicate-selectors.md",
+      "name": "linters/stylelint/keyframe-block-no-duplicate-selectors"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/no-duplicate-at-import-rules.md",
+      "name": "linters/stylelint/no-duplicate-at-import-rules"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/color-named.md",
+      "name": "linters/stylelint/color-named"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/custom-property-no-missing-var-function.md",
+      "name": "linters/stylelint/custom-property-no-missing-var-function"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-pseudo-class-allowed-list.md",
+      "name": "linters/stylelint/selector-pseudo-class-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-property-value-keyword-no-deprecated.md",
+      "name": "linters/stylelint/declaration-property-value-keyword-no-deprecated"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/at-rule-descriptor-value-no-unknown.md",
+      "name": "linters/stylelint/at-rule-descriptor-value-no-unknown"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/function-disallowed-list.md",
+      "name": "linters/stylelint/function-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/function-no-unknown.md",
+      "name": "linters/stylelint/function-no-unknown"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/media-feature-range-notation.md",
+      "name": "linters/stylelint/media-feature-range-notation"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-pseudo-class-no-unknown.md",
+      "name": "linters/stylelint/selector-pseudo-class-no-unknown"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/media-feature-name-unit-allowed-list.md",
+      "name": "linters/stylelint/media-feature-name-unit-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/shorthand-property-no-redundant-values.md",
+      "name": "linters/stylelint/shorthand-property-no-redundant-values"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/function-url-no-scheme-relative.md",
+      "name": "linters/stylelint/function-url-no-scheme-relative"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/block-no-redundant-nested-style-rules.md",
+      "name": "linters/stylelint/block-no-redundant-nested-style-rules"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/rule-nesting-at-rule-required-list.md",
+      "name": "linters/stylelint/rule-nesting-at-rule-required-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/keyframe-selector-notation.md",
+      "name": "linters/stylelint/keyframe-selector-notation"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/font-family-no-missing-generic-family-keyword.md",
+      "name": "linters/stylelint/font-family-no-missing-generic-family-keyword"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/media-feature-name-no-vendor-prefix.md",
+      "name": "linters/stylelint/media-feature-name-no-vendor-prefix"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/import-notation.md",
+      "name": "linters/stylelint/import-notation"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/named-grid-areas-no-invalid.md",
+      "name": "linters/stylelint/named-grid-areas-no-invalid"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-empty-line-before.md",
+      "name": "linters/stylelint/declaration-empty-line-before"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/keyframes-name-pattern.md",
+      "name": "linters/stylelint/keyframes-name-pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/unit-allowed-list.md",
+      "name": "linters/stylelint/unit-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/custom-property-empty-line-before.md",
+      "name": "linters/stylelint/custom-property-empty-line-before"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/alpha-value-notation.md",
+      "name": "linters/stylelint/alpha-value-notation"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/no-unknown-animations.md",
+      "name": "linters/stylelint/no-unknown-animations"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/color-function-alias-notation.md",
+      "name": "linters/stylelint/color-function-alias-notation"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/at-rule-prelude-no-invalid.md",
+      "name": "linters/stylelint/at-rule-prelude-no-invalid"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/annotation-no-unknown.md",
+      "name": "linters/stylelint/annotation-no-unknown"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/media-feature-name-no-unknown.md",
+      "name": "linters/stylelint/media-feature-name-no-unknown"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/layer-name-pattern.md",
+      "name": "linters/stylelint/layer-name-pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/function-url-quotes.md",
+      "name": "linters/stylelint/function-url-quotes"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/media-type-no-deprecated.md",
+      "name": "linters/stylelint/media-type-no-deprecated"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/function-url-scheme-disallowed-list.md",
+      "name": "linters/stylelint/function-url-scheme-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-max-class.md",
+      "name": "linters/stylelint/selector-max-class"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/number-max-precision.md",
+      "name": "linters/stylelint/number-max-precision"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/at-rule-disallowed-list.md",
+      "name": "linters/stylelint/at-rule-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/function-name-case.md",
+      "name": "linters/stylelint/function-name-case"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/comment-word-disallowed-list.md",
+      "name": "linters/stylelint/comment-word-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/unit-disallowed-list.md",
+      "name": "linters/stylelint/unit-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-block-no-duplicate-properties.md",
+      "name": "linters/stylelint/declaration-block-no-duplicate-properties"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-attribute-operator-disallowed-list.md",
+      "name": "linters/stylelint/selector-attribute-operator-disallowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/color-function-notation.md",
+      "name": "linters/stylelint/color-function-notation"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/media-query-no-invalid.md",
+      "name": "linters/stylelint/media-query-no-invalid"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/property-no-deprecated.md",
+      "name": "linters/stylelint/property-no-deprecated"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/no-irregular-whitespace.md",
+      "name": "linters/stylelint/no-irregular-whitespace"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-pseudo-element-colon-notation.md",
+      "name": "linters/stylelint/selector-pseudo-element-colon-notation"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/at-rule-descriptor-no-unknown.md",
+      "name": "linters/stylelint/at-rule-descriptor-no-unknown"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/comment-pattern.md",
+      "name": "linters/stylelint/comment-pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/rule-empty-line-before.md",
+      "name": "linters/stylelint/rule-empty-line-before"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-attribute-quotes.md",
+      "name": "linters/stylelint/selector-attribute-quotes"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-max-attribute.md",
+      "name": "linters/stylelint/selector-max-attribute"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-max-pseudo-class.md",
+      "name": "linters/stylelint/selector-max-pseudo-class"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/at-rule-property-required-list.md",
+      "name": "linters/stylelint/at-rule-property-required-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/syntax-string-no-invalid.md",
+      "name": "linters/stylelint/syntax-string-no-invalid"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/at-rule-no-unknown.md",
+      "name": "linters/stylelint/at-rule-no-unknown"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-property-unit-allowed-list.md",
+      "name": "linters/stylelint/declaration-property-unit-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-block-no-shorthand-property-overrides.md",
+      "name": "linters/stylelint/declaration-block-no-shorthand-property-overrides"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-no-vendor-prefix.md",
+      "name": "linters/stylelint/selector-no-vendor-prefix"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-property-value-allowed-list.md",
+      "name": "linters/stylelint/declaration-property-value-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/color-hex-alpha.md",
+      "name": "linters/stylelint/color-hex-alpha"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-block-no-duplicate-custom-properties.md",
+      "name": "linters/stylelint/declaration-block-no-duplicate-custom-properties"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/hue-degree-notation.md",
+      "name": "linters/stylelint/hue-degree-notation"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/declaration-property-value-no-unknown.md",
+      "name": "linters/stylelint/declaration-property-value-no-unknown"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/comment-empty-line-before.md",
+      "name": "linters/stylelint/comment-empty-line-before"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/media-feature-name-allowed-list.md",
+      "name": "linters/stylelint/media-feature-name-allowed-list"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylelint/selector-max-compound-selectors.md",
+      "name": "linters/stylelint/selector-max-compound-selectors"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/prettier.md",
+      "name": "formatters/prettier"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

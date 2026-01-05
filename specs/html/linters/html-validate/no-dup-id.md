@@ -1,1 +1,3 @@
-# no-dup-id\n\nSee: https://html-validate.org/rules/no-dup-id
+# no-dup-id
+
+See: https://html-validate.org/rules/no-dup-id

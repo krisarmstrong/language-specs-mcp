@@ -1,0 +1,5 @@
+# Biome Schema Reference
+
+Latest schema:
+
+https://biomejs.dev/schemas/2.3.10/schema.json

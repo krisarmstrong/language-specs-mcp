@@ -1,1 +1,3 @@
-# unused_collect\n\nSee: https://rust-lang.github.io/rust-clippy/master/#unused_collect
+# unused_collect
+
+See: https://rust-lang.github.io/rust-clippy/master/#unused_collect

@@ -1,1 +1,3 @@
-# shadow_reuse\n\nSee: https://rust-lang.github.io/rust-clippy/master/#shadow_reuse
+# shadow_reuse
+
+See: https://rust-lang.github.io/rust-clippy/master/#shadow_reuse

@@ -1,1 +1,3 @@
-# color-hex-alpha\n\nSee: https://stylelint.io/user-guide/rules/color-hex-alpha
+# color-hex-alpha
+
+See: https://stylelint.io/user-guide/rules/color-hex-alpha

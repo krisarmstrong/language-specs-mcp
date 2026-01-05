@@ -1,1 +1,3 @@
-# bad_bit_mask\n\nSee: https://rust-lang.github.io/rust-clippy/master/#bad_bit_mask
+# bad_bit_mask
+
+See: https://rust-lang.github.io/rust-clippy/master/#bad_bit_mask

@@ -1,1 +1,3 @@
-# HTMLTimeElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLTimeElement
+# HTMLTimeElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLTimeElement

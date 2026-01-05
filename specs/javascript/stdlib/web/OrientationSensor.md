@@ -1,1 +1,3 @@
-# OrientationSensor\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/OrientationSensor
+# OrientationSensor
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/OrientationSensor

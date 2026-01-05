@@ -1,1 +1,3 @@
-# MIDIConnectionEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MIDIConnectionEvent
+# MIDIConnectionEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MIDIConnectionEvent

@@ -1,1 +1,3 @@
-# CSSNamespaceRule\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSNamespaceRule
+# CSSNamespaceRule
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSNamespaceRule

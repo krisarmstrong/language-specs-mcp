@@ -1,1 +1,3 @@
-# ImageBitmap\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap
+# ImageBitmap
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap

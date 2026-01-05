@@ -1,1 +1,3 @@
-# XREquirectLayer\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/XREquirectLayer
+# XREquirectLayer
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/XREquirectLayer

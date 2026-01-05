@@ -1,1 +1,3 @@
-# aria-label-misuse\n\nSee: https://html-validate.org/rules/aria-label-misuse
+# aria-label-misuse
+
+See: https://html-validate.org/rules/aria-label-misuse

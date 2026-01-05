@@ -1,1 +1,3 @@
-# CSSPageRule\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSPageRule
+# CSSPageRule
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSPageRule

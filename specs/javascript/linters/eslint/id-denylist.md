@@ -1,1 +1,3 @@
-# id-denylist\n\nSee: https://eslint.org/docs/latest/rules/id-denylist
+# id-denylist
+
+See: https://eslint.org/docs/latest/rules/id-denylist

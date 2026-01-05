@@ -1,1 +1,3 @@
-# single_match_else\n\nSee: https://rust-lang.github.io/rust-clippy/master/#single_match_else
+# single_match_else
+
+See: https://rust-lang.github.io/rust-clippy/master/#single_match_else

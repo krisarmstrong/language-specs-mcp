@@ -1,1 +1,3 @@
-# TextTrackCue\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue
+# TextTrackCue
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue

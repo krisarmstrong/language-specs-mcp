@@ -1,1 +1,3 @@
-# godoclint\n\nSee: https://golangci-lint.run/docs/linters/godoclint/
+# godoclint
+
+See: https://golangci-lint.run/docs/linters/godoclint/

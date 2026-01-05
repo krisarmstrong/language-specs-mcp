@@ -1,1 +1,3 @@
-# color-function-notation\n\nSee: https://stylelint.io/user-guide/rules/color-function-notation
+# color-function-notation
+
+See: https://stylelint.io/user-guide/rules/color-function-notation

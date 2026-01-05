@@ -1,1 +1,3 @@
-# PostgreSQL SQL Commands\n\nSee: https://www.postgresql.org/docs/current/sql.html
+# PostgreSQL SQL Commands
+
+See: https://www.postgresql.org/docs/current/sql.html

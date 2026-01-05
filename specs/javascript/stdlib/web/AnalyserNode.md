@@ -1,1 +1,3 @@
-# AnalyserNode\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode
+# AnalyserNode
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode

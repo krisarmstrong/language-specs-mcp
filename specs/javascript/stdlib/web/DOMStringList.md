@@ -1,1 +1,3 @@
-# DOMStringList\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList
+# DOMStringList
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList

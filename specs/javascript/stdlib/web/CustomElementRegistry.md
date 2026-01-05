@@ -1,1 +1,3 @@
-# CustomElementRegistry\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry
+# CustomElementRegistry
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry

@@ -1,1 +1,3 @@
-# java.desktop.javax.accessibility\n\nSee: https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/accessibility/package-summary.html
+# java.desktop.javax.accessibility
+
+See: https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/accessibility/package-summary.html

@@ -1,1 +1,3 @@
-# no-new\n\nSee: https://eslint.org/docs/latest/rules/no-new
+# no-new
+
+See: https://eslint.org/docs/latest/rules/no-new

@@ -1,1 +1,3 @@
-# GPUQuerySet\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GPUQuerySet
+# GPUQuerySet
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GPUQuerySet

@@ -1,1 +1,3 @@
-# CSS_Custom_Highlight_API\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSS_Custom_Highlight_API
+# CSS_Custom_Highlight_API
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSS_Custom_Highlight_API

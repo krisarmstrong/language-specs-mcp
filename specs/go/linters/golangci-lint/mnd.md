@@ -1,1 +1,3 @@
-# mnd\n\nSee: https://golangci-lint.run/docs/linters/mnd/
+# mnd
+
+See: https://golangci-lint.run/docs/linters/mnd/

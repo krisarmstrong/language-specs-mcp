@@ -1,1 +1,3 @@
-# SVGFEDiffuseLightingElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement
+# SVGFEDiffuseLightingElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDiffuseLightingElement

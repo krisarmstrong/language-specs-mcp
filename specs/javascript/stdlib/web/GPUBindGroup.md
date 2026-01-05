@@ -1,1 +1,3 @@
-# GPUBindGroup\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GPUBindGroup
+# GPUBindGroup
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GPUBindGroup

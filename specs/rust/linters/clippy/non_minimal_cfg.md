@@ -1,1 +1,3 @@
-# non_minimal_cfg\n\nSee: https://rust-lang.github.io/rust-clippy/master/#non_minimal_cfg
+# non_minimal_cfg
+
+See: https://rust-lang.github.io/rust-clippy/master/#non_minimal_cfg

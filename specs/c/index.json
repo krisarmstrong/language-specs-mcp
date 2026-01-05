@@ -1,0 +1,195 @@
+{
+  "language": "c",
+  "fetchedAt": "2026-01-04T18:30:09Z",
+  "counts": {
+    "spec": 2,
+    "stdlib": 2,
+    "linters": 10,
+    "formatters": 2,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "compilers.md",
+        "name": "compilers"
+      },
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/headers/index.md",
+        "name": "stdlib/headers/index"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/cppcheck/overview.md",
+        "name": "linters/cppcheck/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/cppcheck/errors.md",
+        "name": "linters/cppcheck/errors"
+      },
+      {
+        "category": "linters",
+        "path": "linters/cppcheck/checks.md",
+        "name": "linters/cppcheck/checks"
+      },
+      {
+        "category": "linters",
+        "path": "linters/clang-tidy/overview.md",
+        "name": "linters/clang-tidy/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/clang-tidy/cert.md",
+        "name": "linters/clang-tidy/cert"
+      },
+      {
+        "category": "linters",
+        "path": "linters/clang-tidy/bugprone.md",
+        "name": "linters/clang-tidy/bugprone"
+      },
+      {
+        "category": "linters",
+        "path": "linters/clang-tidy/cppcoreguidelines.md",
+        "name": "linters/clang-tidy/cppcoreguidelines"
+      },
+      {
+        "category": "linters",
+        "path": "linters/clang-tidy/performance.md",
+        "name": "linters/clang-tidy/performance"
+      },
+      {
+        "category": "linters",
+        "path": "linters/clang-tidy/modernize.md",
+        "name": "linters/clang-tidy/modernize"
+      },
+      {
+        "category": "linters",
+        "path": "linters/clang-tidy/readability.md",
+        "name": "linters/clang-tidy/readability"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/clang-format.md",
+        "name": "formatters/clang-format"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "compilers.md",
+      "name": "compilers"
+    },
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/headers/index.md",
+      "name": "stdlib/headers/index"
+    },
+    {
+      "category": "linters",
+      "path": "linters/cppcheck/overview.md",
+      "name": "linters/cppcheck/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/cppcheck/errors.md",
+      "name": "linters/cppcheck/errors"
+    },
+    {
+      "category": "linters",
+      "path": "linters/cppcheck/checks.md",
+      "name": "linters/cppcheck/checks"
+    },
+    {
+      "category": "linters",
+      "path": "linters/clang-tidy/overview.md",
+      "name": "linters/clang-tidy/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/clang-tidy/cert.md",
+      "name": "linters/clang-tidy/cert"
+    },
+    {
+      "category": "linters",
+      "path": "linters/clang-tidy/bugprone.md",
+      "name": "linters/clang-tidy/bugprone"
+    },
+    {
+      "category": "linters",
+      "path": "linters/clang-tidy/cppcoreguidelines.md",
+      "name": "linters/clang-tidy/cppcoreguidelines"
+    },
+    {
+      "category": "linters",
+      "path": "linters/clang-tidy/performance.md",
+      "name": "linters/clang-tidy/performance"
+    },
+    {
+      "category": "linters",
+      "path": "linters/clang-tidy/modernize.md",
+      "name": "linters/clang-tidy/modernize"
+    },
+    {
+      "category": "linters",
+      "path": "linters/clang-tidy/readability.md",
+      "name": "linters/clang-tidy/readability"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/clang-format.md",
+      "name": "formatters/clang-format"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

@@ -1,1 +1,3 @@
-# generics\n\nSee: https://www.typescriptlang.org/docs/handbook/generics.html
+# generics
+
+See: https://www.typescriptlang.org/docs/handbook/generics.html

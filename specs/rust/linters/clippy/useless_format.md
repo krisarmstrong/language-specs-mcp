@@ -1,1 +1,3 @@
-# useless_format\n\nSee: https://rust-lang.github.io/rust-clippy/master/#useless_format
+# useless_format
+
+See: https://rust-lang.github.io/rust-clippy/master/#useless_format

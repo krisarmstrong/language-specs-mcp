@@ -1,1 +1,3 @@
-# java.desktop.javax.imageio.plugins.jpeg\n\nSee: https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/imageio/plugins/jpeg/package-summary.html
+# java.desktop.javax.imageio.plugins.jpeg
+
+See: https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/imageio/plugins/jpeg/package-summary.html

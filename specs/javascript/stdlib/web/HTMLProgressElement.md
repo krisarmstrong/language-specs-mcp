@@ -1,1 +1,3 @@
-# HTMLProgressElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement
+# HTMLProgressElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement

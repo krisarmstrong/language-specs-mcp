@@ -1,1 +1,3 @@
-# WebGLObject\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/WebGLObject
+# WebGLObject
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/WebGLObject

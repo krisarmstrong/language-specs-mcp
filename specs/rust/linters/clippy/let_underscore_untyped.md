@@ -1,1 +1,3 @@
-# let_underscore_untyped\n\nSee: https://rust-lang.github.io/rust-clippy/master/#let_underscore_untyped
+# let_underscore_untyped
+
+See: https://rust-lang.github.io/rust-clippy/master/#let_underscore_untyped

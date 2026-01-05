@@ -1,1 +1,3 @@
-# SVGRenderingIntent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGRenderingIntent
+# SVGRenderingIntent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGRenderingIntent

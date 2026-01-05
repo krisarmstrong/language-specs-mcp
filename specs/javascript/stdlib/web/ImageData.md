@@ -1,1 +1,3 @@
-# ImageData\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/ImageData
+# ImageData
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/ImageData

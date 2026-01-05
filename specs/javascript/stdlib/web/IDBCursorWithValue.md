@@ -1,1 +1,3 @@
-# IDBCursorWithValue\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/IDBCursorWithValue
+# IDBCursorWithValue
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/IDBCursorWithValue

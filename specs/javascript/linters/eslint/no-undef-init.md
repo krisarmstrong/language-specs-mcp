@@ -1,1 +1,3 @@
-# no-undef-init\n\nSee: https://eslint.org/docs/latest/rules/no-undef-init
+# no-undef-init
+
+See: https://eslint.org/docs/latest/rules/no-undef-init

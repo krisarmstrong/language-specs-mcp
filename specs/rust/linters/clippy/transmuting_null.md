@@ -1,1 +1,3 @@
-# transmuting_null\n\nSee: https://rust-lang.github.io/rust-clippy/master/#transmuting_null
+# transmuting_null
+
+See: https://rust-lang.github.io/rust-clippy/master/#transmuting_null

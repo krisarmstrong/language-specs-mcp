@@ -1,1 +1,3 @@
-# DOMHighResTimeStamp\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp
+# DOMHighResTimeStamp
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp

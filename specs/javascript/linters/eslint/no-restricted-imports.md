@@ -1,1 +1,3 @@
-# no-restricted-imports\n\nSee: https://eslint.org/docs/latest/rules/no-restricted-imports
+# no-restricted-imports
+
+See: https://eslint.org/docs/latest/rules/no-restricted-imports

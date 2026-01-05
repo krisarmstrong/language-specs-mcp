@@ -1,1 +1,3 @@
-# no-sparse-arrays\n\nSee: https://eslint.org/docs/latest/rules/no-sparse-arrays
+# no-sparse-arrays
+
+See: https://eslint.org/docs/latest/rules/no-sparse-arrays

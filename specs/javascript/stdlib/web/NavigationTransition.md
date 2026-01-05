@@ -1,1 +1,3 @@
-# NavigationTransition\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/NavigationTransition
+# NavigationTransition
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/NavigationTransition

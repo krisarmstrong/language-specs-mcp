@@ -1,1 +1,3 @@
-# CookieChangeEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CookieChangeEvent
+# CookieChangeEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CookieChangeEvent

@@ -1,0 +1,5315 @@
+{
+  "language": "bash",
+  "fetchedAt": "2026-01-04T18:23:43Z",
+  "counts": {
+    "spec": 1,
+    "stdlib": 3,
+    "linters": 522,
+    "formatters": 2,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/reserved-words.md",
+        "name": "stdlib/reserved-words"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/builtins.md",
+        "name": "stdlib/builtins"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2147.md",
+        "name": "linters/shellcheck/SC2147"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2007.md",
+        "name": "linters/shellcheck/SC2007"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2287.md",
+        "name": "linters/shellcheck/SC2287"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2116.md",
+        "name": "linters/shellcheck/SC2116"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2056.md",
+        "name": "linters/shellcheck/SC2056"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2274.md",
+        "name": "linters/shellcheck/SC2274"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2334.md",
+        "name": "linters/shellcheck/SC2334"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2225.md",
+        "name": "linters/shellcheck/SC2225"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3009.md",
+        "name": "linters/shellcheck/SC3009"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2062.md",
+        "name": "linters/shellcheck/SC2062"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2122.md",
+        "name": "linters/shellcheck/SC2122"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2033.md",
+        "name": "linters/shellcheck/SC2033"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2173.md",
+        "name": "linters/shellcheck/SC2173"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1138.md",
+        "name": "linters/shellcheck/SC1138"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1078.md",
+        "name": "linters/shellcheck/SC1078"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2211.md",
+        "name": "linters/shellcheck/SC2211"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2180.md",
+        "name": "linters/shellcheck/SC2180"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2300.md",
+        "name": "linters/shellcheck/SC2300"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2091.md",
+        "name": "linters/shellcheck/SC2091"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1029.md",
+        "name": "linters/shellcheck/SC1029"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2240.md",
+        "name": "linters/shellcheck/SC2240"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1039.md",
+        "name": "linters/shellcheck/SC1039"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2250.md",
+        "name": "linters/shellcheck/SC2250"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2081.md",
+        "name": "linters/shellcheck/SC2081"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2310.md",
+        "name": "linters/shellcheck/SC2310"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1068.md",
+        "name": "linters/shellcheck/SC1068"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2190.md",
+        "name": "linters/shellcheck/SC2190"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2201.md",
+        "name": "linters/shellcheck/SC2201"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1128.md",
+        "name": "linters/shellcheck/SC1128"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2163.md",
+        "name": "linters/shellcheck/SC2163"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2023.md",
+        "name": "linters/shellcheck/SC2023"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2072.md",
+        "name": "linters/shellcheck/SC2072"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3019.md",
+        "name": "linters/shellcheck/SC3019"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2235.md",
+        "name": "linters/shellcheck/SC2235"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2324.md",
+        "name": "linters/shellcheck/SC2324"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3048.md",
+        "name": "linters/shellcheck/SC3048"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2264.md",
+        "name": "linters/shellcheck/SC2264"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2046.md",
+        "name": "linters/shellcheck/SC2046"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2106.md",
+        "name": "linters/shellcheck/SC2106"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2297.md",
+        "name": "linters/shellcheck/SC2297"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2017.md",
+        "name": "linters/shellcheck/SC2017"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2157.md",
+        "name": "linters/shellcheck/SC2157"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2037.md",
+        "name": "linters/shellcheck/SC2037"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2177.md",
+        "name": "linters/shellcheck/SC2177"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2066.md",
+        "name": "linters/shellcheck/SC2066"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2126.md",
+        "name": "linters/shellcheck/SC2126"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2095.md",
+        "name": "linters/shellcheck/SC2095"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2304.md",
+        "name": "linters/shellcheck/SC2304"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2244.md",
+        "name": "linters/shellcheck/SC2244"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3039.md",
+        "name": "linters/shellcheck/SC3039"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2184.md",
+        "name": "linters/shellcheck/SC2184"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2215.md",
+        "name": "linters/shellcheck/SC2215"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2112.md",
+        "name": "linters/shellcheck/SC2112"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2283.md",
+        "name": "linters/shellcheck/SC2283"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2143.md",
+        "name": "linters/shellcheck/SC2143"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2003.md",
+        "name": "linters/shellcheck/SC2003"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2221.md",
+        "name": "linters/shellcheck/SC2221"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1048.md",
+        "name": "linters/shellcheck/SC1048"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1108.md",
+        "name": "linters/shellcheck/SC1108"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2270.md",
+        "name": "linters/shellcheck/SC2270"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1019.md",
+        "name": "linters/shellcheck/SC1019"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2330.md",
+        "name": "linters/shellcheck/SC2330"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2320.md",
+        "name": "linters/shellcheck/SC2320"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2260.md",
+        "name": "linters/shellcheck/SC2260"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1009.md",
+        "name": "linters/shellcheck/SC1009"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1118.md",
+        "name": "linters/shellcheck/SC1118"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2231.md",
+        "name": "linters/shellcheck/SC2231"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1058.md",
+        "name": "linters/shellcheck/SC1058"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2013.md",
+        "name": "linters/shellcheck/SC2013"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2153.md",
+        "name": "linters/shellcheck/SC2153"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2042.md",
+        "name": "linters/shellcheck/SC2042"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2293.md",
+        "name": "linters/shellcheck/SC2293"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2102.md",
+        "name": "linters/shellcheck/SC2102"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2205.md",
+        "name": "linters/shellcheck/SC2205"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2194.md",
+        "name": "linters/shellcheck/SC2194"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3029.md",
+        "name": "linters/shellcheck/SC3029"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2254.md",
+        "name": "linters/shellcheck/SC2254"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2314.md",
+        "name": "linters/shellcheck/SC2314"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2076.md",
+        "name": "linters/shellcheck/SC2076"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2167.md",
+        "name": "linters/shellcheck/SC2167"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2027.md",
+        "name": "linters/shellcheck/SC2027"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/overview.md",
+        "name": "linters/shellcheck/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2036.md",
+        "name": "linters/shellcheck/SC2036"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2176.md",
+        "name": "linters/shellcheck/SC2176"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2067.md",
+        "name": "linters/shellcheck/SC2067"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2127.md",
+        "name": "linters/shellcheck/SC2127"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2305.md",
+        "name": "linters/shellcheck/SC2305"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2094.md",
+        "name": "linters/shellcheck/SC2094"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2245.md",
+        "name": "linters/shellcheck/SC2245"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3038.md",
+        "name": "linters/shellcheck/SC3038"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2214.md",
+        "name": "linters/shellcheck/SC2214"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2185.md",
+        "name": "linters/shellcheck/SC2185"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2282.md",
+        "name": "linters/shellcheck/SC2282"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2113.md",
+        "name": "linters/shellcheck/SC2113"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2053.md",
+        "name": "linters/shellcheck/SC2053"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2142.md",
+        "name": "linters/shellcheck/SC2142"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2002.md",
+        "name": "linters/shellcheck/SC2002"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1049.md",
+        "name": "linters/shellcheck/SC1049"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2220.md",
+        "name": "linters/shellcheck/SC2220"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1109.md",
+        "name": "linters/shellcheck/SC1109"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1018.md",
+        "name": "linters/shellcheck/SC1018"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2271.md",
+        "name": "linters/shellcheck/SC2271"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2331.md",
+        "name": "linters/shellcheck/SC2331"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2321.md",
+        "name": "linters/shellcheck/SC2321"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1008.md",
+        "name": "linters/shellcheck/SC1008"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2261.md",
+        "name": "linters/shellcheck/SC2261"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1119.md",
+        "name": "linters/shellcheck/SC1119"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1059.md",
+        "name": "linters/shellcheck/SC1059"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2230.md",
+        "name": "linters/shellcheck/SC2230"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2012.md",
+        "name": "linters/shellcheck/SC2012"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2152.md",
+        "name": "linters/shellcheck/SC2152"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2043.md",
+        "name": "linters/shellcheck/SC2043"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2103.md",
+        "name": "linters/shellcheck/SC2103"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2292.md",
+        "name": "linters/shellcheck/SC2292"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2195.md",
+        "name": "linters/shellcheck/SC2195"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2204.md",
+        "name": "linters/shellcheck/SC2204"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3028.md",
+        "name": "linters/shellcheck/SC3028"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2255.md",
+        "name": "linters/shellcheck/SC2255"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2084.md",
+        "name": "linters/shellcheck/SC2084"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2315.md",
+        "name": "linters/shellcheck/SC2315"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2077.md",
+        "name": "linters/shellcheck/SC2077"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2166.md",
+        "name": "linters/shellcheck/SC2166"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2026.md",
+        "name": "linters/shellcheck/SC2026"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2146.md",
+        "name": "linters/shellcheck/SC2146"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2006.md",
+        "name": "linters/shellcheck/SC2006"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2117.md",
+        "name": "linters/shellcheck/SC2117"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2286.md",
+        "name": "linters/shellcheck/SC2286"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2057.md",
+        "name": "linters/shellcheck/SC2057"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2275.md",
+        "name": "linters/shellcheck/SC2275"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3059.md",
+        "name": "linters/shellcheck/SC3059"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2335.md",
+        "name": "linters/shellcheck/SC2335"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2224.md",
+        "name": "linters/shellcheck/SC2224"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3008.md",
+        "name": "linters/shellcheck/SC3008"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2063.md",
+        "name": "linters/shellcheck/SC2063"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2123.md",
+        "name": "linters/shellcheck/SC2123"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2032.md",
+        "name": "linters/shellcheck/SC2032"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2172.md",
+        "name": "linters/shellcheck/SC2172"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1139.md",
+        "name": "linters/shellcheck/SC1139"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2181.md",
+        "name": "linters/shellcheck/SC2181"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2210.md",
+        "name": "linters/shellcheck/SC2210"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1079.md",
+        "name": "linters/shellcheck/SC1079"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2090.md",
+        "name": "linters/shellcheck/SC2090"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2301.md",
+        "name": "linters/shellcheck/SC2301"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2241.md",
+        "name": "linters/shellcheck/SC2241"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1028.md",
+        "name": "linters/shellcheck/SC1028"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2251.md",
+        "name": "linters/shellcheck/SC2251"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1038.md",
+        "name": "linters/shellcheck/SC1038"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2311.md",
+        "name": "linters/shellcheck/SC2311"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2080.md",
+        "name": "linters/shellcheck/SC2080"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2200.md",
+        "name": "linters/shellcheck/SC2200"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2191.md",
+        "name": "linters/shellcheck/SC2191"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1069.md",
+        "name": "linters/shellcheck/SC1069"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1129.md",
+        "name": "linters/shellcheck/SC1129"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2162.md",
+        "name": "linters/shellcheck/SC2162"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2022.md",
+        "name": "linters/shellcheck/SC2022"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2073.md",
+        "name": "linters/shellcheck/SC2073"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3018.md",
+        "name": "linters/shellcheck/SC3018"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2234.md",
+        "name": "linters/shellcheck/SC2234"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3049.md",
+        "name": "linters/shellcheck/SC3049"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2325.md",
+        "name": "linters/shellcheck/SC2325"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2265.md",
+        "name": "linters/shellcheck/SC2265"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2296.md",
+        "name": "linters/shellcheck/SC2296"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2107.md",
+        "name": "linters/shellcheck/SC2107"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2016.md",
+        "name": "linters/shellcheck/SC2016"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2156.md",
+        "name": "linters/shellcheck/SC2156"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1017.md",
+        "name": "linters/shellcheck/SC1017"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3052.md",
+        "name": "linters/shellcheck/SC3052"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1046.md",
+        "name": "linters/shellcheck/SC1046"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3003.md",
+        "name": "linters/shellcheck/SC3003"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1106.md",
+        "name": "linters/shellcheck/SC1106"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3037.md",
+        "name": "linters/shellcheck/SC3037"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1132.md",
+        "name": "linters/shellcheck/SC1132"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1072.md",
+        "name": "linters/shellcheck/SC1072"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3066.md",
+        "name": "linters/shellcheck/SC3066"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2068.md",
+        "name": "linters/shellcheck/SC2068"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2128.md",
+        "name": "linters/shellcheck/SC2128"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2039.md",
+        "name": "linters/shellcheck/SC2039"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2179.md",
+        "name": "linters/shellcheck/SC2179"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1081.md",
+        "name": "linters/shellcheck/SC1081"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2169.md",
+        "name": "linters/shellcheck/SC2169"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1091.md",
+        "name": "linters/shellcheck/SC1091"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2029.md",
+        "name": "linters/shellcheck/SC2029"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2078.md",
+        "name": "linters/shellcheck/SC2078"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1033.md",
+        "name": "linters/shellcheck/SC1033"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1062.md",
+        "name": "linters/shellcheck/SC1062"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1122.md",
+        "name": "linters/shellcheck/SC1122"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1116.md",
+        "name": "linters/shellcheck/SC1116"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3013.md",
+        "name": "linters/shellcheck/SC3013"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1056.md",
+        "name": "linters/shellcheck/SC1056"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3042.md",
+        "name": "linters/shellcheck/SC3042"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1007.md",
+        "name": "linters/shellcheck/SC1007"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3062.md",
+        "name": "linters/shellcheck/SC3062"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1027.md",
+        "name": "linters/shellcheck/SC1027"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3033.md",
+        "name": "linters/shellcheck/SC3033"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1136.md",
+        "name": "linters/shellcheck/SC1136"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1076.md",
+        "name": "linters/shellcheck/SC1076"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1085.md",
+        "name": "linters/shellcheck/SC1085"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3007.md",
+        "name": "linters/shellcheck/SC3007"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1102.md",
+        "name": "linters/shellcheck/SC1102"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3056.md",
+        "name": "linters/shellcheck/SC3056"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2289.md",
+        "name": "linters/shellcheck/SC2289"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2118.md",
+        "name": "linters/shellcheck/SC2118"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2058.md",
+        "name": "linters/shellcheck/SC2058"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2149.md",
+        "name": "linters/shellcheck/SC2149"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2009.md",
+        "name": "linters/shellcheck/SC2009"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2019.md",
+        "name": "linters/shellcheck/SC2019"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2159.md",
+        "name": "linters/shellcheck/SC2159"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2048.md",
+        "name": "linters/shellcheck/SC2048"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2108.md",
+        "name": "linters/shellcheck/SC2108"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2299.md",
+        "name": "linters/shellcheck/SC2299"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1143.md",
+        "name": "linters/shellcheck/SC1143"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3046.md",
+        "name": "linters/shellcheck/SC3046"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1003.md",
+        "name": "linters/shellcheck/SC1003"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1112.md",
+        "name": "linters/shellcheck/SC1112"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3017.md",
+        "name": "linters/shellcheck/SC3017"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1052.md",
+        "name": "linters/shellcheck/SC1052"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1095.md",
+        "name": "linters/shellcheck/SC1095"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1066.md",
+        "name": "linters/shellcheck/SC1066"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1126.md",
+        "name": "linters/shellcheck/SC1126"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3023.md",
+        "name": "linters/shellcheck/SC3023"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1037.md",
+        "name": "linters/shellcheck/SC1037"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3063.md",
+        "name": "linters/shellcheck/SC3063"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1026.md",
+        "name": "linters/shellcheck/SC1026"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3032.md",
+        "name": "linters/shellcheck/SC3032"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1137.md",
+        "name": "linters/shellcheck/SC1137"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1077.md",
+        "name": "linters/shellcheck/SC1077"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1084.md",
+        "name": "linters/shellcheck/SC1084"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1043.md",
+        "name": "linters/shellcheck/SC1043"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3006.md",
+        "name": "linters/shellcheck/SC3006"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1103.md",
+        "name": "linters/shellcheck/SC1103"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1012.md",
+        "name": "linters/shellcheck/SC1012"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3057.md",
+        "name": "linters/shellcheck/SC3057"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2119.md",
+        "name": "linters/shellcheck/SC2119"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2288.md",
+        "name": "linters/shellcheck/SC2288"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2059.md",
+        "name": "linters/shellcheck/SC2059"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2148.md",
+        "name": "linters/shellcheck/SC2148"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2008.md",
+        "name": "linters/shellcheck/SC2008"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2018.md",
+        "name": "linters/shellcheck/SC2018"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2158.md",
+        "name": "linters/shellcheck/SC2158"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2049.md",
+        "name": "linters/shellcheck/SC2049"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2298.md",
+        "name": "linters/shellcheck/SC2298"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2109.md",
+        "name": "linters/shellcheck/SC2109"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1142.md",
+        "name": "linters/shellcheck/SC1142"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3047.md",
+        "name": "linters/shellcheck/SC3047"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1113.md",
+        "name": "linters/shellcheck/SC1113"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3016.md",
+        "name": "linters/shellcheck/SC3016"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1053.md",
+        "name": "linters/shellcheck/SC1053"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1094.md",
+        "name": "linters/shellcheck/SC1094"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1067.md",
+        "name": "linters/shellcheck/SC1067"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1127.md",
+        "name": "linters/shellcheck/SC1127"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3022.md",
+        "name": "linters/shellcheck/SC3022"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1036.md",
+        "name": "linters/shellcheck/SC1036"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1016.md",
+        "name": "linters/shellcheck/SC1016"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3053.md",
+        "name": "linters/shellcheck/SC3053"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1047.md",
+        "name": "linters/shellcheck/SC1047"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3002.md",
+        "name": "linters/shellcheck/SC3002"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1107.md",
+        "name": "linters/shellcheck/SC1107"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3036.md",
+        "name": "linters/shellcheck/SC3036"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1133.md",
+        "name": "linters/shellcheck/SC1133"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1073.md",
+        "name": "linters/shellcheck/SC1073"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3067.md",
+        "name": "linters/shellcheck/SC3067"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2069.md",
+        "name": "linters/shellcheck/SC2069"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2129.md",
+        "name": "linters/shellcheck/SC2129"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2038.md",
+        "name": "linters/shellcheck/SC2038"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1080.md",
+        "name": "linters/shellcheck/SC1080"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2178.md",
+        "name": "linters/shellcheck/SC2178"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1090.md",
+        "name": "linters/shellcheck/SC1090"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2168.md",
+        "name": "linters/shellcheck/SC2168"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2028.md",
+        "name": "linters/shellcheck/SC2028"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2139.md",
+        "name": "linters/shellcheck/SC2139"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2079.md",
+        "name": "linters/shellcheck/SC2079"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1063.md",
+        "name": "linters/shellcheck/SC1063"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1123.md",
+        "name": "linters/shellcheck/SC1123"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3026.md",
+        "name": "linters/shellcheck/SC3026"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1117.md",
+        "name": "linters/shellcheck/SC1117"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3012.md",
+        "name": "linters/shellcheck/SC3012"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1057.md",
+        "name": "linters/shellcheck/SC1057"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3043.md",
+        "name": "linters/shellcheck/SC3043"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1087.md",
+        "name": "linters/shellcheck/SC1087"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3031.md",
+        "name": "linters/shellcheck/SC3031"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1134.md",
+        "name": "linters/shellcheck/SC1134"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1074.md",
+        "name": "linters/shellcheck/SC1074"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3060.md",
+        "name": "linters/shellcheck/SC3060"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1011.md",
+        "name": "linters/shellcheck/SC1011"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2278.md",
+        "name": "linters/shellcheck/SC2278"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3054.md",
+        "name": "linters/shellcheck/SC3054"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1040.md",
+        "name": "linters/shellcheck/SC1040"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2229.md",
+        "name": "linters/shellcheck/SC2229"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3005.md",
+        "name": "linters/shellcheck/SC3005"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1100.md",
+        "name": "linters/shellcheck/SC1100"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1110.md",
+        "name": "linters/shellcheck/SC1110"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3015.md",
+        "name": "linters/shellcheck/SC3015"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1050.md",
+        "name": "linters/shellcheck/SC1050"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2239.md",
+        "name": "linters/shellcheck/SC2239"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2328.md",
+        "name": "linters/shellcheck/SC2328"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1141.md",
+        "name": "linters/shellcheck/SC1141"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3044.md",
+        "name": "linters/shellcheck/SC3044"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1001.md",
+        "name": "linters/shellcheck/SC1001"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2268.md",
+        "name": "linters/shellcheck/SC2268"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1035.md",
+        "name": "linters/shellcheck/SC1035"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1064.md",
+        "name": "linters/shellcheck/SC1064"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1124.md",
+        "name": "linters/shellcheck/SC1124"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3021.md",
+        "name": "linters/shellcheck/SC3021"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1097.md",
+        "name": "linters/shellcheck/SC1097"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1044.md",
+        "name": "linters/shellcheck/SC1044"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3001.md",
+        "name": "linters/shellcheck/SC3001"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1104.md",
+        "name": "linters/shellcheck/SC1104"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1015.md",
+        "name": "linters/shellcheck/SC1015"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3050.md",
+        "name": "linters/shellcheck/SC3050"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1083.md",
+        "name": "linters/shellcheck/SC1083"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3064.md",
+        "name": "linters/shellcheck/SC3064"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2099.md",
+        "name": "linters/shellcheck/SC2099"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2308.md",
+        "name": "linters/shellcheck/SC2308"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2248.md",
+        "name": "linters/shellcheck/SC2248"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3035.md",
+        "name": "linters/shellcheck/SC3035"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1130.md",
+        "name": "linters/shellcheck/SC1130"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2188.md",
+        "name": "linters/shellcheck/SC2188"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2219.md",
+        "name": "linters/shellcheck/SC2219"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1070.md",
+        "name": "linters/shellcheck/SC1070"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2209.md",
+        "name": "linters/shellcheck/SC2209"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2198.md",
+        "name": "linters/shellcheck/SC2198"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1060.md",
+        "name": "linters/shellcheck/SC1060"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1120.md",
+        "name": "linters/shellcheck/SC1120"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3025.md",
+        "name": "linters/shellcheck/SC3025"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2258.md",
+        "name": "linters/shellcheck/SC2258"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2318.md",
+        "name": "linters/shellcheck/SC2318"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2089.md",
+        "name": "linters/shellcheck/SC2089"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1145.md",
+        "name": "linters/shellcheck/SC1145"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3040.md",
+        "name": "linters/shellcheck/SC3040"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1114.md",
+        "name": "linters/shellcheck/SC1114"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3011.md",
+        "name": "linters/shellcheck/SC3011"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1054.md",
+        "name": "linters/shellcheck/SC1054"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1045.md",
+        "name": "linters/shellcheck/SC1045"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1105.md",
+        "name": "linters/shellcheck/SC1105"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1014.md",
+        "name": "linters/shellcheck/SC1014"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3051.md",
+        "name": "linters/shellcheck/SC3051"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1082.md",
+        "name": "linters/shellcheck/SC1082"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2309.md",
+        "name": "linters/shellcheck/SC2309"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2098.md",
+        "name": "linters/shellcheck/SC2098"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3065.md",
+        "name": "linters/shellcheck/SC3065"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1020.md",
+        "name": "linters/shellcheck/SC1020"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2249.md",
+        "name": "linters/shellcheck/SC2249"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3034.md",
+        "name": "linters/shellcheck/SC3034"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1131.md",
+        "name": "linters/shellcheck/SC1131"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1071.md",
+        "name": "linters/shellcheck/SC1071"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2218.md",
+        "name": "linters/shellcheck/SC2218"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2189.md",
+        "name": "linters/shellcheck/SC2189"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1061.md",
+        "name": "linters/shellcheck/SC1061"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2199.md",
+        "name": "linters/shellcheck/SC2199"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2208.md",
+        "name": "linters/shellcheck/SC2208"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1121.md",
+        "name": "linters/shellcheck/SC1121"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3024.md",
+        "name": "linters/shellcheck/SC3024"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2259.md",
+        "name": "linters/shellcheck/SC2259"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2088.md",
+        "name": "linters/shellcheck/SC2088"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2319.md",
+        "name": "linters/shellcheck/SC2319"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1092.md",
+        "name": "linters/shellcheck/SC1092"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1144.md",
+        "name": "linters/shellcheck/SC1144"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3041.md",
+        "name": "linters/shellcheck/SC3041"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1004.md",
+        "name": "linters/shellcheck/SC1004"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1115.md",
+        "name": "linters/shellcheck/SC1115"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3010.md",
+        "name": "linters/shellcheck/SC3010"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1055.md",
+        "name": "linters/shellcheck/SC1055"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1086.md",
+        "name": "linters/shellcheck/SC1086"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3030.md",
+        "name": "linters/shellcheck/SC3030"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1135.md",
+        "name": "linters/shellcheck/SC1135"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1075.md",
+        "name": "linters/shellcheck/SC1075"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3061.md",
+        "name": "linters/shellcheck/SC3061"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2279.md",
+        "name": "linters/shellcheck/SC2279"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1010.md",
+        "name": "linters/shellcheck/SC1010"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3055.md",
+        "name": "linters/shellcheck/SC3055"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1041.md",
+        "name": "linters/shellcheck/SC1041"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3004.md",
+        "name": "linters/shellcheck/SC3004"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1101.md",
+        "name": "linters/shellcheck/SC1101"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1111.md",
+        "name": "linters/shellcheck/SC1111"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3014.md",
+        "name": "linters/shellcheck/SC3014"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2238.md",
+        "name": "linters/shellcheck/SC2238"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1051.md",
+        "name": "linters/shellcheck/SC1051"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1140.md",
+        "name": "linters/shellcheck/SC1140"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3045.md",
+        "name": "linters/shellcheck/SC3045"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2329.md",
+        "name": "linters/shellcheck/SC2329"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2269.md",
+        "name": "linters/shellcheck/SC2269"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1000.md",
+        "name": "linters/shellcheck/SC1000"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1034.md",
+        "name": "linters/shellcheck/SC1034"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1065.md",
+        "name": "linters/shellcheck/SC1065"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1125.md",
+        "name": "linters/shellcheck/SC1125"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC3020.md",
+        "name": "linters/shellcheck/SC3020"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2186.md",
+        "name": "linters/shellcheck/SC2186"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2217.md",
+        "name": "linters/shellcheck/SC2217"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2097.md",
+        "name": "linters/shellcheck/SC2097"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2306.md",
+        "name": "linters/shellcheck/SC2306"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2246.md",
+        "name": "linters/shellcheck/SC2246"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2064.md",
+        "name": "linters/shellcheck/SC2064"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2124.md",
+        "name": "linters/shellcheck/SC2124"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2035.md",
+        "name": "linters/shellcheck/SC2035"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2175.md",
+        "name": "linters/shellcheck/SC2175"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/rules.md",
+        "name": "linters/shellcheck/rules"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2272.md",
+        "name": "linters/shellcheck/SC2272"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2332.md",
+        "name": "linters/shellcheck/SC2332"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2223.md",
+        "name": "linters/shellcheck/SC2223"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2141.md",
+        "name": "linters/shellcheck/SC2141"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2001.md",
+        "name": "linters/shellcheck/SC2001"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2110.md",
+        "name": "linters/shellcheck/SC2110"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2281.md",
+        "name": "linters/shellcheck/SC2281"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2050.md",
+        "name": "linters/shellcheck/SC2050"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2040.md",
+        "name": "linters/shellcheck/SC2040"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2291.md",
+        "name": "linters/shellcheck/SC2291"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2100.md",
+        "name": "linters/shellcheck/SC2100"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2011.md",
+        "name": "linters/shellcheck/SC2011"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2151.md",
+        "name": "linters/shellcheck/SC2151"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2233.md",
+        "name": "linters/shellcheck/SC2233"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2322.md",
+        "name": "linters/shellcheck/SC2322"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2262.md",
+        "name": "linters/shellcheck/SC2262"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2165.md",
+        "name": "linters/shellcheck/SC2165"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2025.md",
+        "name": "linters/shellcheck/SC2025"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2074.md",
+        "name": "linters/shellcheck/SC2074"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2256.md",
+        "name": "linters/shellcheck/SC2256"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2316.md",
+        "name": "linters/shellcheck/SC2316"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2087.md",
+        "name": "linters/shellcheck/SC2087"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2207.md",
+        "name": "linters/shellcheck/SC2207"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2196.md",
+        "name": "linters/shellcheck/SC2196"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2227.md",
+        "name": "linters/shellcheck/SC2227"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2276.md",
+        "name": "linters/shellcheck/SC2276"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2285.md",
+        "name": "linters/shellcheck/SC2285"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2114.md",
+        "name": "linters/shellcheck/SC2114"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2054.md",
+        "name": "linters/shellcheck/SC2054"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2145.md",
+        "name": "linters/shellcheck/SC2145"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2005.md",
+        "name": "linters/shellcheck/SC2005"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2302.md",
+        "name": "linters/shellcheck/SC2302"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2093.md",
+        "name": "linters/shellcheck/SC2093"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2242.md",
+        "name": "linters/shellcheck/SC2242"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2213.md",
+        "name": "linters/shellcheck/SC2213"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2182.md",
+        "name": "linters/shellcheck/SC2182"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2031.md",
+        "name": "linters/shellcheck/SC2031"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1089.md",
+        "name": "linters/shellcheck/SC1089"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2171.md",
+        "name": "linters/shellcheck/SC2171"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2060.md",
+        "name": "linters/shellcheck/SC2060"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2120.md",
+        "name": "linters/shellcheck/SC2120"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2130.md",
+        "name": "linters/shellcheck/SC2130"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2070.md",
+        "name": "linters/shellcheck/SC2070"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1099.md",
+        "name": "linters/shellcheck/SC1099"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2161.md",
+        "name": "linters/shellcheck/SC2161"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2021.md",
+        "name": "linters/shellcheck/SC2021"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2192.md",
+        "name": "linters/shellcheck/SC2192"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2203.md",
+        "name": "linters/shellcheck/SC2203"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2252.md",
+        "name": "linters/shellcheck/SC2252"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2083.md",
+        "name": "linters/shellcheck/SC2083"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2312.md",
+        "name": "linters/shellcheck/SC2312"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2015.md",
+        "name": "linters/shellcheck/SC2015"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2155.md",
+        "name": "linters/shellcheck/SC2155"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2044.md",
+        "name": "linters/shellcheck/SC2044"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2104.md",
+        "name": "linters/shellcheck/SC2104"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2295.md",
+        "name": "linters/shellcheck/SC2295"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2326.md",
+        "name": "linters/shellcheck/SC2326"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2266.md",
+        "name": "linters/shellcheck/SC2266"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2237.md",
+        "name": "linters/shellcheck/SC2237"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2226.md",
+        "name": "linters/shellcheck/SC2226"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2277.md",
+        "name": "linters/shellcheck/SC2277"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2115.md",
+        "name": "linters/shellcheck/SC2115"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2284.md",
+        "name": "linters/shellcheck/SC2284"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2055.md",
+        "name": "linters/shellcheck/SC2055"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2144.md",
+        "name": "linters/shellcheck/SC2144"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2004.md",
+        "name": "linters/shellcheck/SC2004"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2092.md",
+        "name": "linters/shellcheck/SC2092"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2303.md",
+        "name": "linters/shellcheck/SC2303"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2243.md",
+        "name": "linters/shellcheck/SC2243"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2183.md",
+        "name": "linters/shellcheck/SC2183"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2212.md",
+        "name": "linters/shellcheck/SC2212"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2030.md",
+        "name": "linters/shellcheck/SC2030"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2170.md",
+        "name": "linters/shellcheck/SC2170"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1088.md",
+        "name": "linters/shellcheck/SC1088"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2061.md",
+        "name": "linters/shellcheck/SC2061"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2121.md",
+        "name": "linters/shellcheck/SC2121"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2071.md",
+        "name": "linters/shellcheck/SC2071"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2160.md",
+        "name": "linters/shellcheck/SC2160"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC1098.md",
+        "name": "linters/shellcheck/SC1098"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2020.md",
+        "name": "linters/shellcheck/SC2020"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2202.md",
+        "name": "linters/shellcheck/SC2202"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2193.md",
+        "name": "linters/shellcheck/SC2193"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2253.md",
+        "name": "linters/shellcheck/SC2253"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2313.md",
+        "name": "linters/shellcheck/SC2313"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2082.md",
+        "name": "linters/shellcheck/SC2082"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2014.md",
+        "name": "linters/shellcheck/SC2014"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2154.md",
+        "name": "linters/shellcheck/SC2154"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2045.md",
+        "name": "linters/shellcheck/SC2045"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2294.md",
+        "name": "linters/shellcheck/SC2294"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2105.md",
+        "name": "linters/shellcheck/SC2105"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2327.md",
+        "name": "linters/shellcheck/SC2327"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2267.md",
+        "name": "linters/shellcheck/SC2267"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2236.md",
+        "name": "linters/shellcheck/SC2236"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2216.md",
+        "name": "linters/shellcheck/SC2216"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2187.md",
+        "name": "linters/shellcheck/SC2187"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2307.md",
+        "name": "linters/shellcheck/SC2307"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2096.md",
+        "name": "linters/shellcheck/SC2096"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2247.md",
+        "name": "linters/shellcheck/SC2247"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2065.md",
+        "name": "linters/shellcheck/SC2065"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2125.md",
+        "name": "linters/shellcheck/SC2125"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2034.md",
+        "name": "linters/shellcheck/SC2034"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2174.md",
+        "name": "linters/shellcheck/SC2174"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2273.md",
+        "name": "linters/shellcheck/SC2273"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2333.md",
+        "name": "linters/shellcheck/SC2333"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2222.md",
+        "name": "linters/shellcheck/SC2222"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2140.md",
+        "name": "linters/shellcheck/SC2140"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2000.md",
+        "name": "linters/shellcheck/SC2000"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2280.md",
+        "name": "linters/shellcheck/SC2280"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2111.md",
+        "name": "linters/shellcheck/SC2111"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2051.md",
+        "name": "linters/shellcheck/SC2051"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2041.md",
+        "name": "linters/shellcheck/SC2041"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2101.md",
+        "name": "linters/shellcheck/SC2101"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2290.md",
+        "name": "linters/shellcheck/SC2290"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2010.md",
+        "name": "linters/shellcheck/SC2010"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2150.md",
+        "name": "linters/shellcheck/SC2150"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2232.md",
+        "name": "linters/shellcheck/SC2232"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2323.md",
+        "name": "linters/shellcheck/SC2323"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2263.md",
+        "name": "linters/shellcheck/SC2263"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2164.md",
+        "name": "linters/shellcheck/SC2164"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2024.md",
+        "name": "linters/shellcheck/SC2024"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2075.md",
+        "name": "linters/shellcheck/SC2075"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2257.md",
+        "name": "linters/shellcheck/SC2257"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2086.md",
+        "name": "linters/shellcheck/SC2086"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2317.md",
+        "name": "linters/shellcheck/SC2317"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2197.md",
+        "name": "linters/shellcheck/SC2197"
+      },
+      {
+        "category": "linters",
+        "path": "linters/shellcheck/SC2206.md",
+        "name": "linters/shellcheck/SC2206"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/shfmt.md",
+        "name": "formatters/shfmt"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/reserved-words.md",
+      "name": "stdlib/reserved-words"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/builtins.md",
+      "name": "stdlib/builtins"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2147.md",
+      "name": "linters/shellcheck/SC2147"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2007.md",
+      "name": "linters/shellcheck/SC2007"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2287.md",
+      "name": "linters/shellcheck/SC2287"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2116.md",
+      "name": "linters/shellcheck/SC2116"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2056.md",
+      "name": "linters/shellcheck/SC2056"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2274.md",
+      "name": "linters/shellcheck/SC2274"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2334.md",
+      "name": "linters/shellcheck/SC2334"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2225.md",
+      "name": "linters/shellcheck/SC2225"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3009.md",
+      "name": "linters/shellcheck/SC3009"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2062.md",
+      "name": "linters/shellcheck/SC2062"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2122.md",
+      "name": "linters/shellcheck/SC2122"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2033.md",
+      "name": "linters/shellcheck/SC2033"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2173.md",
+      "name": "linters/shellcheck/SC2173"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1138.md",
+      "name": "linters/shellcheck/SC1138"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1078.md",
+      "name": "linters/shellcheck/SC1078"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2211.md",
+      "name": "linters/shellcheck/SC2211"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2180.md",
+      "name": "linters/shellcheck/SC2180"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2300.md",
+      "name": "linters/shellcheck/SC2300"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2091.md",
+      "name": "linters/shellcheck/SC2091"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1029.md",
+      "name": "linters/shellcheck/SC1029"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2240.md",
+      "name": "linters/shellcheck/SC2240"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1039.md",
+      "name": "linters/shellcheck/SC1039"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2250.md",
+      "name": "linters/shellcheck/SC2250"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2081.md",
+      "name": "linters/shellcheck/SC2081"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2310.md",
+      "name": "linters/shellcheck/SC2310"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1068.md",
+      "name": "linters/shellcheck/SC1068"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2190.md",
+      "name": "linters/shellcheck/SC2190"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2201.md",
+      "name": "linters/shellcheck/SC2201"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1128.md",
+      "name": "linters/shellcheck/SC1128"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2163.md",
+      "name": "linters/shellcheck/SC2163"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2023.md",
+      "name": "linters/shellcheck/SC2023"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2072.md",
+      "name": "linters/shellcheck/SC2072"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3019.md",
+      "name": "linters/shellcheck/SC3019"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2235.md",
+      "name": "linters/shellcheck/SC2235"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2324.md",
+      "name": "linters/shellcheck/SC2324"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3048.md",
+      "name": "linters/shellcheck/SC3048"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2264.md",
+      "name": "linters/shellcheck/SC2264"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2046.md",
+      "name": "linters/shellcheck/SC2046"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2106.md",
+      "name": "linters/shellcheck/SC2106"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2297.md",
+      "name": "linters/shellcheck/SC2297"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2017.md",
+      "name": "linters/shellcheck/SC2017"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2157.md",
+      "name": "linters/shellcheck/SC2157"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2037.md",
+      "name": "linters/shellcheck/SC2037"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2177.md",
+      "name": "linters/shellcheck/SC2177"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2066.md",
+      "name": "linters/shellcheck/SC2066"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2126.md",
+      "name": "linters/shellcheck/SC2126"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2095.md",
+      "name": "linters/shellcheck/SC2095"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2304.md",
+      "name": "linters/shellcheck/SC2304"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2244.md",
+      "name": "linters/shellcheck/SC2244"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3039.md",
+      "name": "linters/shellcheck/SC3039"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2184.md",
+      "name": "linters/shellcheck/SC2184"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2215.md",
+      "name": "linters/shellcheck/SC2215"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2112.md",
+      "name": "linters/shellcheck/SC2112"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2283.md",
+      "name": "linters/shellcheck/SC2283"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2143.md",
+      "name": "linters/shellcheck/SC2143"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2003.md",
+      "name": "linters/shellcheck/SC2003"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2221.md",
+      "name": "linters/shellcheck/SC2221"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1048.md",
+      "name": "linters/shellcheck/SC1048"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1108.md",
+      "name": "linters/shellcheck/SC1108"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2270.md",
+      "name": "linters/shellcheck/SC2270"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1019.md",
+      "name": "linters/shellcheck/SC1019"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2330.md",
+      "name": "linters/shellcheck/SC2330"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2320.md",
+      "name": "linters/shellcheck/SC2320"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2260.md",
+      "name": "linters/shellcheck/SC2260"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1009.md",
+      "name": "linters/shellcheck/SC1009"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1118.md",
+      "name": "linters/shellcheck/SC1118"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2231.md",
+      "name": "linters/shellcheck/SC2231"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1058.md",
+      "name": "linters/shellcheck/SC1058"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2013.md",
+      "name": "linters/shellcheck/SC2013"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2153.md",
+      "name": "linters/shellcheck/SC2153"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2042.md",
+      "name": "linters/shellcheck/SC2042"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2293.md",
+      "name": "linters/shellcheck/SC2293"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2102.md",
+      "name": "linters/shellcheck/SC2102"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2205.md",
+      "name": "linters/shellcheck/SC2205"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2194.md",
+      "name": "linters/shellcheck/SC2194"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3029.md",
+      "name": "linters/shellcheck/SC3029"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2254.md",
+      "name": "linters/shellcheck/SC2254"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2314.md",
+      "name": "linters/shellcheck/SC2314"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2076.md",
+      "name": "linters/shellcheck/SC2076"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2167.md",
+      "name": "linters/shellcheck/SC2167"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2027.md",
+      "name": "linters/shellcheck/SC2027"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/overview.md",
+      "name": "linters/shellcheck/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2036.md",
+      "name": "linters/shellcheck/SC2036"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2176.md",
+      "name": "linters/shellcheck/SC2176"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2067.md",
+      "name": "linters/shellcheck/SC2067"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2127.md",
+      "name": "linters/shellcheck/SC2127"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2305.md",
+      "name": "linters/shellcheck/SC2305"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2094.md",
+      "name": "linters/shellcheck/SC2094"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2245.md",
+      "name": "linters/shellcheck/SC2245"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3038.md",
+      "name": "linters/shellcheck/SC3038"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2214.md",
+      "name": "linters/shellcheck/SC2214"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2185.md",
+      "name": "linters/shellcheck/SC2185"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2282.md",
+      "name": "linters/shellcheck/SC2282"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2113.md",
+      "name": "linters/shellcheck/SC2113"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2053.md",
+      "name": "linters/shellcheck/SC2053"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2142.md",
+      "name": "linters/shellcheck/SC2142"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2002.md",
+      "name": "linters/shellcheck/SC2002"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1049.md",
+      "name": "linters/shellcheck/SC1049"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2220.md",
+      "name": "linters/shellcheck/SC2220"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1109.md",
+      "name": "linters/shellcheck/SC1109"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1018.md",
+      "name": "linters/shellcheck/SC1018"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2271.md",
+      "name": "linters/shellcheck/SC2271"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2331.md",
+      "name": "linters/shellcheck/SC2331"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2321.md",
+      "name": "linters/shellcheck/SC2321"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1008.md",
+      "name": "linters/shellcheck/SC1008"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2261.md",
+      "name": "linters/shellcheck/SC2261"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1119.md",
+      "name": "linters/shellcheck/SC1119"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1059.md",
+      "name": "linters/shellcheck/SC1059"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2230.md",
+      "name": "linters/shellcheck/SC2230"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2012.md",
+      "name": "linters/shellcheck/SC2012"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2152.md",
+      "name": "linters/shellcheck/SC2152"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2043.md",
+      "name": "linters/shellcheck/SC2043"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2103.md",
+      "name": "linters/shellcheck/SC2103"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2292.md",
+      "name": "linters/shellcheck/SC2292"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2195.md",
+      "name": "linters/shellcheck/SC2195"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2204.md",
+      "name": "linters/shellcheck/SC2204"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3028.md",
+      "name": "linters/shellcheck/SC3028"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2255.md",
+      "name": "linters/shellcheck/SC2255"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2084.md",
+      "name": "linters/shellcheck/SC2084"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2315.md",
+      "name": "linters/shellcheck/SC2315"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2077.md",
+      "name": "linters/shellcheck/SC2077"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2166.md",
+      "name": "linters/shellcheck/SC2166"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2026.md",
+      "name": "linters/shellcheck/SC2026"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2146.md",
+      "name": "linters/shellcheck/SC2146"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2006.md",
+      "name": "linters/shellcheck/SC2006"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2117.md",
+      "name": "linters/shellcheck/SC2117"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2286.md",
+      "name": "linters/shellcheck/SC2286"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2057.md",
+      "name": "linters/shellcheck/SC2057"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2275.md",
+      "name": "linters/shellcheck/SC2275"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3059.md",
+      "name": "linters/shellcheck/SC3059"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2335.md",
+      "name": "linters/shellcheck/SC2335"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2224.md",
+      "name": "linters/shellcheck/SC2224"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3008.md",
+      "name": "linters/shellcheck/SC3008"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2063.md",
+      "name": "linters/shellcheck/SC2063"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2123.md",
+      "name": "linters/shellcheck/SC2123"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2032.md",
+      "name": "linters/shellcheck/SC2032"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2172.md",
+      "name": "linters/shellcheck/SC2172"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1139.md",
+      "name": "linters/shellcheck/SC1139"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2181.md",
+      "name": "linters/shellcheck/SC2181"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2210.md",
+      "name": "linters/shellcheck/SC2210"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1079.md",
+      "name": "linters/shellcheck/SC1079"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2090.md",
+      "name": "linters/shellcheck/SC2090"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2301.md",
+      "name": "linters/shellcheck/SC2301"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2241.md",
+      "name": "linters/shellcheck/SC2241"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1028.md",
+      "name": "linters/shellcheck/SC1028"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2251.md",
+      "name": "linters/shellcheck/SC2251"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1038.md",
+      "name": "linters/shellcheck/SC1038"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2311.md",
+      "name": "linters/shellcheck/SC2311"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2080.md",
+      "name": "linters/shellcheck/SC2080"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2200.md",
+      "name": "linters/shellcheck/SC2200"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2191.md",
+      "name": "linters/shellcheck/SC2191"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1069.md",
+      "name": "linters/shellcheck/SC1069"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1129.md",
+      "name": "linters/shellcheck/SC1129"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2162.md",
+      "name": "linters/shellcheck/SC2162"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2022.md",
+      "name": "linters/shellcheck/SC2022"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2073.md",
+      "name": "linters/shellcheck/SC2073"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3018.md",
+      "name": "linters/shellcheck/SC3018"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2234.md",
+      "name": "linters/shellcheck/SC2234"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3049.md",
+      "name": "linters/shellcheck/SC3049"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2325.md",
+      "name": "linters/shellcheck/SC2325"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2265.md",
+      "name": "linters/shellcheck/SC2265"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2296.md",
+      "name": "linters/shellcheck/SC2296"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2107.md",
+      "name": "linters/shellcheck/SC2107"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2016.md",
+      "name": "linters/shellcheck/SC2016"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2156.md",
+      "name": "linters/shellcheck/SC2156"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1017.md",
+      "name": "linters/shellcheck/SC1017"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3052.md",
+      "name": "linters/shellcheck/SC3052"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1046.md",
+      "name": "linters/shellcheck/SC1046"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3003.md",
+      "name": "linters/shellcheck/SC3003"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1106.md",
+      "name": "linters/shellcheck/SC1106"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3037.md",
+      "name": "linters/shellcheck/SC3037"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1132.md",
+      "name": "linters/shellcheck/SC1132"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1072.md",
+      "name": "linters/shellcheck/SC1072"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3066.md",
+      "name": "linters/shellcheck/SC3066"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2068.md",
+      "name": "linters/shellcheck/SC2068"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2128.md",
+      "name": "linters/shellcheck/SC2128"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2039.md",
+      "name": "linters/shellcheck/SC2039"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2179.md",
+      "name": "linters/shellcheck/SC2179"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1081.md",
+      "name": "linters/shellcheck/SC1081"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2169.md",
+      "name": "linters/shellcheck/SC2169"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1091.md",
+      "name": "linters/shellcheck/SC1091"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2029.md",
+      "name": "linters/shellcheck/SC2029"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2078.md",
+      "name": "linters/shellcheck/SC2078"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1033.md",
+      "name": "linters/shellcheck/SC1033"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1062.md",
+      "name": "linters/shellcheck/SC1062"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1122.md",
+      "name": "linters/shellcheck/SC1122"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1116.md",
+      "name": "linters/shellcheck/SC1116"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3013.md",
+      "name": "linters/shellcheck/SC3013"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1056.md",
+      "name": "linters/shellcheck/SC1056"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3042.md",
+      "name": "linters/shellcheck/SC3042"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1007.md",
+      "name": "linters/shellcheck/SC1007"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3062.md",
+      "name": "linters/shellcheck/SC3062"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1027.md",
+      "name": "linters/shellcheck/SC1027"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3033.md",
+      "name": "linters/shellcheck/SC3033"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1136.md",
+      "name": "linters/shellcheck/SC1136"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1076.md",
+      "name": "linters/shellcheck/SC1076"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1085.md",
+      "name": "linters/shellcheck/SC1085"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3007.md",
+      "name": "linters/shellcheck/SC3007"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1102.md",
+      "name": "linters/shellcheck/SC1102"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3056.md",
+      "name": "linters/shellcheck/SC3056"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2289.md",
+      "name": "linters/shellcheck/SC2289"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2118.md",
+      "name": "linters/shellcheck/SC2118"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2058.md",
+      "name": "linters/shellcheck/SC2058"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2149.md",
+      "name": "linters/shellcheck/SC2149"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2009.md",
+      "name": "linters/shellcheck/SC2009"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2019.md",
+      "name": "linters/shellcheck/SC2019"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2159.md",
+      "name": "linters/shellcheck/SC2159"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2048.md",
+      "name": "linters/shellcheck/SC2048"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2108.md",
+      "name": "linters/shellcheck/SC2108"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2299.md",
+      "name": "linters/shellcheck/SC2299"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1143.md",
+      "name": "linters/shellcheck/SC1143"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3046.md",
+      "name": "linters/shellcheck/SC3046"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1003.md",
+      "name": "linters/shellcheck/SC1003"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1112.md",
+      "name": "linters/shellcheck/SC1112"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3017.md",
+      "name": "linters/shellcheck/SC3017"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1052.md",
+      "name": "linters/shellcheck/SC1052"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1095.md",
+      "name": "linters/shellcheck/SC1095"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1066.md",
+      "name": "linters/shellcheck/SC1066"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1126.md",
+      "name": "linters/shellcheck/SC1126"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3023.md",
+      "name": "linters/shellcheck/SC3023"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1037.md",
+      "name": "linters/shellcheck/SC1037"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3063.md",
+      "name": "linters/shellcheck/SC3063"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1026.md",
+      "name": "linters/shellcheck/SC1026"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3032.md",
+      "name": "linters/shellcheck/SC3032"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1137.md",
+      "name": "linters/shellcheck/SC1137"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1077.md",
+      "name": "linters/shellcheck/SC1077"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1084.md",
+      "name": "linters/shellcheck/SC1084"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1043.md",
+      "name": "linters/shellcheck/SC1043"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3006.md",
+      "name": "linters/shellcheck/SC3006"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1103.md",
+      "name": "linters/shellcheck/SC1103"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1012.md",
+      "name": "linters/shellcheck/SC1012"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3057.md",
+      "name": "linters/shellcheck/SC3057"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2119.md",
+      "name": "linters/shellcheck/SC2119"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2288.md",
+      "name": "linters/shellcheck/SC2288"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2059.md",
+      "name": "linters/shellcheck/SC2059"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2148.md",
+      "name": "linters/shellcheck/SC2148"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2008.md",
+      "name": "linters/shellcheck/SC2008"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2018.md",
+      "name": "linters/shellcheck/SC2018"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2158.md",
+      "name": "linters/shellcheck/SC2158"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2049.md",
+      "name": "linters/shellcheck/SC2049"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2298.md",
+      "name": "linters/shellcheck/SC2298"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2109.md",
+      "name": "linters/shellcheck/SC2109"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1142.md",
+      "name": "linters/shellcheck/SC1142"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3047.md",
+      "name": "linters/shellcheck/SC3047"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1113.md",
+      "name": "linters/shellcheck/SC1113"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3016.md",
+      "name": "linters/shellcheck/SC3016"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1053.md",
+      "name": "linters/shellcheck/SC1053"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1094.md",
+      "name": "linters/shellcheck/SC1094"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1067.md",
+      "name": "linters/shellcheck/SC1067"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1127.md",
+      "name": "linters/shellcheck/SC1127"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3022.md",
+      "name": "linters/shellcheck/SC3022"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1036.md",
+      "name": "linters/shellcheck/SC1036"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1016.md",
+      "name": "linters/shellcheck/SC1016"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3053.md",
+      "name": "linters/shellcheck/SC3053"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1047.md",
+      "name": "linters/shellcheck/SC1047"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3002.md",
+      "name": "linters/shellcheck/SC3002"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1107.md",
+      "name": "linters/shellcheck/SC1107"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3036.md",
+      "name": "linters/shellcheck/SC3036"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1133.md",
+      "name": "linters/shellcheck/SC1133"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1073.md",
+      "name": "linters/shellcheck/SC1073"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3067.md",
+      "name": "linters/shellcheck/SC3067"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2069.md",
+      "name": "linters/shellcheck/SC2069"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2129.md",
+      "name": "linters/shellcheck/SC2129"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2038.md",
+      "name": "linters/shellcheck/SC2038"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1080.md",
+      "name": "linters/shellcheck/SC1080"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2178.md",
+      "name": "linters/shellcheck/SC2178"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1090.md",
+      "name": "linters/shellcheck/SC1090"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2168.md",
+      "name": "linters/shellcheck/SC2168"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2028.md",
+      "name": "linters/shellcheck/SC2028"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2139.md",
+      "name": "linters/shellcheck/SC2139"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2079.md",
+      "name": "linters/shellcheck/SC2079"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1063.md",
+      "name": "linters/shellcheck/SC1063"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1123.md",
+      "name": "linters/shellcheck/SC1123"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3026.md",
+      "name": "linters/shellcheck/SC3026"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1117.md",
+      "name": "linters/shellcheck/SC1117"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3012.md",
+      "name": "linters/shellcheck/SC3012"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1057.md",
+      "name": "linters/shellcheck/SC1057"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3043.md",
+      "name": "linters/shellcheck/SC3043"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1087.md",
+      "name": "linters/shellcheck/SC1087"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3031.md",
+      "name": "linters/shellcheck/SC3031"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1134.md",
+      "name": "linters/shellcheck/SC1134"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1074.md",
+      "name": "linters/shellcheck/SC1074"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3060.md",
+      "name": "linters/shellcheck/SC3060"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1011.md",
+      "name": "linters/shellcheck/SC1011"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2278.md",
+      "name": "linters/shellcheck/SC2278"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3054.md",
+      "name": "linters/shellcheck/SC3054"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1040.md",
+      "name": "linters/shellcheck/SC1040"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2229.md",
+      "name": "linters/shellcheck/SC2229"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3005.md",
+      "name": "linters/shellcheck/SC3005"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1100.md",
+      "name": "linters/shellcheck/SC1100"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1110.md",
+      "name": "linters/shellcheck/SC1110"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3015.md",
+      "name": "linters/shellcheck/SC3015"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1050.md",
+      "name": "linters/shellcheck/SC1050"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2239.md",
+      "name": "linters/shellcheck/SC2239"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2328.md",
+      "name": "linters/shellcheck/SC2328"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1141.md",
+      "name": "linters/shellcheck/SC1141"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3044.md",
+      "name": "linters/shellcheck/SC3044"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1001.md",
+      "name": "linters/shellcheck/SC1001"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2268.md",
+      "name": "linters/shellcheck/SC2268"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1035.md",
+      "name": "linters/shellcheck/SC1035"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1064.md",
+      "name": "linters/shellcheck/SC1064"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1124.md",
+      "name": "linters/shellcheck/SC1124"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3021.md",
+      "name": "linters/shellcheck/SC3021"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1097.md",
+      "name": "linters/shellcheck/SC1097"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1044.md",
+      "name": "linters/shellcheck/SC1044"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3001.md",
+      "name": "linters/shellcheck/SC3001"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1104.md",
+      "name": "linters/shellcheck/SC1104"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1015.md",
+      "name": "linters/shellcheck/SC1015"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3050.md",
+      "name": "linters/shellcheck/SC3050"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1083.md",
+      "name": "linters/shellcheck/SC1083"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3064.md",
+      "name": "linters/shellcheck/SC3064"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2099.md",
+      "name": "linters/shellcheck/SC2099"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2308.md",
+      "name": "linters/shellcheck/SC2308"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2248.md",
+      "name": "linters/shellcheck/SC2248"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3035.md",
+      "name": "linters/shellcheck/SC3035"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1130.md",
+      "name": "linters/shellcheck/SC1130"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2188.md",
+      "name": "linters/shellcheck/SC2188"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2219.md",
+      "name": "linters/shellcheck/SC2219"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1070.md",
+      "name": "linters/shellcheck/SC1070"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2209.md",
+      "name": "linters/shellcheck/SC2209"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2198.md",
+      "name": "linters/shellcheck/SC2198"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1060.md",
+      "name": "linters/shellcheck/SC1060"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1120.md",
+      "name": "linters/shellcheck/SC1120"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3025.md",
+      "name": "linters/shellcheck/SC3025"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2258.md",
+      "name": "linters/shellcheck/SC2258"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2318.md",
+      "name": "linters/shellcheck/SC2318"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2089.md",
+      "name": "linters/shellcheck/SC2089"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1145.md",
+      "name": "linters/shellcheck/SC1145"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3040.md",
+      "name": "linters/shellcheck/SC3040"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1114.md",
+      "name": "linters/shellcheck/SC1114"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3011.md",
+      "name": "linters/shellcheck/SC3011"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1054.md",
+      "name": "linters/shellcheck/SC1054"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1045.md",
+      "name": "linters/shellcheck/SC1045"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1105.md",
+      "name": "linters/shellcheck/SC1105"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1014.md",
+      "name": "linters/shellcheck/SC1014"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3051.md",
+      "name": "linters/shellcheck/SC3051"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1082.md",
+      "name": "linters/shellcheck/SC1082"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2309.md",
+      "name": "linters/shellcheck/SC2309"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2098.md",
+      "name": "linters/shellcheck/SC2098"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3065.md",
+      "name": "linters/shellcheck/SC3065"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1020.md",
+      "name": "linters/shellcheck/SC1020"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2249.md",
+      "name": "linters/shellcheck/SC2249"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3034.md",
+      "name": "linters/shellcheck/SC3034"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1131.md",
+      "name": "linters/shellcheck/SC1131"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1071.md",
+      "name": "linters/shellcheck/SC1071"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2218.md",
+      "name": "linters/shellcheck/SC2218"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2189.md",
+      "name": "linters/shellcheck/SC2189"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1061.md",
+      "name": "linters/shellcheck/SC1061"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2199.md",
+      "name": "linters/shellcheck/SC2199"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2208.md",
+      "name": "linters/shellcheck/SC2208"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1121.md",
+      "name": "linters/shellcheck/SC1121"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3024.md",
+      "name": "linters/shellcheck/SC3024"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2259.md",
+      "name": "linters/shellcheck/SC2259"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2088.md",
+      "name": "linters/shellcheck/SC2088"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2319.md",
+      "name": "linters/shellcheck/SC2319"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1092.md",
+      "name": "linters/shellcheck/SC1092"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1144.md",
+      "name": "linters/shellcheck/SC1144"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3041.md",
+      "name": "linters/shellcheck/SC3041"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1004.md",
+      "name": "linters/shellcheck/SC1004"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1115.md",
+      "name": "linters/shellcheck/SC1115"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3010.md",
+      "name": "linters/shellcheck/SC3010"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1055.md",
+      "name": "linters/shellcheck/SC1055"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1086.md",
+      "name": "linters/shellcheck/SC1086"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3030.md",
+      "name": "linters/shellcheck/SC3030"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1135.md",
+      "name": "linters/shellcheck/SC1135"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1075.md",
+      "name": "linters/shellcheck/SC1075"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3061.md",
+      "name": "linters/shellcheck/SC3061"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2279.md",
+      "name": "linters/shellcheck/SC2279"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1010.md",
+      "name": "linters/shellcheck/SC1010"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3055.md",
+      "name": "linters/shellcheck/SC3055"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1041.md",
+      "name": "linters/shellcheck/SC1041"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3004.md",
+      "name": "linters/shellcheck/SC3004"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1101.md",
+      "name": "linters/shellcheck/SC1101"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1111.md",
+      "name": "linters/shellcheck/SC1111"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3014.md",
+      "name": "linters/shellcheck/SC3014"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2238.md",
+      "name": "linters/shellcheck/SC2238"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1051.md",
+      "name": "linters/shellcheck/SC1051"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1140.md",
+      "name": "linters/shellcheck/SC1140"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3045.md",
+      "name": "linters/shellcheck/SC3045"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2329.md",
+      "name": "linters/shellcheck/SC2329"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2269.md",
+      "name": "linters/shellcheck/SC2269"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1000.md",
+      "name": "linters/shellcheck/SC1000"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1034.md",
+      "name": "linters/shellcheck/SC1034"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1065.md",
+      "name": "linters/shellcheck/SC1065"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1125.md",
+      "name": "linters/shellcheck/SC1125"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC3020.md",
+      "name": "linters/shellcheck/SC3020"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2186.md",
+      "name": "linters/shellcheck/SC2186"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2217.md",
+      "name": "linters/shellcheck/SC2217"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2097.md",
+      "name": "linters/shellcheck/SC2097"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2306.md",
+      "name": "linters/shellcheck/SC2306"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2246.md",
+      "name": "linters/shellcheck/SC2246"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2064.md",
+      "name": "linters/shellcheck/SC2064"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2124.md",
+      "name": "linters/shellcheck/SC2124"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2035.md",
+      "name": "linters/shellcheck/SC2035"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2175.md",
+      "name": "linters/shellcheck/SC2175"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/rules.md",
+      "name": "linters/shellcheck/rules"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2272.md",
+      "name": "linters/shellcheck/SC2272"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2332.md",
+      "name": "linters/shellcheck/SC2332"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2223.md",
+      "name": "linters/shellcheck/SC2223"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2141.md",
+      "name": "linters/shellcheck/SC2141"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2001.md",
+      "name": "linters/shellcheck/SC2001"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2110.md",
+      "name": "linters/shellcheck/SC2110"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2281.md",
+      "name": "linters/shellcheck/SC2281"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2050.md",
+      "name": "linters/shellcheck/SC2050"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2040.md",
+      "name": "linters/shellcheck/SC2040"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2291.md",
+      "name": "linters/shellcheck/SC2291"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2100.md",
+      "name": "linters/shellcheck/SC2100"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2011.md",
+      "name": "linters/shellcheck/SC2011"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2151.md",
+      "name": "linters/shellcheck/SC2151"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2233.md",
+      "name": "linters/shellcheck/SC2233"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2322.md",
+      "name": "linters/shellcheck/SC2322"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2262.md",
+      "name": "linters/shellcheck/SC2262"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2165.md",
+      "name": "linters/shellcheck/SC2165"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2025.md",
+      "name": "linters/shellcheck/SC2025"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2074.md",
+      "name": "linters/shellcheck/SC2074"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2256.md",
+      "name": "linters/shellcheck/SC2256"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2316.md",
+      "name": "linters/shellcheck/SC2316"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2087.md",
+      "name": "linters/shellcheck/SC2087"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2207.md",
+      "name": "linters/shellcheck/SC2207"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2196.md",
+      "name": "linters/shellcheck/SC2196"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2227.md",
+      "name": "linters/shellcheck/SC2227"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2276.md",
+      "name": "linters/shellcheck/SC2276"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2285.md",
+      "name": "linters/shellcheck/SC2285"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2114.md",
+      "name": "linters/shellcheck/SC2114"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2054.md",
+      "name": "linters/shellcheck/SC2054"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2145.md",
+      "name": "linters/shellcheck/SC2145"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2005.md",
+      "name": "linters/shellcheck/SC2005"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2302.md",
+      "name": "linters/shellcheck/SC2302"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2093.md",
+      "name": "linters/shellcheck/SC2093"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2242.md",
+      "name": "linters/shellcheck/SC2242"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2213.md",
+      "name": "linters/shellcheck/SC2213"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2182.md",
+      "name": "linters/shellcheck/SC2182"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2031.md",
+      "name": "linters/shellcheck/SC2031"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1089.md",
+      "name": "linters/shellcheck/SC1089"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2171.md",
+      "name": "linters/shellcheck/SC2171"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2060.md",
+      "name": "linters/shellcheck/SC2060"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2120.md",
+      "name": "linters/shellcheck/SC2120"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2130.md",
+      "name": "linters/shellcheck/SC2130"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2070.md",
+      "name": "linters/shellcheck/SC2070"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1099.md",
+      "name": "linters/shellcheck/SC1099"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2161.md",
+      "name": "linters/shellcheck/SC2161"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2021.md",
+      "name": "linters/shellcheck/SC2021"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2192.md",
+      "name": "linters/shellcheck/SC2192"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2203.md",
+      "name": "linters/shellcheck/SC2203"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2252.md",
+      "name": "linters/shellcheck/SC2252"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2083.md",
+      "name": "linters/shellcheck/SC2083"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2312.md",
+      "name": "linters/shellcheck/SC2312"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2015.md",
+      "name": "linters/shellcheck/SC2015"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2155.md",
+      "name": "linters/shellcheck/SC2155"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2044.md",
+      "name": "linters/shellcheck/SC2044"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2104.md",
+      "name": "linters/shellcheck/SC2104"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2295.md",
+      "name": "linters/shellcheck/SC2295"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2326.md",
+      "name": "linters/shellcheck/SC2326"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2266.md",
+      "name": "linters/shellcheck/SC2266"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2237.md",
+      "name": "linters/shellcheck/SC2237"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2226.md",
+      "name": "linters/shellcheck/SC2226"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2277.md",
+      "name": "linters/shellcheck/SC2277"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2115.md",
+      "name": "linters/shellcheck/SC2115"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2284.md",
+      "name": "linters/shellcheck/SC2284"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2055.md",
+      "name": "linters/shellcheck/SC2055"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2144.md",
+      "name": "linters/shellcheck/SC2144"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2004.md",
+      "name": "linters/shellcheck/SC2004"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2092.md",
+      "name": "linters/shellcheck/SC2092"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2303.md",
+      "name": "linters/shellcheck/SC2303"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2243.md",
+      "name": "linters/shellcheck/SC2243"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2183.md",
+      "name": "linters/shellcheck/SC2183"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2212.md",
+      "name": "linters/shellcheck/SC2212"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2030.md",
+      "name": "linters/shellcheck/SC2030"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2170.md",
+      "name": "linters/shellcheck/SC2170"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1088.md",
+      "name": "linters/shellcheck/SC1088"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2061.md",
+      "name": "linters/shellcheck/SC2061"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2121.md",
+      "name": "linters/shellcheck/SC2121"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2071.md",
+      "name": "linters/shellcheck/SC2071"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2160.md",
+      "name": "linters/shellcheck/SC2160"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC1098.md",
+      "name": "linters/shellcheck/SC1098"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2020.md",
+      "name": "linters/shellcheck/SC2020"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2202.md",
+      "name": "linters/shellcheck/SC2202"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2193.md",
+      "name": "linters/shellcheck/SC2193"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2253.md",
+      "name": "linters/shellcheck/SC2253"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2313.md",
+      "name": "linters/shellcheck/SC2313"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2082.md",
+      "name": "linters/shellcheck/SC2082"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2014.md",
+      "name": "linters/shellcheck/SC2014"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2154.md",
+      "name": "linters/shellcheck/SC2154"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2045.md",
+      "name": "linters/shellcheck/SC2045"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2294.md",
+      "name": "linters/shellcheck/SC2294"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2105.md",
+      "name": "linters/shellcheck/SC2105"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2327.md",
+      "name": "linters/shellcheck/SC2327"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2267.md",
+      "name": "linters/shellcheck/SC2267"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2236.md",
+      "name": "linters/shellcheck/SC2236"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2216.md",
+      "name": "linters/shellcheck/SC2216"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2187.md",
+      "name": "linters/shellcheck/SC2187"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2307.md",
+      "name": "linters/shellcheck/SC2307"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2096.md",
+      "name": "linters/shellcheck/SC2096"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2247.md",
+      "name": "linters/shellcheck/SC2247"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2065.md",
+      "name": "linters/shellcheck/SC2065"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2125.md",
+      "name": "linters/shellcheck/SC2125"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2034.md",
+      "name": "linters/shellcheck/SC2034"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2174.md",
+      "name": "linters/shellcheck/SC2174"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2273.md",
+      "name": "linters/shellcheck/SC2273"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2333.md",
+      "name": "linters/shellcheck/SC2333"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2222.md",
+      "name": "linters/shellcheck/SC2222"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2140.md",
+      "name": "linters/shellcheck/SC2140"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2000.md",
+      "name": "linters/shellcheck/SC2000"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2280.md",
+      "name": "linters/shellcheck/SC2280"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2111.md",
+      "name": "linters/shellcheck/SC2111"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2051.md",
+      "name": "linters/shellcheck/SC2051"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2041.md",
+      "name": "linters/shellcheck/SC2041"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2101.md",
+      "name": "linters/shellcheck/SC2101"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2290.md",
+      "name": "linters/shellcheck/SC2290"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2010.md",
+      "name": "linters/shellcheck/SC2010"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2150.md",
+      "name": "linters/shellcheck/SC2150"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2232.md",
+      "name": "linters/shellcheck/SC2232"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2323.md",
+      "name": "linters/shellcheck/SC2323"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2263.md",
+      "name": "linters/shellcheck/SC2263"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2164.md",
+      "name": "linters/shellcheck/SC2164"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2024.md",
+      "name": "linters/shellcheck/SC2024"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2075.md",
+      "name": "linters/shellcheck/SC2075"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2257.md",
+      "name": "linters/shellcheck/SC2257"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2086.md",
+      "name": "linters/shellcheck/SC2086"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2317.md",
+      "name": "linters/shellcheck/SC2317"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2197.md",
+      "name": "linters/shellcheck/SC2197"
+    },
+    {
+      "category": "linters",
+      "path": "linters/shellcheck/SC2206.md",
+      "name": "linters/shellcheck/SC2206"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/shfmt.md",
+      "name": "formatters/shfmt"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

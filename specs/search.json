@@ -1,0 +1,145 @@
+{
+  "generatedAt": "2026-01-05T15:15:53.990221+00:00",
+  "languages": [
+    {
+      "language": "assembly",
+      "count": 11
+    },
+    {
+      "language": "bash",
+      "count": 529
+    },
+    {
+      "language": "basic",
+      "count": 5
+    },
+    {
+      "language": "batch",
+      "count": 5
+    },
+    {
+      "language": "c",
+      "count": 17
+    },
+    {
+      "language": "clojure",
+      "count": 5
+    },
+    {
+      "language": "cpp",
+      "count": 17
+    },
+    {
+      "language": "csharp",
+      "count": 10
+    },
+    {
+      "language": "css",
+      "count": 148
+    },
+    {
+      "language": "dart",
+      "count": 90
+    },
+    {
+      "language": "dockerfile",
+      "count": 71
+    },
+    {
+      "language": "elixir",
+      "count": 5
+    },
+    {
+      "language": "git",
+      "count": 7
+    },
+    {
+      "language": "go",
+      "count": 472
+    },
+    {
+      "language": "haskell",
+      "count": 5
+    },
+    {
+      "language": "html",
+      "count": 92
+    },
+    {
+      "language": "java",
+      "count": 239
+    },
+    {
+      "language": "javascript",
+      "count": 1393
+    },
+    {
+      "language": "julia",
+      "count": 5
+    },
+    {
+      "language": "kotlin",
+      "count": 10
+    },
+    {
+      "language": "lua",
+      "count": 6
+    },
+    {
+      "language": "markdown",
+      "count": 58
+    },
+    {
+      "language": "ocaml",
+      "count": 5
+    },
+    {
+      "language": "php",
+      "count": 5
+    },
+    {
+      "language": "powershell",
+      "count": 9
+    },
+    {
+      "language": "python",
+      "count": 70
+    },
+    {
+      "language": "r",
+      "count": 5
+    },
+    {
+      "language": "ruby",
+      "count": 5
+    },
+    {
+      "language": "rust",
+      "count": 831
+    },
+    {
+      "language": "scala",
+      "count": 5
+    },
+    {
+      "language": "sql",
+      "count": 16
+    },
+    {
+      "language": "swift",
+      "count": 7
+    },
+    {
+      "language": "typescript",
+      "count": 28
+    },
+    {
+      "language": "yaml",
+      "count": 5
+    },
+    {
+      "language": "zig",
+      "count": 5
+    }
+  ]
+}

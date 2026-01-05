@@ -1,1 +1,3 @@
-# PublicKeyCredential\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential
+# PublicKeyCredential
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential

@@ -1,1 +1,3 @@
-# PointerEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent
+# PointerEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent

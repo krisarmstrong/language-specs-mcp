@@ -1,1 +1,3 @@
-# ShadowRoot\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot
+# ShadowRoot
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot

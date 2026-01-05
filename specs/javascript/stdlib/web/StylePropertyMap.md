@@ -1,1 +1,3 @@
-# StylePropertyMap\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/StylePropertyMap
+# StylePropertyMap
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/StylePropertyMap

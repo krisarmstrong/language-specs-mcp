@@ -1,1 +1,3 @@
-# GPUTexture\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture
+# GPUTexture
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GPUTexture

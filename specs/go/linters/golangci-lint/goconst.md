@@ -1,1 +1,3 @@
-# goconst\n\nSee: https://golangci-lint.run/docs/linters/goconst/
+# goconst
+
+See: https://golangci-lint.run/docs/linters/goconst/

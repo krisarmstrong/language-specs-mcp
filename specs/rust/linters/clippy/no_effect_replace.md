@@ -1,1 +1,3 @@
-# no_effect_replace\n\nSee: https://rust-lang.github.io/rust-clippy/master/#no_effect_replace
+# no_effect_replace
+
+See: https://rust-lang.github.io/rust-clippy/master/#no_effect_replace

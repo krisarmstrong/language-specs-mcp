@@ -1,1 +1,3 @@
-# Headers\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Headers
+# Headers
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Headers

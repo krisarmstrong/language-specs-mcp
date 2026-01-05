@@ -1,1 +1,3 @@
-# script-type\n\nSee: https://html-validate.org/rules/script-type
+# script-type
+
+See: https://html-validate.org/rules/script-type

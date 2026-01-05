@@ -1,1 +1,3 @@
-# func-style\n\nSee: https://eslint.org/docs/latest/rules/func-style
+# func-style
+
+See: https://eslint.org/docs/latest/rules/func-style

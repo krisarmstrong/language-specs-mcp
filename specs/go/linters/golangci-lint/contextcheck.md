@@ -1,1 +1,3 @@
-# contextcheck\n\nSee: https://golangci-lint.run/docs/linters/contextcheck/
+# contextcheck
+
+See: https://golangci-lint.run/docs/linters/contextcheck/

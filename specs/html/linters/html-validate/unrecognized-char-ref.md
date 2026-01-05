@@ -1,1 +1,3 @@
-# unrecognized-char-ref\n\nSee: https://html-validate.org/rules/unrecognized-char-ref
+# unrecognized-char-ref
+
+See: https://html-validate.org/rules/unrecognized-char-ref

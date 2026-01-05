@@ -1,1 +1,3 @@
-# EditContext\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/EditContext
+# EditContext
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/EditContext

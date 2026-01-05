@@ -1,1 +1,3 @@
-# RTCCodecStats\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCCodecStats
+# RTCCodecStats
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCCodecStats

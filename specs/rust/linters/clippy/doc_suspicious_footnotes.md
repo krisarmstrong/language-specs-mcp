@@ -1,1 +1,3 @@
-# doc_suspicious_footnotes\n\nSee: https://rust-lang.github.io/rust-clippy/master/#doc_suspicious_footnotes
+# doc_suspicious_footnotes
+
+See: https://rust-lang.github.io/rust-clippy/master/#doc_suspicious_footnotes

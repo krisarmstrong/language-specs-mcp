@@ -1,1 +1,3 @@
-# XRCubeLayer\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/XRCubeLayer
+# XRCubeLayer
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/XRCubeLayer

@@ -1,1 +1,3 @@
-# SVGLinearGradientElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGLinearGradientElement
+# SVGLinearGradientElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGLinearGradientElement

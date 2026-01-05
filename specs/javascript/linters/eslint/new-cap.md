@@ -1,1 +1,3 @@
-# new-cap\n\nSee: https://eslint.org/docs/latest/rules/new-cap
+# new-cap
+
+See: https://eslint.org/docs/latest/rules/new-cap

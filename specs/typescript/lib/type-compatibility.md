@@ -1,1 +1,3 @@
-# type-compatibility\n\nSee: https://www.typescriptlang.org/docs/handbook/type-compatibility.html
+# type-compatibility
+
+See: https://www.typescriptlang.org/docs/handbook/type-compatibility.html

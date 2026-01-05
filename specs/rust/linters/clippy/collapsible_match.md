@@ -1,1 +1,3 @@
-# collapsible_match\n\nSee: https://rust-lang.github.io/rust-clippy/master/#collapsible_match
+# collapsible_match
+
+See: https://rust-lang.github.io/rust-clippy/master/#collapsible_match

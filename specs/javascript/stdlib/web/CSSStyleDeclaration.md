@@ -1,1 +1,3 @@
-# CSSStyleDeclaration\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration
+# CSSStyleDeclaration
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration

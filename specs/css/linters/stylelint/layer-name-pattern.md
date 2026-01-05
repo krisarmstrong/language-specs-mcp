@@ -1,1 +1,3 @@
-# layer-name-pattern\n\nSee: https://stylelint.io/user-guide/rules/layer-name-pattern
+# layer-name-pattern
+
+See: https://stylelint.io/user-guide/rules/layer-name-pattern

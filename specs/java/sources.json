@@ -1,0 +1,1669 @@
+{
+  "language": "java",
+  "generatedAt": "2026-01-05T15:15:48.841965+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "090c0404151d0a7238a35a25d2b77a1a79d0b70fb067ef733b9948eac062a629",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "5eb680b92f468e70cd86c9487835585b344bd23d44b7444252c69a2a7158046d",
+      "urls": [
+        "https://github.com/google/google-java-format"
+      ]
+    },
+    {
+      "path": "formatters/google-java-format.md",
+      "sha256": "44ae3a6cabc16b2cffb9c6774911167cabb01e438effc4d69b1649d23cd071ce",
+      "urls": [
+        "https://github.com/google/google-java-format"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "69c61dddf3a1d30a03403677dfa08ad69e662de7a9699b2a8ec016c7d9f68654",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/index.html"
+      ]
+    },
+    {
+      "path": "stdlib/collections.md",
+      "sha256": "58c599dbe6b61fea4b7ae21c297202859d2a09bde176c3e8c25b81a2cf862636",
+      "urls": []
+    },
+    {
+      "path": "stdlib/packages/java.naming.javax.naming.ldap.spi.md",
+      "sha256": "aa95102aeb25a5bfb4cd2a096002f50de1b352e07c8861cab8f2322e494086cd",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.naming/javax/naming/ldap/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.imageio.plugins.jpeg.md",
+      "sha256": "ece7c0ada3ae2984fd9b9bf0874fca015428dc55fb8dadeb5e9ee155714048b6",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/imageio/plugins/jpeg/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.scripting.javax.script.md",
+      "sha256": "78065e91e1ab38ef473829fdd417ee9d71d1abe4bd70a805018b3cbcaeb31065",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.scripting/javax/script/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.lang.constant.md",
+      "sha256": "3cbeb15030336441dcb8b7421f8f546b333a5941c504905bb8b1970cbed2b8f9",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/constant/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.sound.sampled.md",
+      "sha256": "1cfbae77d4cd0ab66d1e409af39769d6dc7fa743dbd60148b2367b30241e32a5",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/sound/sampled/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.nio.channels.md",
+      "sha256": "c1d25354ad927c03fa120871353e0ad8d69c2a40f9a72ca666a41f0110fc6f9a",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/channels/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.table.md",
+      "sha256": "564ca72a41733a9c72fa03c0b4b4578132fd9f4388e8c2c10b7eb4974389d5e0",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/table/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.awt.event.md",
+      "sha256": "f317fb42d153ce2b4e06c7cdf0f9d21d4f32d5343d3a6607098fc3d145bd4356",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/event/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.org.xml.sax.ext.md",
+      "sha256": "0e5c35caaf648bc602bfd8ca679b097ec200ea501cbfa2296a1f60b50f6fcf9e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/xml/sax/ext/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.print.attribute.md",
+      "sha256": "4a64ea0ffe3f47029b4f8c1c1a1ea8d9e64656a5ed16e36fffeca7243f6f33e6",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/print/attribute/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.javax.crypto.interfaces.md",
+      "sha256": "f3935f90f930b340f4477df1bc63197dff33c9ac9f9bcb9ed3cc61ecd93eb758",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/crypto/interfaces/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.awt.md",
+      "sha256": "76718d5013962c00260a7552fb28eecdaab9cea37fc6ed56e4bed9713576ecd7",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.sql.rowset.javax.sql.rowset.md",
+      "sha256": "0830a054b232038870225a2f69046240744986dda693fd31fb4082e8d6cfc549",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.sql.rowset/javax/sql/rowset/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.security.spec.md",
+      "sha256": "2df2219b3fbafbf43efa7d0fac89371fad72a08135b865ef60e3004beb87e0bd",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/security/spec/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.rmi.java.rmi.dgc.md",
+      "sha256": "42f824712f10bcd648c4eb4d3f1040698595d2cd46655388857d9f71f306b9f6",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.rmi/java/rmi/dgc/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.keyinfo.md",
+      "sha256": "897e07cd58fa50206befe5a167be84f29d90211e0ae0b6bb745c1e805642d964",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml.crypto/javax/xml/crypto/dsig/keyinfo/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.plaf.md",
+      "sha256": "4ac9c2988e0a54ef9d1534f39d068195ce018c4efa207fa846e41678524d3a23",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/plaf/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.md",
+      "sha256": "4e23258973a01a4232f41edcbf5d1badee79612232a30a1a888332c3de7e708a",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.imageio.metadata.md",
+      "sha256": "045c5e8c2b3dda49277319ddeeed95570001ee6cfb24e7926abc709404804e4d",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/imageio/metadata/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.lang.runtime.md",
+      "sha256": "fb11c3af941e4748bd265dd1161c8cd7f60f2895a3fea6da9390132ce5827c90",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/runtime/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.stream.events.md",
+      "sha256": "8311e035d4f1d218211bc2f2a44fe4c45924ebae9fa6e78c676d226b672d1859",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/stream/events/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.naming.javax.naming.ldap.md",
+      "sha256": "3d595eec5b6dc23a4497613e5863ab9d53862f9cdc7f4dcdd3531c2a319ea6f0",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.naming/javax/naming/ldap/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.security.auth.com.sun.security.auth.module.md",
+      "sha256": "f3dad80f217da20332cde0ebc085a2ac4ca5fb1866b03f83c1bb530d68a51436",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.security.auth/com/sun/security/auth/module/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.org.xml.sax.helpers.md",
+      "sha256": "9b88dc0a375d3c57ef7f0e046e8ac50942681ca47711449e3d7d825a6b4b2c92",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/xml/sax/helpers/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.validation.md",
+      "sha256": "6f838cba6bbd5d9eaff4531823f4d959f1d6159d925f227b93ffd9b59faddb93",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/validation/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.compiler.com.sun.tools.javac.md",
+      "sha256": "330d1456d5c3b5369be6c5a33b469a706c746e7cd989a47994613b72496f4ed8",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.compiler/com/sun/tools/javac/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.javax.security.cert.md",
+      "sha256": "cc49923e3ffe09a6f6636e785e79c313c6939d36d813f65ef13f75fdc4901d55",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/security/cert/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.util.spi.md",
+      "sha256": "31b3166590372bf5adc1ede64c3dbfe5fd95f4ce4b7e8e2cfead6a2531d6e648",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.compiler.com.sun.source.doctree.md",
+      "sha256": "adb0fa86dfdb714ddcbb26d0c1764897ee131c487167d6c3f406c00a3698068e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.compiler/com/sun/source/doctree/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.undo.md",
+      "sha256": "44571b940df5703d47e2c62d470204b99846e4d2758e43bdcd23e63429d84e3c",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/undo/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.attach.com.sun.tools.attach.spi.md",
+      "sha256": "eaf3f3c1d5855c3d42d55a50ce150b9dc5201b91ff3f69642d0955a53a072ea2",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.attach/com/sun/tools/attach/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.security.md",
+      "sha256": "1b69282adc32a5a66550c33c959e422910d4f03d5940dbaaa3fdfc4215e2d7df",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/security/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.instrument.java.lang.instrument.md",
+      "sha256": "5b37b943eccdf04bee034bd487ca351de7f7fce54b53511ef104db9ccebe4cbd",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.instrument/java/lang/instrument/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.util.concurrent.atomic.md",
+      "sha256": "a52764cd1002a25433da8f6cfdfaa872a7a66a41bded6b4b957126a2c7eaae59",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/atomic/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.nio.charset.md",
+      "sha256": "408cf702e07a764d3f0f49ee8400f7bf620f59adf8a91877852838a0683de735",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/charset/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.xml.dom.org.w3c.dom.css.md",
+      "sha256": "8db5d36e4e15ef5c8ebbaf4546b3fb56054cb35be9cb334a6c612a381429f6c1",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.xml.dom/org/w3c/dom/css/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.javax.security.auth.callback.md",
+      "sha256": "fa1cf07947d4ae786d2e75cdbcc6118ce2ce5f5005de2cfc54c5e0944c60f17b",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/security/auth/callback/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.util.md",
+      "sha256": "28e25cafe08eba5c7298a387e8d41c6fe45992351e55acaf96e4fb61243e3d3a",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.net.spi.md",
+      "sha256": "cd9dbb659085c8844e6355b9ccf2f8681e8b0f1bd9dd2cd29d9febf06ebc672e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.plaf.basic.md",
+      "sha256": "f0595b20d673313f3020bfbd92a0e521428ffed004fe1672cbd0b0b789c5d67d",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/plaf/basic/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.prefs.java.util.prefs.md",
+      "sha256": "ab16a2066353df5b79fc2d0fb20cd8b8e893ad8556111dadcc536b07eeb692a0",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.prefs/java/util/prefs/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jfr.jdk.jfr.consumer.md",
+      "sha256": "be603f8e1975fb22edc009297e244352762f950881555b812fa2d9f3e4ec1c32",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jfr/jdk/jfr/consumer/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.awt.color.md",
+      "sha256": "15572888f75b47ad348bcf618852646e37ea2ff807e3c78c6b03154fbec26dac",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/color/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.xml.dom.org.w3c.dom.stylesheets.md",
+      "sha256": "dc741a465631cd3aaad8a8f0e977a31fd95e253cf1632c37692ae28b58643bb3",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.xml.dom/org/w3c/dom/stylesheets/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.org.w3c.dom.ranges.md",
+      "sha256": "b423b9872325bda638e8a679cc83340ce0bff8b66094cdf30ba7809bd8c9cc09",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/ranges/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.nio.file.spi.md",
+      "sha256": "dd229e7fe8030c0ad85979a0b85360405aeeffecb1726571d2bf8fd1f93067fc",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.io.md",
+      "sha256": "220abf7d94c7dc4242fb7bde48e613d33d451b5722a9272a9ae96e841ff5bee4",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.stream.md",
+      "sha256": "6ba4f10e391ee868b8d7a56b6cb762b615866822e276b0117dba217ca94d7501",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/stream/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.compiler.com.sun.source.util.md",
+      "sha256": "7df845955a2d8ce28f04bc2fd996d217ad1ce07cf102d07af5c0a33b780a9c7e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.compiler/com/sun/source/util/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.md",
+      "sha256": "a8e07e964a071dfe32e58b13bf09f6e68aef1044453fa1b4cd8cf10df9ec6e7e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml.crypto/javax/xml/crypto/dsig/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.sql.rowset.javax.sql.rowset.serial.md",
+      "sha256": "237c46fbf87f43e3dd1ccdab75d9f5442c49b208decf95dc9a888f4ed0e18f1a",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.sql.rowset/javax/sql/rowset/serial/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.transform.stream.md",
+      "sha256": "bc02ec79c9ae8f34e53f4b0b394d5aa5b9b61e4a794d231ed4541687f863f093",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/transform/stream/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.text.md",
+      "sha256": "b4463cb73f479810a3ed2e2c3166cf5bc89c2e335add8e8a6d1922b81b9a6652",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/text/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.rmi.java.rmi.registry.md",
+      "sha256": "0090e6b6d863b3205088649dd1a82e0a2dc6eef4b81169f45b6a6582da15dcd7",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.rmi/java/rmi/registry/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.util.zip.md",
+      "sha256": "0182883a1c97d5d0fc08b23aec1e90b1a7036cec1515f549bcc2f4412047d653",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/zip/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.net.http.java.net.http.md",
+      "sha256": "e806dd0b97ae867e5dc4f41c866361da88b32972072b6dc988ecb8a6389cb801",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.net.http/java/net/http/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.naming.javax.naming.md",
+      "sha256": "c4c62e3a3c54d01d4e46eaa112cdcd04b09693d7e8daacedbf7f6575e5ce5709",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.naming/javax/naming/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.time.chrono.md",
+      "sha256": "bccc06180142f7118dbeebcfacdb2abdecd383fe6ba315f35dfed588f84299ba",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/chrono/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.org.w3c.dom.ls.md",
+      "sha256": "bfa1106eb5e90bf78e56105a554acd25006ef35097e15427a89431921c6c30bd",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/ls/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.javax.security.auth.x500.md",
+      "sha256": "0426373b4f4e242d2452df949e56ef3adf14b806cb3d0fb4912b1eb302e60633",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/security/auth/x500/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.security.interfaces.md",
+      "sha256": "4329c6eecbd461b92864c82197b8f190bd1274601864c957f59e9fee48f70c97",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/security/interfaces/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.awt.image.renderable.md",
+      "sha256": "b114d4d9ebf07b9e8e0deaca6fff9d57f91f9eaba95b6ee8a49eb34ce1d2cb92",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/image/renderable/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.nio.charset.spi.md",
+      "sha256": "afac65bae5281dde046324a73654a44ed20b9e3892506c175b160e8d20237cd3",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/charset/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.management.javax.management.md",
+      "sha256": "51f306764fa8fd913b6556be019f89120f03c6b8530bc92165913c939afc2d1b",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.management/javax/management/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.lang.ref.md",
+      "sha256": "437f7429d4ec13722a21edfcf9578cd815bd72cc0192d300d9078bf4c39dde4e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/ref/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.dom.md",
+      "sha256": "fb706b4cbac3c2f230f8a20f44a1cb4ea200c0430b294d55977ef6d20137bcbe",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml.crypto/javax/xml/crypto/dsig/dom/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.imageio.event.md",
+      "sha256": "bf2d1c07d6d15213d14fb9da479ca771904f30baea4494727b0bc6d52d2f42dd",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/imageio/event/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.imageio.plugins.tiff.md",
+      "sha256": "fb6070b6797ec44f82aab156605a0e702143ac18ad0a0ce552c1d0b92d404217",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/imageio/plugins/tiff/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.applet.md",
+      "sha256": "ce6ae6f10f7e1044b27a04f773eddf6310eb5ad1a04e8b3e23ac4704f3579160",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/applet/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.logging.java.util.logging.md",
+      "sha256": "f35d83913cf3e9338bdaeb5ad60ba86ea4a0c69e54fa3c261036259c9b3d3f30",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.logging/java/util/logging/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.util.regex.md",
+      "sha256": "b560d1dc4d9a827b787a87e8a7e56b05df191b7396c2c34aee4e1a11bb72bfee",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/regex/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.border.md",
+      "sha256": "8bb5db566725832f9fde8fd4534a40fc6a743d8d947debe99234a729a60ecff1",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/border/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.imageio.plugins.bmp.md",
+      "sha256": "56e99a63664fed198139613c957595c7d69d4c3ad225b88ea0668fab52f5ebde",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/imageio/plugins/bmp/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.nio.channels.spi.md",
+      "sha256": "a2fa2f247b90550aaaac43cd10fdb94b3fdf20157ffa02f9133cea46b0f3912c",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/channels/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.text.spi.md",
+      "sha256": "d8ce7c3ed81cfa1bd0079dae1b4256f70c95d12234975b4c8fb3f10cc058b505",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/text/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jsobject.netscape.javascript.md",
+      "sha256": "3272c9ed0117193c309fb4f4eb636b56993201d549958c15ba9047bcc6e8cf22",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jsobject/netscape/javascript/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.awt.font.md",
+      "sha256": "8be80a3631920cb512f2c4bee26ff4b73010ae187e15fb97dc3272820e5f9725",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/font/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.javax.net.ssl.md",
+      "sha256": "bc4530e15598f2291067f8900fdbb77efb55ad78c924d3140e08c3294aa17023",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/net/ssl/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.javax.crypto.md",
+      "sha256": "259ed2a9881a82910bc651dd6e61761c4f41b11e3ae2b2badfe57f78ecd73a79",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/crypto/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.compiler.javax.lang.model.util.md",
+      "sha256": "ad110ba662a45af3d76411ebec57681c812a589c158a87b82ddd6f07d07bf625",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.compiler/javax/lang/model/util/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.javax.security.auth.login.md",
+      "sha256": "a3708e15a877656fe76bfd8a1f0a49c0489d71e45f596ef05731767db712ad68",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/security/auth/login/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.attach.com.sun.tools.attach.md",
+      "sha256": "001d404428ac5b92d1387d95bb9667087d2df081fdd0afba9192301954d6130f",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.attach/com/sun/tools/attach/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.time.md",
+      "sha256": "6b146d80e800d607475da18781b8c78c608e5670cf5f366f19294782c9d31e04",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.lang.md",
+      "sha256": "e99bb68e7f65086b8e502dd0675857bac68fddc026ded10cc0be810d94398622",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.print.event.md",
+      "sha256": "ed9e5e557b5e2314432083f57426b5ef1100591842916c5b1f2b0a0817489b5f",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/print/event/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.util.function.md",
+      "sha256": "858c41c8e56835b2055f797ef69ccad69a8d794066dbf15b4a0e446e7400d087",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.plaf.metal.md",
+      "sha256": "74fe48f68e4905cad55c8378dda1b21661ba6e5295b5bf38d6bc5d7fc84d9f69",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/plaf/metal/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.awt.dnd.md",
+      "sha256": "dc1f2fb735786e0ae4a20948661ebe491ee9a9e50238b832195a9e26cc1b1a84",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/dnd/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.util.random.md",
+      "sha256": "905b81c40d138e2cdc9a31ca8c95a971fd76273d427f26745d18652c89a31b6d",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/random/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.md",
+      "sha256": "b3da73ae91044dfcea48a70fa5a3187bc9d75e29755367116ddccf81fb47571a",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.dynalink/jdk/dynalink/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.util.stream.md",
+      "sha256": "7a1152173d20034ab98f952414ede9603987e4c350c32d9298386025b516d4f5",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.imageio.spi.md",
+      "sha256": "3284b3a843695873bdc7f2af98dab49feea4c5ab80f659ea886ba28f33ddc5e8",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/imageio/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.colorchooser.md",
+      "sha256": "4364291d881f9d96a0b5ff2ede4ca1a2f4633a5f4378d22834cdc49b52a7adc4",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/colorchooser/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.linker.md",
+      "sha256": "6d6f74d6fc19620a1bd51d8bbc7c5fce409c39dff69d7f78e61dfe120a5d6378",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.dynalink/jdk/dynalink/linker/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jartool.jdk.security.jarsigner.md",
+      "sha256": "c47d528f16838ee44d2ebbe9e33f4dea16de85b9e079ce30c69dd1c84da85093",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jartool/jdk/security/jarsigner/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.compiler.com.sun.source.tree.md",
+      "sha256": "12339236387edc323a8f54e0cbdbe4bc7761cbd25cc3ce76a3a08205f2b360e2",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.compiler/com/sun/source/tree/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.compiler.javax.tools.md",
+      "sha256": "9e487b2fb7a38a40ac67c34081a6bdf2c9f67cc1c92e61c5f506d1e0419e0972",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.compiler/javax/tools/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.compiler.javax.lang.model.type.md",
+      "sha256": "e3f51a34ea85f04fd12826e30f6a79b573fc645a21ed93060826d546b0189df8",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.compiler/javax/lang/model/type/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.rmi.javax.rmi.ssl.md",
+      "sha256": "122643ed177ea95971801b5cb300476afa66dbbd8f6523569e9e8f8270098943",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.rmi/javax/rmi/ssl/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.sctp.com.sun.nio.sctp.md",
+      "sha256": "23d6965863e43071368073fc89bc040d6566cf3b8e9cfe5f28d315e3e3d7b33e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.sctp/com/sun/nio/sctp/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jdi.com.sun.jdi.md",
+      "sha256": "21c203ccdf62d081b2dce47121fc434ada28930b1a74d20cba8eeed9fa16deed",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jdi/com/sun/jdi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.naming.javax.naming.event.md",
+      "sha256": "f899150c9819fc50283990b8929328c6153267d6595f185853d742622cb8677f",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.naming/javax/naming/event/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jconsole.com.sun.tools.jconsole.md",
+      "sha256": "16289d696c544a16dad385ac05e42bc2acad251319cedff262e2ac6ebb9991b0",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jconsole/com/sun/tools/jconsole/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.javax.net.md",
+      "sha256": "e7f220c76706ef41760abcd7053b2d11185a2f6709ba73b1e8cfa17f4455aa45",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/net/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.awt.im.spi.md",
+      "sha256": "41fff9f5b8a4a0185f227acda3958609c498a8b8e97e26aa5c80e808502b037d",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/im/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.awt.im.md",
+      "sha256": "3a00b5e134b909044b8e0511874d1814618174e5ad08a919b8cd6a41d4ba260d",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/im/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.transform.sax.md",
+      "sha256": "6988c260513a62cc0fcec5054b55e8245ac10f25052ae763c9381669af1fb9a9",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/transform/sax/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.sound.sampled.spi.md",
+      "sha256": "5b34fb19800c4fe0405d3eb741b422c0481b14dd542fbe6276672f56ad7101c1",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/sound/sampled/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.md",
+      "sha256": "c1b2c765a6f410f3939737914ed7237d1f0b071f72b42402a8cb554eb811f5a0",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.management.jfr.jdk.management.jfr.md",
+      "sha256": "d1c9f784f6f43c4719e1e8a78487636988d369a2e7ad826c8f66315c0ea4e85a",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.management.jfr/jdk/management/jfr/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.sql.java.sql.md",
+      "sha256": "fabbe37d8ee5a7b84e257f31b56f9d698bfb687fdba5a295776d9e3f11a957e8",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/java/sql/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.awt.geom.md",
+      "sha256": "dae389efb9f4f7c08a8158da43d17ad841d2876b228b690930db73ccb153aa4a",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/geom/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.org.w3c.dom.bootstrap.md",
+      "sha256": "537807ef08204da2d0ff79e2bf17fb243207d9e4391d5ac80396935a87ba1012",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/bootstrap/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.tree.md",
+      "sha256": "c8d5beb23c600898a25cdf021a1062e63af0fb7d4d7c5eca0d424dac04778c85",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/tree/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.parsers.md",
+      "sha256": "769482e18484411b36371722a866844d81b3359fb9d418004968550464b13531",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/parsers/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.print.attribute.standard.md",
+      "sha256": "67c598eb101ff7e9828450c0fd3deea4c8ef578f8cc1e20f8928cc83962afaf4",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/print/attribute/standard/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.sound.midi.spi.md",
+      "sha256": "e484d8ca7159efe084de34b0e368bb437000c9dd8cc7b01223ea7b33b09493fd",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/sound/midi/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.javax.security.auth.md",
+      "sha256": "6705db02278c0fb023f5a56b7f6b30832cce2472a19b0035402fa71d1db5d196",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/security/auth/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.nio.mapmode.jdk.nio.mapmode.md",
+      "sha256": "73bef74f9bbb346326636bc011ec352bce5876e5f1fbd65646891798aa4d1b24",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.nio.mapmode/jdk/nio/mapmode/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jdi.com.sun.jdi.connect.spi.md",
+      "sha256": "4737372db87b57b1bc535f477d475d1a7b2969c2374ca6979c83cf87f71077c3",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jdi/com/sun/jdi/connect/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.md",
+      "sha256": "691a0b5693d204cf6e0973ab7464b20b003da234efbcd1ae837cdc1b7cce2d3e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml.crypto/javax/xml/crypto/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.beans.md",
+      "sha256": "5fcc6f86a95d46039b9321697d90f5104ce20c7dd83047ef2032c40e35373056",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/beans/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.lang.foreign.md",
+      "sha256": "4530d998a8c7821d3faf60b44ee9b48d5e876404a009588354201298a6be83c6",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/foreign/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.text.html.parser.md",
+      "sha256": "5aa79e3febe9fe08a0e53d17855f8adebc030d22e6a55c920b0cb0a41e406a20",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/text/html/parser/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/index.md",
+      "sha256": "8265970706d0c4e1adeff19a658f4008071e052625f5f125872bd228e04aae73",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/allpackages-index.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.beans.beancontext.md",
+      "sha256": "8b88187e25077c4526fb28ea8ed12ca63fcbf5a2d920c92261dd0bfaf4f40745",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/beans/beancontext/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.datatype.md",
+      "sha256": "847a93fb4ef2d01e7da8ea60a8a45dd437fbb4fcebb372fe1ecc86245e057f4c",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/datatype/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.lang.reflect.md",
+      "sha256": "f6207d97293c362adf9cbaf8e6c1ca795e26fa1e6e5d1ed063713ae24f5b1474",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/reflect/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.transform.md",
+      "sha256": "d28940c623dbb8d26dea5f4e581ac8dd6f7fafcc9aa6bb6c0e64360564a67bea",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/transform/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.xpath.md",
+      "sha256": "33c8a92b885f9ea33101a4f58316fad1bc24b64724548fe275943b29932c19c1",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/xpath/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.security.jgss.javax.security.auth.kerberos.md",
+      "sha256": "2e25298ad1bd38cdf2455f9ed387578e858d9fbcff4ff3c6090e78202cec587b",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.security.jgss/javax/security/auth/kerberos/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.plaf.synth.md",
+      "sha256": "a9fb3e2340da0e8dbbcfea468d39419c8e77e3b233f20d41dc4beb933a7b380c",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/plaf/synth/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.text.rtf.md",
+      "sha256": "c031a0adbb7c21584d6c835e2d40e4dbfc7898e2b9faaacd079827d8b40f0cce",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/text/rtf/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.security.auth.com.sun.security.auth.login.md",
+      "sha256": "1472c519df5971d1afab04bc3d67a9355c7d99956f0c2644f2beaf73e21320ff",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.security.auth/com/sun/security/auth/login/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.filechooser.md",
+      "sha256": "1f959fcf312eba18c8f1533ed32bffd571efac17eeb17671488f4df9eb6fdc8a",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/filechooser/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.naming.javax.naming.spi.md",
+      "sha256": "f8f032a8d0f107cbf6d773ff8bf16aec49ff653778cc3cf2d519d845b1407b96",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.naming/javax/naming/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.sql.javax.sql.md",
+      "sha256": "e5beb1e61c22fcaeb3c445ed5789e13ebbbf528638005c6de283121f5a33f778",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.sql/javax/sql/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.net.md",
+      "sha256": "7fadf6836224541f34ae082fed9bc2f2e621a41a0d5d38173d71540a2580da0c",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.math.md",
+      "sha256": "eef8b23190bd2ed812a9674bdb7c46287af81711545dffb93dec22e1ae6cf61d",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.support.md",
+      "sha256": "3f90c5c022b600851de6d7a3a7cfda124803197d0260890e59a724e1216befec",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.dynalink/jdk/dynalink/support/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.management.javax.management.openmbean.md",
+      "sha256": "8b2466b2767cfe071a4be87dfafeb09b8e751273e88ebc107758415fdc8be8b7",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.management/javax/management/openmbean/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jshell.jdk.jshell.execution.md",
+      "sha256": "1237da04b49091bb7c3196c94bbb3c4b0e1c9f5477b4c1514398189702f9edf4",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jshell/jdk/jshell/execution/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jshell.jdk.jshell.tool.md",
+      "sha256": "d2df588145f9db0e107c751a8d002b5f358958fc13b9624aa7f0c85be20c6841",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jshell/jdk/jshell/tool/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.awt.print.md",
+      "sha256": "5a0373a6742cea02004fc33a0e67a1e53d5935cb4ad09f36b0b1b074860b7657",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/print/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.management.rmi.javax.management.remote.rmi.md",
+      "sha256": "82d8ad4fd9b8743f913eea1ced3cc7d1cddc7a0a61ecd22bb3a54d9e136e6f5c",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.management.rmi/javax/management/remote/rmi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.nio.file.attribute.md",
+      "sha256": "3e172df33ae8eff5312ec64d3c93c1d9077477b8bbbf32e4d36eda00ae669057",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/attribute/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.nio.md",
+      "sha256": "aec342a32078655c6d022dd8669a89fd827421a578a53b2dc07a838557d49291",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.compiler.javax.lang.model.element.md",
+      "sha256": "9f237d4f4bf1f4184dbcab10eebe1d715510feb743abdf6736d343fc17360fdd",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.compiler/javax/lang/model/element/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.org.w3c.dom.md",
+      "sha256": "209c5d9287bd87b18e32021840553bbf640ed9f4f1cbaa3a7b0fcb970de01582",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.imageio.stream.md",
+      "sha256": "b0c1f9107b1f1489221134ac768a29342c07e1276cb1c41c85545935903b7e57",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/imageio/stream/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.imageio.md",
+      "sha256": "2b7ef9ade44de7e875f37c92d0abe7bac9a7dd2ea8db9194d0f7498092833a6e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/imageio/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.org.w3c.dom.views.md",
+      "sha256": "fd0631224c82eaaebc31c70383d2cc8ab3fc7cf1797f65ab5b9955e392c93839",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/views/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.time.format.md",
+      "sha256": "67fab9fedaf3387f72c10b82321a8197f386b67d3435aa1cbc5c3b75f7db4dc6",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/format/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.util.concurrent.locks.md",
+      "sha256": "c7b858efb1645b013b3302684310a5249ec4e3e0c9291c013f80484b793e8cd8",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/locks/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jdi.com.sun.jdi.connect.md",
+      "sha256": "1783e247a7f1179af34c1e03f2092643aa26c0173b551244a392ef875a5a93f5",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jdi/com/sun/jdi/connect/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jshell.jdk.jshell.md",
+      "sha256": "a767cff34418087730752670e4e11035c1555749e7cbb2df795af0154824e8e1",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jshell/jdk/jshell/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.datatransfer.java.awt.datatransfer.md",
+      "sha256": "5aafb3e9295a679c587526d9adeabfd2bd9d8388310e3a5bcd7e1a4743ed464d",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.datatransfer/java/awt/datatransfer/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.rmi.java.rmi.md",
+      "sha256": "6443182d11e719b48203c56e6c65d6f7f1e0b32b1b6b579316c913012c909565",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.rmi/java/rmi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.management.javax.management.monitor.md",
+      "sha256": "a19bb590d284efbd49c085c39143c43b8fc69450c23973d62c70a1630b8f3110",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.management/javax/management/monitor/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.print.md",
+      "sha256": "f7e643ac163ce7cb4edd4251be3ded2c7afb743e5d5c9ef17ee0378d68db4b26",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/print/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.linker.support.md",
+      "sha256": "e17ed954f5e699811d41103ac6abb361b2fe1ca8e30e6708226ff039682f98bf",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.dynalink/jdk/dynalink/linker/support/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.xml.dom.org.w3c.dom.xpath.md",
+      "sha256": "f8a09764f63b514b0cbfa4faf4ce63e37cee108a3b4dda998fffa44b62515166",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.xml.dom/org/w3c/dom/xpath/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.smartcardio.javax.smartcardio.md",
+      "sha256": "ec7eac41fd0a734b3cdc3e713f9c983f43d6eb6484909475c7342dcb7307c14d",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.smartcardio/javax/smartcardio/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.accessibility.com.sun.java.accessibility.util.md",
+      "sha256": "9801e6dd526445a5319854e35fbf0778e8c0118328d7941790d5f810adc93719",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.accessibility/com/sun/java/accessibility/util/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.text.md",
+      "sha256": "38342f5b4f2292781e22a13bcc9100c64ab3c782be6badba9d5ad5d1d8d08e98",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/text/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.accessibility.md",
+      "sha256": "ceeff2357fb77136f17a1efd23a78ed0b6b6c8c29b78209647f8bb76689f8cac",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/accessibility/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jfr.jdk.jfr.md",
+      "sha256": "ede1bf3cff5a007186994f4a6e095886de40df6dd2cc9860bff98d0dfa231357",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jfr/jdk/jfr/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.compiler.javax.annotation.processing.md",
+      "sha256": "f4c73a0545ca1bf3deaaf25c16148e42d31f09f0c60e39b188aeb6ff5b6caec2",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.compiler/javax/annotation/processing/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.org.xml.sax.md",
+      "sha256": "ec4f9734350ecbb500b06f0d9a1175d179ac405f877dededdcff554a9348b919",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/xml/sax/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.org.w3c.dom.traversal.md",
+      "sha256": "e9b7a531088bd85834d99894add4fd3d75175e659c523690e0a41a5ec42dda43",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/traversal/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.naming.javax.naming.directory.md",
+      "sha256": "800cc6c20d5d857d2d8171dce14ac770e5be1b4b264c74a4cb7602083e1bf9eb",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.naming/javax/naming/directory/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.security.auth.com.sun.security.auth.callback.md",
+      "sha256": "29a07b3cbc8cdaa96e98e122ac3aad9a66d5c180928efeb38d88c8f86ffeb50e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.security.auth/com/sun/security/auth/callback/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.lang.module.md",
+      "sha256": "0cac84730c9cc958250c7cbd65f6bbae1d2afffa9993258e5fe40dd6683cba3d",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/module/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.lang.invoke.md",
+      "sha256": "aa76c6fbc61f47fc6e8fc7fbde7202e8d55d24f7d985de493c5a4f6c53c87213",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/invoke/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dom.md",
+      "sha256": "940c6b515e1f94fab2f2dfa0e01bd26c00ebe3d07124c5792c818fa3017d5601",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml.crypto/javax/xml/crypto/dom/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.management.com.sun.management.md",
+      "sha256": "b4b51dea902909fe1a1e0a04b8b6c0e05bfeb8ba5e3b5dac1269b36deae4bfcf",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.management/com/sun/management/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.rmi.java.rmi.server.md",
+      "sha256": "a6bae6a3084a12c534a5099b0eb668a52a56e3ad9211b40384c6575fe47ac908",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.rmi/java/rmi/server/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.javax.security.auth.spi.md",
+      "sha256": "2d5091097d082817e605bc8f02471a1a42452ae60c0581bb94c399f9e0716497",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/security/auth/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.lang.annotation.md",
+      "sha256": "43340d9c4165c0e386ece7023bf996259752df15df1e5966a9814dc06353d62a",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/annotation/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.spec.md",
+      "sha256": "341856324669758c93672201d337fc5caaeb255ee440805b701ba3f5e8e63cf7",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml.crypto/javax/xml/crypto/dsig/spec/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.event.md",
+      "sha256": "9650024a70719cbee764b75c9abb9444b2919a78d12bd5fb93361e9b678c8a48",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/event/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.beans.md",
+      "sha256": "3c9b97fc28ae27e22189dc314a6db0eae078c29a765af44076736250dca862cb",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.dynalink/jdk/dynalink/beans/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.javadoc.jdk.javadoc.doclet.md",
+      "sha256": "fc459860107a078d7029f6ca2d4db7320c9d1433f4e5a166bce21902b0771d2c",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.javadoc/jdk/javadoc/doclet/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.time.temporal.md",
+      "sha256": "b981b112c3ae6d855a88d8f4ecdbe06f6f6ed71c13694e167607ad92c27f3901",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/temporal/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.management.javax.management.relation.md",
+      "sha256": "eca4749d2b9534683483493f66c19ef09cf3719f6275341196c07dabdd188e65",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.management/javax/management/relation/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.namespace.md",
+      "sha256": "c09588ad3db0e8e25d317a0ab9fbeb120216653d1a358461e2e8dc71408bd7ff",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/namespace/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.plaf.nimbus.md",
+      "sha256": "396e1c67f93c6809677f79b34f603244e436f6afdf53a48b0b8ff9dcab58fdd0",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/plaf/nimbus/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.transform.stax.md",
+      "sha256": "eb97a01bdf544cf1dea77c2860fd73630cf74583e9d6fbe1981928b810c33cc2",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/transform/stax/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.transaction.xa.javax.transaction.xa.md",
+      "sha256": "e23ca0b6e015280eb91737552ac9d78d097fcc2229ac90658ad3a3286c25a95e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.transaction.xa/javax/transaction/xa/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jdi.com.sun.jdi.event.md",
+      "sha256": "69945030d475031708ec4ec6c0d0ae3a152b207c5f0bdb0dd5732b4040606773",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jdi/com/sun/jdi/event/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.net.jdk.net.md",
+      "sha256": "3e8f7f7bd14e0d62d295e7342790256b8646739ea28eb515116ae5e45a2f86b4",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.net/jdk/net/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.management.javax.management.remote.md",
+      "sha256": "67dc4c555231850e0017ca732e586047216f1353b6dbc892f8363b0c19c8648d",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.management/javax/management/remote/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.stream.util.md",
+      "sha256": "dcf4e45f48632e1a36158267b01714202db4a05933da7f5d13858c960b14e0ee",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/stream/util/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.nio.file.md",
+      "sha256": "9ada786ca16b0a4f9a1f922bf3b29259c7b88ce4c560c16275599f4e99aff6c5",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.security.jgss.com.sun.security.jgss.md",
+      "sha256": "b25b8079308d605932b7ca246c2c17e8643a8b3b6d6b5abc2227bfc2f65df79b",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.security.jgss/com/sun/security/jgss/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.xml.dom.org.w3c.dom.html.md",
+      "sha256": "9778024fa3ca48bf596182a2cd65107c59cace16884f18ab577b8560764233cd",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.xml.dom/org/w3c/dom/html/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.management.javax.management.modelmbean.md",
+      "sha256": "880df22c9f72d473946fcff1fe3ed83637bdea795e26906780e2e7a571162623",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.management/javax/management/modelmbean/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jdi.com.sun.jdi.request.md",
+      "sha256": "3f05a12fb670d5cef1cf55432f4e2f9bd7da12a77517ccbff6d29e21aea4fe0b",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jdi/com/sun/jdi/request/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.util.concurrent.md",
+      "sha256": "beac0e539ea6ffcb45c99468ed1f3e50d5ca9ceacd7f3fd11d89553f2b7ebe5a",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.security.auth.com.sun.security.auth.md",
+      "sha256": "274fc3bb85f07893c843ce23e48120933c20b8f7c074c0d4842fa3ef7b306c1a",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.security.auth/com/sun/security/auth/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.security.cert.md",
+      "sha256": "6a438206dcd27807e17a23f856f6d70cc721c1d12d2245c241d1c51aa8a57878",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/security/cert/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.httpserver.com.sun.net.httpserver.md",
+      "sha256": "de287b82304b3d89274f0a5c5bcf12d6f9b9b610baf9824334c82503dba67ab2",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.httpserver/com/sun/net/httpserver/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.catalog.md",
+      "sha256": "d7d1323c7dc16863526e2102089526e8f24991363177f000fdc50119c126def1",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/catalog/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.javax.crypto.spec.md",
+      "sha256": "8018d7ced513456d5d8bdb83ed1fa693fcd5d658816ce86d99a07dea6db1516f",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/javax/crypto/spec/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.javax.xml.transform.dom.md",
+      "sha256": "eacbe03ee61493310d669cb18e513d973811f007c93c8fb1e92b6b4637178f24",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/transform/dom/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.xml.org.w3c.dom.events.md",
+      "sha256": "9a2786d3107c65f4626f7b9ec8c455e39029bd143524cb364c4c576fa6f299a0",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/w3c/dom/events/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.incubator.vector.jdk.incubator.vector.md",
+      "sha256": "19e67fe60db195c643c966b0142140fba81618e6a8571b992239417a1a6bd7aa",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.incubator.vector/jdk/incubator/vector/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.util.jar.md",
+      "sha256": "0fdabd60888dbbee8365cf5f98b54d7fdda30ca581c7eb9a1cb9c2b45b7921bc",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/jar/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.plaf.multi.md",
+      "sha256": "c1da4c3154a5544744a73659d3e03e841c0d243242b7766801c7987aacf6e7ee",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/plaf/multi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.security.sasl.javax.security.sasl.md",
+      "sha256": "3ae56f2a64df5c5063ad306a50f43280a8eddc427142f8d4513777aeeb879d3f",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.security.sasl/javax/security/sasl/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.base.java.time.zone.md",
+      "sha256": "f91610ec6751811538291f0b3ed1b98db32b07fd981c87682626b172b7054f43",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/zone/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.management.javax.management.loading.md",
+      "sha256": "bdb1968adcb44f6d714ae7ecd15c956366dcafe1e6c0c6380484f21be0a6347e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.management/javax/management/loading/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.compiler.javax.lang.model.md",
+      "sha256": "038b8d7816a5a078d5ce77809350f4870a5838418569894d93a209803de5982e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.compiler/javax/lang/model/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.awt.image.md",
+      "sha256": "752696eca29cc4f0a7f640909839fa5730af213a8b5dd52933fe85bd9bdc97e0",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/image/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.management.javax.management.timer.md",
+      "sha256": "02795058bf0abe59aadc0c3eb57b0b36fba7f1f512e483c1ed10d9494383b2fb",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.management/javax/management/timer/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.sql.rowset.javax.sql.rowset.spi.md",
+      "sha256": "645d1b02858c15245176a37129014e1b063a499d58c8ef97a9d940ebb3dce733",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.sql.rowset/javax/sql/rowset/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.jshell.jdk.jshell.spi.md",
+      "sha256": "3ad7827e13e594fe39ff7168d9d38df3e31f0b5f37f85f029f6fc1ea0562222e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.jshell/jdk/jshell/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.httpserver.com.sun.net.httpserver.spi.md",
+      "sha256": "504898ebcf593d28ce1f47438dd9ae562a2c768fa292683c6629b4c49db2d01e",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.httpserver/com/sun/net/httpserver/spi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.java.awt.desktop.md",
+      "sha256": "cd33899ae7682569318bbb495a962464e878b664c8b58cd2e0e10f06e73ff0ff",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/desktop/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.sound.midi.md",
+      "sha256": "b69ca75a723a0180a74e716fc4a5028e039df74c5d346843aee917a70d2a019a",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/sound/midi/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.management.java.lang.management.md",
+      "sha256": "343ff783abaa7df0fb4b8eaadf32402b97a0631a891159b62cad95c60729a9c4",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.management/java/lang/management/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.security.jgss.org.ietf.jgss.md",
+      "sha256": "dbb34f8eea46f5f0fcac4495810f7d21ff58b47c260e6aa831585f9006ff4f1f",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.security.jgss/org/ietf/jgss/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/jdk.net.jdk.nio.md",
+      "sha256": "777e8b7a8b4262fb6f7c684b84f7a1268ec1c366b53eb60719bcfb2e846655f6",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/jdk.net/jdk/nio/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/packages/java.desktop.javax.swing.text.html.md",
+      "sha256": "325e5784c035f1668b737a6211acb904f51f20724d1e69b9760d22a7c0d195d8",
+      "urls": [
+        "https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/javax/swing/text/html/package-summary.html"
+      ]
+    },
+    {
+      "path": "stdlib/concurrency.md",
+      "sha256": "7fb3e8073a0778060c4b5b9d9c88a6ed27088e13a87005519258035755473a4d",
+      "urls": []
+    },
+    {
+      "path": "stdlib/io.md",
+      "sha256": "faa4d1507f2d200f2e2ebc36adb0d87de312a175e49f82c47e687b013f8229d6",
+      "urls": []
+    },
+    {
+      "path": "spec.md",
+      "sha256": "9dc8271518a86ae64bca24d988f59584c0b5f5f2e5b9e6733b4d887f12bf494c",
+      "urls": [
+        "https://docs.oracle.com/javase/specs/jls/se21/html/jls-1.html"
+      ]
+    },
+    {
+      "path": "linters/error-prone/overview.md",
+      "sha256": "91b258badee5c28a1b1c759111c9f266050f895dbe2d3b381e6863a625f62779",
+      "urls": [
+        "https://errorprone.info/bugpatterns"
+      ]
+    },
+    {
+      "path": "linters/error-prone/DoNotCall.md",
+      "sha256": "63fd24f02fa2eda8ed38fe2305a17e1181df51b0235d325217a07b0ff51edf1f",
+      "urls": [
+        "https://errorprone.info/bugpattern/DoNotCall"
+      ]
+    },
+    {
+      "path": "linters/checkstyle/overview.md",
+      "sha256": "a3e6a7e6344bcef0859e46942f365fb6918b5698dc893b0170336e9234d6a5bc",
+      "urls": [
+        "https://checkstyle.sourceforge.io/checks.html"
+      ]
+    },
+    {
+      "path": "linters/checkstyle/rules.md",
+      "sha256": "1ff6123443316085c5b0302a3f04e2e22b126b0d6783df1190612318f5e3d423",
+      "urls": []
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "f9d4e207c283ef5d83d9e4385e8e1da7e3f5462984fae23e56e54b5d5483c5f6",
+      "urls": [
+        "http://localhost:9000"
+      ]
+    },
+    {
+      "path": "linters/spotbugs/overview.md",
+      "sha256": "9c59cdbbacf91a947d2139460b2f57f38e75cf3f57ca8d19c5e740190f86d651",
+      "urls": [
+        "https://spotbugs.readthedocs.io/en/stable/bugDescriptions.html"
+      ]
+    },
+    {
+      "path": "linters/pmd/overview.md",
+      "sha256": "d70e91587fc465392e9b23264beeb3d37ad1e2abec89551b05953b3da53b574a",
+      "urls": [
+        "https://docs.pmd-code.org/latest/pmd_rules_java.html"
+      ]
+    }
+  ]
+}

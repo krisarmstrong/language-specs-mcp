@@ -1,1 +1,3 @@
-# HTMLParagraphElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLParagraphElement
+# HTMLParagraphElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLParagraphElement

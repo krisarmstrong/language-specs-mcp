@@ -1,1 +1,3 @@
-# VideoFrame\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame
+# VideoFrame
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/VideoFrame

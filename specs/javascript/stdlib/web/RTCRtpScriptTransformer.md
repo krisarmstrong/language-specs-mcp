@@ -1,1 +1,3 @@
-# RTCRtpScriptTransformer\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer
+# RTCRtpScriptTransformer
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpScriptTransformer

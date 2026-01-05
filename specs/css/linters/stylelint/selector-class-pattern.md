@@ -1,1 +1,3 @@
-# selector-class-pattern\n\nSee: https://stylelint.io/user-guide/rules/selector-class-pattern
+# selector-class-pattern
+
+See: https://stylelint.io/user-guide/rules/selector-class-pattern

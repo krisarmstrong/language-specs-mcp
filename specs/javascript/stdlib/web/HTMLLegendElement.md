@@ -1,1 +1,3 @@
-# HTMLLegendElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLLegendElement
+# HTMLLegendElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLLegendElement

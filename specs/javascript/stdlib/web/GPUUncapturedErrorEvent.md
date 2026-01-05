@@ -1,1 +1,3 @@
-# GPUUncapturedErrorEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GPUUncapturedErrorEvent
+# GPUUncapturedErrorEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GPUUncapturedErrorEvent

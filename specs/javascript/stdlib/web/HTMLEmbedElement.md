@@ -1,1 +1,3 @@
-# HTMLEmbedElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLEmbedElement
+# HTMLEmbedElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLEmbedElement

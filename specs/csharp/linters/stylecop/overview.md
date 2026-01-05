@@ -1,3 +1,9 @@
+# stylecop-analyzers Version
+Version: unknown
+
+Source: https://github.com/DotNetAnalyzers/StyleCopAnalyzers
+
+
 StyleCop.Analyzers provides warnings that indicate style and consistency rule violations in C# code. The warnings are organized into rule areas such as documentation, layout, naming, ordering, readability, spacing, and so forth. Each warning signifies a violation of a style or consistency rule. This section provides an explanation of each of the default StyleCop.Analyzers rules. 
 
 ### Rule areas

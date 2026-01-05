@@ -1,1 +1,3 @@
-# InputEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/InputEvent
+# InputEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/InputEvent

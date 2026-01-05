@@ -1,1 +1,3 @@
-# at-rule-prelude-no-invalid\n\nSee: https://stylelint.io/user-guide/rules/at-rule-prelude-no-invalid
+# at-rule-prelude-no-invalid
+
+See: https://stylelint.io/user-guide/rules/at-rule-prelude-no-invalid

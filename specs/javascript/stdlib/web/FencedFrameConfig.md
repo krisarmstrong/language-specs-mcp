@@ -1,1 +1,3 @@
-# FencedFrameConfig\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/FencedFrameConfig
+# FencedFrameConfig
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/FencedFrameConfig

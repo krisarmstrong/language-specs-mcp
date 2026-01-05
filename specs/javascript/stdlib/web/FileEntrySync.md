@@ -1,1 +1,3 @@
-# FileEntrySync\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/FileEntrySync
+# FileEntrySync
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/FileEntrySync

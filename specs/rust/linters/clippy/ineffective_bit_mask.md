@@ -1,1 +1,3 @@
-# ineffective_bit_mask\n\nSee: https://rust-lang.github.io/rust-clippy/master/#ineffective_bit_mask
+# ineffective_bit_mask
+
+See: https://rust-lang.github.io/rust-clippy/master/#ineffective_bit_mask

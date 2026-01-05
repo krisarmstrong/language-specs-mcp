@@ -1,1 +1,3 @@
-# VirtualKeyboard\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/VirtualKeyboard
+# VirtualKeyboard
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/VirtualKeyboard

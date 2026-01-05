@@ -1,1 +1,3 @@
-# no-unknown-custom-properties\n\nSee: https://stylelint.io/user-guide/rules/no-unknown-custom-properties
+# no-unknown-custom-properties
+
+See: https://stylelint.io/user-guide/rules/no-unknown-custom-properties

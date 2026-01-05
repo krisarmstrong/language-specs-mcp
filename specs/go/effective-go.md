@@ -1,1 +1,3 @@
-# Effective Go\n\nSee: https://go.dev/doc/effective_go
+# Effective Go
+
+See: https://go.dev/doc/effective_go

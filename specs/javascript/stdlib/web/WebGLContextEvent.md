@@ -1,1 +1,3 @@
-# WebGLContextEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/WebGLContextEvent
+# WebGLContextEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/WebGLContextEvent

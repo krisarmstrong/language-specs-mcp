@@ -1,1 +1,3 @@
-# attr-delimiter\n\nSee: https://html-validate.org/rules/attr-delimiter
+# attr-delimiter
+
+See: https://html-validate.org/rules/attr-delimiter

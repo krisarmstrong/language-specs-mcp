@@ -1,1 +1,3 @@
-# IDBDatabase\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase
+# IDBDatabase
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase

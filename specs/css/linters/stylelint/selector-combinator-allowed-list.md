@@ -1,1 +1,3 @@
-# selector-combinator-allowed-list\n\nSee: https://stylelint.io/user-guide/rules/selector-combinator-allowed-list
+# selector-combinator-allowed-list
+
+See: https://stylelint.io/user-guide/rules/selector-combinator-allowed-list

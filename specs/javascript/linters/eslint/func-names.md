@@ -1,1 +1,3 @@
-# func-names\n\nSee: https://eslint.org/docs/latest/rules/func-names
+# func-names
+
+See: https://eslint.org/docs/latest/rules/func-names

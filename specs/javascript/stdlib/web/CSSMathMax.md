@@ -1,1 +1,3 @@
-# CSSMathMax\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSMathMax
+# CSSMathMax
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSMathMax

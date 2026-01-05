@@ -1,1 +1,3 @@
-# SVGGradientElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGGradientElement
+# SVGGradientElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGGradientElement

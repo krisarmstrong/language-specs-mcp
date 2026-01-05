@@ -1,1 +1,3 @@
-# no-new-native-nonconstructor\n\nSee: https://eslint.org/docs/latest/rules/no-new-native-nonconstructor
+# no-new-native-nonconstructor
+
+See: https://eslint.org/docs/latest/rules/no-new-native-nonconstructor

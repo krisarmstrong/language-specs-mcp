@@ -1,1 +1,3 @@
-# GPUCommandBuffer\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandBuffer
+# GPUCommandBuffer
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GPUCommandBuffer

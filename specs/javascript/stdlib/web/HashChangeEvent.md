@@ -1,1 +1,3 @@
-# HashChangeEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent
+# HashChangeEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent

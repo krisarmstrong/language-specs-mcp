@@ -1,1 +1,3 @@
-# property-no-vendor-prefix\n\nSee: https://stylelint.io/user-guide/rules/property-no-vendor-prefix
+# property-no-vendor-prefix
+
+See: https://stylelint.io/user-guide/rules/property-no-vendor-prefix

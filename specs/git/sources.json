@@ -1,0 +1,58 @@
+{
+  "language": "git",
+  "generatedAt": "2026-01-05T15:15:48.667237+00:00",
+  "files": [
+    {
+      "path": "patterns/conventions.md",
+      "sha256": "d66a27d2a72c63a2425e4578e848e474651f5e5924c52dd19350f41b87b7015b",
+      "urls": [
+        "https://docs.github.com/en/get-started/quickstart/github-flow",
+        "https://keepachangelog.com/en/1.1.0/",
+        "https://nvie.com/posts/a-successful-git-branching-model/",
+        "https://trunkbaseddevelopment.com/",
+        "https://www.conventionalcommits.org/en/v1.0.0/"
+      ]
+    },
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "420851f9b8d827df43c77fbebf32be77e510380fa4fe91a6a38af97b8d9bed72",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "9377fa8cf6cdc0d1298fbb0b0e185c985a01639663254916544055af26d49cd7",
+      "urls": [
+        "https://commitizen-tools.github.io/commitizen/",
+        "https://commitlint.js.org/"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "1416677aeca45aaa21ecd686445a80f2653a15b0f1a6aaf852a04e10266a3ec6",
+      "urls": [
+        "https://git-scm.com/docs/git"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "fcb1be1913a2ac910c42e619cb22711c890aae9a837a199c2b1702bcfdd521b3",
+      "urls": [
+        "https://git-scm.com/docs"
+      ]
+    },
+    {
+      "path": "linters/commitlint/overview.md",
+      "sha256": "63bca3829ef9a6aab57273b1a172793967bcb86c97ebf4a5460a7a986101030c",
+      "urls": [
+        "https://commitlint.js.org/#/reference-rules"
+      ]
+    },
+    {
+      "path": "linters/gitlint/overview.md",
+      "sha256": "b267ec33bca694bf8cf03f88e1b84d01c23e6ce3df2e02b82c086bb96332e9ea",
+      "urls": [
+        "https://jorisroovers.com/gitlint/rules/"
+      ]
+    }
+  ]
+}

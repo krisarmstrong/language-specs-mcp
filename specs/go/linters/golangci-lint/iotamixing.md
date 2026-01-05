@@ -1,1 +1,3 @@
-# iotamixing\n\nSee: https://golangci-lint.run/docs/linters/iotamixing/
+# iotamixing
+
+See: https://golangci-lint.run/docs/linters/iotamixing/

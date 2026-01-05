@@ -1,1 +1,3 @@
-# interfaces\n\nSee: https://www.typescriptlang.org/docs/handbook/interfaces.html
+# interfaces
+
+See: https://www.typescriptlang.org/docs/handbook/interfaces.html

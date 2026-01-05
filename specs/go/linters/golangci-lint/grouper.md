@@ -1,1 +1,3 @@
-# grouper\n\nSee: https://golangci-lint.run/docs/linters/grouper/
+# grouper
+
+See: https://golangci-lint.run/docs/linters/grouper/

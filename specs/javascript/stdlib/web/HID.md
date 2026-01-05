@@ -1,1 +1,3 @@
-# HID\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HID
+# HID
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HID

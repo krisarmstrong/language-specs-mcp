@@ -1,1 +1,3 @@
-# map_err_ignore\n\nSee: https://rust-lang.github.io/rust-clippy/master/#map_err_ignore
+# map_err_ignore
+
+See: https://rust-lang.github.io/rust-clippy/master/#map_err_ignore

@@ -1,1 +1,3 @@
-# decorder\n\nSee: https://golangci-lint.run/docs/linters/decorder/
+# decorder
+
+See: https://golangci-lint.run/docs/linters/decorder/

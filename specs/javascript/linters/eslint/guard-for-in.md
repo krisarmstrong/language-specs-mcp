@@ -1,1 +1,3 @@
-# guard-for-in\n\nSee: https://eslint.org/docs/latest/rules/guard-for-in
+# guard-for-in
+
+See: https://eslint.org/docs/latest/rules/guard-for-in

@@ -1,1 +1,3 @@
-# Selection\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Selection
+# Selection
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Selection

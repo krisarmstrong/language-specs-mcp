@@ -1,1 +1,3 @@
-# DedicatedWorkerGlobalScope\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope
+# DedicatedWorkerGlobalScope
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope

@@ -1,1 +1,3 @@
-# SVGFEComponentTransferElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGFEComponentTransferElement
+# SVGFEComponentTransferElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGFEComponentTransferElement

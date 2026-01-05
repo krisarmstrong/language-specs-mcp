@@ -1,1 +1,3 @@
-# hidden-focusable\n\nSee: https://html-validate.org/rules/hidden-focusable
+# hidden-focusable
+
+See: https://html-validate.org/rules/hidden-focusable

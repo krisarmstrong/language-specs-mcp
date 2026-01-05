@@ -1,1 +1,3 @@
-# FontFaceSet\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet
+# FontFaceSet
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/FontFaceSet

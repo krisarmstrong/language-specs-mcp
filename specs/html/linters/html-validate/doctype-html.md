@@ -1,1 +1,3 @@
-# doctype-html\n\nSee: https://html-validate.org/rules/doctype-html
+# doctype-html
+
+See: https://html-validate.org/rules/doctype-html

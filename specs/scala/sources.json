@@ -1,0 +1,40 @@
+{
+  "language": "scala",
+  "generatedAt": "2026-01-05T15:15:50.755929+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "04a74b8ff16bd8ee9f976ade7e0dd3273c0cff92a2e0be155500a3753e9edb83",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "2642e0b84f7d6cb808d9846ad6cb2911a582083e79ce5eb66dfac9eb7ec68d10",
+      "urls": [
+        "https://scalameta.org/scalafmt/"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "81f5a2fca482a684eaab6a5be4cc38960b913e27b1a7b230fc17a9fdca44ec4e",
+      "urls": [
+        "https://www.scala-lang.org/api/"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "a8b9b9088400aea12e82a30a47eae9d0e35e6aa4b2907bea8609d283b7419315",
+      "urls": [
+        "https://docs.scala-lang.org/scala3/reference/"
+      ]
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "fa7dd41910545f1ec00d099697a8d1cbb664d940ab3061f7f7346b707345a7fd",
+      "urls": [
+        "https://scalacenter.github.io/scalafix/",
+        "https://www.wartremover.org/"
+      ]
+    }
+  ]
+}

@@ -1,1 +1,3 @@
-# DocumentPictureInPictureEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/DocumentPictureInPictureEvent
+# DocumentPictureInPictureEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/DocumentPictureInPictureEvent

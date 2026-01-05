@@ -1,1 +1,3 @@
-# Lua 5.4 Reference Manual\n\nSee: https://www.lua.org/manual/5.4/
+# Lua 5.4 Reference Manual
+
+See: https://www.lua.org/manual/5.4/

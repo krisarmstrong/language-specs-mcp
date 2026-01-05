@@ -1,1 +1,3 @@
-# HTMLElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
+# HTMLElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement

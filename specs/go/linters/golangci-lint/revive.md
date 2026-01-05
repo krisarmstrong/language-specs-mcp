@@ -1,1 +1,3 @@
-# revive\n\nSee: https://golangci-lint.run/docs/linters/revive/
+# revive
+
+See: https://golangci-lint.run/docs/linters/revive/

@@ -1,1 +1,3 @@
-# BackgroundFetchRegistration\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration
+# BackgroundFetchRegistration
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/BackgroundFetchRegistration

@@ -1,1 +1,3 @@
-# funcorder\n\nSee: https://golangci-lint.run/docs/linters/funcorder/
+# funcorder
+
+See: https://golangci-lint.run/docs/linters/funcorder/

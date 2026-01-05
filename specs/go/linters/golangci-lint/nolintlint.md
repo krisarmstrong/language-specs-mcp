@@ -1,1 +1,3 @@
-# nolintlint\n\nSee: https://golangci-lint.run/docs/linters/nolintlint/
+# nolintlint
+
+See: https://golangci-lint.run/docs/linters/nolintlint/

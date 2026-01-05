@@ -1,1 +1,3 @@
-# block-no-empty\n\nSee: https://stylelint.io/user-guide/rules/block-no-empty
+# block-no-empty
+
+See: https://stylelint.io/user-guide/rules/block-no-empty

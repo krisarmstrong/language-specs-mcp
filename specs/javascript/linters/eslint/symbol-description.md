@@ -1,1 +1,3 @@
-# symbol-description\n\nSee: https://eslint.org/docs/latest/rules/symbol-description
+# symbol-description
+
+See: https://eslint.org/docs/latest/rules/symbol-description

@@ -1,1 +1,3 @@
-# exit\n\nSee: https://rust-lang.github.io/rust-clippy/master/#exit
+# exit
+
+See: https://rust-lang.github.io/rust-clippy/master/#exit

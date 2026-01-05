@@ -1,1 +1,3 @@
-# mirror\n\nSee: https://golangci-lint.run/docs/linters/mirror/
+# mirror
+
+See: https://golangci-lint.run/docs/linters/mirror/

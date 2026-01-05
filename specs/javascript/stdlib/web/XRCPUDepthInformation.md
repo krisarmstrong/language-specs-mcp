@@ -1,1 +1,3 @@
-# XRCPUDepthInformation\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/XRCPUDepthInformation
+# XRCPUDepthInformation
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/XRCPUDepthInformation

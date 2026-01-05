@@ -1,1 +1,3 @@
-# min_ident_chars\n\nSee: https://rust-lang.github.io/rust-clippy/master/#min_ident_chars
+# min_ident_chars
+
+See: https://rust-lang.github.io/rust-clippy/master/#min_ident_chars

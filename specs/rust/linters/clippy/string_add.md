@@ -1,1 +1,3 @@
-# string_add\n\nSee: https://rust-lang.github.io/rust-clippy/master/#string_add
+# string_add
+
+See: https://rust-lang.github.io/rust-clippy/master/#string_add

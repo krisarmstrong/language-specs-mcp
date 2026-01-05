@@ -1,1 +1,3 @@
-# CSSLayerBlockRule\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSLayerBlockRule
+# CSSLayerBlockRule
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSLayerBlockRule

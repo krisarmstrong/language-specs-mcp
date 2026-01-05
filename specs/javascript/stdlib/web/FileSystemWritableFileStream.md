@@ -1,1 +1,3 @@
-# FileSystemWritableFileStream\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/FileSystemWritableFileStream
+# FileSystemWritableFileStream
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/FileSystemWritableFileStream

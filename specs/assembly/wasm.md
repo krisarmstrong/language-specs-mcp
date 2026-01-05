@@ -1,1 +1,3 @@
-# WebAssembly Core Specification\n\nSee: https://webassembly.github.io/spec/core/
+# WebAssembly Core Specification
+
+See: https://webassembly.github.io/spec/core/

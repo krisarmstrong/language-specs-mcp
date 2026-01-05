@@ -1,1 +1,3 @@
-# name-pattern\n\nSee: https://html-validate.org/rules/name-pattern
+# name-pattern
+
+See: https://html-validate.org/rules/name-pattern

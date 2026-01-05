@@ -1,1 +1,3 @@
-# unit-disallowed-list\n\nSee: https://stylelint.io/user-guide/rules/unit-disallowed-list
+# unit-disallowed-list
+
+See: https://stylelint.io/user-guide/rules/unit-disallowed-list

@@ -1,1 +1,3 @@
-# manual_inspect\n\nSee: https://rust-lang.github.io/rust-clippy/master/#manual_inspect
+# manual_inspect
+
+See: https://rust-lang.github.io/rust-clippy/master/#manual_inspect

@@ -1,1 +1,3 @@
-# intrange\n\nSee: https://golangci-lint.run/docs/linters/intrange/
+# intrange
+
+See: https://golangci-lint.run/docs/linters/intrange/

@@ -1,1 +1,3 @@
-# RTCCertificateStats\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificateStats
+# RTCCertificateStats
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificateStats

@@ -1,1 +1,3 @@
-# Notification\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Notification
+# Notification
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Notification

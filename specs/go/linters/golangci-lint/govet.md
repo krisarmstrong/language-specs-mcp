@@ -1,1 +1,3 @@
-# govet\n\nSee: https://golangci-lint.run/docs/linters/govet/
+# govet
+
+See: https://golangci-lint.run/docs/linters/govet/

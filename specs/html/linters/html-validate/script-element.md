@@ -1,1 +1,3 @@
-# script-element\n\nSee: https://html-validate.org/rules/script-element
+# script-element
+
+See: https://html-validate.org/rules/script-element

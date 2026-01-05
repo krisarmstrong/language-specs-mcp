@@ -1,1 +1,3 @@
-# CharacterBoundsUpdateEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CharacterBoundsUpdateEvent
+# CharacterBoundsUpdateEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CharacterBoundsUpdateEvent

@@ -1,1 +1,3 @@
-# attr-case\n\nSee: https://html-validate.org/rules/attr-case
+# attr-case
+
+See: https://html-validate.org/rules/attr-case

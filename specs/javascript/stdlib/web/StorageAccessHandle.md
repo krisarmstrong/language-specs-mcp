@@ -1,1 +1,3 @@
-# StorageAccessHandle\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle
+# StorageAccessHandle
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/StorageAccessHandle

@@ -1,1 +1,3 @@
-# needless_late_init\n\nSee: https://rust-lang.github.io/rust-clippy/master/#needless_late_init
+# needless_late_init
+
+See: https://rust-lang.github.io/rust-clippy/master/#needless_late_init

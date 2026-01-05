@@ -1,1 +1,3 @@
-# SVGFEPointLightElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGFEPointLightElement
+# SVGFEPointLightElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGFEPointLightElement

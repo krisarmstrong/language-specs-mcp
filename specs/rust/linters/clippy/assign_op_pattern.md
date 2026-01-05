@@ -1,1 +1,3 @@
-# assign_op_pattern\n\nSee: https://rust-lang.github.io/rust-clippy/master/#assign_op_pattern
+# assign_op_pattern
+
+See: https://rust-lang.github.io/rust-clippy/master/#assign_op_pattern

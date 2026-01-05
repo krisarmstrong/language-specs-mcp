@@ -1,1 +1,3 @@
-# separated_literal_suffix\n\nSee: https://rust-lang.github.io/rust-clippy/master/#separated_literal_suffix
+# separated_literal_suffix
+
+See: https://rust-lang.github.io/rust-clippy/master/#separated_literal_suffix

@@ -1,0 +1,85 @@
+{
+  "language": "lua",
+  "fetchedAt": "2026-01-04T18:48:06Z",
+  "counts": {
+    "spec": 1,
+    "stdlib": 1,
+    "linters": 1,
+    "formatters": 2,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/luacheck/overview.md",
+        "name": "linters/luacheck/overview"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/stylua.md",
+        "name": "formatters/stylua"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/luacheck/overview.md",
+      "name": "linters/luacheck/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/stylua.md",
+      "name": "formatters/stylua"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

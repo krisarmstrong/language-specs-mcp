@@ -1,1 +1,7 @@
-# Error Prone Bug Patterns\n\nSee: https://errorprone.info/bugpatterns
+# Error Prone Bug Patterns
+Version: unknown
+
+Source: https://errorprone.info/bugpatterns
+
+
+See: https://errorprone.info/bugpatterns

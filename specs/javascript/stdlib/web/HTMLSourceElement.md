@@ -1,1 +1,3 @@
-# HTMLSourceElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLSourceElement
+# HTMLSourceElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLSourceElement

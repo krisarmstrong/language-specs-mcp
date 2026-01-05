@@ -1,1 +1,3 @@
-# print_stderr\n\nSee: https://rust-lang.github.io/rust-clippy/master/#print_stderr
+# print_stderr
+
+See: https://rust-lang.github.io/rust-clippy/master/#print_stderr

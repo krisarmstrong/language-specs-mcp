@@ -1,1 +1,3 @@
-# CSSPrimitiveValue\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue
+# CSSPrimitiveValue
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSPrimitiveValue

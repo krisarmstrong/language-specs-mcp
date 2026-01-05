@@ -1,1 +1,3 @@
-# attr-pattern\n\nSee: https://html-validate.org/rules/attr-pattern
+# attr-pattern
+
+See: https://html-validate.org/rules/attr-pattern

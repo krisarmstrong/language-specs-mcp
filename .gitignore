@@ -3,5 +3,8 @@ dist/
 *.log
 .DS_Store
 
+docs/site/health.json
+docs/site/build/
+
 # Don't ignore specs - they're the whole point
 # !specs/

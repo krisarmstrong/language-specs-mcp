@@ -1,1 +1,3 @@
-# owned_cow\n\nSee: https://rust-lang.github.io/rust-clippy/master/#owned_cow
+# owned_cow
+
+See: https://rust-lang.github.io/rust-clippy/master/#owned_cow

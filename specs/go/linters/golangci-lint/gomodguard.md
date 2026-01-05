@@ -1,1 +1,3 @@
-# gomodguard\n\nSee: https://golangci-lint.run/docs/linters/gomodguard/
+# gomodguard
+
+See: https://golangci-lint.run/docs/linters/gomodguard/

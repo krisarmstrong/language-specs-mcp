@@ -1,1 +1,3 @@
-# MIDIAccess\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess
+# MIDIAccess
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MIDIAccess

@@ -1,1 +1,3 @@
-# IdentityProvider\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/IdentityProvider
+# IdentityProvider
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/IdentityProvider

@@ -1,1 +1,3 @@
-# doc_markdown\n\nSee: https://rust-lang.github.io/rust-clippy/master/#doc_markdown
+# doc_markdown
+
+See: https://rust-lang.github.io/rust-clippy/master/#doc_markdown

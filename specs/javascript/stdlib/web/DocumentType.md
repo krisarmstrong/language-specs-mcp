@@ -1,1 +1,3 @@
-# DocumentType\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/DocumentType
+# DocumentType
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/DocumentType

@@ -1,1 +1,3 @@
-# EventSource\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/EventSource
+# EventSource
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/EventSource

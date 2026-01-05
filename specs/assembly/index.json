@@ -1,0 +1,135 @@
+{
+  "language": "assembly",
+  "fetchedAt": "2026-01-04T18:23:27Z",
+  "counts": {
+    "spec": 7,
+    "stdlib": 1,
+    "linters": 1,
+    "formatters": 1,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "arm32.md",
+        "name": "arm32"
+      },
+      {
+        "category": "spec",
+        "path": "wasm.md",
+        "name": "wasm"
+      },
+      {
+        "category": "spec",
+        "path": "aarch64.md",
+        "name": "aarch64"
+      },
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      },
+      {
+        "category": "spec",
+        "path": "arm64.md",
+        "name": "arm64"
+      },
+      {
+        "category": "spec",
+        "path": "x86-64.md",
+        "name": "x86-64"
+      },
+      {
+        "category": "spec",
+        "path": "riscv.md",
+        "name": "riscv"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/overview.md",
+        "name": "linters/overview"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "arm32.md",
+      "name": "arm32"
+    },
+    {
+      "category": "spec",
+      "path": "wasm.md",
+      "name": "wasm"
+    },
+    {
+      "category": "spec",
+      "path": "aarch64.md",
+      "name": "aarch64"
+    },
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "spec",
+      "path": "arm64.md",
+      "name": "arm64"
+    },
+    {
+      "category": "spec",
+      "path": "x86-64.md",
+      "name": "x86-64"
+    },
+    {
+      "category": "spec",
+      "path": "riscv.md",
+      "name": "riscv"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/overview.md",
+      "name": "linters/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

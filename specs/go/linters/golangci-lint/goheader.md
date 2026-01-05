@@ -1,1 +1,3 @@
-# goheader\n\nSee: https://golangci-lint.run/docs/linters/goheader/
+# goheader
+
+See: https://golangci-lint.run/docs/linters/goheader/

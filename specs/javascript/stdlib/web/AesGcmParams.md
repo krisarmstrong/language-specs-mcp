@@ -1,1 +1,3 @@
-# AesGcmParams\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/AesGcmParams
+# AesGcmParams
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/AesGcmParams

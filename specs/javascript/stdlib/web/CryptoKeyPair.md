@@ -1,1 +1,3 @@
-# CryptoKeyPair\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CryptoKeyPair
+# CryptoKeyPair
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CryptoKeyPair

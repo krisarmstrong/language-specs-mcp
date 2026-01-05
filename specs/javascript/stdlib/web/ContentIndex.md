@@ -1,1 +1,3 @@
-# ContentIndex\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/ContentIndex
+# ContentIndex
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/ContentIndex

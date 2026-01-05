@@ -1,1 +1,3 @@
-# implicit_hasher\n\nSee: https://rust-lang.github.io/rust-clippy/master/#implicit_hasher
+# implicit_hasher
+
+See: https://rust-lang.github.io/rust-clippy/master/#implicit_hasher

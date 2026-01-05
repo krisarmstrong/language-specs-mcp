@@ -1,1 +1,3 @@
-# ServiceWorkerContainer\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer
+# ServiceWorkerContainer
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer

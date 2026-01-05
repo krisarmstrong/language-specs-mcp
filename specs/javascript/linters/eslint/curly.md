@@ -1,1 +1,3 @@
-# curly\n\nSee: https://eslint.org/docs/latest/rules/curly
+# curly
+
+See: https://eslint.org/docs/latest/rules/curly

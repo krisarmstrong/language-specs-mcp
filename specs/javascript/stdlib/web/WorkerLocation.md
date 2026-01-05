@@ -1,1 +1,3 @@
-# WorkerLocation\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation
+# WorkerLocation
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation

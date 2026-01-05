@@ -1,1 +1,3 @@
-# unused_peekable\n\nSee: https://rust-lang.github.io/rust-clippy/master/#unused_peekable
+# unused_peekable
+
+See: https://rust-lang.github.io/rust-clippy/master/#unused_peekable

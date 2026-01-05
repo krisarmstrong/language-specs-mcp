@@ -1,1 +1,3 @@
-# deprecated\n\nSee: https://html-validate.org/rules/deprecated
+# deprecated
+
+See: https://html-validate.org/rules/deprecated

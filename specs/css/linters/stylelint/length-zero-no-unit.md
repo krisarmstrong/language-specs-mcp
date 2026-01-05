@@ -1,1 +1,3 @@
-# length-zero-no-unit\n\nSee: https://stylelint.io/user-guide/rules/length-zero-no-unit
+# length-zero-no-unit
+
+See: https://stylelint.io/user-guide/rules/length-zero-no-unit

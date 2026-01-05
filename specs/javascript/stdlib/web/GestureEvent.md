@@ -1,1 +1,3 @@
-# GestureEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GestureEvent
+# GestureEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GestureEvent

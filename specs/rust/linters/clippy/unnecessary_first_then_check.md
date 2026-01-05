@@ -1,1 +1,3 @@
-# unnecessary_first_then_check\n\nSee: https://rust-lang.github.io/rust-clippy/master/#unnecessary_first_then_check
+# unnecessary_first_then_check
+
+See: https://rust-lang.github.io/rust-clippy/master/#unnecessary_first_then_check

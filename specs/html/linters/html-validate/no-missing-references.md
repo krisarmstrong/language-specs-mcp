@@ -1,1 +1,3 @@
-# no-missing-references\n\nSee: https://html-validate.org/rules/no-missing-references
+# no-missing-references
+
+See: https://html-validate.org/rules/no-missing-references

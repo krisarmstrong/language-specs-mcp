@@ -1,1 +1,3 @@
-# MediaKeyStatusMap\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap
+# MediaKeyStatusMap
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap

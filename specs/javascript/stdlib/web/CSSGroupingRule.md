@@ -1,1 +1,3 @@
-# CSSGroupingRule\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSGroupingRule
+# CSSGroupingRule
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSGroupingRule

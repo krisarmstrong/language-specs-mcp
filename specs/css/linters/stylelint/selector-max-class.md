@@ -1,1 +1,3 @@
-# selector-max-class\n\nSee: https://stylelint.io/user-guide/rules/selector-max-class
+# selector-max-class
+
+See: https://stylelint.io/user-guide/rules/selector-max-class

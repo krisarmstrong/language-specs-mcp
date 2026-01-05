@@ -1,1 +1,3 @@
-# PannerNode\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PannerNode
+# PannerNode
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PannerNode

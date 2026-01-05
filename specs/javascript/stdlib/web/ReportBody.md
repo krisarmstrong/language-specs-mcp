@@ -1,1 +1,3 @@
-# ReportBody\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/ReportBody
+# ReportBody
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/ReportBody

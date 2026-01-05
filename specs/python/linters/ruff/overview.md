@@ -1,4 +1,8 @@
 # Ruff Linter Rules
+Version: unknown
+
+Source: https://docs.astral.sh/ruff/rules/
+
 
 Ruff implements rules from:
 - Pyflakes (F)
@@ -20,7 +24,7 @@ Ruff implements rules from:
 | E711 | Comparison to None | Use `is None` |
 | E712 | Comparison to True/False | Use truthiness |
 | UP006 | Use `list` instead of `List` | Modernize |
-| UP007 | Use `X \| Y` instead of `Union` | Modernize |
+| UP007 | Use `X | Y` instead of `Union` | Modernize |
 
 ## Configuration
 

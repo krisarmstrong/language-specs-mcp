@@ -1,1 +1,3 @@
-# RTCPeerConnectionIceEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent
+# RTCPeerConnectionIceEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent

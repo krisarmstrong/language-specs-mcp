@@ -1,1 +1,3 @@
-# UserActivation\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/UserActivation
+# UserActivation
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/UserActivation

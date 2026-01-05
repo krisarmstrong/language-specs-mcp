@@ -1,1 +1,3 @@
-# no-unsafe-finally\n\nSee: https://eslint.org/docs/latest/rules/no-unsafe-finally
+# no-unsafe-finally
+
+See: https://eslint.org/docs/latest/rules/no-unsafe-finally

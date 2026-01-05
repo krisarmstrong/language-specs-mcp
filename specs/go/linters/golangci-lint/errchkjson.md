@@ -1,1 +1,3 @@
-# errchkjson\n\nSee: https://golangci-lint.run/docs/linters/errchkjson/
+# errchkjson
+
+See: https://golangci-lint.run/docs/linters/errchkjson/

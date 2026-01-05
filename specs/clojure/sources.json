@@ -1,0 +1,40 @@
+{
+  "language": "clojure",
+  "generatedAt": "2026-01-05T15:15:48.580353+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "57d85cd58ce2798d28d65675256c02ec92903754345ecbc58080f0064156a915",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "da33e324340198844c2abc315821779c24fc1db183f24d15849d6d4ed29d9e91",
+      "urls": [
+        "https://github.com/kkinnear/zprint"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "2b92928896279d82d122e61e7b696ee745e2f1b64e67d49b54348c58fdb56e2a",
+      "urls": [
+        "https://clojure.github.io/clojure/"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "874b3570abb2250a31a9f09a8cd8d3b5512ee8f06c8c63884ee2b33a9ec17111",
+      "urls": [
+        "https://clojure.org/reference/reader"
+      ]
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "c7d101045b7bf486f11904be3dddb699ae0bc0c74be0d456437da58076b0f23a",
+      "urls": [
+        "https://github.com/clj-kondo/clj-kondo",
+        "https://github.com/jonase/eastwood"
+      ]
+    }
+  ]
+}

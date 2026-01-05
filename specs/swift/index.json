@@ -1,0 +1,95 @@
+{
+  "language": "swift",
+  "fetchedAt": "2026-01-04T18:51:41Z",
+  "counts": {
+    "spec": 1,
+    "stdlib": 1,
+    "linters": 2,
+    "formatters": 2,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/swiftlint/overview.md",
+        "name": "linters/swiftlint/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/swiftlint/rules.md",
+        "name": "linters/swiftlint/rules"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/swift-format.md",
+        "name": "formatters/swift-format"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/swiftlint/overview.md",
+      "name": "linters/swiftlint/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/swiftlint/rules.md",
+      "name": "linters/swiftlint/rules"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/swift-format.md",
+      "name": "formatters/swift-format"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

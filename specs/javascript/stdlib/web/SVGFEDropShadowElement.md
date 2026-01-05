@@ -1,1 +1,3 @@
-# SVGFEDropShadowElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDropShadowElement
+# SVGFEDropShadowElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDropShadowElement

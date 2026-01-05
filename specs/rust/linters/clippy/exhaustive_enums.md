@@ -1,1 +1,3 @@
-# exhaustive_enums\n\nSee: https://rust-lang.github.io/rust-clippy/master/#exhaustive_enums
+# exhaustive_enums
+
+See: https://rust-lang.github.io/rust-clippy/master/#exhaustive_enums

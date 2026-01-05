@@ -1,1 +1,3 @@
-# no-implicit-globals\n\nSee: https://eslint.org/docs/latest/rules/no-implicit-globals
+# no-implicit-globals
+
+See: https://eslint.org/docs/latest/rules/no-implicit-globals

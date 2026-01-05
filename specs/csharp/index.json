@@ -1,0 +1,125 @@
+{
+  "language": "csharp",
+  "fetchedAt": "2026-01-04T18:24:14Z",
+  "counts": {
+    "spec": 1,
+    "stdlib": 1,
+    "linters": 5,
+    "formatters": 2,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/overview.md",
+        "name": "linters/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dotnet-analyzers/overview.md",
+        "name": "linters/dotnet-analyzers/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dotnet-analyzers/quality-rules.md",
+        "name": "linters/dotnet-analyzers/quality-rules"
+      },
+      {
+        "category": "linters",
+        "path": "linters/stylecop/overview.md",
+        "name": "linters/stylecop/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/rules.md",
+        "name": "linters/rules"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/dotnet-format.md",
+        "name": "formatters/dotnet-format"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/overview.md",
+      "name": "linters/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dotnet-analyzers/overview.md",
+      "name": "linters/dotnet-analyzers/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dotnet-analyzers/quality-rules.md",
+      "name": "linters/dotnet-analyzers/quality-rules"
+    },
+    {
+      "category": "linters",
+      "path": "linters/stylecop/overview.md",
+      "name": "linters/stylecop/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/rules.md",
+      "name": "linters/rules"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/dotnet-format.md",
+      "name": "formatters/dotnet-format"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

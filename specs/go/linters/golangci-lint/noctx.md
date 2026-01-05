@@ -1,1 +1,3 @@
-# noctx\n\nSee: https://golangci-lint.run/docs/linters/noctx/
+# noctx
+
+See: https://golangci-lint.run/docs/linters/noctx/

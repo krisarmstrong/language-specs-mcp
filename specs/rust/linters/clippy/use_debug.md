@@ -1,1 +1,3 @@
-# use_debug\n\nSee: https://rust-lang.github.io/rust-clippy/master/#use_debug
+# use_debug
+
+See: https://rust-lang.github.io/rust-clippy/master/#use_debug

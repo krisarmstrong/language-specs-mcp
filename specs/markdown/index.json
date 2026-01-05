@@ -1,0 +1,605 @@
+{
+  "language": "markdown",
+  "fetchedAt": "2026-01-04T18:54:39Z",
+  "counts": {
+    "spec": 1,
+    "stdlib": 1,
+    "linters": 54,
+    "formatters": 1,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD044.md",
+        "name": "linters/markdownlint/MD044"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD021.md",
+        "name": "linters/markdownlint/MD021"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD031.md",
+        "name": "linters/markdownlint/MD031"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD060.md",
+        "name": "linters/markdownlint/MD060"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD054.md",
+        "name": "linters/markdownlint/MD054"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD005.md",
+        "name": "linters/markdownlint/MD005"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD025.md",
+        "name": "linters/markdownlint/MD025"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD040.md",
+        "name": "linters/markdownlint/MD040"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD011.md",
+        "name": "linters/markdownlint/MD011"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD001.md",
+        "name": "linters/markdownlint/MD001"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD050.md",
+        "name": "linters/markdownlint/MD050"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD035.md",
+        "name": "linters/markdownlint/MD035"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/overview.md",
+        "name": "linters/markdownlint/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD024.md",
+        "name": "linters/markdownlint/MD024"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD041.md",
+        "name": "linters/markdownlint/MD041"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD010.md",
+        "name": "linters/markdownlint/MD010"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD051.md",
+        "name": "linters/markdownlint/MD051"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD034.md",
+        "name": "linters/markdownlint/MD034"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD014.md",
+        "name": "linters/markdownlint/MD014"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD045.md",
+        "name": "linters/markdownlint/MD045"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD020.md",
+        "name": "linters/markdownlint/MD020"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD030.md",
+        "name": "linters/markdownlint/MD030"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD055.md",
+        "name": "linters/markdownlint/MD055"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD004.md",
+        "name": "linters/markdownlint/MD004"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD019.md",
+        "name": "linters/markdownlint/MD019"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD048.md",
+        "name": "linters/markdownlint/MD048"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD058.md",
+        "name": "linters/markdownlint/MD058"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD009.md",
+        "name": "linters/markdownlint/MD009"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD029.md",
+        "name": "linters/markdownlint/MD029"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD039.md",
+        "name": "linters/markdownlint/MD039"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD028.md",
+        "name": "linters/markdownlint/MD028"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD038.md",
+        "name": "linters/markdownlint/MD038"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD018.md",
+        "name": "linters/markdownlint/MD018"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD049.md",
+        "name": "linters/markdownlint/MD049"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD059.md",
+        "name": "linters/markdownlint/MD059"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD027.md",
+        "name": "linters/markdownlint/MD027"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD013.md",
+        "name": "linters/markdownlint/MD013"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD042.md",
+        "name": "linters/markdownlint/MD042"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD052.md",
+        "name": "linters/markdownlint/MD052"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD003.md",
+        "name": "linters/markdownlint/MD003"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD037.md",
+        "name": "linters/markdownlint/MD037"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD046.md",
+        "name": "linters/markdownlint/MD046"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD023.md",
+        "name": "linters/markdownlint/MD023"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD033.md",
+        "name": "linters/markdownlint/MD033"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD007.md",
+        "name": "linters/markdownlint/MD007"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD056.md",
+        "name": "linters/markdownlint/MD056"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD047.md",
+        "name": "linters/markdownlint/MD047"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD022.md",
+        "name": "linters/markdownlint/MD022"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD032.md",
+        "name": "linters/markdownlint/MD032"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD026.md",
+        "name": "linters/markdownlint/MD026"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD012.md",
+        "name": "linters/markdownlint/MD012"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD043.md",
+        "name": "linters/markdownlint/MD043"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD053.md",
+        "name": "linters/markdownlint/MD053"
+      },
+      {
+        "category": "linters",
+        "path": "linters/markdownlint/MD036.md",
+        "name": "linters/markdownlint/MD036"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD044.md",
+      "name": "linters/markdownlint/MD044"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD021.md",
+      "name": "linters/markdownlint/MD021"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD031.md",
+      "name": "linters/markdownlint/MD031"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD060.md",
+      "name": "linters/markdownlint/MD060"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD054.md",
+      "name": "linters/markdownlint/MD054"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD005.md",
+      "name": "linters/markdownlint/MD005"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD025.md",
+      "name": "linters/markdownlint/MD025"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD040.md",
+      "name": "linters/markdownlint/MD040"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD011.md",
+      "name": "linters/markdownlint/MD011"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD001.md",
+      "name": "linters/markdownlint/MD001"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD050.md",
+      "name": "linters/markdownlint/MD050"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD035.md",
+      "name": "linters/markdownlint/MD035"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/overview.md",
+      "name": "linters/markdownlint/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD024.md",
+      "name": "linters/markdownlint/MD024"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD041.md",
+      "name": "linters/markdownlint/MD041"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD010.md",
+      "name": "linters/markdownlint/MD010"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD051.md",
+      "name": "linters/markdownlint/MD051"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD034.md",
+      "name": "linters/markdownlint/MD034"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD014.md",
+      "name": "linters/markdownlint/MD014"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD045.md",
+      "name": "linters/markdownlint/MD045"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD020.md",
+      "name": "linters/markdownlint/MD020"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD030.md",
+      "name": "linters/markdownlint/MD030"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD055.md",
+      "name": "linters/markdownlint/MD055"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD004.md",
+      "name": "linters/markdownlint/MD004"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD019.md",
+      "name": "linters/markdownlint/MD019"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD048.md",
+      "name": "linters/markdownlint/MD048"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD058.md",
+      "name": "linters/markdownlint/MD058"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD009.md",
+      "name": "linters/markdownlint/MD009"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD029.md",
+      "name": "linters/markdownlint/MD029"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD039.md",
+      "name": "linters/markdownlint/MD039"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD028.md",
+      "name": "linters/markdownlint/MD028"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD038.md",
+      "name": "linters/markdownlint/MD038"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD018.md",
+      "name": "linters/markdownlint/MD018"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD049.md",
+      "name": "linters/markdownlint/MD049"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD059.md",
+      "name": "linters/markdownlint/MD059"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD027.md",
+      "name": "linters/markdownlint/MD027"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD013.md",
+      "name": "linters/markdownlint/MD013"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD042.md",
+      "name": "linters/markdownlint/MD042"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD052.md",
+      "name": "linters/markdownlint/MD052"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD003.md",
+      "name": "linters/markdownlint/MD003"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD037.md",
+      "name": "linters/markdownlint/MD037"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD046.md",
+      "name": "linters/markdownlint/MD046"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD023.md",
+      "name": "linters/markdownlint/MD023"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD033.md",
+      "name": "linters/markdownlint/MD033"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD007.md",
+      "name": "linters/markdownlint/MD007"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD056.md",
+      "name": "linters/markdownlint/MD056"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD047.md",
+      "name": "linters/markdownlint/MD047"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD022.md",
+      "name": "linters/markdownlint/MD022"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD032.md",
+      "name": "linters/markdownlint/MD032"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD026.md",
+      "name": "linters/markdownlint/MD026"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD012.md",
+      "name": "linters/markdownlint/MD012"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD043.md",
+      "name": "linters/markdownlint/MD043"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD053.md",
+      "name": "linters/markdownlint/MD053"
+    },
+    {
+      "category": "linters",
+      "path": "linters/markdownlint/MD036.md",
+      "name": "linters/markdownlint/MD036"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

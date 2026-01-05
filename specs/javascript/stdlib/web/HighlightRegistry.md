@@ -1,1 +1,3 @@
-# HighlightRegistry\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry
+# HighlightRegistry
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HighlightRegistry

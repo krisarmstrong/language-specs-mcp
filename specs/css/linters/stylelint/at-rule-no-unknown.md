@@ -1,1 +1,3 @@
-# at-rule-no-unknown\n\nSee: https://stylelint.io/user-guide/rules/at-rule-no-unknown
+# at-rule-no-unknown
+
+See: https://stylelint.io/user-guide/rules/at-rule-no-unknown

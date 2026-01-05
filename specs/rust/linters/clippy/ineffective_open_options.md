@@ -1,1 +1,3 @@
-# ineffective_open_options\n\nSee: https://rust-lang.github.io/rust-clippy/master/#ineffective_open_options
+# ineffective_open_options
+
+See: https://rust-lang.github.io/rust-clippy/master/#ineffective_open_options

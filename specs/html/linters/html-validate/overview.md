@@ -1,1 +1,7 @@
-# HTML-validate Rules\n\nSee: https://html-validate.org/rules/
+# HTML-validate Rules
+Version: unknown
+
+Source: https://html-validate.org/rules/
+
+
+See: https://html-validate.org/rules/

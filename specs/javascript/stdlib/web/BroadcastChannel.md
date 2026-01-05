@@ -1,1 +1,3 @@
-# BroadcastChannel\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel
+# BroadcastChannel
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel

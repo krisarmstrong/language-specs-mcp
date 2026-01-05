@@ -1,1 +1,3 @@
-# empty-title\n\nSee: https://html-validate.org/rules/empty-title
+# empty-title
+
+See: https://html-validate.org/rules/empty-title

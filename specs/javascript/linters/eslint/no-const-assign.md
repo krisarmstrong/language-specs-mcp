@@ -1,1 +1,3 @@
-# no-const-assign\n\nSee: https://eslint.org/docs/latest/rules/no-const-assign
+# no-const-assign
+
+See: https://eslint.org/docs/latest/rules/no-const-assign

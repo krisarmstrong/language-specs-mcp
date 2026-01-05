@@ -1,1 +1,3 @@
-# default_numeric_fallback\n\nSee: https://rust-lang.github.io/rust-clippy/master/#default_numeric_fallback
+# default_numeric_fallback
+
+See: https://rust-lang.github.io/rust-clippy/master/#default_numeric_fallback

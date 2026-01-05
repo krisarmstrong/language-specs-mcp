@@ -1,0 +1,735 @@
+{
+  "language": "dockerfile",
+  "fetchedAt": "2026-01-04T18:55:03Z",
+  "counts": {
+    "spec": 1,
+    "stdlib": 1,
+    "linters": 67,
+    "formatters": 1,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL4004.md",
+        "name": "linters/hadolint/DL4004"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL4000.md",
+        "name": "linters/hadolint/DL4000"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/overview.md",
+        "name": "linters/hadolint/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL4001.md",
+        "name": "linters/hadolint/DL4001"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL4005.md",
+        "name": "linters/hadolint/DL4005"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3021.md",
+        "name": "linters/hadolint/DL3021"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3015.md",
+        "name": "linters/hadolint/DL3015"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3044.md",
+        "name": "linters/hadolint/DL3044"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL1001.md",
+        "name": "linters/hadolint/DL1001"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3054.md",
+        "name": "linters/hadolint/DL3054"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3060.md",
+        "name": "linters/hadolint/DL3060"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3040.md",
+        "name": "linters/hadolint/DL3040"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3011.md",
+        "name": "linters/hadolint/DL3011"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3025.md",
+        "name": "linters/hadolint/DL3025"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3035.md",
+        "name": "linters/hadolint/DL3035"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3001.md",
+        "name": "linters/hadolint/DL3001"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3050.md",
+        "name": "linters/hadolint/DL3050"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3041.md",
+        "name": "linters/hadolint/DL3041"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3010.md",
+        "name": "linters/hadolint/DL3010"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3024.md",
+        "name": "linters/hadolint/DL3024"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3034.md",
+        "name": "linters/hadolint/DL3034"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3000.md",
+        "name": "linters/hadolint/DL3000"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3051.md",
+        "name": "linters/hadolint/DL3051"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3020.md",
+        "name": "linters/hadolint/DL3020"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3014.md",
+        "name": "linters/hadolint/DL3014"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3045.md",
+        "name": "linters/hadolint/DL3045"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3055.md",
+        "name": "linters/hadolint/DL3055"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3004.md",
+        "name": "linters/hadolint/DL3004"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3030.md",
+        "name": "linters/hadolint/DL3030"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3061.md",
+        "name": "linters/hadolint/DL3061"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3013.md",
+        "name": "linters/hadolint/DL3013"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3042.md",
+        "name": "linters/hadolint/DL3042"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3027.md",
+        "name": "linters/hadolint/DL3027"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3037.md",
+        "name": "linters/hadolint/DL3037"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3052.md",
+        "name": "linters/hadolint/DL3052"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3003.md",
+        "name": "linters/hadolint/DL3003"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3023.md",
+        "name": "linters/hadolint/DL3023"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3046.md",
+        "name": "linters/hadolint/DL3046"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3007.md",
+        "name": "linters/hadolint/DL3007"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3056.md",
+        "name": "linters/hadolint/DL3056"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3062.md",
+        "name": "linters/hadolint/DL3062"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3033.md",
+        "name": "linters/hadolint/DL3033"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3022.md",
+        "name": "linters/hadolint/DL3022"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3047.md",
+        "name": "linters/hadolint/DL3047"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3016.md",
+        "name": "linters/hadolint/DL3016"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3006.md",
+        "name": "linters/hadolint/DL3006"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3057.md",
+        "name": "linters/hadolint/DL3057"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3032.md",
+        "name": "linters/hadolint/DL3032"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3012.md",
+        "name": "linters/hadolint/DL3012"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3043.md",
+        "name": "linters/hadolint/DL3043"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3026.md",
+        "name": "linters/hadolint/DL3026"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3036.md",
+        "name": "linters/hadolint/DL3036"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3053.md",
+        "name": "linters/hadolint/DL3053"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3002.md",
+        "name": "linters/hadolint/DL3002"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3019.md",
+        "name": "linters/hadolint/DL3019"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3048.md",
+        "name": "linters/hadolint/DL3048"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3058.md",
+        "name": "linters/hadolint/DL3058"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3009.md",
+        "name": "linters/hadolint/DL3009"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3029.md",
+        "name": "linters/hadolint/DL3029"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL4006.md",
+        "name": "linters/hadolint/DL4006"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3028.md",
+        "name": "linters/hadolint/DL3028"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3038.md",
+        "name": "linters/hadolint/DL3038"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3018.md",
+        "name": "linters/hadolint/DL3018"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3049.md",
+        "name": "linters/hadolint/DL3049"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL4003.md",
+        "name": "linters/hadolint/DL4003"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3059.md",
+        "name": "linters/hadolint/DL3059"
+      },
+      {
+        "category": "linters",
+        "path": "linters/hadolint/DL3008.md",
+        "name": "linters/hadolint/DL3008"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL4004.md",
+      "name": "linters/hadolint/DL4004"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL4000.md",
+      "name": "linters/hadolint/DL4000"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/overview.md",
+      "name": "linters/hadolint/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL4001.md",
+      "name": "linters/hadolint/DL4001"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL4005.md",
+      "name": "linters/hadolint/DL4005"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3021.md",
+      "name": "linters/hadolint/DL3021"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3015.md",
+      "name": "linters/hadolint/DL3015"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3044.md",
+      "name": "linters/hadolint/DL3044"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL1001.md",
+      "name": "linters/hadolint/DL1001"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3054.md",
+      "name": "linters/hadolint/DL3054"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3060.md",
+      "name": "linters/hadolint/DL3060"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3040.md",
+      "name": "linters/hadolint/DL3040"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3011.md",
+      "name": "linters/hadolint/DL3011"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3025.md",
+      "name": "linters/hadolint/DL3025"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3035.md",
+      "name": "linters/hadolint/DL3035"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3001.md",
+      "name": "linters/hadolint/DL3001"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3050.md",
+      "name": "linters/hadolint/DL3050"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3041.md",
+      "name": "linters/hadolint/DL3041"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3010.md",
+      "name": "linters/hadolint/DL3010"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3024.md",
+      "name": "linters/hadolint/DL3024"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3034.md",
+      "name": "linters/hadolint/DL3034"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3000.md",
+      "name": "linters/hadolint/DL3000"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3051.md",
+      "name": "linters/hadolint/DL3051"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3020.md",
+      "name": "linters/hadolint/DL3020"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3014.md",
+      "name": "linters/hadolint/DL3014"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3045.md",
+      "name": "linters/hadolint/DL3045"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3055.md",
+      "name": "linters/hadolint/DL3055"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3004.md",
+      "name": "linters/hadolint/DL3004"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3030.md",
+      "name": "linters/hadolint/DL3030"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3061.md",
+      "name": "linters/hadolint/DL3061"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3013.md",
+      "name": "linters/hadolint/DL3013"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3042.md",
+      "name": "linters/hadolint/DL3042"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3027.md",
+      "name": "linters/hadolint/DL3027"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3037.md",
+      "name": "linters/hadolint/DL3037"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3052.md",
+      "name": "linters/hadolint/DL3052"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3003.md",
+      "name": "linters/hadolint/DL3003"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3023.md",
+      "name": "linters/hadolint/DL3023"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3046.md",
+      "name": "linters/hadolint/DL3046"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3007.md",
+      "name": "linters/hadolint/DL3007"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3056.md",
+      "name": "linters/hadolint/DL3056"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3062.md",
+      "name": "linters/hadolint/DL3062"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3033.md",
+      "name": "linters/hadolint/DL3033"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3022.md",
+      "name": "linters/hadolint/DL3022"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3047.md",
+      "name": "linters/hadolint/DL3047"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3016.md",
+      "name": "linters/hadolint/DL3016"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3006.md",
+      "name": "linters/hadolint/DL3006"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3057.md",
+      "name": "linters/hadolint/DL3057"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3032.md",
+      "name": "linters/hadolint/DL3032"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3012.md",
+      "name": "linters/hadolint/DL3012"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3043.md",
+      "name": "linters/hadolint/DL3043"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3026.md",
+      "name": "linters/hadolint/DL3026"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3036.md",
+      "name": "linters/hadolint/DL3036"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3053.md",
+      "name": "linters/hadolint/DL3053"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3002.md",
+      "name": "linters/hadolint/DL3002"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3019.md",
+      "name": "linters/hadolint/DL3019"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3048.md",
+      "name": "linters/hadolint/DL3048"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3058.md",
+      "name": "linters/hadolint/DL3058"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3009.md",
+      "name": "linters/hadolint/DL3009"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3029.md",
+      "name": "linters/hadolint/DL3029"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL4006.md",
+      "name": "linters/hadolint/DL4006"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3028.md",
+      "name": "linters/hadolint/DL3028"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3038.md",
+      "name": "linters/hadolint/DL3038"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3018.md",
+      "name": "linters/hadolint/DL3018"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3049.md",
+      "name": "linters/hadolint/DL3049"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL4003.md",
+      "name": "linters/hadolint/DL4003"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3059.md",
+      "name": "linters/hadolint/DL3059"
+    },
+    {
+      "category": "linters",
+      "path": "linters/hadolint/DL3008.md",
+      "name": "linters/hadolint/DL3008"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

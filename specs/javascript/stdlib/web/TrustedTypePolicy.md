@@ -1,1 +1,3 @@
-# TrustedTypePolicy\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicy
+# TrustedTypePolicy
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/TrustedTypePolicy

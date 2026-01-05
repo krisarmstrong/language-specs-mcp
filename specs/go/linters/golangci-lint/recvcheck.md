@@ -1,1 +1,3 @@
-# recvcheck\n\nSee: https://golangci-lint.run/docs/linters/recvcheck/
+# recvcheck
+
+See: https://golangci-lint.run/docs/linters/recvcheck/

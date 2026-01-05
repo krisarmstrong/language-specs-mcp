@@ -1,1 +1,3 @@
-# SVGForeignObjectElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGForeignObjectElement
+# SVGForeignObjectElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGForeignObjectElement

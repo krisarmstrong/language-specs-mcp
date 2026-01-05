@@ -1,1 +1,3 @@
-# valid-typeof\n\nSee: https://eslint.org/docs/latest/rules/valid-typeof
+# valid-typeof
+
+See: https://eslint.org/docs/latest/rules/valid-typeof

@@ -1,1 +1,3 @@
-# cast_enum_truncation\n\nSee: https://rust-lang.github.io/rust-clippy/master/#cast_enum_truncation
+# cast_enum_truncation
+
+See: https://rust-lang.github.io/rust-clippy/master/#cast_enum_truncation

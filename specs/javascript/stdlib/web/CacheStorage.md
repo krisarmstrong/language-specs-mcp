@@ -1,1 +1,3 @@
-# CacheStorage\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage
+# CacheStorage
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage

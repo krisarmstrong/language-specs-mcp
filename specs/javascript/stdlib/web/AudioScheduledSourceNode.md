@@ -1,1 +1,3 @@
-# AudioScheduledSourceNode\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode
+# AudioScheduledSourceNode
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode

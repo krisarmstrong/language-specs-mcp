@@ -1,1 +1,3 @@
-# Location\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Location
+# Location
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Location

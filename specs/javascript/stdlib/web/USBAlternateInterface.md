@@ -1,1 +1,3 @@
-# USBAlternateInterface\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/USBAlternateInterface
+# USBAlternateInterface
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/USBAlternateInterface

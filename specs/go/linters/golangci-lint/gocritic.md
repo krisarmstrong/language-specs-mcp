@@ -1,1 +1,3 @@
-# gocritic\n\nSee: https://golangci-lint.run/docs/linters/gocritic/
+# gocritic
+
+See: https://golangci-lint.run/docs/linters/gocritic/

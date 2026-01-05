@@ -1,1 +1,3 @@
-# no-descending-specificity\n\nSee: https://stylelint.io/user-guide/rules/no-descending-specificity
+# no-descending-specificity
+
+See: https://stylelint.io/user-guide/rules/no-descending-specificity

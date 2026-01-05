@@ -1,1 +1,3 @@
-# CountQueuingStrategy\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CountQueuingStrategy
+# CountQueuingStrategy
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CountQueuingStrategy

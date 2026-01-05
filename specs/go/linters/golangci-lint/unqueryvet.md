@@ -1,1 +1,3 @@
-# unqueryvet\n\nSee: https://golangci-lint.run/docs/linters/unqueryvet/
+# unqueryvet
+
+See: https://golangci-lint.run/docs/linters/unqueryvet/

@@ -1,1 +1,3 @@
-# option_env_unwrap\n\nSee: https://rust-lang.github.io/rust-clippy/master/#option_env_unwrap
+# option_env_unwrap
+
+See: https://rust-lang.github.io/rust-clippy/master/#option_env_unwrap

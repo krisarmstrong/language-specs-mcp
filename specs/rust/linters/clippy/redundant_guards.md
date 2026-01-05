@@ -1,1 +1,3 @@
-# redundant_guards\n\nSee: https://rust-lang.github.io/rust-clippy/master/#redundant_guards
+# redundant_guards
+
+See: https://rust-lang.github.io/rust-clippy/master/#redundant_guards

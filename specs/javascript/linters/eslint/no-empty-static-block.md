@@ -1,1 +1,3 @@
-# no-empty-static-block\n\nSee: https://eslint.org/docs/latest/rules/no-empty-static-block
+# no-empty-static-block
+
+See: https://eslint.org/docs/latest/rules/no-empty-static-block

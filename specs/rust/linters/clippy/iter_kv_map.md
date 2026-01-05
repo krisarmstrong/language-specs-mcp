@@ -1,1 +1,3 @@
-# iter_kv_map\n\nSee: https://rust-lang.github.io/rust-clippy/master/#iter_kv_map
+# iter_kv_map
+
+See: https://rust-lang.github.io/rust-clippy/master/#iter_kv_map

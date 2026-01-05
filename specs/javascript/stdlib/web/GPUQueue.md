@@ -1,1 +1,3 @@
-# GPUQueue\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue
+# GPUQueue
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GPUQueue

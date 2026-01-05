@@ -1,0 +1,35 @@
+{
+  "language": "basic",
+  "generatedAt": "2026-01-05T15:15:48.569874+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "887f121678b613bed570a5c7d399b496babd065037603669a70be14c4268dc20",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "5759c8bec4f903ee41d64a9856accc61c713d94712004abcb105152ffccfd76c",
+      "urls": []
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "82f87a84f84ea5405330c6648e7065e3b61a424456403a4045b4524d9b5f46ec",
+      "urls": [
+        "https://www.qbasic.net/en/reference/qbasic/"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "f4e778d1202f71d1993f102413d61e5938f2f737e56c2329ff46cc468bd1f35f",
+      "urls": [
+        "https://www.qbasic.net/en/reference/qbasic/"
+      ]
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "2a070c7e5e1d84da4695dd5b699836c11cbc9fe587bd68298b32b036b0684402",
+      "urls": []
+    }
+  ]
+}

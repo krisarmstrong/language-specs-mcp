@@ -1,1 +1,3 @@
-# GPUPipelineError\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GPUPipelineError
+# GPUPipelineError
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GPUPipelineError

@@ -1,1 +1,3 @@
-# let_underscore_lock\n\nSee: https://rust-lang.github.io/rust-clippy/master/#let_underscore_lock
+# let_underscore_lock
+
+See: https://rust-lang.github.io/rust-clippy/master/#let_underscore_lock

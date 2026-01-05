@@ -1,1 +1,3 @@
-# at-rule-allowed-list\n\nSee: https://stylelint.io/user-guide/rules/at-rule-allowed-list
+# at-rule-allowed-list
+
+See: https://stylelint.io/user-guide/rules/at-rule-allowed-list

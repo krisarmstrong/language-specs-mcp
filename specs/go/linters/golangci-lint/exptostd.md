@@ -1,1 +1,3 @@
-# exptostd\n\nSee: https://golangci-lint.run/docs/linters/exptostd/
+# exptostd
+
+See: https://golangci-lint.run/docs/linters/exptostd/

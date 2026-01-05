@@ -1,1 +1,3 @@
-# SharedStorageOperation\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SharedStorageOperation
+# SharedStorageOperation
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SharedStorageOperation

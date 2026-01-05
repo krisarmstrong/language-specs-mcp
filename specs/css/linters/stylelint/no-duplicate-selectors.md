@@ -1,1 +1,3 @@
-# no-duplicate-selectors\n\nSee: https://stylelint.io/user-guide/rules/no-duplicate-selectors
+# no-duplicate-selectors
+
+See: https://stylelint.io/user-guide/rules/no-duplicate-selectors

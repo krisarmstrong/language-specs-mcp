@@ -1,1 +1,3 @@
-# CSS Reference\n\nSee: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+# CSS Reference
+
+See: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference

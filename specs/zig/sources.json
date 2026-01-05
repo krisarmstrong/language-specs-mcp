@@ -1,0 +1,37 @@
+{
+  "language": "zig",
+  "generatedAt": "2026-01-05T15:15:50.777225+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "c085a3ab840d30172733e416e29a44a70e5a738696e96d35c7d8a8d6062a8dd1",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "dac92a277c3e1a102f11f1e1b6e5968a71e384b67f56a88f0911056e50b2eb3a",
+      "urls": [
+        "https://ziglang.org/documentation/master/#Formatting"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "178197c60855772bfec8ee274bcc7ff628684e17119666c0fcc3926ab51a8a0b",
+      "urls": [
+        "https://ziglang.org/documentation/master/std/"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "57d4cd623fae6ada5cd9af6d61d25a8633b6f6de60826a26a579c5ef77e54921",
+      "urls": [
+        "https://ziglang.org/documentation/master/"
+      ]
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "ef4cf767d2bacf7c55752a37600353195e80744f18e997eb56d4441e200fdcbf",
+      "urls": []
+    }
+  ]
+}

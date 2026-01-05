@@ -1,1 +1,3 @@
-# no-caller\n\nSee: https://eslint.org/docs/latest/rules/no-caller
+# no-caller
+
+See: https://eslint.org/docs/latest/rules/no-caller

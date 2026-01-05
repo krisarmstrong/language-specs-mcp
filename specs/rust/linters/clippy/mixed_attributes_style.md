@@ -1,1 +1,3 @@
-# mixed_attributes_style\n\nSee: https://rust-lang.github.io/rust-clippy/master/#mixed_attributes_style
+# mixed_attributes_style
+
+See: https://rust-lang.github.io/rust-clippy/master/#mixed_attributes_style

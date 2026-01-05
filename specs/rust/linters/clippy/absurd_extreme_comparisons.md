@@ -1,1 +1,3 @@
-# absurd_extreme_comparisons\n\nSee: https://rust-lang.github.io/rust-clippy/master/#absurd_extreme_comparisons
+# absurd_extreme_comparisons
+
+See: https://rust-lang.github.io/rust-clippy/master/#absurd_extreme_comparisons

@@ -1,1 +1,3 @@
-# BluetoothCharacteristicProperties\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties
+# BluetoothCharacteristicProperties
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties

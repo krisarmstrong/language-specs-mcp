@@ -1,0 +1,79 @@
+{
+  "language": "assembly",
+  "generatedAt": "2026-01-05T15:15:48.409201+00:00",
+  "files": [
+    {
+      "path": "arm32.md",
+      "sha256": "a45c4a7a3e7cf1243958c9797912326f1679baff3d30aa07627f687e05c1ffbb",
+      "urls": [
+        "https://developer.arm.com/documentation/ddi0406/latest"
+      ]
+    },
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "336da0ce943379000bc2e491037b0fd0b9b8f4fc48171942a6cb97568ffb1442",
+      "urls": []
+    },
+    {
+      "path": "wasm.md",
+      "sha256": "4a278f017c67b1c0fa32f170b05f36d92d768382d544f52ea639856cf47b719d",
+      "urls": [
+        "https://webassembly.github.io/spec/core/"
+      ]
+    },
+    {
+      "path": "aarch64.md",
+      "sha256": "411ca360920126bb111067782e7d076663cf2efb954aa71b615bc6342ced0dac",
+      "urls": [
+        "https://developer.arm.com/documentation/ddi0487/latest"
+      ]
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "2a8ab5b1238a7a48c7d096d867a49076d434bcce6681b911a3fb131a8515d9b9",
+      "urls": []
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "3605bde0be44cd7a3c8111e67a601c80088082b9d76d2f04b74562dd93296b87",
+      "urls": [
+        "https://learn.microsoft.com/en-us/cpp/build/x64-calling-convention",
+        "https://refspecs.linuxfoundation.org/elf/x86_64-abi-0.99.pdf"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "9146a58eee8420b68e00f5f375854c8e00c4115d615fde173c065509cabb7f54",
+      "urls": [
+        "https://developer.arm.com/documentation/ddi0487/latest",
+        "https://riscv.org/technical/specifications/",
+        "https://webassembly.github.io/spec/core/",
+        "https://www.felixcloutier.com/x86/"
+      ]
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "4e2da50f05935b379ccc4bac5895468402e3a381a445cb8bab9f00be781340dd",
+      "urls": []
+    },
+    {
+      "path": "arm64.md",
+      "sha256": "9e3747af7c492a26c65041344e35c567acba03b31b63bb83aac78ba1e37f035b",
+      "urls": []
+    },
+    {
+      "path": "x86-64.md",
+      "sha256": "0aedd823acf3ab06678ae68c3f96acfb933b12586e308db24a52d23045b4390b",
+      "urls": [
+        "https://www.felixcloutier.com/x86/"
+      ]
+    },
+    {
+      "path": "riscv.md",
+      "sha256": "21e7d747203ef670b559d7bc398a559651f30c01361e84671b405448cd378d58",
+      "urls": [
+        "https://riscv.org/technical/specifications/"
+      ]
+    }
+  ]
+}

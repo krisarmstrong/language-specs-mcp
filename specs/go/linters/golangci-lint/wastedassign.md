@@ -1,1 +1,3 @@
-# wastedassign\n\nSee: https://golangci-lint.run/docs/linters/wastedassign/
+# wastedassign
+
+See: https://golangci-lint.run/docs/linters/wastedassign/

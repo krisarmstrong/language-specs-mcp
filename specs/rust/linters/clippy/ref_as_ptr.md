@@ -1,1 +1,3 @@
-# ref_as_ptr\n\nSee: https://rust-lang.github.io/rust-clippy/master/#ref_as_ptr
+# ref_as_ptr
+
+See: https://rust-lang.github.io/rust-clippy/master/#ref_as_ptr

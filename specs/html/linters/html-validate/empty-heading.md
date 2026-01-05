@@ -1,1 +1,3 @@
-# empty-heading\n\nSee: https://html-validate.org/rules/empty-heading
+# empty-heading
+
+See: https://html-validate.org/rules/empty-heading

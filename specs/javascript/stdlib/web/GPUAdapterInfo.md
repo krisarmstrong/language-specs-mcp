@@ -1,1 +1,3 @@
-# GPUAdapterInfo\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapterInfo
+# GPUAdapterInfo
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GPUAdapterInfo

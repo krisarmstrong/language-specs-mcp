@@ -1,1 +1,3 @@
-# MediaTrackConstraints\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints
+# MediaTrackConstraints
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints

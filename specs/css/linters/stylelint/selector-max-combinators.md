@@ -1,1 +1,3 @@
-# selector-max-combinators\n\nSee: https://stylelint.io/user-guide/rules/selector-max-combinators
+# selector-max-combinators
+
+See: https://stylelint.io/user-guide/rules/selector-max-combinators

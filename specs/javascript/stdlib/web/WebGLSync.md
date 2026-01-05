@@ -1,1 +1,3 @@
-# WebGLSync\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/WebGLSync
+# WebGLSync
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/WebGLSync

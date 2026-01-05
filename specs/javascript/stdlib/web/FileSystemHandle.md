@@ -1,1 +1,3 @@
-# FileSystemHandle\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/FileSystemHandle
+# FileSystemHandle
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/FileSystemHandle

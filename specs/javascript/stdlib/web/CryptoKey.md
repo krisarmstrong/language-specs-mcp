@@ -1,1 +1,3 @@
-# CryptoKey\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey
+# CryptoKey
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey

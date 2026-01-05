@@ -1,1 +1,3 @@
-# trivial_regex\n\nSee: https://rust-lang.github.io/rust-clippy/master/#trivial_regex
+# trivial_regex
+
+See: https://rust-lang.github.io/rust-clippy/master/#trivial_regex

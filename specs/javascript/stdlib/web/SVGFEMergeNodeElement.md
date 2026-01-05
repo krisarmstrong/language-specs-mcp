@@ -1,1 +1,3 @@
-# SVGFEMergeNodeElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SVGFEMergeNodeElement
+# SVGFEMergeNodeElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SVGFEMergeNodeElement

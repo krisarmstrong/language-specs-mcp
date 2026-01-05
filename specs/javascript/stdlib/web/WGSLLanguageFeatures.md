@@ -1,1 +1,3 @@
-# WGSLLanguageFeatures\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/WGSLLanguageFeatures
+# WGSLLanguageFeatures
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/WGSLLanguageFeatures

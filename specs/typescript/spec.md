@@ -1,4 +1,8 @@
 # TypeScript Language Specification
+Version: unknown
+
+Source: https://www.typescriptlang.org/docs/handbook/
+
 
 ## Basic Types
 

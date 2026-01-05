@@ -1,1 +1,7 @@
-# Rust Reference\n\nSee: https://doc.rust-lang.org/reference/
+# Rust Reference
+Version: unknown
+
+Source: https://doc.rust-lang.org/reference/
+
+
+See: https://doc.rust-lang.org/reference/

@@ -1,1 +1,3 @@
-# manual_memcpy\n\nSee: https://rust-lang.github.io/rust-clippy/master/#manual_memcpy
+# manual_memcpy
+
+See: https://rust-lang.github.io/rust-clippy/master/#manual_memcpy

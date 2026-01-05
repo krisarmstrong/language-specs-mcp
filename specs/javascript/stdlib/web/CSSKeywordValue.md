@@ -1,1 +1,3 @@
-# CSSKeywordValue\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CSSKeywordValue
+# CSSKeywordValue
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CSSKeywordValue

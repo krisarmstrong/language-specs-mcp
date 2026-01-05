@@ -1,1 +1,3 @@
-# Path2D\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Path2D
+# Path2D
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Path2D

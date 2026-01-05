@@ -1,1 +1,3 @@
-# XRRenderState\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState
+# XRRenderState
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState

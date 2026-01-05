@@ -1,1 +1,3 @@
-# no-proto\n\nSee: https://eslint.org/docs/latest/rules/no-proto
+# no-proto
+
+See: https://eslint.org/docs/latest/rules/no-proto

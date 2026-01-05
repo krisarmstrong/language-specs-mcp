@@ -1,1 +1,3 @@
-# IDBRequest\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest
+# IDBRequest
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest

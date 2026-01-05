@@ -1,1 +1,3 @@
-# no-prototype-builtins\n\nSee: https://eslint.org/docs/latest/rules/no-prototype-builtins
+# no-prototype-builtins
+
+See: https://eslint.org/docs/latest/rules/no-prototype-builtins

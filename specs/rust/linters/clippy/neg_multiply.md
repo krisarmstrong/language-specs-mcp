@@ -1,1 +1,3 @@
-# neg_multiply\n\nSee: https://rust-lang.github.io/rust-clippy/master/#neg_multiply
+# neg_multiply
+
+See: https://rust-lang.github.io/rust-clippy/master/#neg_multiply

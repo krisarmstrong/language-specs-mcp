@@ -1,1 +1,3 @@
-# IDBTransaction\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction
+# IDBTransaction
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction

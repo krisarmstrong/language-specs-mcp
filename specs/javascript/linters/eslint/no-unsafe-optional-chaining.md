@@ -1,1 +1,3 @@
-# no-unsafe-optional-chaining\n\nSee: https://eslint.org/docs/latest/rules/no-unsafe-optional-chaining
+# no-unsafe-optional-chaining
+
+See: https://eslint.org/docs/latest/rules/no-unsafe-optional-chaining

@@ -1,1 +1,3 @@
-# accessor-pairs\n\nSee: https://eslint.org/docs/latest/rules/accessor-pairs
+# accessor-pairs
+
+See: https://eslint.org/docs/latest/rules/accessor-pairs

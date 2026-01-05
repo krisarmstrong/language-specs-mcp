@@ -1,1 +1,3 @@
-# unique-landmark\n\nSee: https://html-validate.org/rules/unique-landmark
+# unique-landmark
+
+See: https://html-validate.org/rules/unique-landmark

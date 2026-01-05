@@ -1,1 +1,3 @@
-# GPUCompilationInfo\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GPUCompilationInfo
+# GPUCompilationInfo
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GPUCompilationInfo

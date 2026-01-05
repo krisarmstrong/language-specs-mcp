@@ -1,1 +1,3 @@
-# Lua Standard Libraries\n\nSee: https://www.lua.org/manual/5.4/manual.html#6
+# Lua Standard Libraries
+
+See: https://www.lua.org/manual/5.4/manual.html#6

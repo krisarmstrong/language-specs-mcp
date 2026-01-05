@@ -1,1 +1,3 @@
-# FileReader\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/FileReader
+# FileReader
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/FileReader

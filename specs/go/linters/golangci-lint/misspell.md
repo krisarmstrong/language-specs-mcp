@@ -1,1 +1,3 @@
-# misspell\n\nSee: https://golangci-lint.run/docs/linters/misspell/
+# misspell
+
+See: https://golangci-lint.run/docs/linters/misspell/

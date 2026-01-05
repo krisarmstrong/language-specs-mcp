@@ -1,1 +1,3 @@
-# no-undef\n\nSee: https://eslint.org/docs/latest/rules/no-undef
+# no-undef
+
+See: https://eslint.org/docs/latest/rules/no-undef

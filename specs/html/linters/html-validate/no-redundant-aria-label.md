@@ -1,1 +1,3 @@
-# no-redundant-aria-label\n\nSee: https://html-validate.org/rules/no-redundant-aria-label
+# no-redundant-aria-label
+
+See: https://html-validate.org/rules/no-redundant-aria-label

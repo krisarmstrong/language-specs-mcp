@@ -1,1 +1,3 @@
-# map_identity\n\nSee: https://rust-lang.github.io/rust-clippy/master/#map_identity
+# map_identity
+
+See: https://rust-lang.github.io/rust-clippy/master/#map_identity

@@ -1,1 +1,3 @@
-# operator-assignment\n\nSee: https://eslint.org/docs/latest/rules/operator-assignment
+# operator-assignment
+
+See: https://eslint.org/docs/latest/rules/operator-assignment

@@ -1,1 +1,3 @@
-# gocheckcompilerdirectives\n\nSee: https://golangci-lint.run/docs/linters/gocheckcompilerdirectives/
+# gocheckcompilerdirectives
+
+See: https://golangci-lint.run/docs/linters/gocheckcompilerdirectives/

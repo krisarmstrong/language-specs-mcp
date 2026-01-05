@@ -1,1 +1,3 @@
-# element-permitted-content\n\nSee: https://html-validate.org/rules/element-permitted-content
+# element-permitted-content
+
+See: https://html-validate.org/rules/element-permitted-content

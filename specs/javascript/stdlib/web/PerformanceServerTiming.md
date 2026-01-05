@@ -1,1 +1,3 @@
-# PerformanceServerTiming\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceServerTiming
+# PerformanceServerTiming
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceServerTiming

@@ -1,1 +1,3 @@
-# redundant_locals\n\nSee: https://rust-lang.github.io/rust-clippy/master/#redundant_locals
+# redundant_locals
+
+See: https://rust-lang.github.io/rust-clippy/master/#redundant_locals

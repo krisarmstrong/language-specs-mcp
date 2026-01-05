@@ -1,1 +1,3 @@
-# no-useless-rename\n\nSee: https://eslint.org/docs/latest/rules/no-useless-rename
+# no-useless-rename
+
+See: https://eslint.org/docs/latest/rules/no-useless-rename

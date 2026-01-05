@@ -1,1 +1,3 @@
-# Bluetooth\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth
+# Bluetooth
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth

@@ -1,1 +1,3 @@
-# complexity\n\nSee: https://eslint.org/docs/latest/rules/complexity
+# complexity
+
+See: https://eslint.org/docs/latest/rules/complexity

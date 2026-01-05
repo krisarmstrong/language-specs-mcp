@@ -1,1 +1,3 @@
-# lightness-notation\n\nSee: https://stylelint.io/user-guide/rules/lightness-notation
+# lightness-notation
+
+See: https://stylelint.io/user-guide/rules/lightness-notation

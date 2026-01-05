@@ -1,1 +1,7 @@
-# ECMAScript Language Specification\n\nSee: https://tc39.es/ecma262/
+# ECMAScript Language Specification
+Version: latest
+
+Source: https://tc39.es/ecma262/
+
+
+See: https://tc39.es/ecma262/

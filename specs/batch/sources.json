@@ -1,0 +1,35 @@
+{
+  "language": "batch",
+  "generatedAt": "2026-01-05T15:15:48.571884+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "0ee2273bdbd4a7027ead81a6188c0cd8b692b489939a5d063e2f43d7c39f0f61",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "db186a0cd91a63674159b11a3d2c300833f71f3969d6f68c350a2fd5e509b586",
+      "urls": []
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "d733b268fa0dc2b833aa099087a3b52b866a059d17cfff2d4c6fdf0030d29adb",
+      "urls": [
+        "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "025b06ffdea498420498380de49498bc6bbf615dd6dfc8a23fbff7567e89f370",
+      "urls": [
+        "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands"
+      ]
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "707647fdcd5ba6b01d7967cd552a160b90ef0f1804693175b0f8da26289103ca",
+      "urls": []
+    }
+  ]
+}

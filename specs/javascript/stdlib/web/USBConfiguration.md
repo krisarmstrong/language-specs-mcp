@@ -1,1 +1,3 @@
-# USBConfiguration\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/USBConfiguration
+# USBConfiguration
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/USBConfiguration

@@ -1,1 +1,3 @@
-# Event\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/Event
+# Event
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/Event

@@ -1,1 +1,3 @@
-# no-script-url\n\nSee: https://eslint.org/docs/latest/rules/no-script-url
+# no-script-url
+
+See: https://eslint.org/docs/latest/rules/no-script-url

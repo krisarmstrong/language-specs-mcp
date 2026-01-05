@@ -1,1 +1,3 @@
-# manual_strip\n\nSee: https://rust-lang.github.io/rust-clippy/master/#manual_strip
+# manual_strip
+
+See: https://rust-lang.github.io/rust-clippy/master/#manual_strip

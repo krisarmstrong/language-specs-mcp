@@ -1,1 +1,3 @@
-# Git Command Reference\n\nSee: https://git-scm.com/docs/git
+# Git Command Reference
+
+See: https://git-scm.com/docs/git

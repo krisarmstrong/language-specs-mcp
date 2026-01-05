@@ -1,1 +1,3 @@
-# ExtendableMessageEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent
+# ExtendableMessageEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent

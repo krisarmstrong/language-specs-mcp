@@ -1,0 +1,125 @@
+{
+  "language": "kotlin",
+  "fetchedAt": "2026-01-04T18:47:57Z",
+  "counts": {
+    "spec": 1,
+    "stdlib": 2,
+    "linters": 4,
+    "formatters": 2,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/index.md",
+        "name": "stdlib/packages/index"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/ktlint/overview.md",
+        "name": "linters/ktlint/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/detekt/overview.md",
+        "name": "linters/detekt/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/detekt/comments.md",
+        "name": "linters/detekt/comments"
+      },
+      {
+        "category": "linters",
+        "path": "linters/detekt/rules.md",
+        "name": "linters/detekt/rules"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/ktfmt.md",
+        "name": "formatters/ktfmt"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/index.md",
+      "name": "stdlib/packages/index"
+    },
+    {
+      "category": "linters",
+      "path": "linters/ktlint/overview.md",
+      "name": "linters/ktlint/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/detekt/overview.md",
+      "name": "linters/detekt/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/detekt/comments.md",
+      "name": "linters/detekt/comments"
+    },
+    {
+      "category": "linters",
+      "path": "linters/detekt/rules.md",
+      "name": "linters/detekt/rules"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/ktfmt.md",
+      "name": "formatters/ktfmt"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

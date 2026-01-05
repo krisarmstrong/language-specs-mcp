@@ -1,0 +1,40 @@
+{
+  "language": "ocaml",
+  "generatedAt": "2026-01-05T15:15:50.015989+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "e4cf175e6474c782302af57ded4a1dcd130ca7ca3136a9199a8eacae0d88a16c",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "e1d125a9bbf42f9c6036e4265e18c2935412e65d99bd03267ebc523c7f494a0c",
+      "urls": [
+        "https://github.com/ocaml-ppx/ocamlformat"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "536aa3a316be20e66d4ce321bd9ec02e969e0262345de4692fc2d638701aff3c",
+      "urls": [
+        "https://ocaml.org/manual/stdlib.html"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "98c8fd545edeb91b0242580d7c3f2f1a507e1045c430d9584bdfdd6fa827d3c8",
+      "urls": [
+        "https://ocaml.org/manual/"
+      ]
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "676c6a0d55c859b7b4ba9d1474202293e134a9d194909ef6dc5474ddfb82a976",
+      "urls": [
+        "https://github.com/ocaml-ppx/ocamlformat",
+        "https://github.com/ocaml/odoc"
+      ]
+    }
+  ]
+}

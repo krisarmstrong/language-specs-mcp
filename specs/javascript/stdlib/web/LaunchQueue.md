@@ -1,1 +1,3 @@
-# LaunchQueue\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/LaunchQueue
+# LaunchQueue
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/LaunchQueue

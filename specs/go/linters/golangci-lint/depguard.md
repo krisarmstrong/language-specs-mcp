@@ -1,1 +1,3 @@
-# depguard\n\nSee: https://golangci-lint.run/docs/linters/depguard/
+# depguard
+
+See: https://golangci-lint.run/docs/linters/depguard/

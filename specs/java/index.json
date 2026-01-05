@@ -1,0 +1,2415 @@
+{
+  "language": "java",
+  "fetchedAt": "2026-01-04T18:47:16Z",
+  "counts": {
+    "spec": 1,
+    "stdlib": 228,
+    "linters": 7,
+    "formatters": 2,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/collections.md",
+        "name": "stdlib/collections"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.naming.javax.naming.ldap.spi.md",
+        "name": "stdlib/packages/java.naming.javax.naming.ldap.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.imageio.plugins.jpeg.md",
+        "name": "stdlib/packages/java.desktop.javax.imageio.plugins.jpeg"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.scripting.javax.script.md",
+        "name": "stdlib/packages/java.scripting.javax.script"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.lang.constant.md",
+        "name": "stdlib/packages/java.base.java.lang.constant"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.sound.sampled.md",
+        "name": "stdlib/packages/java.desktop.javax.sound.sampled"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.nio.channels.md",
+        "name": "stdlib/packages/java.base.java.nio.channels"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.table.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.table"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.awt.event.md",
+        "name": "stdlib/packages/java.desktop.java.awt.event"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.org.xml.sax.ext.md",
+        "name": "stdlib/packages/java.xml.org.xml.sax.ext"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.print.attribute.md",
+        "name": "stdlib/packages/java.desktop.javax.print.attribute"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.javax.crypto.interfaces.md",
+        "name": "stdlib/packages/java.base.javax.crypto.interfaces"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.awt.md",
+        "name": "stdlib/packages/java.desktop.java.awt"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.sql.rowset.javax.sql.rowset.md",
+        "name": "stdlib/packages/java.sql.rowset.javax.sql.rowset"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.security.spec.md",
+        "name": "stdlib/packages/java.base.java.security.spec"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.rmi.java.rmi.dgc.md",
+        "name": "stdlib/packages/java.rmi.java.rmi.dgc"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.keyinfo.md",
+        "name": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.keyinfo"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.plaf.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.plaf"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.md",
+        "name": "stdlib/packages/java.xml.javax.xml"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.imageio.metadata.md",
+        "name": "stdlib/packages/java.desktop.javax.imageio.metadata"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.lang.runtime.md",
+        "name": "stdlib/packages/java.base.java.lang.runtime"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.stream.events.md",
+        "name": "stdlib/packages/java.xml.javax.xml.stream.events"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.naming.javax.naming.ldap.md",
+        "name": "stdlib/packages/java.naming.javax.naming.ldap"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.security.auth.com.sun.security.auth.module.md",
+        "name": "stdlib/packages/jdk.security.auth.com.sun.security.auth.module"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.org.xml.sax.helpers.md",
+        "name": "stdlib/packages/java.xml.org.xml.sax.helpers"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.validation.md",
+        "name": "stdlib/packages/java.xml.javax.xml.validation"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.compiler.com.sun.tools.javac.md",
+        "name": "stdlib/packages/jdk.compiler.com.sun.tools.javac"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.javax.security.cert.md",
+        "name": "stdlib/packages/java.base.javax.security.cert"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.util.spi.md",
+        "name": "stdlib/packages/java.base.java.util.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.compiler.com.sun.source.doctree.md",
+        "name": "stdlib/packages/jdk.compiler.com.sun.source.doctree"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.undo.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.undo"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.attach.com.sun.tools.attach.spi.md",
+        "name": "stdlib/packages/jdk.attach.com.sun.tools.attach.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.security.md",
+        "name": "stdlib/packages/java.base.java.security"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.instrument.java.lang.instrument.md",
+        "name": "stdlib/packages/java.instrument.java.lang.instrument"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.util.concurrent.atomic.md",
+        "name": "stdlib/packages/java.base.java.util.concurrent.atomic"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.nio.charset.md",
+        "name": "stdlib/packages/java.base.java.nio.charset"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.xml.dom.org.w3c.dom.css.md",
+        "name": "stdlib/packages/jdk.xml.dom.org.w3c.dom.css"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.javax.security.auth.callback.md",
+        "name": "stdlib/packages/java.base.javax.security.auth.callback"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.util.md",
+        "name": "stdlib/packages/java.base.java.util"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.net.spi.md",
+        "name": "stdlib/packages/java.base.java.net.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.plaf.basic.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.plaf.basic"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.prefs.java.util.prefs.md",
+        "name": "stdlib/packages/java.prefs.java.util.prefs"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jfr.jdk.jfr.consumer.md",
+        "name": "stdlib/packages/jdk.jfr.jdk.jfr.consumer"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.awt.color.md",
+        "name": "stdlib/packages/java.desktop.java.awt.color"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.xml.dom.org.w3c.dom.stylesheets.md",
+        "name": "stdlib/packages/jdk.xml.dom.org.w3c.dom.stylesheets"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.org.w3c.dom.ranges.md",
+        "name": "stdlib/packages/java.xml.org.w3c.dom.ranges"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.nio.file.spi.md",
+        "name": "stdlib/packages/java.base.java.nio.file.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.io.md",
+        "name": "stdlib/packages/java.base.java.io"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.stream.md",
+        "name": "stdlib/packages/java.xml.javax.xml.stream"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.compiler.com.sun.source.util.md",
+        "name": "stdlib/packages/jdk.compiler.com.sun.source.util"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.md",
+        "name": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.sql.rowset.javax.sql.rowset.serial.md",
+        "name": "stdlib/packages/java.sql.rowset.javax.sql.rowset.serial"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.transform.stream.md",
+        "name": "stdlib/packages/java.xml.javax.xml.transform.stream"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.text.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.text"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.rmi.java.rmi.registry.md",
+        "name": "stdlib/packages/java.rmi.java.rmi.registry"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.util.zip.md",
+        "name": "stdlib/packages/java.base.java.util.zip"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.net.http.java.net.http.md",
+        "name": "stdlib/packages/java.net.http.java.net.http"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.naming.javax.naming.md",
+        "name": "stdlib/packages/java.naming.javax.naming"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.time.chrono.md",
+        "name": "stdlib/packages/java.base.java.time.chrono"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.org.w3c.dom.ls.md",
+        "name": "stdlib/packages/java.xml.org.w3c.dom.ls"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.javax.security.auth.x500.md",
+        "name": "stdlib/packages/java.base.javax.security.auth.x500"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.security.interfaces.md",
+        "name": "stdlib/packages/java.base.java.security.interfaces"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.awt.image.renderable.md",
+        "name": "stdlib/packages/java.desktop.java.awt.image.renderable"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.nio.charset.spi.md",
+        "name": "stdlib/packages/java.base.java.nio.charset.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.management.javax.management.md",
+        "name": "stdlib/packages/java.management.javax.management"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.lang.ref.md",
+        "name": "stdlib/packages/java.base.java.lang.ref"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.dom.md",
+        "name": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.dom"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.imageio.event.md",
+        "name": "stdlib/packages/java.desktop.javax.imageio.event"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.imageio.plugins.tiff.md",
+        "name": "stdlib/packages/java.desktop.javax.imageio.plugins.tiff"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.applet.md",
+        "name": "stdlib/packages/java.desktop.java.applet"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.logging.java.util.logging.md",
+        "name": "stdlib/packages/java.logging.java.util.logging"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.util.regex.md",
+        "name": "stdlib/packages/java.base.java.util.regex"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.border.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.border"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.imageio.plugins.bmp.md",
+        "name": "stdlib/packages/java.desktop.javax.imageio.plugins.bmp"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.nio.channels.spi.md",
+        "name": "stdlib/packages/java.base.java.nio.channels.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.text.spi.md",
+        "name": "stdlib/packages/java.base.java.text.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jsobject.netscape.javascript.md",
+        "name": "stdlib/packages/jdk.jsobject.netscape.javascript"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.awt.font.md",
+        "name": "stdlib/packages/java.desktop.java.awt.font"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.javax.net.ssl.md",
+        "name": "stdlib/packages/java.base.javax.net.ssl"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.javax.crypto.md",
+        "name": "stdlib/packages/java.base.javax.crypto"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.compiler.javax.lang.model.util.md",
+        "name": "stdlib/packages/java.compiler.javax.lang.model.util"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.javax.security.auth.login.md",
+        "name": "stdlib/packages/java.base.javax.security.auth.login"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.attach.com.sun.tools.attach.md",
+        "name": "stdlib/packages/jdk.attach.com.sun.tools.attach"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.time.md",
+        "name": "stdlib/packages/java.base.java.time"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.lang.md",
+        "name": "stdlib/packages/java.base.java.lang"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.print.event.md",
+        "name": "stdlib/packages/java.desktop.javax.print.event"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.util.function.md",
+        "name": "stdlib/packages/java.base.java.util.function"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.plaf.metal.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.plaf.metal"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.awt.dnd.md",
+        "name": "stdlib/packages/java.desktop.java.awt.dnd"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.util.random.md",
+        "name": "stdlib/packages/java.base.java.util.random"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.md",
+        "name": "stdlib/packages/jdk.dynalink.jdk.dynalink"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.util.stream.md",
+        "name": "stdlib/packages/java.base.java.util.stream"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.imageio.spi.md",
+        "name": "stdlib/packages/java.desktop.javax.imageio.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.colorchooser.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.colorchooser"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.linker.md",
+        "name": "stdlib/packages/jdk.dynalink.jdk.dynalink.linker"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jartool.jdk.security.jarsigner.md",
+        "name": "stdlib/packages/jdk.jartool.jdk.security.jarsigner"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.compiler.com.sun.source.tree.md",
+        "name": "stdlib/packages/jdk.compiler.com.sun.source.tree"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.compiler.javax.tools.md",
+        "name": "stdlib/packages/java.compiler.javax.tools"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.compiler.javax.lang.model.type.md",
+        "name": "stdlib/packages/java.compiler.javax.lang.model.type"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.rmi.javax.rmi.ssl.md",
+        "name": "stdlib/packages/java.rmi.javax.rmi.ssl"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.sctp.com.sun.nio.sctp.md",
+        "name": "stdlib/packages/jdk.sctp.com.sun.nio.sctp"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jdi.com.sun.jdi.md",
+        "name": "stdlib/packages/jdk.jdi.com.sun.jdi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.naming.javax.naming.event.md",
+        "name": "stdlib/packages/java.naming.javax.naming.event"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jconsole.com.sun.tools.jconsole.md",
+        "name": "stdlib/packages/jdk.jconsole.com.sun.tools.jconsole"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.javax.net.md",
+        "name": "stdlib/packages/java.base.javax.net"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.awt.im.spi.md",
+        "name": "stdlib/packages/java.desktop.java.awt.im.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.awt.im.md",
+        "name": "stdlib/packages/java.desktop.java.awt.im"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.transform.sax.md",
+        "name": "stdlib/packages/java.xml.javax.xml.transform.sax"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.sound.sampled.spi.md",
+        "name": "stdlib/packages/java.desktop.javax.sound.sampled.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.md",
+        "name": "stdlib/packages/java.desktop.javax.swing"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.management.jfr.jdk.management.jfr.md",
+        "name": "stdlib/packages/jdk.management.jfr.jdk.management.jfr"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.sql.java.sql.md",
+        "name": "stdlib/packages/java.sql.java.sql"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.awt.geom.md",
+        "name": "stdlib/packages/java.desktop.java.awt.geom"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.org.w3c.dom.bootstrap.md",
+        "name": "stdlib/packages/java.xml.org.w3c.dom.bootstrap"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.tree.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.tree"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.parsers.md",
+        "name": "stdlib/packages/java.xml.javax.xml.parsers"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.print.attribute.standard.md",
+        "name": "stdlib/packages/java.desktop.javax.print.attribute.standard"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.sound.midi.spi.md",
+        "name": "stdlib/packages/java.desktop.javax.sound.midi.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.javax.security.auth.md",
+        "name": "stdlib/packages/java.base.javax.security.auth"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.nio.mapmode.jdk.nio.mapmode.md",
+        "name": "stdlib/packages/jdk.nio.mapmode.jdk.nio.mapmode"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jdi.com.sun.jdi.connect.spi.md",
+        "name": "stdlib/packages/jdk.jdi.com.sun.jdi.connect.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.md",
+        "name": "stdlib/packages/java.xml.crypto.javax.xml.crypto"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.beans.md",
+        "name": "stdlib/packages/java.desktop.java.beans"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.lang.foreign.md",
+        "name": "stdlib/packages/java.base.java.lang.foreign"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.text.html.parser.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.text.html.parser"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/index.md",
+        "name": "stdlib/packages/index"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.beans.beancontext.md",
+        "name": "stdlib/packages/java.desktop.java.beans.beancontext"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.datatype.md",
+        "name": "stdlib/packages/java.xml.javax.xml.datatype"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.lang.reflect.md",
+        "name": "stdlib/packages/java.base.java.lang.reflect"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.transform.md",
+        "name": "stdlib/packages/java.xml.javax.xml.transform"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.xpath.md",
+        "name": "stdlib/packages/java.xml.javax.xml.xpath"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.security.jgss.javax.security.auth.kerberos.md",
+        "name": "stdlib/packages/java.security.jgss.javax.security.auth.kerberos"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.plaf.synth.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.plaf.synth"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.text.rtf.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.text.rtf"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.security.auth.com.sun.security.auth.login.md",
+        "name": "stdlib/packages/jdk.security.auth.com.sun.security.auth.login"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.filechooser.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.filechooser"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.naming.javax.naming.spi.md",
+        "name": "stdlib/packages/java.naming.javax.naming.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.sql.javax.sql.md",
+        "name": "stdlib/packages/java.sql.javax.sql"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.net.md",
+        "name": "stdlib/packages/java.base.java.net"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.math.md",
+        "name": "stdlib/packages/java.base.java.math"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.support.md",
+        "name": "stdlib/packages/jdk.dynalink.jdk.dynalink.support"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.management.javax.management.openmbean.md",
+        "name": "stdlib/packages/java.management.javax.management.openmbean"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jshell.jdk.jshell.execution.md",
+        "name": "stdlib/packages/jdk.jshell.jdk.jshell.execution"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jshell.jdk.jshell.tool.md",
+        "name": "stdlib/packages/jdk.jshell.jdk.jshell.tool"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.awt.print.md",
+        "name": "stdlib/packages/java.desktop.java.awt.print"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.management.rmi.javax.management.remote.rmi.md",
+        "name": "stdlib/packages/java.management.rmi.javax.management.remote.rmi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.nio.file.attribute.md",
+        "name": "stdlib/packages/java.base.java.nio.file.attribute"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.nio.md",
+        "name": "stdlib/packages/java.base.java.nio"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.compiler.javax.lang.model.element.md",
+        "name": "stdlib/packages/java.compiler.javax.lang.model.element"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.org.w3c.dom.md",
+        "name": "stdlib/packages/java.xml.org.w3c.dom"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.imageio.stream.md",
+        "name": "stdlib/packages/java.desktop.javax.imageio.stream"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.imageio.md",
+        "name": "stdlib/packages/java.desktop.javax.imageio"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.org.w3c.dom.views.md",
+        "name": "stdlib/packages/java.xml.org.w3c.dom.views"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.time.format.md",
+        "name": "stdlib/packages/java.base.java.time.format"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.util.concurrent.locks.md",
+        "name": "stdlib/packages/java.base.java.util.concurrent.locks"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jdi.com.sun.jdi.connect.md",
+        "name": "stdlib/packages/jdk.jdi.com.sun.jdi.connect"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jshell.jdk.jshell.md",
+        "name": "stdlib/packages/jdk.jshell.jdk.jshell"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.datatransfer.java.awt.datatransfer.md",
+        "name": "stdlib/packages/java.datatransfer.java.awt.datatransfer"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.rmi.java.rmi.md",
+        "name": "stdlib/packages/java.rmi.java.rmi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.management.javax.management.monitor.md",
+        "name": "stdlib/packages/java.management.javax.management.monitor"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.print.md",
+        "name": "stdlib/packages/java.desktop.javax.print"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.linker.support.md",
+        "name": "stdlib/packages/jdk.dynalink.jdk.dynalink.linker.support"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.xml.dom.org.w3c.dom.xpath.md",
+        "name": "stdlib/packages/jdk.xml.dom.org.w3c.dom.xpath"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.smartcardio.javax.smartcardio.md",
+        "name": "stdlib/packages/java.smartcardio.javax.smartcardio"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.accessibility.com.sun.java.accessibility.util.md",
+        "name": "stdlib/packages/jdk.accessibility.com.sun.java.accessibility.util"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.text.md",
+        "name": "stdlib/packages/java.base.java.text"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.accessibility.md",
+        "name": "stdlib/packages/java.desktop.javax.accessibility"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jfr.jdk.jfr.md",
+        "name": "stdlib/packages/jdk.jfr.jdk.jfr"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.compiler.javax.annotation.processing.md",
+        "name": "stdlib/packages/java.compiler.javax.annotation.processing"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.org.xml.sax.md",
+        "name": "stdlib/packages/java.xml.org.xml.sax"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.org.w3c.dom.traversal.md",
+        "name": "stdlib/packages/java.xml.org.w3c.dom.traversal"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.naming.javax.naming.directory.md",
+        "name": "stdlib/packages/java.naming.javax.naming.directory"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.security.auth.com.sun.security.auth.callback.md",
+        "name": "stdlib/packages/jdk.security.auth.com.sun.security.auth.callback"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.lang.module.md",
+        "name": "stdlib/packages/java.base.java.lang.module"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.lang.invoke.md",
+        "name": "stdlib/packages/java.base.java.lang.invoke"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dom.md",
+        "name": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dom"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.management.com.sun.management.md",
+        "name": "stdlib/packages/jdk.management.com.sun.management"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.rmi.java.rmi.server.md",
+        "name": "stdlib/packages/java.rmi.java.rmi.server"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.javax.security.auth.spi.md",
+        "name": "stdlib/packages/java.base.javax.security.auth.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.lang.annotation.md",
+        "name": "stdlib/packages/java.base.java.lang.annotation"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.spec.md",
+        "name": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.spec"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.event.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.event"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.beans.md",
+        "name": "stdlib/packages/jdk.dynalink.jdk.dynalink.beans"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.javadoc.jdk.javadoc.doclet.md",
+        "name": "stdlib/packages/jdk.javadoc.jdk.javadoc.doclet"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.time.temporal.md",
+        "name": "stdlib/packages/java.base.java.time.temporal"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.management.javax.management.relation.md",
+        "name": "stdlib/packages/java.management.javax.management.relation"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.namespace.md",
+        "name": "stdlib/packages/java.xml.javax.xml.namespace"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.plaf.nimbus.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.plaf.nimbus"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.transform.stax.md",
+        "name": "stdlib/packages/java.xml.javax.xml.transform.stax"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.transaction.xa.javax.transaction.xa.md",
+        "name": "stdlib/packages/java.transaction.xa.javax.transaction.xa"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jdi.com.sun.jdi.event.md",
+        "name": "stdlib/packages/jdk.jdi.com.sun.jdi.event"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.net.jdk.net.md",
+        "name": "stdlib/packages/jdk.net.jdk.net"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.management.javax.management.remote.md",
+        "name": "stdlib/packages/java.management.javax.management.remote"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.stream.util.md",
+        "name": "stdlib/packages/java.xml.javax.xml.stream.util"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.nio.file.md",
+        "name": "stdlib/packages/java.base.java.nio.file"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.security.jgss.com.sun.security.jgss.md",
+        "name": "stdlib/packages/jdk.security.jgss.com.sun.security.jgss"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.xml.dom.org.w3c.dom.html.md",
+        "name": "stdlib/packages/jdk.xml.dom.org.w3c.dom.html"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.management.javax.management.modelmbean.md",
+        "name": "stdlib/packages/java.management.javax.management.modelmbean"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jdi.com.sun.jdi.request.md",
+        "name": "stdlib/packages/jdk.jdi.com.sun.jdi.request"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.util.concurrent.md",
+        "name": "stdlib/packages/java.base.java.util.concurrent"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.security.auth.com.sun.security.auth.md",
+        "name": "stdlib/packages/jdk.security.auth.com.sun.security.auth"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.security.cert.md",
+        "name": "stdlib/packages/java.base.java.security.cert"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.httpserver.com.sun.net.httpserver.md",
+        "name": "stdlib/packages/jdk.httpserver.com.sun.net.httpserver"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.catalog.md",
+        "name": "stdlib/packages/java.xml.javax.xml.catalog"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.javax.crypto.spec.md",
+        "name": "stdlib/packages/java.base.javax.crypto.spec"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.javax.xml.transform.dom.md",
+        "name": "stdlib/packages/java.xml.javax.xml.transform.dom"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.xml.org.w3c.dom.events.md",
+        "name": "stdlib/packages/java.xml.org.w3c.dom.events"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.incubator.vector.jdk.incubator.vector.md",
+        "name": "stdlib/packages/jdk.incubator.vector.jdk.incubator.vector"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.util.jar.md",
+        "name": "stdlib/packages/java.base.java.util.jar"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.plaf.multi.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.plaf.multi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.security.sasl.javax.security.sasl.md",
+        "name": "stdlib/packages/java.security.sasl.javax.security.sasl"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.base.java.time.zone.md",
+        "name": "stdlib/packages/java.base.java.time.zone"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.management.javax.management.loading.md",
+        "name": "stdlib/packages/java.management.javax.management.loading"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.compiler.javax.lang.model.md",
+        "name": "stdlib/packages/java.compiler.javax.lang.model"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.awt.image.md",
+        "name": "stdlib/packages/java.desktop.java.awt.image"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.management.javax.management.timer.md",
+        "name": "stdlib/packages/java.management.javax.management.timer"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.sql.rowset.javax.sql.rowset.spi.md",
+        "name": "stdlib/packages/java.sql.rowset.javax.sql.rowset.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.jshell.jdk.jshell.spi.md",
+        "name": "stdlib/packages/jdk.jshell.jdk.jshell.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.httpserver.com.sun.net.httpserver.spi.md",
+        "name": "stdlib/packages/jdk.httpserver.com.sun.net.httpserver.spi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.java.awt.desktop.md",
+        "name": "stdlib/packages/java.desktop.java.awt.desktop"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.sound.midi.md",
+        "name": "stdlib/packages/java.desktop.javax.sound.midi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.management.java.lang.management.md",
+        "name": "stdlib/packages/java.management.java.lang.management"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.security.jgss.org.ietf.jgss.md",
+        "name": "stdlib/packages/java.security.jgss.org.ietf.jgss"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/jdk.net.jdk.nio.md",
+        "name": "stdlib/packages/jdk.net.jdk.nio"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/packages/java.desktop.javax.swing.text.html.md",
+        "name": "stdlib/packages/java.desktop.javax.swing.text.html"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/concurrency.md",
+        "name": "stdlib/concurrency"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/io.md",
+        "name": "stdlib/io"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/error-prone/overview.md",
+        "name": "linters/error-prone/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/error-prone/DoNotCall.md",
+        "name": "linters/error-prone/DoNotCall"
+      },
+      {
+        "category": "linters",
+        "path": "linters/checkstyle/overview.md",
+        "name": "linters/checkstyle/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/checkstyle/rules.md",
+        "name": "linters/checkstyle/rules"
+      },
+      {
+        "category": "linters",
+        "path": "linters/overview.md",
+        "name": "linters/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/spotbugs/overview.md",
+        "name": "linters/spotbugs/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/pmd/overview.md",
+        "name": "linters/pmd/overview"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/google-java-format.md",
+        "name": "formatters/google-java-format"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/collections.md",
+      "name": "stdlib/collections"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.naming.javax.naming.ldap.spi.md",
+      "name": "stdlib/packages/java.naming.javax.naming.ldap.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.imageio.plugins.jpeg.md",
+      "name": "stdlib/packages/java.desktop.javax.imageio.plugins.jpeg"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.scripting.javax.script.md",
+      "name": "stdlib/packages/java.scripting.javax.script"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.lang.constant.md",
+      "name": "stdlib/packages/java.base.java.lang.constant"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.sound.sampled.md",
+      "name": "stdlib/packages/java.desktop.javax.sound.sampled"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.nio.channels.md",
+      "name": "stdlib/packages/java.base.java.nio.channels"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.table.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.table"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.awt.event.md",
+      "name": "stdlib/packages/java.desktop.java.awt.event"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.org.xml.sax.ext.md",
+      "name": "stdlib/packages/java.xml.org.xml.sax.ext"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.print.attribute.md",
+      "name": "stdlib/packages/java.desktop.javax.print.attribute"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.javax.crypto.interfaces.md",
+      "name": "stdlib/packages/java.base.javax.crypto.interfaces"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.awt.md",
+      "name": "stdlib/packages/java.desktop.java.awt"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.sql.rowset.javax.sql.rowset.md",
+      "name": "stdlib/packages/java.sql.rowset.javax.sql.rowset"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.security.spec.md",
+      "name": "stdlib/packages/java.base.java.security.spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.rmi.java.rmi.dgc.md",
+      "name": "stdlib/packages/java.rmi.java.rmi.dgc"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.keyinfo.md",
+      "name": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.keyinfo"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.plaf.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.plaf"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.md",
+      "name": "stdlib/packages/java.xml.javax.xml"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.imageio.metadata.md",
+      "name": "stdlib/packages/java.desktop.javax.imageio.metadata"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.lang.runtime.md",
+      "name": "stdlib/packages/java.base.java.lang.runtime"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.stream.events.md",
+      "name": "stdlib/packages/java.xml.javax.xml.stream.events"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.naming.javax.naming.ldap.md",
+      "name": "stdlib/packages/java.naming.javax.naming.ldap"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.security.auth.com.sun.security.auth.module.md",
+      "name": "stdlib/packages/jdk.security.auth.com.sun.security.auth.module"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.org.xml.sax.helpers.md",
+      "name": "stdlib/packages/java.xml.org.xml.sax.helpers"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.validation.md",
+      "name": "stdlib/packages/java.xml.javax.xml.validation"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.compiler.com.sun.tools.javac.md",
+      "name": "stdlib/packages/jdk.compiler.com.sun.tools.javac"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.javax.security.cert.md",
+      "name": "stdlib/packages/java.base.javax.security.cert"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.util.spi.md",
+      "name": "stdlib/packages/java.base.java.util.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.compiler.com.sun.source.doctree.md",
+      "name": "stdlib/packages/jdk.compiler.com.sun.source.doctree"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.undo.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.undo"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.attach.com.sun.tools.attach.spi.md",
+      "name": "stdlib/packages/jdk.attach.com.sun.tools.attach.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.security.md",
+      "name": "stdlib/packages/java.base.java.security"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.instrument.java.lang.instrument.md",
+      "name": "stdlib/packages/java.instrument.java.lang.instrument"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.util.concurrent.atomic.md",
+      "name": "stdlib/packages/java.base.java.util.concurrent.atomic"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.nio.charset.md",
+      "name": "stdlib/packages/java.base.java.nio.charset"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.xml.dom.org.w3c.dom.css.md",
+      "name": "stdlib/packages/jdk.xml.dom.org.w3c.dom.css"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.javax.security.auth.callback.md",
+      "name": "stdlib/packages/java.base.javax.security.auth.callback"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.util.md",
+      "name": "stdlib/packages/java.base.java.util"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.net.spi.md",
+      "name": "stdlib/packages/java.base.java.net.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.plaf.basic.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.plaf.basic"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.prefs.java.util.prefs.md",
+      "name": "stdlib/packages/java.prefs.java.util.prefs"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jfr.jdk.jfr.consumer.md",
+      "name": "stdlib/packages/jdk.jfr.jdk.jfr.consumer"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.awt.color.md",
+      "name": "stdlib/packages/java.desktop.java.awt.color"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.xml.dom.org.w3c.dom.stylesheets.md",
+      "name": "stdlib/packages/jdk.xml.dom.org.w3c.dom.stylesheets"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.org.w3c.dom.ranges.md",
+      "name": "stdlib/packages/java.xml.org.w3c.dom.ranges"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.nio.file.spi.md",
+      "name": "stdlib/packages/java.base.java.nio.file.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.io.md",
+      "name": "stdlib/packages/java.base.java.io"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.stream.md",
+      "name": "stdlib/packages/java.xml.javax.xml.stream"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.compiler.com.sun.source.util.md",
+      "name": "stdlib/packages/jdk.compiler.com.sun.source.util"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.md",
+      "name": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.sql.rowset.javax.sql.rowset.serial.md",
+      "name": "stdlib/packages/java.sql.rowset.javax.sql.rowset.serial"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.transform.stream.md",
+      "name": "stdlib/packages/java.xml.javax.xml.transform.stream"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.text.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.text"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.rmi.java.rmi.registry.md",
+      "name": "stdlib/packages/java.rmi.java.rmi.registry"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.util.zip.md",
+      "name": "stdlib/packages/java.base.java.util.zip"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.net.http.java.net.http.md",
+      "name": "stdlib/packages/java.net.http.java.net.http"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.naming.javax.naming.md",
+      "name": "stdlib/packages/java.naming.javax.naming"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.time.chrono.md",
+      "name": "stdlib/packages/java.base.java.time.chrono"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.org.w3c.dom.ls.md",
+      "name": "stdlib/packages/java.xml.org.w3c.dom.ls"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.javax.security.auth.x500.md",
+      "name": "stdlib/packages/java.base.javax.security.auth.x500"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.security.interfaces.md",
+      "name": "stdlib/packages/java.base.java.security.interfaces"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.awt.image.renderable.md",
+      "name": "stdlib/packages/java.desktop.java.awt.image.renderable"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.nio.charset.spi.md",
+      "name": "stdlib/packages/java.base.java.nio.charset.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.management.javax.management.md",
+      "name": "stdlib/packages/java.management.javax.management"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.lang.ref.md",
+      "name": "stdlib/packages/java.base.java.lang.ref"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.dom.md",
+      "name": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.dom"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.imageio.event.md",
+      "name": "stdlib/packages/java.desktop.javax.imageio.event"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.imageio.plugins.tiff.md",
+      "name": "stdlib/packages/java.desktop.javax.imageio.plugins.tiff"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.applet.md",
+      "name": "stdlib/packages/java.desktop.java.applet"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.logging.java.util.logging.md",
+      "name": "stdlib/packages/java.logging.java.util.logging"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.util.regex.md",
+      "name": "stdlib/packages/java.base.java.util.regex"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.border.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.border"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.imageio.plugins.bmp.md",
+      "name": "stdlib/packages/java.desktop.javax.imageio.plugins.bmp"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.nio.channels.spi.md",
+      "name": "stdlib/packages/java.base.java.nio.channels.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.text.spi.md",
+      "name": "stdlib/packages/java.base.java.text.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jsobject.netscape.javascript.md",
+      "name": "stdlib/packages/jdk.jsobject.netscape.javascript"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.awt.font.md",
+      "name": "stdlib/packages/java.desktop.java.awt.font"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.javax.net.ssl.md",
+      "name": "stdlib/packages/java.base.javax.net.ssl"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.javax.crypto.md",
+      "name": "stdlib/packages/java.base.javax.crypto"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.compiler.javax.lang.model.util.md",
+      "name": "stdlib/packages/java.compiler.javax.lang.model.util"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.javax.security.auth.login.md",
+      "name": "stdlib/packages/java.base.javax.security.auth.login"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.attach.com.sun.tools.attach.md",
+      "name": "stdlib/packages/jdk.attach.com.sun.tools.attach"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.time.md",
+      "name": "stdlib/packages/java.base.java.time"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.lang.md",
+      "name": "stdlib/packages/java.base.java.lang"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.print.event.md",
+      "name": "stdlib/packages/java.desktop.javax.print.event"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.util.function.md",
+      "name": "stdlib/packages/java.base.java.util.function"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.plaf.metal.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.plaf.metal"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.awt.dnd.md",
+      "name": "stdlib/packages/java.desktop.java.awt.dnd"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.util.random.md",
+      "name": "stdlib/packages/java.base.java.util.random"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.md",
+      "name": "stdlib/packages/jdk.dynalink.jdk.dynalink"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.util.stream.md",
+      "name": "stdlib/packages/java.base.java.util.stream"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.imageio.spi.md",
+      "name": "stdlib/packages/java.desktop.javax.imageio.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.colorchooser.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.colorchooser"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.linker.md",
+      "name": "stdlib/packages/jdk.dynalink.jdk.dynalink.linker"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jartool.jdk.security.jarsigner.md",
+      "name": "stdlib/packages/jdk.jartool.jdk.security.jarsigner"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.compiler.com.sun.source.tree.md",
+      "name": "stdlib/packages/jdk.compiler.com.sun.source.tree"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.compiler.javax.tools.md",
+      "name": "stdlib/packages/java.compiler.javax.tools"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.compiler.javax.lang.model.type.md",
+      "name": "stdlib/packages/java.compiler.javax.lang.model.type"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.rmi.javax.rmi.ssl.md",
+      "name": "stdlib/packages/java.rmi.javax.rmi.ssl"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.sctp.com.sun.nio.sctp.md",
+      "name": "stdlib/packages/jdk.sctp.com.sun.nio.sctp"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jdi.com.sun.jdi.md",
+      "name": "stdlib/packages/jdk.jdi.com.sun.jdi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.naming.javax.naming.event.md",
+      "name": "stdlib/packages/java.naming.javax.naming.event"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jconsole.com.sun.tools.jconsole.md",
+      "name": "stdlib/packages/jdk.jconsole.com.sun.tools.jconsole"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.javax.net.md",
+      "name": "stdlib/packages/java.base.javax.net"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.awt.im.spi.md",
+      "name": "stdlib/packages/java.desktop.java.awt.im.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.awt.im.md",
+      "name": "stdlib/packages/java.desktop.java.awt.im"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.transform.sax.md",
+      "name": "stdlib/packages/java.xml.javax.xml.transform.sax"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.sound.sampled.spi.md",
+      "name": "stdlib/packages/java.desktop.javax.sound.sampled.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.md",
+      "name": "stdlib/packages/java.desktop.javax.swing"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.management.jfr.jdk.management.jfr.md",
+      "name": "stdlib/packages/jdk.management.jfr.jdk.management.jfr"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.sql.java.sql.md",
+      "name": "stdlib/packages/java.sql.java.sql"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.awt.geom.md",
+      "name": "stdlib/packages/java.desktop.java.awt.geom"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.org.w3c.dom.bootstrap.md",
+      "name": "stdlib/packages/java.xml.org.w3c.dom.bootstrap"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.tree.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.tree"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.parsers.md",
+      "name": "stdlib/packages/java.xml.javax.xml.parsers"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.print.attribute.standard.md",
+      "name": "stdlib/packages/java.desktop.javax.print.attribute.standard"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.sound.midi.spi.md",
+      "name": "stdlib/packages/java.desktop.javax.sound.midi.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.javax.security.auth.md",
+      "name": "stdlib/packages/java.base.javax.security.auth"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.nio.mapmode.jdk.nio.mapmode.md",
+      "name": "stdlib/packages/jdk.nio.mapmode.jdk.nio.mapmode"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jdi.com.sun.jdi.connect.spi.md",
+      "name": "stdlib/packages/jdk.jdi.com.sun.jdi.connect.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.md",
+      "name": "stdlib/packages/java.xml.crypto.javax.xml.crypto"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.beans.md",
+      "name": "stdlib/packages/java.desktop.java.beans"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.lang.foreign.md",
+      "name": "stdlib/packages/java.base.java.lang.foreign"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.text.html.parser.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.text.html.parser"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/index.md",
+      "name": "stdlib/packages/index"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.beans.beancontext.md",
+      "name": "stdlib/packages/java.desktop.java.beans.beancontext"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.datatype.md",
+      "name": "stdlib/packages/java.xml.javax.xml.datatype"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.lang.reflect.md",
+      "name": "stdlib/packages/java.base.java.lang.reflect"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.transform.md",
+      "name": "stdlib/packages/java.xml.javax.xml.transform"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.xpath.md",
+      "name": "stdlib/packages/java.xml.javax.xml.xpath"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.security.jgss.javax.security.auth.kerberos.md",
+      "name": "stdlib/packages/java.security.jgss.javax.security.auth.kerberos"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.plaf.synth.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.plaf.synth"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.text.rtf.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.text.rtf"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.security.auth.com.sun.security.auth.login.md",
+      "name": "stdlib/packages/jdk.security.auth.com.sun.security.auth.login"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.filechooser.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.filechooser"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.naming.javax.naming.spi.md",
+      "name": "stdlib/packages/java.naming.javax.naming.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.sql.javax.sql.md",
+      "name": "stdlib/packages/java.sql.javax.sql"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.net.md",
+      "name": "stdlib/packages/java.base.java.net"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.math.md",
+      "name": "stdlib/packages/java.base.java.math"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.support.md",
+      "name": "stdlib/packages/jdk.dynalink.jdk.dynalink.support"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.management.javax.management.openmbean.md",
+      "name": "stdlib/packages/java.management.javax.management.openmbean"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jshell.jdk.jshell.execution.md",
+      "name": "stdlib/packages/jdk.jshell.jdk.jshell.execution"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jshell.jdk.jshell.tool.md",
+      "name": "stdlib/packages/jdk.jshell.jdk.jshell.tool"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.awt.print.md",
+      "name": "stdlib/packages/java.desktop.java.awt.print"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.management.rmi.javax.management.remote.rmi.md",
+      "name": "stdlib/packages/java.management.rmi.javax.management.remote.rmi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.nio.file.attribute.md",
+      "name": "stdlib/packages/java.base.java.nio.file.attribute"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.nio.md",
+      "name": "stdlib/packages/java.base.java.nio"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.compiler.javax.lang.model.element.md",
+      "name": "stdlib/packages/java.compiler.javax.lang.model.element"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.org.w3c.dom.md",
+      "name": "stdlib/packages/java.xml.org.w3c.dom"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.imageio.stream.md",
+      "name": "stdlib/packages/java.desktop.javax.imageio.stream"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.imageio.md",
+      "name": "stdlib/packages/java.desktop.javax.imageio"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.org.w3c.dom.views.md",
+      "name": "stdlib/packages/java.xml.org.w3c.dom.views"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.time.format.md",
+      "name": "stdlib/packages/java.base.java.time.format"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.util.concurrent.locks.md",
+      "name": "stdlib/packages/java.base.java.util.concurrent.locks"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jdi.com.sun.jdi.connect.md",
+      "name": "stdlib/packages/jdk.jdi.com.sun.jdi.connect"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jshell.jdk.jshell.md",
+      "name": "stdlib/packages/jdk.jshell.jdk.jshell"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.datatransfer.java.awt.datatransfer.md",
+      "name": "stdlib/packages/java.datatransfer.java.awt.datatransfer"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.rmi.java.rmi.md",
+      "name": "stdlib/packages/java.rmi.java.rmi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.management.javax.management.monitor.md",
+      "name": "stdlib/packages/java.management.javax.management.monitor"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.print.md",
+      "name": "stdlib/packages/java.desktop.javax.print"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.linker.support.md",
+      "name": "stdlib/packages/jdk.dynalink.jdk.dynalink.linker.support"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.xml.dom.org.w3c.dom.xpath.md",
+      "name": "stdlib/packages/jdk.xml.dom.org.w3c.dom.xpath"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.smartcardio.javax.smartcardio.md",
+      "name": "stdlib/packages/java.smartcardio.javax.smartcardio"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.accessibility.com.sun.java.accessibility.util.md",
+      "name": "stdlib/packages/jdk.accessibility.com.sun.java.accessibility.util"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.text.md",
+      "name": "stdlib/packages/java.base.java.text"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.accessibility.md",
+      "name": "stdlib/packages/java.desktop.javax.accessibility"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jfr.jdk.jfr.md",
+      "name": "stdlib/packages/jdk.jfr.jdk.jfr"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.compiler.javax.annotation.processing.md",
+      "name": "stdlib/packages/java.compiler.javax.annotation.processing"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.org.xml.sax.md",
+      "name": "stdlib/packages/java.xml.org.xml.sax"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.org.w3c.dom.traversal.md",
+      "name": "stdlib/packages/java.xml.org.w3c.dom.traversal"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.naming.javax.naming.directory.md",
+      "name": "stdlib/packages/java.naming.javax.naming.directory"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.security.auth.com.sun.security.auth.callback.md",
+      "name": "stdlib/packages/jdk.security.auth.com.sun.security.auth.callback"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.lang.module.md",
+      "name": "stdlib/packages/java.base.java.lang.module"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.lang.invoke.md",
+      "name": "stdlib/packages/java.base.java.lang.invoke"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dom.md",
+      "name": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dom"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.management.com.sun.management.md",
+      "name": "stdlib/packages/jdk.management.com.sun.management"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.rmi.java.rmi.server.md",
+      "name": "stdlib/packages/java.rmi.java.rmi.server"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.javax.security.auth.spi.md",
+      "name": "stdlib/packages/java.base.javax.security.auth.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.lang.annotation.md",
+      "name": "stdlib/packages/java.base.java.lang.annotation"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.spec.md",
+      "name": "stdlib/packages/java.xml.crypto.javax.xml.crypto.dsig.spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.event.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.event"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.dynalink.jdk.dynalink.beans.md",
+      "name": "stdlib/packages/jdk.dynalink.jdk.dynalink.beans"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.javadoc.jdk.javadoc.doclet.md",
+      "name": "stdlib/packages/jdk.javadoc.jdk.javadoc.doclet"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.time.temporal.md",
+      "name": "stdlib/packages/java.base.java.time.temporal"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.management.javax.management.relation.md",
+      "name": "stdlib/packages/java.management.javax.management.relation"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.namespace.md",
+      "name": "stdlib/packages/java.xml.javax.xml.namespace"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.plaf.nimbus.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.plaf.nimbus"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.transform.stax.md",
+      "name": "stdlib/packages/java.xml.javax.xml.transform.stax"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.transaction.xa.javax.transaction.xa.md",
+      "name": "stdlib/packages/java.transaction.xa.javax.transaction.xa"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jdi.com.sun.jdi.event.md",
+      "name": "stdlib/packages/jdk.jdi.com.sun.jdi.event"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.net.jdk.net.md",
+      "name": "stdlib/packages/jdk.net.jdk.net"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.management.javax.management.remote.md",
+      "name": "stdlib/packages/java.management.javax.management.remote"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.stream.util.md",
+      "name": "stdlib/packages/java.xml.javax.xml.stream.util"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.nio.file.md",
+      "name": "stdlib/packages/java.base.java.nio.file"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.security.jgss.com.sun.security.jgss.md",
+      "name": "stdlib/packages/jdk.security.jgss.com.sun.security.jgss"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.xml.dom.org.w3c.dom.html.md",
+      "name": "stdlib/packages/jdk.xml.dom.org.w3c.dom.html"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.management.javax.management.modelmbean.md",
+      "name": "stdlib/packages/java.management.javax.management.modelmbean"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jdi.com.sun.jdi.request.md",
+      "name": "stdlib/packages/jdk.jdi.com.sun.jdi.request"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.util.concurrent.md",
+      "name": "stdlib/packages/java.base.java.util.concurrent"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.security.auth.com.sun.security.auth.md",
+      "name": "stdlib/packages/jdk.security.auth.com.sun.security.auth"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.security.cert.md",
+      "name": "stdlib/packages/java.base.java.security.cert"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.httpserver.com.sun.net.httpserver.md",
+      "name": "stdlib/packages/jdk.httpserver.com.sun.net.httpserver"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.catalog.md",
+      "name": "stdlib/packages/java.xml.javax.xml.catalog"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.javax.crypto.spec.md",
+      "name": "stdlib/packages/java.base.javax.crypto.spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.javax.xml.transform.dom.md",
+      "name": "stdlib/packages/java.xml.javax.xml.transform.dom"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.xml.org.w3c.dom.events.md",
+      "name": "stdlib/packages/java.xml.org.w3c.dom.events"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.incubator.vector.jdk.incubator.vector.md",
+      "name": "stdlib/packages/jdk.incubator.vector.jdk.incubator.vector"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.util.jar.md",
+      "name": "stdlib/packages/java.base.java.util.jar"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.plaf.multi.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.plaf.multi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.security.sasl.javax.security.sasl.md",
+      "name": "stdlib/packages/java.security.sasl.javax.security.sasl"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.base.java.time.zone.md",
+      "name": "stdlib/packages/java.base.java.time.zone"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.management.javax.management.loading.md",
+      "name": "stdlib/packages/java.management.javax.management.loading"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.compiler.javax.lang.model.md",
+      "name": "stdlib/packages/java.compiler.javax.lang.model"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.awt.image.md",
+      "name": "stdlib/packages/java.desktop.java.awt.image"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.management.javax.management.timer.md",
+      "name": "stdlib/packages/java.management.javax.management.timer"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.sql.rowset.javax.sql.rowset.spi.md",
+      "name": "stdlib/packages/java.sql.rowset.javax.sql.rowset.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.jshell.jdk.jshell.spi.md",
+      "name": "stdlib/packages/jdk.jshell.jdk.jshell.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.httpserver.com.sun.net.httpserver.spi.md",
+      "name": "stdlib/packages/jdk.httpserver.com.sun.net.httpserver.spi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.java.awt.desktop.md",
+      "name": "stdlib/packages/java.desktop.java.awt.desktop"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.sound.midi.md",
+      "name": "stdlib/packages/java.desktop.javax.sound.midi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.management.java.lang.management.md",
+      "name": "stdlib/packages/java.management.java.lang.management"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.security.jgss.org.ietf.jgss.md",
+      "name": "stdlib/packages/java.security.jgss.org.ietf.jgss"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/jdk.net.jdk.nio.md",
+      "name": "stdlib/packages/jdk.net.jdk.nio"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/packages/java.desktop.javax.swing.text.html.md",
+      "name": "stdlib/packages/java.desktop.javax.swing.text.html"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/concurrency.md",
+      "name": "stdlib/concurrency"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/io.md",
+      "name": "stdlib/io"
+    },
+    {
+      "category": "linters",
+      "path": "linters/error-prone/overview.md",
+      "name": "linters/error-prone/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/error-prone/DoNotCall.md",
+      "name": "linters/error-prone/DoNotCall"
+    },
+    {
+      "category": "linters",
+      "path": "linters/checkstyle/overview.md",
+      "name": "linters/checkstyle/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/checkstyle/rules.md",
+      "name": "linters/checkstyle/rules"
+    },
+    {
+      "category": "linters",
+      "path": "linters/overview.md",
+      "name": "linters/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/spotbugs/overview.md",
+      "name": "linters/spotbugs/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/pmd/overview.md",
+      "name": "linters/pmd/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/google-java-format.md",
+      "name": "formatters/google-java-format"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

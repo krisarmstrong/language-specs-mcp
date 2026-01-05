@@ -1,1 +1,3 @@
-# as_pointer_underscore\n\nSee: https://rust-lang.github.io/rust-clippy/master/#as_pointer_underscore
+# as_pointer_underscore
+
+See: https://rust-lang.github.io/rust-clippy/master/#as_pointer_underscore

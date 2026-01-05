@@ -1,0 +1,39 @@
+{
+  "language": "elixir",
+  "generatedAt": "2026-01-05T15:15:48.664087+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "2294ba95675337c9cf85f15a7298d61ffcc350eba82541d5a25e18c59778a906",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "12ef1e3c534a1f0e035c7e4699b780ef578759adefea2c190cf7369507360876",
+      "urls": [
+        "https://hexdocs.pm/mix/Mix.Tasks.Format.html"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "0afe384b8121210a711627ee17713d3567bf2d1e5156f794f6f3fb9ffb881528",
+      "urls": [
+        "https://hexdocs.pm/elixir/api-reference.html"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "2ce33e535ed956b7f708c9b98091ff1790fb443996dcab0391b8ce5d7cfca94a",
+      "urls": [
+        "https://hexdocs.pm/elixir/syntax-reference.html"
+      ]
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "c8ed2da4c318d472c4eb27466ba3e42c08587eb536a3d34625bab2ebd2a6cddb",
+      "urls": [
+        "https://hexdocs.pm/credo/"
+      ]
+    }
+  ]
+}

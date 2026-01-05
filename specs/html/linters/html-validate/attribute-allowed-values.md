@@ -1,1 +1,3 @@
-# attribute-allowed-values\n\nSee: https://html-validate.org/rules/attribute-allowed-values
+# attribute-allowed-values
+
+See: https://html-validate.org/rules/attribute-allowed-values

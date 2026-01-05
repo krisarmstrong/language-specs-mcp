@@ -1,1 +1,3 @@
-# DOMStringMap\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/DOMStringMap
+# DOMStringMap
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/DOMStringMap

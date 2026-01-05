@@ -1,1 +1,3 @@
-# no-empty-character-class\n\nSee: https://eslint.org/docs/latest/rules/no-empty-character-class
+# no-empty-character-class
+
+See: https://eslint.org/docs/latest/rules/no-empty-character-class

@@ -1,1 +1,3 @@
-# declaration-block-no-duplicate-properties\n\nSee: https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties
+# declaration-block-no-duplicate-properties
+
+See: https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties

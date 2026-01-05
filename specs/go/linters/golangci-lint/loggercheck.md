@@ -1,1 +1,3 @@
-# loggercheck\n\nSee: https://golangci-lint.run/docs/linters/loggercheck/
+# loggercheck
+
+See: https://golangci-lint.run/docs/linters/loggercheck/

@@ -1,1 +1,3 @@
-# XRInputSourceEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent
+# XRInputSourceEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent

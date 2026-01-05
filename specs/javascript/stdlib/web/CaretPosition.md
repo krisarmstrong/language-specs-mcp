@@ -1,1 +1,3 @@
-# CaretPosition\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/CaretPosition
+# CaretPosition
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/CaretPosition

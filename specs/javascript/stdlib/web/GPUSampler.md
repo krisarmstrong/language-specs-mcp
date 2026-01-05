@@ -1,1 +1,3 @@
-# GPUSampler\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/GPUSampler
+# GPUSampler
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/GPUSampler

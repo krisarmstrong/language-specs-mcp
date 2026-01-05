@@ -1,1 +1,3 @@
-# media-feature-range-notation\n\nSee: https://stylelint.io/user-guide/rules/media-feature-range-notation
+# media-feature-range-notation
+
+See: https://stylelint.io/user-guide/rules/media-feature-range-notation

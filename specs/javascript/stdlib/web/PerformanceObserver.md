@@ -1,1 +1,3 @@
-# PerformanceObserver\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver
+# PerformanceObserver
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver

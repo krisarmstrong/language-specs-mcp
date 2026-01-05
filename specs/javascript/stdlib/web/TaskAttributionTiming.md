@@ -1,1 +1,3 @@
-# TaskAttributionTiming\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/TaskAttributionTiming
+# TaskAttributionTiming
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/TaskAttributionTiming

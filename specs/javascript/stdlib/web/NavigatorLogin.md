@@ -1,1 +1,3 @@
-# NavigatorLogin\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLogin
+# NavigatorLogin
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLogin

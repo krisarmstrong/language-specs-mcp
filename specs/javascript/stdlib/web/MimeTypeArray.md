@@ -1,1 +1,3 @@
-# MimeTypeArray\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/MimeTypeArray
+# MimeTypeArray
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/MimeTypeArray

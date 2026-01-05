@@ -1,1 +1,3 @@
-# musttag\n\nSee: https://golangci-lint.run/docs/linters/musttag/
+# musttag
+
+See: https://golangci-lint.run/docs/linters/musttag/

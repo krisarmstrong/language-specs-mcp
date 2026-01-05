@@ -1,1 +1,3 @@
-# RTCOutboundRtpStreamStats\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats
+# RTCOutboundRtpStreamStats
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats

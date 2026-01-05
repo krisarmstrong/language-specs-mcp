@@ -1,1 +1,3 @@
-# RTCPeerConnection\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection
+# RTCPeerConnection
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection

@@ -1,1 +1,3 @@
-# SensorErrorEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/SensorErrorEvent
+# SensorErrorEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/SensorErrorEvent

@@ -1,1 +1,3 @@
-# selector-max-id\n\nSee: https://stylelint.io/user-guide/rules/selector-max-id
+# selector-max-id
+
+See: https://stylelint.io/user-guide/rules/selector-max-id

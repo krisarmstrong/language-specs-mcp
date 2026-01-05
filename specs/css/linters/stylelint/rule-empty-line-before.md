@@ -1,1 +1,3 @@
-# rule-empty-line-before\n\nSee: https://stylelint.io/user-guide/rules/rule-empty-line-before
+# rule-empty-line-before
+
+See: https://stylelint.io/user-guide/rules/rule-empty-line-before

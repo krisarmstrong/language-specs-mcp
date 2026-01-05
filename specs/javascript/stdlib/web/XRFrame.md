@@ -1,1 +1,3 @@
-# XRFrame\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/XRFrame
+# XRFrame
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/XRFrame

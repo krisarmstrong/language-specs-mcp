@@ -1,1 +1,3 @@
-# TimeEvent\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/TimeEvent
+# TimeEvent
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/TimeEvent

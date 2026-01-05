@@ -1,1 +1,3 @@
-# area-alt\n\nSee: https://html-validate.org/rules/area-alt
+# area-alt
+
+See: https://html-validate.org/rules/area-alt

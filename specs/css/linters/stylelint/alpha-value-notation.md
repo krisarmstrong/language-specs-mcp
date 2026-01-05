@@ -1,1 +1,3 @@
-# alpha-value-notation\n\nSee: https://stylelint.io/user-guide/rules/alpha-value-notation
+# alpha-value-notation
+
+See: https://stylelint.io/user-guide/rules/alpha-value-notation

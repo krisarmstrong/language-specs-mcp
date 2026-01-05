@@ -1,1 +1,3 @@
-# XRMediaBinding\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/XRMediaBinding
+# XRMediaBinding
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/XRMediaBinding

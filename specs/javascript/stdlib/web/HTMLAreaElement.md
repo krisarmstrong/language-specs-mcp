@@ -1,1 +1,3 @@
-# HTMLAreaElement\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement
+# HTMLAreaElement
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement

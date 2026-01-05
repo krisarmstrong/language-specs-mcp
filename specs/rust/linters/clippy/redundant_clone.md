@@ -1,1 +1,3 @@
-# redundant_clone\n\nSee: https://rust-lang.github.io/rust-clippy/master/#redundant_clone
+# redundant_clone
+
+See: https://rust-lang.github.io/rust-clippy/master/#redundant_clone

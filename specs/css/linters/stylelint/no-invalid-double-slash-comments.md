@@ -1,1 +1,3 @@
-# no-invalid-double-slash-comments\n\nSee: https://stylelint.io/user-guide/rules/no-invalid-double-slash-comments
+# no-invalid-double-slash-comments
+
+See: https://stylelint.io/user-guide/rules/no-invalid-double-slash-comments

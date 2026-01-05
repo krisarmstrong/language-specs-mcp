@@ -1,1 +1,3 @@
-# BiquadFilterNode\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode
+# BiquadFilterNode
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode

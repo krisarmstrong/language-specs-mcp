@@ -1,1 +1,3 @@
-# XRInputSourceArray\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray
+# XRInputSourceArray
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray

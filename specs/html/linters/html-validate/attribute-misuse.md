@@ -1,1 +1,3 @@
-# attribute-misuse\n\nSee: https://html-validate.org/rules/attribute-misuse
+# attribute-misuse
+
+See: https://html-validate.org/rules/attribute-misuse

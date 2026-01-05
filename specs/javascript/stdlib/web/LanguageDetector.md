@@ -1,1 +1,3 @@
-# LanguageDetector\n\nSee: https://developer.mozilla.org/en-US/docs/Web/API/LanguageDetector
+# LanguageDetector
+
+See: https://developer.mozilla.org/en-US/docs/Web/API/LanguageDetector

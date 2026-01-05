@@ -1,1 +1,3 @@
-# no-lonely-if\n\nSee: https://eslint.org/docs/latest/rules/no-lonely-if
+# no-lonely-if
+
+See: https://eslint.org/docs/latest/rules/no-lonely-if
