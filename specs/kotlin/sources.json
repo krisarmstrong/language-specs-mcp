@@ -1,0 +1,73 @@
+{
+  "language": "kotlin",
+  "generatedAt": "2026-01-05T15:15:49.993576+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "329cfa0543d21b6a3dffa0274c925fafa94720b7230057280a33cbdc16aa382d",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "c9239c6db9c4003a8630aa60eb31fa5dfe7a9fba421b1204d800d3859d1e6eab",
+      "urls": [
+        "https://github.com/facebook/ktfmt",
+        "https://pinterest.github.io/ktlint/latest/rules/"
+      ]
+    },
+    {
+      "path": "formatters/ktfmt.md",
+      "sha256": "24dd561a71639ddace26802d7681c3864cb47fb58a4e0419c8c29c52f74b7701",
+      "urls": [
+        "https://github.com/facebook/ktfmt"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "72e98b266dd384df38454cd2ecd239ca34d4e702bdba7a1c3308eadfdccea305",
+      "urls": [
+        "https://kotlinlang.org/api/latest/jvm/stdlib/"
+      ]
+    },
+    {
+      "path": "stdlib/packages/index.md",
+      "sha256": "8029c8589c56cae793fd18716ee41b0fb7967a1a779cee917f771b4e842c3c5f",
+      "urls": [
+        "https://kotlinlang.org/api/latest/jvm/stdlib/allpackages-index.html"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "1a74798c95142ed1415f902d964c13640a22cdc4393bc6ad9cdb2c1a8e3fdef1",
+      "urls": [
+        "https://kotlinlang.org/spec/"
+      ]
+    },
+    {
+      "path": "linters/ktlint/overview.md",
+      "sha256": "f77dafebd0a4561b97a1af91e19f21eddeb67022f54424b580e5814a376b4ed2",
+      "urls": [
+        "https://pinterest.github.io/ktlint/latest/rules/"
+      ]
+    },
+    {
+      "path": "linters/detekt/overview.md",
+      "sha256": "4090e255888c99b709e4ac2c6e5c8ec3937485448f010250e22406ec5cd1912a",
+      "urls": [
+        "https://detekt.dev/docs/rules/"
+      ]
+    },
+    {
+      "path": "linters/detekt/comments.md",
+      "sha256": "4a7894eaaa14eb903ac5f77d30cf0fdbea7dbda056ce9dfc17cb7f202644f44f",
+      "urls": [
+        "https://detekt.dev/docs/rules/comments"
+      ]
+    },
+    {
+      "path": "linters/detekt/rules.md",
+      "sha256": "e76350e0dd7e0793c86bbaf6f695a9b394acba1dd0be754badc482f3a8d7b0dc",
+      "urls": []
+    }
+  ]
+}

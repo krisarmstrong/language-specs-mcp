@@ -1,0 +1,40 @@
+{
+  "language": "php",
+  "generatedAt": "2026-01-05T15:15:50.018269+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "84fdc6f447931e14aeb415a6781caee7316ca2c181b281efaf962dda5695adef",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "d81651fbd8b7bbdd295787affce69c02dc781c2404434846dbb195fb68420641",
+      "urls": [
+        "https://cs.symfony.com/"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "bce6b9072c0c59f98dc4c1dc2adc8d313d970afc535a1286edfec0dabd86f182",
+      "urls": [
+        "https://www.php.net/manual/en/funcref.php"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "b2668b4c848f5132d29202a3ae41c9d073cf62c92b286be13d668e416f16abc9",
+      "urls": [
+        "https://www.php.net/manual/en/langref.php"
+      ]
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "aa82dbb793af2cfe8c96eb81ecd8098f7788684f03b51145323c6e58ff3d1f85",
+      "urls": [
+        "https://phpstan.org/",
+        "https://psalm.dev/"
+      ]
+    }
+  ]
+}

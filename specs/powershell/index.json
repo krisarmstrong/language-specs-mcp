@@ -1,0 +1,115 @@
+{
+  "language": "powershell",
+  "fetchedAt": "2026-01-04T18:48:33Z",
+  "counts": {
+    "spec": 1,
+    "stdlib": 4,
+    "linters": 2,
+    "formatters": 1,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/cmdlets/microsoft.powershell.core.md",
+        "name": "stdlib/cmdlets/microsoft.powershell.core"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/cmdlets/psreadline.md",
+        "name": "stdlib/cmdlets/psreadline"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/cmdlets/microsoft.powershell.utility.md",
+        "name": "stdlib/cmdlets/microsoft.powershell.utility"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/psscriptanalyzer/overview.md",
+        "name": "linters/psscriptanalyzer/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/psscriptanalyzer/rules.md",
+        "name": "linters/psscriptanalyzer/rules"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/cmdlets/microsoft.powershell.core.md",
+      "name": "stdlib/cmdlets/microsoft.powershell.core"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/cmdlets/psreadline.md",
+      "name": "stdlib/cmdlets/psreadline"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/cmdlets/microsoft.powershell.utility.md",
+      "name": "stdlib/cmdlets/microsoft.powershell.utility"
+    },
+    {
+      "category": "linters",
+      "path": "linters/psscriptanalyzer/overview.md",
+      "name": "linters/psscriptanalyzer/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/psscriptanalyzer/rules.md",
+      "name": "linters/psscriptanalyzer/rules"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

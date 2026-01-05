@@ -1,0 +1,39 @@
+{
+  "language": "ruby",
+  "generatedAt": "2026-01-05T15:15:50.044015+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "bd1906762dd78a5fee1ff25ec65fdee1a17ef1728c68018ff6fdb8dd01e55640",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "949ed31ac182003f1f8349fd37ab5b44ba74aeb79f4a1eefcabd25fcfe61ed8c",
+      "urls": [
+        "https://docs.rubocop.org/rubocop/"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "5dbf5e271fc92967ce242ba2ad7d2187c67c0c4e0341d9e59d1b8a214d515a7c",
+      "urls": [
+        "https://docs.ruby-lang.org/en/3.3.0/"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "e7115a35424efd029b5bd173f02eb5466b290e31578a185b497239b90a31bbe8",
+      "urls": [
+        "https://docs.ruby-lang.org/en/3.3.0/doc/syntax_rdoc.html"
+      ]
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "6effa5fab7ee998622366a8a44897e4c99c9160b67fba65b89b9aab451793baa",
+      "urls": [
+        "https://docs.rubocop.org/rubocop/"
+      ]
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 {
-  "name": "language-specs-mcp",
+  "name": "specforge-mcp",
   "version": "1.0.0",
-  "description": "MCP server providing authoritative language specifications",
+  "description": "SpecForge MCP server providing authoritative language specifications",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "language-specs-mcp": "dist/index.js"
+    "specforge-mcp": "dist/index.js"
   },
   "files": [
     "dist",
@@ -76,6 +76,7 @@
     "generate:manifests": "python3 scripts/generate-manifests.py",
     "generate:search": "python3 scripts/generate-search-index.py",
     "generate:all": "npm run generate:health && npm run generate:index && npm run generate:manifests && npm run generate:search",
+    "refresh": "python3 scripts/refresh.py",
     "dashboard": "python3 scripts/dashboard.py",
     "diagnose:fetch": "python3 scripts/diagnose-fetch.py",
     "validate:versions": "python3 scripts/validate-versions.py",

@@ -1,0 +1,40 @@
+{
+  "language": "haskell",
+  "generatedAt": "2026-01-05T15:15:48.810013+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "9e00b7059d69000393251805f69466920ac6977aaa3972ff6fb2aaf239e76cdc",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "a1c4e0c14fbb05be7a06d018d641fc5303a5d7bd370d5590713206deb576d342",
+      "urls": [
+        "https://github.com/fourmolu/fourmolu",
+        "https://github.com/tweag/ormolu"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "a570646694a32b615e21e232b8c6c83766f2cf3b40627a7a4934ef00191fe3c1",
+      "urls": [
+        "https://hackage.haskell.org/package/base/docs/"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "d2bba330ccf7469630bd5f965a902911928b55235a5e91231bad429c388909e4",
+      "urls": [
+        "https://www.haskell.org/definition/haskell2010.pdf"
+      ]
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "18e2eca39a6f19a3995fa17171aeb8eaf9103b4a03a00931892ebe67a78c2dec",
+      "urls": [
+        "https://github.com/ndmitchell/hlint"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,648 @@
+{
+  "language": "html",
+  "generatedAt": "2026-01-05T15:15:48.814249+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "58d6e2fb8d7d91aab01ea6d351cb5ea99487f7f13f02465b6b8d187183fae57f",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "f33adc65c705c4251f2919bf006f10dd6922a9b36d15b3d280586df39eabb582",
+      "urls": [
+        "https://prettier.io/docs/en/"
+      ]
+    },
+    {
+      "path": "formatters/prettier.md",
+      "sha256": "61e0881f6ee1eb297eba4540782e28dc362a547a006a9f1468fbccdcb41d9a0b",
+      "urls": [
+        "https://prettier.io/docs/en/options.html"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "73db32fd45fdab6cc93211c09f9a171f4a08566bc6e3ce64c863051fd723fb9e",
+      "urls": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "27b2578c386fc0b7f8ce4f75052fb79ed2f9266d753b82713f34b9dd3607d506",
+      "urls": [
+        "https://html.spec.whatwg.org/"
+      ]
+    },
+    {
+      "path": "linters/html-validate/input-attributes.md",
+      "sha256": "3341f5c2a321579fd2bf6104cea3432ba20a68a9e2729c8dd724f5f351310a95",
+      "urls": [
+        "https://html-validate.org/rules/input-attributes"
+      ]
+    },
+    {
+      "path": "linters/html-validate/map-id-name.md",
+      "sha256": "1790caa886ceb0487599566c1a89bbc145cccf002cc6eeb0780e050068b9eeee",
+      "urls": [
+        "https://html-validate.org/rules/map-id-name"
+      ]
+    },
+    {
+      "path": "linters/html-validate/attr-spacing.md",
+      "sha256": "53c61839ffd82e72e654e9af2ed078a54fe4542fff68bd60441bdf8e3c15a00e",
+      "urls": [
+        "https://html-validate.org/rules/attr-spacing"
+      ]
+    },
+    {
+      "path": "linters/html-validate/valid-id.md",
+      "sha256": "c4a5cb75611de491f10f6ca417d7815b334f34b4f9570780d8e62f6922d22e74",
+      "urls": [
+        "https://html-validate.org/rules/valid-id"
+      ]
+    },
+    {
+      "path": "linters/html-validate/form-dup-name.md",
+      "sha256": "af89f52c74a573b59516a0cf7de6888a51cc2880f97b9b707a60ee0412e42029",
+      "urls": [
+        "https://html-validate.org/rules/form-dup-name"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-deprecated-attr.md",
+      "sha256": "f83d0414fd6107ff1261d86b228cd5aa3fcb7ae5061ea5b5fa07be939a53ae84",
+      "urls": [
+        "https://html-validate.org/rules/no-deprecated-attr"
+      ]
+    },
+    {
+      "path": "linters/html-validate/empty-heading.md",
+      "sha256": "64dd9da9ef6d17f3ad9708bfec3319067c1e9378e610b386f97fd81f5dbd56c5",
+      "urls": [
+        "https://html-validate.org/rules/empty-heading"
+      ]
+    },
+    {
+      "path": "linters/html-validate/tel-non-breaking.md",
+      "sha256": "2ab2945e4984cd67735761928674078e2fec457c1f30eaed12d5b48ed09b1e2b",
+      "urls": [
+        "https://html-validate.org/rules/tel-non-breaking"
+      ]
+    },
+    {
+      "path": "linters/html-validate/class-pattern.md",
+      "sha256": "9fb8623ae37468f56ad294685f55776628437b8b35362813ae21dd6a17388779",
+      "urls": [
+        "https://html-validate.org/rules/class-pattern"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-implicit-input-type.md",
+      "sha256": "d64f09a905e41a30d3405bbdf87f6f2235aad8f41115a8942de4331ae938f690",
+      "urls": [
+        "https://html-validate.org/rules/no-implicit-input-type"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-redundant-aria-label.md",
+      "sha256": "519edf88bf5c422939c2196e5a71f8561b3e6fbc6ec4ec9ea237cb08801ecd79",
+      "urls": [
+        "https://html-validate.org/rules/no-redundant-aria-label"
+      ]
+    },
+    {
+      "path": "linters/html-validate/allowed-links.md",
+      "sha256": "a12979c2f1488d431febb8d72e26d9da1602e1a9ddae8b374747ea15900b1d21",
+      "urls": [
+        "https://html-validate.org/rules/allowed-links"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-multiple-main.md",
+      "sha256": "1fdaec56d1052985a3c3cd47f9955901cd36e18e1816cb77f8e09c064b3b4db5",
+      "urls": [
+        "https://html-validate.org/rules/no-multiple-main"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-utf8-bom.md",
+      "sha256": "a189a5416b7d0d4ae28518b788d7bbbb9e68eb99d2fe9e0030b9277dd3772918",
+      "urls": [
+        "https://html-validate.org/rules/no-utf8-bom"
+      ]
+    },
+    {
+      "path": "linters/html-validate/attr-quotes.md",
+      "sha256": "9f77ad7392cb82981d468e932787fe756c0254f8007d11f9e8e68746ee75f4b5",
+      "urls": [
+        "https://html-validate.org/rules/attr-quotes"
+      ]
+    },
+    {
+      "path": "linters/html-validate/attribute-allowed-values.md",
+      "sha256": "2f4f6f4c8fa5531161ed2a9d79bc942102f2cf42162a53eab4dcb3a60cb854f7",
+      "urls": [
+        "https://html-validate.org/rules/attribute-allowed-values"
+      ]
+    },
+    {
+      "path": "linters/html-validate/prefer-button.md",
+      "sha256": "1264d53b0b5fd7773162188a62c191d3a11c861e03a7f8bd52348968d127c8c4",
+      "urls": [
+        "https://html-validate.org/rules/prefer-button"
+      ]
+    },
+    {
+      "path": "linters/html-validate/overview.md",
+      "sha256": "aa54174aec74120796ce7b5c83f11a10ee1809d803a8a6d89dc9c2db84b7789b",
+      "urls": [
+        "https://html-validate.org/rules/"
+      ]
+    },
+    {
+      "path": "linters/html-validate/map-dup-name.md",
+      "sha256": "94678dd17e4769b062e9e552d1018f6ab364541d0917a45e3afe1f7292a481bd",
+      "urls": [
+        "https://html-validate.org/rules/map-dup-name"
+      ]
+    },
+    {
+      "path": "linters/html-validate/script-element.md",
+      "sha256": "9d8cc6c8c9a7493529ff8d5e5cd97453494137132779e5c2f6b3da966b9bfb09",
+      "urls": [
+        "https://html-validate.org/rules/script-element"
+      ]
+    },
+    {
+      "path": "linters/html-validate/svg-focusable.md",
+      "sha256": "a34a16f58986de06974481bad84b63131eccb1c8e99c08b27d753df5171e8228",
+      "urls": [
+        "https://html-validate.org/rules/svg-focusable"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-redundant-role.md",
+      "sha256": "bff937262b5fab8a3fa3fa735c209e718477d9f6a6a0669870d004492eac8046",
+      "urls": [
+        "https://html-validate.org/rules/no-redundant-role"
+      ]
+    },
+    {
+      "path": "linters/html-validate/doctype-html.md",
+      "sha256": "287d0b24778f1ba01a6541460a60acb78964579cff2299bf135d943a11807197",
+      "urls": [
+        "https://html-validate.org/rules/doctype-html"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-missing-references.md",
+      "sha256": "a36788f222f15372daaf142dd4e33f75b557bdc7844f1d589e168b4015310a86",
+      "urls": [
+        "https://html-validate.org/rules/no-missing-references"
+      ]
+    },
+    {
+      "path": "linters/html-validate/element-permitted-content.md",
+      "sha256": "06dbab25b7af1477f3e21f4850ba49ffb871c827703238507a7eb1d584a01ee9",
+      "urls": [
+        "https://html-validate.org/rules/element-permitted-content"
+      ]
+    },
+    {
+      "path": "linters/html-validate/element-required-ancestor.md",
+      "sha256": "38956526741bb011a681bcd9696618e95494e3a9a7d51b7861750e722aada039",
+      "urls": [
+        "https://html-validate.org/rules/element-required-ancestor"
+      ]
+    },
+    {
+      "path": "linters/html-validate/aria-label-misuse.md",
+      "sha256": "7636166e0ba9f8ace2577807bb45340d7ac48890fb5f9eb25682dca82cb4c046",
+      "urls": [
+        "https://html-validate.org/rules/aria-label-misuse"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-unknown-elements.md",
+      "sha256": "6421c91a86a27b17eebc13a5177c3996a37073860e01f73d26357dc8381b8d45",
+      "urls": [
+        "https://html-validate.org/rules/no-unknown-elements"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-dup-class.md",
+      "sha256": "6ed5aa9e24c123d2460f602011bb97ece5bb1298ff586fd28170adc5cd308ec6",
+      "urls": [
+        "https://html-validate.org/rules/no-dup-class"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-dup-attr.md",
+      "sha256": "e1b2920619c7a6b6fab443d2cdbd27bb5b047ca2bdf2d976217361a21ec1812b",
+      "urls": [
+        "https://html-validate.org/rules/no-dup-attr"
+      ]
+    },
+    {
+      "path": "linters/html-validate/name-pattern.md",
+      "sha256": "377ef6a18a1799c5997dbda635f556ac05298bf23b55f39da0b9e44b5ae849ad",
+      "urls": [
+        "https://html-validate.org/rules/name-pattern"
+      ]
+    },
+    {
+      "path": "linters/html-validate/unique-landmark.md",
+      "sha256": "28338cbb61e07faa9f8a42e0b6a5f738b338bfe0cf9f100f96743175aaa262e8",
+      "urls": [
+        "https://html-validate.org/rules/unique-landmark"
+      ]
+    },
+    {
+      "path": "linters/html-validate/missing-doctype.md",
+      "sha256": "5886b9b585aca072178383d2d28e5d9faf5839d4a60bab272df6127e9faca6a8",
+      "urls": [
+        "https://html-validate.org/rules/missing-doctype"
+      ]
+    },
+    {
+      "path": "linters/html-validate/void-style.md",
+      "sha256": "3fd3f63e21cdf5cb108d07c370a44d0bda080c9447a8269d9c36b23783574d5e",
+      "urls": [
+        "https://html-validate.org/rules/void-style"
+      ]
+    },
+    {
+      "path": "linters/html-validate/attribute-empty-style.md",
+      "sha256": "3ae9e1ab551c16c2f6746e485aaf51c53eb3fe84bbf978068b59f240b96093c5",
+      "urls": [
+        "https://html-validate.org/rules/attribute-empty-style"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-trailing-whitespace.md",
+      "sha256": "4aca7b8bd0bd44383bea5e88fc82335fa6293e6324d4c1dd75f72c5fd57a76d6",
+      "urls": [
+        "https://html-validate.org/rules/no-trailing-whitespace"
+      ]
+    },
+    {
+      "path": "linters/html-validate/valid-autocomplete.md",
+      "sha256": "fed0ad341e02951e8fadce29aa5b66938be8a2382e28f3852a7adddf40db2daa",
+      "urls": [
+        "https://html-validate.org/rules/valid-autocomplete"
+      ]
+    },
+    {
+      "path": "linters/html-validate/hidden-focusable.md",
+      "sha256": "44a04434338dbe8ff39fbfa273b2c5cd09e06d158e7c5c02c230ca6e19bfdf94",
+      "urls": [
+        "https://html-validate.org/rules/hidden-focusable"
+      ]
+    },
+    {
+      "path": "linters/html-validate/element-permitted-parent.md",
+      "sha256": "0211a91a29976743dfe6dd7ea8d5ef5cf2fbf63be412107706cdce402fbe49d7",
+      "urls": [
+        "https://html-validate.org/rules/element-permitted-parent"
+      ]
+    },
+    {
+      "path": "linters/html-validate/id-pattern.md",
+      "sha256": "c5234bb47c90f0a4de6757f694d8f4d70a5f84b05351d6b8af0b04ee32f72faa",
+      "urls": [
+        "https://html-validate.org/rules/id-pattern"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-style-tag.md",
+      "sha256": "ce5de6a9fea147047d7e8cbcfcbfd9e0f5d748115936df58ee582027c9da2a10",
+      "urls": [
+        "https://html-validate.org/rules/no-style-tag"
+      ]
+    },
+    {
+      "path": "linters/html-validate/element-required-content.md",
+      "sha256": "218c0508a66958ff61c23209c6aeb28aeb77915215a5f18978f34da924b15c0e",
+      "urls": [
+        "https://html-validate.org/rules/element-required-content"
+      ]
+    },
+    {
+      "path": "linters/html-validate/long-title.md",
+      "sha256": "136a19df47ce914d0a0a53cc8d8e2cd642be2c26bab80cc78e5eccee6ff794ac",
+      "urls": [
+        "https://html-validate.org/rules/long-title"
+      ]
+    },
+    {
+      "path": "linters/html-validate/area-alt.md",
+      "sha256": "52a2a280170adfb15603365aeb77ed6ac4f9d9c7c0cca3d3e7c634e69bcbbbff",
+      "urls": [
+        "https://html-validate.org/rules/area-alt"
+      ]
+    },
+    {
+      "path": "linters/html-validate/void-content.md",
+      "sha256": "bd07474c2c3c04840ac24b07e3c929637e3126f5aace1facce7329a42dee1c80",
+      "urls": [
+        "https://html-validate.org/rules/void-content"
+      ]
+    },
+    {
+      "path": "linters/html-validate/attr-pattern.md",
+      "sha256": "78c1a23d89cdae1f91aef8e9e17d8724507ae78b7bdcebef1908175f77303b86",
+      "urls": [
+        "https://html-validate.org/rules/attr-pattern"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-raw-characters.md",
+      "sha256": "8559685c2f5db2201c8152838bd209e61a0c3ce8eb8402b51ec291188bdf638a",
+      "urls": [
+        "https://html-validate.org/rules/no-raw-characters"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-autoplay.md",
+      "sha256": "824d35f16468d2def068a1525e34b446f17af6fdc593f56f4466a0d6fe05fcea",
+      "urls": [
+        "https://html-validate.org/rules/no-autoplay"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-self-closing.md",
+      "sha256": "c944a6b41e90bc4e3d3076ce2f2812b966367e9741108486a40d2898cc58589e",
+      "urls": [
+        "https://html-validate.org/rules/no-self-closing"
+      ]
+    },
+    {
+      "path": "linters/html-validate/heading-level.md",
+      "sha256": "7c7341c1c49d94ae85d75a749e9e6f93621570c816b7925d056483f37bb3a2d3",
+      "urls": [
+        "https://html-validate.org/rules/heading-level"
+      ]
+    },
+    {
+      "path": "linters/html-validate/wcag.md",
+      "sha256": "edd5d5f81c2cac574b5719117b29890d1ba88c867361e61e48d9bfdf28282ad8",
+      "urls": [
+        "https://html-validate.org/rules/wcag"
+      ]
+    },
+    {
+      "path": "linters/html-validate/aria-hidden-body.md",
+      "sha256": "1a44deabb17f54b31bfd2e976b057a60b11afaf8ae56a2355583bfe94bbb1d9c",
+      "urls": [
+        "https://html-validate.org/rules/aria-hidden-body"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-implicit-button-type.md",
+      "sha256": "96a7ff82c1b3d2fc13f4dac9c15696517219c83a39b82c838e113fb0b67fbccc",
+      "urls": [
+        "https://html-validate.org/rules/no-implicit-button-type"
+      ]
+    },
+    {
+      "path": "linters/html-validate/multiple-labeled-controls.md",
+      "sha256": "d9f0ae19cc1e275b91202817566ca93573efafab8282b63fdf23dee2ce56d98a",
+      "urls": [
+        "https://html-validate.org/rules/multiple-labeled-controls"
+      ]
+    },
+    {
+      "path": "linters/html-validate/index.md",
+      "sha256": "bdefac6063e626767b4ac0452ea65a244e882f2a99cace09f732dbe59bfdcf9b",
+      "urls": [
+        "https://html-validate.org/rules/index"
+      ]
+    },
+    {
+      "path": "linters/html-validate/input-missing-label.md",
+      "sha256": "4ac6e1311b83b396113129f0fe6f1b9a62a0136b44d4c197bfeed460f6bf379b",
+      "urls": [
+        "https://html-validate.org/rules/input-missing-label"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-unused-disable.md",
+      "sha256": "05cf578b1fec9da161c94d9acb589d1a608bf708d6df48d27dc5609f9864008a",
+      "urls": [
+        "https://html-validate.org/rules/no-unused-disable"
+      ]
+    },
+    {
+      "path": "linters/html-validate/element-case.md",
+      "sha256": "fc9fe356bc4ca35608af39fa1d4d706f1433220f0ce35909197746af2e2cd9de",
+      "urls": [
+        "https://html-validate.org/rules/element-case"
+      ]
+    },
+    {
+      "path": "linters/html-validate/close-order.md",
+      "sha256": "a29d7e7f384617f69126033aa41c61f4bf94ceaf3c651edebbd547c054cd9094",
+      "urls": [
+        "https://html-validate.org/rules/close-order"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-abstract-role.md",
+      "sha256": "917433ae6663247846e2c912ca4dada39a0283d71ec30a7c45da1adf902a239f",
+      "urls": [
+        "https://html-validate.org/rules/no-abstract-role"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-inline-style.md",
+      "sha256": "ca55ac6202639ebe9bfab8d440c6c1230344f556114ed5e9d24949826746db0e",
+      "urls": [
+        "https://html-validate.org/rules/no-inline-style"
+      ]
+    },
+    {
+      "path": "linters/html-validate/script-type.md",
+      "sha256": "cd27454078457f04e40b829b7ea3a9375d821d86e73ff07aa1885e285b6c4491",
+      "urls": [
+        "https://html-validate.org/rules/script-type"
+      ]
+    },
+    {
+      "path": "linters/html-validate/element-permitted-order.md",
+      "sha256": "609c39c6fccf180352defbefd10f57d9b486cf4fabb991fa59609a6b245fcf0e",
+      "urls": [
+        "https://html-validate.org/rules/element-permitted-order"
+      ]
+    },
+    {
+      "path": "linters/html-validate/meta-refresh.md",
+      "sha256": "5917b1f4d47d5cffdbebe4b7a3af9d2b64e14dd4e93218c4e2fc00d31076b99c",
+      "urls": [
+        "https://html-validate.org/rules/meta-refresh"
+      ]
+    },
+    {
+      "path": "linters/html-validate/prefer-tbody.md",
+      "sha256": "411ac2ab4107bebd04f7d75754b1cd30d95918dc624f0c9698e00519b0b68b64",
+      "urls": [
+        "https://html-validate.org/rules/prefer-tbody"
+      ]
+    },
+    {
+      "path": "linters/html-validate/attr-delimiter.md",
+      "sha256": "12d004a405ee3f4c6509035cb14d1a566e5e773a32a3a1405156095458ad237a",
+      "urls": [
+        "https://html-validate.org/rules/attr-delimiter"
+      ]
+    },
+    {
+      "path": "linters/html-validate/require-sri.md",
+      "sha256": "b2b77ed7cfd9339386692c6d883a6f218bd214ec61a490822f12bb3bf84eda10",
+      "urls": [
+        "https://html-validate.org/rules/require-sri"
+      ]
+    },
+    {
+      "path": "linters/html-validate/text-content.md",
+      "sha256": "48f6903ae8c196571d0721aabf05db299b5da41ae3489ac9568260dd5e674cd5",
+      "urls": [
+        "https://html-validate.org/rules/text-content"
+      ]
+    },
+    {
+      "path": "linters/html-validate/deprecated-rule.md",
+      "sha256": "0aa5788efe0febc929bab36767f56adf54f781f68ba19b5c1259cbf839ab37a7",
+      "urls": [
+        "https://html-validate.org/rules/deprecated-rule"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-conditional-comment.md",
+      "sha256": "04cdc17285020af29ab0a1a57314d2d6cde740eb9d2aadf17ead2e4488b2672f",
+      "urls": [
+        "https://html-validate.org/rules/no-conditional-comment"
+      ]
+    },
+    {
+      "path": "linters/html-validate/attribute-misuse.md",
+      "sha256": "e0708a42d72fd6baf7559b7da552f91f077b3469bcd66bd70159e579d46ac1c7",
+      "urls": [
+        "https://html-validate.org/rules/attribute-misuse"
+      ]
+    },
+    {
+      "path": "linters/html-validate/element-required-attributes.md",
+      "sha256": "0423de22c6a64bbf82782e39ae3644db546df0b57bc77b4484b1a9c0cf756fb3",
+      "urls": [
+        "https://html-validate.org/rules/element-required-attributes"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-implicit-close.md",
+      "sha256": "9665fd30f44d58dce15ca34b0a705493b9e00b37e62043c2ed4119fda9c9e80b",
+      "urls": [
+        "https://html-validate.org/rules/no-implicit-close"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-dup-id.md",
+      "sha256": "892a0d8f38bf12a3fa7413aabf25a5f09f4b8e0a4c7560c4eaf8ac24c07b3f2c",
+      "urls": [
+        "https://html-validate.org/rules/no-dup-id"
+      ]
+    },
+    {
+      "path": "linters/html-validate/unrecognized-char-ref.md",
+      "sha256": "40f674e7470e14920158d40c9cb6a22a46b4db003ecd8d7101d5c0d15b45e461",
+      "urls": [
+        "https://html-validate.org/rules/unrecognized-char-ref"
+      ]
+    },
+    {
+      "path": "linters/html-validate/prefer-native-element.md",
+      "sha256": "7270886d1b2dd19fccbcb22a5c0c01c667b6731aca3b9069d8a4ac0f82459357",
+      "urls": [
+        "https://html-validate.org/rules/prefer-native-element"
+      ]
+    },
+    {
+      "path": "linters/html-validate/attr-case.md",
+      "sha256": "7ff563a1cd7182d357813c2177ec7e0c8b5cea38ac6166c6f58dbb34872f583b",
+      "urls": [
+        "https://html-validate.org/rules/attr-case"
+      ]
+    },
+    {
+      "path": "linters/html-validate/empty-title.md",
+      "sha256": "de0012e3f3c0ae48f3934078d8bc641c02bcf0672b3aec50bca6106f8dfbaba2",
+      "urls": [
+        "https://html-validate.org/rules/empty-title"
+      ]
+    },
+    {
+      "path": "linters/html-validate/element-permitted-occurrences.md",
+      "sha256": "fd023fec770009b54446744df48db2879a7d8d3825b4b9082f40fab7b710933c",
+      "urls": [
+        "https://html-validate.org/rules/element-permitted-occurrences"
+      ]
+    },
+    {
+      "path": "linters/html-validate/attribute-boolean-style.md",
+      "sha256": "1be2c937b8d1d99c9fb87ca984a2dedd633c7e53293f3aff111dfa7c5e753aa8",
+      "urls": [
+        "https://html-validate.org/rules/attribute-boolean-style"
+      ]
+    },
+    {
+      "path": "linters/html-validate/deprecated.md",
+      "sha256": "b405c1988a67b389943cf1543523c845568ce1a1f686716f9d4082c213fa9299",
+      "urls": [
+        "https://html-validate.org/rules/deprecated"
+      ]
+    },
+    {
+      "path": "linters/html-validate/require-csp-nonce.md",
+      "sha256": "316261600430582f27d700b5167bb5a5ab855ac1897c7103b6a2518855ee56c2",
+      "urls": [
+        "https://html-validate.org/rules/require-csp-nonce"
+      ]
+    },
+    {
+      "path": "linters/html-validate/element-name.md",
+      "sha256": "0e2d6d4e330fc8ce2a53221667c3efc32dcdf3ecd0b318e8d3927e3d4a6fa85c",
+      "urls": [
+        "https://html-validate.org/rules/element-name"
+      ]
+    },
+    {
+      "path": "linters/html-validate/no-redundant-for.md",
+      "sha256": "81013c024eee1eda4c6e3bb75d8d3b524606ebe9b7c86495add83b7206bce226",
+      "urls": [
+        "https://html-validate.org/rules/no-redundant-for"
+      ]
+    },
+    {
+      "path": "linters/html-validate/close-attr.md",
+      "sha256": "a7f50ac6798aead3d21d405d1e43f144bde5cc4495ad0395686f6bb2ff8ee443",
+      "urls": [
+        "https://html-validate.org/rules/close-attr"
+      ]
+    },
+    {
+      "path": "linters/html-validate/doctype-style.md",
+      "sha256": "cd76129c1057b605780946231a67007215e109ced2216aadd21d130df8c4ef7d",
+      "urls": [
+        "https://html-validate.org/rules/doctype-style"
+      ]
+    },
+    {
+      "path": "linters/htmlhint/overview.md",
+      "sha256": "fc1f2f693e3c93f3cc8a322623a600376f0402d520a9d4317b8347e39eb23466",
+      "urls": [
+        "https://htmlhint.com/docs/user-guide/rules/"
+      ]
+    }
+  ]
+}

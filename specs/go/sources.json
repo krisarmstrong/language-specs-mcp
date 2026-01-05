@@ -1,0 +1,2901 @@
+{
+  "language": "go",
+  "generatedAt": "2026-01-05T15:15:48.677576+00:00",
+  "files": [
+    {
+      "path": "effective-go.md",
+      "sha256": "1e7f6ed8871d535088b91f4090ebd59bb8dd1f6a687e1ed65db150b3e013a219",
+      "urls": [
+        "https://go.dev/doc/effective_go"
+      ]
+    },
+    {
+      "path": "patterns/proverbs.md",
+      "sha256": "c110c86e7eddcc831bc5c3100c34251f8bdb47f16284b3d46fc7ce9fbe757394",
+      "urls": []
+    },
+    {
+      "path": "patterns/error-handling.md",
+      "sha256": "96f118c6b725380e90f6145ea89ecbf3b682fe1d39a60537a13e64f925ebd777",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "9427f3dce04e10e47a55aff096dc6ab07eb9d9014f4820667c250cd5f251cfb0",
+      "urls": [
+        "https://github.com/mvdan/gofumpt",
+        "https://github.com/segmentio/golines",
+        "https://pkg.go.dev/cmd/gofmt",
+        "https://pkg.go.dev/golang.org/x/tools/cmd/goimports"
+      ]
+    },
+    {
+      "path": "formatters/goimports.md",
+      "sha256": "9e6866f2e6f34ef3b032097315c3890d2b384ffb323725a3038e47b6ebf22df8",
+      "urls": [
+        "https://pkg.go.dev/golang.org/x/tools/cmd/goimports"
+      ]
+    },
+    {
+      "path": "formatters/gofmt.md",
+      "sha256": "fff30c9c21384331b9097cbb6e01bd3da433f43207a964d1adbab73dfcc54779",
+      "urls": [
+        "https://pkg.go.dev/cmd/gofmt"
+      ]
+    },
+    {
+      "path": "formatters/gofumpt.md",
+      "sha256": "03b3afc68ad2ab835d9490928133d98d73b06c8e1d144d7939061c899f669694",
+      "urls": [
+        "https://github.com/mvdan/gofumpt"
+      ]
+    },
+    {
+      "path": "formatters/golines.md",
+      "sha256": "ef77ad89a35c641bc3edf8ad222868a785a89fed02093fa98ffb8c330dc173c6",
+      "urls": [
+        "https://github.com/segmentio/golines"
+      ]
+    },
+    {
+      "path": "stdlib/debug-elf.md",
+      "sha256": "91583bc368dc1c957923dcdab826dfda35ed059781a30539f5bdb01ffd1d0354",
+      "urls": [
+        "https://go.dev/security/policy"
+      ]
+    },
+    {
+      "path": "stdlib/image-gif.md",
+      "sha256": "5a206472dc3008469cd0cece6803a268cff1b92b538879a7d5e5d66b5770d95b",
+      "urls": [
+        "https://www.w3.org/Graphics/GIF/spec-gif89a.txt"
+      ]
+    },
+    {
+      "path": "stdlib/go-version.md",
+      "sha256": "6ef8dea1299b4a18f0eac1f875879fc8ec5faac6e00199c97443088c3e3c9849",
+      "urls": [
+        "https://go.dev/doc/toolchain#name",
+        "https://go.dev/doc/toolchain#version"
+      ]
+    },
+    {
+      "path": "stdlib/net-http-pprof.md",
+      "sha256": "219667eab964e2e42821caca97d72c18718b86aeffcd0f0cb6f59cd847d4bedc",
+      "urls": [
+        "http://localhost:6060/debug/pprof/",
+        "http://localhost:6060/debug/pprof/block",
+        "http://localhost:6060/debug/pprof/heap",
+        "http://localhost:6060/debug/pprof/mutex",
+        "http://localhost:6060/debug/pprof/profile?seconds=30",
+        "http://localhost:6060/debug/pprof/trace?seconds=5",
+        "https://blog.golang.org/2011/06/profiling-go-programs.html"
+      ]
+    },
+    {
+      "path": "stdlib/cmp.md",
+      "sha256": "6a8544c6b15a51322f0c6652d55c9f0977100c9dd8eccea2b4de9f15d00bffc5",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-boring.md",
+      "sha256": "8e51f7e1c862995e42d3b76250b531fed9aaa550a665d44c269d1a1806491f36",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-dsa.md",
+      "sha256": "20f173b733eb78e7e6f30016d658add939aa42af44734a17c4eaf9d84b11f33a",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-net-dns-dnsmessage.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-race.md",
+      "sha256": "ccfa21ce9e5a97ea704ca40f22b927eb2cb217e900e454836b5b8bc76356b0d8",
+      "urls": []
+    },
+    {
+      "path": "stdlib/reflect-internal-example1.md",
+      "sha256": "618440d5f92bde04e661ca6671ee1449f674baa7dcf1cdec60011ba26e52968e",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-crypto-chacha20.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/unicode-utf8.md",
+      "sha256": "f5a4e3bd3455256d0075ded253539e41771fb82deab20462b8e22c542e018263",
+      "urls": [
+        "https://en.wikipedia.org/wiki/UTF-8"
+      ]
+    },
+    {
+      "path": "stdlib/internal-copyright.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/testing-fstest.md",
+      "sha256": "0b0d1883e304ce9fd366f848f8d53d594f85120d9b41b9f4f98103dedb18cf02",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-coverage-cformat.md",
+      "sha256": "503b07974d27e8e0936009f299933aaae7ebb411c0ab57065d5f3ce840885632",
+      "urls": []
+    },
+    {
+      "path": "stdlib/log-internal.md",
+      "sha256": "c425004c50d865f76143316ef1a0f76ac16b08a671a4b8c03ba0a60139db7350",
+      "urls": []
+    },
+    {
+      "path": "stdlib/bufio.md",
+      "sha256": "11fdbd274a2425b5804ded205d9ed92f13609217fb545758ea0839c7e6db86c3",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-trace.md",
+      "sha256": "31e7bf56683b698100e5814e9aeee4cb3395f5b6532a8ffe30d64a3f235f1114",
+      "urls": []
+    },
+    {
+      "path": "stdlib/os-user.md",
+      "sha256": "c95e40196e32d8f923c0776f36362ac160ff80905f67c825882db51cecd9a6a1",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-rc4.md",
+      "sha256": "d58ac2ae11a399d04df9c39e18d671e3c571d729e7214db93452e978fa3ee32a",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-types-errors.md",
+      "sha256": "1cd2cb9dfab257f1cbba7c65162db922268256b650903212d7be3a875c474501",
+      "urls": [
+        "https://golang.org/ref/spec#Appending_and_copying_slices",
+        "https://golang.org/ref/spec#Conversions",
+        "https://golang.org/ref/spec#Length_and_capacity",
+        "https://golang.org/ref/spec#Making_slices_maps_and_channels"
+      ]
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-crypto-chacha20poly1305.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-profilerecord.md",
+      "sha256": "7aae95b3b7b0ab248c2ba94dc37a41b5f2eaa0fd314bb7553abf2ca67592d91b",
+      "urls": []
+    },
+    {
+      "path": "stdlib/log-slog-internal.md",
+      "sha256": "60a6a6e954fb9aeef941098b2f73a6939e13ac2ec56a76adefb9bc66968d0b2b",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-net-http2-hpack.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-sha256.md",
+      "sha256": "63ee59fd436e874f3654176976cd45d7003b02c3af79951cc0cd7bd3121024c4",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-trace-testtrace.md",
+      "sha256": "60aadd6c34c067f35062e2d46858663964fa669a119bca6548c669ee001f667d",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-drbg.md",
+      "sha256": "3320c1cc0bb542a87bf633bbc853ebf30dbc8ab9707073c9a6249816a7f085dc",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-coverage-slicereader.md",
+      "sha256": "244f0f53181e29d69a77cd8f1ac475c3583dc1f99622d09adbb2a09a41c1b8f8",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-trace-internal-tracev1.md",
+      "sha256": "9ac2e221ddd4e99759a2803ff7f8de628190bcfbb568afba673dc636aee720e1",
+      "urls": []
+    },
+    {
+      "path": "stdlib/mime-multipart.md",
+      "sha256": "ced03099c14f9ecc83cd3515cd7a78b7133c8355f20c6f7180a88fab83ae62b1",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-coverage-rtcov.md",
+      "sha256": "893987607286667775c829851310917efa930884b118b8e2c8ae353a9834e3e6",
+      "urls": []
+    },
+    {
+      "path": "stdlib/runtime-debug.md",
+      "sha256": "33e4c3f9a9bd66d66c895f9aaf532eb3b883e8d358f394ef897263ca69c05549",
+      "urls": [
+        "https://go.dev/doc/gc-guide",
+        "https://golang.org/s/go15heapdump"
+      ]
+    },
+    {
+      "path": "stdlib/internal-coverage-decodemeta.md",
+      "sha256": "8b9ef166d5642939c1d8faba5f5b3f3c403fad01cdd8754321a95991f180faf1",
+      "urls": []
+    },
+    {
+      "path": "stdlib/plugin.md",
+      "sha256": "94ecbd5c5825c72105e75d6e9128ad910a2ea849a97e044cb80ff062808da398",
+      "urls": [
+        "https://go.dev/issue/24245"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-sha512.md",
+      "sha256": "631de57dcdb83e1cd719d9e0804dd216f0af354d441dac0262029679a3111b42",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-ssh.md",
+      "sha256": "fa3210489403fee048da3e0059ce687dd2549dd47b7b5b7a8bccecbe0ad36f94",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net-http-httputil.md",
+      "sha256": "5deff609415c420330f155669bc68ba19dc49ec9ea83460c52d481e6897bb2bf",
+      "urls": []
+    },
+    {
+      "path": "stdlib/testing-synctest.md",
+      "sha256": "3890cb99e7c050fce29a7e916219fc08062ef4c0484ab3aa35706224f442f533",
+      "urls": [
+        "http://test.tld/"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140deps-cpu.md",
+      "sha256": "620ee9510c8f127d834da3816c7b59c4efe525df4d0c8c53f3955f2cc3cc2451",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-bytealg.md",
+      "sha256": "395c6363e7a7119a650e122e2334f54f1eab9bede4aa837f5e012a055ac32efe",
+      "urls": []
+    },
+    {
+      "path": "stdlib/runtime-race.md",
+      "sha256": "8a2e5a92337c80574c1fe9fc19471435536014629c5f8c834cc69a42eb6f52f2",
+      "urls": [
+        "https://golang.org/doc/articles/race_detector.html"
+      ]
+    },
+    {
+      "path": "stdlib/syscall.md",
+      "sha256": "9503f074ddfb6a6484eae9d03422245358e5e76ae81f659f892b1038e706f0ef",
+      "urls": [
+        "https://golang.org/s/go1.4-syscall"
+      ]
+    },
+    {
+      "path": "stdlib/internal-testhash.md",
+      "sha256": "bb2496b1135d4e5ba1066aaf0ccdc5db6558f738a504499755ef1401377b0088",
+      "urls": []
+    },
+    {
+      "path": "stdlib/log-slog-internal-benchmarks.md",
+      "sha256": "cdaabfacb241a86470a61811ef04cc38bf1e0d2939461afa799c9adb3da7b3d4",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-coverage-slicewriter.md",
+      "sha256": "f9d992fb2ce8431e5d721f0aa9e18ad041ec1da0da96ac8c438c841adaa216d7",
+      "urls": []
+    },
+    {
+      "path": "stdlib/encoding-pem.md",
+      "sha256": "7597882a39cecffda1d9e4f9951827db15a63e5aa69a8777d0f84a0e82754721",
+      "urls": []
+    },
+    {
+      "path": "stdlib/structs.md",
+      "sha256": "5575d219a52a3d63756726a23b2fa385f19204e0ab9d8af1341c74772af829be",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-sha1.md",
+      "sha256": "815849be6b465b87c848f8f811538b99333603a09195f2de799ca17d4dd4f02f",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-bigmod.md",
+      "sha256": "892b38f3b18b2b30af7062d94069b10fed679eb9db8a4e83d065da9991d1e34c",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-randutil.md",
+      "sha256": "6203d329939ee4124b78fbb04544650370e4dc315a973d4c351d39c77138d7dc",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net-http-fcgi.md",
+      "sha256": "c49e1bda6dfa68271e9871e2a1aa6e7183462142497b0ddcca4ba49f3e981a35",
+      "urls": [
+        "https://fast-cgi.github.io/"
+      ]
+    },
+    {
+      "path": "stdlib/go-importer.md",
+      "sha256": "82224bf19eed4dac31e100b22a06358309d9633707588312faaf2b9f27897358",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-text-unicode-bidi.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-runtime-wasitest.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/go-internal-gcimporter.md",
+      "sha256": "3b9b99e321be836890b656df1dc19a7aa65e70e6c735ec5e41415b9dc7b143b9",
+      "urls": []
+    },
+    {
+      "path": "stdlib/hash.md",
+      "sha256": "c402f3d6dda3f48fa894fe1f68b2b3fb350eba5aaa95e8dfa175f38ad16f4fc2",
+      "urls": [
+        "https://golang.org/doc/go1compat"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140hash.md",
+      "sha256": "4fd71ddfcf67afc2ebacc789c3519fc0ec9f930c77d1321eb3fd40bf8f319275",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-obscuretestdata.md",
+      "sha256": "0d0fbca9222a5f5c60f94663f4b4ea6afe4ff41e90f757195932456e92a58852",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net-http-httptest.md",
+      "sha256": "14f42a84029cbbe7a76edf0c1362a7fc3643714f554af17a1c72abe258501756",
+      "urls": [
+        "http://ipaddr:port"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-tls.md",
+      "sha256": "93a2af9d7b8c94343c55b1e769a82bf63c1c29f5e39f802ea4756ea7912381c9",
+      "urls": [
+        "http://www.isg.rhul.ac.uk/tls/TLStiming.pdf",
+        "https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format",
+        "https://go.dev/doc/security/fips140",
+        "https://www.iana.org/assignments/tls-parameters/tls-parameters.xml",
+        "https://www.iana.org/assignments/tls-parameters/tls-parameters.xml#tls-parameters-8",
+        "https://www.imperialviolet.org/2013/02/04/luckythirteen.html"
+      ]
+    },
+    {
+      "path": "stdlib/net-netip.md",
+      "sha256": "4cf73fdc7493b11a8843c2824cce2134929fdf7f4176289b1a01a31919ec5e42",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-x509-pkix.md",
+      "sha256": "f2a64b5c1498e964ce9c5b77e5cdd16a30d7efb1fdb6d00cde375f3bc64d0a10",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-sys-cpu.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-ecdsa.md",
+      "sha256": "f08556126ada5ac7da3a6caa7ea3508caaa35669f566672f6e91b258647db0f9",
+      "urls": []
+    },
+    {
+      "path": "stdlib/go-scanner.md",
+      "sha256": "6b88a0371f13085df35697f4d9f545bdefd2e1d88cbbf43b9d01e9ffb8f5a6af",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-singleflight.md",
+      "sha256": "cf610df9874ce924568ed64f2589977da8a6fec8bab5d3ef994b84b94b266b82",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-abi.md",
+      "sha256": "02dce13c42ebdc9d35b6b7253730e27c8033342d677b9afb76174ba64be3dfb8",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-coverage-decodecounter.md",
+      "sha256": "4875b48751e5443830a2c9b4d9d6efd7eef99e66fc10c030c344c929c4ede53c",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-text-secure-bidirule.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140.md",
+      "sha256": "0bb982acd927acdfe9ac86b1002535521bf49256799bace64cc633f25ad749b1",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-crypto-internal-alias.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/unsafe.md",
+      "sha256": "f0c1c159e407ae5b13399a2c36e0a5198c6adf818a1449ba0cd1bc6231cd109e",
+      "urls": []
+    },
+    {
+      "path": "stdlib/go-internal-gccgoimporter.md",
+      "sha256": "1862ae96430ba7056eb9825f886d75a560b6fdde5f113717675d0702abdb4288",
+      "urls": []
+    },
+    {
+      "path": "stdlib/debug-plan9obj.md",
+      "sha256": "e815db56c30913962b38e1a095ea2e664d46829c2ee62b998b3422a8f3e51ddf",
+      "urls": [
+        "https://go.dev/security/policy"
+      ]
+    },
+    {
+      "path": "stdlib/encoding-base32.md",
+      "sha256": "b7fb3c2030668047c6b0aef045726dfe9c9b5a061765197572e5ff9b369f7cf9",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-fmtsort.md",
+      "sha256": "b77c15f5281ca5a3b60629f52723c2910685ce58082fb6df78abfb277140b9f8",
+      "urls": []
+    },
+    {
+      "path": "stdlib/context.md",
+      "sha256": "1b6d6bd8a254c777649c6c9d97c649d5bbfc719e02034ab0d431e2656ffd54e4",
+      "urls": [
+        "https://blog.golang.org/pipelines",
+        "https://go.dev/blog/context",
+        "https://go.dev/blog/context-and-structs"
+      ]
+    },
+    {
+      "path": "stdlib/internal-testpty.md",
+      "sha256": "0dacf6cd7eda309aaaf42d5aea7e2e6feae0f467a68e8e67a27024a0d15eb831",
+      "urls": []
+    },
+    {
+      "path": "stdlib/runtime-cgo.md",
+      "sha256": "25e29966c57a43dc821b48cab7a91b5306dfa3349e1ec6d61ac2721c4a30e9b9",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-runtime-strconv.md",
+      "sha256": "98e1490b4c8cd969b4147180c990dbe309eb24c4fa58d804339dbe8be3f78a2f",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-msan.md",
+      "sha256": "81ad15f53c286b1793b4329decbc35f2d7b415a00e218a22c7ddea89090875d6",
+      "urls": []
+    },
+    {
+      "path": "stdlib/expvar.md",
+      "sha256": "b25aa29eb2f201819d7084396955db182ec0614147b02eb779b567d82966f33b",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto.md",
+      "sha256": "d5d38cbd9b8afa7e3c6740bf721a99dbfc8c7d30af700a0f954575f7eb8d9fab",
+      "urls": []
+    },
+    {
+      "path": "stdlib/compress-zlib.md",
+      "sha256": "42dc87b84ebc8731905736fe72062da74af4f1a525122cc3c549170c52727900",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-trace-traceviewer-format.md",
+      "sha256": "34ef7407baeb1684285f1ee03cdbe1fb47d27e161d89dd22f3087bc5292e01f5",
+      "urls": [
+        "https://docs.google.com/document/d/1CvAClvFfyA5R-PhYUmn5OOQtYMH4h6I0nSsKchNAySU/preview"
+      ]
+    },
+    {
+      "path": "stdlib/internal-goarch.md",
+      "sha256": "0a7b8dd43af6ac36855b2ed44cfebcf6914e8c51be0c7334db930f8e6cad8605",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net-internal-cgotest.md",
+      "sha256": "b8163f9d254806f933a9de14ae00b69f41f951e5181311b53fb3949a249dc4f1",
+      "urls": []
+    },
+    {
+      "path": "stdlib/regexp.md",
+      "sha256": "4f3369672b6651c754c8c142d35423e6baa994cb2307908e8318741ed1bf229e",
+      "urls": [
+        "https://golang.org/s/re2syntax",
+        "https://swtch.com/~rsc/regexp/regexp1.html",
+        "https://swtch.com/~rsc/regexp/regexp2.html#posix"
+      ]
+    },
+    {
+      "path": "stdlib/math-rand-v2.md",
+      "sha256": "a6d4868b73e1a5b5a44b61bbd426499048d49be0bff31181547585f2abf741ec",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net-rpc-jsonrpc.md",
+      "sha256": "2f2fd9576486ab280d1e9d653f9c186e7b67a3b8b4ab3b31890d2db0736f24b4",
+      "urls": [
+        "https://godoc.org/?q=json-rpc+2.0"
+      ]
+    },
+    {
+      "path": "stdlib/internal-goexperiment.md",
+      "sha256": "09b9a3852bf6910ff64d048ab37cabeb144c5785214ce00d728c65f19bbd81a5",
+      "urls": [
+        "https://github.com/golang/go/issues/59719"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-des.md",
+      "sha256": "176a1cfb7b95ce2a89a417aa7efc14dd11108a1920cd5375f229a207c835e918",
+      "urls": []
+    },
+    {
+      "path": "stdlib/database-sql.md",
+      "sha256": "cf09775c48368fd6805fe848878206a8a2d1d57cefa57f9e9928dac84f3b887c",
+      "urls": [
+        "https://en.wikipedia.org/wiki/Isolation_(database_systems",
+        "https://golang.org/s/sqldrivers",
+        "https://golang.org/s/sqlwiki"
+      ]
+    },
+    {
+      "path": "stdlib/net-smtp.md",
+      "sha256": "d7438e77227f4109a694f6bec5c560ac5753e7dabf7c7bf6b1a72016282ed141",
+      "urls": [
+        "https://godoc.org/?q=smtp"
+      ]
+    },
+    {
+      "path": "stdlib/internal-sync.md",
+      "sha256": "776ed1d61d58138ef6f0d1e4dc28587229e71a71595361ad28e44db5768037d2",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-trace-traceviewer.md",
+      "sha256": "c769deec96ec486b8ed1eb8ac682d45d86a836c18202c2e0f8e629bde08f23ec",
+      "urls": [
+        "https://github.com/golang/pkgsite/blob/master/static/shared/typography/typography.css"
+      ]
+    },
+    {
+      "path": "stdlib/strings.md",
+      "sha256": "76f02c3bd408a1c9db214c2f58ff5d06eede8ab8b5dcc7f67e3cb78b3dcde90b",
+      "urls": [
+        "https://blog.golang.org/strings"
+      ]
+    },
+    {
+      "path": "stdlib/internal-runtime-exithook.md",
+      "sha256": "7f19321b858d3052d0cf6f7bec26fffae9c6a8f0671df5d09bb4309d2d91cd67",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-boring-bcache.md",
+      "sha256": "ec34c5c50cfecfbef30fbaae795fe7f459d08a9ff28ebd00440c8b7dd43a1e26",
+      "urls": []
+    },
+    {
+      "path": "stdlib/log-syslog.md",
+      "sha256": "6a6d9e1ff0178fd60dd6416e05cd20fd945e3cf1547cdb5d28782b8c96e8bd92",
+      "urls": [
+        "https://godoc.org/?q=syslog",
+        "https://golang.org/issue/1108"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-nistec.md",
+      "sha256": "6b2943598039332d4612f9157ba9299b0ad35bc0a9dd131e24fee131098d2254",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-x509.md",
+      "sha256": "d2623a247da418f1c768fe6d77442c00ba4aa76d2dd3f3147612cd6e0abb7ad5",
+      "urls": []
+    },
+    {
+      "path": "stdlib/strconv.md",
+      "sha256": "cd1ecc6a1398fea042043b2fca1495f84d8575573046e051e061d4f56cfce916",
+      "urls": [
+        "https://go.dev/ref/spec#Floating-point_literals",
+        "https://go.dev/ref/spec#Integer_literals"
+      ]
+    },
+    {
+      "path": "stdlib/image-jpeg.md",
+      "sha256": "2f8c916a7ee0c8e71dfc2ece71e3fa7cee6dd1e4ac26a3a07317b244d683c94e",
+      "urls": [
+        "https://www.w3.org/Graphics/JPEG/itu-t81.pdf"
+      ]
+    },
+    {
+      "path": "stdlib/image.md",
+      "sha256": "1d2022c56df1b55c2be83b0c04357f7d975706e83fcab05df8faced6a702159a",
+      "urls": [
+        "https://go.dev/security/policy",
+        "https://golang.org/doc/articles/image_package.html"
+      ]
+    },
+    {
+      "path": "stdlib/math-bits.md",
+      "sha256": "6dd1c26e5f8fa2b4b6ab9c8af3ad53cdc53cb9bb8fa5650b3f6630799397e0ca",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-lazyregexp.md",
+      "sha256": "f2d7ed6c83648a59337539183716a935c7c0accbf41229be4426437534717ad5",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-boring-sig.md",
+      "sha256": "367673350973cc36dae043cc102aa77a8e32a13941121f697cced80a42f2f8e3",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-trace-version.md",
+      "sha256": "ae74b4b77ad654507f510bec8b9788fbcf928ad4ed9d1f66c720694dc195ec56",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-crypto-cryptobyte.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/path.md",
+      "sha256": "a3f38fae9003347677ee685e59c4cb5d8d94680078ed18e8a990d58fc3373cbd",
+      "urls": [
+        "https://9p.io/sys/doc/lexnames.html"
+      ]
+    },
+    {
+      "path": "stdlib/mime-quotedprintable.md",
+      "sha256": "79d0eabe2b8dd10ea32abdb8447a402b36fbc3b055cb871cb3d6436f42b92e71",
+      "urls": []
+    },
+    {
+      "path": "stdlib/debug-macho.md",
+      "sha256": "779201e9fabd90d821ab2d7613358d376018f314eea1073286d2e3e125a8dbe8",
+      "urls": [
+        "https://go.dev/security/policy"
+      ]
+    },
+    {
+      "path": "stdlib/text-scanner.md",
+      "sha256": "912e775fdbee1b2d3cc944a136feb5bb50e528f8c9d675b64857965bf57e703e",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-coverage-cfile.md",
+      "sha256": "15bfdd705c1123b5d662b4223d99d81fe65653cda449ef51b46e56c95a3a2db6",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-sha512.md",
+      "sha256": "a8bbe94860084667ef4cd5837dbf5c7c96508597c39ff181fe5463685ed11bdd",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-routebsd.md",
+      "sha256": "e85cce879432a1b03681585c2deaad1e3ba039ac8c5f071b40179aa37a272656",
+      "urls": []
+    },
+    {
+      "path": "stdlib/encoding-xml.md",
+      "sha256": "88d36b38c30b825cc5f7230619da11bfe9a29f815ff6101d96724fd319ae1225",
+      "urls": [
+        "https://www.w3.org/TR/REC-xml-names/"
+      ]
+    },
+    {
+      "path": "stdlib/os-signal.md",
+      "sha256": "3fe4bdf8a9d19d4e8eed0683566c52589743612db543ac8deb039c689cf664d1",
+      "urls": []
+    },
+    {
+      "path": "stdlib/os-exec.md",
+      "sha256": "7e2eb83a9bb6f84fe3d3a12c49a795973b316066bd447860f2fe58eb685755cb",
+      "urls": [
+        "https://go.dev/blog/path-security"
+      ]
+    },
+    {
+      "path": "stdlib/math-cmplx.md",
+      "sha256": "3ca1934307c7df1100afccee00765a8abc3f6f76102694bd423c32f2fedc57ef",
+      "urls": []
+    },
+    {
+      "path": "stdlib/encoding-gob.md",
+      "sha256": "1e4574b132b652d6c7ad2688d778113077235a0b7ff42adf81f0da33499fbfd2",
+      "urls": [
+        "https://blog.golang.org/gobs-of-data",
+        "https://go.dev/security/policy",
+        "https://golang.org/doc/go1compat"
+      ]
+    },
+    {
+      "path": "stdlib/go-internal-srcimporter.md",
+      "sha256": "3edb1072da9243c968f98c4addf63d7af5f02dc88ce5825fec865da506c62178",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-net-http-httpguts.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/container-ring.md",
+      "sha256": "766e2f8f21030345637c7a550d3dcfa4bb63bcb18bd47db2cfb802e0f5cfd9d0",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-trace-tracev2.md",
+      "sha256": "ca69ed5166b547eb95cd143c19746d1ae8f67afe30cd4e3686da69ef6e5b041f",
+      "urls": []
+    },
+    {
+      "path": "stdlib/reflect.md",
+      "sha256": "68ea9ce34aa1cd71d02bc4296321bd621dc4abd50100fa5b8dbb9336e947f0c7",
+      "urls": [
+        "https://golang.org/doc/articles/laws_of_reflection.html",
+        "https://golang.org/issue/4876",
+        "https://golang.org/ref/spec#Uniqueness_of_identifiers"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-sha256.md",
+      "sha256": "8109228300e937ee6cf6336da543a278ba92ddc2c0cd15d992464c44ee1ad631",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-coverage-calloc.md",
+      "sha256": "2f929b0d2394c9e8c39b3638e848f5b933e0e33aa96dfcae8f39a94cf42d5a61",
+      "urls": []
+    },
+    {
+      "path": "stdlib/testing-internal-testdeps.md",
+      "sha256": "a8c2889911edd07a1a823dacde40d495fd32199121f9904f0313b2f9ca768656",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-md5.md",
+      "sha256": "5944362e15b15904f7f8be9c8caf738be11545df914b8622f9df9dee4fb34575",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net-http.md",
+      "sha256": "353398dbb557c314543768b28d3a8bc7cdb48e25101919d3537f320224fcdaff",
+      "urls": [
+        "http://example.com",
+        "http://example.com/",
+        "http://example.com/form",
+        "http://example.com/upload",
+        "https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site",
+        "https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/CSRF",
+        "https://example.com",
+        "https://go.dev/issue/21955",
+        "https://go.dev/issue/67813",
+        "https://golang.org/s/http2bug",
+        "https://mimesniff.spec.whatwg.org/",
+        "https://pkg.go.dev/net/http#ResponseWriter",
+        "https://pkg.go.dev/net/http#example-ResponseWriter-Trailers",
+        "https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00",
+        "https://tools.ietf.org/html/rfc6265",
+        "https://tools.ietf.org/html/rfc7540#section-8.2",
+        "https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml"
+      ]
+    },
+    {
+      "path": "stdlib/weak.md",
+      "sha256": "0369c9607e001d55c3663d4cb813c44235f94fdadf834f83991310fec2d0904d",
+      "urls": []
+    },
+    {
+      "path": "stdlib/hash-adler32.md",
+      "sha256": "fe0ca9c72db0a48de3ba9bc87616478a362c27744375bd1f643005b42853daa3",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-lazytemplate.md",
+      "sha256": "6e71163550ee65183fe190473941305d6d2e38852ee2f76656c0ed3d6ff63925",
+      "urls": []
+    },
+    {
+      "path": "stdlib/io-ioutil.md",
+      "sha256": "ce81c584c63250983ab9a268da53ed30714f2ddb3e5c294c86247f77f8083c4b",
+      "urls": []
+    },
+    {
+      "path": "stdlib/go-parser.md",
+      "sha256": "4943f98547bacc14533bee5e53dc6590e005cf122f0ef534d6ed901f7e533109",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-aes-gcm.md",
+      "sha256": "2fb012a18202578c04b32fea3a0451521171d1c153bb4d504cbdc93dcd857796",
+      "urls": [
+        "https://c2sp.org/XAES-256-GCM"
+      ]
+    },
+    {
+      "path": "stdlib/embed-internal-embedtest.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-text-transform.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-chacha8rand.md",
+      "sha256": "d7b0714e43a4bfbdbcf1c6429b87b7a6167f6df79d27e0352a38f2137cf96a1d",
+      "urls": [
+        "https://c2sp.org/chacha8rand",
+        "https://cr.yp.to/chacha/chacha-20080128.pdf"
+      ]
+    },
+    {
+      "path": "stdlib/net-http-internal-httpcommon.md",
+      "sha256": "e52f1f699d78fd6e089c25f5c4b8e87721ff00f2e4b354927e250ee84595d2d5",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-gover.md",
+      "sha256": "7f16bf757d0425ae487d27f7cda3d701c3a4af3427770a5dddd8c54897d6d128",
+      "urls": []
+    },
+    {
+      "path": "stdlib/testing-slogtest.md",
+      "sha256": "c52345d9d106d23a69a13071c702fbbbeb03bd50e2590a75dbe757e09d2b3270",
+      "urls": []
+    },
+    {
+      "path": "stdlib/errors.md",
+      "sha256": "7ee9c2295497a9b0c326bb4f13692726580af93d520f4c862f579c6c9fbf9f3d",
+      "urls": [
+        "https://go.dev/blog/go1.13-errors"
+      ]
+    },
+    {
+      "path": "stdlib/math.md",
+      "sha256": "f234fc6546b1e9fc41617ed2bcf527de1a0c230a0d1100cb387c3280dea8a97c",
+      "urls": [
+        "https://oeis.org/A000796",
+        "https://oeis.org/A001113",
+        "https://oeis.org/A001622",
+        "https://oeis.org/A002161",
+        "https://oeis.org/A002162",
+        "https://oeis.org/A002193",
+        "https://oeis.org/A002392",
+        "https://oeis.org/A019774",
+        "https://oeis.org/A139339"
+      ]
+    },
+    {
+      "path": "stdlib/database-sql-driver.md",
+      "sha256": "6009b37d212e42075fdaab4d749f394e5b113cbf7f05b8c093b41c0042521841",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net-url.md",
+      "sha256": "b50d8f2696bf638c12980813c650058afb9339a7a52695bc27efd06c90a178c6",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-coverage-encodemeta.md",
+      "sha256": "3cd0c362a025a1c3419a69f61fa2d212ac143925f726cc1787f0715452637f39",
+      "urls": []
+    },
+    {
+      "path": "stdlib/archive-tar.md",
+      "sha256": "1ec1aae5770227d1486cc7e8e24db02ea566a33add5364e8270eb13a02f85789",
+      "urls": [
+        "http://pubs.opengroup.org/onlinepubs/009695399/utilities/pax.html",
+        "http://pubs.opengroup.org/onlinepubs/9699919799/utilities/pax.html#tag_20_92_13_06",
+        "https://www.gnu.org/software/tar/manual/html_node/Standard.html"
+      ]
+    },
+    {
+      "path": "stdlib/internal-runtime-math.md",
+      "sha256": "6438de24d47c05bba2348bd6ebbf243ec912d9abe002e2ff4dc01196667d6873",
+      "urls": []
+    },
+    {
+      "path": "stdlib/text-template-parse.md",
+      "sha256": "0033cede7707575dd8d607c08f5b247b9d99ceca080f1622ad837a004a470390",
+      "urls": []
+    },
+    {
+      "path": "stdlib/regexp-syntax.md",
+      "sha256": "83b10015687b09a67d3ee7e0fdc3cad062e73a8648126c49de2e5e99b9d52939",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-mlkem.md",
+      "sha256": "9fe140364de34125c592225c54e57720a9bcd3eff4c318889f4230f5991a1dac",
+      "urls": [
+        "https://doi.org/10.6028/NIST.FIPS.203"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-internal-entropy.md",
+      "sha256": "25e048115d2f7d059803e123dbfb9c978b454206d585717234ae2537f2d20761",
+      "urls": [
+        "https://csrc.nist.gov/CSRC/media/Projects/cryptographic-module-validation-program/documents/IG%209.3.A%20Resolution%202b%5BMarch%2026%202024%5D.pdf"
+      ]
+    },
+    {
+      "path": "stdlib/net-http-internal.md",
+      "sha256": "9e86495ec97776627788aa54fca77c8f1054042fb51497a59b457d6f3af34cce",
+      "urls": []
+    },
+    {
+      "path": "stdlib/testing.md",
+      "sha256": "00b562ca6b31b9d8266d3f760667006603696c0c0c70742a8c036a948406e185",
+      "urls": [
+        "https://go.dev/design/14313-benchmark-format",
+        "https://go.dev/doc/fuzz",
+        "https://golang.org/design/14313-benchmark-format",
+        "https://pkg.go.dev/cmd/go#hdr-Test_packages",
+        "https://pkg.go.dev/cmd/go#hdr-Testing_flags"
+      ]
+    },
+    {
+      "path": "stdlib/internal-coverage-pods.md",
+      "sha256": "1054052be890ad229c9eab3c52740d92e411c23e60b125000a58308e21111fe0",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-boring-bbig.md",
+      "sha256": "4820a4a903b65fdf8ed068845b9d3ad5f18b7246da35c960c45e7beed70d9a2c",
+      "urls": []
+    },
+    {
+      "path": "stdlib/image-color-palette.md",
+      "sha256": "5a9f53a8af53078d005f77509fbfbf60843b22c11dee8c4b371fdfe65cc8989f",
+      "urls": [
+        "https://9p.io/magic/man2html/6/color",
+        "https://en.wikipedia.org/wiki/Web_colors#Web-safe_colors"
+      ]
+    },
+    {
+      "path": "stdlib/internal-sysinfo.md",
+      "sha256": "89cd9dc4857bb6d593681a8b608d8186baa5447d7041a8d6237ac1e692d5dc06",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-impl.md",
+      "sha256": "f01d74f195221aa8f399ee2397daf7655c878f1bcc0fe89e2fa4d30cc74dd10a",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-sysrand.md",
+      "sha256": "32d9ff495bb370a95f275f4820a970fa8a2870c88078454a0668714b459b5825",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-ed25519.md",
+      "sha256": "c35919919018a2872fc20c194bbeffda00c5c72085c7b3796dc236dd131788bd",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-runtime-cgroup.md",
+      "sha256": "2471353196ba7651814ac7100ad6b0df67ea9aae4485908ce5e285c1e6fb2b45",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net-rpc.md",
+      "sha256": "1b9f8b0199da0d93e706b6cb2b82833e224a69ed11c19373f06b56b841e3494c",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-coverage.md",
+      "sha256": "481b30c750f9b431ab0990bf29acfa7b410f59f15af56100e83adb86ded4ea36",
+      "urls": []
+    },
+    {
+      "path": "stdlib/bytes.md",
+      "sha256": "8b714e11bd0faf996cdae00362008cf4b781f6c2c14d2a6957397ee475b6f668",
+      "urls": []
+    },
+    {
+      "path": "stdlib/slices.md",
+      "sha256": "1ec7f296a1de04f56cf1d7477c9f0f69043b992fc4db7e8832a50467023651b3",
+      "urls": [
+        "https://en.wikipedia.org/wiki/Weak_ordering#Strict_weak_orderings"
+      ]
+    },
+    {
+      "path": "stdlib/runtime-metrics.md",
+      "sha256": "c0da5e4a4db860eaed1dcfe71bcc16823e605c0f7705d33a757be4f2bb27abb1",
+      "urls": []
+    },
+    {
+      "path": "stdlib/hash-crc64.md",
+      "sha256": "2fef41fe5f7cdb4ee681bd7ce407afe30a0b26881fd61c15240302e6aa95f9d4",
+      "urls": [
+        "https://en.wikipedia.org/wiki/Cyclic_redundancy_check"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-ed25519.md",
+      "sha256": "1ae4fe8971280a37db1a7ce64b947d634f3c78b5994661e86b854f866743138c",
+      "urls": [
+        "https://ed25519.cr.yp.to/"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-fips140.md",
+      "sha256": "ca8298e119d7d600b19d80fb5c9fdfb71d90d0a1c0a067ca939bd8381a1d5866",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-rsa.md",
+      "sha256": "aa1f4554d8177f860b61f84a1b272bb23f57adba076f557946ccd1e1fedac0f6",
+      "urls": []
+    },
+    {
+      "path": "stdlib/debug-dwarf.md",
+      "sha256": "0b94d0d0593786aa43957192ac7578f9d263175b1c9e101ad52e658b6351351e",
+      "urls": [
+        "http://dwarfstd.org/doc/dwarf-2.0.0.pdf",
+        "https://go.dev/security/policy"
+      ]
+    },
+    {
+      "path": "stdlib/encoding.md",
+      "sha256": "f00f4a21949dc704cfa3cc46486e760418a2eead392bc4faa6692a8fd5a8448b",
+      "urls": []
+    },
+    {
+      "path": "stdlib/runtime-coverage.md",
+      "sha256": "1cb1473329f7e00fdec368054b970033f998968f2f8496ee218ad93e84f3daff",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-pbkdf2.md",
+      "sha256": "d8707e19edac926aa34aae23a7b94358fe9dfd77c2e296c892772e3094c6ee48",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net-internal-socktest.md",
+      "sha256": "69e7434f266ede67bb11bec69fcf8deee5ead0475bcf30b29b8234ea83747f0e",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-runtime-sys.md",
+      "sha256": "8254b4ea59018b54c12e6158829885120fdd4a88d37fb144d191ee4375657e9a",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-syscall-unix.md",
+      "sha256": "4fdef5cd61e791f0bb0a51cc0204e206d6944479d5eadaa7ae865df3bb7884f8",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-syslist.md",
+      "sha256": "e2207fa9cfc08cfc254c93aca781d6ec86993125f3ea54d0d5ac23d008fec881",
+      "urls": []
+    },
+    {
+      "path": "stdlib/log-slog-internal-buffer.md",
+      "sha256": "96db51d0351e5d27e87c2b20ac538cfb22b01737c27141add3cfef6afabc0f76",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-cipher.md",
+      "sha256": "b8b1482d4861d447d4c88df6885fbc37427e3e6bebe1a329bc03978d5d70b598",
+      "urls": [
+        "https://csrc.nist.gov/groups/ST/toolkit/BCM/current_modes.html",
+        "https://en.wikipedia.org/wiki/Authenticated_encryption"
+      ]
+    },
+    {
+      "path": "stdlib/hash-fnv.md",
+      "sha256": "f628d4dd38180e698f26012569d23affdcc3abe8b82542e7c9fb7f952e14a1bf",
+      "urls": [
+        "https://en.wikipedia.org/wiki/Fowler-Noll-Vo_hash_function"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-nistec-fiat.md",
+      "sha256": "e15463b3418fc40852fea778d01d624d2e1bb333036269d3b138b5094d6963b8",
+      "urls": []
+    },
+    {
+      "path": "stdlib/hash-crc32.md",
+      "sha256": "675dac636410e9c2c4f2ab09fab726502520c72ccc8eab46a738dd55400b43d2",
+      "urls": [
+        "https://dx.doi.org/10.1109/26.231911",
+        "https://dx.doi.org/10.1109/DSN.2002.1028931",
+        "https://en.wikipedia.org/wiki/Cyclic_redundancy_check",
+        "https://en.wikipedia.org/wiki/Mathematics_of_cyclic_redundancy_checks#Reversed_representations_and_reciprocal_polynomials"
+      ]
+    },
+    {
+      "path": "stdlib/image-internal-imageutil.md",
+      "sha256": "90ca6581415078a556cdb2c04b1ad480fc45eaf4cee904c4d19a4c54518cb475",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-synctest.md",
+      "sha256": "8f7315c75b2b5785ac08209beb50e90055bb8acf64cee5f913d51c53b087d05f",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-poll.md",
+      "sha256": "d4fb2ff1cac127ffc492c229db1c544608bf069c522858bbccdb95fa67d23caf",
+      "urls": []
+    },
+    {
+      "path": "stdlib/go-format.md",
+      "sha256": "2de1562ed229bd64237f6d4b35b7cdde83aded4887d5dc7ffb862ecf08720ce9",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140cache.md",
+      "sha256": "ac376218928f8720edbca82f24ca38c1cb7ccb01214a645a1452d2db2fc1af99",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-platform.md",
+      "sha256": "dca5b2de236a63d31cab0fbcca862fa63df1a6b4e0f751a912239a9a8cca4ef8",
+      "urls": [
+        "https://go.dev/wiki/PortingPolicy#broken-ports",
+        "https://go.dev/wiki/PortingPolicy#first-class-ports"
+      ]
+    },
+    {
+      "path": "stdlib/internal-goversion.md",
+      "sha256": "6b4869bef197f79401bd95165843cc5150de303d106cdb464226d7991c244cc4",
+      "urls": []
+    },
+    {
+      "path": "stdlib/log.md",
+      "sha256": "3d170374cafa14fda42a8303baeab600fb634c660ef5a27203427b663938fac7",
+      "urls": []
+    },
+    {
+      "path": "stdlib/runtime-pprof.md",
+      "sha256": "1a6694f425d4c40060ef73b0d852695122897807e4a7d06ac7da1458e9315fe0",
+      "urls": [
+        "https://github.com/google/pprof/blob/main/doc/README.md",
+        "https://github.com/google/pprof/tree/main/proto#overview",
+        "https://golang.org/issue/13841",
+        "https://golang.org/issue/23458"
+      ]
+    },
+    {
+      "path": "stdlib/internal-stringslite.md",
+      "sha256": "cbf710f8c7fc868221f47b2a1b47df82417d14c8323ef38f976a9e182a24bd55",
+      "urls": []
+    },
+    {
+      "path": "stdlib/unicode.md",
+      "sha256": "d6f7be46f86b38b693cbd743224dca81fdc98707242cce1c450b2bcac5391b39",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-saferio.md",
+      "sha256": "0490a4118f11dd8eda58469ca26175b3c17bd6f1f3384a68eb16f376d0ce878a",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-subtle.md",
+      "sha256": "902440a52df08a24218716b2d39d54417a23d2eaa36cb97518b5da6e9f93ba9d",
+      "urls": [
+        "https://developer.arm.com/documentation/ka005181/1-0/?lang=en"
+      ]
+    },
+    {
+      "path": "stdlib/net-http-cgi.md",
+      "sha256": "e55142b0bab89f814c231854abb9956117ac82477059d410ddd3bf81e72f04ce",
+      "urls": []
+    },
+    {
+      "path": "stdlib/html-template.md",
+      "sha256": "d9b825e02336c85aff1e4aaa717b4a5c4158986dcb903bc8985b12d4c6e3374c",
+      "urls": [
+        "https://w3c.github.io/html/semantics-embedded-content.html#element-attrdef-img-srcset",
+        "https://web.archive.org/web/20090211114933/http://w3.org/TR/css3-syntax#style",
+        "https://web.archive.org/web/20160501113828/http://js-quasis-libraries-and-repl.googlecode.com/svn/trunk/safetemplate.html#problem_definition",
+        "https://www.w3.org/TR/css3-syntax/#parsing"
+      ]
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-text-unicode-norm.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-profile.md",
+      "sha256": "ec4d0be50ada734e508b6646ee6dafcd81c735bc65d4bbe9dba805de3446e981",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-cfg.md",
+      "sha256": "94703c9e0289148ff57d421508b6486dcf675381b5134a5720283785325b1a16",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-pkgbits.md",
+      "sha256": "814a68de115bdc0e21d8008e297ea1b4714e5cdfa4108742efdb32ba03388e62",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-goroot.md",
+      "sha256": "b60fc5d5fdd23d6d95fe35aa1c25915c3dfa662abec5e6b6464ba252216a2f4c",
+      "urls": []
+    },
+    {
+      "path": "stdlib/image-color.md",
+      "sha256": "ac28f256954704a5027a3d13b78972a2f8dedc764bce0096c60138c28c942c6c",
+      "urls": [
+        "https://www.w3.org/Graphics/JPEG/jfif3.pdf"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-ecdh.md",
+      "sha256": "464159a462fc791c711a1350e98e58e71581ce3cb6c6a3fdc10508d163f42afa",
+      "urls": []
+    },
+    {
+      "path": "stdlib/container-heap.md",
+      "sha256": "2a08ab20b0799f18ad63e27ad160d5a9831a7458ec7e6bf8673afaa4cb75ffac",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-sysrand-internal-seccomp.md",
+      "sha256": "fdb318ead55abea13fcaebec41c383fde55d5c93a209bb90ee03c49e98c510b1",
+      "urls": []
+    },
+    {
+      "path": "stdlib/go-doc-comment.md",
+      "sha256": "b30d98b8f49b159611fc947ec90563be9afee709b4d7d1a0ba4b72c1cfc70702",
+      "urls": [
+        "https://go.dev/doc/comment"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-aes.md",
+      "sha256": "098d19a6e7f0edae6b99c4b92e04cdb7693151bb3d4e4479afdd22a6435eb119",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-net-nettest.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/text-tabwriter.md",
+      "sha256": "b705ba859bf8729a0508e1fbe03db6462124836d1e82e96610655d56f64b5fbd",
+      "urls": [
+        "http://nickgravgaard.com/elastictabstops/index.html"
+      ]
+    },
+    {
+      "path": "stdlib/internal-runtime-atomic.md",
+      "sha256": "6ca191bbfcdc3dd86fbd8f15688c5ca04837d7b52c2ed0284c318f6f614c44d9",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-crypto-internal-poly1305.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-ecdh.md",
+      "sha256": "8f07e1064d3e71cfa49152e9f06805b6fcdb4f931e99f1972b1536e0986b4c1c",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-mlkem.md",
+      "sha256": "19da7e606fe9e45b0841dbf644fbfd5633bfc1fd810480e8f5e0fd197912e05c",
+      "urls": [
+        "https://doi.org/10.6028/NIST.FIPS.203"
+      ]
+    },
+    {
+      "path": "stdlib/encoding-csv.md",
+      "sha256": "d0f0577cb6a2d5c86b71de15b75752f66d7a0c1fd623270041f765e6db99d52a",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-tls13.md",
+      "sha256": "1b889ab03ed37d68631e20169e9f49370b32577abd0694e256f76611686d42e4",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-zstd.md",
+      "sha256": "9d4539f2831b7a15af3fb3b8621192a1bdc10f3d2cecada3b8d55d463aec91a7",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-coverage-encodecounter.md",
+      "sha256": "064cf8595689d215f989f79356689f34abcf2a34f0849cd4b1c4629910faef46",
+      "urls": []
+    },
+    {
+      "path": "stdlib/container-list.md",
+      "sha256": "cbf10e75e90f3e9832cd6ecd73ebe3f2eb916b1ded5a7cfe46f6375b7619d811",
+      "urls": []
+    },
+    {
+      "path": "stdlib/embed.md",
+      "sha256": "3818c2bd48b2d32b232602193f7e3008d781033f355080bf6096306b6e82ada5",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-fuzz.md",
+      "sha256": "f22a08611577d575fa97b209f06ac6202391de7b8c64502ed4b05a7b1c03a72f",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-goos.md",
+      "sha256": "855f4ce15446d8b7316aa8207b0d687c93ed64f1c75958c8a14228d2724dce4a",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-byteorder.md",
+      "sha256": "fdb7d8d1d8c97361c1d8690f7969e3601106e8152eb77f75e99eadf88c273794",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net-textproto.md",
+      "sha256": "5a23634eae94d9306a68e7f56cfda21855c9b44eceb2b77652bd81323ec3bd16",
+      "urls": [
+        "https://www.ietf.org/rfc/rfc959.txt"
+      ]
+    },
+    {
+      "path": "stdlib/compress-lzw.md",
+      "sha256": "ed5116eaaf78d4a1803156c087f902e3f0df225a735b38e9b7963b5bccd53c4c",
+      "urls": []
+    },
+    {
+      "path": "stdlib/index-suffixarray.md",
+      "sha256": "e7477d2068790863240949c3cf1ab6ca2973471e5509d0d7f03feb435e2fdc74",
+      "urls": []
+    },
+    {
+      "path": "stdlib/iter.md",
+      "sha256": "1b8cb770bccc173052f364056f618e44dfa06e22269b53a1ca8f8872051dee2d",
+      "urls": [
+        "https://go.dev/blog/range-functions",
+        "https://go.dev/ref/spec#For_range"
+      ]
+    },
+    {
+      "path": "stdlib/internal-godebugs.md",
+      "sha256": "9dc7a890a0867bae605d2bd1dfbcb311ab340e25cbf312f91c44f0aaa5c1a5f1",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-runtime-maps.md",
+      "sha256": "a21c18ab2d9919a307219a61a05744f278c025ea1326eecd48fc4500278ecd47",
+      "urls": []
+    },
+    {
+      "path": "stdlib/time.md",
+      "sha256": "82636ef4f99af4d47bcd53ce7fe40de93c81b0175570c379b509a4ae11bec6c8",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-alias.md",
+      "sha256": "7e093f1623fab2de1f8a87c6469a2ab979baaffe45a5a1074908f6bca1deccb4",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-net-http-httpproxy.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-testenv.md",
+      "sha256": "26170aa434e185408957f5bc31dbfc1c40f40b3b6f6edd8c3300d68009b6f2d8",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-hmac.md",
+      "sha256": "36adcd71642ffad42bd3f4a0f3508c7b2866f93dd8aa156bb03007e7042af0b8",
+      "urls": [
+        "https://doi.org/10.6028/NIST.FIPS.198-1"
+      ]
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-net-idna.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/testing-quick.md",
+      "sha256": "50902fd37a600662b61aba2fa76fc79f121c6c0208df82d6e44e469f97cbff5d",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-edwards25519.md",
+      "sha256": "6280b4f0317eb6c5cb9853ce68fcf1bec3cd01aae0fa1d2602257f7706f9f0b0",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-hmac.md",
+      "sha256": "f49a61b754250e7a4f9a9c8a4e48dcff47a4dd8c8d73ba526fae96ce72b3485d",
+      "urls": []
+    },
+    {
+      "path": "stdlib/compress-gzip.md",
+      "sha256": "d82d7cbfa8e2c3ff220cf2cbfc8fc7c21b5b7816b81ca5790c1c5ceebd34ca23",
+      "urls": []
+    },
+    {
+      "path": "stdlib/archive-zip.md",
+      "sha256": "9d2df0847e1416dfdedadff377b94d1e8f76706a929b57b96ed72a100ba7c43b",
+      "urls": [
+        "https://support.pkware.com/pkzip/appnote"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-tls12.md",
+      "sha256": "f983794dcf30a2667f8eb56b0fda4ab4076d8045db8353620c2c32490f8106c0",
+      "urls": []
+    },
+    {
+      "path": "stdlib/sync.md",
+      "sha256": "ea9be8e1df79860f4a2301e4e623b6828e83626790e5d05470be4337de05dfca",
+      "urls": [
+        "https://blogtitle.github.io/categories/concurrency/",
+        "https://drive.google.com/file/d/1nPdvhB0PutEJzdCq5ms6UI58dp50fcAN/view",
+        "https://go.dev/ref/mem"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-check.md",
+      "sha256": "f21684933aefa65c81f24b3bc12ad9ee0588a2733af23f2328fb53aff22b7e53",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-txtar.md",
+      "sha256": "f755b1ee508810a9a3c92e9b8f8060111bd20001388bfcda24c42082a050ef08",
+      "urls": []
+    },
+    {
+      "path": "stdlib/debug-gosym.md",
+      "sha256": "9ad813bb2703693c06f1d8b76704d19ec69a7dcc31ef4ee6e9a5fd63d1ae63f5",
+      "urls": []
+    },
+    {
+      "path": "stdlib/go-build-constraint.md",
+      "sha256": "5e5b4473120d8fd1227def562257cecdb08ce7b2d3281685ac7e4ae9ce22212b",
+      "urls": [
+        "https://golang.org/cmd/go/#hdr-Build_constraints",
+        "https://golang.org/design/draft-gobuild"
+      ]
+    },
+    {
+      "path": "stdlib/compress-flate.md",
+      "sha256": "1076bd34ec05b80dc21c38966fe35daae5103f18bb4f6351af54c59b3d1ba53e",
+      "urls": []
+    },
+    {
+      "path": "stdlib/runtime-trace.md",
+      "sha256": "f0c77e4c1948115e4dc52b111dfd9b41958315f92a162d5d1e9c9e622e809d61",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-tls-internal-fips140tls.md",
+      "sha256": "2066d3f602fc1021d796eb745fc893e50aa6affcd0e1cc0f56def24a69b07b40",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-check-checktest.md",
+      "sha256": "3faa0f259f2b7c4f8000916bc58ffb7cec1f88ea758d44254f35db3767c546e9",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-trace-raw.md",
+      "sha256": "f073e26b277be72c3b55ed7056e7b0229abee59fbad6ae981bf87b53385b8bf1",
+      "urls": []
+    },
+    {
+      "path": "stdlib/flag.md",
+      "sha256": "a225b43e0dcd3ce4000f4548cb5584ba230407210f26cd35a2079519b3a8bc8f",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-runtime-gc.md",
+      "sha256": "5610b8502a0d706933eea5a76441b1c6cd68c587428755c268e3099f807fe204",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net-http-httptrace.md",
+      "sha256": "1ccfde494bd940922512ced162a81e16883234e6b5c9e7e3f49b95772c64fbd7",
+      "urls": [
+        "https://blog.golang.org/http-tracing"
+      ]
+    },
+    {
+      "path": "stdlib/math-big-internal-asmgen.md",
+      "sha256": "0727d305af5cb5acdf21c12dd3b6e829db88c415c9c49dfa9bda36bb4c552a5c",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-coverage-cmerge.md",
+      "sha256": "eac38ed4cc2631a7cd3985c096337b036dbd87f73683abf0a2981a1aa02c8ee8",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-testlog.md",
+      "sha256": "0b4b735aece1d9c04ff6e9485b9b352c2ca7bbec133bcb2cb26abbea844f9e81",
+      "urls": []
+    },
+    {
+      "path": "stdlib/fmt.md",
+      "sha256": "ba32a6857c241789f0f4300bb551aeea2da4d8a4720bcbd9a3cb46ac975bda9f",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140deps.md",
+      "sha256": "efd7c779023d0338fcb93df8d4993c665f35c153fd3a5d7c9dfa5cccf016d39b",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-trace-internal-testgen.md",
+      "sha256": "e8de070aff4d61673a9f5d42246239f49dc9d2e6cc6a71befe14f3dc890abb15",
+      "urls": []
+    },
+    {
+      "path": "stdlib/maps.md",
+      "sha256": "99e26e8c650875b6b97cec522ac3c8c6c675197f8fde58d4da5896b9bc79c1b2",
+      "urls": []
+    },
+    {
+      "path": "stdlib/go-types.md",
+      "sha256": "513abf24513f81f54486cd3b504d514dbdd65ebea6718275eb4aa62c62db709e",
+      "urls": [
+        "https://github.com/golang/go/issues/57497",
+        "https://go.dev/ref/spec#Underlying_types",
+        "https://go.dev/s/types-tutorial",
+        "https://golang.org/ref/spec#Address_operators",
+        "https://golang.org/s/go15vendor"
+      ]
+    },
+    {
+      "path": "stdlib/encoding-hex.md",
+      "sha256": "116dfb8447087c41afb4f580187984074f6116b0c75ba34686b7579b6fb4b8df",
+      "urls": []
+    },
+    {
+      "path": "stdlib/mime.md",
+      "sha256": "7683b0dc3aac021b158d78f2b945af8176e1500aa6720fd220eefe1a3827391b",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-coverage-uleb128.md",
+      "sha256": "a2cbea1998bc4fd35bc0703975a4c4f257c4ba4fad3b1c764a98aa41d08c0276",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140deps-byteorder.md",
+      "sha256": "f9e354928a07be6698eb81e40652ed76a975332bf88a5b331e716638651a466b",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-exportdata.md",
+      "sha256": "4fc8715b02f2277f011375d63dbf5ffcae9de83f7fce86336041052d9ccc5617",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-ecdsa.md",
+      "sha256": "8aa8689d1c30cf536143edcc4f030f93e74609820cc50a2a136326534b60b604",
+      "urls": [
+        "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-5.pdf"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140deps-godebug.md",
+      "sha256": "76b0c8593d2198af68ff2cd5db91d44be3718db7c63602de6aea241b4ff7cd00",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net-http-cookiejar.md",
+      "sha256": "c29a45dbebd4d8c9226c63a0bf4304d5ee5772f92e5052a446cfa842da3b3e57",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-asan.md",
+      "sha256": "ff01105090b67986b8519cc19bcb36e92303c3a846352cab17cbe8a747df309b",
+      "urls": []
+    },
+    {
+      "path": "stdlib/go-doc.md",
+      "sha256": "b4835d2f0f37894860a925b28c9544f022aaced95cf1618b83722c9970aab663",
+      "urls": []
+    },
+    {
+      "path": "stdlib/encoding-base64.md",
+      "sha256": "8467fbfd23694299663f4e496340706633d1646e781f33c1ea50ae693330b4a9",
+      "urls": []
+    },
+    {
+      "path": "stdlib/debug-pe.md",
+      "sha256": "d2b7c1885d342bd1c2b41d79a12cbaf40d2ddc5420e28aead9b2255c9549972a",
+      "urls": [
+        "https://docs.microsoft.com/en-us/windows/win32/debug/pe-format#auxiliary-format-5-section-definitions",
+        "https://docs.microsoft.com/en-us/windows/win32/debug/pe-format#auxiliary-symbol-records",
+        "https://docs.microsoft.com/en-us/windows/win32/debug/pe-format#comdat-sections-object-only",
+        "https://go.dev/security/policy"
+      ]
+    },
+    {
+      "path": "stdlib/go-printer.md",
+      "sha256": "4514d03702371788f7b9220cc49582aecd5a27e7f64447d5890a2a1ef15f0259",
+      "urls": []
+    },
+    {
+      "path": "stdlib/go-constant.md",
+      "sha256": "11a84374ad342672d738c92072d1f92e256d052a7db9696dce45c13863878cf7",
+      "urls": []
+    },
+    {
+      "path": "stdlib/os.md",
+      "sha256": "2014c38a7797f4fe71536467fdee2d770f68b479879285e07e24276a8df6da49",
+      "urls": [
+        "https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html"
+      ]
+    },
+    {
+      "path": "stdlib/sync-atomic.md",
+      "sha256": "fdcf16bf5fba6849f176089d38cb7b46df3ed0ba19c345667e8ba596fcefeb0f",
+      "urls": [
+        "https://go.dev/ref/mem"
+      ]
+    },
+    {
+      "path": "stdlib/io-fs.md",
+      "sha256": "421ed3182d948c866357f34da88dfd05f74c253a43b6810d83bfe0dd09352a7e",
+      "urls": []
+    },
+    {
+      "path": "stdlib/go-build.md",
+      "sha256": "45213f75f17851516a0b041772f4b0bc9212e1010f3862c9ae78576b715bba37",
+      "urls": [
+        "https://pkg.go.dev/cmd/go#hdr-Build_constraints"
+      ]
+    },
+    {
+      "path": "stdlib/internal-reflectlite.md",
+      "sha256": "767f2d5d19b0770b89c87f5250269eb7bc6d90df3eeebbb792651b01a4ea2040",
+      "urls": []
+    },
+    {
+      "path": "stdlib/image-draw.md",
+      "sha256": "c272c7fd8943b9f3934baf81343b18a621a420499b7e1cf43b41f3e56c5677b0",
+      "urls": [
+        "https://golang.org/doc/articles/image_draw.html"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-pbkdf2.md",
+      "sha256": "9b2845584c03e3658af8892f065c7ab84d9581b2dad8bcef713fdf95a745ba56",
+      "urls": []
+    },
+    {
+      "path": "stdlib/testing-iotest.md",
+      "sha256": "eb196a102988d5b0e4a1edd1d6c2290224af35881467c9a7d7c94446b1511996",
+      "urls": []
+    },
+    {
+      "path": "stdlib/log-slog.md",
+      "sha256": "8add2644cdf1aabbbc5b3c5844830a0e5f2f4ad4521e93c62cdfcde46556ea14",
+      "urls": [
+        "http://example.com",
+        "https://go.dev/s/slog-handler-guide",
+        "https://golang.org/s/slog-handler-guide"
+      ]
+    },
+    {
+      "path": "stdlib/go-ast.md",
+      "sha256": "60be52d26ce56d10cde8986c41c46415023853af4c980c8d68aa15179964b605",
+      "urls": [
+        "https://go.dev/issue/18593",
+        "https://go.dev/issue/20744",
+        "https://go.dev/s/generatedcode"
+      ]
+    },
+    {
+      "path": "stdlib/runtime.md",
+      "sha256": "667f353433a9d207c172d14e6a363a2c5d2754a28b712108f69f76e6b2d27189",
+      "urls": [
+        "https://go.dev/doc/articles/race_detector",
+        "https://go.dev/doc/gc-guide#Finalizers_cleanups_and_weak_pointers",
+        "https://go.dev/doc/gc-guide#Linux_transparent_huge_pages",
+        "https://go.dev/doc/godebug#default",
+        "https://go.dev/issue/64332",
+        "https://go.dev/ref/spec#Size_and_alignment_guarantees",
+        "https://pkg.go.dev/internal/goexperiment"
+      ]
+    },
+    {
+      "path": "stdlib/compress-bzip2.md",
+      "sha256": "089dde704fe0650c81d6c0c6bb2a19781770879841d4e5f0ba4a2a21bd0d3a0d",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-cpu.md",
+      "sha256": "b5dbd86cf3ee71e2f3c4862624882d0676fb12fff0951962f32c1a8d8341ba7f",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-bisect.md",
+      "sha256": "7d46fb8dc691422659108c57139dade03539b407024ae0bbeee6e4072a7fc893",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-dag.md",
+      "sha256": "43af91dc682f96706becd9e266621c911692662e992061340f573a31beb8e13e",
+      "urls": []
+    },
+    {
+      "path": "stdlib/debug-buildinfo.md",
+      "sha256": "cc1095f346a0e202a4c6902e35164ca896dc01c208acb7552aa55c1c9e9c2584",
+      "urls": []
+    },
+    {
+      "path": "stdlib/math-rand.md",
+      "sha256": "852a93ede92e8de84b92581b4d93f09f5e2cb32588b5b6b3865fa37f5144979c",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-subtle.md",
+      "sha256": "c18690d5dbaa7954154319d9ed2d62145a22a6bd3f1eee1f542a4960950a5af6",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-x509-internal-macos.md",
+      "sha256": "862536650d8806bd954a11b6ac69406f73ebddec23299821ce67db169b51f244",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140test.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-xcoff.md",
+      "sha256": "ff3df6e3b5abb49bc30af8af86474ca26704c4b89824dc943c206526feb8b7ff",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-buildcfg.md",
+      "sha256": "997f15f8f42632851c3c96791d1add19bca6e8851a6e7ee5d80dc5e2bacb05fd",
+      "urls": []
+    },
+    {
+      "path": "stdlib/image-png.md",
+      "sha256": "daef1d4499e977ac9b8537bcc9b2cab3fcc44235286d66042e0ef342334773fb",
+      "urls": [
+        "https://www.w3.org/TR/PNG/"
+      ]
+    },
+    {
+      "path": "stdlib/internal-nettrace.md",
+      "sha256": "4cfcbb7c5ed648cbf1b89fe81655b2b6da916c6d0257486e44bfc63bb1ffee52",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-oserror.md",
+      "sha256": "460199cecc0987ce366998dd95ee7efcc20d7a4f446c45828579e9ebedccf006",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140only.md",
+      "sha256": "f08f117106db3a39022f37abe517ed2a88d794d5fc531e8923d26dc8d993a033",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-aes.md",
+      "sha256": "aa2c0cac8cab8854a84fd58ccdb1bc96ecbe56093cb1d453a83f0ed01cd14402",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-elliptic.md",
+      "sha256": "9194b780a56b37585e479d33527b709ed62855ba8383f8a136979bb1e174107a",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-godebug.md",
+      "sha256": "29c242f21b0781b9c7e42f34ff62a0815fe0e59f40d8979f1181901e6762804c",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-itoa.md",
+      "sha256": "e281f39a9a34942ffb2d2acd0e16ee4b510893a16dce36a01245048fc59c27cc",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-hkdf.md",
+      "sha256": "9b56f24800b84fd6b982924ea921acb69376f5a551def037c853cc45ace1da76",
+      "urls": []
+    },
+    {
+      "path": "stdlib/sort.md",
+      "sha256": "7c81d4f67cb2c2a1ba8bc17bc696c9ba934c09f164722476b002c8d72a6c1d34",
+      "urls": [
+        "https://en.wikipedia.org/wiki/Weak_ordering#Strict_weak_orderings"
+      ]
+    },
+    {
+      "path": "stdlib/encoding-json.md",
+      "sha256": "54a824eca46597ae2d9d2d19b69ff25c56b1dfc6b53202e2529e18309d3da3eb",
+      "urls": [
+        "https://go.dev/doc/go1compat",
+        "https://golang.org/doc/articles/json_and_go.html"
+      ]
+    },
+    {
+      "path": "stdlib/reflect-internal-example2.md",
+      "sha256": "c04aacad19ac3d0481b4c7e8e621e36a1febd6e0e0af4cd7891008201f6556ae",
+      "urls": []
+    },
+    {
+      "path": "stdlib/encoding-ascii85.md",
+      "sha256": "d72cdd56b8cd794d4ed5e0d52782f8b74956499c15638e04ef5ae341789deb61",
+      "urls": []
+    },
+    {
+      "path": "stdlib/math-big.md",
+      "sha256": "ae9b42f13593948195fd749874fb2fc5aa96abc0ded489e35f1ce6654798e951",
+      "urls": []
+    },
+    {
+      "path": "stdlib/path-filepath.md",
+      "sha256": "7daffa7d54ffb24ea8145d90156fa6da1435a09f0ecabbbf202a024a9891e114",
+      "urls": [
+        "https://9p.io/sys/doc/lexnames.html"
+      ]
+    },
+    {
+      "path": "stdlib/net-http-internal-ascii.md",
+      "sha256": "b57b99139053ea36af826a8cb3c2e4ff9c924b71d2efed819b002975f5e00e3b",
+      "urls": [
+        "https://tools.ietf.org/html/rfc20#section-4.2"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-hkdf.md",
+      "sha256": "3fbdf679a80f792c6a97140007d218a12b846d684e26509aeabed6506d08c5d7",
+      "urls": []
+    },
+    {
+      "path": "stdlib/unicode-utf16.md",
+      "sha256": "70a7e459e96488313563852a0f6ffc1a885b2368048d395b7efef0555eac7f92",
+      "urls": []
+    },
+    {
+      "path": "stdlib/text-template.md",
+      "sha256": "574d5373445b7cfc828239ed0c80ad1f1111f8ff3d2e2bd87cff8433534a4c8e",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-edwards25519-field.md",
+      "sha256": "d48714d01333ff140cd0f03e666f3db09fab3a78ada10f31fe9a47c2e59f3607",
+      "urls": []
+    },
+    {
+      "path": "stdlib/go-token.md",
+      "sha256": "8fae94865185f98efc2ceb7b437dbbcddc96a56de1904f915071cbdb023033ec",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net-mail.md",
+      "sha256": "913571e0c36917485d50a723a54bf3e736efe6ec0da9627d9dc303ae5fb09e8b",
+      "urls": []
+    },
+    {
+      "path": "stdlib/encoding-binary.md",
+      "sha256": "ce92c0c6491a0f95189cd836dd9975f29aa19ab71b73969030d9e3c721ad3a9b",
+      "urls": [
+        "https://developers.google.com/protocol-buffers/docs/encoding"
+      ]
+    },
+    {
+      "path": "stdlib/unique.md",
+      "sha256": "c19d798c096e50f5e462d78158a372a9d42d1995eb545935a42ea7b80220c442",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-sha3.md",
+      "sha256": "0f85526c56a2907c77cdbb9c1c4013bb7bb92d259bae50881b9325ef4ffddbd6",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-coverage-stringtab.md",
+      "sha256": "134b76a28ec437aa3af00a6d351ed42d0562d8df39234a61645029269237fe80",
+      "urls": []
+    },
+    {
+      "path": "stdlib/io.md",
+      "sha256": "ca03a51a111975a9e9f8afd9551787444507e0411901d1f8559143bbb3e6781d",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-syscall-execenv.md",
+      "sha256": "0b80ca28ea9394eae0fc7560bc4389771d4ef8553bdf4660b3765d30edea1707",
+      "urls": []
+    },
+    {
+      "path": "stdlib/hash-maphash.md",
+      "sha256": "4a790307dc5ede2207898d940394df5b9a190fae7ecccd838d96fe39d9820006",
+      "urls": []
+    },
+    {
+      "path": "stdlib/os-exec-internal-fdtest.md",
+      "sha256": "5ca7a34c7503a9d71d40004b4aeb482878c18dbdca69d311b3e297b32f4c0255",
+      "urls": []
+    },
+    {
+      "path": "stdlib/html.md",
+      "sha256": "700890aa01a676725e7d76a476501257c19ae89d51810617d3dddf8104538007",
+      "urls": []
+    },
+    {
+      "path": "stdlib/net.md",
+      "sha256": "f4dafee99a41c80038069bbed883b3c97c92d0100295734dd7ad0932072da32b",
+      "urls": []
+    },
+    {
+      "path": "stdlib/time-tzdata.md",
+      "sha256": "ee733a64531ea94cc7d9f7a09fd538babcab9898d14b91a72fcd831bf0a9bdd3",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-cryptotest.md",
+      "sha256": "11efe32cfd9913775873276e22cbed87e9390b8a7efe09eac3969d271d7888c2",
+      "urls": []
+    },
+    {
+      "path": "stdlib/encoding-asn1.md",
+      "sha256": "040e7ea9e94b5ed358dae3a424b77f5d129f1bd61840b436cb5471dd88f3a74a",
+      "urls": [
+        "http://luca.ntop.org/Teaching/Appunti/asn1.html"
+      ]
+    },
+    {
+      "path": "stdlib/net-http-internal-testcert.md",
+      "sha256": "7a1376400f112a093ad077da46c6e8f156e49a42cbab46b6c5a5c6c682bb93ec",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-hpke.md",
+      "sha256": "d7f081431cee67c81853952436cbe4262bcdc10932474b1d0cb329c8784f2eae",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-rsa.md",
+      "sha256": "fbb479f319f7ab1ccaa086be8bfec7b1a7cefd63e2c89a39c19573eb00b4815c",
+      "urls": [
+        "http://www.cacr.math.uwaterloo.ca/techreports/2006/cacr2006-16.pdf",
+        "https://pkg.go.dev/crypto/rsa#example-GenerateKey-TestKey",
+        "https://pkg.go.dev/crypto/rsa#hdr-Minimum_key_size",
+        "https://www.rfc-editor.org/rfc/rfc3218.html"
+      ]
+    },
+    {
+      "path": "stdlib/crypto-rand.md",
+      "sha256": "8c9dc0acfbb19e842832195c2a905f39d3dd7487f4d0ca21e95c562317d1249d",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-filepathlite.md",
+      "sha256": "212a9a4248f9d8788e364695dcf49bb9742107fe4be9e62abefb4a8b9084c1b6",
+      "urls": []
+    },
+    {
+      "path": "stdlib/vendor-golang.org-x-crypto-cryptobyte-asn1.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/crypto-internal-fips140-sha3.md",
+      "sha256": "cbb573ec6dab1fa3f3bad98392f192fea13f6501092f06cd78da7ab7e94f41ef",
+      "urls": [
+        "https://doi.org/10.6028/NIST.FIPS.202",
+        "https://doi.org/10.6028/NIST.SP.800-185"
+      ]
+    },
+    {
+      "path": "stdlib/internal-coverage-test.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-unsafeheader.md",
+      "sha256": "786ac9c6147b515ab5f38d3a15628bf98a5a4aac01744aa2ddaa1afd9efeffbc",
+      "urls": []
+    },
+    {
+      "path": "stdlib/internal-diff.md",
+      "sha256": "6bff9822aa0fb65d4407ec28d459e2846e78416c800506ec54d552aebbca658b",
+      "urls": []
+    },
+    {
+      "path": "spec.md",
+      "sha256": "1f2565704db81a086378c5c2587b84248ecb7ca8a933a66ce34b5cdb2359bebc",
+      "urls": [
+        "https://go.dev/ref/spec"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/staticcheck.md",
+      "sha256": "94d8e3f3095121082a08a5e0e46d5f9c25b8fb4e0f54d40072919c1f4ac69e1b",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/staticcheck/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/interfacebloat.md",
+      "sha256": "72e5ca6ed40a09cfe0ae6efcaa1e91909770ce9d6199cfe7bdb04e0aca1fe58d",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/interfacebloat/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/nonamedreturns.md",
+      "sha256": "639c9d17ecce4ddc86debc73824b18366ecb3706bf1972bc62dcbddcbd6887a7",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/nonamedreturns/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/goheader.md",
+      "sha256": "80f5ab1fdf7b5d6d1daeda2700ac79f72cb0705accf5ab7b749e42ce46cdf1e9",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/goheader/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/godoclint.md",
+      "sha256": "b386e1a1ccbff23d3b9f84bf90852a925df35cf26951c268c442bcaaa66c9191",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/godoclint/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/exhaustive.md",
+      "sha256": "423751adc597d8f7fe7dc4c86c171d817f7ac3a2ce2d1922a8a0f047b30c4602",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/exhaustive/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/recvcheck.md",
+      "sha256": "910ac9d3e07f29ac0dab46165fdf344281735698729ab51ac8527d4ab0890757",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/recvcheck/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/grouper.md",
+      "sha256": "175ffbc030a6cbd82bc66018e2b511f58e6d86def7e05b74a6bdbfac891e1b78",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/grouper/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/unqueryvet.md",
+      "sha256": "149287a10a44f1a7150a2ea9550a370d7a4db4fca50a04f6c2fb3d64440f0664",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/unqueryvet/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/sqlclosecheck.md",
+      "sha256": "85dfa4148865b5669ebe562a723198883a533f98ae0b4d49bb22037db4ab55fa",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/sqlclosecheck/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/perfsprint.md",
+      "sha256": "85f5ea94946b6dbf09da3a43100d364371916fbbe020c2dae7c1e7680971cca4",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/perfsprint/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/fatcontext.md",
+      "sha256": "1ec9d89a79138b06559cb608c6efb92019db41014a6179a325585d9d02a15a07",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/fatcontext/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/cyclop.md",
+      "sha256": "582fdc8de34818c2f9c2acb7e29cc8bcf40285281d854874baa36e54f039f537",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/cyclop/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/nolintlint.md",
+      "sha256": "2e700b72d562cd83d5db8f3963f09dcb6fef2de31dd3ad445766fb37516c22af",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/nolintlint/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/ginkgolinter.md",
+      "sha256": "a96f60bc04933bc23d942c9fc8b16c9716ca23ac7c19ab1264cbc882b6710cc7",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/ginkgolinter/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/gosmopolitan.md",
+      "sha256": "4c8f1dce5d7594aca0f82f12427b1f5aa0d610e3f5b1f13a01123abac5f50f75",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/gosmopolitan/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/govet.md",
+      "sha256": "d876cb4ee2c7afd040257ee6b81d98c94d2f7e1d401d990f393f66850ee00c34",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/govet/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/overview.md",
+      "sha256": "0d7ee61a960891f45a43d1f4d3dbd8ef8e510474d3613b7dccf50e361bd7b4ed",
+      "urls": [
+        "https://golangci-lint.run/usage/linters/",
+        "https://raw.githubusercontent.com/maratori/golangci-lint-config/main/.golangci.yml"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/nilnesserr.md",
+      "sha256": "746185e46beaad8774819109f852fedbd29e41127f55974654a00235816aa16f",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/nilnesserr/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/testableexamples.md",
+      "sha256": "11cb30eb070d50df115ea0fbc9197cf2540b78342134812e46064b62309e0f57",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/testableexamples/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/godox.md",
+      "sha256": "1b0a957487dcbbd3b932829b62433ffbacf95355fca68ea8a634f0cc313d1527",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/godox/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/dogsled.md",
+      "sha256": "e5dba0140bbafced97e28d60621fb119e534a69190029df1e71abe23e2fc76ad",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/dogsled/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/decorder.md",
+      "sha256": "a466efcf56ad5e66b34f0ef0939df7ddcb6cb3e7d1e1d0712c39df36b4e42278",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/decorder/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/predeclared.md",
+      "sha256": "ad0ed4c1943b38de600c68502e0996a4ef82b39ab9cb184388ebc1416219b9e8",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/predeclared/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/iotamixing.md",
+      "sha256": "12d37e52d9bbdd30790094fd4ab8ec70822e47d352b2df229dc62c98ba14b87a",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/iotamixing/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/goprintffuncname.md",
+      "sha256": "aa8bd60270144a3218eb468f963fea9582a8f1e4515ab97899bb23a20a1224d2",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/goprintffuncname/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/paralleltest.md",
+      "sha256": "40aaae03eeaddba42a5e4073a3554efd80aabf1a55d6f4df11c95c55b679f6de",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/paralleltest/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/inamedparam.md",
+      "sha256": "a392299b1346eb2ae5966f1a015e41c38602caae3a3a8c7f3157755ab82036bc",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/inamedparam/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/rowserrcheck.md",
+      "sha256": "bff3c0be59cc4368568cbdac0c38a8ce3dadd2e3ca54dbbd375c146b1679c1f8",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/rowserrcheck/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/unparam.md",
+      "sha256": "d0300417d85a3b04f9b80bed675e25926b888561ae5efbf2fa9bbf5cdd4e8110",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/unparam/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/mnd.md",
+      "sha256": "21a526377ade6180f2cb7dd384a2b2fc18563195aff032668053a2111a92dec2",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/mnd/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/bodyclose.md",
+      "sha256": "a3df188f93f26cf9d173b5ced78705975f063ebde55109241681fa6db8024de1",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/bodyclose/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/misspell.md",
+      "sha256": "71d22c2c3c777076d4a8f857360e00cc5d5e312d346bd4d1eb1dee2af43d4a1c",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/misspell/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/noctx.md",
+      "sha256": "67b8b6f7a6e97162f03528145cf2f366f2dd3f6e654dabb7f55fdb73945b8803",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/noctx/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/copyloopvar.md",
+      "sha256": "703171a8823d35885c47d365859f922732a900e88e79f2b316fb70e6e36af3b3",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/copyloopvar/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/gochecknoinits.md",
+      "sha256": "276a02faa61f40db89b383584de75c7bc7273033d2e8baa1ebfd9a2b9a132876",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/gochecknoinits/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/promlinter.md",
+      "sha256": "87d7445b36701aeec4dcfcd700b3a72203ad90e6624ad329f14c9b1cb17b8b0f",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/promlinter/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/errcheck.md",
+      "sha256": "03446af68e682f530d665c8db6f80c64627ba8b3ba4549fdcf2a993e6dbc9490",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/errcheck/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/funlen.md",
+      "sha256": "2992a63de04c18aa2c128a20a79a3055abb6ad4ede00ce81e95ed4bdad304c4e",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/funlen/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/unused.md",
+      "sha256": "a2315de7cb36a1ef44f7d251c1aa70e67061c699ba505305fabc4ab4d0113e68",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/unused/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/whitespace.md",
+      "sha256": "98b010b5723e816d381bc711e6d43bc7bb68afee9198c2aa4486a0ef34f4c7fe",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/whitespace/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/varnamelen.md",
+      "sha256": "249ce06bee88713bbeb6a50f9c96abbae9f1043e50670d21dda67c7f0bddb691",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/varnamelen/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/gocheckcompilerdirectives.md",
+      "sha256": "a70572026bbb0b31d61958fa896f5fae6bb7294e0c71b8f7a714b3efed37bacc",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/gocheckcompilerdirectives/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/intrange.md",
+      "sha256": "df51e56aba9897209fec741b3ee28a9c9ad9e849475accbd70705e4605f68804",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/intrange/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/durationcheck.md",
+      "sha256": "c19f078b735005f130a958ec60b2e96a4d6df8aafed0464e48b3c3b71ceed06f",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/durationcheck/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/forbidigo.md",
+      "sha256": "974385e1972b2929b20ab455ffa18c6c500642f0ded2f1af1dd412f4c7fb58ec",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/forbidigo/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/canonicalheader.md",
+      "sha256": "00f80a1c431a59b1407b398ad0986c800c90c66d16acf96a883baad0cedad875",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/canonicalheader/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/bidichk.md",
+      "sha256": "6d1e32c676bce8b8f26ce46feffe552a36a47a7fbede5860d9688d4ed1faf656",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/bidichk/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/usetesting.md",
+      "sha256": "1afff8ef0cda3ada78a240558b2481c733a7cef951c8704d06ed2411424f2165",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/usetesting/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/ireturn.md",
+      "sha256": "53a40624f71bd6992fb2cdeabe8e7e69e8fdc8b8962e7eadfe9cfb7b130711da",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/ireturn/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/arangolint.md",
+      "sha256": "bac94b4196d8843854b2d95da730bde63caa4c79f2f659ee9e713b9db05023fa",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/arangolint/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/errname.md",
+      "sha256": "d7140950c1ba031ca59c952bcb63d7c4e3c144fd9050eba761ba2ef4b62ac630",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/errname/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/exptostd.md",
+      "sha256": "a6fd583cd71d705ccaff46ed73bf04067600f20fe5eef25242627ef2fb2dd36e",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/exptostd/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/gochecknoglobals.md",
+      "sha256": "00561ca7e144ed1fff3134892df9ff0095acbf6d238833c3b0374306490120ab",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/gochecknoglobals/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/gomodguard.md",
+      "sha256": "cd919873c71451527c882d60d986108f60b6e16d0406d1c8c673b909cd951882",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/gomodguard/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/errchkjson.md",
+      "sha256": "3bc9cc1e7800fb995d6a2e6416d4d5474a907338a55ffff495028a0e5af9b2af",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/errchkjson/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/nestif.md",
+      "sha256": "e8aa29d4eb8f2cd38bc61fc82ce25263b287ffe6f57e2d2632085566281ac139",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/nestif/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/forcetypeassert.md",
+      "sha256": "57d21a4d1bec2ceb762dd26de9139df040e1c1eab10122dfa1e7d618a3828fd6",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/forcetypeassert/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/nakedret.md",
+      "sha256": "4690fd5b5918d231e94d46f5082ffbebcd138451533c83c6f524135a3e852027",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/nakedret/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/protogetter.md",
+      "sha256": "ffbc8a3715e6f76f085e7a784b6b9db6737cb128386b7824c6a7ba2efa957ef0",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/protogetter/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/gomoddirectives.md",
+      "sha256": "51ab605befc27d35a6e0c8ca58f0b17bddfd005f35bb5eaad0311ac8c356bd60",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/gomoddirectives/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/noinlineerr.md",
+      "sha256": "2f7efc614374e96a7132941dc2b4059d000b42f5efb0774d73b900cfc6ef26e0",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/noinlineerr/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/usestdlibvars.md",
+      "sha256": "3ccd64d0103bef47da370603223569817efe70dc78c23d490c418d1491c35a7d",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/usestdlibvars/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/modernize.md",
+      "sha256": "4ae516d456a8de1eb7efc88393030ff45cbd65a2173a1167ed73c1a56017f1d7",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/modernize/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/depguard.md",
+      "sha256": "5c303e17841b33f40f35630ff49d933496ac68d1fb5d837bf02aa547490624c2",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/depguard/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/gocognit.md",
+      "sha256": "897dbe01c43ef795ed104d43d8306d463d3b9860e195d7562479c0a2e5280cd7",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/gocognit/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/gocyclo.md",
+      "sha256": "d4f3053d2e440d106c55c2be15a39682e8307ff958b7a2949f0a1cb9b9e25f95",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/gocyclo/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/gochecksumtype.md",
+      "sha256": "a6f926b2bec773b7e6c2ee758dfb979c92fe72dcbe15e818189a9d29a097f163",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/gochecksumtype/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/config.md",
+      "sha256": "64012b169cade3b0dc4084ad2bee711134701e17059a025f16fec079a04c671d",
+      "urls": [
+        "https://developers.google.com/protocol-buffers/docs/reference/go/faq#modules",
+        "https://github.com/breml/errchkjson",
+        "https://github.com/curioswitch/go-reassign#usage",
+        "https://github.com/go-simpler/sloglint?tab=readme-ov-file#context-only",
+        "https://github.com/go-simpler/sloglint?tab=readme-ov-file#no-global",
+        "https://github.com/godoc-lint/godoc-lint?tab=readme-ov-file#no-unused-link",
+        "https://github.com/golangci/golangci-lint/blob/HEAD/.golangci.reference.yml",
+        "https://github.com/maratori/golangci-lint-config",
+        "https://go-critic.com/overview",
+        "https://go.dev/blog/randv2",
+        "https://go.dev/blog/slog",
+        "https://opensource.org/license/mit",
+        "https://raw.githubusercontent.com/maratori/golangci-lint-config/main/.golangci.yml",
+        "https://staticcheck.dev/docs/checks/#QF1008",
+        "https://staticcheck.dev/docs/checks/#ST1000",
+        "https://staticcheck.dev/docs/checks/#ST1016",
+        "https://staticcheck.dev/docs/configuration/options/#checks"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/importas.md",
+      "sha256": "92c0f44a8d178c41fe8ba33fc38beb99f8d3bafa6ee025a3a0ea51b019a0affa",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/importas/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/asciicheck.md",
+      "sha256": "773e93c333de3ac01883116a80ecc5f81ab5131843bb59f85ab1707e47135178",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/asciicheck/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/reassign.md",
+      "sha256": "96917734373f3231fa060eb47a4bebde5edd7eff488d1dbe4b48230b987a1340",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/reassign/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/mirror.md",
+      "sha256": "8d133534b5b4f84efc33c518375db16157ffb1acd9061955d5bc7757e7143f29",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/mirror/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/unconvert.md",
+      "sha256": "b3d508f505da8d66715c68b2d7d898101c861517a33d8bf1f2d5c08a42934611",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/unconvert/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/asasalint.md",
+      "sha256": "8c7add2ad15bbcbdcd1ebf06f2bd579863b6959bf97f4f4460f200f85c90e0fb",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/asasalint/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/funcorder.md",
+      "sha256": "d7f92f56ca3543eae081548483d4bd0d101952d039d062bb08fe23460e7b85a7",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/funcorder/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/revive.md",
+      "sha256": "e8a95f398edcf32b098e337cd44fc2712a686095ec8435bfe90b3c545c856ce8",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/revive/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/thelper.md",
+      "sha256": "afc5ed9c027c64c22c49c0a3df8ea1125c6e99dd28c25c1fe728ed21db452348",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/thelper/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/nilerr.md",
+      "sha256": "419b170c77c0da1b3e55a78f81bf9d42eaf418ea91be02721c7b0214ea405297",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/nilerr/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/godot.md",
+      "sha256": "53b0a883a2f449960fe4e578d27e873a3f29592beb44fc04eb307fe2849bfacd",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/godot/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/contextcheck.md",
+      "sha256": "3c7e97cd7d1b7ab1b9831c9a256b15f496461c31ca37d45e984f2ebe601cc395",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/contextcheck/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/tagalign.md",
+      "sha256": "371c0c0058e8d00cc33d043f6f1f469025bac93684177fd13164b1a984b05c6f",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/tagalign/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/musttag.md",
+      "sha256": "19e59cab12ae1a4c25367e51d606434b61c1e1ccba8255c913802c4d0e8b86f1",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/musttag/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/err113.md",
+      "sha256": "2de5df7a21fd0ceaa34add591a60a4514d103a5962751276df44a0d8a9bfc79f",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/err113/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/wrapcheck.md",
+      "sha256": "6248ff30528e694d6acf92fe23fa21889211144ffe4eadffaa63789c5d1f309c",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/wrapcheck/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/testifylint.md",
+      "sha256": "922ce947302515a422033fbb8e2e89af2f859ba6f4ffb2c35ecf04273985aaab",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/testifylint/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/containedctx.md",
+      "sha256": "572b58cc03b57716018cd9a7e04f08d85280e91685b8cb2ba8cd3d6d86025b9c",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/containedctx/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/wastedassign.md",
+      "sha256": "0281161a6c41868ca07ccc89d4cc86e332922b250c51794499a1b682efb41d2a",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/wastedassign/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/sloglint.md",
+      "sha256": "e16dfb9f35f0688551d0ee7f0c4e461755aab1be4cfa3e25e99ec92d55c5eb0d",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/sloglint/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/tagliatelle.md",
+      "sha256": "67cfb324866afb93f7616455ef2fb02ad01062848addef8b6abaaa37540dae5a",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/tagliatelle/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/maintidx.md",
+      "sha256": "f371162ef75d73e2e702beea88f44d6bf448929d13ca3e0415b04d5573ea9976",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/maintidx/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/testpackage.md",
+      "sha256": "dcdea95a1f9e9e6cdbb829bbc5301647bdf5f88ca903bb4a74ab9d596c8ddf15",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/testpackage/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/nlreturn.md",
+      "sha256": "a3b6d59c650ada3cf92ce2f398c99f50ae0c8c0ae92b13db7b2c8706b1700c21",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/nlreturn/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/gosec.md",
+      "sha256": "4a17d2f0c7d06d722ae8775b8aa3184569cadef66b6b05372b02a3b2105e0f60",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/gosec/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/loggercheck.md",
+      "sha256": "1408c9c62751c704f2e2cf696ced991f0b9a9cefe7c529939fa6cbe6f658acc5",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/loggercheck/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/spancheck.md",
+      "sha256": "6c0d6283a23ac274a48c482b73c41ccfcae8d43df1d5054d3492575f15e8a544",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/spancheck/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/tparallel.md",
+      "sha256": "2d1d23422ecbf951eab04657c6146f5d99db31ba3678291d5a22d4d8a23f8ca6",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/tparallel/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/exhaustruct.md",
+      "sha256": "52292229e1d725da187dc3c6f432a0dfa5b0002b424dc05fd3ef94a029e28169",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/exhaustruct/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/errorlint.md",
+      "sha256": "ff4712df833ab1049f7d9a78f3ac18ea9ad7665a597bc92fbab3488953ad6a95",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/errorlint/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/goconst.md",
+      "sha256": "13eca2d3489454fbf7d1ac1ab4e6c7776b20d85c234358f16808f3c23ef56752",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/goconst/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/wsl_v5.md",
+      "sha256": "b3025751a7bc2500758d555a09925256b669bf9ba85c39cda3c9177ed97c5a77",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/wsl_v5/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/prealloc.md",
+      "sha256": "63627f8a5eb2b88c76144c66dc7ac1f651dd4799e7b00100f4bd99e2e52c1107",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/prealloc/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/gocritic.md",
+      "sha256": "5aeaf69825d734cf8c4ed74776c3e4621db84243aa7d0ba8f0baf67a73498363",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/gocritic/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/nilnil.md",
+      "sha256": "f542761888b9e983757c232772942037538f8e14d7b6e67fe25428b562375610",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/nilnil/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/dupl.md",
+      "sha256": "2064ff0ba305d19e6df7821fff03d41403088688c30dc3da3556ea2089c7bdd1",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/dupl/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/wsl.md",
+      "sha256": "b33f7b6163781a24310a1209598060db48e420badb956a09e06308233a65d88b",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/wsl/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/zerologlint.md",
+      "sha256": "ff26ec74128a177e0b1508323e7287fbf30a4111c4f8d16a8b9a8a0959ab53ab",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/zerologlint/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/embeddedstructfieldcheck.md",
+      "sha256": "76c0fff0958e51d7b3cbf21130de27fbe1e32d1f7f659f3e6a00b18da20fe70e",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/embeddedstructfieldcheck/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/nosprintfhostport.md",
+      "sha256": "11152a2b7f034236586a09777c5107704b29dd38a63a517be2a26268a2ea0d19",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/nosprintfhostport/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/ineffassign.md",
+      "sha256": "53d011c3b77ce00fd0a62f0d8ec5e04ad56e0cf4a37cd9b12ab499a8011d75c3",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/ineffassign/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/iface.md",
+      "sha256": "625f952a40affb3a7edce7fe4aac97af7b6eed54d48e1b108c1d89b34c8cf4a9",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/iface/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/lll.md",
+      "sha256": "fa029b6a2238fcac287e1ffb1eaa77cc36c9a41111637ebf825492e7d3879de5",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/lll/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/makezero.md",
+      "sha256": "95ceb703d4b67ced0d5067abe705b2e68131a4667bd82d1873880fe9c345ec38",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/makezero/"
+      ]
+    },
+    {
+      "path": "linters/golangci-lint/dupword.md",
+      "sha256": "909954055cca86237f8acff9bf5c6233c7144d0259deb0a38d3410416fadd7e2",
+      "urls": [
+        "https://golangci-lint.run/docs/linters/dupword/"
+      ]
+    }
+  ]
+}

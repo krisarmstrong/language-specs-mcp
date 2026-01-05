@@ -1,0 +1,4745 @@
+{
+  "language": "go",
+  "fetchedAt": "2026-01-04T18:43:59Z",
+  "counts": {
+    "spec": 2,
+    "stdlib": 349,
+    "linters": 114,
+    "formatters": 5,
+    "patterns": 2
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "effective-go.md",
+        "name": "effective-go"
+      },
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/debug-elf.md",
+        "name": "stdlib/debug-elf"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/image-gif.md",
+        "name": "stdlib/image-gif"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-version.md",
+        "name": "stdlib/go-version"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-http-pprof.md",
+        "name": "stdlib/net-http-pprof"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/cmp.md",
+        "name": "stdlib/cmp"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-boring.md",
+        "name": "stdlib/crypto-internal-boring"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-dsa.md",
+        "name": "stdlib/crypto-dsa"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-net-dns-dnsmessage.md",
+        "name": "stdlib/vendor-golang.org-x-net-dns-dnsmessage"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-race.md",
+        "name": "stdlib/internal-race"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/reflect-internal-example1.md",
+        "name": "stdlib/reflect-internal-example1"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-crypto-chacha20.md",
+        "name": "stdlib/vendor-golang.org-x-crypto-chacha20"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/unicode-utf8.md",
+        "name": "stdlib/unicode-utf8"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-copyright.md",
+        "name": "stdlib/internal-copyright"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/testing-fstest.md",
+        "name": "stdlib/testing-fstest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-cformat.md",
+        "name": "stdlib/internal-coverage-cformat"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/log-internal.md",
+        "name": "stdlib/log-internal"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/bufio.md",
+        "name": "stdlib/bufio"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-trace.md",
+        "name": "stdlib/internal-trace"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/os-user.md",
+        "name": "stdlib/os-user"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-rc4.md",
+        "name": "stdlib/crypto-rc4"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-types-errors.md",
+        "name": "stdlib/internal-types-errors"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-crypto-chacha20poly1305.md",
+        "name": "stdlib/vendor-golang.org-x-crypto-chacha20poly1305"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-profilerecord.md",
+        "name": "stdlib/internal-profilerecord"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/log-slog-internal.md",
+        "name": "stdlib/log-slog-internal"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-net-http2-hpack.md",
+        "name": "stdlib/vendor-golang.org-x-net-http2-hpack"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-sha256.md",
+        "name": "stdlib/crypto-internal-fips140-sha256"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-trace-testtrace.md",
+        "name": "stdlib/internal-trace-testtrace"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-drbg.md",
+        "name": "stdlib/crypto-internal-fips140-drbg"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-slicereader.md",
+        "name": "stdlib/internal-coverage-slicereader"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-trace-internal-tracev1.md",
+        "name": "stdlib/internal-trace-internal-tracev1"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/mime-multipart.md",
+        "name": "stdlib/mime-multipart"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-rtcov.md",
+        "name": "stdlib/internal-coverage-rtcov"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/runtime-debug.md",
+        "name": "stdlib/runtime-debug"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-decodemeta.md",
+        "name": "stdlib/internal-coverage-decodemeta"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/plugin.md",
+        "name": "stdlib/plugin"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-sha512.md",
+        "name": "stdlib/crypto-sha512"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-ssh.md",
+        "name": "stdlib/crypto-internal-fips140-ssh"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-http-httputil.md",
+        "name": "stdlib/net-http-httputil"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/testing-synctest.md",
+        "name": "stdlib/testing-synctest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140deps-cpu.md",
+        "name": "stdlib/crypto-internal-fips140deps-cpu"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-bytealg.md",
+        "name": "stdlib/internal-bytealg"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/runtime-race.md",
+        "name": "stdlib/runtime-race"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/syscall.md",
+        "name": "stdlib/syscall"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-testhash.md",
+        "name": "stdlib/internal-testhash"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/log-slog-internal-benchmarks.md",
+        "name": "stdlib/log-slog-internal-benchmarks"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-slicewriter.md",
+        "name": "stdlib/internal-coverage-slicewriter"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/encoding-pem.md",
+        "name": "stdlib/encoding-pem"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/structs.md",
+        "name": "stdlib/structs"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-sha1.md",
+        "name": "stdlib/crypto-sha1"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-bigmod.md",
+        "name": "stdlib/crypto-internal-fips140-bigmod"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-randutil.md",
+        "name": "stdlib/crypto-internal-randutil"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-http-fcgi.md",
+        "name": "stdlib/net-http-fcgi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-importer.md",
+        "name": "stdlib/go-importer"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-text-unicode-bidi.md",
+        "name": "stdlib/vendor-golang.org-x-text-unicode-bidi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-runtime-wasitest.md",
+        "name": "stdlib/internal-runtime-wasitest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-internal-gcimporter.md",
+        "name": "stdlib/go-internal-gcimporter"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/hash.md",
+        "name": "stdlib/hash"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140hash.md",
+        "name": "stdlib/crypto-internal-fips140hash"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-obscuretestdata.md",
+        "name": "stdlib/internal-obscuretestdata"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-http-httptest.md",
+        "name": "stdlib/net-http-httptest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-tls.md",
+        "name": "stdlib/crypto-tls"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-netip.md",
+        "name": "stdlib/net-netip"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-x509-pkix.md",
+        "name": "stdlib/crypto-x509-pkix"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-sys-cpu.md",
+        "name": "stdlib/vendor-golang.org-x-sys-cpu"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-ecdsa.md",
+        "name": "stdlib/crypto-internal-fips140-ecdsa"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-scanner.md",
+        "name": "stdlib/go-scanner"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-singleflight.md",
+        "name": "stdlib/internal-singleflight"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-abi.md",
+        "name": "stdlib/internal-abi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-decodecounter.md",
+        "name": "stdlib/internal-coverage-decodecounter"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-text-secure-bidirule.md",
+        "name": "stdlib/vendor-golang.org-x-text-secure-bidirule"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140.md",
+        "name": "stdlib/crypto-internal-fips140"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-crypto-internal-alias.md",
+        "name": "stdlib/vendor-golang.org-x-crypto-internal-alias"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/unsafe.md",
+        "name": "stdlib/unsafe"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-internal-gccgoimporter.md",
+        "name": "stdlib/go-internal-gccgoimporter"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/debug-plan9obj.md",
+        "name": "stdlib/debug-plan9obj"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/encoding-base32.md",
+        "name": "stdlib/encoding-base32"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-fmtsort.md",
+        "name": "stdlib/internal-fmtsort"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/context.md",
+        "name": "stdlib/context"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-testpty.md",
+        "name": "stdlib/internal-testpty"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/runtime-cgo.md",
+        "name": "stdlib/runtime-cgo"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-runtime-strconv.md",
+        "name": "stdlib/internal-runtime-strconv"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-msan.md",
+        "name": "stdlib/internal-msan"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/expvar.md",
+        "name": "stdlib/expvar"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto.md",
+        "name": "stdlib/crypto"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/compress-zlib.md",
+        "name": "stdlib/compress-zlib"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-trace-traceviewer-format.md",
+        "name": "stdlib/internal-trace-traceviewer-format"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-goarch.md",
+        "name": "stdlib/internal-goarch"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-internal-cgotest.md",
+        "name": "stdlib/net-internal-cgotest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/regexp.md",
+        "name": "stdlib/regexp"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/math-rand-v2.md",
+        "name": "stdlib/math-rand-v2"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-rpc-jsonrpc.md",
+        "name": "stdlib/net-rpc-jsonrpc"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-goexperiment.md",
+        "name": "stdlib/internal-goexperiment"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-des.md",
+        "name": "stdlib/crypto-des"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/database-sql.md",
+        "name": "stdlib/database-sql"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-smtp.md",
+        "name": "stdlib/net-smtp"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-sync.md",
+        "name": "stdlib/internal-sync"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-trace-traceviewer.md",
+        "name": "stdlib/internal-trace-traceviewer"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/strings.md",
+        "name": "stdlib/strings"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-runtime-exithook.md",
+        "name": "stdlib/internal-runtime-exithook"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-boring-bcache.md",
+        "name": "stdlib/crypto-internal-boring-bcache"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/log-syslog.md",
+        "name": "stdlib/log-syslog"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-nistec.md",
+        "name": "stdlib/crypto-internal-fips140-nistec"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-x509.md",
+        "name": "stdlib/crypto-x509"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/strconv.md",
+        "name": "stdlib/strconv"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/image-jpeg.md",
+        "name": "stdlib/image-jpeg"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/image.md",
+        "name": "stdlib/image"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/math-bits.md",
+        "name": "stdlib/math-bits"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-lazyregexp.md",
+        "name": "stdlib/internal-lazyregexp"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-boring-sig.md",
+        "name": "stdlib/crypto-internal-boring-sig"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-trace-version.md",
+        "name": "stdlib/internal-trace-version"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-crypto-cryptobyte.md",
+        "name": "stdlib/vendor-golang.org-x-crypto-cryptobyte"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/path.md",
+        "name": "stdlib/path"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/mime-quotedprintable.md",
+        "name": "stdlib/mime-quotedprintable"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/debug-macho.md",
+        "name": "stdlib/debug-macho"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/text-scanner.md",
+        "name": "stdlib/text-scanner"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-cfile.md",
+        "name": "stdlib/internal-coverage-cfile"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-sha512.md",
+        "name": "stdlib/crypto-internal-fips140-sha512"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-routebsd.md",
+        "name": "stdlib/internal-routebsd"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/encoding-xml.md",
+        "name": "stdlib/encoding-xml"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/os-signal.md",
+        "name": "stdlib/os-signal"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/os-exec.md",
+        "name": "stdlib/os-exec"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/math-cmplx.md",
+        "name": "stdlib/math-cmplx"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/encoding-gob.md",
+        "name": "stdlib/encoding-gob"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-internal-srcimporter.md",
+        "name": "stdlib/go-internal-srcimporter"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-net-http-httpguts.md",
+        "name": "stdlib/vendor-golang.org-x-net-http-httpguts"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/container-ring.md",
+        "name": "stdlib/container-ring"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-trace-tracev2.md",
+        "name": "stdlib/internal-trace-tracev2"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/reflect.md",
+        "name": "stdlib/reflect"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-sha256.md",
+        "name": "stdlib/crypto-sha256"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-calloc.md",
+        "name": "stdlib/internal-coverage-calloc"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/testing-internal-testdeps.md",
+        "name": "stdlib/testing-internal-testdeps"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-md5.md",
+        "name": "stdlib/crypto-md5"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-http.md",
+        "name": "stdlib/net-http"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/weak.md",
+        "name": "stdlib/weak"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/hash-adler32.md",
+        "name": "stdlib/hash-adler32"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-lazytemplate.md",
+        "name": "stdlib/internal-lazytemplate"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/io-ioutil.md",
+        "name": "stdlib/io-ioutil"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-parser.md",
+        "name": "stdlib/go-parser"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-aes-gcm.md",
+        "name": "stdlib/crypto-internal-fips140-aes-gcm"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/embed-internal-embedtest.md",
+        "name": "stdlib/embed-internal-embedtest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-text-transform.md",
+        "name": "stdlib/vendor-golang.org-x-text-transform"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-chacha8rand.md",
+        "name": "stdlib/internal-chacha8rand"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-http-internal-httpcommon.md",
+        "name": "stdlib/net-http-internal-httpcommon"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-gover.md",
+        "name": "stdlib/internal-gover"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/testing-slogtest.md",
+        "name": "stdlib/testing-slogtest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/errors.md",
+        "name": "stdlib/errors"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/math.md",
+        "name": "stdlib/math"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/database-sql-driver.md",
+        "name": "stdlib/database-sql-driver"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-url.md",
+        "name": "stdlib/net-url"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-encodemeta.md",
+        "name": "stdlib/internal-coverage-encodemeta"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/archive-tar.md",
+        "name": "stdlib/archive-tar"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-runtime-math.md",
+        "name": "stdlib/internal-runtime-math"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/text-template-parse.md",
+        "name": "stdlib/text-template-parse"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/regexp-syntax.md",
+        "name": "stdlib/regexp-syntax"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-mlkem.md",
+        "name": "stdlib/crypto-mlkem"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-entropy.md",
+        "name": "stdlib/crypto-internal-entropy"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-http-internal.md",
+        "name": "stdlib/net-http-internal"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/testing.md",
+        "name": "stdlib/testing"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-pods.md",
+        "name": "stdlib/internal-coverage-pods"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-boring-bbig.md",
+        "name": "stdlib/crypto-internal-boring-bbig"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/image-color-palette.md",
+        "name": "stdlib/image-color-palette"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-sysinfo.md",
+        "name": "stdlib/internal-sysinfo"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-impl.md",
+        "name": "stdlib/crypto-internal-impl"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-sysrand.md",
+        "name": "stdlib/crypto-internal-sysrand"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-ed25519.md",
+        "name": "stdlib/crypto-internal-fips140-ed25519"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-runtime-cgroup.md",
+        "name": "stdlib/internal-runtime-cgroup"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-rpc.md",
+        "name": "stdlib/net-rpc"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage.md",
+        "name": "stdlib/internal-coverage"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/bytes.md",
+        "name": "stdlib/bytes"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/slices.md",
+        "name": "stdlib/slices"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/runtime-metrics.md",
+        "name": "stdlib/runtime-metrics"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/hash-crc64.md",
+        "name": "stdlib/hash-crc64"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-ed25519.md",
+        "name": "stdlib/crypto-ed25519"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-fips140.md",
+        "name": "stdlib/crypto-fips140"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-rsa.md",
+        "name": "stdlib/crypto-internal-fips140-rsa"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/debug-dwarf.md",
+        "name": "stdlib/debug-dwarf"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/encoding.md",
+        "name": "stdlib/encoding"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/runtime-coverage.md",
+        "name": "stdlib/runtime-coverage"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-pbkdf2.md",
+        "name": "stdlib/crypto-pbkdf2"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-internal-socktest.md",
+        "name": "stdlib/net-internal-socktest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-runtime-sys.md",
+        "name": "stdlib/internal-runtime-sys"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-syscall-unix.md",
+        "name": "stdlib/internal-syscall-unix"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-syslist.md",
+        "name": "stdlib/internal-syslist"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/log-slog-internal-buffer.md",
+        "name": "stdlib/log-slog-internal-buffer"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-cipher.md",
+        "name": "stdlib/crypto-cipher"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/hash-fnv.md",
+        "name": "stdlib/hash-fnv"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-nistec-fiat.md",
+        "name": "stdlib/crypto-internal-fips140-nistec-fiat"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/hash-crc32.md",
+        "name": "stdlib/hash-crc32"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/image-internal-imageutil.md",
+        "name": "stdlib/image-internal-imageutil"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-synctest.md",
+        "name": "stdlib/internal-synctest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-poll.md",
+        "name": "stdlib/internal-poll"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-format.md",
+        "name": "stdlib/go-format"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140cache.md",
+        "name": "stdlib/crypto-internal-fips140cache"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-platform.md",
+        "name": "stdlib/internal-platform"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-goversion.md",
+        "name": "stdlib/internal-goversion"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/log.md",
+        "name": "stdlib/log"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/runtime-pprof.md",
+        "name": "stdlib/runtime-pprof"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-stringslite.md",
+        "name": "stdlib/internal-stringslite"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/unicode.md",
+        "name": "stdlib/unicode"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-saferio.md",
+        "name": "stdlib/internal-saferio"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-subtle.md",
+        "name": "stdlib/crypto-subtle"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-http-cgi.md",
+        "name": "stdlib/net-http-cgi"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/html-template.md",
+        "name": "stdlib/html-template"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-text-unicode-norm.md",
+        "name": "stdlib/vendor-golang.org-x-text-unicode-norm"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-profile.md",
+        "name": "stdlib/internal-profile"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-cfg.md",
+        "name": "stdlib/internal-cfg"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-pkgbits.md",
+        "name": "stdlib/internal-pkgbits"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-goroot.md",
+        "name": "stdlib/internal-goroot"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/image-color.md",
+        "name": "stdlib/image-color"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-ecdh.md",
+        "name": "stdlib/crypto-internal-fips140-ecdh"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/container-heap.md",
+        "name": "stdlib/container-heap"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-sysrand-internal-seccomp.md",
+        "name": "stdlib/crypto-internal-sysrand-internal-seccomp"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-doc-comment.md",
+        "name": "stdlib/go-doc-comment"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-aes.md",
+        "name": "stdlib/crypto-internal-fips140-aes"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-net-nettest.md",
+        "name": "stdlib/vendor-golang.org-x-net-nettest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/text-tabwriter.md",
+        "name": "stdlib/text-tabwriter"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-runtime-atomic.md",
+        "name": "stdlib/internal-runtime-atomic"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-crypto-internal-poly1305.md",
+        "name": "stdlib/vendor-golang.org-x-crypto-internal-poly1305"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-ecdh.md",
+        "name": "stdlib/crypto-ecdh"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-mlkem.md",
+        "name": "stdlib/crypto-internal-fips140-mlkem"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/encoding-csv.md",
+        "name": "stdlib/encoding-csv"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-tls13.md",
+        "name": "stdlib/crypto-internal-fips140-tls13"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-zstd.md",
+        "name": "stdlib/internal-zstd"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-encodecounter.md",
+        "name": "stdlib/internal-coverage-encodecounter"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/container-list.md",
+        "name": "stdlib/container-list"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/embed.md",
+        "name": "stdlib/embed"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-fuzz.md",
+        "name": "stdlib/internal-fuzz"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-goos.md",
+        "name": "stdlib/internal-goos"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-byteorder.md",
+        "name": "stdlib/internal-byteorder"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-textproto.md",
+        "name": "stdlib/net-textproto"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/compress-lzw.md",
+        "name": "stdlib/compress-lzw"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/index-suffixarray.md",
+        "name": "stdlib/index-suffixarray"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/iter.md",
+        "name": "stdlib/iter"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-godebugs.md",
+        "name": "stdlib/internal-godebugs"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-runtime-maps.md",
+        "name": "stdlib/internal-runtime-maps"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/time.md",
+        "name": "stdlib/time"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-alias.md",
+        "name": "stdlib/crypto-internal-fips140-alias"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-net-http-httpproxy.md",
+        "name": "stdlib/vendor-golang.org-x-net-http-httpproxy"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-testenv.md",
+        "name": "stdlib/internal-testenv"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-hmac.md",
+        "name": "stdlib/crypto-internal-fips140-hmac"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-net-idna.md",
+        "name": "stdlib/vendor-golang.org-x-net-idna"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/testing-quick.md",
+        "name": "stdlib/testing-quick"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-edwards25519.md",
+        "name": "stdlib/crypto-internal-fips140-edwards25519"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-hmac.md",
+        "name": "stdlib/crypto-hmac"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/compress-gzip.md",
+        "name": "stdlib/compress-gzip"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/archive-zip.md",
+        "name": "stdlib/archive-zip"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-tls12.md",
+        "name": "stdlib/crypto-internal-fips140-tls12"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/sync.md",
+        "name": "stdlib/sync"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-check.md",
+        "name": "stdlib/crypto-internal-fips140-check"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-txtar.md",
+        "name": "stdlib/internal-txtar"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/debug-gosym.md",
+        "name": "stdlib/debug-gosym"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-build-constraint.md",
+        "name": "stdlib/go-build-constraint"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/compress-flate.md",
+        "name": "stdlib/compress-flate"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/runtime-trace.md",
+        "name": "stdlib/runtime-trace"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-tls-internal-fips140tls.md",
+        "name": "stdlib/crypto-tls-internal-fips140tls"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-check-checktest.md",
+        "name": "stdlib/crypto-internal-fips140-check-checktest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-trace-raw.md",
+        "name": "stdlib/internal-trace-raw"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/flag.md",
+        "name": "stdlib/flag"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-runtime-gc.md",
+        "name": "stdlib/internal-runtime-gc"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-http-httptrace.md",
+        "name": "stdlib/net-http-httptrace"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/math-big-internal-asmgen.md",
+        "name": "stdlib/math-big-internal-asmgen"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-cmerge.md",
+        "name": "stdlib/internal-coverage-cmerge"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-testlog.md",
+        "name": "stdlib/internal-testlog"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/fmt.md",
+        "name": "stdlib/fmt"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140deps.md",
+        "name": "stdlib/crypto-internal-fips140deps"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-trace-internal-testgen.md",
+        "name": "stdlib/internal-trace-internal-testgen"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/maps.md",
+        "name": "stdlib/maps"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-types.md",
+        "name": "stdlib/go-types"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/encoding-hex.md",
+        "name": "stdlib/encoding-hex"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/mime.md",
+        "name": "stdlib/mime"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-uleb128.md",
+        "name": "stdlib/internal-coverage-uleb128"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140deps-byteorder.md",
+        "name": "stdlib/crypto-internal-fips140deps-byteorder"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-exportdata.md",
+        "name": "stdlib/internal-exportdata"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-ecdsa.md",
+        "name": "stdlib/crypto-ecdsa"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140deps-godebug.md",
+        "name": "stdlib/crypto-internal-fips140deps-godebug"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-http-cookiejar.md",
+        "name": "stdlib/net-http-cookiejar"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-asan.md",
+        "name": "stdlib/internal-asan"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-doc.md",
+        "name": "stdlib/go-doc"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/encoding-base64.md",
+        "name": "stdlib/encoding-base64"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/debug-pe.md",
+        "name": "stdlib/debug-pe"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-printer.md",
+        "name": "stdlib/go-printer"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-constant.md",
+        "name": "stdlib/go-constant"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/os.md",
+        "name": "stdlib/os"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/sync-atomic.md",
+        "name": "stdlib/sync-atomic"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/io-fs.md",
+        "name": "stdlib/io-fs"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-build.md",
+        "name": "stdlib/go-build"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-reflectlite.md",
+        "name": "stdlib/internal-reflectlite"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/image-draw.md",
+        "name": "stdlib/image-draw"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-pbkdf2.md",
+        "name": "stdlib/crypto-internal-fips140-pbkdf2"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/testing-iotest.md",
+        "name": "stdlib/testing-iotest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/log-slog.md",
+        "name": "stdlib/log-slog"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-ast.md",
+        "name": "stdlib/go-ast"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/runtime.md",
+        "name": "stdlib/runtime"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/compress-bzip2.md",
+        "name": "stdlib/compress-bzip2"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-cpu.md",
+        "name": "stdlib/internal-cpu"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-bisect.md",
+        "name": "stdlib/internal-bisect"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-dag.md",
+        "name": "stdlib/internal-dag"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/debug-buildinfo.md",
+        "name": "stdlib/debug-buildinfo"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/math-rand.md",
+        "name": "stdlib/math-rand"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-subtle.md",
+        "name": "stdlib/crypto-internal-fips140-subtle"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-x509-internal-macos.md",
+        "name": "stdlib/crypto-x509-internal-macos"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140test.md",
+        "name": "stdlib/crypto-internal-fips140test"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-xcoff.md",
+        "name": "stdlib/internal-xcoff"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-buildcfg.md",
+        "name": "stdlib/internal-buildcfg"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/image-png.md",
+        "name": "stdlib/image-png"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-nettrace.md",
+        "name": "stdlib/internal-nettrace"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-oserror.md",
+        "name": "stdlib/internal-oserror"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140only.md",
+        "name": "stdlib/crypto-internal-fips140only"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-aes.md",
+        "name": "stdlib/crypto-aes"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-elliptic.md",
+        "name": "stdlib/crypto-elliptic"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-godebug.md",
+        "name": "stdlib/internal-godebug"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-itoa.md",
+        "name": "stdlib/internal-itoa"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-hkdf.md",
+        "name": "stdlib/crypto-internal-fips140-hkdf"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/sort.md",
+        "name": "stdlib/sort"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/encoding-json.md",
+        "name": "stdlib/encoding-json"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/reflect-internal-example2.md",
+        "name": "stdlib/reflect-internal-example2"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/encoding-ascii85.md",
+        "name": "stdlib/encoding-ascii85"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/math-big.md",
+        "name": "stdlib/math-big"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/path-filepath.md",
+        "name": "stdlib/path-filepath"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-http-internal-ascii.md",
+        "name": "stdlib/net-http-internal-ascii"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-hkdf.md",
+        "name": "stdlib/crypto-hkdf"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/unicode-utf16.md",
+        "name": "stdlib/unicode-utf16"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/text-template.md",
+        "name": "stdlib/text-template"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-edwards25519-field.md",
+        "name": "stdlib/crypto-internal-fips140-edwards25519-field"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/go-token.md",
+        "name": "stdlib/go-token"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-mail.md",
+        "name": "stdlib/net-mail"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/encoding-binary.md",
+        "name": "stdlib/encoding-binary"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/unique.md",
+        "name": "stdlib/unique"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-sha3.md",
+        "name": "stdlib/crypto-sha3"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-stringtab.md",
+        "name": "stdlib/internal-coverage-stringtab"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/io.md",
+        "name": "stdlib/io"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-syscall-execenv.md",
+        "name": "stdlib/internal-syscall-execenv"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/hash-maphash.md",
+        "name": "stdlib/hash-maphash"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/os-exec-internal-fdtest.md",
+        "name": "stdlib/os-exec-internal-fdtest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/html.md",
+        "name": "stdlib/html"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net.md",
+        "name": "stdlib/net"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/time-tzdata.md",
+        "name": "stdlib/time-tzdata"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-cryptotest.md",
+        "name": "stdlib/crypto-internal-cryptotest"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/encoding-asn1.md",
+        "name": "stdlib/encoding-asn1"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/net-http-internal-testcert.md",
+        "name": "stdlib/net-http-internal-testcert"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-hpke.md",
+        "name": "stdlib/crypto-internal-hpke"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-rsa.md",
+        "name": "stdlib/crypto-rsa"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-rand.md",
+        "name": "stdlib/crypto-rand"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-filepathlite.md",
+        "name": "stdlib/internal-filepathlite"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/vendor-golang.org-x-crypto-cryptobyte-asn1.md",
+        "name": "stdlib/vendor-golang.org-x-crypto-cryptobyte-asn1"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/crypto-internal-fips140-sha3.md",
+        "name": "stdlib/crypto-internal-fips140-sha3"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-coverage-test.md",
+        "name": "stdlib/internal-coverage-test"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-unsafeheader.md",
+        "name": "stdlib/internal-unsafeheader"
+      },
+      {
+        "category": "stdlib",
+        "path": "stdlib/internal-diff.md",
+        "name": "stdlib/internal-diff"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/staticcheck.md",
+        "name": "linters/golangci-lint/staticcheck"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/interfacebloat.md",
+        "name": "linters/golangci-lint/interfacebloat"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/nonamedreturns.md",
+        "name": "linters/golangci-lint/nonamedreturns"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/goheader.md",
+        "name": "linters/golangci-lint/goheader"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/godoclint.md",
+        "name": "linters/golangci-lint/godoclint"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/exhaustive.md",
+        "name": "linters/golangci-lint/exhaustive"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/recvcheck.md",
+        "name": "linters/golangci-lint/recvcheck"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/grouper.md",
+        "name": "linters/golangci-lint/grouper"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/unqueryvet.md",
+        "name": "linters/golangci-lint/unqueryvet"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/sqlclosecheck.md",
+        "name": "linters/golangci-lint/sqlclosecheck"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/perfsprint.md",
+        "name": "linters/golangci-lint/perfsprint"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/fatcontext.md",
+        "name": "linters/golangci-lint/fatcontext"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/cyclop.md",
+        "name": "linters/golangci-lint/cyclop"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/nolintlint.md",
+        "name": "linters/golangci-lint/nolintlint"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/ginkgolinter.md",
+        "name": "linters/golangci-lint/ginkgolinter"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/gosmopolitan.md",
+        "name": "linters/golangci-lint/gosmopolitan"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/govet.md",
+        "name": "linters/golangci-lint/govet"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/overview.md",
+        "name": "linters/golangci-lint/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/nilnesserr.md",
+        "name": "linters/golangci-lint/nilnesserr"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/testableexamples.md",
+        "name": "linters/golangci-lint/testableexamples"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/godox.md",
+        "name": "linters/golangci-lint/godox"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/dogsled.md",
+        "name": "linters/golangci-lint/dogsled"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/decorder.md",
+        "name": "linters/golangci-lint/decorder"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/predeclared.md",
+        "name": "linters/golangci-lint/predeclared"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/iotamixing.md",
+        "name": "linters/golangci-lint/iotamixing"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/goprintffuncname.md",
+        "name": "linters/golangci-lint/goprintffuncname"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/paralleltest.md",
+        "name": "linters/golangci-lint/paralleltest"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/inamedparam.md",
+        "name": "linters/golangci-lint/inamedparam"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/rowserrcheck.md",
+        "name": "linters/golangci-lint/rowserrcheck"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/unparam.md",
+        "name": "linters/golangci-lint/unparam"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/mnd.md",
+        "name": "linters/golangci-lint/mnd"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/bodyclose.md",
+        "name": "linters/golangci-lint/bodyclose"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/misspell.md",
+        "name": "linters/golangci-lint/misspell"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/noctx.md",
+        "name": "linters/golangci-lint/noctx"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/copyloopvar.md",
+        "name": "linters/golangci-lint/copyloopvar"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/gochecknoinits.md",
+        "name": "linters/golangci-lint/gochecknoinits"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/promlinter.md",
+        "name": "linters/golangci-lint/promlinter"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/errcheck.md",
+        "name": "linters/golangci-lint/errcheck"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/funlen.md",
+        "name": "linters/golangci-lint/funlen"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/unused.md",
+        "name": "linters/golangci-lint/unused"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/whitespace.md",
+        "name": "linters/golangci-lint/whitespace"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/varnamelen.md",
+        "name": "linters/golangci-lint/varnamelen"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/gocheckcompilerdirectives.md",
+        "name": "linters/golangci-lint/gocheckcompilerdirectives"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/intrange.md",
+        "name": "linters/golangci-lint/intrange"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/durationcheck.md",
+        "name": "linters/golangci-lint/durationcheck"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/forbidigo.md",
+        "name": "linters/golangci-lint/forbidigo"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/canonicalheader.md",
+        "name": "linters/golangci-lint/canonicalheader"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/bidichk.md",
+        "name": "linters/golangci-lint/bidichk"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/usetesting.md",
+        "name": "linters/golangci-lint/usetesting"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/ireturn.md",
+        "name": "linters/golangci-lint/ireturn"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/arangolint.md",
+        "name": "linters/golangci-lint/arangolint"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/errname.md",
+        "name": "linters/golangci-lint/errname"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/exptostd.md",
+        "name": "linters/golangci-lint/exptostd"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/gochecknoglobals.md",
+        "name": "linters/golangci-lint/gochecknoglobals"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/gomodguard.md",
+        "name": "linters/golangci-lint/gomodguard"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/errchkjson.md",
+        "name": "linters/golangci-lint/errchkjson"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/nestif.md",
+        "name": "linters/golangci-lint/nestif"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/forcetypeassert.md",
+        "name": "linters/golangci-lint/forcetypeassert"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/nakedret.md",
+        "name": "linters/golangci-lint/nakedret"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/protogetter.md",
+        "name": "linters/golangci-lint/protogetter"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/gomoddirectives.md",
+        "name": "linters/golangci-lint/gomoddirectives"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/noinlineerr.md",
+        "name": "linters/golangci-lint/noinlineerr"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/usestdlibvars.md",
+        "name": "linters/golangci-lint/usestdlibvars"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/modernize.md",
+        "name": "linters/golangci-lint/modernize"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/depguard.md",
+        "name": "linters/golangci-lint/depguard"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/gocognit.md",
+        "name": "linters/golangci-lint/gocognit"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/gocyclo.md",
+        "name": "linters/golangci-lint/gocyclo"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/gochecksumtype.md",
+        "name": "linters/golangci-lint/gochecksumtype"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/config.md",
+        "name": "linters/golangci-lint/config"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/importas.md",
+        "name": "linters/golangci-lint/importas"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/asciicheck.md",
+        "name": "linters/golangci-lint/asciicheck"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/reassign.md",
+        "name": "linters/golangci-lint/reassign"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/mirror.md",
+        "name": "linters/golangci-lint/mirror"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/unconvert.md",
+        "name": "linters/golangci-lint/unconvert"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/asasalint.md",
+        "name": "linters/golangci-lint/asasalint"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/funcorder.md",
+        "name": "linters/golangci-lint/funcorder"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/revive.md",
+        "name": "linters/golangci-lint/revive"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/thelper.md",
+        "name": "linters/golangci-lint/thelper"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/nilerr.md",
+        "name": "linters/golangci-lint/nilerr"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/godot.md",
+        "name": "linters/golangci-lint/godot"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/contextcheck.md",
+        "name": "linters/golangci-lint/contextcheck"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/tagalign.md",
+        "name": "linters/golangci-lint/tagalign"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/musttag.md",
+        "name": "linters/golangci-lint/musttag"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/err113.md",
+        "name": "linters/golangci-lint/err113"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/wrapcheck.md",
+        "name": "linters/golangci-lint/wrapcheck"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/testifylint.md",
+        "name": "linters/golangci-lint/testifylint"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/containedctx.md",
+        "name": "linters/golangci-lint/containedctx"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/wastedassign.md",
+        "name": "linters/golangci-lint/wastedassign"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/sloglint.md",
+        "name": "linters/golangci-lint/sloglint"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/tagliatelle.md",
+        "name": "linters/golangci-lint/tagliatelle"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/maintidx.md",
+        "name": "linters/golangci-lint/maintidx"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/testpackage.md",
+        "name": "linters/golangci-lint/testpackage"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/nlreturn.md",
+        "name": "linters/golangci-lint/nlreturn"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/gosec.md",
+        "name": "linters/golangci-lint/gosec"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/loggercheck.md",
+        "name": "linters/golangci-lint/loggercheck"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/spancheck.md",
+        "name": "linters/golangci-lint/spancheck"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/tparallel.md",
+        "name": "linters/golangci-lint/tparallel"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/exhaustruct.md",
+        "name": "linters/golangci-lint/exhaustruct"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/errorlint.md",
+        "name": "linters/golangci-lint/errorlint"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/goconst.md",
+        "name": "linters/golangci-lint/goconst"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/wsl_v5.md",
+        "name": "linters/golangci-lint/wsl_v5"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/prealloc.md",
+        "name": "linters/golangci-lint/prealloc"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/gocritic.md",
+        "name": "linters/golangci-lint/gocritic"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/nilnil.md",
+        "name": "linters/golangci-lint/nilnil"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/dupl.md",
+        "name": "linters/golangci-lint/dupl"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/wsl.md",
+        "name": "linters/golangci-lint/wsl"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/zerologlint.md",
+        "name": "linters/golangci-lint/zerologlint"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/embeddedstructfieldcheck.md",
+        "name": "linters/golangci-lint/embeddedstructfieldcheck"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/nosprintfhostport.md",
+        "name": "linters/golangci-lint/nosprintfhostport"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/ineffassign.md",
+        "name": "linters/golangci-lint/ineffassign"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/iface.md",
+        "name": "linters/golangci-lint/iface"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/lll.md",
+        "name": "linters/golangci-lint/lll"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/makezero.md",
+        "name": "linters/golangci-lint/makezero"
+      },
+      {
+        "category": "linters",
+        "path": "linters/golangci-lint/dupword.md",
+        "name": "linters/golangci-lint/dupword"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/goimports.md",
+        "name": "formatters/goimports"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/gofmt.md",
+        "name": "formatters/gofmt"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/gofumpt.md",
+        "name": "formatters/gofumpt"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/golines.md",
+        "name": "formatters/golines"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/proverbs.md",
+        "name": "patterns/proverbs"
+      },
+      {
+        "category": "patterns",
+        "path": "patterns/error-handling.md",
+        "name": "patterns/error-handling"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "effective-go.md",
+      "name": "effective-go"
+    },
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/debug-elf.md",
+      "name": "stdlib/debug-elf"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/image-gif.md",
+      "name": "stdlib/image-gif"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-version.md",
+      "name": "stdlib/go-version"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-http-pprof.md",
+      "name": "stdlib/net-http-pprof"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/cmp.md",
+      "name": "stdlib/cmp"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-boring.md",
+      "name": "stdlib/crypto-internal-boring"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-dsa.md",
+      "name": "stdlib/crypto-dsa"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-net-dns-dnsmessage.md",
+      "name": "stdlib/vendor-golang.org-x-net-dns-dnsmessage"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-race.md",
+      "name": "stdlib/internal-race"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/reflect-internal-example1.md",
+      "name": "stdlib/reflect-internal-example1"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-crypto-chacha20.md",
+      "name": "stdlib/vendor-golang.org-x-crypto-chacha20"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/unicode-utf8.md",
+      "name": "stdlib/unicode-utf8"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-copyright.md",
+      "name": "stdlib/internal-copyright"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/testing-fstest.md",
+      "name": "stdlib/testing-fstest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-cformat.md",
+      "name": "stdlib/internal-coverage-cformat"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/log-internal.md",
+      "name": "stdlib/log-internal"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/bufio.md",
+      "name": "stdlib/bufio"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-trace.md",
+      "name": "stdlib/internal-trace"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/os-user.md",
+      "name": "stdlib/os-user"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-rc4.md",
+      "name": "stdlib/crypto-rc4"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-types-errors.md",
+      "name": "stdlib/internal-types-errors"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-crypto-chacha20poly1305.md",
+      "name": "stdlib/vendor-golang.org-x-crypto-chacha20poly1305"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-profilerecord.md",
+      "name": "stdlib/internal-profilerecord"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/log-slog-internal.md",
+      "name": "stdlib/log-slog-internal"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-net-http2-hpack.md",
+      "name": "stdlib/vendor-golang.org-x-net-http2-hpack"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-sha256.md",
+      "name": "stdlib/crypto-internal-fips140-sha256"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-trace-testtrace.md",
+      "name": "stdlib/internal-trace-testtrace"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-drbg.md",
+      "name": "stdlib/crypto-internal-fips140-drbg"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-slicereader.md",
+      "name": "stdlib/internal-coverage-slicereader"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-trace-internal-tracev1.md",
+      "name": "stdlib/internal-trace-internal-tracev1"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/mime-multipart.md",
+      "name": "stdlib/mime-multipart"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-rtcov.md",
+      "name": "stdlib/internal-coverage-rtcov"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/runtime-debug.md",
+      "name": "stdlib/runtime-debug"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-decodemeta.md",
+      "name": "stdlib/internal-coverage-decodemeta"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/plugin.md",
+      "name": "stdlib/plugin"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-sha512.md",
+      "name": "stdlib/crypto-sha512"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-ssh.md",
+      "name": "stdlib/crypto-internal-fips140-ssh"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-http-httputil.md",
+      "name": "stdlib/net-http-httputil"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/testing-synctest.md",
+      "name": "stdlib/testing-synctest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140deps-cpu.md",
+      "name": "stdlib/crypto-internal-fips140deps-cpu"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-bytealg.md",
+      "name": "stdlib/internal-bytealg"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/runtime-race.md",
+      "name": "stdlib/runtime-race"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/syscall.md",
+      "name": "stdlib/syscall"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-testhash.md",
+      "name": "stdlib/internal-testhash"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/log-slog-internal-benchmarks.md",
+      "name": "stdlib/log-slog-internal-benchmarks"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-slicewriter.md",
+      "name": "stdlib/internal-coverage-slicewriter"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/encoding-pem.md",
+      "name": "stdlib/encoding-pem"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/structs.md",
+      "name": "stdlib/structs"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-sha1.md",
+      "name": "stdlib/crypto-sha1"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-bigmod.md",
+      "name": "stdlib/crypto-internal-fips140-bigmod"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-randutil.md",
+      "name": "stdlib/crypto-internal-randutil"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-http-fcgi.md",
+      "name": "stdlib/net-http-fcgi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-importer.md",
+      "name": "stdlib/go-importer"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-text-unicode-bidi.md",
+      "name": "stdlib/vendor-golang.org-x-text-unicode-bidi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-runtime-wasitest.md",
+      "name": "stdlib/internal-runtime-wasitest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-internal-gcimporter.md",
+      "name": "stdlib/go-internal-gcimporter"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/hash.md",
+      "name": "stdlib/hash"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140hash.md",
+      "name": "stdlib/crypto-internal-fips140hash"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-obscuretestdata.md",
+      "name": "stdlib/internal-obscuretestdata"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-http-httptest.md",
+      "name": "stdlib/net-http-httptest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-tls.md",
+      "name": "stdlib/crypto-tls"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-netip.md",
+      "name": "stdlib/net-netip"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-x509-pkix.md",
+      "name": "stdlib/crypto-x509-pkix"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-sys-cpu.md",
+      "name": "stdlib/vendor-golang.org-x-sys-cpu"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-ecdsa.md",
+      "name": "stdlib/crypto-internal-fips140-ecdsa"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-scanner.md",
+      "name": "stdlib/go-scanner"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-singleflight.md",
+      "name": "stdlib/internal-singleflight"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-abi.md",
+      "name": "stdlib/internal-abi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-decodecounter.md",
+      "name": "stdlib/internal-coverage-decodecounter"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-text-secure-bidirule.md",
+      "name": "stdlib/vendor-golang.org-x-text-secure-bidirule"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140.md",
+      "name": "stdlib/crypto-internal-fips140"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-crypto-internal-alias.md",
+      "name": "stdlib/vendor-golang.org-x-crypto-internal-alias"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/unsafe.md",
+      "name": "stdlib/unsafe"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-internal-gccgoimporter.md",
+      "name": "stdlib/go-internal-gccgoimporter"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/debug-plan9obj.md",
+      "name": "stdlib/debug-plan9obj"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/encoding-base32.md",
+      "name": "stdlib/encoding-base32"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-fmtsort.md",
+      "name": "stdlib/internal-fmtsort"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/context.md",
+      "name": "stdlib/context"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-testpty.md",
+      "name": "stdlib/internal-testpty"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/runtime-cgo.md",
+      "name": "stdlib/runtime-cgo"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-runtime-strconv.md",
+      "name": "stdlib/internal-runtime-strconv"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-msan.md",
+      "name": "stdlib/internal-msan"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/expvar.md",
+      "name": "stdlib/expvar"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto.md",
+      "name": "stdlib/crypto"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/compress-zlib.md",
+      "name": "stdlib/compress-zlib"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-trace-traceviewer-format.md",
+      "name": "stdlib/internal-trace-traceviewer-format"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-goarch.md",
+      "name": "stdlib/internal-goarch"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-internal-cgotest.md",
+      "name": "stdlib/net-internal-cgotest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/regexp.md",
+      "name": "stdlib/regexp"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/math-rand-v2.md",
+      "name": "stdlib/math-rand-v2"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-rpc-jsonrpc.md",
+      "name": "stdlib/net-rpc-jsonrpc"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-goexperiment.md",
+      "name": "stdlib/internal-goexperiment"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-des.md",
+      "name": "stdlib/crypto-des"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/database-sql.md",
+      "name": "stdlib/database-sql"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-smtp.md",
+      "name": "stdlib/net-smtp"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-sync.md",
+      "name": "stdlib/internal-sync"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-trace-traceviewer.md",
+      "name": "stdlib/internal-trace-traceviewer"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/strings.md",
+      "name": "stdlib/strings"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-runtime-exithook.md",
+      "name": "stdlib/internal-runtime-exithook"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-boring-bcache.md",
+      "name": "stdlib/crypto-internal-boring-bcache"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/log-syslog.md",
+      "name": "stdlib/log-syslog"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-nistec.md",
+      "name": "stdlib/crypto-internal-fips140-nistec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-x509.md",
+      "name": "stdlib/crypto-x509"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/strconv.md",
+      "name": "stdlib/strconv"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/image-jpeg.md",
+      "name": "stdlib/image-jpeg"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/image.md",
+      "name": "stdlib/image"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/math-bits.md",
+      "name": "stdlib/math-bits"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-lazyregexp.md",
+      "name": "stdlib/internal-lazyregexp"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-boring-sig.md",
+      "name": "stdlib/crypto-internal-boring-sig"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-trace-version.md",
+      "name": "stdlib/internal-trace-version"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-crypto-cryptobyte.md",
+      "name": "stdlib/vendor-golang.org-x-crypto-cryptobyte"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/path.md",
+      "name": "stdlib/path"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/mime-quotedprintable.md",
+      "name": "stdlib/mime-quotedprintable"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/debug-macho.md",
+      "name": "stdlib/debug-macho"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/text-scanner.md",
+      "name": "stdlib/text-scanner"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-cfile.md",
+      "name": "stdlib/internal-coverage-cfile"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-sha512.md",
+      "name": "stdlib/crypto-internal-fips140-sha512"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-routebsd.md",
+      "name": "stdlib/internal-routebsd"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/encoding-xml.md",
+      "name": "stdlib/encoding-xml"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/os-signal.md",
+      "name": "stdlib/os-signal"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/os-exec.md",
+      "name": "stdlib/os-exec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/math-cmplx.md",
+      "name": "stdlib/math-cmplx"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/encoding-gob.md",
+      "name": "stdlib/encoding-gob"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-internal-srcimporter.md",
+      "name": "stdlib/go-internal-srcimporter"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-net-http-httpguts.md",
+      "name": "stdlib/vendor-golang.org-x-net-http-httpguts"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/container-ring.md",
+      "name": "stdlib/container-ring"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-trace-tracev2.md",
+      "name": "stdlib/internal-trace-tracev2"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/reflect.md",
+      "name": "stdlib/reflect"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-sha256.md",
+      "name": "stdlib/crypto-sha256"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-calloc.md",
+      "name": "stdlib/internal-coverage-calloc"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/testing-internal-testdeps.md",
+      "name": "stdlib/testing-internal-testdeps"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-md5.md",
+      "name": "stdlib/crypto-md5"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-http.md",
+      "name": "stdlib/net-http"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/weak.md",
+      "name": "stdlib/weak"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/hash-adler32.md",
+      "name": "stdlib/hash-adler32"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-lazytemplate.md",
+      "name": "stdlib/internal-lazytemplate"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/io-ioutil.md",
+      "name": "stdlib/io-ioutil"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-parser.md",
+      "name": "stdlib/go-parser"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-aes-gcm.md",
+      "name": "stdlib/crypto-internal-fips140-aes-gcm"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/embed-internal-embedtest.md",
+      "name": "stdlib/embed-internal-embedtest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-text-transform.md",
+      "name": "stdlib/vendor-golang.org-x-text-transform"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-chacha8rand.md",
+      "name": "stdlib/internal-chacha8rand"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-http-internal-httpcommon.md",
+      "name": "stdlib/net-http-internal-httpcommon"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-gover.md",
+      "name": "stdlib/internal-gover"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/testing-slogtest.md",
+      "name": "stdlib/testing-slogtest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/errors.md",
+      "name": "stdlib/errors"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/math.md",
+      "name": "stdlib/math"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/database-sql-driver.md",
+      "name": "stdlib/database-sql-driver"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-url.md",
+      "name": "stdlib/net-url"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-encodemeta.md",
+      "name": "stdlib/internal-coverage-encodemeta"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/archive-tar.md",
+      "name": "stdlib/archive-tar"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-runtime-math.md",
+      "name": "stdlib/internal-runtime-math"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/text-template-parse.md",
+      "name": "stdlib/text-template-parse"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/regexp-syntax.md",
+      "name": "stdlib/regexp-syntax"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-mlkem.md",
+      "name": "stdlib/crypto-mlkem"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-entropy.md",
+      "name": "stdlib/crypto-internal-entropy"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-http-internal.md",
+      "name": "stdlib/net-http-internal"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/testing.md",
+      "name": "stdlib/testing"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-pods.md",
+      "name": "stdlib/internal-coverage-pods"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-boring-bbig.md",
+      "name": "stdlib/crypto-internal-boring-bbig"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/image-color-palette.md",
+      "name": "stdlib/image-color-palette"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-sysinfo.md",
+      "name": "stdlib/internal-sysinfo"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-impl.md",
+      "name": "stdlib/crypto-internal-impl"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-sysrand.md",
+      "name": "stdlib/crypto-internal-sysrand"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-ed25519.md",
+      "name": "stdlib/crypto-internal-fips140-ed25519"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-runtime-cgroup.md",
+      "name": "stdlib/internal-runtime-cgroup"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-rpc.md",
+      "name": "stdlib/net-rpc"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage.md",
+      "name": "stdlib/internal-coverage"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/bytes.md",
+      "name": "stdlib/bytes"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/slices.md",
+      "name": "stdlib/slices"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/runtime-metrics.md",
+      "name": "stdlib/runtime-metrics"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/hash-crc64.md",
+      "name": "stdlib/hash-crc64"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-ed25519.md",
+      "name": "stdlib/crypto-ed25519"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-fips140.md",
+      "name": "stdlib/crypto-fips140"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-rsa.md",
+      "name": "stdlib/crypto-internal-fips140-rsa"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/debug-dwarf.md",
+      "name": "stdlib/debug-dwarf"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/encoding.md",
+      "name": "stdlib/encoding"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/runtime-coverage.md",
+      "name": "stdlib/runtime-coverage"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-pbkdf2.md",
+      "name": "stdlib/crypto-pbkdf2"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-internal-socktest.md",
+      "name": "stdlib/net-internal-socktest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-runtime-sys.md",
+      "name": "stdlib/internal-runtime-sys"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-syscall-unix.md",
+      "name": "stdlib/internal-syscall-unix"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-syslist.md",
+      "name": "stdlib/internal-syslist"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/log-slog-internal-buffer.md",
+      "name": "stdlib/log-slog-internal-buffer"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-cipher.md",
+      "name": "stdlib/crypto-cipher"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/hash-fnv.md",
+      "name": "stdlib/hash-fnv"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-nistec-fiat.md",
+      "name": "stdlib/crypto-internal-fips140-nistec-fiat"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/hash-crc32.md",
+      "name": "stdlib/hash-crc32"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/image-internal-imageutil.md",
+      "name": "stdlib/image-internal-imageutil"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-synctest.md",
+      "name": "stdlib/internal-synctest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-poll.md",
+      "name": "stdlib/internal-poll"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-format.md",
+      "name": "stdlib/go-format"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140cache.md",
+      "name": "stdlib/crypto-internal-fips140cache"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-platform.md",
+      "name": "stdlib/internal-platform"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-goversion.md",
+      "name": "stdlib/internal-goversion"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/log.md",
+      "name": "stdlib/log"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/runtime-pprof.md",
+      "name": "stdlib/runtime-pprof"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-stringslite.md",
+      "name": "stdlib/internal-stringslite"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/unicode.md",
+      "name": "stdlib/unicode"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-saferio.md",
+      "name": "stdlib/internal-saferio"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-subtle.md",
+      "name": "stdlib/crypto-subtle"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-http-cgi.md",
+      "name": "stdlib/net-http-cgi"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/html-template.md",
+      "name": "stdlib/html-template"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-text-unicode-norm.md",
+      "name": "stdlib/vendor-golang.org-x-text-unicode-norm"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-profile.md",
+      "name": "stdlib/internal-profile"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-cfg.md",
+      "name": "stdlib/internal-cfg"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-pkgbits.md",
+      "name": "stdlib/internal-pkgbits"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-goroot.md",
+      "name": "stdlib/internal-goroot"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/image-color.md",
+      "name": "stdlib/image-color"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-ecdh.md",
+      "name": "stdlib/crypto-internal-fips140-ecdh"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/container-heap.md",
+      "name": "stdlib/container-heap"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-sysrand-internal-seccomp.md",
+      "name": "stdlib/crypto-internal-sysrand-internal-seccomp"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-doc-comment.md",
+      "name": "stdlib/go-doc-comment"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-aes.md",
+      "name": "stdlib/crypto-internal-fips140-aes"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-net-nettest.md",
+      "name": "stdlib/vendor-golang.org-x-net-nettest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/text-tabwriter.md",
+      "name": "stdlib/text-tabwriter"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-runtime-atomic.md",
+      "name": "stdlib/internal-runtime-atomic"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-crypto-internal-poly1305.md",
+      "name": "stdlib/vendor-golang.org-x-crypto-internal-poly1305"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-ecdh.md",
+      "name": "stdlib/crypto-ecdh"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-mlkem.md",
+      "name": "stdlib/crypto-internal-fips140-mlkem"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/encoding-csv.md",
+      "name": "stdlib/encoding-csv"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-tls13.md",
+      "name": "stdlib/crypto-internal-fips140-tls13"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-zstd.md",
+      "name": "stdlib/internal-zstd"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-encodecounter.md",
+      "name": "stdlib/internal-coverage-encodecounter"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/container-list.md",
+      "name": "stdlib/container-list"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/embed.md",
+      "name": "stdlib/embed"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-fuzz.md",
+      "name": "stdlib/internal-fuzz"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-goos.md",
+      "name": "stdlib/internal-goos"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-byteorder.md",
+      "name": "stdlib/internal-byteorder"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-textproto.md",
+      "name": "stdlib/net-textproto"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/compress-lzw.md",
+      "name": "stdlib/compress-lzw"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/index-suffixarray.md",
+      "name": "stdlib/index-suffixarray"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/iter.md",
+      "name": "stdlib/iter"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-godebugs.md",
+      "name": "stdlib/internal-godebugs"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-runtime-maps.md",
+      "name": "stdlib/internal-runtime-maps"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/time.md",
+      "name": "stdlib/time"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-alias.md",
+      "name": "stdlib/crypto-internal-fips140-alias"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-net-http-httpproxy.md",
+      "name": "stdlib/vendor-golang.org-x-net-http-httpproxy"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-testenv.md",
+      "name": "stdlib/internal-testenv"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-hmac.md",
+      "name": "stdlib/crypto-internal-fips140-hmac"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-net-idna.md",
+      "name": "stdlib/vendor-golang.org-x-net-idna"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/testing-quick.md",
+      "name": "stdlib/testing-quick"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-edwards25519.md",
+      "name": "stdlib/crypto-internal-fips140-edwards25519"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-hmac.md",
+      "name": "stdlib/crypto-hmac"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/compress-gzip.md",
+      "name": "stdlib/compress-gzip"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/archive-zip.md",
+      "name": "stdlib/archive-zip"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-tls12.md",
+      "name": "stdlib/crypto-internal-fips140-tls12"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/sync.md",
+      "name": "stdlib/sync"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-check.md",
+      "name": "stdlib/crypto-internal-fips140-check"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-txtar.md",
+      "name": "stdlib/internal-txtar"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/debug-gosym.md",
+      "name": "stdlib/debug-gosym"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-build-constraint.md",
+      "name": "stdlib/go-build-constraint"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/compress-flate.md",
+      "name": "stdlib/compress-flate"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/runtime-trace.md",
+      "name": "stdlib/runtime-trace"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-tls-internal-fips140tls.md",
+      "name": "stdlib/crypto-tls-internal-fips140tls"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-check-checktest.md",
+      "name": "stdlib/crypto-internal-fips140-check-checktest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-trace-raw.md",
+      "name": "stdlib/internal-trace-raw"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/flag.md",
+      "name": "stdlib/flag"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-runtime-gc.md",
+      "name": "stdlib/internal-runtime-gc"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-http-httptrace.md",
+      "name": "stdlib/net-http-httptrace"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/math-big-internal-asmgen.md",
+      "name": "stdlib/math-big-internal-asmgen"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-cmerge.md",
+      "name": "stdlib/internal-coverage-cmerge"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-testlog.md",
+      "name": "stdlib/internal-testlog"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/fmt.md",
+      "name": "stdlib/fmt"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140deps.md",
+      "name": "stdlib/crypto-internal-fips140deps"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-trace-internal-testgen.md",
+      "name": "stdlib/internal-trace-internal-testgen"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/maps.md",
+      "name": "stdlib/maps"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-types.md",
+      "name": "stdlib/go-types"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/encoding-hex.md",
+      "name": "stdlib/encoding-hex"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/mime.md",
+      "name": "stdlib/mime"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-uleb128.md",
+      "name": "stdlib/internal-coverage-uleb128"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140deps-byteorder.md",
+      "name": "stdlib/crypto-internal-fips140deps-byteorder"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-exportdata.md",
+      "name": "stdlib/internal-exportdata"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-ecdsa.md",
+      "name": "stdlib/crypto-ecdsa"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140deps-godebug.md",
+      "name": "stdlib/crypto-internal-fips140deps-godebug"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-http-cookiejar.md",
+      "name": "stdlib/net-http-cookiejar"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-asan.md",
+      "name": "stdlib/internal-asan"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-doc.md",
+      "name": "stdlib/go-doc"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/encoding-base64.md",
+      "name": "stdlib/encoding-base64"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/debug-pe.md",
+      "name": "stdlib/debug-pe"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-printer.md",
+      "name": "stdlib/go-printer"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-constant.md",
+      "name": "stdlib/go-constant"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/os.md",
+      "name": "stdlib/os"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/sync-atomic.md",
+      "name": "stdlib/sync-atomic"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/io-fs.md",
+      "name": "stdlib/io-fs"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-build.md",
+      "name": "stdlib/go-build"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-reflectlite.md",
+      "name": "stdlib/internal-reflectlite"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/image-draw.md",
+      "name": "stdlib/image-draw"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-pbkdf2.md",
+      "name": "stdlib/crypto-internal-fips140-pbkdf2"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/testing-iotest.md",
+      "name": "stdlib/testing-iotest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/log-slog.md",
+      "name": "stdlib/log-slog"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-ast.md",
+      "name": "stdlib/go-ast"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/runtime.md",
+      "name": "stdlib/runtime"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/compress-bzip2.md",
+      "name": "stdlib/compress-bzip2"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-cpu.md",
+      "name": "stdlib/internal-cpu"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-bisect.md",
+      "name": "stdlib/internal-bisect"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-dag.md",
+      "name": "stdlib/internal-dag"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/debug-buildinfo.md",
+      "name": "stdlib/debug-buildinfo"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/math-rand.md",
+      "name": "stdlib/math-rand"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-subtle.md",
+      "name": "stdlib/crypto-internal-fips140-subtle"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-x509-internal-macos.md",
+      "name": "stdlib/crypto-x509-internal-macos"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140test.md",
+      "name": "stdlib/crypto-internal-fips140test"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-xcoff.md",
+      "name": "stdlib/internal-xcoff"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-buildcfg.md",
+      "name": "stdlib/internal-buildcfg"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/image-png.md",
+      "name": "stdlib/image-png"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-nettrace.md",
+      "name": "stdlib/internal-nettrace"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-oserror.md",
+      "name": "stdlib/internal-oserror"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140only.md",
+      "name": "stdlib/crypto-internal-fips140only"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-aes.md",
+      "name": "stdlib/crypto-aes"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-elliptic.md",
+      "name": "stdlib/crypto-elliptic"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-godebug.md",
+      "name": "stdlib/internal-godebug"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-itoa.md",
+      "name": "stdlib/internal-itoa"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-hkdf.md",
+      "name": "stdlib/crypto-internal-fips140-hkdf"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/sort.md",
+      "name": "stdlib/sort"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/encoding-json.md",
+      "name": "stdlib/encoding-json"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/reflect-internal-example2.md",
+      "name": "stdlib/reflect-internal-example2"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/encoding-ascii85.md",
+      "name": "stdlib/encoding-ascii85"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/math-big.md",
+      "name": "stdlib/math-big"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/path-filepath.md",
+      "name": "stdlib/path-filepath"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-http-internal-ascii.md",
+      "name": "stdlib/net-http-internal-ascii"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-hkdf.md",
+      "name": "stdlib/crypto-hkdf"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/unicode-utf16.md",
+      "name": "stdlib/unicode-utf16"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/text-template.md",
+      "name": "stdlib/text-template"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-edwards25519-field.md",
+      "name": "stdlib/crypto-internal-fips140-edwards25519-field"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/go-token.md",
+      "name": "stdlib/go-token"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-mail.md",
+      "name": "stdlib/net-mail"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/encoding-binary.md",
+      "name": "stdlib/encoding-binary"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/unique.md",
+      "name": "stdlib/unique"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-sha3.md",
+      "name": "stdlib/crypto-sha3"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-stringtab.md",
+      "name": "stdlib/internal-coverage-stringtab"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/io.md",
+      "name": "stdlib/io"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-syscall-execenv.md",
+      "name": "stdlib/internal-syscall-execenv"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/hash-maphash.md",
+      "name": "stdlib/hash-maphash"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/os-exec-internal-fdtest.md",
+      "name": "stdlib/os-exec-internal-fdtest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/html.md",
+      "name": "stdlib/html"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net.md",
+      "name": "stdlib/net"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/time-tzdata.md",
+      "name": "stdlib/time-tzdata"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-cryptotest.md",
+      "name": "stdlib/crypto-internal-cryptotest"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/encoding-asn1.md",
+      "name": "stdlib/encoding-asn1"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/net-http-internal-testcert.md",
+      "name": "stdlib/net-http-internal-testcert"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-hpke.md",
+      "name": "stdlib/crypto-internal-hpke"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-rsa.md",
+      "name": "stdlib/crypto-rsa"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-rand.md",
+      "name": "stdlib/crypto-rand"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-filepathlite.md",
+      "name": "stdlib/internal-filepathlite"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/vendor-golang.org-x-crypto-cryptobyte-asn1.md",
+      "name": "stdlib/vendor-golang.org-x-crypto-cryptobyte-asn1"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/crypto-internal-fips140-sha3.md",
+      "name": "stdlib/crypto-internal-fips140-sha3"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-coverage-test.md",
+      "name": "stdlib/internal-coverage-test"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-unsafeheader.md",
+      "name": "stdlib/internal-unsafeheader"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/internal-diff.md",
+      "name": "stdlib/internal-diff"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/staticcheck.md",
+      "name": "linters/golangci-lint/staticcheck"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/interfacebloat.md",
+      "name": "linters/golangci-lint/interfacebloat"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/nonamedreturns.md",
+      "name": "linters/golangci-lint/nonamedreturns"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/goheader.md",
+      "name": "linters/golangci-lint/goheader"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/godoclint.md",
+      "name": "linters/golangci-lint/godoclint"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/exhaustive.md",
+      "name": "linters/golangci-lint/exhaustive"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/recvcheck.md",
+      "name": "linters/golangci-lint/recvcheck"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/grouper.md",
+      "name": "linters/golangci-lint/grouper"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/unqueryvet.md",
+      "name": "linters/golangci-lint/unqueryvet"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/sqlclosecheck.md",
+      "name": "linters/golangci-lint/sqlclosecheck"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/perfsprint.md",
+      "name": "linters/golangci-lint/perfsprint"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/fatcontext.md",
+      "name": "linters/golangci-lint/fatcontext"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/cyclop.md",
+      "name": "linters/golangci-lint/cyclop"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/nolintlint.md",
+      "name": "linters/golangci-lint/nolintlint"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/ginkgolinter.md",
+      "name": "linters/golangci-lint/ginkgolinter"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/gosmopolitan.md",
+      "name": "linters/golangci-lint/gosmopolitan"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/govet.md",
+      "name": "linters/golangci-lint/govet"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/overview.md",
+      "name": "linters/golangci-lint/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/nilnesserr.md",
+      "name": "linters/golangci-lint/nilnesserr"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/testableexamples.md",
+      "name": "linters/golangci-lint/testableexamples"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/godox.md",
+      "name": "linters/golangci-lint/godox"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/dogsled.md",
+      "name": "linters/golangci-lint/dogsled"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/decorder.md",
+      "name": "linters/golangci-lint/decorder"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/predeclared.md",
+      "name": "linters/golangci-lint/predeclared"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/iotamixing.md",
+      "name": "linters/golangci-lint/iotamixing"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/goprintffuncname.md",
+      "name": "linters/golangci-lint/goprintffuncname"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/paralleltest.md",
+      "name": "linters/golangci-lint/paralleltest"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/inamedparam.md",
+      "name": "linters/golangci-lint/inamedparam"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/rowserrcheck.md",
+      "name": "linters/golangci-lint/rowserrcheck"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/unparam.md",
+      "name": "linters/golangci-lint/unparam"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/mnd.md",
+      "name": "linters/golangci-lint/mnd"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/bodyclose.md",
+      "name": "linters/golangci-lint/bodyclose"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/misspell.md",
+      "name": "linters/golangci-lint/misspell"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/noctx.md",
+      "name": "linters/golangci-lint/noctx"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/copyloopvar.md",
+      "name": "linters/golangci-lint/copyloopvar"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/gochecknoinits.md",
+      "name": "linters/golangci-lint/gochecknoinits"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/promlinter.md",
+      "name": "linters/golangci-lint/promlinter"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/errcheck.md",
+      "name": "linters/golangci-lint/errcheck"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/funlen.md",
+      "name": "linters/golangci-lint/funlen"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/unused.md",
+      "name": "linters/golangci-lint/unused"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/whitespace.md",
+      "name": "linters/golangci-lint/whitespace"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/varnamelen.md",
+      "name": "linters/golangci-lint/varnamelen"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/gocheckcompilerdirectives.md",
+      "name": "linters/golangci-lint/gocheckcompilerdirectives"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/intrange.md",
+      "name": "linters/golangci-lint/intrange"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/durationcheck.md",
+      "name": "linters/golangci-lint/durationcheck"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/forbidigo.md",
+      "name": "linters/golangci-lint/forbidigo"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/canonicalheader.md",
+      "name": "linters/golangci-lint/canonicalheader"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/bidichk.md",
+      "name": "linters/golangci-lint/bidichk"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/usetesting.md",
+      "name": "linters/golangci-lint/usetesting"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/ireturn.md",
+      "name": "linters/golangci-lint/ireturn"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/arangolint.md",
+      "name": "linters/golangci-lint/arangolint"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/errname.md",
+      "name": "linters/golangci-lint/errname"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/exptostd.md",
+      "name": "linters/golangci-lint/exptostd"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/gochecknoglobals.md",
+      "name": "linters/golangci-lint/gochecknoglobals"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/gomodguard.md",
+      "name": "linters/golangci-lint/gomodguard"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/errchkjson.md",
+      "name": "linters/golangci-lint/errchkjson"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/nestif.md",
+      "name": "linters/golangci-lint/nestif"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/forcetypeassert.md",
+      "name": "linters/golangci-lint/forcetypeassert"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/nakedret.md",
+      "name": "linters/golangci-lint/nakedret"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/protogetter.md",
+      "name": "linters/golangci-lint/protogetter"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/gomoddirectives.md",
+      "name": "linters/golangci-lint/gomoddirectives"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/noinlineerr.md",
+      "name": "linters/golangci-lint/noinlineerr"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/usestdlibvars.md",
+      "name": "linters/golangci-lint/usestdlibvars"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/modernize.md",
+      "name": "linters/golangci-lint/modernize"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/depguard.md",
+      "name": "linters/golangci-lint/depguard"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/gocognit.md",
+      "name": "linters/golangci-lint/gocognit"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/gocyclo.md",
+      "name": "linters/golangci-lint/gocyclo"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/gochecksumtype.md",
+      "name": "linters/golangci-lint/gochecksumtype"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/config.md",
+      "name": "linters/golangci-lint/config"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/importas.md",
+      "name": "linters/golangci-lint/importas"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/asciicheck.md",
+      "name": "linters/golangci-lint/asciicheck"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/reassign.md",
+      "name": "linters/golangci-lint/reassign"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/mirror.md",
+      "name": "linters/golangci-lint/mirror"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/unconvert.md",
+      "name": "linters/golangci-lint/unconvert"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/asasalint.md",
+      "name": "linters/golangci-lint/asasalint"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/funcorder.md",
+      "name": "linters/golangci-lint/funcorder"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/revive.md",
+      "name": "linters/golangci-lint/revive"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/thelper.md",
+      "name": "linters/golangci-lint/thelper"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/nilerr.md",
+      "name": "linters/golangci-lint/nilerr"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/godot.md",
+      "name": "linters/golangci-lint/godot"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/contextcheck.md",
+      "name": "linters/golangci-lint/contextcheck"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/tagalign.md",
+      "name": "linters/golangci-lint/tagalign"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/musttag.md",
+      "name": "linters/golangci-lint/musttag"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/err113.md",
+      "name": "linters/golangci-lint/err113"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/wrapcheck.md",
+      "name": "linters/golangci-lint/wrapcheck"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/testifylint.md",
+      "name": "linters/golangci-lint/testifylint"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/containedctx.md",
+      "name": "linters/golangci-lint/containedctx"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/wastedassign.md",
+      "name": "linters/golangci-lint/wastedassign"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/sloglint.md",
+      "name": "linters/golangci-lint/sloglint"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/tagliatelle.md",
+      "name": "linters/golangci-lint/tagliatelle"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/maintidx.md",
+      "name": "linters/golangci-lint/maintidx"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/testpackage.md",
+      "name": "linters/golangci-lint/testpackage"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/nlreturn.md",
+      "name": "linters/golangci-lint/nlreturn"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/gosec.md",
+      "name": "linters/golangci-lint/gosec"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/loggercheck.md",
+      "name": "linters/golangci-lint/loggercheck"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/spancheck.md",
+      "name": "linters/golangci-lint/spancheck"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/tparallel.md",
+      "name": "linters/golangci-lint/tparallel"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/exhaustruct.md",
+      "name": "linters/golangci-lint/exhaustruct"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/errorlint.md",
+      "name": "linters/golangci-lint/errorlint"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/goconst.md",
+      "name": "linters/golangci-lint/goconst"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/wsl_v5.md",
+      "name": "linters/golangci-lint/wsl_v5"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/prealloc.md",
+      "name": "linters/golangci-lint/prealloc"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/gocritic.md",
+      "name": "linters/golangci-lint/gocritic"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/nilnil.md",
+      "name": "linters/golangci-lint/nilnil"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/dupl.md",
+      "name": "linters/golangci-lint/dupl"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/wsl.md",
+      "name": "linters/golangci-lint/wsl"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/zerologlint.md",
+      "name": "linters/golangci-lint/zerologlint"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/embeddedstructfieldcheck.md",
+      "name": "linters/golangci-lint/embeddedstructfieldcheck"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/nosprintfhostport.md",
+      "name": "linters/golangci-lint/nosprintfhostport"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/ineffassign.md",
+      "name": "linters/golangci-lint/ineffassign"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/iface.md",
+      "name": "linters/golangci-lint/iface"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/lll.md",
+      "name": "linters/golangci-lint/lll"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/makezero.md",
+      "name": "linters/golangci-lint/makezero"
+    },
+    {
+      "category": "linters",
+      "path": "linters/golangci-lint/dupword.md",
+      "name": "linters/golangci-lint/dupword"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/goimports.md",
+      "name": "formatters/goimports"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/gofmt.md",
+      "name": "formatters/gofmt"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/gofumpt.md",
+      "name": "formatters/gofumpt"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/golines.md",
+      "name": "formatters/golines"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/proverbs.md",
+      "name": "patterns/proverbs"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/error-handling.md",
+      "name": "patterns/error-handling"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "language": "powershell",
+  "generatedAt": "2026-01-05T15:15:50.020922+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "1743413f19af29e568238771d633c590f9aa6dad23dda6d898315070db5c1574",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "1b302738acbb4b84c9b1a7ed91b2be5dca17dc7d2c805b4ad28240c496b46111",
+      "urls": []
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "81c1c6d805c9d102e6a7d679a091356643993b63ac632e5c5a06d5759c9e7939",
+      "urls": [
+        "https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.4"
+      ]
+    },
+    {
+      "path": "stdlib/cmdlets/microsoft.powershell.core.md",
+      "sha256": "846ecaf71623a1691c384a4ff6416976aa5732839aa5ce598c04ddc8bb881231",
+      "urls": [
+        "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core?view=powershell-7.4"
+      ]
+    },
+    {
+      "path": "stdlib/cmdlets/psreadline.md",
+      "sha256": "9da6508a5ee47b8b25bd68bd7f44cd9cd996ee37fa14543c70d354c539a1a361",
+      "urls": [
+        "https://learn.microsoft.com/en-us/powershell/module/psreadline?view=powershell-7.4"
+      ]
+    },
+    {
+      "path": "stdlib/cmdlets/microsoft.powershell.utility.md",
+      "sha256": "f358e942cb51ef8eaa9e48a638edbcf32f9e13bfa674e822b3ac3f3d966a3375",
+      "urls": [
+        "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility?view=powershell-7.4"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "a90cd2c576044ad901754fb4ca65fb3addead7ceb5fa59a12f556c90ae3a41f3",
+      "urls": [
+        "https://learn.microsoft.com/en-us/powershell/scripting/lang-spec/chapter-01"
+      ]
+    },
+    {
+      "path": "linters/psscriptanalyzer/overview.md",
+      "sha256": "3907e8ad6d6c691781b6abe8b8c8fceeb86ac8d3f3942baad8c1f7438798a594",
+      "urls": [
+        "https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview?view=ps-modules"
+      ]
+    },
+    {
+      "path": "linters/psscriptanalyzer/rules.md",
+      "sha256": "eaf48c27f3a7fe931074c8a0c74621f289303b5d56d6fbcda400d391508e2c12",
+      "urls": [
+        "https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/rules?view=ps-modules"
+      ]
+    }
+  ]
+}

@@ -7,6 +7,29 @@ Requirements:
 - Python 3.14.2
 - pandoc (optional, improves markdown conversion)
 
+## LLM Value
+
+The repo packages authoritative documentation so LLMs can:
+
+- cite canonical language specs and standard library behavior before answering syntax or API questions,
+- dig into linter rules to explain why something is flagged and what the safest fix looks like,
+- reference formatter guidance and patterns to keep generated code consistent and performant,
+- lean on health metadata, tooling-version records, and search indexes to understand what’s covered and how fresh it is.
+
+## Quick Start
+
+After cloning, refresh the repo and run the checks so you can start serving the MCP endpoints:
+
+```bash
+git clone https://github.com/openai/specforge-mcp.git
+cd specforge-mcp
+npm install
+npm run refresh
+npm test
+```
+
+`npm run refresh` executes `fetch:delta`, `generate:all`, and `generate:health` so the dashboard, indexes, and manifests stay in sync.
+
 ## Prompt Patterns
 
 Use a short instruction to force tool usage.
@@ -14,19 +37,19 @@ Use a short instruction to force tool usage.
 Claude Code:
 
 ```text
-Always consult the language-specs MCP server for spec, stdlib, linter, formatter, and patterns questions before answering.
+Always consult the SpecForge MCP server for spec, stdlib, linter, formatter, and patterns questions before answering.
 ```
 
 Codex CLI:
 
 ```text
-Use the language-specs MCP server first for any language or tooling questions; cite results in the answer.
+Use the SpecForge MCP server first for any language or tooling questions; cite results in the answer.
 ```
 
 VS Code extensions:
 
 ```text
-Use the language-specs MCP server for authoritative references. Prefer MCP results over general knowledge.
+Use the SpecForge MCP server for authoritative references. Prefer MCP results over general knowledge.
 ```
 
 ## When To Use The Server
@@ -38,9 +61,24 @@ Use the language-specs MCP server for authoritative references. Prefer MCP resul
 
 ## Tool Behavior Notes
 
-- `search_specs` supports `allow_fallback` (boolean). Set to `false` to skip full-file scanning when indexes are missing.
+- `search_specs` supports `allow_fallback` (boolean). Set to `false` or configure `SEARCH_FALLBACK_STRATEGY=warn` when indexes are missing to skip the markdown fallback; the server will report which languages lack search data.
 - `list_resources` is paginated. Use the `cursor` field from the response to request the next page.
+- `RESOURCE_PAGE_SIZE` (default 250, min 25, max 1000) keeps each `resources/list` response bounded when you walk very large catalogs.
 - `health.json` summarizes every language's freshness, spec coverage, and default linter/formatter counts. Use it or the `health.html` dashboard (via `npm run dashboard`) when you want a bird's-eye view.
+
+## Automation & Scheduling
+
+Run `npm run refresh` to execute `fetch:delta`, `generate:all`, and `generate:health` in order; this keeps indexes, manifests, and the dashboard data aligned with upstream sources.
+
+Schedule that command via cron, launchd, GitHub Actions, etc. Here's an example that runs every four hours:
+
+```bash
+0 */4 * * * cd /Users/krisarmstrong/Developer/_tools/specforge-mcp && npm run refresh >> refresh.log 2>&1
+```
+
+The script prints each command before running it and exits with the first failing status so you can hook alerts into your job runner.
+
+GitHub Actions already refresh the repo for you via `.github/workflows/refresh.yml`, which mirrors this command on a four-hour schedule and can be triggered manually.
 
 ## Provenance
 

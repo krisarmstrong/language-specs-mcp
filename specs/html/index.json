@@ -1,0 +1,945 @@
+{
+  "language": "html",
+  "fetchedAt": "2026-01-04T18:30:48Z",
+  "counts": {
+    "spec": 1,
+    "stdlib": 1,
+    "linters": 87,
+    "formatters": 2,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/html-validate/input-attributes.md",
+        "name": "linters/html-validate/input-attributes"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/map-id-name.md",
+        "name": "linters/html-validate/map-id-name"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/attr-spacing.md",
+        "name": "linters/html-validate/attr-spacing"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/valid-id.md",
+        "name": "linters/html-validate/valid-id"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/form-dup-name.md",
+        "name": "linters/html-validate/form-dup-name"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-deprecated-attr.md",
+        "name": "linters/html-validate/no-deprecated-attr"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/empty-heading.md",
+        "name": "linters/html-validate/empty-heading"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/tel-non-breaking.md",
+        "name": "linters/html-validate/tel-non-breaking"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/class-pattern.md",
+        "name": "linters/html-validate/class-pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-implicit-input-type.md",
+        "name": "linters/html-validate/no-implicit-input-type"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-redundant-aria-label.md",
+        "name": "linters/html-validate/no-redundant-aria-label"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/allowed-links.md",
+        "name": "linters/html-validate/allowed-links"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-multiple-main.md",
+        "name": "linters/html-validate/no-multiple-main"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-utf8-bom.md",
+        "name": "linters/html-validate/no-utf8-bom"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/attr-quotes.md",
+        "name": "linters/html-validate/attr-quotes"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/attribute-allowed-values.md",
+        "name": "linters/html-validate/attribute-allowed-values"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/prefer-button.md",
+        "name": "linters/html-validate/prefer-button"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/overview.md",
+        "name": "linters/html-validate/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/map-dup-name.md",
+        "name": "linters/html-validate/map-dup-name"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/script-element.md",
+        "name": "linters/html-validate/script-element"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/svg-focusable.md",
+        "name": "linters/html-validate/svg-focusable"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-redundant-role.md",
+        "name": "linters/html-validate/no-redundant-role"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/doctype-html.md",
+        "name": "linters/html-validate/doctype-html"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-missing-references.md",
+        "name": "linters/html-validate/no-missing-references"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/element-permitted-content.md",
+        "name": "linters/html-validate/element-permitted-content"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/element-required-ancestor.md",
+        "name": "linters/html-validate/element-required-ancestor"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/aria-label-misuse.md",
+        "name": "linters/html-validate/aria-label-misuse"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-unknown-elements.md",
+        "name": "linters/html-validate/no-unknown-elements"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-dup-class.md",
+        "name": "linters/html-validate/no-dup-class"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-dup-attr.md",
+        "name": "linters/html-validate/no-dup-attr"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/name-pattern.md",
+        "name": "linters/html-validate/name-pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/unique-landmark.md",
+        "name": "linters/html-validate/unique-landmark"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/missing-doctype.md",
+        "name": "linters/html-validate/missing-doctype"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/void-style.md",
+        "name": "linters/html-validate/void-style"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/attribute-empty-style.md",
+        "name": "linters/html-validate/attribute-empty-style"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-trailing-whitespace.md",
+        "name": "linters/html-validate/no-trailing-whitespace"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/valid-autocomplete.md",
+        "name": "linters/html-validate/valid-autocomplete"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/hidden-focusable.md",
+        "name": "linters/html-validate/hidden-focusable"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/element-permitted-parent.md",
+        "name": "linters/html-validate/element-permitted-parent"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/id-pattern.md",
+        "name": "linters/html-validate/id-pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-style-tag.md",
+        "name": "linters/html-validate/no-style-tag"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/element-required-content.md",
+        "name": "linters/html-validate/element-required-content"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/long-title.md",
+        "name": "linters/html-validate/long-title"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/area-alt.md",
+        "name": "linters/html-validate/area-alt"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/void-content.md",
+        "name": "linters/html-validate/void-content"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/attr-pattern.md",
+        "name": "linters/html-validate/attr-pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-raw-characters.md",
+        "name": "linters/html-validate/no-raw-characters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-autoplay.md",
+        "name": "linters/html-validate/no-autoplay"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-self-closing.md",
+        "name": "linters/html-validate/no-self-closing"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/heading-level.md",
+        "name": "linters/html-validate/heading-level"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/wcag.md",
+        "name": "linters/html-validate/wcag"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/aria-hidden-body.md",
+        "name": "linters/html-validate/aria-hidden-body"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-implicit-button-type.md",
+        "name": "linters/html-validate/no-implicit-button-type"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/multiple-labeled-controls.md",
+        "name": "linters/html-validate/multiple-labeled-controls"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/index.md",
+        "name": "linters/html-validate/index"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/input-missing-label.md",
+        "name": "linters/html-validate/input-missing-label"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-unused-disable.md",
+        "name": "linters/html-validate/no-unused-disable"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/element-case.md",
+        "name": "linters/html-validate/element-case"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/close-order.md",
+        "name": "linters/html-validate/close-order"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-abstract-role.md",
+        "name": "linters/html-validate/no-abstract-role"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-inline-style.md",
+        "name": "linters/html-validate/no-inline-style"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/script-type.md",
+        "name": "linters/html-validate/script-type"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/element-permitted-order.md",
+        "name": "linters/html-validate/element-permitted-order"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/meta-refresh.md",
+        "name": "linters/html-validate/meta-refresh"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/prefer-tbody.md",
+        "name": "linters/html-validate/prefer-tbody"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/attr-delimiter.md",
+        "name": "linters/html-validate/attr-delimiter"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/require-sri.md",
+        "name": "linters/html-validate/require-sri"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/text-content.md",
+        "name": "linters/html-validate/text-content"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/deprecated-rule.md",
+        "name": "linters/html-validate/deprecated-rule"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-conditional-comment.md",
+        "name": "linters/html-validate/no-conditional-comment"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/attribute-misuse.md",
+        "name": "linters/html-validate/attribute-misuse"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/element-required-attributes.md",
+        "name": "linters/html-validate/element-required-attributes"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-implicit-close.md",
+        "name": "linters/html-validate/no-implicit-close"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-dup-id.md",
+        "name": "linters/html-validate/no-dup-id"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/unrecognized-char-ref.md",
+        "name": "linters/html-validate/unrecognized-char-ref"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/prefer-native-element.md",
+        "name": "linters/html-validate/prefer-native-element"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/attr-case.md",
+        "name": "linters/html-validate/attr-case"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/empty-title.md",
+        "name": "linters/html-validate/empty-title"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/element-permitted-occurrences.md",
+        "name": "linters/html-validate/element-permitted-occurrences"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/attribute-boolean-style.md",
+        "name": "linters/html-validate/attribute-boolean-style"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/deprecated.md",
+        "name": "linters/html-validate/deprecated"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/require-csp-nonce.md",
+        "name": "linters/html-validate/require-csp-nonce"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/element-name.md",
+        "name": "linters/html-validate/element-name"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/no-redundant-for.md",
+        "name": "linters/html-validate/no-redundant-for"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/close-attr.md",
+        "name": "linters/html-validate/close-attr"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/doctype-style.md",
+        "name": "linters/html-validate/doctype-style"
+      },
+      {
+        "category": "linters",
+        "path": "linters/htmlhint/overview.md",
+        "name": "linters/htmlhint/overview"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/prettier.md",
+        "name": "formatters/prettier"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/input-attributes.md",
+      "name": "linters/html-validate/input-attributes"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/map-id-name.md",
+      "name": "linters/html-validate/map-id-name"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/attr-spacing.md",
+      "name": "linters/html-validate/attr-spacing"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/valid-id.md",
+      "name": "linters/html-validate/valid-id"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/form-dup-name.md",
+      "name": "linters/html-validate/form-dup-name"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-deprecated-attr.md",
+      "name": "linters/html-validate/no-deprecated-attr"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/empty-heading.md",
+      "name": "linters/html-validate/empty-heading"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/tel-non-breaking.md",
+      "name": "linters/html-validate/tel-non-breaking"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/class-pattern.md",
+      "name": "linters/html-validate/class-pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-implicit-input-type.md",
+      "name": "linters/html-validate/no-implicit-input-type"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-redundant-aria-label.md",
+      "name": "linters/html-validate/no-redundant-aria-label"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/allowed-links.md",
+      "name": "linters/html-validate/allowed-links"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-multiple-main.md",
+      "name": "linters/html-validate/no-multiple-main"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-utf8-bom.md",
+      "name": "linters/html-validate/no-utf8-bom"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/attr-quotes.md",
+      "name": "linters/html-validate/attr-quotes"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/attribute-allowed-values.md",
+      "name": "linters/html-validate/attribute-allowed-values"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/prefer-button.md",
+      "name": "linters/html-validate/prefer-button"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/overview.md",
+      "name": "linters/html-validate/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/map-dup-name.md",
+      "name": "linters/html-validate/map-dup-name"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/script-element.md",
+      "name": "linters/html-validate/script-element"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/svg-focusable.md",
+      "name": "linters/html-validate/svg-focusable"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-redundant-role.md",
+      "name": "linters/html-validate/no-redundant-role"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/doctype-html.md",
+      "name": "linters/html-validate/doctype-html"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-missing-references.md",
+      "name": "linters/html-validate/no-missing-references"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/element-permitted-content.md",
+      "name": "linters/html-validate/element-permitted-content"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/element-required-ancestor.md",
+      "name": "linters/html-validate/element-required-ancestor"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/aria-label-misuse.md",
+      "name": "linters/html-validate/aria-label-misuse"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-unknown-elements.md",
+      "name": "linters/html-validate/no-unknown-elements"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-dup-class.md",
+      "name": "linters/html-validate/no-dup-class"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-dup-attr.md",
+      "name": "linters/html-validate/no-dup-attr"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/name-pattern.md",
+      "name": "linters/html-validate/name-pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/unique-landmark.md",
+      "name": "linters/html-validate/unique-landmark"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/missing-doctype.md",
+      "name": "linters/html-validate/missing-doctype"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/void-style.md",
+      "name": "linters/html-validate/void-style"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/attribute-empty-style.md",
+      "name": "linters/html-validate/attribute-empty-style"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-trailing-whitespace.md",
+      "name": "linters/html-validate/no-trailing-whitespace"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/valid-autocomplete.md",
+      "name": "linters/html-validate/valid-autocomplete"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/hidden-focusable.md",
+      "name": "linters/html-validate/hidden-focusable"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/element-permitted-parent.md",
+      "name": "linters/html-validate/element-permitted-parent"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/id-pattern.md",
+      "name": "linters/html-validate/id-pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-style-tag.md",
+      "name": "linters/html-validate/no-style-tag"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/element-required-content.md",
+      "name": "linters/html-validate/element-required-content"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/long-title.md",
+      "name": "linters/html-validate/long-title"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/area-alt.md",
+      "name": "linters/html-validate/area-alt"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/void-content.md",
+      "name": "linters/html-validate/void-content"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/attr-pattern.md",
+      "name": "linters/html-validate/attr-pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-raw-characters.md",
+      "name": "linters/html-validate/no-raw-characters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-autoplay.md",
+      "name": "linters/html-validate/no-autoplay"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-self-closing.md",
+      "name": "linters/html-validate/no-self-closing"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/heading-level.md",
+      "name": "linters/html-validate/heading-level"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/wcag.md",
+      "name": "linters/html-validate/wcag"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/aria-hidden-body.md",
+      "name": "linters/html-validate/aria-hidden-body"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-implicit-button-type.md",
+      "name": "linters/html-validate/no-implicit-button-type"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/multiple-labeled-controls.md",
+      "name": "linters/html-validate/multiple-labeled-controls"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/index.md",
+      "name": "linters/html-validate/index"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/input-missing-label.md",
+      "name": "linters/html-validate/input-missing-label"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-unused-disable.md",
+      "name": "linters/html-validate/no-unused-disable"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/element-case.md",
+      "name": "linters/html-validate/element-case"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/close-order.md",
+      "name": "linters/html-validate/close-order"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-abstract-role.md",
+      "name": "linters/html-validate/no-abstract-role"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-inline-style.md",
+      "name": "linters/html-validate/no-inline-style"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/script-type.md",
+      "name": "linters/html-validate/script-type"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/element-permitted-order.md",
+      "name": "linters/html-validate/element-permitted-order"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/meta-refresh.md",
+      "name": "linters/html-validate/meta-refresh"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/prefer-tbody.md",
+      "name": "linters/html-validate/prefer-tbody"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/attr-delimiter.md",
+      "name": "linters/html-validate/attr-delimiter"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/require-sri.md",
+      "name": "linters/html-validate/require-sri"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/text-content.md",
+      "name": "linters/html-validate/text-content"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/deprecated-rule.md",
+      "name": "linters/html-validate/deprecated-rule"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-conditional-comment.md",
+      "name": "linters/html-validate/no-conditional-comment"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/attribute-misuse.md",
+      "name": "linters/html-validate/attribute-misuse"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/element-required-attributes.md",
+      "name": "linters/html-validate/element-required-attributes"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-implicit-close.md",
+      "name": "linters/html-validate/no-implicit-close"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-dup-id.md",
+      "name": "linters/html-validate/no-dup-id"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/unrecognized-char-ref.md",
+      "name": "linters/html-validate/unrecognized-char-ref"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/prefer-native-element.md",
+      "name": "linters/html-validate/prefer-native-element"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/attr-case.md",
+      "name": "linters/html-validate/attr-case"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/empty-title.md",
+      "name": "linters/html-validate/empty-title"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/element-permitted-occurrences.md",
+      "name": "linters/html-validate/element-permitted-occurrences"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/attribute-boolean-style.md",
+      "name": "linters/html-validate/attribute-boolean-style"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/deprecated.md",
+      "name": "linters/html-validate/deprecated"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/require-csp-nonce.md",
+      "name": "linters/html-validate/require-csp-nonce"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/element-name.md",
+      "name": "linters/html-validate/element-name"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/no-redundant-for.md",
+      "name": "linters/html-validate/no-redundant-for"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/close-attr.md",
+      "name": "linters/html-validate/close-attr"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/doctype-style.md",
+      "name": "linters/html-validate/doctype-style"
+    },
+    {
+      "category": "linters",
+      "path": "linters/htmlhint/overview.md",
+      "name": "linters/htmlhint/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/prettier.md",
+      "name": "formatters/prettier"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

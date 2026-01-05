@@ -21,7 +21,7 @@ ROOT_DIR = SCRIPT_DIR.parent
 SPECS_DIR = ROOT_DIR / "specs"
 
 FETCH_SCOPE = os.getenv("FETCH_SCOPE", "all")
-USER_AGENT = os.getenv("FETCH_USER_AGENT", "language-specs-mcp/1.0")
+USER_AGENT = os.getenv("FETCH_USER_AGENT", "specforge-mcp/1.0")
 
 CURL_RETRY = int(os.getenv("CURL_RETRY", "3"))
 CURL_RETRY_DELAY = float(os.getenv("CURL_RETRY_DELAY", "2"))

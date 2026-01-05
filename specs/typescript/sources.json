@@ -1,0 +1,182 @@
+{
+  "language": "typescript",
+  "generatedAt": "2026-01-05T15:15:50.768310+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "cfc11bc0bd4e361284ebace0074147ec77e75bb4195f77bbb9ce3f50b0e84230",
+      "urls": [
+        "https://api.example.com"
+      ]
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "b93a96da9d0f6c033433a516b38b185225be11b9aa18e5fc97227d78e74eafa7",
+      "urls": [
+        "https://biomejs.dev/formatter/",
+        "https://prettier.io/docs/en/"
+      ]
+    },
+    {
+      "path": "formatters/biome.md",
+      "sha256": "2258af8887454f178516c2ecf465216702354f3dbfb15b10b975b963b8228f31",
+      "urls": [
+        "https://biomejs.dev/formatter/"
+      ]
+    },
+    {
+      "path": "formatters/prettier.md",
+      "sha256": "a30f7499d08b0da33c994484388d1a70e4693e0a872d62a30b443a5c1fc4a996",
+      "urls": [
+        "https://prettier.io/docs/en/options.html"
+      ]
+    },
+    {
+      "path": "lib/type-inference.md",
+      "sha256": "6a7e1c9ce29e2769466f5bec17f458203c175d7fe8077db77ce5daaaf1bad0c2",
+      "urls": [
+        "https://www.typescriptlang.org/docs/handbook/type-inference.html"
+      ]
+    },
+    {
+      "path": "lib/generics.md",
+      "sha256": "ca2e8f7def7c4cc536f3d23e217601ef5826e6f7e922e8cc129883994dc4aee8",
+      "urls": [
+        "https://www.typescriptlang.org/docs/handbook/generics.html"
+      ]
+    },
+    {
+      "path": "lib/classes.md",
+      "sha256": "ecfebaa1a0b86138b71787aeabcc3e3884bba526306566175a46060831f4b7a5",
+      "urls": [
+        "https://www.typescriptlang.org/docs/handbook/classes.html"
+      ]
+    },
+    {
+      "path": "lib/interfaces.md",
+      "sha256": "6b7e5878496ccc09e9c6a6cd326feb2b4159f568ad1f6e81a5e99e23e5f72fd4",
+      "urls": [
+        "https://www.typescriptlang.org/docs/handbook/interfaces.html"
+      ]
+    },
+    {
+      "path": "lib/functions.md",
+      "sha256": "8e99683a4b7a5ea09e9b22630ffddf192de8c1788926243de47d508fadb0f237",
+      "urls": [
+        "https://www.typescriptlang.org/docs/handbook/functions.html"
+      ]
+    },
+    {
+      "path": "lib/type-compatibility.md",
+      "sha256": "0a2a0b639118f7b9c05a53f70e047621e5e9b2ee0f640efe26580300a8a7a126",
+      "urls": [
+        "https://www.typescriptlang.org/docs/handbook/type-compatibility.html"
+      ]
+    },
+    {
+      "path": "lib/basic-types.md",
+      "sha256": "353a29777e63dd327f9432595d8901abf8be0ed3b9ffeb37d915358078330aae",
+      "urls": [
+        "https://www.typescriptlang.org/docs/handbook/basic-types.html"
+      ]
+    },
+    {
+      "path": "lib/enums.md",
+      "sha256": "472fb12736689c432361f35ff7fa88a1764fe5d4933856b626690befbbe7075b",
+      "urls": [
+        "https://www.typescriptlang.org/docs/handbook/enums.html"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "abdd03cc11acba074d92640c56acc8bb76b71ba04adb520e28583c13233075f2",
+      "urls": [
+        "https://api.example.com",
+        "https://www.typescriptlang.org/docs/handbook/"
+      ]
+    },
+    {
+      "path": "linters/biome/noNonNullAssertion.md",
+      "sha256": "74fbfab0991d84ed0a6a7ae05d34765b3122fbe6b12dcfa53d2a298ca05105a1",
+      "urls": []
+    },
+    {
+      "path": "linters/biome/overview.md",
+      "sha256": "8d2a84d26a21a92f5da12d37f8eab60227e72223ab69913f9fac5c52f3b78739",
+      "urls": [
+        "https://biomejs.dev/linter/",
+        "https://biomejs.dev/linter/rules/",
+        "https://biomejs.dev/schemas/2.3.10/schema.json"
+      ]
+    },
+    {
+      "path": "linters/biome/noUnusedVariables.md",
+      "sha256": "8a9e01339b3414314f5cea6153c80efeffbd3a21c8dd582a233ada4fc89ccede",
+      "urls": []
+    },
+    {
+      "path": "linters/biome/no-debugger.md",
+      "sha256": "7885055c598e41f649f16ff74a8808f21c430a65f354763e2dab3bcc55a28b80",
+      "urls": [
+        "https://biomejs.dev/linter/rules/no-debugger"
+      ]
+    },
+    {
+      "path": "linters/biome/schema.md",
+      "sha256": "e3542a5ea782aaa53b887b724ad6ba3abfcb0a55b0db003dfbd01bffe124f1ff",
+      "urls": [
+        "https://biomejs.dev/schemas/2.3.10/schema.json"
+      ]
+    },
+    {
+      "path": "linters/biome/suspicious.md",
+      "sha256": "452c11c4ea9d223273fa009ce9a0671f7904297c8457b9f47c7feb51131310cb",
+      "urls": []
+    },
+    {
+      "path": "linters/biome/performance.md",
+      "sha256": "cdf4e6ab67812e8ad0c0e6b7f70fc2196feb019ce1a59d257b772fd332eca597",
+      "urls": []
+    },
+    {
+      "path": "linters/biome/a11y.md",
+      "sha256": "724e7440f3fdfd7a8746abdb6e5dfad2f0a2d554169f462476c0d3e30023f8f0",
+      "urls": []
+    },
+    {
+      "path": "linters/biome/nursery.md",
+      "sha256": "c764fe3b49f8d5d3265d85ccb75484c2014944e8f265adb898b9be91d25ab118",
+      "urls": []
+    },
+    {
+      "path": "linters/biome/style.md",
+      "sha256": "974a05a176ab78fe89940b931febc285619b9cb0d1555db2092a0f7f039f9709",
+      "urls": []
+    },
+    {
+      "path": "linters/biome/noExplicitAny.md",
+      "sha256": "82bc85fbf6d98082efbaa25b8bcfb2114e306503e95ef724f740b0d8ff56dc43",
+      "urls": []
+    },
+    {
+      "path": "linters/biome/noConsole.md",
+      "sha256": "e05bee5933f8a320f0022274cc805da7804340165649abd13920a8f6fd0ce21d",
+      "urls": []
+    },
+    {
+      "path": "linters/biome/correctness.md",
+      "sha256": "c598ef035a81391c7c31944d1bacf51ef30a93346c98232fa3d7ad85200c1ab1",
+      "urls": []
+    },
+    {
+      "path": "linters/biome/security.md",
+      "sha256": "f4a091c6a8e8920f8779e7c06242f8564a57f75b588c0d82537aed85f1a89e4d",
+      "urls": []
+    },
+    {
+      "path": "linters/biome/complexity.md",
+      "sha256": "5b104f12fd6030c6f3bdd421d30290ea3028e8cd52df017dbd96b52e97b58f87",
+      "urls": []
+    }
+  ]
+}

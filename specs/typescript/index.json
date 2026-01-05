@@ -1,0 +1,305 @@
+{
+  "language": "typescript",
+  "fetchedAt": "2026-01-04T19:32:36Z",
+  "counts": {
+    "spec": 1,
+    "stdlib": 8,
+    "linters": 15,
+    "formatters": 3,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "lib/type-inference.md",
+        "name": "lib/type-inference"
+      },
+      {
+        "category": "stdlib",
+        "path": "lib/generics.md",
+        "name": "lib/generics"
+      },
+      {
+        "category": "stdlib",
+        "path": "lib/classes.md",
+        "name": "lib/classes"
+      },
+      {
+        "category": "stdlib",
+        "path": "lib/interfaces.md",
+        "name": "lib/interfaces"
+      },
+      {
+        "category": "stdlib",
+        "path": "lib/functions.md",
+        "name": "lib/functions"
+      },
+      {
+        "category": "stdlib",
+        "path": "lib/type-compatibility.md",
+        "name": "lib/type-compatibility"
+      },
+      {
+        "category": "stdlib",
+        "path": "lib/basic-types.md",
+        "name": "lib/basic-types"
+      },
+      {
+        "category": "stdlib",
+        "path": "lib/enums.md",
+        "name": "lib/enums"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/biome/noNonNullAssertion.md",
+        "name": "linters/biome/noNonNullAssertion"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/overview.md",
+        "name": "linters/biome/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/noUnusedVariables.md",
+        "name": "linters/biome/noUnusedVariables"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/no-debugger.md",
+        "name": "linters/biome/no-debugger"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/schema.md",
+        "name": "linters/biome/schema"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/suspicious.md",
+        "name": "linters/biome/suspicious"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/performance.md",
+        "name": "linters/biome/performance"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/a11y.md",
+        "name": "linters/biome/a11y"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/nursery.md",
+        "name": "linters/biome/nursery"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/style.md",
+        "name": "linters/biome/style"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/noExplicitAny.md",
+        "name": "linters/biome/noExplicitAny"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/noConsole.md",
+        "name": "linters/biome/noConsole"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/correctness.md",
+        "name": "linters/biome/correctness"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/security.md",
+        "name": "linters/biome/security"
+      },
+      {
+        "category": "linters",
+        "path": "linters/biome/complexity.md",
+        "name": "linters/biome/complexity"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/biome.md",
+        "name": "formatters/biome"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/prettier.md",
+        "name": "formatters/prettier"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "lib/type-inference.md",
+      "name": "lib/type-inference"
+    },
+    {
+      "category": "stdlib",
+      "path": "lib/generics.md",
+      "name": "lib/generics"
+    },
+    {
+      "category": "stdlib",
+      "path": "lib/classes.md",
+      "name": "lib/classes"
+    },
+    {
+      "category": "stdlib",
+      "path": "lib/interfaces.md",
+      "name": "lib/interfaces"
+    },
+    {
+      "category": "stdlib",
+      "path": "lib/functions.md",
+      "name": "lib/functions"
+    },
+    {
+      "category": "stdlib",
+      "path": "lib/type-compatibility.md",
+      "name": "lib/type-compatibility"
+    },
+    {
+      "category": "stdlib",
+      "path": "lib/basic-types.md",
+      "name": "lib/basic-types"
+    },
+    {
+      "category": "stdlib",
+      "path": "lib/enums.md",
+      "name": "lib/enums"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/noNonNullAssertion.md",
+      "name": "linters/biome/noNonNullAssertion"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/overview.md",
+      "name": "linters/biome/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/noUnusedVariables.md",
+      "name": "linters/biome/noUnusedVariables"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/no-debugger.md",
+      "name": "linters/biome/no-debugger"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/schema.md",
+      "name": "linters/biome/schema"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/suspicious.md",
+      "name": "linters/biome/suspicious"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/performance.md",
+      "name": "linters/biome/performance"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/a11y.md",
+      "name": "linters/biome/a11y"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/nursery.md",
+      "name": "linters/biome/nursery"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/style.md",
+      "name": "linters/biome/style"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/noExplicitAny.md",
+      "name": "linters/biome/noExplicitAny"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/noConsole.md",
+      "name": "linters/biome/noConsole"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/correctness.md",
+      "name": "linters/biome/correctness"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/security.md",
+      "name": "linters/biome/security"
+    },
+    {
+      "category": "linters",
+      "path": "linters/biome/complexity.md",
+      "name": "linters/biome/complexity"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/biome.md",
+      "name": "formatters/biome"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/prettier.md",
+      "name": "formatters/prettier"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

@@ -1,0 +1,3705 @@
+{
+  "language": "bash",
+  "generatedAt": "2026-01-05T15:15:48.424677+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "fb145902fb3ef3c328121e9f89e8622cb9965103b97dea6499fbf36d9cc0dab8",
+      "urls": []
+    },
+    {
+      "path": "formatters/shfmt.md",
+      "sha256": "0c23044d7d5cfe49e3c20172e945db985ecc6b5fef65e0c378fb4c163a0db815",
+      "urls": [
+        "https://github.com/mvdan/sh#shfmt"
+      ]
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "3aeb6832bf02f3c43bbd2c0825b7c61160157bbac92eb7fb3a5259f93a34c431",
+      "urls": [
+        "https://github.com/mvdan/sh"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "8e7c1da65c3624118445211a95a8784480c7d2901d6807a920ca85cdf941848a",
+      "urls": [
+        "https://www.gnu.org/software/bash/manual/bash.html"
+      ]
+    },
+    {
+      "path": "stdlib/reserved-words.md",
+      "sha256": "9e58bdfdf61b0f680fdc69147f4cc307d171dbddad20b0b814cd4ce8c33febce",
+      "urls": [
+        "https://www.gnu.org/software/bash/manual/bash.html#Reserved-Words"
+      ]
+    },
+    {
+      "path": "stdlib/builtins.md",
+      "sha256": "cd1fdd80ae1c7af4a94aaed9aff222e938757ca1507056fd1e06dc72a2f8ce50",
+      "urls": [
+        "https://www.gnu.org/software/bash/manual/bash.html#Bash-Builtins"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "1f5056dd1c31400bbb2d4cead6afa2a235e1e7ed8168b262e33f3620ef90fe2e",
+      "urls": [
+        "https://www.gnu.org/software/bash/manual/bash.html"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2147.md",
+      "sha256": "ab270c8a6acc72d9521e4c81d60c40192d841292bbc179e03fe0164f8b2442e2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2147"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2007.md",
+      "sha256": "984dacd8772b756d904a2e3fe32188fe5f826a521ace4dc0d827b1c44a4bbc4b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2007"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2287.md",
+      "sha256": "97b98a5373ecc8d3e4f962ad07f04b6c2bedc2eef1fcd7c61c8713097de1d861",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2287"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2116.md",
+      "sha256": "a11ee3d3b52b96e9f4411b7c67616277e389841332f139b8f295505950706b04",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2116"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2056.md",
+      "sha256": "3b5f85f891923766c0997742c8a9a703df75c8309314ed60950a11c33fdb3bc5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2056"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2274.md",
+      "sha256": "358bba8a49a726c4b9b1748d1b12aee6c281f4ca568b212e6ed0e6cf8742a476",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2274"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2334.md",
+      "sha256": "dc65c712ec09811c95bf140d19e5a8910747eb9f61fafd2f8430c9b5fc505743",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2334"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2225.md",
+      "sha256": "c56ce8628f6828ca1aec0252d7a200ba51a6da90941715c2d3637bbcae5eab0b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2225"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3009.md",
+      "sha256": "c32a6587d04cf78b0aee2521d3ad9124be09db983e7d37f2f0540cc276e0df67",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3009"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2062.md",
+      "sha256": "0713bffe5498df7dff6fbbb7791c7c23fa255b36242bee96f02b8f93dddcbdcf",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2062"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2122.md",
+      "sha256": "b952595f70beae74ad17bff3c019d94ca3d649ef14ae0d378ae6938cb6a13df3",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2122"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2033.md",
+      "sha256": "9b884ed8185643f24c6697d9b8d8cb5486555bf381d3e6ce14deb91385145558",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2033"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2173.md",
+      "sha256": "73892377cf46b25a3a05eafd97823fbf2be304ff4494e8d4e244a5a6d649a868",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2173"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1138.md",
+      "sha256": "38b82ae727c4907b1bc29de9345d56df1b923a284e3f281a6e981dde71bb1c3a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1138"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1078.md",
+      "sha256": "fc118b5c52503f33e4935bd0d19950351760edbde3dcc424219ceeaaa311021d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1078"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2211.md",
+      "sha256": "eda720c7cb235c54824ff0300b1bb1bda9074f9c1b4d096f64036be4e71647b2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2211"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2180.md",
+      "sha256": "b00b610146168f8af10f9567ee1e77c74062dedc789b995d6f0b7fea4c396edf",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2180"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2300.md",
+      "sha256": "201b92d47df14a7871a0a26d18b70a50fb9ecd32fb80e201a3fb13f8fa24a662",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2300"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2091.md",
+      "sha256": "cd6e7d2c300f5db4a16cc87333946cc08038fba027c0c45caf148ac14e06fa61",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2091"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1029.md",
+      "sha256": "5fc3fe02c1e8cdab8f53e94c1fea5c2db874e922d6220226b5b843c7cfe0e800",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1029"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2240.md",
+      "sha256": "e194d59b4425d6ec4eb07050486cf22fb4ffef7f0b3fbcdade451202fbfdef1e",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2240"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1039.md",
+      "sha256": "56641250a3773fc9a0923c8e3a104da3a10f65ce947bf3b9c0c2ee1ba03d61ca",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1039"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2250.md",
+      "sha256": "49a8561b695e31926469b25e0295ab63c04a97b0057915afea392621e0ba5136",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2250"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2081.md",
+      "sha256": "ae188363aac7d96d508ecd30f00d7d222afb1db71bbfcf58e3153a2267ddf077",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2081"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2310.md",
+      "sha256": "498970a4ad0482b2e2831787a9853e45fcad304f3fbe78dbe397639f00eb8b66",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2310"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1068.md",
+      "sha256": "0e27a77f312feb0b9eba7a626ce34fe440b6a1cf75fedda3ef86f5abff2f1af4",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1068"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2190.md",
+      "sha256": "12943fdc87818e7d9ba60c8169ade174d96e8e4d9f8b4be345aa8580ae9b9d66",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2190"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2201.md",
+      "sha256": "f56479089d19a31a9bc403bb597ce2e39d1dd7ec7ed5bb50e0c2903738b5fc67",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2201"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1128.md",
+      "sha256": "ddf5ee5206aab9c89777b24c0fcf8408ba4215c47ddedb8f5842d11a57a890df",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1128"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2163.md",
+      "sha256": "b6558e2dd7e90a5c55099e771c022e54166b0c4b391b9ba8f487c54aabe1ca59",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2163"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2023.md",
+      "sha256": "c7dd0343047ce5ce7b3104d917b2361334363fd43c5598df4efef66780a00097",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2023"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2072.md",
+      "sha256": "61037d567232c90c7f2cc503de66774b0012ae573e03dcc22322be2adecf1a2d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2072"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3019.md",
+      "sha256": "6fdd4652cba7f40497836bc92bd278dc42e486f3ab20475bb055a2273325a1ea",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3019"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2235.md",
+      "sha256": "5dc2523a6794d72926cec03ebe3b0e8f48a59d66707dc695f87a9a25e0cfff35",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2235"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2324.md",
+      "sha256": "5163f1defa7fb97449d6fdd12ce0d270c1f25a7763ce59e362237bad68d90d28",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2324"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3048.md",
+      "sha256": "11bd9bc640ce598e59980393c060bd3463579229c17559f8bab3cad3d29bc925",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3048"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2264.md",
+      "sha256": "32d770641af625920d4bfc5a3b5cae226dc3394c3a230639adfff98b9aa2efda",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2264"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2046.md",
+      "sha256": "4b567877fe41bf8aa504acdf411caeaa41fe8781d663de7817974cf621c9de6f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2046"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2106.md",
+      "sha256": "fa1f9f0d43a9e2e6522f56336a3e21d7b323b48b3d23b4c5556ce46f694be5dd",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2106"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2297.md",
+      "sha256": "a0b849c82d704455edc9440815c7f6cde395a9ec4ba27bfe352d85b0f4547b0a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2297"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2017.md",
+      "sha256": "5db924b57cdcdddb705501508addaf7e6fe71b63a842fa3e03691f824125519e",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2017"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2157.md",
+      "sha256": "63dae648aa005fc174d43d859d69020c00596ae1986b96ee7940524123bd653f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2157"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2037.md",
+      "sha256": "5282600751115a5d68056de04e8f211492bd598b9392caf7944105c454f584f5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2037"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2177.md",
+      "sha256": "49804bcd78cad234fbdb4f0ca081d13b26e700be833dd603fd397622bfac4eb9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2177"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2066.md",
+      "sha256": "d296103b80ae26664094be4f1ca0be12682b65ffe662ecc6c933f69c94bc081e",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2066"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2126.md",
+      "sha256": "278c2beed1f3d8224f541018448c3561f0fde1f4726ca5e56abf4f46b683eca9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2126"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2095.md",
+      "sha256": "fc78f1faff83e92794d43300ed6734f21bf748184d746306bdb94e7734ef6b7f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2095"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2304.md",
+      "sha256": "f63c6057a2c424b778e692a8888ee6cd1033bac0b36c83ab99af07bfb1a400b6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2304"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2244.md",
+      "sha256": "2f40643ffa2f83246730cdd9cc7196f80c00466ccd044d293fe43141399b1e53",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2244"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3039.md",
+      "sha256": "437fc53762a5d7488af52a18b9f1b83c551d2c6223d2af109b0eec8b78c8aa69",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3039"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2184.md",
+      "sha256": "0bc4857365fd93488304bbb363cae594cda3b2add24c9fbc1e24e7f241627566",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2184"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2215.md",
+      "sha256": "67b9db0f3baa9bd7c6827a4938c1b3f0c65259e1615fb22918f2b8624b626df6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2215"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2112.md",
+      "sha256": "37b0dff17912572dbef4a3026d720b349f268089864a73f5a33209fa6d907dad",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2112"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2283.md",
+      "sha256": "7976ff76bf27f66307cff255e3f20d500cbeec6d4f63180c3549b6cc9f6ee264",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2283"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2143.md",
+      "sha256": "3f11ac7f4a3daf6746e5a6ab9ba853a6d12c2c3cd3bfa3087cab926ceb10e5ce",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2143"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2003.md",
+      "sha256": "9cda8bcd48c1eb1276df7a935c19b3188df66f6f3d1cd414b9c9115feafd635f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2003"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2221.md",
+      "sha256": "c079adbb46fb25e79e56f96aaf411c973605923687788e2c6af11d312cea3772",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2221"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1048.md",
+      "sha256": "f752c67d4a789d23c19dee1c053fc22c189513a83d66e2ac3b59c4e860eb0820",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1048"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1108.md",
+      "sha256": "e39d89ae3216c2b6613ac718809a7cc1a5a131e141bd6b0cfd729d844535b5af",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1108"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2270.md",
+      "sha256": "d4062d14dfa246bf9a3de684c5da25248923357c82243735f0f4ba5d30de9397",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2270"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1019.md",
+      "sha256": "d2e9d63b742e675e9c14688fd20cd1d9527bd90b4e3421b148485ddfad2843da",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1019"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2330.md",
+      "sha256": "25a78b7d740223cc71e7eb0fdd1246fa7d836919954ecff0449c799255b42414",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2330"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2320.md",
+      "sha256": "7c63acd0e7e17f56a7d4cabc7b69cbe64852d148b45cde98707f122802ed19f9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2320"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2260.md",
+      "sha256": "470349807b6727528483c22d6f7ecd1292534bea522cbc688fd96aef26d01c29",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2260"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1009.md",
+      "sha256": "88a150486ab230a4a147bc205f6b9b7fb028e03f7b3ef5df29e81a25f9fc655a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1009"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1118.md",
+      "sha256": "f51834613dd06394872637c1403dab81d0638b0756105c0c1a65268cfd9e673c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1118"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2231.md",
+      "sha256": "d243e9ea8c4f6c4b8bd44b2bcd8bd8a211f15341d02ebebd8336dded66ed82f4",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2231"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1058.md",
+      "sha256": "6c256508cf2163335aad41951ec36c14740141d9ac144ca31136f0e6280f76f7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1058"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2013.md",
+      "sha256": "3f5496734e559065f5ed7fd24b089fac281b94f6aacffc6748746575619442fc",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2013"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2153.md",
+      "sha256": "07fa576f075c02092e6a18e6714a9a6a38f7d69db81ddc5aa4a3038626edac5f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2153"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2042.md",
+      "sha256": "ec687439b66afe3a27b65dde65cb0dfc6934eaea1e52a2b866a1b5af5b14d963",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2042"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2293.md",
+      "sha256": "0f549c49cf955fe2d24a92e0219bac6b7864d9a515f85258db0bbd6e28e1370f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2293"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2102.md",
+      "sha256": "ba41ed4505a6649d71f64e149ab09b2e3e23493fdb83b1f8075fd9ad5efae764",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2102"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2205.md",
+      "sha256": "ea91d8d13e08a2a684bcc2e86f27172f6ff256dcadc5e39d84bdaf0e27484e70",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2205"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2194.md",
+      "sha256": "5958d4b1b9fec37dca4dce87464279b6f0bd039a28a551da875b792b5e5ae995",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2194"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3029.md",
+      "sha256": "589f2fd3136597551db08e5c19faa87d9198f60eb3e1e9ce5a2a99165c1d728e",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3029"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2254.md",
+      "sha256": "7c10e9d073b9d7926ff95fee3925b0756932b069f18e2da4540577b5f53d66bf",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2254"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2314.md",
+      "sha256": "206484ee3ffe25fb8b6a21227c1a510f52f61a9b46facc63c03cac7acc7df034",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2314"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2076.md",
+      "sha256": "a0a17c78c5c184eb03e9c7957c13f4037155be4ff8e4c3d23daf92c8b4ad7568",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2076"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2167.md",
+      "sha256": "61d3a8bd816ce8a219cc9748f5e6d886e7777d13fb3e6f7bee8c1cc9e160ea39",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2167"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2027.md",
+      "sha256": "e59070df16dfdc2a1014dd7bf21342cfbf1fdcee4e96d5153b474b6cfcf4aebf",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2027"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/overview.md",
+      "sha256": "c51765f77c72fd895401c3e3ce4d1c83cea5e4229e898e8b523341091e61064f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2036.md",
+      "sha256": "6075f27e977080d5307a139f468c3658f11d1386dd03919c2e0a9d26b5b2b7b5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2036"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2176.md",
+      "sha256": "d86d0396ae634e7c54625c242a18f1553048d4f5692fda6232df9fa38b224c1b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2176"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2067.md",
+      "sha256": "e3e8450257c2fcccfdb3d57a7e28194bb9d8339d8380fa92df67af8c92adb8b3",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2067"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2127.md",
+      "sha256": "654b816765817f5c626016ce90324deb158bff24f7f3422e1dacbcf599a9f41d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2127"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2305.md",
+      "sha256": "44e158cadc696841726d3c9b4edb262ac04e75ba4b3f77050c9ea7e970797901",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2305"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2094.md",
+      "sha256": "a56c90abec87128e9942ac3216c6626ea7589fe6e7286667fae321ccae5acfd6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2094"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2245.md",
+      "sha256": "c25b3479183778ef688d904fe96030b64fb5546a76926455b2a4a38659ecd9fa",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2245"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3038.md",
+      "sha256": "d930b0711cc8a234aa62960f9808806922201224b3eef83dcac81012ff95cc09",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3038"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2214.md",
+      "sha256": "f10caba2b821d7ede31e450ed17d215d78c2cf7bb4472df332a585f2bba8f940",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2214"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2185.md",
+      "sha256": "eddb71322959368ad70a24c22eaff0700fc33bf044a027eb85e28900ebecfa91",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2185"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2282.md",
+      "sha256": "1ae55039cb1c43ec24cd989d903301c212fba5f8ab1e6a624160a8e600b619fb",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2282"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2113.md",
+      "sha256": "9a4425534a522ad15a265b27a54a8ef5aa4afc7c33bef96fd05f838dc04b7b7f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2113"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2053.md",
+      "sha256": "2dff0d8d320be77c48b603bc745a984922c93a8c347e8d7d21d4549109c0805f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2053"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2142.md",
+      "sha256": "bbe7ae5632af39d035f5bfb3f8cfa0296273de205431ae33f21df67a2da57fe2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2142"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2002.md",
+      "sha256": "545736bc95ea06cc611c92d0b6aa98e6c9a3e86bd101df2a695da238ea5ca174",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2002"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1049.md",
+      "sha256": "b7f72f0ef1ed646da8f0c4dea4df45627e72734ac805b1207b281f320f984ba1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1049"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2220.md",
+      "sha256": "1c21235121e8e73b8462f9d690b73ce7415e2e01ccc51b589d25d4252e92280c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2220"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1109.md",
+      "sha256": "d0c0a0a97bd38b7cc234a798dde1090fcea7f1c7a4722f64d76ca4af9ae429f0",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1109"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1018.md",
+      "sha256": "ce144c74c111ee8f4b84b91296b6620f350eae3c84daea526ed94fbee3bce0f1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1018"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2271.md",
+      "sha256": "588c29b7512b9311e8427cc9ae9f540033366940ecdbecc2fdf7d1d1c9dd6768",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2271"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2331.md",
+      "sha256": "0c60a9936a76dbafa80a6e751fcf4aa051ecaab26990bbc6d367b6444c59bec7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2331"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2321.md",
+      "sha256": "a4f9c46802a47901e04c0a2f90e8af268a1fe465b96da93255f70f812ea05d58",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2321"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1008.md",
+      "sha256": "1a91a385ce29ce161774e73d4f8768949c27d34c6839d5f52f8401e1506bc326",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1008"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2261.md",
+      "sha256": "3584e1807913ba139620a51519db5bff9c6c7fffaffea0957d30cca94d067e63",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2261"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1119.md",
+      "sha256": "fca5fc63e4f6dd8ed439ff44cec0cffc9d3810a3f7e625ca8c907cae8324e9c3",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1119"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1059.md",
+      "sha256": "5165883d403054f203f4165e9f5d2335f3d2f0304b1573cf254982205e26db89",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1059"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2230.md",
+      "sha256": "fb01a9b52345a59fee60de56c39184189b11d62df1fb4caa5a2c111cdcc9c5f8",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2230"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2012.md",
+      "sha256": "99e249785ad88cbbf773fe6d18f1141a7a2c79f64bdc9f80afd0f8e1062c7c21",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2012"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2152.md",
+      "sha256": "21639f966ad0ca16399388fdf4ca0aa91d0ffbbfdcc5646b9afe9abac9bc20b5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2152"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2043.md",
+      "sha256": "f3ba993c44737ba8b14d3ef1ad14bc327fabd006ba139782574607e4cfa4c43c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2043"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2103.md",
+      "sha256": "b711f0ddfa78b0c6b3997f3b8e6119828fe3bbadf1f56630f2f8c609715edb95",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2103"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2292.md",
+      "sha256": "ca1f540ad20789d3eea8bdcde40bc56e770196e61010f15e1092d10a12f72994",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2292"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2195.md",
+      "sha256": "255dfbf04145f493a6cd6fc11baf9d8f8eacd770ffd03f401e5675fc838b81b8",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2195"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2204.md",
+      "sha256": "65572515c3c8dbccce26ca76e7bac40a2fc25f9a67e1bd2d397e2f6858d49b83",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2204"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3028.md",
+      "sha256": "cacbb5295495f902e93965f78d854c2c7303ba266fcccb0be26db6b93c18f91e",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3028"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2255.md",
+      "sha256": "6e6c3bf14d919bc163b23abe431d9dc7000888b01f6614af77a02ce9c2569e88",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2255"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2084.md",
+      "sha256": "98d93e51961aa1908993dfdbf8052fccbf57a9000a9f7c2c98ed16737bb985bf",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2084"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2315.md",
+      "sha256": "25130d7b41861fdaaadc96a6ac377bc4162949fa32b3ccf4f0490ee3a21e8349",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2315"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2077.md",
+      "sha256": "1f6a50b784f19d768ef11c304bde39c93abf245753032d0d407edfb3cea30017",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2077"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2166.md",
+      "sha256": "ba7a4522de85c506d490fed65a14ee15394004be505a3b78125bb8290732bfc9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2166"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2026.md",
+      "sha256": "197f1a80c4dcfc7559ed425633e6fdf417beb6efe81b7a81e01b50b44e2a1af3",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2026"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2146.md",
+      "sha256": "cd450bc112785dae859ce2554bfaccdb87f74e026fd61de250b724e3a92d56df",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2146"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2006.md",
+      "sha256": "d3ad5a1f9fce50805b047fef9abd9a70562cc914707e5c475bca6aa72ba9b888",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2006"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2117.md",
+      "sha256": "bb6c95814b5526a45990b57e3fb3785d211fe04f9c39424ff7719c4270935a8d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2117"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2286.md",
+      "sha256": "bbc0ebfdb83adca6dc345f6b2b1a7579ffd6e92f8638b7c839091f6e8676fb12",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2286"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2057.md",
+      "sha256": "6133579a522726b3e31d345e6ca36597ea74648707e73929c55694d9682ad205",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2057"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2275.md",
+      "sha256": "06534424c01b2bcb559cb98aaf99bf0e72bca14b44e6d8b5bbd09ca8f5f3a5ca",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2275"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3059.md",
+      "sha256": "2833c4d4f28b7386884cf4be0761b567d1e2b3cd56d675fc8828b05fcb09df95",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3059"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2335.md",
+      "sha256": "12b4a520727a7fda734a806644ab84e798e0b9cae72f6e698b092f80d5acd260",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2335"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2224.md",
+      "sha256": "e148b178fdb6be2846cb1958e2ab32c407b715e48cd49df894ff6f1ba3ec351d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2224"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3008.md",
+      "sha256": "1fbf8ad8253f889b279a33419f432ca28a0c219669d4efa052ffaac9eaf738e4",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3008"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2063.md",
+      "sha256": "f91c8e0beefa8b06507f09742db595efb5a8929f200aa7f155115c15261e06de",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2063"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2123.md",
+      "sha256": "276b39c55a105caf3db63e2ec37d49af2f520915a864301cf69325f0e9bce1e6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2123"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2032.md",
+      "sha256": "e52274344521a5fcd9c353e9d4a46442abe0425a11d55a10fdf7743dc507eb4b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2032"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2172.md",
+      "sha256": "926f3e6e1c2d28bdd4e02caf6a22e0ad094bbb17954ef7334aa759baac2d56fe",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2172"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1139.md",
+      "sha256": "f3ea982ab65f56dae5862a9faf5c93e440fd7fd7ae0c286e48e96d74fa6ec28c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1139"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2181.md",
+      "sha256": "eec82c93e951276d73c0024b2ad77446a6276d5536c605b291f4e5ceb516635b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2181"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2210.md",
+      "sha256": "fc5bd0cfef175e3b0420a9176fc61fe921909ba9ff093ff3f02476a4d522bd1e",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2210"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1079.md",
+      "sha256": "72cf0ff7d9a17e1247a96cafe149dbaa4004f345f992a9f428a9d3a63530d295",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1079"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2090.md",
+      "sha256": "f9a74c2474142e86156b8f73d19ef18a47a7978f257634b4073b2ac23052bcc9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2090"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2301.md",
+      "sha256": "97171846e5fa863064b6e73cd6fa0444706dc73f5470d25a8f325ec0104bae37",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2301"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2241.md",
+      "sha256": "08a89c88060fb9e41db62d676c6ebe1a68078e979a4031af05fab7b3e0312d7a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2241"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1028.md",
+      "sha256": "52010d92ee2f9cd420a22818e17b37a7acfbb92b493f16d8c257fe006b087278",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1028"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2251.md",
+      "sha256": "445a2eecbb16aa1b3c321e71887b8b2a69ad25e521c290d3b5cfc015ab59fc05",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2251"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1038.md",
+      "sha256": "35e688ea367bda70b3f242a43c15641438924c39cc9fe3ee59470929d624ed5c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1038"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2311.md",
+      "sha256": "6a5efb3471b83a3da0be367a0d394fcd3447c76e73db97b9cfb63d22eeceab51",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2311"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2080.md",
+      "sha256": "821b439cc484a68779fb4341fd87bb3da98e7ac9823ad53f0b8692951c532ff8",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2080"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2200.md",
+      "sha256": "2842a7cd975b602f4ea50ea12c6f07f9d96c48347668cd6e43cf6935ce5cdb8d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2200"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2191.md",
+      "sha256": "db676b35cb601c02727330697ea390383d026be7aead786ab7c9f60083fe7bf0",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2191"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1069.md",
+      "sha256": "00f5e20c1a810b208c64d58866cbb92c22838dfa44c13144aed3c10f5a6a99ce",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1069"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1129.md",
+      "sha256": "9ae346afca8882c8a8d8455a5462028f51d714c63eaebd1791d18acaf4bacab7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1129"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2162.md",
+      "sha256": "03faf6992b4ae61a337292c6b296bcbfeb15a17463f43c7c5104d74506f292bb",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2162"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2022.md",
+      "sha256": "30c4c96a07cc9d08e9c376ba6f4994e198a501cdbdce5c4522f103cf3dd14b81",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2022"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2073.md",
+      "sha256": "36d6bc19600cc678c549074458ef0a312ed8d5b0dd21eac5bb27678f304aeed0",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2073"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3018.md",
+      "sha256": "5660d8267a5f655b65d426a7e3de78ea15a4abed6abdfdf305b96a04fec07a60",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3018"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2234.md",
+      "sha256": "666298ee5417de87d2a1a1d83e1ebd9a523f293a295015439301f27fa0a0e2ba",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2234"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3049.md",
+      "sha256": "f25ee8553eb5edc12f05ac95b75d1e6bd8383456d8c1a7919b2c2a0289072168",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3049"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2325.md",
+      "sha256": "50fc1202d84faffd459f7f4f34aee6e288b16d7ec9c5787cac03ee2f5defa5f1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2325"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2265.md",
+      "sha256": "37e2da9b97498542a21f39b4c6953e216661270beb69b529ef9369979ee7ca57",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2265"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2296.md",
+      "sha256": "71d6a1600c78754baa8329b4b0dcac6fc08526bc6f9e010c11ed0fdc67057feb",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2296"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2107.md",
+      "sha256": "32d9906193a725f70e35c585d55078de576cd83d22a0ffc0ed433417a8f93bd7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2107"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2016.md",
+      "sha256": "c4707ee2ad58d47375ea2b35c67dea35e46cd6f41e9e218ad591e4b0ba93189b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2016"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2156.md",
+      "sha256": "a0b6795ee2eb46436570f8ba1368eae376da644433b4af554c9ecea087c3daf9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2156"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1017.md",
+      "sha256": "c318762bf37bf2ae434d047e9c51fd6386e236027af5beeaa725f4a6e09b68fd",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1017"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3052.md",
+      "sha256": "50ce9d7a03eec46475285c8c31bc04eb8d032b977b33e445a1ccd02f83cf494a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3052"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1046.md",
+      "sha256": "9260e9b837c9f1e5f7306d12272c4006ee3359bd023b51be3d4b5ee6495de244",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1046"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3003.md",
+      "sha256": "7e45d79b501f97e45e39b07b07f9f9e46b4722c0fa4a378339af9c4012c2ca1b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3003"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1106.md",
+      "sha256": "9300ff02d6272b8924ffff0f65154075289bfb809019a755e96de7161d58788a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1106"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3037.md",
+      "sha256": "249c5f90f9f5eaa8c19431676bd7e863431d70e395d42c195bf93ee611179395",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3037"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1132.md",
+      "sha256": "83941bc0d956d8be38f1a5ddb3dcc9519d36af742925d3f4f0d31e8bec5ec3ed",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1132"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1072.md",
+      "sha256": "b3e1d699ee39b3d6507c325f4e25659b5d799da407c8090c2e4892b9c7ab5e78",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1072"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3066.md",
+      "sha256": "cdb57ea03c8bb239d17970a08aeda236c76c6d3286e0f0f9023cb878f143f6b0",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3066"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2068.md",
+      "sha256": "cdecb084ad004382172da720fc4c76cb2634497c346f53130ec7df696ef708e1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2068"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2128.md",
+      "sha256": "23e119845cfac80be26590b2085461f7f67fe0ceaa305208441f8cc35bcdacbc",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2128"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2039.md",
+      "sha256": "0732456737d795f1fd42184cbed02a68f2cfc76b8e62d2d75e10960e722c5622",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2039"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2179.md",
+      "sha256": "9459abd854a929c1ac4e55596ecffe6b061d22f0289643aac35955f08498a2b2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2179"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1081.md",
+      "sha256": "2454274d59919a081979521630ab431ed36430088ae26a0bf143d3df43a1a990",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1081"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2169.md",
+      "sha256": "20c91ce40ab063316f79c653ac3f39c14b88bc1e66aab495d1b9589f74bbed4c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2169"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1091.md",
+      "sha256": "1f896019d41800aab853ab6037f51be5873e9d4cfc564c2b7bdaf4b65973b544",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1091"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2029.md",
+      "sha256": "8ebfee3e3b2e522139a607a07cc92ce854143b15ca5379aabda9ab08c6412154",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2029"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2078.md",
+      "sha256": "7e94a8ddb492725750f00c116bf8243c4103bce8828ae0c4e793ebab552073c7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2078"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1033.md",
+      "sha256": "6ec022529875e88ede4fcb49237b770498f525c231901223225bac4a960b8a6d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1033"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1062.md",
+      "sha256": "8d3ee87df230fc08b600db2d906ff92deaa83f99603a8e6d6369cc5f4599b8c6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1062"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1122.md",
+      "sha256": "3f87e919c73f2231741a85e3092e3c236f85dd9a9814786bed2e748c5b0dfe12",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1122"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1116.md",
+      "sha256": "ec7b9a15a9c43a8c779cc13ebfe8e44a98af758f31b2d74974f7ca5a685d9c64",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1116"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3013.md",
+      "sha256": "bef8dffef84ebb71b8be3d3130f4eaeabfbf0fc27af0dcaba1a0f519981923b2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3013"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1056.md",
+      "sha256": "9f71e3e5d378b5cb3e5092c51d73a049ce7d6751bba60bd7f148066544026e19",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1056"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3042.md",
+      "sha256": "fb81f5f92ba1f66582fbcb88dd5e469edd9428cb9d6533a3562051c1939d29b1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3042"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1007.md",
+      "sha256": "0400535ba866d1a8912df835462e70e01694ceecd4d9fe5aac79119050174536",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1007"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3062.md",
+      "sha256": "e5d924babf292767dabe91955e4ca26752b620eb5e64a27ff6a5619d5f0fe00e",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3062"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1027.md",
+      "sha256": "935779f44d0117e8ed89c30280a3f3d749db5b5fa2d89c12f1202277fe534f87",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1027"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3033.md",
+      "sha256": "4441f1f9bac2f3e31534d3528da54f743643de6e19ac47cc805e9cfd8d538689",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3033"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1136.md",
+      "sha256": "c19726f136d7f68fdda755321bad95827a31a48945a66683eedb6eccb005bef8",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1136"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1076.md",
+      "sha256": "cface5e515250385fdc2838eab06eb6cf15087842bb956c77090e371b1942160",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1076"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1085.md",
+      "sha256": "fec7a85ee5e66c9ee58aae382adfea273eaa7fc8b782ffc3ff74b1024a5edca3",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1085"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3007.md",
+      "sha256": "cbfc1ee04ea4a81565967a7717419f117c65e776f1442df0af16089782a9614f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3007"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1102.md",
+      "sha256": "9619762b4366b9297c3b123cbe000991c1e3947329aac0e7c14feb42a243d4f9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1102"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3056.md",
+      "sha256": "ad5ff921deab5469e7b37af39942def82d536861b87a21cb88348047435bc671",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3056"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2289.md",
+      "sha256": "c1f5825feb31f64bf478a7e674b4ba7d1a7ece4302ab511db863b2edb9d734f5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2289"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2118.md",
+      "sha256": "41a14df2201347abc93b3c6ba96f48df842d99c307c94870cee15f3ca5f428fc",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2118"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2058.md",
+      "sha256": "7e0ef9f219a514bb276db4e29c90598ae12a4585453856318714dbbe72b2cfd2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2058"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2149.md",
+      "sha256": "d8a3b1fb59547971713e358efe2d2beefc7399537aa8e5088d5d51cac8e02633",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2149"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2009.md",
+      "sha256": "fc33a729b40aa6ad4b4e43adac67055dc7610590c39d1c84f8da6668b1c94718",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2009"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2019.md",
+      "sha256": "62de62ddd69a0822d7d132a96c65239a482f5bb72b9153237a35af422f729380",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2019"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2159.md",
+      "sha256": "b2c01cf1f6be56202282a14530b18bc30a9b333ae76a96430a629840b7c74d3c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2159"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2048.md",
+      "sha256": "21c1e4145b1cb6950a02f1277a98af2b17410a00c218806e162ab9925d4ad816",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2048"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2108.md",
+      "sha256": "a31b648580c8a7af1c00d2e215ede8919c65d20173a27169f975d18c4a00c1ae",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2108"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2299.md",
+      "sha256": "8eeaef2e49599986321e4e4bdde5e62aefac7999658a0b4bab89b286e528594a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2299"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1143.md",
+      "sha256": "ef9929f33316c39fe20054edbf42b5ed91b383380f1e09231c5ade9e5987cd4c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1143"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3046.md",
+      "sha256": "f4c151d32354a831fcf8563157ba23297d90bcd0ad9171b24d3dc6d2f0842911",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3046"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1003.md",
+      "sha256": "5612b7d7b0ac2ea97458cbcb3ce785755f497740995f6ff68ac4eec8cc7b096f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1003"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1112.md",
+      "sha256": "8b1568c0c1b971d1c5705f5e5fd5065d716414d1eaf38ca28735570903415bed",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1112"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3017.md",
+      "sha256": "b42e573e474a95a2de50f19f5b7ed05ebae8cd7538c9dd188877cb64b2e7c4f9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3017"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1052.md",
+      "sha256": "076f6ef7384ebcc399512ee680084c2f19084ee3e8a0f73bb47e2860b2e3c30b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1052"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1095.md",
+      "sha256": "92e31276f03de9be35921d73825054125c8d76c27c953ef45b746bd35e90585a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1095"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1066.md",
+      "sha256": "fbe34dfeca1092255e24ebe1c0c39642e40b419e3dd710dfa366d0b89f58eaf6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1066"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1126.md",
+      "sha256": "f3905b88cf88a4cc273befb686b129f56f7c40889622aa2cf9768177c43b4803",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1126"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3023.md",
+      "sha256": "44e7c53b13364875bdc5a81cdae8bfce31f2bc14936a213d94e4a4ed58b04c41",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3023"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1037.md",
+      "sha256": "c34d22268ca715983368ca68ec03e052850b84f53481abacb3e4e73684626b67",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1037"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3063.md",
+      "sha256": "072ffdf993a3f6eab47f8f88f45f4b087a828556b270cdc6acb6aa6b27e639f6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3063"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1026.md",
+      "sha256": "7581ba0f32ee5cc39fe31a6d9b9e9535218e31eeb252eb36a1fd3ed9bbea16b1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1026"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3032.md",
+      "sha256": "c5bdd9520f765f5ea48d794c3a7d9ce32582b560b0d41eb216da59ed8a7fa402",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3032"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1137.md",
+      "sha256": "b348faf4377d04347d42bfe02ba5032055cb72247a79502d79d330b1d530026f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1137"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1077.md",
+      "sha256": "249c64538cbcbea8f00c391fadb94045901733e0c795f6e1c4e47b952241df0e",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1077"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1084.md",
+      "sha256": "77240afc20fa80b3e378c16f7b92ac2b8c9df607ae7951e6634402ac0cb71cd5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1084"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1043.md",
+      "sha256": "5d299158d7f92f3a0237875b5d199e3a986d9e3801bbf41d8b8b9f095aa9ea09",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1043"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3006.md",
+      "sha256": "a5de97efd3fced77f29d2510cf64ca5cee40f357b4af9935ed95808a288c80cc",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3006"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1103.md",
+      "sha256": "3124785ab2bc876d46a8eb80d565ae300eaf07b2c7392ecfdd01245920e78e85",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1103"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1012.md",
+      "sha256": "18369459b505723c8a3fbabc3ce2a3106d0ac75763536296c8d19f44131ced9c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1012"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3057.md",
+      "sha256": "e69b9620551a80c71264b50c2c5c96ed22ad2697ef16c65380a4dc5522f10cb9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3057"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2119.md",
+      "sha256": "9e9c4dfff0b84e725cddb046b912f08b0edc142077013f3665705c248863bf98",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2119"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2288.md",
+      "sha256": "ed7c1c592545096a7147e0169576d9d5abf720d826dd6cb506f86d28a8b06984",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2288"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2059.md",
+      "sha256": "27a40ecce6e07494654971c695a434ff97dee8a652c13830eabfae93ace208dd",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2059"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2148.md",
+      "sha256": "f889b8b2d8836e141da5779cef07e3560ef6b0fcdc3a3b9cd216177368fc9280",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2148"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2008.md",
+      "sha256": "594d5d4be9fd7b8159d036345367bfd3afb33670bf299c7397cd65bf1d2e4c17",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2008"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2018.md",
+      "sha256": "477403a398ed25b6119d744aab62f859660b7a943649972c9111c29cb5442b61",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2018"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2158.md",
+      "sha256": "e762ed2c9f503bf873be684a008f4cae7505494de869473bee0248e8966d9e89",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2158"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2049.md",
+      "sha256": "f5a60ccb50704504c6b9f1008e33dbc64efa91b6090147dc3ccfbd89707e4457",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2049"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2298.md",
+      "sha256": "f39d575a8d237c827318c11384df075d20a997dbf7fe84589fc84eaf4bba88ed",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2298"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2109.md",
+      "sha256": "3bfe13951bf976738a8adec0e0bf2b2baf5cab60f8d2d8306bb52fe948322dcd",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2109"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1142.md",
+      "sha256": "a56276619ccd9c5b32d79b6c4274e010ef74339f248c1e76da0e83e9e9c370d1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1142"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3047.md",
+      "sha256": "b9f6a72088f99edc0c9bd347fb1f1f7ef1dd95f8a891a5886758647b1a59909b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3047"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1113.md",
+      "sha256": "361fe0098be49668d88bd41cee07672fd1cfa58565e94d31dd61a14dc48d7b55",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1113"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3016.md",
+      "sha256": "5c2828c1eb9bfe397cc46c7779c5092ee33ef2e7ba32088ab35f3ea95be67b07",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3016"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1053.md",
+      "sha256": "d9ef163245286b9dc467e7c2fa9ed5f0fcb11c712df0dd1e9f40003db5ccaa9f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1053"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1094.md",
+      "sha256": "ccdf25dfdb720565d1ad1868fdfb518ed611f079878d97537c52477445e81b4c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1094"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1067.md",
+      "sha256": "fc0e5447375e6551d2b9d9851a65d24fb9014de8e5d18181675d46e44ca8cd3b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1067"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1127.md",
+      "sha256": "153a7f94c59ef86713c999e94e38dfba829db151aa39b5c3f0f492c6ed29cb31",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1127"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3022.md",
+      "sha256": "64d1500a1d05489767817758bf0e8ba7847385008910053fe9eefcd320d88e14",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3022"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1036.md",
+      "sha256": "c6288cc776102e663c30adaf32d34645cd91fa69338edfaa29899d337a497cb6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1036"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1016.md",
+      "sha256": "ec9c05e4df11f4303c909949b0d3c888b1eccbce5f8be7aa2261b2c4ae7509b9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1016"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3053.md",
+      "sha256": "091c1db6e2944580655da1e93d57a518ab583e376aba5de727672ee93d03013a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3053"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1047.md",
+      "sha256": "c5dedf36a07fbf9f55347d6087f14a7c2000c07e9e89db6ad0f7a80728ed048d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1047"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3002.md",
+      "sha256": "87fcf7d9896d66fd82b3705b7643b8833b4fafeb204816a957c93a937194285d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3002"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1107.md",
+      "sha256": "f00932994754349f0b8c422a6b4fbc018ac1a696998bd954d8caf66df55868fb",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1107"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3036.md",
+      "sha256": "1b8b55b197dc5955c14be313b1d854bce98db4a89aaa1da1d4bf0e8a7b9f2da7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3036"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1133.md",
+      "sha256": "4acafbd2413b4d145795c08ccaaab7669bdeed125336daa68160a5684b4119dc",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1133"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1073.md",
+      "sha256": "cd9afd580a2cb4a3c399c378942ebd800e90c6c871803c998cf1d0d5f216f72a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1073"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3067.md",
+      "sha256": "3789978132fabba941e127acf7da37a2d774053f7208806dcc0b1b3292cf04ad",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3067"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2069.md",
+      "sha256": "520beb61f5c9b96e28c9007dabb86eb4b7eb76563c2cb10238cc1d00c0961472",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2069"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2129.md",
+      "sha256": "2ddbcf377b0d535df3992658794ea09ee9147b549d6ef0afecb7ce7afa12e718",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2129"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2038.md",
+      "sha256": "6ebab787d0fae11b1d4921604fc0d81378b50559e2f6400536413a05af2f12a4",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2038"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1080.md",
+      "sha256": "6a4bdd319112ae537cc7af1533bfe6764e2703b0421d8b1b3fa6427dac446e23",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1080"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2178.md",
+      "sha256": "877d72b781186cb469b75f9794d386129f2cf8a6af98805b1d9d17cddb3bf455",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2178"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1090.md",
+      "sha256": "7c627296c004b3c30b9c52e9cf1cf574b4732233a67e593090086bd5db8912ff",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1090"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2168.md",
+      "sha256": "4255ea1b92c1071800c80b07ad880fa365dcc9a4cfd92b57c2eee805885af116",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2168"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2028.md",
+      "sha256": "7226141c98e6bb757e5515f914c567e64c589086c63ee5d7a5f9b9f54fecd8f5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2028"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2139.md",
+      "sha256": "7842fc1912317ad5733fbb8e9c8919d6b15b1d94ba2e87269bf279d8b54b015d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2139"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2079.md",
+      "sha256": "d7763d2e165d1927c41b934a0ee3779cbf74fd8f584859edc316a08577d75cd7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2079"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1063.md",
+      "sha256": "48f74fdf4aeb8ba8b10bc82ece74cff5ee7b0504c6e643f2f16b59a34edc2286",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1063"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1123.md",
+      "sha256": "62a79a9985f86daa19ddec1c0631172345315409cc07679a9b70d88183bd01e2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1123"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3026.md",
+      "sha256": "9098ce334ed4549d6415092e54e9cea30626dfb2bd3bdbefd98b0757916262ea",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3026"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1117.md",
+      "sha256": "a202bf87370ed0a8efd1b1a6c1cfc71a485c3714edb4780fe40cda98871605a9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1117"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3012.md",
+      "sha256": "3ddfda45f7b23cf897b58cb1145e11559688d0ce60eb75d697997a44a8c4c4d5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3012"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1057.md",
+      "sha256": "09dee6a5115de2dc427585d73ac49d17e6eee7b1b0ba27ba980249d1002f7697",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1057"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3043.md",
+      "sha256": "091944eee26bd66cb1d8ac44694105b085c652a112a60423b68383c0c24941e1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3043"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1087.md",
+      "sha256": "06801f832e79f3f0de7242c65ef28d9c1de0e74f735ec8fd74dd474358e2f2d1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1087"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3031.md",
+      "sha256": "8673cd308e4de5b43516357046e5ace9d7ec11f48ddac96bb2eda4d347bf5ab9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3031"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1134.md",
+      "sha256": "cc02b25bf7fe58c0f08ef58958eede2e8eae1eca606bb16e556fd01a26195834",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1134"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1074.md",
+      "sha256": "9a7106b738dc0f7469f57e110c61a878730b0ba57cb06c28666275431da53701",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1074"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3060.md",
+      "sha256": "e40b2d115edbaecae11129c3eb80abd49738e63516b2341e78a8513cb5de7232",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3060"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1011.md",
+      "sha256": "5f61526b703152fd8c368c9a9093456a762a2d54bf4ced0145b2baef47146153",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1011"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2278.md",
+      "sha256": "e7a967031f1c3807065d53e9e4ba89e6878e64de51102f9c775c64889b8937b1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2278"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3054.md",
+      "sha256": "17e9cc1dbb336942b00a2732fabd5c8279fce13a3bd42d5281effe9c1c8f88aa",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3054"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1040.md",
+      "sha256": "3d2305797c1056d2abd1ec4efcfa261a180dd084ac74ac0267745b8d3bc41657",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1040"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2229.md",
+      "sha256": "009075bf8c0313d84ec59b3367fd2dd0d8aaf38b7f851d083dbddc2f5aa45e75",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2229"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3005.md",
+      "sha256": "a98cdcbe531654d7d2dd70bdfa0044a35ca408d19f05f48904e9f065cf51feab",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3005"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1100.md",
+      "sha256": "e75922d5db2b30e80c1872c49b2211e6c9b3622e7a81e8be5af25e28502658e5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1100"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1110.md",
+      "sha256": "dcb3f4de32c8bb95681fb99cc122efb65858c4d4817e61961686d87107248d0d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1110"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3015.md",
+      "sha256": "15ac186ebda9f507ddfa953bc1ef1409dcf63471903b4b7e7feb24b9d54b4da5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3015"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1050.md",
+      "sha256": "6bfbcdf3d6c30688e01bf45046cf071dc0121cbf3a83840701d59cbe00459f54",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1050"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2239.md",
+      "sha256": "91d771e766e5a7b9166ae208844375802361d445447c95b21b70aefafcd1300a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2239"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2328.md",
+      "sha256": "a544a6d1d6cf3543bb3a66b130d48064cc219d9ae9db1670f4a191bb93f77792",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2328"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1141.md",
+      "sha256": "970c8a77d7b096f1e93b06dcd41649d82c20a8755a69f115c5808c77fac66c93",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1141"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3044.md",
+      "sha256": "96dfc802fad7bbdefb53c36c1ea05bcd76f8138115ac1057de27013f45bc9455",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3044"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1001.md",
+      "sha256": "527e1d7595e4f522f34d8270a73139b9d579535ae5b37ab1b1efe96ace991189",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1001"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2268.md",
+      "sha256": "95cf058f8778c28cadef543e1aaf370137feedaa4ea3ee345a4453d4002f7dc5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2268"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1035.md",
+      "sha256": "f9568456d7d1ea0bc3604513db163556950f07f214fa814341b3f9dae5dd51e4",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1035"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1064.md",
+      "sha256": "492103c6fed6f81db4436ddf73a5d4aa626c513531454052b9d1a765db708325",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1064"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1124.md",
+      "sha256": "415e4a96d5637ead9c90103c802e92d31d9f368b211db96bab8bece18534e668",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1124"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3021.md",
+      "sha256": "8acdffe6b9d6a09d8143011dc22730e244ea380be2816415b6a109479e6b1299",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3021"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1097.md",
+      "sha256": "175bc7b4837dcc565de04d3bef9fbeae96f234cd54fb8f114f32e9c6a3cb9e22",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1097"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1044.md",
+      "sha256": "1fdca711c55efefe3d5c1f8d466ea703f2b428457b0d5a0a5e1b6c09c81ad6e6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1044"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3001.md",
+      "sha256": "cb226fe8b0d54810fe4423d9408484fdb178a2b29248e8985debfa0308aa4e86",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3001"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1104.md",
+      "sha256": "85b23ca641e6511ccf30ed02200fb2426bd74fa03b062fd7bd0e36c85efb497a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1104"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1015.md",
+      "sha256": "355372049a3aa3ca9f3a49f5d36a6f93aea4c7ee1aef06e47fa2660f1d0c2aad",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1015"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3050.md",
+      "sha256": "a79394935fce0b3b6189c2e4710ad07116ccd804462886bd16bd6cdcb0b89c23",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3050"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1083.md",
+      "sha256": "c8ec8ebdb0789a45725f12eade0c58ba4f161d80e3fb130fce4f6961cb263b1f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1083"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3064.md",
+      "sha256": "db58d39b2186447b432f5842f330a73e07c8aa02c8e6d9525786d88f5a3a0e5c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3064"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2099.md",
+      "sha256": "6fd04953b63e005045dd6d4a3ab3a9c181c955db84d9e6331c80060b34bfed4d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2099"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2308.md",
+      "sha256": "e2f50130060fb9842c4704c5f793bd781af1e3dbbb32fc2b2ea3577d8b9f60e6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2308"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2248.md",
+      "sha256": "1024cd74077b18344c3ee80768dfd066ea895997adcf8e029248f469cbb4a0d0",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2248"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3035.md",
+      "sha256": "f4c6bb97ae013e15c313318698c00724549ab768567f39a20198c4a677b10d1b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3035"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1130.md",
+      "sha256": "5b71c51f44c6ed3d1c31c63d971167836fd0aa035cc70f401b65217983beb394",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1130"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2188.md",
+      "sha256": "1bcbaa1d58f88f5f1100865fcf16c6fb78b2231a5f518a96b5c2e2d7b23a6984",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2188"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2219.md",
+      "sha256": "18ba3d80d72ce5080792bf36c711a6793b2540c7ac645291059e13fe714c0d63",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2219"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1070.md",
+      "sha256": "4a13e9e6c5a6a6b9b9baa5eb70d5d2d8636d9e81e19033bb49b5d391acb67fd0",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1070"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2209.md",
+      "sha256": "9d349d69b026fc5888cead39949df564f2b92be9818d6cb5c5757df326bc9338",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2209"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2198.md",
+      "sha256": "872f9c514425f486e8ac54b08233805be64d970ff236a6e45c8fe72d20b1c45b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2198"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1060.md",
+      "sha256": "bcc88eb02b125505a84bc7ff11663b6ed715e1d95e8019c251e22b7c20300575",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1060"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1120.md",
+      "sha256": "4b37c122d6e2f3b2d3c5d59e71751ce0af95982b98c4341c37ce2eac28573487",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1120"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3025.md",
+      "sha256": "62384a3a3bf00b167341d9961ca225714c10b7424ad19ab400d9415c0cede06f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3025"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2258.md",
+      "sha256": "2cd108a2b11d0570037e4b68ecad07f4c432c9efe2af412ce61bb9211413e212",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2258"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2318.md",
+      "sha256": "7b5081037fcb6a21c5025cf11b3f1b46b18815bfdec69936e7003aed4a00a45a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2318"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2089.md",
+      "sha256": "c37170e60b5322c6dea4cef05aebb15eee9190cb81934a3faccfc7ca675d6cd2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2089"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1145.md",
+      "sha256": "d279443ca4b497bf126b46e62d4673978a468ac31c346da8ff0967e34178077d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1145"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3040.md",
+      "sha256": "e0539e2270ba4767d2ae6fdf0f3178d306bef5bd16e17825398a147951ed066a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3040"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1114.md",
+      "sha256": "f777bdf377f158514563321a546c604300064369abc0351bdc7fae930ba44ad5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1114"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3011.md",
+      "sha256": "5e2bad10461f772486e8f78cda66874adaf8964b4bfcefe7fedb24767ebe39f3",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3011"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1054.md",
+      "sha256": "ea89aeb43dcab7d938e7a2b4400227196c682984ae5d6b6d5a96cc711ef86f3b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1054"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1045.md",
+      "sha256": "39188836a2dc3855b36d1a9cb393aebfed9a6ed46d318df72f34fb2634fdd4d4",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1045"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1105.md",
+      "sha256": "9e7aa59910794506412f0484fa9733bab094cf749904359e7b9d1c5e4984c2ac",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1105"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1014.md",
+      "sha256": "151b07a9a4f2f8004f23f25645b7c6de123d8eb6e88b0817c986a4b08f05f074",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1014"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3051.md",
+      "sha256": "e180e6764fa6165e6d4e3134bd13c6194e19cd53c21839308ccec57cf5495bf3",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3051"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1082.md",
+      "sha256": "5916b167e06425cb41b5288554857c6f343932720625893486da184bda908f55",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1082"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2309.md",
+      "sha256": "53e010e509d0684d4f535ca4819122c602b969c4b330a7f8422ac8cd765de67a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2309"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2098.md",
+      "sha256": "3803d30f21b09c496ec4633d87a28ce9100cb0adfeb869c6d719fdba767df878",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2098"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3065.md",
+      "sha256": "07acf620d70eac566ec45912905eaaf89a22abb7d72c23c313f4abd04f22b12f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3065"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1020.md",
+      "sha256": "22ec1234709183ecafe39cafb97fb174e2b12776e51e84e3760b06bc36f8a6b7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1020"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2249.md",
+      "sha256": "4feaa09f4aebcaf63dbc5f5bfd130bfd73830dd7b9b2712c58a2fd914a41e6ce",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2249"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3034.md",
+      "sha256": "b7a754ea0f4b7a7c43357b817c7dd2edfaeee7a233f2d107774ad62ac3100ab9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3034"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1131.md",
+      "sha256": "d21d0395a30861c77c53d83d20099d5562858296b985de07e5cf2b89d2277e74",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1131"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1071.md",
+      "sha256": "8d9327603a171190fd635e5fbe8d67325ffc63f836ea97bb54057feb1147f356",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1071"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2218.md",
+      "sha256": "c6b173630502e127ba5e4d8716a819d92dd34b5b557713d5ff9acfd995a3e1df",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2218"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2189.md",
+      "sha256": "da57bbc5d1088d135c1da690ca5de952a2f9c99a59bf9d35a18503da8415ec51",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2189"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1061.md",
+      "sha256": "f355844a1f86bb8f1950aff0839199c24c57dadfd5b60a391ae7b8496147f8e7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1061"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2199.md",
+      "sha256": "a3b6e34becc8d0de0b5b07988c7e7e338db96f4b44c9c161002f548159383b54",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2199"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2208.md",
+      "sha256": "6227e52069246326528752ed03745f479dcf198a438b64696469981531a37aa1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2208"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1121.md",
+      "sha256": "f75162e245dd8760c6cb6fc2a2e77293abcf6d2db6dabbc21fea5c575381a7e1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1121"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3024.md",
+      "sha256": "cbe171f2e9b1a43adaa73a32dc5650bd297258b3c88cc2822413d3488a4f4580",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3024"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2259.md",
+      "sha256": "980412ada7d28eb902b25b0aa2bf3eda7da126c1244df76211f207365102e6e8",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2259"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2088.md",
+      "sha256": "a9207f895303ec1ae01ee2070d2a9d79e0b21e22456137624e23b5c24cbce141",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2088"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2319.md",
+      "sha256": "4b2ac8a8a055ea1382b39d6f5f2418f5b8bd16177b2912a775eebbbae9bcf254",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2319"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1092.md",
+      "sha256": "d14f8b074ff9ef5e8a2d27029c1ea7dbf88eb485a65d0f403dbdd1d65c4d4d67",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1092"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1144.md",
+      "sha256": "7d2cf726ec4b5c37d18a79c2b35ef56b1d41272d7859074dd5f96ad958bf7098",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1144"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3041.md",
+      "sha256": "497675dd730a3636b2751fb33b3a2d8b63e7cf635ebb35063b8f0d85aeb6e977",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3041"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1004.md",
+      "sha256": "245b1dd1c5947d146ab7990b8d9fd50bc787653f8708e4aedadd9ae0e0c89df6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1004"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1115.md",
+      "sha256": "514042b83ddd1e5c03b73df48784a0ab0828644a3611dd9d8db025f9523123bb",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1115"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3010.md",
+      "sha256": "1bd551a47190885c3020d31c58de8dad9e37c84f7c471c16b4aa901746a26426",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3010"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1055.md",
+      "sha256": "a14bda25d36d4451afbeec886e15a5fdbf11f17e80d4cd7db761b52fd1efa3a4",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1055"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1086.md",
+      "sha256": "fa92d338bb9307039e028b3a1d543fc730bcd1f3a12d7da52e8a191c11a318a3",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1086"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3030.md",
+      "sha256": "d1ea24d2815da6b2ad488203348a1c2495334da50b29ba1d29b967cc661c1d97",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3030"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1135.md",
+      "sha256": "9ec41985ed7635dbf12b5a787f39ea7a13b1a3a90e13ffb20f0c28219af9b101",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1135"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1075.md",
+      "sha256": "98fe5a4e5a30db49ef03aebddda3ae4d7791075fbaf4fea84788b46b83b77ef9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1075"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3061.md",
+      "sha256": "d6e9bc99c32f853b6386f0565e7b040d4d523406b0ed134b2ba59cbed4d93503",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3061"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2279.md",
+      "sha256": "1ce8e16f461246b943e085440c6009970128eefc8cba0c525b37c5b2aa15e46c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2279"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1010.md",
+      "sha256": "358b230b594bb8617fdefbe4a2fd5600d2d661e0d6d135d3d407fe5867880f03",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1010"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3055.md",
+      "sha256": "9a727668d7fac855a7c0fc00c6fb5cc9a3986e5302adf2caf5c673e489189eb2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3055"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1041.md",
+      "sha256": "7d4a5946b6e67928a5b9ee15774a4a2e19c5c614ac4a9f2060baa08887ae4d90",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1041"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3004.md",
+      "sha256": "74e0ffb047096b2961f9735dc63f4202962cfa814e637f1267b22de56fdbdbf8",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3004"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1101.md",
+      "sha256": "fe82a3f3210cfc012890fe2cf52742404aaad675388faf131f2d780a3a17497e",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1101"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1111.md",
+      "sha256": "c2d523eeed84ce5024a9eea5ddbf4eb2f9b3b8060f3b94ddcbdae51cffa108f6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1111"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3014.md",
+      "sha256": "512cbe244c676d7270e0e6e3ab35832ee5534205649fb69eeab52fac77058425",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3014"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2238.md",
+      "sha256": "acf13c300773f30263e0ab41915e50d08b7e2192205df7c8d22b715719d61d55",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2238"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1051.md",
+      "sha256": "430a64e276dd45b36b2fe282b2f0abcecd8c59808984c87953274dc4c9cf97ef",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1051"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1140.md",
+      "sha256": "545cdf10b19cf3a73748e5af8f204b7c5763ac9487df4c760c5091b6a4e0f68a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1140"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3045.md",
+      "sha256": "702f03e91e61a0e9d27c5f0964f0d3544b802ccac5b6a189561844eb19ec0dde",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3045"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2329.md",
+      "sha256": "8b9920b52b521ad52bceb8ec705511e227e755aca1ef775cf29dc668d8aaac48",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2329"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2269.md",
+      "sha256": "231188a3e66621da79f9d65bedc145c2aaafb3482e4943a528712c94202dfac6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2269"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1000.md",
+      "sha256": "2a82f112038de51f06f5ba9766575ae544285c61c0f3eac610562b3c4cc0cfe7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1000"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1034.md",
+      "sha256": "d6cad3c1475d791ca5157cf8ba5a9d6212e302998f3e99e43c3aaf96fca117c9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1034"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1065.md",
+      "sha256": "e741481591b99293f267a645bf803b415e9f72656f84bfe766de5b85cb4ddb18",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1065"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1125.md",
+      "sha256": "3bee9fb4a6bf3709f52c1b7d709610bca5c783947441fbe681e626780959b0dc",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1125"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC3020.md",
+      "sha256": "95fecdbb079c9cd9cbd1305e4a55b0d0e984746b5ffb49e4566238e5c5be8e97",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC3020"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2186.md",
+      "sha256": "c661f29a604621abaec4d7a553fea218bc640b129c0500271c9dec83057df2e2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2186"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2217.md",
+      "sha256": "10db2faeb13de1d68d0489eb6d6e7fe5934ba10828bf5a9d968ca88079ff2d6f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2217"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2097.md",
+      "sha256": "65f937d1e4f06a59dd8500ad8bff861e0f9f788b4f9471a2c25f6c89a9bdbfd0",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2097"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2306.md",
+      "sha256": "c0eb3947fa99c4b000b729c02dd0a550ad3cdb84af74d2a2df54775397208ad9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2306"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2246.md",
+      "sha256": "dc879d10abb5926fb4a48ebf9a23e81df612e9331d1191ff88113034e5c88194",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2246"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2064.md",
+      "sha256": "2bc494d042d46b6e7950d20400bb501c75d7aff3a140f95b95ed3208c6099427",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2064"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2124.md",
+      "sha256": "00ae4c46d61e1a53bced99b57cfea6adf318cb54a90569a334ae87902eea61d2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2124"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2035.md",
+      "sha256": "2d8e47c84b164d8c21d9782fa71b893a5e82b441a48d2b06e16d7d50aff74f8c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2035"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2175.md",
+      "sha256": "3d0300d3e8abd2d7993f72f2429e380f67ea460e32023705458405180f023ca3",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2175"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/rules.md",
+      "sha256": "789af714c10f7d825e934ab52ea55eaa1dbabda9a4b57ff0f76349c042ac47ed",
+      "urls": []
+    },
+    {
+      "path": "linters/shellcheck/SC2272.md",
+      "sha256": "dada352d1a9eb96a2267571126d75c769540bba02da8f2ee7381f9f3be37488e",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2272"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2332.md",
+      "sha256": "f38dd3066eedeb7983617a5f4005e1240beafc2cc27acd2e98a6ce741f947737",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2332"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2223.md",
+      "sha256": "da4d1f54c31d2f925e682815d6a874568016fcd2fc255b1960939251d58b7110",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2223"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2141.md",
+      "sha256": "97ed93973e9339b9dedd985398a0f97db5587e4451196dc3e639076aeb9a0dfd",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2141"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2001.md",
+      "sha256": "0fabe35d9df1d1787bd12cf4c14cc5f919c10805f24f1394c1a07457f801772b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2001"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2110.md",
+      "sha256": "beebce84647fe76842feb3fc3b3385172e014809026801c724dae32664b25334",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2110"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2281.md",
+      "sha256": "f5aa77f1624f9808adaa3a4608e4c35c5856d2b8890ec73add59a58390724965",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2281"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2050.md",
+      "sha256": "7090db3162b25468fda2e8d5c8798ba5b3ac451c8dd760e3ffa89a73945e85f4",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2050"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2040.md",
+      "sha256": "c8f5e4291474d1d67155d2c4fdd5cdf7e8b93cfa12c347b27fa4cd7b573aa860",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2040"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2291.md",
+      "sha256": "2f41734c2de960d830f4f57d57500ba04f1e1a8fc2aff60cb36027acac960dec",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2291"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2100.md",
+      "sha256": "a8b110b21e59ceaeae1c123c1314884119640f0e0deb1d7c0106ac6d0063f9e8",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2100"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2011.md",
+      "sha256": "d1f2f09902c8ffc931820af1de4b52d6dcab0ea8433e82e71175d6fa215276a7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2011"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2151.md",
+      "sha256": "7ef1622e20ee3173a002cdd8a574351b76779168231661b913e501cac2c25366",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2151"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2233.md",
+      "sha256": "56ab745c93bdc1744024dad5521da16441993cd86608ea8530934f0d1c8400e2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2233"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2322.md",
+      "sha256": "83ece1d79e06156a1b48d8be31f43678e7fd651641249ebe57d89ca65bbd3242",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2322"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2262.md",
+      "sha256": "c9bfed30cc0429b0682521e1e8b2a6df49794d6f1789ad145c65678fb96773b8",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2262"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2165.md",
+      "sha256": "5c52b3a48de29b472f63167e6c832ed82a323b7d9156fde50234c447f1a6bd68",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2165"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2025.md",
+      "sha256": "4e4b6d0c89986f0613344206775d4c41af2ec92168d6a45403184bea3556dad1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2025"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2074.md",
+      "sha256": "bae209881c65d6e291a486cfd0877a969562fb0c1f125a7b6f0bc182eb1f4546",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2074"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2256.md",
+      "sha256": "247010af53ad9c68319137e451e69b02ca1b10fa0363e514274823b4b3e1882d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2256"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2316.md",
+      "sha256": "4656b9c5eff708a5a7c6a933fb4c8bbabf65914e4d107e6e7030d649bc398303",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2316"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2087.md",
+      "sha256": "d2c99c3b83d9c512f797a1b5f4087a403d7cb9a96757edf85983d4601e6f43f5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2087"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2207.md",
+      "sha256": "0284eb2ac2ccda0b84e8c6fa36aeca96e32adbd9cf05fa75ed7e8527091f61f3",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2207"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2196.md",
+      "sha256": "b4dff42fe7beca6b59302940552c9cae8748bd03295045ec0dc3728c98cc30fa",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2196"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2227.md",
+      "sha256": "a551ac2f4430eccf33706e6f9cdf95e6658ab23c9ff375e5416182bc7650aed8",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2227"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2276.md",
+      "sha256": "abaa919cb4445d5732d803d388f380fc60d489341fcfba67512829558585a3e9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2276"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2285.md",
+      "sha256": "c20fedd2f8047c81001a98210a534243e22a5158382cf867966df5a1710863ef",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2285"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2114.md",
+      "sha256": "6eee58a740d35065d347f4d703d21fbe031aab4c9d75805300372b660c6e2d45",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2114"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2054.md",
+      "sha256": "396b42b0bd03b7aa96ce4c737e9624a0d4dec445723fe8677b804ba0ed090e32",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2054"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2145.md",
+      "sha256": "75a0f215656ccb9b59a739e7fb92eee0209efcf8ee0cf632d0bd3ee3249ed018",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2145"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2005.md",
+      "sha256": "6b824c9b52a921436080a3e021ef2777d5daadae0d8b7bea80835a64d78b0277",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2005"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2302.md",
+      "sha256": "d7389f124119add0359314baf1647391eb81308a5cd23159c90b8d5376267ce1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2302"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2093.md",
+      "sha256": "ded27f06734e807f9e5964af66ff1a64481a712d3d670c64fbd1848cef8027b7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2093"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2242.md",
+      "sha256": "8fb65957a313979f62c7be06e2368a15b18472bc15ee3c18ab6883668204a951",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2242"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2213.md",
+      "sha256": "84b49bc15e3c1017ff3e9c1c35ffcc905b23f3400e22a201eb611e27101428d5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2213"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2182.md",
+      "sha256": "a6a0c0a3a68b969df76bd79906a5629dda533ad2ff56a1f51f26d0b956010ad1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2182"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2031.md",
+      "sha256": "701c02922ee7ee776acb453deb0aec9435a0955b9c85f4a364bc66c0035b3045",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2031"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1089.md",
+      "sha256": "82b66bb5afeaa4b0e4ab1d40ce19e5dea87b5c2354358636ad9b876649b24bc2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1089"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2171.md",
+      "sha256": "190579fa94ab2e5c7ce83c48391e1476ba8d14a42d6817256657b8cdc6066f12",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2171"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2060.md",
+      "sha256": "063e85b032a3afca66255415743fac92d868b18af4be13542a494a851b2927e7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2060"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2120.md",
+      "sha256": "7a62a0083ce88cf20fff195bf32ab71eec31ec6a758d96499b3a870fc733aa18",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2120"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2130.md",
+      "sha256": "ad9f87c4722448ad30ba084ca606ed813780d7d07d52d65ed8f3c0cefa92d1e8",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2130"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2070.md",
+      "sha256": "0567fcd9f33ee209cda83d4e90fb65c18512508c463f31a41995dc2969572536",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2070"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1099.md",
+      "sha256": "7a7bfdd048c7dc1cca4317c7362b7dd692a719bc6e03314375fa65f1a43717cd",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1099"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2161.md",
+      "sha256": "d4b29381ebf6b4e34f6624fa2b998fee97bb8d057f1b8665ebccb0a8fc1ce9a7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2161"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2021.md",
+      "sha256": "493dcc68c9b915e036893d29840702dee9326e3e87a1195059d7d536e8069645",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2021"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2192.md",
+      "sha256": "c034737776e0c68f331975582e3c4971690a30be1825d19cd309e5a10b68800d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2192"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2203.md",
+      "sha256": "0af766a6554674f352237faf0340ed68eee52f5b5bf927ca978a7b69656fc6d9",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2203"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2252.md",
+      "sha256": "e6be46a14bdefdff04f900af5b0aab2bf2a4f93873d869e600d3b1c516e204eb",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2252"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2083.md",
+      "sha256": "13175f5b3b8566468d977b8364bb88db0e17ce6bd069da8510cf43122738b5ac",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2083"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2312.md",
+      "sha256": "8acd61091644da85c7ade13c04529c8b151024350c1e8d100e8143617c308064",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2312"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2015.md",
+      "sha256": "435d2dd103dc383626f61b246b2ee53c95fa25ab6d78103c54ae377d7b8ae661",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2015"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2155.md",
+      "sha256": "22b489f11fe9dfa6d9efef0fc10b28078b5afbdcc7e6381cf5191cc1c67cab48",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2155"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2044.md",
+      "sha256": "ad65ca40e8efe51fa0fd6ca744320af644b19f97d6a2a0f23aa23dad1dcfef17",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2044"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2104.md",
+      "sha256": "6fe0693a2b0f1323e0a5c77bb81595b8bed5e82bc937cc29e635f5748e13143b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2104"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2295.md",
+      "sha256": "46128fcb08f6ed90dcf905da7e60c1060ed126a0f719fc4deb9c3b5742b25bf0",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2295"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2326.md",
+      "sha256": "37e49f5e0656c4e9eacb4804d903e1472a14b2673b5d7e98aed6407e33d69d0e",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2326"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2266.md",
+      "sha256": "5305ef5eeb930fc57b420f7c6c3cf8b713606add869947e282b99d72b49de733",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2266"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2237.md",
+      "sha256": "dae9aadaafb80569e63fff922c595afecef819cb88350425d28497460e8fc559",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2237"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2226.md",
+      "sha256": "ec2d178338b23b34fb7cbcfd77a3edc8f7e964fae1f3a621b9478d808ad53ed5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2226"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2277.md",
+      "sha256": "c9cccf52faedb13a678d7497f078b6a2ac15a8ff39ff9a2deafd3b58ea452486",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2277"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2115.md",
+      "sha256": "b6ccc9009622b648a3020a87ec211dd56fb065f197cc45e679aa3b556e14e46e",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2115"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2284.md",
+      "sha256": "22cb548b71876bd71942d1919a9bc5d0808882de8e11b85e084b058225a48e04",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2284"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2055.md",
+      "sha256": "e5da558f3b74137f825d64879eb57239db096a08c9b56edbb437e0774362a0cb",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2055"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2144.md",
+      "sha256": "f732ad71fc033be13be4492057f1dc0fbb1ba4939cbd7bf99c828c84f5a592f7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2144"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2004.md",
+      "sha256": "e4ff4bb20a5879498b8a7ae83bd854dbf81257943ba0563764dcb88267c82002",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2004"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2092.md",
+      "sha256": "8d3a7510d7828db6c64a450ae6c6675690ed36ad1e8411097a023c7840e26b97",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2092"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2303.md",
+      "sha256": "5b4a4366eb7e16816e884d8a3bfb46bc0f333f9c2d9abaf6ff1b3c768cc3c7bd",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2303"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2243.md",
+      "sha256": "60dee35bd41ae9f1b86230717273722a0c34879fa48691905d01afcd414d670e",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2243"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2183.md",
+      "sha256": "16a15c549ffca7a6d7e9f34613e8819b1539bbaf49ee32247961d9ae357b5f23",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2183"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2212.md",
+      "sha256": "e045cb7fe1c46d648a1ae87e1d0c4957dbb32e827b1b8dc0aea7123dd1fb7325",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2212"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2030.md",
+      "sha256": "964341e2e253fe6d75d2a25331e78718ec3a3091977eb8b0c3bc4c376b23afda",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2030"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2170.md",
+      "sha256": "489a8e84a347528913ad27cc527e6a9f4126fb440281de2ae996dc7215951595",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2170"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1088.md",
+      "sha256": "1982b282b5839550b5f7751a21984c0e041367952fa905cd2a2d2a4a0b79b42c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1088"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2061.md",
+      "sha256": "5cf0d0346f66200b955e8c1d38e827e7e08b9564945f3234a76f43ca73308ac2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2061"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2121.md",
+      "sha256": "77bfc9972dbb498beb1f06a00374eea1e17f0e4918e14cb468966151f63deff1",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2121"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2071.md",
+      "sha256": "78224c1a21a5df32c25a24e8aff81dded1ef695658969733ac07f7b5d959725d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2071"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2160.md",
+      "sha256": "5da5c4bca70fdfa8b3b526683fa82b8ec585ca348ba4ab5a8519b07d6f2ad7ec",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2160"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC1098.md",
+      "sha256": "37de842d2cba3f16d80592b717c511d3ac107686316fc249ca7ae994b24f51d4",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC1098"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2020.md",
+      "sha256": "f9ee61674cfe0aa95fb2ffe8075f1479e91fa2e30731fa475ea04e364d538e13",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2020"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2202.md",
+      "sha256": "e3925977aff95468807c0aed6335a4f139ac526986d0067c788a0c64d784eee6",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2202"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2193.md",
+      "sha256": "d5e442a0a5c8bbec82b075beae7f540529c66d2661ff3bfee0ebfb615502ab3d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2193"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2253.md",
+      "sha256": "a003fe358e2fdb06e1fa75937bd44e3e7e507d529dbe73236921e17a9b362e9f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2253"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2313.md",
+      "sha256": "1b60c53f9b8ae3d6867d933fc6e09d3a5d67d00085686fb79e3f6b041c049658",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2313"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2082.md",
+      "sha256": "8adc79132829b0cbeedb36520a7328fca10ad4d3f5a112b193a60dac620a4c58",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2082"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2014.md",
+      "sha256": "730d29c57e17ee18e285ba6fccbce9f401b90fcf5fe4a430a3efdaa199e44f9a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2014"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2154.md",
+      "sha256": "a99c40426710554a0f48d8c5c78dee28bc4cf4f936aae8d536666e6a265ae60a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2154"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2045.md",
+      "sha256": "89487c4e632b7d2e229918f551bf18cf038211a7a221b1e640acea8915524f34",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2045"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2294.md",
+      "sha256": "5c906cca4c6b521a6d54e0f6879d9d3249a68aac8faaf2cf8029f89c42121563",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2294"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2105.md",
+      "sha256": "633930df6694f5b8d80aef0cf3c2ea4acb35dc28f667d47ea7cafab7b46fbb97",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2105"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2327.md",
+      "sha256": "8cf2986054edfe8fe36ef2e8713a4cef43682bd2766544ae9aebad5e6c1f7ab2",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2327"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2267.md",
+      "sha256": "14a03ca09a3f75a15bd3540d2f188adbb0181bea2d01b156770d88836e244c25",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2267"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2236.md",
+      "sha256": "5e2a9af6142c9775bd403bfbd433594ea2a3ef0a9da9870df0c44f5106db93d5",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2236"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2216.md",
+      "sha256": "894dde7984ce4fe9c40be93698173a39fad1d1cf8ecd476537ba85defedcddd3",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2216"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2187.md",
+      "sha256": "fa1d965e72334fa231cf9960bfefafacecb1f328442e45bee8ac3efd2874403b",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2187"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2307.md",
+      "sha256": "e5cbb1619182fb8f89a112e54ad72476f54cc8434f653f096e63da747525472d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2307"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2096.md",
+      "sha256": "f6e69f797db2ef26b9a424d29c34d53de311a66dec8cc0f6a0e1982b7cd4955d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2096"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2247.md",
+      "sha256": "d975cc78c0b85237b31ca1407ca3b1df92085dd5b6d71517ea554d5cff9c6ae7",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2247"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2065.md",
+      "sha256": "d0c143cc21f86d43fe72928180f9b681f25ed0285ce96e30a1ccd64d8e08be2d",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2065"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2125.md",
+      "sha256": "a770c4dd5aecb7eec47513689e8e0afb83101679e72fdd99cd29640a0855a4fb",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2125"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2034.md",
+      "sha256": "0fa43bcb699894bc1da37c1f4d84a12df71be23196020508bb99726b56e1d68a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2034"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2174.md",
+      "sha256": "7707459e79ec049eb5e8ca9676274a1bd036badcd62c1af38266eb3fc86061ce",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2174"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2273.md",
+      "sha256": "c004d3d6cc8b7bad59e43f0b6159f4e49e41c0b4a4357e80419f03c21ff0281c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2273"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2333.md",
+      "sha256": "fcf280627a8b8344f084bc6a4de084c96cde11e527a362ddc30fbec706fe9b24",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2333"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2222.md",
+      "sha256": "a115b88e7f068053edb336c6a6fd57e4bf4faa4d0f5b1109f0bdf6455a6e6a7a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2222"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2140.md",
+      "sha256": "4c38f04c04c5b179ebd69b3352c0fa41d62969ef7a0973a65a497bd7c14bd523",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2140"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2000.md",
+      "sha256": "16199813a169f8507f0d7feb237774267545850f1687325fcb113dbe5c304e9f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2000"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2280.md",
+      "sha256": "78dc50c377bf42e575e63493cab0771493e986c9bc89faac8c12876db5c4f2e4",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2280"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2111.md",
+      "sha256": "be9e10a7020afaa661e58229d588ff6606f1cfbf6965a769e32ddf46ac8ce6cf",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2111"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2051.md",
+      "sha256": "ec1b9c22411798b9cb3981e3609e35963afec6b79e339267f842a5de6c09f83f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2051"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2041.md",
+      "sha256": "f622a94eca20a8d4d455f0d9f2e9dac0ca266f332a6686c304a32f91d807bd23",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2041"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2101.md",
+      "sha256": "a1440eeaaf7ac8ba3a6758f66dd4e1127cee63c81079383a15e564f86e1b0b08",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2101"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2290.md",
+      "sha256": "d5886b9f76b3779a3d24327006d6bfbd578c1fb66a0232d52051b18024356276",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2290"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2010.md",
+      "sha256": "5f26cef18f5c1a3be3c5b3ff0ed3e1fd49235bed3dcea0222d6d64b1508e6685",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2010"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2150.md",
+      "sha256": "c6b793496214aea13b2201073dc81efae945fbe83a4d04b7c4dc2d467718bc0c",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2150"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2232.md",
+      "sha256": "937563d0db58a76083acc52115b8fbfb1ccb2f6e7337752ecea2766c08924371",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2232"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2323.md",
+      "sha256": "5a326205d266b67d48822e807bce97df028d79e6c676e8aa3e70a5524602ba6f",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2323"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2263.md",
+      "sha256": "ccbce36b1663fb1db2badc1acb5cec35e0d745920bfc3c870e7075464dc988da",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2263"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2164.md",
+      "sha256": "c4300a9e221e9624758ed579f072df20fbf5096cc3d55e09c2cca353ff931494",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2164"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2024.md",
+      "sha256": "0378092d19fb7ba6f984e08d98c58cda693d2faac18dcc2e1ab8eb4949a26231",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2024"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2075.md",
+      "sha256": "9cce7e1c5fc093e4fbd6692bc058a58a3e0f39bf7c64992a461289f7cdf71240",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2075"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2257.md",
+      "sha256": "887fb1aa09c8dae892ed4b67ba4cc3633be7e87cfc97acd17f43fc8041b3cc3a",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2257"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2086.md",
+      "sha256": "7ca9c2090942edab2a34d3ffd3443d1d7ddc22c3fa68aaadd8f058999818fc78",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2086"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2317.md",
+      "sha256": "86a7513f0c4aa33e67bfe72d7f924aa32c31f9a9134ec18120017447bcd70c13",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2317"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2197.md",
+      "sha256": "6db11089abbb156cff6edffaecb74bd74d33f93248043395514d911991d36c12",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2197"
+      ]
+    },
+    {
+      "path": "linters/shellcheck/SC2206.md",
+      "sha256": "8c7ffd9b6e31a8c9a2282f64471975f6b075d84b90c4491789e812d77f7f14ef",
+      "urls": [
+        "https://www.shellcheck.net/wiki/SC2206"
+      ]
+    }
+  ]
+}

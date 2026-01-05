@@ -29,7 +29,7 @@ def build_context() -> ssl.SSLContext | None:
 
 def diagnose(url: str, timeout: float = 15.0) -> None:
     context = build_context()
-    request = Request(url, headers={"User-Agent": "language-specs-mcp/diagnose"})
+    request = Request(url, headers={"User-Agent": "specforge-mcp/diagnose"})
     start = time.monotonic()
     try:
         with urlopen(request, timeout=timeout, context=context) as response:

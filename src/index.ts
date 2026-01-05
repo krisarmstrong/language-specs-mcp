@@ -99,7 +99,37 @@ const LANGUAGE_SET = new Set<SupportedLanguage>(LANGUAGES);
 const CATEGORY_SET = new Set<(typeof CATEGORIES)[number]>(CATEGORIES);
 const SPECS_CACHE_TTL_MS = 60_000;
 const SEARCH_INDEX_CACHE_TTL_MS = 60_000;
-const RESOURCE_PAGE_SIZE = Number.parseInt(process.env.RESOURCE_PAGE_SIZE ?? "500", 10) || 500;
+
+const DEFAULT_RESOURCE_PAGE_SIZE = 250;
+const MIN_RESOURCE_PAGE_SIZE = 25;
+const MAX_RESOURCE_PAGE_SIZE = 1_000;
+
+function normalizeResourcePageSize(raw?: string): number {
+  const parsed = Number.parseInt(raw ?? "", 10);
+  if (Number.isNaN(parsed)) {
+    return DEFAULT_RESOURCE_PAGE_SIZE;
+  }
+  return Math.min(MAX_RESOURCE_PAGE_SIZE, Math.max(MIN_RESOURCE_PAGE_SIZE, parsed));
+}
+
+const RESOURCE_PAGE_SIZE = normalizeResourcePageSize(process.env.RESOURCE_PAGE_SIZE);
+
+const SEARCH_FALLBACK_STRATEGIES = ["scan", "warn"] as const;
+type SearchFallbackStrategy = (typeof SEARCH_FALLBACK_STRATEGIES)[number];
+
+function normalizeSearchFallbackStrategy(raw?: string): SearchFallbackStrategy {
+  const candidate = (raw ?? "scan").trim().toLowerCase();
+  if ((SEARCH_FALLBACK_STRATEGIES as readonly string[]).includes(candidate)) {
+    return candidate as SearchFallbackStrategy;
+  }
+  console.warn(
+    `Invalid SEARCH_FALLBACK_STRATEGY=${raw}; defaulting to "scan". Set to "warn" to skip markdown fallbacks.`,
+  );
+  return "scan";
+}
+
+const SEARCH_FALLBACK_STRATEGY = normalizeSearchFallbackStrategy(process.env.SEARCH_FALLBACK_STRATEGY);
+const SEARCH_FALLBACK_WARN_ONLY = SEARCH_FALLBACK_STRATEGY === "warn";
 
 type SearchIndexEntry = {
   path: string;
@@ -299,35 +329,48 @@ async function searchSpecs(query: string, options: SearchOptions = {}): Promise<
   const results: string[] = [];
   const queryLower = query.toLowerCase();
   const missingIndexLanguages: string[] = [];
+  const fallbackWarnings: string[] = [];
+  const fallbackLanguages = new Set<string>();
 
   for (const language of LANGUAGES) {
     const entries = await loadSearchIndex(language);
     if (!entries) {
       missingIndexLanguages.push(language);
-      if (!allowFallback) {
+      fallbackLanguages.add(language);
+      if (!allowFallback || SEARCH_FALLBACK_WARN_ONLY) {
+        const reason = !allowFallback
+          ? "allow_fallback=false"
+          : `SEARCH_FALLBACK_STRATEGY=${SEARCH_FALLBACK_STRATEGY}`;
+        fallbackWarnings.push(
+          `Search index missing for ${language}; skipping markdown fallback (${reason}).`,
+        );
         continue;
       }
-      continue;
     }
-    for (const entry of entries) {
-      if (!entry.content.toLowerCase().includes(queryLower)) {
-        continue;
-      }
-      const matches = extractLineMatches(entry.content, queryLower);
-      if (matches.length === 0) {
-        continue;
-      }
-      results.push(
-        `## ${language}/${entry.category}/${entry.name}\n\n${matches.join("\n\n---\n\n")}`,
-      );
-      if (results.length >= 10) {
-        return results.join("\n\n===\n\n");
+    if (entries) {
+      for (const entry of entries) {
+        if (!entry.content.toLowerCase().includes(queryLower)) {
+          continue;
+        }
+        const matches = extractLineMatches(entry.content, queryLower);
+        if (matches.length === 0) {
+          continue;
+        }
+        results.push(
+          `## ${language}/${entry.category}/${entry.name}\n\n${matches.join("\n\n---\n\n")}`,
+        );
+        if (results.length >= 10) {
+          return results.join("\n\n===\n\n");
+        }
       }
     }
   }
 
-  if (allowFallback) {
+  if (allowFallback && !SEARCH_FALLBACK_WARN_ONLY && fallbackLanguages.size > 0) {
     for (const spec of specs) {
+      if (!fallbackLanguages.has(spec.language)) {
+        continue;
+      }
       if (results.length >= 10) {
         break;
       }
@@ -346,21 +389,31 @@ async function searchSpecs(query: string, options: SearchOptions = {}): Promise<
     }
   }
 
+  const fallbackSummary = fallbackWarnings.length
+    ? `Search fallback notes:\n${fallbackWarnings.join("\n")}`
+    : "";
+
   if (results.length === 0) {
     const warning =
       !allowFallback && missingIndexLanguages.length > 0
         ? `\n\nSearch fallback skipped; missing indexes for: ${missingIndexLanguages.join(", ")}`
         : "";
-    return `No results found for: ${query}${warning}`;
+    const summarySuffix = fallbackSummary ? `\n\n${fallbackSummary}` : "";
+    return `No results found for: ${query}${warning}${summarySuffix}`;
   }
+
+  const outputLines = results.slice(0, 10).join("\n\n===\n\n");
+  let output = outputLines;
 
   if (!allowFallback && missingIndexLanguages.length > 0) {
-    results.push(
-      `Search fallback skipped; missing indexes for: ${missingIndexLanguages.join(", ")}`,
-    );
+    output += `\n\n===\n\nSearch fallback skipped; missing indexes for: ${missingIndexLanguages.join(", ")}`;
   }
 
-  return results.slice(0, 10).join("\n\n===\n\n");
+  if (fallbackSummary) {
+    output += `\n\n===\n\n${fallbackSummary}`;
+  }
+
+  return output;
 }
 
 async function getSpec(language: string, category: string, topic: string): Promise<string> {
@@ -460,7 +513,7 @@ async function getLinterRule(language: string, linter: string, rule: string): Pr
 
 const server = new Server(
   {
-    name: "language-specs",
+    name: "SpecForge",
     version: "1.0.0",
   },
   {

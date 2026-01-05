@@ -1,0 +1,39 @@
+{
+  "language": "r",
+  "generatedAt": "2026-01-05T15:15:50.042012+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "76d4bd18c346ff1abad44f35bcb66103f7abf0d0685f6aee057587d96be0fceb",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "6fdbe60669e4ea14da56f02dd1dcf45f11e93f053f7f6fe2e5b463ce8c3d1d4c",
+      "urls": [
+        "https://styler.r-lib.org/"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "1abcc500942c9d8cf113a42b18573c75eef7e74b1065192a0593d58588d8aa3b",
+      "urls": [
+        "https://cran.r-project.org/manuals.html"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "0f7c65bc2c79a45d3ae9495a11b1bb867f743fe40d97f68b023e88f20516afd8",
+      "urls": [
+        "https://cran.r-project.org/doc/manuals/r-release/R-lang.html"
+      ]
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "3f76f24f19e7fa444194e0f2fe2c87ee4eb7b244ddfed697ee85d40ce1484b4c",
+      "urls": [
+        "https://github.com/r-lib/lintr"
+      ]
+    }
+  ]
+}

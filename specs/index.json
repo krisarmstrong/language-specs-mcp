@@ -1,0 +1,390 @@
+{
+  "generatedAt": "2026-01-05T15:15:41.947982+00:00",
+  "languages": [
+    {
+      "language": "assembly",
+      "fetchedAt": "2026-01-04T18:23:27Z",
+      "counts": {
+        "spec": 7,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "bash",
+      "fetchedAt": "2026-01-04T18:23:43Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 3,
+        "linters": 522,
+        "formatters": 2,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "basic",
+      "fetchedAt": "2026-01-04T18:23:31Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "batch",
+      "fetchedAt": "2026-01-04T18:23:40Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "c",
+      "fetchedAt": "2026-01-04T18:30:09Z",
+      "counts": {
+        "spec": 2,
+        "stdlib": 2,
+        "linters": 10,
+        "formatters": 2,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "clojure",
+      "fetchedAt": "2026-01-04T18:53:55Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "cpp",
+      "fetchedAt": "2026-01-04T18:23:59Z",
+      "counts": {
+        "spec": 2,
+        "stdlib": 2,
+        "linters": 10,
+        "formatters": 2,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "csharp",
+      "fetchedAt": "2026-01-04T18:24:14Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 5,
+        "formatters": 2,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "css",
+      "fetchedAt": "2026-01-04T18:24:27Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 143,
+        "formatters": 2,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "dart",
+      "fetchedAt": "2026-01-04T18:52:50Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 85,
+        "formatters": 2,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "dockerfile",
+      "fetchedAt": "2026-01-04T18:55:03Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 67,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "elixir",
+      "fetchedAt": "2026-01-04T18:53:45Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "git",
+      "fetchedAt": "2026-01-04T18:31:10Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 2,
+        "formatters": 1,
+        "patterns": 2
+      }
+    },
+    {
+      "language": "go",
+      "fetchedAt": "2026-01-04T18:43:59Z",
+      "counts": {
+        "spec": 2,
+        "stdlib": 349,
+        "linters": 114,
+        "formatters": 5,
+        "patterns": 2
+      }
+    },
+    {
+      "language": "haskell",
+      "fetchedAt": "2026-01-04T18:54:05Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "html",
+      "fetchedAt": "2026-01-04T18:30:48Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 87,
+        "formatters": 2,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "java",
+      "fetchedAt": "2026-01-04T18:47:16Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 228,
+        "linters": 7,
+        "formatters": 2,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "javascript",
+      "fetchedAt": "2026-01-04T18:57:21Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1176,
+        "linters": 212,
+        "formatters": 3,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "julia",
+      "fetchedAt": "2026-01-04T18:53:23Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "kotlin",
+      "fetchedAt": "2026-01-04T18:47:57Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 2,
+        "linters": 4,
+        "formatters": 2,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "lua",
+      "fetchedAt": "2026-01-04T18:48:06Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 2,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "markdown",
+      "fetchedAt": "2026-01-04T18:54:39Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 54,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "ocaml",
+      "fetchedAt": "2026-01-04T18:54:28Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "php",
+      "fetchedAt": "2026-01-04T18:52:13Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "powershell",
+      "fetchedAt": "2026-01-04T18:48:33Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 4,
+        "linters": 2,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "python",
+      "fetchedAt": "2026-01-04T18:48:44Z",
+      "counts": {
+        "spec": 2,
+        "stdlib": 1,
+        "linters": 63,
+        "formatters": 3,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "r",
+      "fetchedAt": "2026-01-04T18:52:59Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "ruby",
+      "fetchedAt": "2026-01-04T18:52:37Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "rust",
+      "fetchedAt": "2026-01-04T18:48:54Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 3,
+        "linters": 824,
+        "formatters": 2,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "scala",
+      "fetchedAt": "2026-01-04T18:53:35Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "sql",
+      "fetchedAt": "2026-01-04T18:51:27Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 11,
+        "linters": 1,
+        "formatters": 2,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "swift",
+      "fetchedAt": "2026-01-04T18:51:41Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 2,
+        "formatters": 2,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "typescript",
+      "fetchedAt": "2026-01-04T19:32:36Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 8,
+        "linters": 15,
+        "formatters": 3,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "yaml",
+      "fetchedAt": "2026-01-04T18:54:52Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    },
+    {
+      "language": "zig",
+      "fetchedAt": "2026-01-04T18:54:17Z",
+      "counts": {
+        "spec": 1,
+        "stdlib": 1,
+        "linters": 1,
+        "formatters": 1,
+        "patterns": 1
+      }
+    }
+  ]
+}

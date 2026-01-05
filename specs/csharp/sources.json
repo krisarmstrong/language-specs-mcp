@@ -1,0 +1,73 @@
+{
+  "language": "csharp",
+  "generatedAt": "2026-01-05T15:15:48.588178+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "2977f349705d34396f5628b1ed8c6724f6b416b4b181a550d248a118913314b5",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "42bb66f2d6967c6cc9168efa8ea8fa6ca8e2c729d1b3b44a9a59f08a2f954890",
+      "urls": [
+        "https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-format"
+      ]
+    },
+    {
+      "path": "formatters/dotnet-format.md",
+      "sha256": "af93d7f4e38564385f6ff3f1bd722cebf3055bdd7267b10afe30750842281f5e",
+      "urls": [
+        "https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-format"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "5506a8e9ba89e45ab5f48858035327d6161a3adae3fe26ba27b3927e33c97f02",
+      "urls": [
+        "https://learn.microsoft.com/en-us/dotnet/api/"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "7b05f8faf3d404799e151db9524a0a6d67564eaffd3554eba0cb9a8835bc337d",
+      "urls": [
+        "https://learn.microsoft.com/en-us/dotnet/",
+        "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/"
+      ]
+    },
+    {
+      "path": "linters/overview.md",
+      "sha256": "deaa7576e68760b2371953fa184a8b518b2abd30c7b610483dffbf77aff2a35c",
+      "urls": []
+    },
+    {
+      "path": "linters/dotnet-analyzers/overview.md",
+      "sha256": "b36e664fd22686a6caf0854fdbb991844af16542fbfabe3c9065f241d9c05ccc",
+      "urls": [
+        "https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview"
+      ]
+    },
+    {
+      "path": "linters/dotnet-analyzers/quality-rules.md",
+      "sha256": "4ef097b3a9b0e1f6d2536d3ff8b121526a67698040c6f6728b9c46657a6ed699",
+      "urls": [
+        "https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/"
+      ]
+    },
+    {
+      "path": "linters/stylecop/overview.md",
+      "sha256": "8ce3ee42e4dbf0ad0e4eb3853fbe7cba5d131f0af76434764f4f05d5f6ceb3ef",
+      "urls": [
+        "https://github.com/DotNetAnalyzers/StyleCopAnalyzers"
+      ]
+    },
+    {
+      "path": "linters/rules.md",
+      "sha256": "b01712e1e12eb362c9abccd3c7c605df7c5fe387939f05f0ad6371a43d2dd7aa",
+      "urls": [
+        "https://api.example.com"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,409 @@
+{
+  "language": "markdown",
+  "generatedAt": "2026-01-05T15:15:50.004775+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "2dbc9a91ebb86bb0effd11c8a58ec545f4629e7d5a33e6b6e03a173bd9947803",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "5575943ca456feb164902f1688be3763776ba65d5e7c5e6f77960f77a0bb9daa",
+      "urls": [
+        "https://github.com/shurcooL/markdownfmt",
+        "https://prettier.io/"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "6c71c6172fabaea25b77493851067bd24c140a45bc006d255018afd8e6ac12fc",
+      "urls": []
+    },
+    {
+      "path": "spec.md",
+      "sha256": "743388452238a73077a36f8e85efb81d0964d2d5cf993bf48ace00b958582fd4",
+      "urls": [
+        "https://spec.commonmark.org/0.30/"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD044.md",
+      "sha256": "81e390b0a67ab63a916ba788803a0994619163e232bf63e19bdc4f12d08aa7bc",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD021.md",
+      "sha256": "cec800c1290c616385ba50d2296fb97e318842eed992fc33b882927d907629ec",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD031.md",
+      "sha256": "f2224d239e23cf7128bcaa2a66ae22fb969758707d26c075fb169a136ae4309a",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD060.md",
+      "sha256": "eec29cb5f665dedd729d7ea6d1ad2da5ef454346a59a866ab070d7008f6a647f",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD054.md",
+      "sha256": "b96cb5c998301e0473d63f2f134f0e4eff34e5212e38cc900c0a65f914d40188",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD005.md",
+      "sha256": "80cf4fd30a678ebaca48b9b301787553ade3f764dec913a8d9ccdaec4f711267",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD025.md",
+      "sha256": "bf6778dddf9878d320009ccd8f4a21efaa4e6546addc746984fe49f00666b8ba",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD040.md",
+      "sha256": "5d9e5c8c9ff63b8f32c7db22cfeaae0c5ac39e649a92408e6a1d3d9052f255dc",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD011.md",
+      "sha256": "4f451b484340a7c70a09f59645f038ac6efafb161a4ba6a1f4ae211131f34e33",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD001.md",
+      "sha256": "991ee39ce74e29f58e4a5421a78bdb6127472e8da9c24d6dbb6f3c7675db0f6a",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD050.md",
+      "sha256": "7d5307cc91c1b142b8b56e9aad13285c371f83de356a912847495a62896c7e70",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD035.md",
+      "sha256": "54ce99ed5a33d72f747c73a94bd32051a73df2f61e8a2109bf39086d126a82df",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/overview.md",
+      "sha256": "b2a1a7099074bb9b82ca9fb4bc76e50cf469ef44424e33fe9348decb04ae5388",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD024.md",
+      "sha256": "537f1405dad84e495fcc93ff61bc1294699f213fb7316225127e6dd4d4003533",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD041.md",
+      "sha256": "eb3a647e3da7c606f0bb05d8d18bc42def44ba72b11f3f3bee240a8f4264a2c2",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD010.md",
+      "sha256": "823da8146e0e66372a94f9443201baf953a74f33435f001b5aad097221131fdb",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD051.md",
+      "sha256": "e825bdc5378cd2181592496120ceb3669a14085aec6ca2eb7acd749540a026aa",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD034.md",
+      "sha256": "b4e30d0818bc778eaa31050cb817c34cea36fba18c984031b91c0e4b68719f1f",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD014.md",
+      "sha256": "9aaea827415e92d0c2b21309822d2d3276111c1aa76a4b6b28da836f9d7d8ad1",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD045.md",
+      "sha256": "0fbd333b315b3418e97ecd5fe499d9ac1fdba6596856f45518c5d5bae3533ff0",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD020.md",
+      "sha256": "624c8d3450b0bc8dde18278bdecc8edac84b5989e1037fa301f73fd460dce37e",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD030.md",
+      "sha256": "6900fa700c37045706397d9f0833e8af83ef5ea4c0492032adb39ec5eeef4e1e",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD055.md",
+      "sha256": "a44f3093b503c49d2540b0147be33174f0be7b5fda0828469b743f704864239b",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD004.md",
+      "sha256": "e3006fd74b0da5dd19e0e58a113ebd4ee2e2294236fd8df8bd723eb931584072",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD019.md",
+      "sha256": "1e6b03aecd37af167ee4310334d613687d9e6dea35bcc92ffc661ccffdf31618",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD048.md",
+      "sha256": "0f1514bafefa3b8244e13ef883c33eac0a1e70825dd4a2adcbc59c2e8ce3a124",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD058.md",
+      "sha256": "dda9bec05444d3ac050098bc4ce28a89bf3779e405455ca305a10c6c47bed8cb",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD009.md",
+      "sha256": "cb979bb0e9678f065fc003f2f063bde2aa55f550a27c1ffe4610c4e005b30935",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD029.md",
+      "sha256": "097fabcd9d155a272a2e9498feb91c4f58a8013da975d939f27942b1fcaa2be0",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD039.md",
+      "sha256": "7da61333de35487988a1191927a9bb9eb5a46d470ee8b0243bd0acc3e190f517",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD028.md",
+      "sha256": "a64c8a683ed564ff0abc628aec6d8c79c95f2c8bd3cf4a9826b807c146be7696",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD038.md",
+      "sha256": "2049d5ac496a19bf3fb9e376809503906fb139c7385de85de7c3409c7d4c70b2",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD018.md",
+      "sha256": "f0931288d60fcf272f759f30d1bde9e88b5fa4a1afc4dc6b2226bd56a7b105f2",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD049.md",
+      "sha256": "6d69e64be7f7e897afe6f37c3db52142e8b1425854ad67215b8f5ea8dd52975e",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD059.md",
+      "sha256": "d9127afb38ca1d57111bd5f06acf1751e5ca87ca4dec3e2b427eadf0354e9eed",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD027.md",
+      "sha256": "4ac673f0e6f5cd2ffc9e7dd67e3bd2b9ec0be169911f8af7597f241e867aeb43",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD013.md",
+      "sha256": "cc471957d6bba3730f0598baa6b95123cc123d971d2ea84e69fcf374e9d16247",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD042.md",
+      "sha256": "1ccf96bc193d2267d90970974b4b94d52a40123e0fac4cf2f098ae046014dad6",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD052.md",
+      "sha256": "e8ada79bb4570667fd06284b4dc81c6fdb1122f3d155ca40ccea0b537ecf6e51",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD003.md",
+      "sha256": "c6f4f4af9c84a4dc733282c880abf24e4c67c41a4f2baaf5d1d7a430ad7eb89d",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD037.md",
+      "sha256": "7e2f8e8ef3b44caa41ba5f600290e3088da7a0a3fe3f55bac30f3884d2a62db0",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD046.md",
+      "sha256": "45d71c53cb6837da172bbef56b8d3644e1f153c3779ab6fdfb9b1aba533ea35c",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD023.md",
+      "sha256": "e633e7699aada89bd80dac2e31f265f741e6c07550324bfa51c1bec9eb79a806",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD033.md",
+      "sha256": "90529c1410e01bb9b8ed63e401a8d734c872e085ba33edf42a4963dce9503f77",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD007.md",
+      "sha256": "2bcefd4bb1ea025fb788002c91d9a7c6d4ebf939989eb622653c1506226e196f",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD056.md",
+      "sha256": "2dc4eb36699041679eeee3f3aeb9a7961742430477a58e4ec469e501c4d55c31",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD047.md",
+      "sha256": "40cb0c5d8d3c606bcffa0ef498a74b175bb7853a0fc08615de25becacba68df3",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD022.md",
+      "sha256": "92c48a48e5fcd85a8fa700d823bebc9eb69c47ef0eec141754d5a0a2212d4615",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD032.md",
+      "sha256": "8c532964e5457b6e6cbba8d3ca9e1fd956530152c04c667f0117514b1378c505",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD026.md",
+      "sha256": "03d26ce895372c299ee4ff3e156d470110df3d8755aff66d2265ebc7fb704f65",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD012.md",
+      "sha256": "91cd2c12dca9ffc2f2d74c86606e9fa41c9c7af10366410d9174be93df0fda74",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD043.md",
+      "sha256": "a4ac0661db69b9959bbe16176b745a6d1123f9950cd5c7628d8916bd75b030fb",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD053.md",
+      "sha256": "71046ccab06a5836269ea9211dc525761c2700249d28995c4041c81a1373a6ff",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    },
+    {
+      "path": "linters/markdownlint/MD036.md",
+      "sha256": "7305fb26d3935ea1c1f1cf476edd895b73c9dac9aa1f6055b3dd1a1f14516d2a",
+      "urls": [
+        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
+      ]
+    }
+  ]
+}

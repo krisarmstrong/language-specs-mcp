@@ -1,6 +1,6 @@
-# Language Specs MCP Server
+# SpecForge MCP Server
 
-MCP server providing authoritative language specifications, style guides, and linter rule explanations.
+SpecForge MCP server providing authoritative language specifications, style guides, and linter rule explanations.
 
 **Purpose:** Give AI assistants access to authoritative sources instead of training data garbage.
 
@@ -76,18 +76,19 @@ Requirements:
 - Python 3.14.2
 - pandoc (optional, improves markdown conversion)
 
+## Getting Started
+
+Clone, install, and refresh from GitHub:
+
 ```bash
-cd /Users/krisarmstrong/Developer/_tools/language-specs-mcp
-
-# Install dependencies
+git clone https://github.com/openai/specforge-mcp.git
+cd specforge-mcp
 npm install
-
-# Fetch all specs
-npm run fetch:all
-
-# Build
-npm run build
+npm run refresh
+npm test
 ```
+
+`npm run refresh` runs `fetch:delta` and the generate scripts so the dataset stays consistent. `npm test` verifies the MCP tooling before you deploy or serve the server.
 
 ## Fetching Specs
 
@@ -204,20 +205,43 @@ npm run dashboard
 The dashboard is available at `http://localhost:9000/health.html` and the data lives in `docs/site/health.json`.
 LLMs can also call the data file directly to see freshness, linter/formatter coverage, and tooling sources for each language.
 
+## Automation & Refresh
+
+Keep the specs, indexes, and health metadata up to date with `npm run refresh`. That script runs `fetch:delta`, `generate:all`, and `generate:health` in sequence so the dashboard stays in sync with the latest sources. The same command is wired into `.github/workflows/refresh.yml`, so GitHub Actions refreshes the data every four hours (or whenever you trigger the workflow manually).
+
+Schedule it with your preferred cron/agent. Example:
+
+```bash
+0 */4 * * * cd /Users/krisarmstrong/Developer/_tools/specforge-mcp && npm run refresh >> refresh.log 2>&1
+```
+
+GitHub Actions or a local `launchd` job can call the same command; the script will print progress for each step and bubble up any failure code.
+
 ## How To Use With LLMs
+
+This MCP server is the authoritative source for language syntax, standard library behavior, linter rules, formatter guidance, and idiomatic patterns. Use it to keep LLM outputs aligned to best practices, linting/formatting expectations, tooling versions, and even security/performance callouts buried in the referenced docs.
+
+Before generating code or answering questions, consult these tools:
+
+- `get_spec`: verify the language/category/topic you are about to describe.
+- `get_linter_rule`: read the motivating guidance behind lint rules and how to satisfy them safely.
+- `search_specs`: explore patterns, best practices, or guesswork you want to avoid.
+- `list_available`: confirm what topics exist before making assumptions.
+- `health.json`/`health.html`: check freshness, tooling coverage, and per-language readiness.
+- `tools/versions.json`: stay in sync with the recorded tooling versions so downstream automation and security updates match.
 
 Add a short instruction so the model always queries the MCP server first:
 
 Claude Code (add to `CLAUDE.md` or `AGENTS.md`):
 
 ```text
-When answering language, stdlib, linting, or formatting questions, call the language-specs MCP server first and cite the result.
+When answering language, stdlib, linting, or formatting questions, call the SpecForge MCP server first and cite the result.
 ```
 
 Codex CLI (add to `AGENTS.md`):
 
 ```text
-Always consult the language-specs MCP server for spec/stdlib/linter/formatter details before answering.
+Always consult the SpecForge MCP server for spec/stdlib/linter/formatter details before answering.
 ```
 
 VS Code:
@@ -232,6 +256,11 @@ Tool tips:
 - Use `list_resources` pagination via the returned `cursor` for large catalogs.
 
 Full usage guide: `docs/usage.md`.
+
+## Search & Resource tuning
+
+- Set `allow_fallback=false` or `SEARCH_FALLBACK_STRATEGY=warn` when you want to skip expensive markdown scans for languages that lack a search index; the server will return a warning that lists the affected languages.
+- `resources/list` is already paged, but you can clamp the payload even tighter with `RESOURCE_PAGE_SIZE` (default 250, min 25, max 1000) while iterating through `cursor` values.
 
 ## Data Freshness
 
@@ -340,9 +369,9 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
-    "language-specs": {
+    "SpecForge": {
       "command": "node",
-      "args": ["/Users/krisarmstrong/Developer/_tools/language-specs-mcp/dist/index.js"]
+      "args": ["/Users/krisarmstrong/Developer/_tools/specforge-mcp/dist/index.js"]
     }
   }
 }
@@ -355,9 +384,9 @@ Add to `.claude/settings.json`:
 ```json
 {
   "mcpServers": {
-    "language-specs": {
+    "SpecForge": {
       "command": "node",
-      "args": ["/Users/krisarmstrong/Developer/_tools/language-specs-mcp/dist/index.js"]
+      "args": ["/Users/krisarmstrong/Developer/_tools/specforge-mcp/dist/index.js"]
     }
   }
 }
@@ -448,7 +477,7 @@ This server only helps if the client actually calls the tools. The most reliable
 Add to your project prompt or instructions:
 
 ```
-Before writing or modifying code, consult the `language-specs` MCP server.
+Before writing or modifying code, consult the `SpecForge` MCP server.
 Use `get_spec` for language/stdlib questions, `get_linter_rule` for lint guidance, and `search_specs` if unsure.
 ```
 
@@ -457,7 +486,7 @@ Use `get_spec` for language/stdlib questions, `get_linter_rule` for lint guidanc
 Add to your project prompt or instructions:
 
 ```
-Always check `language-specs` before proposing code.
+Always check `SpecForge` before proposing code.
 Prefer tool output over general knowledge.
 ```
 
@@ -470,12 +499,12 @@ Add the MCP server config (see above), then include a short reminder in your sys
 Depending on your client extension:
 
 - Claude Code / Continue / other MCP-enabled tools: add the same instruction in the workspace or project prompt.
-- If the client supports “always use tool” rules, set `language-specs` for spec/stdlib/lint queries.
+- If the client supports “always use tool” rules, set `SpecForge` for spec/stdlib/lint queries.
 
 Example prompt:
 
 ```
-Use `language-specs` for all spec/stdlib/linter/formatter questions. If you are unsure, run `search_specs` first.
+Use `SpecForge` for all spec/stdlib/linter/formatter questions. If you are unsure, run `search_specs` first.
 ```
 
 ## Is This Worth It?

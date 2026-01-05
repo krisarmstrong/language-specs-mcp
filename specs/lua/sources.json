@@ -1,0 +1,47 @@
+{
+  "language": "lua",
+  "generatedAt": "2026-01-05T15:15:49.997225+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "915bb3a15fd655d28fb2a53076c18ff693e551a589d499b6f7a70f1fe41e8021",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "ff6432e419c1e1939f602ccc7bb8f16b44bf88f9729583486a6d9d47d006dd6d",
+      "urls": [
+        "https://github.com/JohnnyMorganz/StyLua"
+      ]
+    },
+    {
+      "path": "formatters/stylua.md",
+      "sha256": "13263ab7158dabd1dfb2e75042097c3176c19e19f6f108c005990a9479a26088",
+      "urls": [
+        "https://github.com/JohnnyMorganz/StyLua",
+        "https://github.com/JohnnyMorganz/StyLua#configuration"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "61a4bfeda7c6c2715c6314945c8d3a9576a7b32f9d0ad3e2efc79a0ee58b035e",
+      "urls": [
+        "https://www.lua.org/manual/5.4/manual.html#6"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "934dc6a71d8542c8ec9a8d68679b9e4be804d4d361b86c707b4f4a1b55a5a838",
+      "urls": [
+        "https://www.lua.org/manual/5.4/"
+      ]
+    },
+    {
+      "path": "linters/luacheck/overview.md",
+      "sha256": "130f709adc2db25d9a8beb4ff28fbbefad52784e8d1008acfd75ed740367e06e",
+      "urls": [
+        "https://luacheck.readthedocs.io/en/stable/warnings.html"
+      ]
+    }
+  ]
+}

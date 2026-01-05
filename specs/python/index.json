@@ -1,0 +1,725 @@
+{
+  "language": "python",
+  "fetchedAt": "2026-01-04T18:48:44Z",
+  "counts": {
+    "spec": 2,
+    "stdlib": 1,
+    "linters": 63,
+    "formatters": 3,
+    "patterns": 1
+  },
+  "categories": {
+    "spec": [
+      {
+        "category": "spec",
+        "path": "pep8.md",
+        "name": "pep8"
+      },
+      {
+        "category": "spec",
+        "path": "spec.md",
+        "name": "spec"
+      }
+    ],
+    "stdlib": [
+      {
+        "category": "stdlib",
+        "path": "stdlib/overview.md",
+        "name": "stdlib/overview"
+      }
+    ],
+    "linters": [
+      {
+        "category": "linters",
+        "path": "linters/ruff/pyupgrade.md",
+        "name": "linters/ruff/pyupgrade"
+      },
+      {
+        "category": "linters",
+        "path": "linters/ruff/overview.md",
+        "name": "linters/ruff/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/ruff/pyflakes-pycodestyle.md",
+        "name": "linters/ruff/pyflakes-pycodestyle"
+      },
+      {
+        "category": "linters",
+        "path": "linters/ruff/simplify.md",
+        "name": "linters/ruff/simplify"
+      },
+      {
+        "category": "linters",
+        "path": "linters/ruff/pyflakes.md",
+        "name": "linters/ruff/pyflakes"
+      },
+      {
+        "category": "linters",
+        "path": "linters/ruff/pylint.md",
+        "name": "linters/ruff/pylint"
+      },
+      {
+        "category": "linters",
+        "path": "linters/ruff/comprehensions.md",
+        "name": "linters/ruff/comprehensions"
+      },
+      {
+        "category": "linters",
+        "path": "linters/ruff/naming.md",
+        "name": "linters/ruff/naming"
+      },
+      {
+        "category": "linters",
+        "path": "linters/ruff/security.md",
+        "name": "linters/ruff/security"
+      },
+      {
+        "category": "linters",
+        "path": "linters/ruff/bugbear.md",
+        "name": "linters/ruff/bugbear"
+      },
+      {
+        "category": "linters",
+        "path": "linters/pylint/overview.md",
+        "name": "linters/pylint/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/C901.md",
+        "name": "linters/flake8/C901"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/overview.md",
+        "name": "linters/flake8/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F405.md",
+        "name": "linters/flake8/F405"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F702.md",
+        "name": "linters/flake8/F702"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F811.md",
+        "name": "linters/flake8/F811"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F504.md",
+        "name": "linters/flake8/F504"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F524.md",
+        "name": "linters/flake8/F524"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F706.md",
+        "name": "linters/flake8/F706"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F541.md",
+        "name": "linters/flake8/F541"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F401.md",
+        "name": "linters/flake8/F401"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F831.md",
+        "name": "linters/flake8/F831"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F633.md",
+        "name": "linters/flake8/F633"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F821.md",
+        "name": "linters/flake8/F821"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F722.md",
+        "name": "linters/flake8/F722"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F525.md",
+        "name": "linters/flake8/F525"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F707.md",
+        "name": "linters/flake8/F707"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F622.md",
+        "name": "linters/flake8/F622"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/E999.md",
+        "name": "linters/flake8/E999"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F632.md",
+        "name": "linters/flake8/F632"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F723.md",
+        "name": "linters/flake8/F723"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F501.md",
+        "name": "linters/flake8/F501"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F404.md",
+        "name": "linters/flake8/F404"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F521.md",
+        "name": "linters/flake8/F521"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F602.md",
+        "name": "linters/flake8/F602"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F901.md",
+        "name": "linters/flake8/F901"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F841.md",
+        "name": "linters/flake8/F841"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F824.md",
+        "name": "linters/flake8/F824"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F505.md",
+        "name": "linters/flake8/F505"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F704.md",
+        "name": "linters/flake8/F704"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F621.md",
+        "name": "linters/flake8/F621"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F403.md",
+        "name": "linters/flake8/F403"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F502.md",
+        "name": "linters/flake8/F502"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F823.md",
+        "name": "linters/flake8/F823"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F631.md",
+        "name": "linters/flake8/F631"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F407.md",
+        "name": "linters/flake8/F407"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F522.md",
+        "name": "linters/flake8/F522"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F601.md",
+        "name": "linters/flake8/F601"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F506.md",
+        "name": "linters/flake8/F506"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F406.md",
+        "name": "linters/flake8/F406"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F701.md",
+        "name": "linters/flake8/F701"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F523.md",
+        "name": "linters/flake8/F523"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F507.md",
+        "name": "linters/flake8/F507"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F634.md",
+        "name": "linters/flake8/F634"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F542.md",
+        "name": "linters/flake8/F542"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F402.md",
+        "name": "linters/flake8/F402"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F503.md",
+        "name": "linters/flake8/F503"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F822.md",
+        "name": "linters/flake8/F822"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F721.md",
+        "name": "linters/flake8/F721"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F508.md",
+        "name": "linters/flake8/F508"
+      },
+      {
+        "category": "linters",
+        "path": "linters/flake8/F509.md",
+        "name": "linters/flake8/F509"
+      },
+      {
+        "category": "linters",
+        "path": "linters/mypy/overview.md",
+        "name": "linters/mypy/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/mypy/errors.md",
+        "name": "linters/mypy/errors"
+      }
+    ],
+    "formatters": [
+      {
+        "category": "formatters",
+        "path": "formatters/ruff.md",
+        "name": "formatters/ruff"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/overview.md",
+        "name": "formatters/overview"
+      },
+      {
+        "category": "formatters",
+        "path": "formatters/black.md",
+        "name": "formatters/black"
+      }
+    ],
+    "patterns": [
+      {
+        "category": "patterns",
+        "path": "patterns/idioms.md",
+        "name": "patterns/idioms"
+      }
+    ]
+  },
+  "items": [
+    {
+      "category": "spec",
+      "path": "pep8.md",
+      "name": "pep8"
+    },
+    {
+      "category": "spec",
+      "path": "spec.md",
+      "name": "spec"
+    },
+    {
+      "category": "stdlib",
+      "path": "stdlib/overview.md",
+      "name": "stdlib/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/ruff/pyupgrade.md",
+      "name": "linters/ruff/pyupgrade"
+    },
+    {
+      "category": "linters",
+      "path": "linters/ruff/overview.md",
+      "name": "linters/ruff/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/ruff/pyflakes-pycodestyle.md",
+      "name": "linters/ruff/pyflakes-pycodestyle"
+    },
+    {
+      "category": "linters",
+      "path": "linters/ruff/simplify.md",
+      "name": "linters/ruff/simplify"
+    },
+    {
+      "category": "linters",
+      "path": "linters/ruff/pyflakes.md",
+      "name": "linters/ruff/pyflakes"
+    },
+    {
+      "category": "linters",
+      "path": "linters/ruff/pylint.md",
+      "name": "linters/ruff/pylint"
+    },
+    {
+      "category": "linters",
+      "path": "linters/ruff/comprehensions.md",
+      "name": "linters/ruff/comprehensions"
+    },
+    {
+      "category": "linters",
+      "path": "linters/ruff/naming.md",
+      "name": "linters/ruff/naming"
+    },
+    {
+      "category": "linters",
+      "path": "linters/ruff/security.md",
+      "name": "linters/ruff/security"
+    },
+    {
+      "category": "linters",
+      "path": "linters/ruff/bugbear.md",
+      "name": "linters/ruff/bugbear"
+    },
+    {
+      "category": "linters",
+      "path": "linters/pylint/overview.md",
+      "name": "linters/pylint/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/C901.md",
+      "name": "linters/flake8/C901"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/overview.md",
+      "name": "linters/flake8/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F405.md",
+      "name": "linters/flake8/F405"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F702.md",
+      "name": "linters/flake8/F702"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F811.md",
+      "name": "linters/flake8/F811"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F504.md",
+      "name": "linters/flake8/F504"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F524.md",
+      "name": "linters/flake8/F524"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F706.md",
+      "name": "linters/flake8/F706"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F541.md",
+      "name": "linters/flake8/F541"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F401.md",
+      "name": "linters/flake8/F401"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F831.md",
+      "name": "linters/flake8/F831"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F633.md",
+      "name": "linters/flake8/F633"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F821.md",
+      "name": "linters/flake8/F821"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F722.md",
+      "name": "linters/flake8/F722"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F525.md",
+      "name": "linters/flake8/F525"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F707.md",
+      "name": "linters/flake8/F707"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F622.md",
+      "name": "linters/flake8/F622"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/E999.md",
+      "name": "linters/flake8/E999"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F632.md",
+      "name": "linters/flake8/F632"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F723.md",
+      "name": "linters/flake8/F723"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F501.md",
+      "name": "linters/flake8/F501"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F404.md",
+      "name": "linters/flake8/F404"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F521.md",
+      "name": "linters/flake8/F521"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F602.md",
+      "name": "linters/flake8/F602"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F901.md",
+      "name": "linters/flake8/F901"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F841.md",
+      "name": "linters/flake8/F841"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F824.md",
+      "name": "linters/flake8/F824"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F505.md",
+      "name": "linters/flake8/F505"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F704.md",
+      "name": "linters/flake8/F704"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F621.md",
+      "name": "linters/flake8/F621"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F403.md",
+      "name": "linters/flake8/F403"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F502.md",
+      "name": "linters/flake8/F502"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F823.md",
+      "name": "linters/flake8/F823"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F631.md",
+      "name": "linters/flake8/F631"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F407.md",
+      "name": "linters/flake8/F407"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F522.md",
+      "name": "linters/flake8/F522"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F601.md",
+      "name": "linters/flake8/F601"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F506.md",
+      "name": "linters/flake8/F506"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F406.md",
+      "name": "linters/flake8/F406"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F701.md",
+      "name": "linters/flake8/F701"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F523.md",
+      "name": "linters/flake8/F523"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F507.md",
+      "name": "linters/flake8/F507"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F634.md",
+      "name": "linters/flake8/F634"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F542.md",
+      "name": "linters/flake8/F542"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F402.md",
+      "name": "linters/flake8/F402"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F503.md",
+      "name": "linters/flake8/F503"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F822.md",
+      "name": "linters/flake8/F822"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F721.md",
+      "name": "linters/flake8/F721"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F508.md",
+      "name": "linters/flake8/F508"
+    },
+    {
+      "category": "linters",
+      "path": "linters/flake8/F509.md",
+      "name": "linters/flake8/F509"
+    },
+    {
+      "category": "linters",
+      "path": "linters/mypy/overview.md",
+      "name": "linters/mypy/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/mypy/errors.md",
+      "name": "linters/mypy/errors"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/ruff.md",
+      "name": "formatters/ruff"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/overview.md",
+      "name": "formatters/overview"
+    },
+    {
+      "category": "formatters",
+      "path": "formatters/black.md",
+      "name": "formatters/black"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/idioms.md",
+      "name": "patterns/idioms"
+    }
+  ]
+}

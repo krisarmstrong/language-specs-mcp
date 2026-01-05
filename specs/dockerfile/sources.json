@@ -1,0 +1,497 @@
+{
+  "language": "dockerfile",
+  "generatedAt": "2026-01-05T15:15:48.649074+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "74ce01b351d2a5016aa06725152b64d0740ab2f3fdd8239c109714df9d53960b",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "12b4f608daf4424324c80ba2ecc406d751747758175022c8b7ba3421de2af5d3",
+      "urls": []
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "fa6c47b04aba231bec56e05db94e64989a38166a84dc91a21c85a574d94e1fef",
+      "urls": []
+    },
+    {
+      "path": "spec.md",
+      "sha256": "3590eda43371abd21ec1a774e1fd6554fabce129a04b5e07b95d2a1d790d1763",
+      "urls": [
+        "https://docs.docker.com/engine/reference/builder/"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL4004.md",
+      "sha256": "b4ee0af63b893450c9f13acfba149b377c3920f97f4748f3237a1aee043a6e0e",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL4000.md",
+      "sha256": "a6a0efbf12c85da88bc90c4ea0ade475d1bd4d98376508e8aa927ceb722fc741",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/overview.md",
+      "sha256": "f7f3bb2f2a862b293073aa841f6c337de8c3fd0ecfc5e20f8c9a5f2b90fe08dd",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL4001.md",
+      "sha256": "25c438de2d04f7caeabc43092cdeac7dbfbc40f1c63a3db53c452c4b3bc143ea",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL4005.md",
+      "sha256": "b29cf55d11a356ac67d7d949d0a22d8f199a1f52ae553e79c9324f903cee6aef",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3021.md",
+      "sha256": "1343c918af500a88667fd50b0bd5659555d554aa2db10fab13ca5702a8619437",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3015.md",
+      "sha256": "9004067ff3c311113c6a7b5761ce8f9eea3968da8d986455efa033f657d43850",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3044.md",
+      "sha256": "7babbd3178ae17f21e8ec2e6c1c0b51a142671285ebbf12619c0c62cf3694daa",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL1001.md",
+      "sha256": "3926baba41982b8a2844eefeb03654198f3b724ec314e14d228f5ac74301afa9",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3054.md",
+      "sha256": "f5e7fffdb8ea45374108e6b553c1dc131b26ae59c46ef2cf1059b893841a4aeb",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3060.md",
+      "sha256": "126e32adf3aae3747e102ddbc18649c8bd23043152691878dee879718530d0f0",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3040.md",
+      "sha256": "8faabab23b3d3ff1bd3c719d9fca6c2075367c3004528a93e057c0215105361d",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3011.md",
+      "sha256": "e6a3b7d14e0cded93e7e82bcd4937012e4411315477e1e290f642902112e236f",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3025.md",
+      "sha256": "2f5e3a1712dd23418282f3334b79507d8acd57a040e8f6f91f1b2d0f85ba38cb",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3035.md",
+      "sha256": "073f4d0642f6ed010f6f99729e4a074a9791ef58abbdbced02e4f340dfd8917a",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3001.md",
+      "sha256": "13a1cc098a384b639cf84f1022f7f02d2c60938c7be8496701010ea1aa2b57ed",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3050.md",
+      "sha256": "11611aa648982d7f3b11406b66a6b1b97dc2d33a47c0e79910d36886bf1d9120",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3041.md",
+      "sha256": "9428f9ee5285dd034d6fcc9a567570ecbfd4e0c2b980dd15e17ef277e2f69a95",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3010.md",
+      "sha256": "e11b9f8da4e67e533336642b7da7c8670387b9c508664f46b7a79f7bfe051051",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3024.md",
+      "sha256": "7179e600d36edf7408a51d3ae6f35c6be825171ee846a7bc811ca69df435c3dd",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3034.md",
+      "sha256": "3b8c6030b84e9196f7271700474dce0cf31b6a7109406e1c22e13be709254346",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3000.md",
+      "sha256": "0e7f230679bf1aaa6c2ce728b09a8929d483e8e30c4aa3ff7f0f6a5e7ca37133",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3051.md",
+      "sha256": "e7f38430e816e9e7d4f0127786c2c45f83b361a4806d52c64fb556da378265aa",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3020.md",
+      "sha256": "886543c8459c7f1e5a73d046fa6cd94fd8fbf459f352b9752295a54f9e0ca338",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3014.md",
+      "sha256": "4eec3be6a39a450ec4b058f689c83217d1d33739f317b0d1939fcdb859eb1c7b",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3045.md",
+      "sha256": "f3fd07bb9e8aa6551e72d3fd9e166d07fb408e5c504d6d0578f1ca67b6fe9564",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3055.md",
+      "sha256": "8f064d23e52011d39a9a430addc0bbcc924887f8d11f4f743e373b8b350aae8b",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3004.md",
+      "sha256": "c3b1e59a8c0c496f4ae522c9eda4bc3ef2e3ba47d38502d49b3a7c70714c65f1",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3030.md",
+      "sha256": "b4382b77c75e2fe41b6ea7c7ff8666fedd360ea90252746538a0f9b22bdf0497",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3061.md",
+      "sha256": "f85fe09eb14dad1f81667a2215786ef9db30233346bc3b793e85e7b8c58c6f8a",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3013.md",
+      "sha256": "d0361d3089594dfc8b31f315d995b21dee028bff2f81b755a09ee0ef7508a771",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3042.md",
+      "sha256": "bca2b28fc3b0c99869661a2c8825003c3fe90472e171500c7c97cad81b72d9ce",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3027.md",
+      "sha256": "054d93b2db074cb3400c450720b2f0b3400a6133cbca12315303cf7c8448f88a",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3037.md",
+      "sha256": "56c86d4fa2047ede6ab7652bd981179262b3d8126dd762ef6cd9dfd16c266afe",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3052.md",
+      "sha256": "5da69c2b389a52f65b001cea98c226d5ce99fd02334ea569f77e617f5d7d2d47",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3003.md",
+      "sha256": "237ee5aada3b70c367761a10de8e01c74f569e0eec182de5b1bf753a88d57140",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3023.md",
+      "sha256": "cb8a248b99cfe907fa0eac2700177b10597b928b00e8367278f4f7b10a1ae513",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3046.md",
+      "sha256": "197b6dc58a295dafc09f54a7912091e45f9cdf89314c88a9c134bb34918226fd",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3007.md",
+      "sha256": "9d17a56ffbca0ff5eec8ec73f45c6680310ad162910682ff39e840685a88c4f0",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3056.md",
+      "sha256": "05041b549e468bbc97e492722aadc20c14a453212416d59e6d1c7b811093c89a",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3062.md",
+      "sha256": "2d922ad6a840b98eb26b08e1771368236c87652703392f8d3b1b48f09096adc2",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3033.md",
+      "sha256": "9f0b988c5f701980e7877d9bbe07e4c2177e7b22e66532fb08051bdfda566691",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3022.md",
+      "sha256": "fd50ec6706945ebed64c3525527ee18b25cf1da1f9e42f750774ac4ede5410bd",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3047.md",
+      "sha256": "7e720b65d3b734b6a4c934543bc1ea99ba34bf1cda0f7cf0e6fa37f4ea660da5",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3016.md",
+      "sha256": "ff41569c2be3b3f87f191b2155392f0a0ea53dd2df7cff88d2e4c98e4d73b0b6",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3006.md",
+      "sha256": "5e33613ebae096379149fec68e9688d8d4172dea07253467170c4e53dd7e5be3",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3057.md",
+      "sha256": "cfd1f236ef5ec7df41064319e8c625bc461b082a3a3e38275afe1f9eff9a7de7",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3032.md",
+      "sha256": "fe178c024fe4bbe5ccb061211821d3e24a1dbee8fb78e1463d1b2250ee2dd8b8",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3012.md",
+      "sha256": "5f1f5eb83e9cb89db3af265c2dd0f70830cafaaa628aa01deacf02831d2dcfee",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3043.md",
+      "sha256": "fcea7e04c3e703ca3a7f9067e27c2957ac4cad6a9038eaef415bf7ed694265c0",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3026.md",
+      "sha256": "35895709b07773d33c42e0604f3deaa6532ae45ca008dd771e7a4ab8f7da9854",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3036.md",
+      "sha256": "827ea201a9e202373fbe54d054f6e3ec271043ebdd59a6a732e1f52adb69a891",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3053.md",
+      "sha256": "66d381880c5620e1241cb2c31a7c48ab0767382eb0c64bd75ef1a1dedcb65007",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3002.md",
+      "sha256": "ac9e724ef87a93cca9292465d11447f68365ff4ee91dbb78df8638c458d86900",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3019.md",
+      "sha256": "6f02b75f338b42f07f4e99224a2da1ce8166faee137d60a81e960c641c7b3e46",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3048.md",
+      "sha256": "3c3804ddc297fac33f0b4c07f90f84661cb0e6fdbfe59dad2b4e1a65abda0629",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3058.md",
+      "sha256": "24f8a1f5c48b9760146e72a69ecef9dcf5f984443909b054ae66c6045061e822",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3009.md",
+      "sha256": "4cd1ce43353684ae47e1629cae529753e303cbff81e3aa414932541acea3c28a",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3029.md",
+      "sha256": "6dd9f36ee51801e056887cfca1fa614a43eab11789a50f10eae8010328fdebc7",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL4006.md",
+      "sha256": "e7a146941fe2b2196790d9e3a568c367d1a486a7d0d205f5ce48acfef4af4e01",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3028.md",
+      "sha256": "dc92c60e60e7e88a57030e60beb53538bd50dd7603771a2e0f015207fce04352",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3038.md",
+      "sha256": "9d650c5934eb98a59964298c387b5d007d24b7402e6643dd6d0d17f289c55134",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3018.md",
+      "sha256": "78c76b24acc04b4884296a3d157cbf229f96f1f6da60f7366a89f44726ece3de",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3049.md",
+      "sha256": "0494d5e94ab76e48eb81f900729714d8ed022bc63888be1b9918e87918d006a6",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL4003.md",
+      "sha256": "f98a6657d3925d9c32df9aed15f2cf3aa5b4941f54dee47038e8a441b4aeaa1e",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3059.md",
+      "sha256": "de5fc9e56f3b41668f961e7e38b64ef40ffdf52e15a58817b511af21990e2249",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    },
+    {
+      "path": "linters/hadolint/DL3008.md",
+      "sha256": "9535e76ba74e74942d105ab4ee1db4fa8ab97e9f54c40a11b00afe6834189ea1",
+      "urls": [
+        "https://github.com/hadolint/hadolint#rules"
+      ]
+    }
+  ]
+}

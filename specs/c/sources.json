@@ -1,0 +1,108 @@
+{
+  "language": "c",
+  "generatedAt": "2026-01-05T15:15:48.574602+00:00",
+  "files": [
+    {
+      "path": "compilers.md",
+      "sha256": "3f763293245420cee0281c1df06661987076064b1e413670433c209748761850",
+      "urls": [
+        "https://clang.llvm.org/",
+        "https://gcc.gnu.org/"
+      ]
+    },
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "876d041140287db739bc3edfba573a974f7e8d6ceb30f4e0b3ffabfa14ba0885",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "c6635827611bb2b705cb2c2005425f7a09abe39749a6cd825ec178110a2a9055",
+      "urls": [
+        "https://clang.llvm.org/docs/ClangFormat.html"
+      ]
+    },
+    {
+      "path": "formatters/clang-format.md",
+      "sha256": "5351ef802e09e1052a62bff7b6b000f58033e33fce3ffb646646600bfdfbafdf",
+      "urls": [
+        "https://clang.llvm.org/docs/ClangFormatStyleOptions.html"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "63898d144c329c1b421650e10ab1f542d677dfb7bfba732472669e2f19724bc7",
+      "urls": []
+    },
+    {
+      "path": "stdlib/headers/index.md",
+      "sha256": "81c35f08ada1b5840a4e7dea86d77050ce516a33ea3fff525196a36c27e44ec8",
+      "urls": [
+        "https://en.cppreference.com/w/c/header"
+      ]
+    },
+    {
+      "path": "spec.md",
+      "sha256": "8fc9e51d4f9f3ea6a4c8a523e4d6923bbb89104f027954309374b549b8f56e2a",
+      "urls": [
+        "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf"
+      ]
+    },
+    {
+      "path": "linters/cppcheck/overview.md",
+      "sha256": "fb3cca91ab63fc0352e36a724b26490cfa42bf2a42612c4a68211e7e3fcba68d",
+      "urls": [
+        "https://cppcheck.sourceforge.io/manual.html"
+      ]
+    },
+    {
+      "path": "linters/cppcheck/errors.md",
+      "sha256": "9ceb94acc12c1e7937ee8f1aaa6bb371b073452737c7bb4d9448835f3c66956c",
+      "urls": []
+    },
+    {
+      "path": "linters/cppcheck/checks.md",
+      "sha256": "b801947844745ff78ab6fdc34130c3bde2b0ddf3ba6df9851fb337d76da88262",
+      "urls": []
+    },
+    {
+      "path": "linters/clang-tidy/overview.md",
+      "sha256": "e661202596af910df9e2732f0741fe142b2fe8029fa3129d0e8b1e97a9b4c0e5",
+      "urls": [
+        "https://clang.llvm.org/extra/clang-tidy/checks/list.html"
+      ]
+    },
+    {
+      "path": "linters/clang-tidy/cert.md",
+      "sha256": "94b19ad63a1e24928030d0830656fab07f3722f503655ab545b78cb8e16b7371",
+      "urls": []
+    },
+    {
+      "path": "linters/clang-tidy/bugprone.md",
+      "sha256": "2aa871c89b2c65df4ef03eff60fdd0744db65fb9c73d3ff3de4e5580883df3a0",
+      "urls": []
+    },
+    {
+      "path": "linters/clang-tidy/cppcoreguidelines.md",
+      "sha256": "7756c2b986477c20fc20379b8a6336850b697e36ce9c91e22acc9b528995540a",
+      "urls": [
+        "https://isocpp.github.io/CppCoreGuidelines/"
+      ]
+    },
+    {
+      "path": "linters/clang-tidy/performance.md",
+      "sha256": "b306213b02e73bd84ea12f3530df733e23f89a54399ce6d0375797236ccebc5e",
+      "urls": []
+    },
+    {
+      "path": "linters/clang-tidy/modernize.md",
+      "sha256": "eb4d8486178d7bababfb7e01e5e3047f228bf94144e5d3745fb66bc13bf213a0",
+      "urls": []
+    },
+    {
+      "path": "linters/clang-tidy/readability.md",
+      "sha256": "d43738a43d494ac1863308b9fb1ff69081f3a73e623ac5b63364cff92b692b7f",
+      "urls": []
+    }
+  ]
+}

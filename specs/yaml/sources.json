@@ -1,0 +1,38 @@
+{
+  "language": "yaml",
+  "generatedAt": "2026-01-05T15:15:50.775223+00:00",
+  "files": [
+    {
+      "path": "patterns/idioms.md",
+      "sha256": "efbf8abab6cbba29c91dcb3c98c4433b97c0bdafa8d01194e882ac12b74350be",
+      "urls": []
+    },
+    {
+      "path": "formatters/overview.md",
+      "sha256": "cf525f338ca26836ebb534485a8035e9448823f6252dcba52bbc5fe45d9c6eac",
+      "urls": [
+        "https://github.com/lyz-code/yamlfix",
+        "https://prettier.io/"
+      ]
+    },
+    {
+      "path": "stdlib/overview.md",
+      "sha256": "c63dfa3366c12f5ca89aab23d07a10b042d0a5b57e6a897680b9a850fc48153e",
+      "urls": []
+    },
+    {
+      "path": "spec.md",
+      "sha256": "faa3565622a5812090fa3bb19138799205d3440d86932aed03abf5a2098ce7ca",
+      "urls": [
+        "https://yaml.org/spec/1.2.2/"
+      ]
+    },
+    {
+      "path": "linters/yamllint/overview.md",
+      "sha256": "f3d96ba85c8b4d07c2dfe806c4fcb9d9850fc533b2e7d5a279b6379bd728d995",
+      "urls": [
+        "https://yamllint.readthedocs.io/en/stable/rules.html"
+      ]
+    }
+  ]
+}
