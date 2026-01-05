@@ -93,10 +93,13 @@ npm test
 ## Fetching Specs
 
 ```bash
-# All languages
+# All languages (parallel by default)
 npm run fetch:all
 
-# Parallel (faster)
+# Serial (lower network/CPU pressure)
+npm run fetch:all:serial
+
+# Parallel (explicit)
 npm run fetch:all:parallel
 
 # Individual
@@ -207,7 +210,7 @@ LLMs can also call the data file directly to see freshness, linter/formatter cov
 
 ## Automation & Refresh
 
-Keep the specs, indexes, and health metadata up to date with `npm run refresh`. That script runs `fetch:delta`, `generate:all`, and `generate:health` in sequence so the dashboard stays in sync with the latest sources. The same command is wired into `.github/workflows/refresh.yml`, so GitHub Actions refreshes the data every four hours (or whenever you trigger the workflow manually).
+Keep the specs, indexes, and health metadata up to date with `npm run refresh`. That script runs `fetch:delta` and `generate:all` in sequence so the dashboard stays in sync with the latest sources. The same command is wired into `.github/workflows/refresh.yml`, so GitHub Actions refreshes the data every four hours (or whenever you trigger the workflow manually).
 
 Schedule it with your preferred cron/agent. Example:
 
@@ -268,7 +271,7 @@ Each fetch script writes `specs/<language>/.fetched-at` (UTC). Refresh with:
 
 ```bash
 npm run fetch:all
-npm run fetch:all:parallel
+npm run fetch:all:serial
 ```
 
 ## Troubleshooting

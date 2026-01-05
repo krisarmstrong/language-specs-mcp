@@ -28,7 +28,7 @@ npm run refresh
 npm test
 ```
 
-`npm run refresh` executes `fetch:delta`, `generate:all`, and `generate:health` so the dashboard, indexes, and manifests stay in sync.
+`npm run refresh` executes `fetch:delta` and `generate:all` so the dashboard, indexes, and manifests stay in sync.
 
 ## Prompt Patterns
 
@@ -68,7 +68,7 @@ Use the SpecForge MCP server for authoritative references. Prefer MCP results ov
 
 ## Automation & Scheduling
 
-Run `npm run refresh` to execute `fetch:delta`, `generate:all`, and `generate:health` in order; this keeps indexes, manifests, and the dashboard data aligned with upstream sources.
+Run `npm run refresh` to execute `fetch:delta` and `generate:all` in order; this keeps indexes, manifests, and the dashboard data aligned with upstream sources.
 
 Schedule that command via cron, launchd, GitHub Actions, etc. Here's an example that runs every four hours:
 
