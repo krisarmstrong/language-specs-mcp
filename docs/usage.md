@@ -5,7 +5,7 @@ This MCP server is meant to be the source of truth for language specs, stdlib re
 Requirements:
 - Node.js >= 20
 - Python 3.14.2
-- pandoc (optional, improves markdown conversion)
+- pandoc (optional, improves markdown conversion quality; built-in converter runs without it)
 
 ## LLM Value
 
@@ -66,11 +66,41 @@ Use the SpecForge MCP server for authoritative references. Prefer MCP results ov
 - `RESOURCE_PAGE_SIZE` (default 250, min 25, max 1000) keeps each `resources/list` response bounded when you walk very large catalogs.
 - `health.json` summarizes every language's freshness, spec coverage, and default linter/formatter counts. Use it or the `health.html` dashboard (via `npm run dashboard`) when you want a bird's-eye view.
 
+## Logging
+
+- Set `SPECFORGE_LOG_LEVEL` (or `LOG_LEVEL`) to control verbosity (default: `INFO`).
+- Override `SPECFORGE_LOG_FORMAT` or `SPECFORGE_LOG_DATE_FORMAT` to customize output.
+- Set `GITHUB_TOKEN` to avoid GitHub API rate limits during version updates.
+- Create a token in GitHub Settings → Developer settings → Personal access tokens (no scopes needed for public data).
+- If you already use GitHub CLI, `gh auth token` prints a usable token.
+
 ## Automation & Scheduling
 
 Run `npm run refresh` to execute `fetch:delta` and `generate:all` in order; this keeps indexes, manifests, and the dashboard data aligned with upstream sources.
 
-Schedule that command via cron, launchd, GitHub Actions, etc. Here's an example that runs every four hours:
+Use `.env` to store `GITHUB_TOKEN` and other env vars (copy from `.env.example`).
+The `.env` file is ignored by git.
+
+Quality gates:
+
+```bash
+npm run validate:versions
+npm run validate:stubs
+```
+
+Diagnostics:
+
+```bash
+npm run doctor
+```
+
+Stub remediation (spec/overview only by default):
+
+```bash
+npm run backfill:stubs
+```
+
+Schedule that command via cron, launchd, GitHub Actions, etc. Here are defaults you can copy and customize (every four hours):
 
 ```bash
 0 */4 * * * cd /Users/krisarmstrong/Developer/_tools/specforge-mcp && npm run refresh >> refresh.log 2>&1
@@ -79,6 +109,28 @@ Schedule that command via cron, launchd, GitHub Actions, etc. Here's an example 
 The script prints each command before running it and exits with the first failing status so you can hook alerts into your job runner.
 
 GitHub Actions already refresh the repo for you via `.github/workflows/refresh.yml`, which mirrors this command on a four-hour schedule and can be triggered manually.
+
+Launchd (macOS) template:
+
+```bash
+cp docs/automation/com.specforge.refresh.plist ~/Library/LaunchAgents/
+launchctl load ~/Library/LaunchAgents/com.specforge.refresh.plist
+```
+
+Helper scripts:
+
+```bash
+./scripts/automation/install.sh
+./scripts/automation/uninstall.sh
+```
+
+Cron template:
+
+```bash
+cat docs/automation/cron.txt
+```
+
+Update the paths and `GITHUB_TOKEN` value in the templates to match your setup.
 
 ## Provenance
 

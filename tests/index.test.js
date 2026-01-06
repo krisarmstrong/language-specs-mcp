@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { test } from "node:test";
 import { dirname, join } from "node:path";
+import { test } from "node:test";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -8,13 +8,9 @@ const fixturesDir = join(__dirname, "fixtures", "specs");
 process.env.SPECS_DIR = fixturesDir;
 
 const modulePath = new URL("../dist/index.js", import.meta.url);
-const {
-  getSpec,
-  getLinterRule,
-  listCategorySpecs,
-  searchSpecs,
-  resolveSpecPath,
-} = await import(modulePath.href);
+const { getSpec, getLinterRule, listCategorySpecs, searchSpecs, resolveSpecPath } = await import(
+  modulePath.href
+);
 
 test("getSpec returns fixture content", async () => {
   const content = await getSpec("go", "spec", "spec");

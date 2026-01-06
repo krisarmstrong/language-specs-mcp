@@ -1,6 +1,6 @@
 {
   "language": "sql",
-  "generatedAt": "2026-01-05T15:15:50.759623+00:00",
+  "generatedAt": "2026-01-05T20:16:15.470900+00:00",
   "files": [
     {
       "path": "patterns/idioms.md",
@@ -18,7 +18,7 @@
       "path": "formatters/sqlfluff.md",
       "sha256": "7276fb6dba5a816256ff5ee1fa2e3999c635b9c4c8a9927f5c1d46c6665016a8",
       "urls": [
-        "https://docs.sqlfluff.com/en/stable/configuration.html"
+        "https://docs.sqlfluff.com/en/stable/configuration/index.html"
       ]
     },
     {

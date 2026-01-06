@@ -1,5 +1,5 @@
 # Rust Reference
-Version: unknown
+Version: 1.92.0
 
 Source: https://doc.rust-lang.org/reference/
 

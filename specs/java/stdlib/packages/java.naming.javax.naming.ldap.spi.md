@@ -1,3 +1,8 @@
-# java.naming.javax.naming.ldap.spi
+Module[java.naming](../../../../module-summary.html)
 
-See: https://docs.oracle.com/en/java/javase/21/docs/api/java.naming/javax/naming/ldap/spi/package-summary.html
+# Package javax.naming.ldap.spi
+
+package javax.naming.ldap.spi
+
+- Related PackagesPackageDescription[javax.naming.ldap](../package-summary.html)Provides support for LDAPv3 extended operations and controls.
+- ClassesClassDescription[LdapDnsProvider](LdapDnsProvider.html)Service-provider class for DNS lookups when performing LDAP operations.[LdapDnsProviderResult](LdapDnsProviderResult.html)The result of a DNS lookup for an LDAP URL.

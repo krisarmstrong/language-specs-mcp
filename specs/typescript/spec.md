@@ -1,5 +1,5 @@
 # TypeScript Language Specification
-Version: unknown
+Version: 5.9.3
 
 Source: https://www.typescriptlang.org/docs/handbook/
 

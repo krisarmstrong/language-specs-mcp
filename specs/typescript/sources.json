@@ -1,6 +1,6 @@
 {
   "language": "typescript",
-  "generatedAt": "2026-01-05T15:15:50.768310+00:00",
+  "generatedAt": "2026-01-05T20:16:15.480013+00:00",
   "files": [
     {
       "path": "patterns/idioms.md",
@@ -26,7 +26,7 @@
     },
     {
       "path": "formatters/prettier.md",
-      "sha256": "a30f7499d08b0da33c994484388d1a70e4693e0a872d62a30b443a5c1fc4a996",
+      "sha256": "61e0881f6ee1eb297eba4540782e28dc362a547a006a9f1468fbccdcb41d9a0b",
       "urls": [
         "https://prettier.io/docs/en/options.html"
       ]
@@ -102,7 +102,7 @@
     },
     {
       "path": "linters/biome/overview.md",
-      "sha256": "8d2a84d26a21a92f5da12d37f8eab60227e72223ab69913f9fac5c52f3b78739",
+      "sha256": "477b9e0cacb4529de4ee93a64bb8a4755588dd75fb9a45b0afb0cbf669e60b29",
       "urls": [
         "https://biomejs.dev/linter/",
         "https://biomejs.dev/linter/rules/",

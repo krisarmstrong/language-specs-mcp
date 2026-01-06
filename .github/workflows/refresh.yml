@@ -29,3 +29,5 @@ jobs:
 
       - name: Run refresh
         run: npm run refresh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

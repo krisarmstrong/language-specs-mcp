@@ -19,7 +19,8 @@
 body {
   margin: 0;
   font-family: var(--sans);
-  background: radial-gradient(circle at top left, #ffe6d1, transparent 55%),
+  background:
+    radial-gradient(circle at top left, #ffe6d1, transparent 55%),
     radial-gradient(circle at 30% 20%, #e8f2f1, transparent 50%),
     linear-gradient(160deg, #fbf6ef 0%, #f2e8da 100%);
   color: var(--ink);

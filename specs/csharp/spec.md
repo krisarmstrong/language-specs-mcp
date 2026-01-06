@@ -1,5 +1,8 @@
 # C# Language Specification
-Version: unknown
+
+Dotnet SDK: 10.0.101
+
+Version: latest
 
 Source: https://learn.microsoft.com/en-us/dotnet/
 

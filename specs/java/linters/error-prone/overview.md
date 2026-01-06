@@ -1,5 +1,5 @@
 # Error Prone Bug Patterns
-Version: unknown
+Version: 2.45.0
 
 Source: https://errorprone.info/bugpatterns
 

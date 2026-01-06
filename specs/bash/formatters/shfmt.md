@@ -1,5 +1,5 @@
 # shfmt Options
-Version: unknown
+Version: 3.12.0
 
 Source: https://github.com/mvdan/sh#shfmt
 

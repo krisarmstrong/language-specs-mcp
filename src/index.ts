@@ -128,7 +128,9 @@ function normalizeSearchFallbackStrategy(raw?: string): SearchFallbackStrategy {
   return "scan";
 }
 
-const SEARCH_FALLBACK_STRATEGY = normalizeSearchFallbackStrategy(process.env.SEARCH_FALLBACK_STRATEGY);
+const SEARCH_FALLBACK_STRATEGY = normalizeSearchFallbackStrategy(
+  process.env.SEARCH_FALLBACK_STRATEGY,
+);
 const SEARCH_FALLBACK_WARN_ONLY = SEARCH_FALLBACK_STRATEGY === "warn";
 
 type SearchIndexEntry = {
@@ -320,100 +322,115 @@ type SearchOptions = {
   allowFallback?: boolean;
 };
 
+type SearchContext = {
+  queryLower: string;
+  allowFallback: boolean;
+  results: string[];
+  missingIndexLanguages: string[];
+  fallbackWarnings: string[];
+  fallbackLanguages: Set<string>;
+};
+
+function formatSearchResult(
+  language: string,
+  category: string,
+  name: string,
+  matches: string[],
+): string {
+  return `## ${language}/${category}/${name}\n\n${matches.join("\n\n---\n\n")}`;
+}
+
+function buildFallbackSummary(warnings: string[]): string {
+  return warnings.length ? `Search fallback notes:\n${warnings.join("\n")}` : "";
+}
+
+function buildNoResultsMessage(query: string, ctx: SearchContext, fallbackSummary: string): string {
+  const warning =
+    !ctx.allowFallback && ctx.missingIndexLanguages.length > 0
+      ? `\n\nSearch fallback skipped; missing indexes for: ${ctx.missingIndexLanguages.join(", ")}`
+      : "";
+  const summarySuffix = fallbackSummary ? `\n\n${fallbackSummary}` : "";
+  return `No results found for: ${query}${warning}${summarySuffix}`;
+}
+
+function buildFinalOutput(ctx: SearchContext, fallbackSummary: string): string {
+  let output = ctx.results.slice(0, 10).join("\n\n===\n\n");
+  if (!ctx.allowFallback && ctx.missingIndexLanguages.length > 0) {
+    output += `\n\n===\n\nSearch fallback skipped; missing indexes for: ${ctx.missingIndexLanguages.join(", ")}`;
+  }
+  if (fallbackSummary) {
+    output += `\n\n===\n\n${fallbackSummary}`;
+  }
+  return output;
+}
+
+async function searchIndexForLanguage(language: string, ctx: SearchContext): Promise<boolean> {
+  const entries = await loadSearchIndex(language);
+  if (!entries) {
+    ctx.missingIndexLanguages.push(language);
+    ctx.fallbackLanguages.add(language);
+    if (!ctx.allowFallback || SEARCH_FALLBACK_WARN_ONLY) {
+      const reason = !ctx.allowFallback
+        ? "allow_fallback=false"
+        : `SEARCH_FALLBACK_STRATEGY=${SEARCH_FALLBACK_STRATEGY}`;
+      ctx.fallbackWarnings.push(
+        `Search index missing for ${language}; skipping markdown fallback (${reason}).`,
+      );
+    }
+    return false;
+  }
+  for (const entry of entries) {
+    if (!entry.content.toLowerCase().includes(ctx.queryLower)) continue;
+    const matches = extractLineMatches(entry.content, ctx.queryLower);
+    if (matches.length === 0) continue;
+    ctx.results.push(formatSearchResult(language, entry.category, entry.name, matches));
+    if (ctx.results.length >= 10) return true;
+  }
+  return false;
+}
+
+async function searchFallbackSpecs(specs: SpecFile[], ctx: SearchContext): Promise<void> {
+  if (!ctx.allowFallback || SEARCH_FALLBACK_WARN_ONLY || ctx.fallbackLanguages.size === 0) return;
+  for (const spec of specs) {
+    if (!ctx.fallbackLanguages.has(spec.language) || ctx.results.length >= 10) continue;
+    try {
+      const content = await readFile(spec.path, "utf-8");
+      const matches = extractLineMatches(content, ctx.queryLower);
+      if (matches.length > 0) {
+        ctx.results.push(formatSearchResult(spec.language, spec.category, spec.name, matches));
+      }
+    } catch (error) {
+      console.error("Search read failed:", spec.path, error);
+    }
+  }
+}
+
 async function searchSpecs(query: string, options: SearchOptions = {}): Promise<string> {
   if (!isNonEmptyString(query)) {
     return "Query must be a non-empty string.";
   }
-  const allowFallback = options.allowFallback ?? true;
-  const specs = await getAllSpecsCached();
-  const results: string[] = [];
-  const queryLower = query.toLowerCase();
-  const missingIndexLanguages: string[] = [];
-  const fallbackWarnings: string[] = [];
-  const fallbackLanguages = new Set<string>();
+  const ctx: SearchContext = {
+    queryLower: query.toLowerCase(),
+    allowFallback: options.allowFallback ?? true,
+    results: [],
+    missingIndexLanguages: [],
+    fallbackWarnings: [],
+    fallbackLanguages: new Set<string>(),
+  };
 
   for (const language of LANGUAGES) {
-    const entries = await loadSearchIndex(language);
-    if (!entries) {
-      missingIndexLanguages.push(language);
-      fallbackLanguages.add(language);
-      if (!allowFallback || SEARCH_FALLBACK_WARN_ONLY) {
-        const reason = !allowFallback
-          ? "allow_fallback=false"
-          : `SEARCH_FALLBACK_STRATEGY=${SEARCH_FALLBACK_STRATEGY}`;
-        fallbackWarnings.push(
-          `Search index missing for ${language}; skipping markdown fallback (${reason}).`,
-        );
-        continue;
-      }
-    }
-    if (entries) {
-      for (const entry of entries) {
-        if (!entry.content.toLowerCase().includes(queryLower)) {
-          continue;
-        }
-        const matches = extractLineMatches(entry.content, queryLower);
-        if (matches.length === 0) {
-          continue;
-        }
-        results.push(
-          `## ${language}/${entry.category}/${entry.name}\n\n${matches.join("\n\n---\n\n")}`,
-        );
-        if (results.length >= 10) {
-          return results.join("\n\n===\n\n");
-        }
-      }
-    }
+    const earlyExit = await searchIndexForLanguage(language, ctx);
+    if (earlyExit) return ctx.results.join("\n\n===\n\n");
   }
 
-  if (allowFallback && !SEARCH_FALLBACK_WARN_ONLY && fallbackLanguages.size > 0) {
-    for (const spec of specs) {
-      if (!fallbackLanguages.has(spec.language)) {
-        continue;
-      }
-      if (results.length >= 10) {
-        break;
-      }
-      try {
-        const content = await readFile(spec.path, "utf-8");
-        const matches = extractLineMatches(content, queryLower);
+  const specs = await getAllSpecsCached();
+  await searchFallbackSpecs(specs, ctx);
 
-        if (matches.length > 0) {
-          results.push(
-            `## ${spec.language}/${spec.category}/${spec.name}\n\n${matches.join("\n\n---\n\n")}`,
-          );
-        }
-      } catch (error) {
-        console.error("Search read failed:", spec.path, error);
-      }
-    }
+  const fallbackSummary = buildFallbackSummary(ctx.fallbackWarnings);
+  if (ctx.results.length === 0) {
+    return buildNoResultsMessage(query, ctx, fallbackSummary);
   }
-
-  const fallbackSummary = fallbackWarnings.length
-    ? `Search fallback notes:\n${fallbackWarnings.join("\n")}`
-    : "";
-
-  if (results.length === 0) {
-    const warning =
-      !allowFallback && missingIndexLanguages.length > 0
-        ? `\n\nSearch fallback skipped; missing indexes for: ${missingIndexLanguages.join(", ")}`
-        : "";
-    const summarySuffix = fallbackSummary ? `\n\n${fallbackSummary}` : "";
-    return `No results found for: ${query}${warning}${summarySuffix}`;
-  }
-
-  const outputLines = results.slice(0, 10).join("\n\n===\n\n");
-  let output = outputLines;
-
-  if (!allowFallback && missingIndexLanguages.length > 0) {
-    output += `\n\n===\n\nSearch fallback skipped; missing indexes for: ${missingIndexLanguages.join(", ")}`;
-  }
-
-  if (fallbackSummary) {
-    output += `\n\n===\n\n${fallbackSummary}`;
-  }
-
-  return output;
+  return buildFinalOutput(ctx, fallbackSummary);
 }
 
 async function getSpec(language: string, category: string, topic: string): Promise<string> {
@@ -433,6 +450,9 @@ async function getSpec(language: string, category: string, topic: string): Promi
     ...(allowCategoryRoot ? [resolveSpecPath(language, `${cat}.md`)] : []),
     resolveSpecPath(language, cat, topic, "index.md"),
   ]);
+  if (category === "spec") {
+    possiblePaths.push(resolveSpecPath(language, `${topic}.md`));
+  }
 
   for (const specPath of possiblePaths) {
     if (specPath && (await fileExists(specPath))) {

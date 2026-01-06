@@ -74,7 +74,7 @@ If you are working with modern or classic BASIC, these are common environments a
 Requirements:
 - Node.js >= 20
 - Python 3.14.2
-- pandoc (optional, improves markdown conversion)
+- pandoc (optional, improves markdown conversion quality; built-in converter runs without it)
 
 ## Getting Started
 
@@ -274,16 +274,22 @@ npm run fetch:all
 npm run fetch:all:serial
 ```
 
+Automation templates (cron + launchd) are in `docs/automation/`.
+
 ## Troubleshooting
 
-- Missing `pandoc`: HTML conversions may fall back to short “See:” stubs.
+- Missing `pandoc`: HTML conversions use the built-in converter; results may be noisier than pandoc output.
 - Encoding issues: run with `LC_ALL=C` if you see illegal byte sequence errors.
 - Rate limits/timeouts: retry or use `npm run fetch:all:parallel` with lower concurrency.
 - Network restrictions: ensure the CLI can access external docs.
 - TLS verification failures: set `SSL_CERT_FILE` or `REQUESTS_CA_BUNDLE` to your CA bundle.
 - If you have no CA bundle, install certifi (`python3 -m pip install --upgrade certifi`); fetch scripts will use it if available.
 - Emergency bypass: `FETCH_INSECURE=1` disables TLS verification (not recommended).
+- GitHub rate limits: set `GITHUB_TOKEN` to raise API limits for version checks.
+- Token setup: create a Personal Access Token in GitHub settings (no scopes needed for public data), or run `gh auth token` if you use GitHub CLI.
+- Put the token in `.env` (copy from `.env.example`). `.env` is ignored by git.
 - Diagnose connectivity: `npm run diagnose:fetch -- https://eslint.org/docs/latest/rules/`
+- Logging: set `SPECFORGE_LOG_LEVEL` (or `LOG_LEVEL`) and `SPECFORGE_LOG_FORMAT` for more verbose output.
 
 ## Version Registry
 
@@ -293,6 +299,18 @@ Validate against local references:
 
 ```bash
 npm run validate:versions
+```
+
+Validate stub allowlist (no new stub docs):
+
+```bash
+npm run validate:stubs
+```
+
+Diagnostics:
+
+```bash
+npm run doctor
 ```
 
 Typical flow:

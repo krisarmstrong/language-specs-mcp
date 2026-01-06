@@ -1,5 +1,5 @@
 # google-java-format Options
-Version: unknown
+Version: 1.33.0
 
 Source: https://github.com/google/google-java-format
 

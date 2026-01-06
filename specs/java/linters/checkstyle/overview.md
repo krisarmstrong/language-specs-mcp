@@ -1,5 +1,5 @@
 # Checkstyle Checks
-Version: unknown
+Version: 13.0.0
 
 Source: https://checkstyle.sourceforge.io/checks.html
 

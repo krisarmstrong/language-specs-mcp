@@ -1,5 +1,5 @@
 # stylelint Rules
-Version: unknown
+Version: 16.26.1
 
 Source: https://stylelint.io/user-guide/rules
 

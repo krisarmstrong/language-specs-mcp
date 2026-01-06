@@ -7,16 +7,22 @@ type HealthRecord = {
   linters: Array<{ count: number }>;
   formatters: Array<{ count: number }>;
   toolsVersion: string | null;
+  toolCheckedAt: string | null;
   toolSources: string[];
+  stubCount: number;
+  searchIndexCount?: number;
+  searchIndexGeneratedAt?: string | null;
   notes: string[];
 };
 
 type HealthPayload = {
   generatedAt: string;
+  searchIndexGeneratedAt?: string | null;
   languages: HealthRecord[];
 };
 
 const generatedEl = document.getElementById("healthGenerated");
+const searchGeneratedEl = document.getElementById("healthSearchGenerated");
 const languagesEl = document.getElementById("healthLanguages");
 const staleEl = document.getElementById("healthStale");
 const tableBody = document.getElementById("healthTableBody");
@@ -56,13 +62,12 @@ function renderRow(language: HealthRecord): void {
   tr.className = statusClass(language);
   const linterCount = language.linters.reduce((sum, entry) => sum + entry.count, 0);
   const formatterCount = language.formatters.reduce((sum, entry) => sum + entry.count, 0);
+  const searchCount = language.searchIndexCount ?? 0;
   tr.innerHTML = `
     <td>
       <strong>${language.language}</strong>
       ${
-        language.notes.length
-          ? `<div class="health-notes">${language.notes.join(" • ")}</div>`
-          : ""
+        language.notes.length ? `<div class="health-notes">${language.notes.join(" • ")}</div>` : ""
       }
     </td>
     <td>${formatDate(language.fetchedAt)}</td>
@@ -72,6 +77,8 @@ function renderRow(language: HealthRecord): void {
         Spec ${language.spec.count} • Stdlib ${language.stdlib.count} • Linters ${linterCount} • Formatters ${formatterCount}
       </div>
     </td>
+    <td>${language.stubCount ?? 0}</td>
+    <td>${searchCount}</td>
     <td>${language.toolsVersion ?? "untracked"}</td>
     <td>${joinSources(language.toolSources)}</td>
   `;
@@ -79,12 +86,13 @@ function renderRow(language: HealthRecord): void {
 }
 
 async function init(): Promise<void> {
-  if (!tableBody || !generatedEl || !languagesEl || !staleEl) {
+  if (!tableBody || !generatedEl || !languagesEl || !staleEl || !searchGeneratedEl) {
     return;
   }
   const response = await fetch("./health.json");
   const data: HealthPayload = await response.json();
   generatedEl.textContent = formatDate(data.generatedAt);
+  searchGeneratedEl.textContent = formatDate(data.searchIndexGeneratedAt ?? null);
   languagesEl.textContent = String(data.languages.length);
   const staleCount = data.languages.filter(
     (lang) => !lang.fetchedAt || (lang.freshnessDays ?? Number.MAX_SAFE_INTEGER) > 30,
@@ -95,6 +103,6 @@ async function init(): Promise<void> {
 
 init().catch((err) => {
   if (tableBody) {
-    tableBody.innerHTML = `<tr><td colspan="6">Failed to load health data: ${err.message}</td></tr>`;
+    tableBody.innerHTML = `<tr><td colspan="8">Failed to load health data: ${err.message}</td></tr>`;
   }
 });

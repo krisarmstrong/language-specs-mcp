@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+import html
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -10,6 +12,8 @@ from pathlib import Path
 from _common import (
     FetchError,
     SPECS_DIR,
+    _simple_html_to_markdown,
+    extract_main,
     fetch_bytes,
     fetch_markdown_or_html,
     fetch_markdown,
@@ -24,6 +28,77 @@ from _common import (
     write_template,
     write_text,
 )
+
+
+def _extract_markdown_table(markdown: str) -> dict[str, str]:
+    entries: dict[str, str] = {}
+    for line in markdown.splitlines():
+        stripped = line.strip()
+        if not stripped.startswith("|"):
+            continue
+        cells = [cell.strip() for cell in stripped.strip("|").split("|")]
+        if len(cells) < 2:
+            continue
+        code, description = cells[0], cells[1]
+        if code and description:
+            entries.setdefault(code, description)
+    return entries
+
+
+def _extract_markdown_sections(markdown: str) -> dict[str, str]:
+    sections: dict[str, str] = {}
+    current: str | None = None
+    buffer: list[str] = []
+    for line in markdown.splitlines():
+        if line.startswith("## "):
+            if current and buffer:
+                sections[current] = "\n".join(buffer).strip()
+            current = line[3:].strip()
+            buffer = []
+            continue
+        if current:
+            if line.strip():
+                buffer.append(line)
+    if current and buffer:
+        sections[current] = "\n".join(buffer).strip()
+    return sections
+
+
+def _extract_golangci_lint_descriptions(
+    html_text: str, linter_names: list[str]
+) -> dict[str, str]:
+    cleaned = re.sub(r"<(script|style)[^>]*>.*?</\\1>", " ", html_text, flags=re.I | re.S)
+    cleaned = re.sub(r"<[^>]+>", " ", cleaned)
+    cleaned = html.unescape(cleaned)
+    cleaned = re.sub(r"\\s+", " ", cleaned).strip()
+    marker = cleaned.find("All Linters")
+    if marker != -1:
+        cleaned = cleaned[marker:]
+
+    if not linter_names:
+        return {}
+
+    pattern = re.compile(r"\\b(" + "|".join(re.escape(name) for name in linter_names) + r")\\b")
+    matches = [(match.start(), match.group(1)) for match in pattern.finditer(cleaned)]
+    matches.sort()
+
+    seen: set[str] = set()
+    ordered: list[tuple[int, str]] = []
+    for position, name in matches:
+        if name in seen:
+            continue
+        seen.add(name)
+        ordered.append((position, name))
+
+    descriptions: dict[str, str] = {}
+    for idx, (position, name) in enumerate(ordered):
+        next_position = ordered[idx + 1][0] if idx + 1 < len(ordered) else len(cleaned)
+        section = cleaned[position + len(name) : next_position].strip()
+        if section.lower().startswith(name.lower()):
+            section = section[len(name) :].strip()
+        if section:
+            descriptions[name] = section
+    return descriptions
 
 
 def fetch_assembly() -> None:
@@ -187,8 +262,24 @@ def fetch_javascript() -> None:
             log(f"Failed to fetch Web API list: {exc}")
             web_apis = []
 
+        web_api_overrides = {
+            "contributors": join_lines(
+                [
+                    "# contributors",
+                    "",
+                    "This MDN page lists contributors to the Web API documentation, not a Web API surface.",
+                    "",
+                    "Source: https://developer.mozilla.org/en-US/docs/Web/API/contributors",
+                ]
+            ),
+        }
+
         for api in web_apis:
             log(f"  - web/{api}")
+            override = web_api_overrides.get(api)
+            if override:
+                write_text(specs_dir / "stdlib" / "web" / f"{api}.md", override)
+                continue
             fetch_markdown(
                 f"https://developer.mozilla.org/en-US/docs/Web/API/{api}",
                 specs_dir / "stdlib" / "web" / f"{api}.md",
@@ -256,15 +347,10 @@ def fetch_javascript() -> None:
             if rule == "rules":
                 continue
             log(f"  - standardjs/{rule}")
-            write_text(
+            fetch_markdown(
+                f"https://standardjs.com/rules.html#{rule}",
                 specs_dir / "linters" / "standardjs" / f"{rule}.md",
-                join_lines(
-                    [
-                        f"# {rule}",
-                        "",
-                        f"See: https://standardjs.com/rules.html#{rule}",
-                    ]
-                ),
+                rule,
             )
 
         fetch_markdown(
@@ -304,15 +390,10 @@ def fetch_javascript() -> None:
                     url = "https://github.com/xojs/xo"
             else:
                 url = f"https://eslint.org/docs/latest/rules/{rule}"
-            write_text(
+            fetch_markdown(
+                url,
                 specs_dir / "linters" / "xo" / f"{rule}.md",
-                join_lines(
-                    [
-                        f"# {rule}",
-                        "",
-                        f"See: {url}",
-                    ]
-                ),
+                rule,
             )
 
     if fetch_section("formatters"):
@@ -322,35 +403,25 @@ def fetch_javascript() -> None:
                 [
                     "# JavaScript Formatters",
                     "",
-                    "## Prettier",
+                    "JavaScript formatting typically uses Prettier or Biome. Both format JS/TS/JSON and support modern syntax.",
                     "",
-                    "See: https://prettier.io/docs/en/",
+                    "## Prettier",
+                    "- Opinionated formatting with broad ecosystem support.",
                     "",
                     "## Biome Format",
-                    "",
-                    "See: https://biomejs.dev/formatter/",
+                    "- Fast formatter with integrated linting for JS/TS/JSON/CSS.",
                 ]
             ),
         )
-        write_text(
+        fetch_markdown(
+            "https://prettier.io/docs/en/options.html",
             specs_dir / "formatters" / "prettier.md",
-            join_lines(
-                [
-                    "# Prettier Options",
-                    "",
-                    "See: https://prettier.io/docs/en/options.html",
-                ]
-            ),
+            "Prettier Options",
         )
-        write_text(
+        fetch_markdown(
+            "https://biomejs.dev/formatter/",
             specs_dir / "formatters" / "biome.md",
-            join_lines(
-                [
-                    "# Biome Formatter Options",
-                    "",
-                    "See: https://biomejs.dev/formatter/",
-                ]
-            ),
+            "Biome Formatter Options",
         )
 
     if fetch_section("patterns"):
@@ -960,45 +1031,41 @@ def fetch_go() -> None:
                 [
                     "# Go Formatters",
                     "",
-                    "## gofmt",
+                    "Go formatting is centered on `gofmt`, with additional tools for imports and line wrapping.",
                     "",
-                    "See: https://pkg.go.dev/cmd/gofmt",
+                    "## gofmt",
+                    "- Canonical formatter shipped with Go.",
                     "",
                     "## goimports",
-                    "",
-                    "See: https://pkg.go.dev/golang.org/x/tools/cmd/goimports",
+                    "- Formats and fixes imports to match standard layout.",
                     "",
                     "## gofumpt",
-                    "",
-                    "See: https://github.com/mvdan/gofumpt",
+                    "- Stricter `gofmt` with additional style rules.",
                     "",
                     "## golines",
-                    "",
-                    "See: https://github.com/segmentio/golines",
+                    "- Wraps long lines to configured widths.",
                 ]
             ),
         )
-        write_text(
+        fetch_markdown(
+            "https://pkg.go.dev/cmd/gofmt",
             specs_dir / "formatters" / "gofmt.md",
-            join_lines(["# gofmt Options", "", "See: https://pkg.go.dev/cmd/gofmt"]),
+            "gofmt Options",
         )
-        write_text(
+        fetch_markdown(
+            "https://pkg.go.dev/golang.org/x/tools/cmd/goimports",
             specs_dir / "formatters" / "goimports.md",
-            join_lines(
-                [
-                    "# goimports Options",
-                    "",
-                    "See: https://pkg.go.dev/golang.org/x/tools/cmd/goimports",
-                ]
-            ),
+            "goimports Options",
         )
-        write_text(
+        fetch_markdown(
+            "https://github.com/mvdan/gofumpt",
             specs_dir / "formatters" / "gofumpt.md",
-            join_lines(["# gofumpt Options", "", "See: https://github.com/mvdan/gofumpt"]),
+            "gofumpt Options",
         )
-        write_text(
+        fetch_markdown(
+            "https://github.com/segmentio/golines",
             specs_dir / "formatters" / "golines.md",
-            join_lines(["# golines Options", "", "See: https://github.com/segmentio/golines"]),
+            "golines Options",
         )
 
     if fetch_section("stdlib"):
@@ -1101,13 +1168,36 @@ def fetch_go() -> None:
 
         all_rules = sorted({*enabled_rules, *optional_rules, *disabled_rules, "embeddedstructfieldcheck"})
 
+        linter_index_url = "https://golangci-lint.run/docs/linters/"
+        linter_descriptions: dict[str, str] = {}
+        try:
+            linter_html = fetch_url(linter_index_url)
+            linter_descriptions = _extract_golangci_lint_descriptions(linter_html, all_rules)
+        except FetchError as exc:
+            log(f"Failed to fetch golangci-lint index: {exc}")
+
         for rule in all_rules:
             log(f"  - {rule}")
-            fetch_markdown(
-                f"https://golangci-lint.run/docs/linters/{rule}/",
-                specs_dir / "linters" / "golangci-lint" / f"{rule}.md",
-                rule,
-            )
+            description = linter_descriptions.get(rule, "").strip()
+            if description:
+                write_text(
+                    specs_dir / "linters" / "golangci-lint" / f"{rule}.md",
+                    join_lines(
+                        [
+                            f"# {rule}",
+                            "",
+                            description,
+                            "",
+                            f"Source: {linter_index_url}#{rule}",
+                        ]
+                    ),
+                )
+            else:
+                fetch_markdown(
+                    f"{linter_index_url}#{rule}",
+                    specs_dir / "linters" / "golangci-lint" / f"{rule}.md",
+                    rule,
+                )
 
         write_text(
             specs_dir / "linters" / "golangci-lint" / "overview.md",
@@ -1636,35 +1726,25 @@ def fetch_python() -> None:
                 [
                     "# Python Formatters",
                     "",
-                    "## black",
+                    "Python formatting is typically handled by `black` (opinionated formatting) or `ruff format` (fast formatting with lint integration).",
                     "",
-                    "See: https://black.readthedocs.io/en/stable/",
+                    "## black",
+                    "- Opinionated, stable formatting with minimal configuration.",
                     "",
                     "## ruff format",
-                    "",
-                    "See: https://docs.astral.sh/ruff/formatter/",
+                    "- Formatter backed by the Ruff toolchain, aligned with Ruff lint rules.",
                 ]
             ),
         )
-        write_text(
+        fetch_markdown(
+            "https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html",
             specs_dir / "formatters" / "black.md",
-            join_lines(
-                [
-                    "# black Options",
-                    "",
-                    "See: https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html",
-                ]
-            ),
+            "black Options",
         )
-        write_text(
+        fetch_markdown(
+            "https://docs.astral.sh/ruff/formatter/",
             specs_dir / "formatters" / "ruff.md",
-            join_lines(
-                [
-                    "# ruff format Options",
-                    "",
-                    "See: https://docs.astral.sh/ruff/formatter/",
-                ]
-            ),
+            "ruff format Options",
         )
 
     if fetch_section("linters"):
@@ -1761,55 +1841,96 @@ def fetch_python() -> None:
                 msg,
             )
 
+        flake8_url = "https://flake8.pycqa.org/en/latest/user/error-codes.html"
         fetch_markdown(
-            "https://flake8.pycqa.org/en/latest/user/error-codes.html",
+            flake8_url,
             specs_dir / "linters" / "flake8" / "overview.md",
             "Flake8 Error Codes",
         )
         try:
-            flake8_html = fetch_url("https://flake8.pycqa.org/en/latest/user/error-codes.html")
+            flake8_html = fetch_url(flake8_url)
             flake8_codes = find_unique(flake8_html, r"\b([A-Z][0-9]{3})\b")
+            flake8_md = _simple_html_to_markdown(extract_main(flake8_html))
+            flake8_table = _extract_markdown_table(flake8_md)
         except FetchError as exc:
             log(f"Failed to fetch Flake8 error codes: {exc}")
             flake8_codes = []
+            flake8_table = {}
 
         for code in flake8_codes:
             log(f"  - flake8/{code}")
-            write_text(
-                specs_dir / "linters" / "flake8" / f"{code}.md",
-                join_lines(
-                    [
-                        f"# {code}",
-                        "",
-                        "See: https://flake8.pycqa.org/en/latest/user/error-codes.html",
-                    ]
-                ),
-            )
+            description = flake8_table.get(code, "").strip()
+            if description:
+                write_text(
+                    specs_dir / "linters" / "flake8" / f"{code}.md",
+                    join_lines(
+                        [
+                            f"# {code}",
+                            "",
+                            description,
+                            "",
+                            f"Source: {flake8_url}",
+                        ]
+                    ),
+                )
+            else:
+                write_text(
+                    specs_dir / "linters" / "flake8" / f"{code}.md",
+                    join_lines(
+                        [
+                            f"# {code}",
+                            "",
+                            f"Source: {flake8_url}",
+                        ]
+                    ),
+                )
 
+        mypy_url = "https://mypy.readthedocs.io/en/stable/error_code_list.html"
         fetch_markdown(
-            "https://mypy.readthedocs.io/en/stable/error_code_list.html",
+            mypy_url,
             specs_dir / "linters" / "mypy" / "overview.md",
             "mypy Error Codes",
         )
         try:
-            mypy_html = fetch_url("https://mypy.readthedocs.io/en/stable/error_code_list.html")
+            mypy_html = fetch_url(mypy_url)
             mypy_codes = find_unique(mypy_html, r"error_code_list.html#([a-z0-9-]+)")
+            mypy_md = _simple_html_to_markdown(extract_main(mypy_html))
+            mypy_sections = _extract_markdown_sections(mypy_md)
+            mypy_table = _extract_markdown_table(mypy_md)
         except FetchError as exc:
             log(f"Failed to fetch mypy error codes: {exc}")
             mypy_codes = []
+            mypy_sections = {}
+            mypy_table = {}
 
         for code in mypy_codes:
             log(f"  - mypy/{code}")
-            write_text(
-                specs_dir / "linters" / "mypy" / f"{code}.md",
-                join_lines(
-                    [
-                        f"# {code}",
-                        "",
-                        f"See: https://mypy.readthedocs.io/en/stable/error_code_list.html#{code}",
-                    ]
-                ),
-            )
+            description = mypy_table.get(code) or mypy_sections.get(code) or ""
+            description = description.strip()
+            if description:
+                write_text(
+                    specs_dir / "linters" / "mypy" / f"{code}.md",
+                    join_lines(
+                        [
+                            f"# {code}",
+                            "",
+                            description,
+                            "",
+                            f"Source: {mypy_url}#{code}",
+                        ]
+                    ),
+                )
+            else:
+                write_text(
+                    specs_dir / "linters" / "mypy" / f"{code}.md",
+                    join_lines(
+                        [
+                            f"# {code}",
+                            "",
+                            f"Source: {mypy_url}#{code}",
+                        ]
+                    ),
+                )
 
     if fetch_section("stdlib"):
         write_text(
@@ -1910,25 +2031,21 @@ def fetch_basic() -> None:
     log("=== Fetching BASIC Specs ===")
     for subdir in ["stdlib", "linters", "formatters", "patterns"]:
         (specs_dir / subdir).mkdir(parents=True, exist_ok=True)
+    reference_url = "https://en.wikibooks.org/wiki/QBasic"
 
     if fetch_section("spec"):
         log("Fetching QBasic reference...")
         fetch_markdown(
-            "https://www.qbasic.net/en/reference/qbasic/",
+            reference_url,
             specs_dir / "spec.md",
             "BASIC Language Reference",
         )
 
     if fetch_section("stdlib"):
-        write_text(
+        fetch_markdown(
+            reference_url,
             specs_dir / "stdlib" / "overview.md",
-            join_lines(
-                [
-                    "# BASIC Standard Library Reference",
-                    "",
-                    "See: https://www.qbasic.net/en/reference/qbasic/",
-                ]
-            ),
+            "BASIC Standard Library Reference",
         )
 
     if fetch_section("linters"):
@@ -2331,7 +2448,10 @@ def fetch_html() -> None:
         )
         try:
             html_validate_html = fetch_url("https://html-validate.org/rules/")
-            html_validate_rules = find_unique(html_validate_html, r"/rules/([a-z0-9-]+)")
+            html_validate_rules = find_unique(
+                html_validate_html,
+                r"/rules/([a-z0-9-]+(?:/[a-z0-9-]+)?)\\.html",
+            )
         except FetchError as exc:
             log(f"Failed to fetch html-validate rules: {exc}")
             html_validate_rules = []
@@ -2344,7 +2464,7 @@ def fetch_html() -> None:
                     [
                         f"# {rule}",
                         "",
-                        f"See: https://html-validate.org/rules/{rule}",
+                        f"See: https://html-validate.org/rules/{rule}.html",
                     ]
                 ),
             )
@@ -2992,25 +3112,10 @@ def fetch_powershell() -> None:
             "PSScriptAnalyzer",
         )
         fetch_markdown(
-            "https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/rules?view=ps-modules",
+            "https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Rules/README.md",
             specs_dir / "linters" / "psscriptanalyzer" / "rules.md",
             "PSScriptAnalyzer Rules",
         )
-        try:
-            pssa_html = fetch_url(
-                "https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/rules?view=ps-modules"
-            )
-            pssa_rules = find_unique(pssa_html, r"/psscriptanalyzer/rules/([a-zA-Z0-9-]+)")
-        except FetchError as exc:
-            log(f"Failed to fetch PSScriptAnalyzer rules: {exc}")
-            pssa_rules = []
-        for rule in pssa_rules:
-            log(f"  - psscriptanalyzer/{rule}")
-            fetch_markdown(
-                f"https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/{rule}?view=ps-modules",
-                specs_dir / "linters" / "psscriptanalyzer" / f"{rule}.md",
-                rule,
-            )
 
     if fetch_section("formatters"):
         write_text(
@@ -3543,20 +3648,18 @@ def fetch_kotlin() -> None:
     if fetch_section("stdlib"):
         log("Fetching Kotlin stdlib reference...")
         fetch_markdown(
-            "https://kotlinlang.org/api/latest/jvm/stdlib/",
+            "https://kotlinlang.org/api/core/kotlin-stdlib/",
             specs_dir / "stdlib" / "overview.md",
             "Kotlin Standard Library",
         )
         log("Fetching Kotlin package index...")
         fetch_markdown(
-            "https://kotlinlang.org/api/latest/jvm/stdlib/allpackages-index.html",
+            "https://kotlinlang.org/api/core/kotlin-stdlib/",
             specs_dir / "stdlib" / "packages" / "index.md",
             "Kotlin Packages",
         )
         try:
-            packages_html = fetch_url(
-                "https://kotlinlang.org/api/latest/jvm/stdlib/allpackages-index.html"
-            )
+            packages_html = fetch_url("https://kotlinlang.org/api/core/kotlin-stdlib/")
             packages = find_unique(
                 packages_html, r'href="([a-zA-Z0-9_./-]+)/package-summary.html"'
             )
@@ -3858,44 +3961,30 @@ def fetch_ruby() -> None:
 
     if fetch_section("spec"):
         fetch_markdown(
-            "https://docs.ruby-lang.org/en/3.3.0/doc/syntax_rdoc.html",
+            "https://docs.ruby-lang.org/en/3.3/doc/syntax_rdoc.html",
             specs_dir / "spec.md",
             "Ruby Syntax Reference",
         )
 
     if fetch_section("stdlib"):
         fetch_markdown(
-            "https://docs.ruby-lang.org/en/3.3.0/",
+            "https://docs.ruby-lang.org/en/3.3/",
             specs_dir / "stdlib" / "overview.md",
             "Ruby Standard Library",
         )
 
     if fetch_section("linters"):
-        write_text(
+        fetch_markdown(
+            "https://docs.rubocop.org/rubocop/",
             specs_dir / "linters" / "overview.md",
-            join_lines(
-                [
-                    "# Ruby Linters",
-                    "",
-                    "There is no official Ruby linter; RuboCop is widely used.",
-                    "",
-                    "See: https://docs.rubocop.org/rubocop/",
-                ]
-            ),
+            "RuboCop Overview",
         )
 
     if fetch_section("formatters"):
-        write_text(
+        fetch_markdown(
+            "https://docs.rubocop.org/rubocop/",
             specs_dir / "formatters" / "overview.md",
-            join_lines(
-                [
-                    "# Ruby Formatters",
-                    "",
-                    "RuboCop can auto-correct formatting issues.",
-                    "",
-                    "See: https://docs.rubocop.org/rubocop/",
-                ]
-            ),
+            "RuboCop Formatting",
         )
 
     if fetch_section("patterns"):
@@ -3949,7 +4038,7 @@ def fetch_dart() -> None:
         )
         try:
             rules_html = fetch_url("https://dart.dev/tools/linter-rules")
-            rules = find_unique(rules_html, r"/tools/linter-rules/([a-z0-9-]+)")
+            rules = find_unique(rules_html, r"/tools/linter-rules/([A-Za-z0-9_-]+)")
         except FetchError as exc:
             log(f"Failed to fetch Dart linter rules: {exc}")
             rules = []
@@ -4091,14 +4180,14 @@ def fetch_julia() -> None:
 
     if fetch_section("spec"):
         fetch_markdown(
-            "https://docs.julialang.org/en/v1/manual/",
+            "https://docs.julialang.org/en/v1/",
             specs_dir / "spec.md",
             "Julia Manual",
         )
 
     if fetch_section("stdlib"):
         fetch_markdown(
-            "https://docs.julialang.org/en/v1/stdlib/",
+            "https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/",
             specs_dir / "stdlib" / "overview.md",
             "Julia Standard Library",
         )

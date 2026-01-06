@@ -1,17 +1,15 @@
 # Go Formatters
 
-## gofmt
+Go formatting is centered on `gofmt`, with additional tools for imports and line wrapping.
 
-See: https://pkg.go.dev/cmd/gofmt
+## gofmt
+- Canonical formatter shipped with Go.
 
 ## goimports
-
-See: https://pkg.go.dev/golang.org/x/tools/cmd/goimports
+- Formats and fixes imports to match standard layout.
 
 ## gofumpt
-
-See: https://github.com/mvdan/gofumpt
+- Stricter `gofmt` with additional style rules.
 
 ## golines
-
-See: https://github.com/segmentio/golines
+- Wraps long lines to configured widths.

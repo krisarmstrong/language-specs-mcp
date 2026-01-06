@@ -1,5 +1,5 @@
 # clang-format Options
-Version: unknown
+Version: 21.1.8
 
 Source: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
 

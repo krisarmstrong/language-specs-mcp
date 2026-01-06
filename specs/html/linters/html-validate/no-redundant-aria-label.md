@@ -1,3 +1,47 @@
-# no-redundant-aria-label
+## Rules
 
-See: https://html-validate.org/rules/no-redundant-aria-label
+Rules
+
+1. [Rules reference](index.html)
+2. [Configuration presets](presets.html)
+3. [Third-party rules](third-party.html)
+
+# Disallow `aria-label` and `<label>` with same text content
+
+Rule ID:no-redundant-aria-labelCategory:AccessibilityStandards:-
+
+Reports error when an input element (`<input>`, `<textarea>` and `<select>`) contains both the `aria-label` attribute and an associated `<label>` element and both have the same text content.
+
+## [Rule details](#rule-details)
+
+Examples of incorrect code for this rule:
+
+```
+<label for="foo"> lorem ipsum </label>
+<input id="foo" aria-label="lorem ipsum" />
+```
+
+```
+error: aria-label is redundant when label containing same text exists (no-redundant-aria-label) at inline:2:17:
+  1 | <label for="foo"> lorem ipsum </label>
+> 2 | <input id="foo" aria-label="lorem ipsum" />
+    |                 ^^^^^^^^^^
+
+1 error found.
+```
+
+Examples of correct code for this rule:
+
+```
+<!-- different texts -->
+<label for="foo"> lorem ipsum </label>
+<input id="foo" aria-label="screenreader text" />
+
+<!-- only label -->
+<label for="foo"> lorem ipsum </label>
+<input id="foo" />
+```
+
+## [Version history](#version-history)
+
+- 8.1.0 - Rule added.

@@ -1,5 +1,6 @@
 # Biome Linter - Complete Rules Reference
-Version: unknown
+Version: 2.3.11
+
 Source: https://biomejs.dev/linter/rules/
 
 

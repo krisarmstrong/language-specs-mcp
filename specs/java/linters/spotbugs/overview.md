@@ -1,5 +1,5 @@
 # SpotBugs Bug Descriptions
-Version: unknown
+Version: 4.9.8
 
 Source: https://spotbugs.readthedocs.io/en/stable/bugDescriptions.html
 

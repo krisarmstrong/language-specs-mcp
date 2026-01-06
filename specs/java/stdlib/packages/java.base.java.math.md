@@ -1,3 +1,7 @@
-# java.base.java.math
+Module[java.base](../../module-summary.html)
 
-See: https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/package-summary.html
+# Package java.math
+
+package java.mathProvides classes for performing arbitrary-precision integer arithmetic (`BigInteger`) and arbitrary-precision decimal arithmetic (`BigDecimal`). `BigInteger` is analogous to the primitive integer types except that it provides arbitrary precision, hence operations on `BigInteger`s do not overflow or lose precision. In addition to standard arithmetic operations, `BigInteger` provides modular arithmetic, GCD calculation, primality testing, prime generation, bit manipulation, and a few other miscellaneous operations. `BigDecimal` provides arbitrary-precision signed decimal numbers suitable for currency calculations and the like. `BigDecimal` gives the user complete control over rounding behavior, allowing the user to choose from a comprehensive set of eight rounding modes.Since:1.1
+
+- All Classes and InterfacesClassesEnum ClassesClassDescription[BigDecimal](BigDecimal.html)Immutable, arbitrary-precision signed decimal numbers.[BigInteger](BigInteger.html)Immutable arbitrary-precision integers.[MathContext](MathContext.html)Immutable objects which encapsulate the context settings which describe certain rules for numerical operators, such as those implemented by the [BigDecimal](BigDecimal.html) class.[RoundingMode](RoundingMode.html)Specifies a rounding policy for numerical operations capable of discarding precision.

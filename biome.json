@@ -14,7 +14,9 @@
       "!!**/dist",
       "!!**/specs",
       "!!**/package-lock.json",
-      "!!**/*.d.ts"
+      "!!**/*.d.ts",
+      "!!docs/site/health.js",
+      "!!docs/site/app.js"
     ]
   },
   "formatter": {

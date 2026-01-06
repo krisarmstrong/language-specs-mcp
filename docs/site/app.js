@@ -95,8 +95,7 @@ function renderFileCards(items, query, language) {
 
   const fragment = document.createDocumentFragment();
   items.slice(0, 200).forEach((item) => {
-    const snippet =
-      query && item.content ? findSnippet(item.content, query) : "";
+    const snippet = query && item.content ? findSnippet(item.content, query) : "";
     const card = document.createElement("button");
     card.type = "button";
     card.className = "file-card";

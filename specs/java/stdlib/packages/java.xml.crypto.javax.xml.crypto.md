@@ -1,3 +1,15 @@
-# java.xml.crypto.javax.xml.crypto
+Module[java.xml.crypto](../../../module-summary.html)
 
-See: https://docs.oracle.com/en/java/javase/21/docs/api/java.xml.crypto/javax/xml/crypto/package-summary.html
+# Package javax.xml.crypto
+
+package javax.xml.cryptoCommon classes for XML cryptography. This package includes common classes that are used to perform XML cryptographic operations, such as generating an XML signature or encrypting XML data. 
+
+## Package Specification
+
+- [XML-Signature Syntax and Processing: W3C Recommendation](http://www.w3.org/TR/xmldsig-core/)
+- [RFC 3275: XML-Signature Syntax and Processing](http://www.ietf.org/rfc/rfc3275.txt)
+
+Since:1.6
+
+- Related PackagesModulePackageDescription[java.xml](../../../../java.xml/module-summary.html)[javax.xml](../../../../java.xml/javax/xml/package-summary.html)Defines constants for XML processing.[java.xml.crypto](../../../module-summary.html)[javax.xml.crypto.dom](dom/package-summary.html)DOM-specific classes for the [javax.xml.crypto](package-summary.html) package.[java.xml.crypto](../../../module-summary.html)[javax.xml.crypto.dsig](dsig/package-summary.html)Classes for generating and validating XML digital signatures.
+- All Classes and InterfacesInterfacesClassesException ClassesClassDescription[AlgorithmMethod](AlgorithmMethod.html)An abstract representation of an algorithm defined in the XML Security specifications.[Data](Data.html)An abstract representation of the result of dereferencing a [URIReference](URIReference.html) or the input/output of subsequent [Transform](dsig/Transform.html)s.[KeySelector](KeySelector.html)A selector that finds and returns a key using the data contained in a [KeyInfo](dsig/keyinfo/KeyInfo.html) object.[KeySelector.Purpose](KeySelector.Purpose.html)The purpose of the key that is to be selected.[KeySelectorException](KeySelectorException.html)Indicates an exceptional condition thrown by a [KeySelector](KeySelector.html).[KeySelectorResult](KeySelectorResult.html)The result returned by the [KeySelector.select](KeySelector.html#select(javax.xml.crypto.dsig.keyinfo.KeyInfo,javax.xml.crypto.KeySelector.Purpose,javax.xml.crypto.AlgorithmMethod,javax.xml.crypto.XMLCryptoContext)) method.[MarshalException](MarshalException.html)Indicates an exceptional condition that occurred during the XML marshalling or unmarshalling process.[NodeSetData](NodeSetData.html)<T>An abstract representation of a `Data` type containing a node-set.[NoSuchMechanismException](NoSuchMechanismException.html)This exception is thrown when a particular XML mechanism is requested but is not available in the environment.[OctetStreamData](OctetStreamData.html)A representation of a `Data` type containing an octet stream.[URIDereferencer](URIDereferencer.html)A dereferencer of [URIReference](URIReference.html)s.[URIReference](URIReference.html)Identifies a data object via a URI-Reference, as specified by [RFC 2396](http://www.ietf.org/rfc/rfc2396.txt).[URIReferenceException](URIReferenceException.html)Indicates an exceptional condition thrown while dereferencing a [URIReference](URIReference.html).[XMLCryptoContext](XMLCryptoContext.html)Contains common context information for XML cryptographic operations.[XMLStructure](XMLStructure.html)A representation of an XML structure from any namespace.

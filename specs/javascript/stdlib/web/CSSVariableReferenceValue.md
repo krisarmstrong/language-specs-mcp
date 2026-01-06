@@ -1,3 +1,54 @@
 # CSSVariableReferenceValue
 
-See: https://developer.mozilla.org/en-US/docs/Web/API/CSSVariableReferenceValue
+Limited availability
+
+This feature is not Baseline because it does not work in some of the most widely-used browsers.
+
+- [Learn more](/en-US/docs/Glossary/Baseline/Compatibility)
+- [See full compatibility](#browser_compatibility)
+- [Report feedback](https://survey.alchemer.com/s3/7634825/MDN-baseline-feedback?page=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCSSVariableReferenceValue&level=not)
+
+The `CSSVariableReferenceValue` interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) allows you to create a custom name for a built-in CSS value. This object functionality is sometimes called a "CSS variable" and serves the same purpose as the [var()](/en-US/docs/Web/CSS/Reference/Values/var) function. The custom name must begin with two dashes.
+
+## In this article
+
+- [Constructor](#constructor)
+- [Instance properties](#instance_properties)
+- [Instance methods](#instance_methods)
+- [Specifications](#specifications)
+- [Browser compatibility](#browser_compatibility)
+
+## [Constructor](#constructor)
+
+[CSSVariableReferenceValue()](/en-US/docs/Web/API/CSSVariableReferenceValue/CSSVariableReferenceValue)
+
+Creates a new `CSSVariableReferenceValue` object.
+
+## [Instance properties](#instance_properties)
+
+[CSSVariableReferenceValue.variable](/en-US/docs/Web/API/CSSVariableReferenceValue/variable)
+
+Returns the custom name passed to the constructor.
+
+[CSSVariableReferenceValue.fallback](/en-US/docs/Web/API/CSSVariableReferenceValue/fallback)Read only
+
+Returns the built-in CSS value for the custom name.
+
+## [Instance methods](#instance_methods)
+
+None.
+
+## [Specifications](#specifications)
+
+Specification
+[CSS Typed OM Level 1# cssvariablereferencevalue](https://drafts.css-houdini.org/css-typed-om/#cssvariablereferencevalue)
+
+## [Browser compatibility](#browser_compatibility)
+
+## Help improve MDN
+
+Was this page helpful to you?YesNo[Learn how to contribute](/en-US/docs/MDN/Community/Getting_started)
+
+ This page was last modified on ⁨May 14, 2024⁩ by [MDN contributors](/en-US/docs/Web/API/CSSVariableReferenceValue/contributors.txt). 
+
+[View this page on GitHub](https://github.com/mdn/content/blob/main/files/en-us/web/api/cssvariablereferencevalue/index.md?plain=1) • [Report a problem with this content](https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCSSVariableReferenceValue&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Fcssvariablereferencevalue%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCSSVariableReferenceValue%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fcssvariablereferencevalue%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2Fecc46f2c8d6e09f0aa6e1b3f5194abfcf462e603%0A*+Document+last+modified%3A+2024-05-14T02%3A56%3A27.000Z%0A%0A%3C%2Fdetails%3E)

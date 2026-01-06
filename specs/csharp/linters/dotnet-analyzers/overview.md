@@ -1,5 +1,5 @@
 # .NET Code Analysis Overview
-Version: unknown
+Version: 9.0.0
 
 Source: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview
 

@@ -1,9 +1,9 @@
 # Python Formatters
 
-## black
+Python formatting is typically handled by `black` (opinionated formatting) or `ruff format` (fast formatting with lint integration).
 
-See: https://black.readthedocs.io/en/stable/
+## black
+- Opinionated, stable formatting with minimal configuration.
 
 ## ruff format
-
-See: https://docs.astral.sh/ruff/formatter/
+- Formatter backed by the Ruff toolchain, aligned with Ruff lint rules.

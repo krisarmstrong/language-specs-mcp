@@ -10,6 +10,8 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parent.parent
 COMMANDS = [
     ["npm", "run", "fetch:delta"],
+    ["npm", "run", "update:versions"],
+    ["npm", "run", "stamp:versions"],
     ["npm", "run", "generate:all"],
 ]
 

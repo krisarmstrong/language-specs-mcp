@@ -1,5 +1,5 @@
 # cppcheck Manual
-Version: unknown
+Version: 2.19.0
 
 Source: https://cppcheck.sourceforge.io/manual.html
 

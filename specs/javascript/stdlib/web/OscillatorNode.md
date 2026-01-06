@@ -1,3 +1,261 @@
 # OscillatorNode
 
-See: https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode
+ Baseline  Widely available 
+
+ This feature is well established and works across many devices and browser versions. It’s been available across browsers since ⁨July 2015⁩. 
+
+- [Learn more](/en-US/docs/Glossary/Baseline/Compatibility)
+- [See full compatibility](#browser_compatibility)
+- [Report feedback](https://survey.alchemer.com/s3/7634825/MDN-baseline-feedback?page=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FOscillatorNode&level=high)
+
+The `OscillatorNode` interface represents a periodic waveform, such as a sine wave. It is an [AudioScheduledSourceNode](/en-US/docs/Web/API/AudioScheduledSourceNode) audio-processing module that causes a specified frequency of a given wave to be created—in effect, a constant tone.
+
+Number of inputs`0`Number of outputs`1`Channel count mode`max`Channel count`2` (not used in the default count mode)Channel interpretation`speakers`
+
+## In this article
+
+- [Constructor](#constructor)
+- [Instance properties](#instance_properties)
+- [Instance methods](#instance_methods)
+- [Events](#events)
+- [Examples](#examples)
+- [Specifications](#specifications)
+- [Browser compatibility](#browser_compatibility)
+- [See also](#see_also)
+
+## [Constructor](#constructor)
+
+[OscillatorNode()](/en-US/docs/Web/API/OscillatorNode/OscillatorNode)
+
+Creates a new instance of an `OscillatorNode` object, optionally providing an object specifying default values for the node's [properties](#instance_properties). As an alternative, you can use the [BaseAudioContext.createOscillator()](/en-US/docs/Web/API/BaseAudioContext/createOscillator) factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
+
+## [Instance properties](#instance_properties)
+
+Also inherits properties from its parent, [AudioScheduledSourceNode](/en-US/docs/Web/API/AudioScheduledSourceNode).
+
+[OscillatorNode.frequency](/en-US/docs/Web/API/OscillatorNode/frequency)
+
+An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate)[AudioParam](/en-US/docs/Web/API/AudioParam) representing the frequency of oscillation in hertz (though the `AudioParam` returned is read-only, the value it represents is not). The default value is 440 Hz (a standard middle-A note).
+
+[OscillatorNode.detune](/en-US/docs/Web/API/OscillatorNode/detune)
+
+An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate)[AudioParam](/en-US/docs/Web/API/AudioParam) representing detuning of oscillation in cents (though the `AudioParam` returned is read-only, the value it represents is not). The default value is 0.
+
+[OscillatorNode.type](/en-US/docs/Web/API/OscillatorNode/type)
+
+A string which specifies the shape of waveform to play; this can be one of a number of standard values, or `custom` to use a [PeriodicWave](/en-US/docs/Web/API/PeriodicWave) to describe a custom waveform. Different waves will produce different tones. Standard values are `"sine"`, `"square"`, `"sawtooth"`, `"triangle"` and `"custom"`. The default is `"sine"`.
+
+## [Instance methods](#instance_methods)
+
+Also inherits methods from its parent, [AudioScheduledSourceNode](/en-US/docs/Web/API/AudioScheduledSourceNode).
+
+[OscillatorNode.setPeriodicWave()](/en-US/docs/Web/API/OscillatorNode/setPeriodicWave)
+
+Sets a [PeriodicWave](/en-US/docs/Web/API/PeriodicWave) which describes a periodic waveform to be used instead of one of the standard waveforms; calling this sets the `type` to `custom`.
+
+[AudioScheduledSourceNode.start()](/en-US/docs/Web/API/AudioScheduledSourceNode/start)
+
+Specifies the exact time to start playing the tone.
+
+[AudioScheduledSourceNode.stop()](/en-US/docs/Web/API/AudioScheduledSourceNode/stop)
+
+Specifies the time to stop playing the tone.
+
+## [Events](#events)
+
+Also inherits events from its parent, [AudioScheduledSourceNode](/en-US/docs/Web/API/AudioScheduledSourceNode).
+
+## [Examples](#examples)
+
+### [Using an OscillatorNode](#using_an_oscillatornode)
+
+The following example shows basic usage of an [AudioContext](/en-US/docs/Web/API/AudioContext) to create an oscillator node and to start playing a tone on it. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/blob/main/violent-theremin/scripts/app.js) for relevant code).
+
+js
+
+```
+// create web audio api context
+const audioCtx = new AudioContext();
+
+// create Oscillator node
+const oscillator = audioCtx.createOscillator();
+
+oscillator.type = "square";
+oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
+oscillator.connect(audioCtx.destination);
+oscillator.start();
+```
+
+### [Different oscillator node types](#different_oscillator_node_types)
+
+The four built-in oscillator [types](/en-US/docs/Web/API/OscillatorNode/type) are `sine`, `square`, `triangle` and `sawtooth`. They are the shape of the waveform generated by an oscillator. Fun fact: These are the defaults for most synths because they are waveforms which are easy to generate electronically. This example visualizes the waveforms for the different types at different frequencies.
+
+html
+
+```
+<div class="controls">
+  <label for="type-select">
+    Oscillator type
+    <select id="type-select">
+      <option>sine</option>
+      <option>square</option>
+      <option>triangle</option>
+      <option>sawtooth</option>
+    </select>
+  </label>
+
+  <label for="freq-range">
+    Frequency
+    <input
+      type="range"
+      min="100"
+      max="800"
+      step="10"
+      value="250"
+      id="freq-range" />
+  </label>
+  <button data-playing="init" id="play-button">Play</button>
+</div>
+
+<canvas id="wave-graph"></canvas>
+```
+
+```
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  align-items: center;
+}
+
+#wave-graph {
+  width: 500px;
+  height: 300px;
+  border: 4px solid var(--pink);
+}
+```
+
+The code is in two parts: in the first part, we set up the sound stuff.
+
+js
+
+```
+const typeSelect = document.getElementById("type-select");
+const frequencyControl = document.getElementById("freq-range");
+const playButton = document.getElementById("play-button");
+
+const audioCtx = new AudioContext();
+const osc = new OscillatorNode(audioCtx, {
+  type: typeSelect.value,
+  frequency: frequencyControl.valueAsNumber,
+});
+// Rather than creating a new oscillator for every start and stop
+// which you would do in an audio application, we are just going
+// to mute/un-mute for demo purposes - this means we need a gain node
+const gain = new GainNode(audioCtx);
+const analyser = new AnalyserNode(audioCtx, {
+  fftSize: 1024,
+  smoothingTimeConstant: 0.8,
+});
+osc.connect(gain).connect(analyser).connect(audioCtx.destination);
+
+typeSelect.addEventListener("change", () => {
+  osc.type = typeSelect.value;
+});
+
+frequencyControl.addEventListener("input", () => {
+  osc.frequency.value = frequencyControl.valueAsNumber;
+});
+
+playButton.addEventListener("click", () => {
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume();
+  }
+
+  if (playButton.dataset.playing === "init") {
+    osc.start(audioCtx.currentTime);
+    playButton.dataset.playing = "true";
+    playButton.innerText = "Pause";
+  } else if (playButton.dataset.playing === "false") {
+    gain.gain.linearRampToValueAtTime(1, audioCtx.currentTime + 0.2);
+    playButton.dataset.playing = "true";
+    playButton.innerText = "Pause";
+  } else if (playButton.dataset.playing === "true") {
+    gain.gain.linearRampToValueAtTime(0.0001, audioCtx.currentTime + 0.2);
+    playButton.dataset.playing = "false";
+    playButton.innerText = "Play";
+  }
+});
+```
+
+As for the second part, we draw the waveform on a canvas using the [AnalyserNode](/en-US/docs/Web/API/AnalyserNode) we created above.
+
+js
+
+```
+const dpr = window.devicePixelRatio;
+const w = 500 * dpr;
+const h = 300 * dpr;
+const canvasEl = document.getElementById("wave-graph");
+canvasEl.width = w;
+canvasEl.height = h;
+const canvasCtx = canvasEl.getContext("2d");
+
+const bufferLength = analyser.frequencyBinCount;
+const dataArray = new Uint8Array(bufferLength);
+analyser.getByteTimeDomainData(dataArray);
+
+// draw an oscilloscope of the current oscillator
+function draw() {
+  analyser.getByteTimeDomainData(dataArray);
+
+  canvasCtx.fillStyle = "white";
+  canvasCtx.fillRect(0, 0, w, h);
+
+  canvasCtx.lineWidth = 4.0;
+  canvasCtx.strokeStyle = "black";
+  canvasCtx.beginPath();
+
+  const sliceWidth = (w * 1.0) / bufferLength;
+  let x = 0;
+
+  for (let i = 0; i < bufferLength; i++) {
+    const v = dataArray[i] / 128.0;
+    const y = (v * h) / 2;
+    if (i === 0) {
+      canvasCtx.moveTo(x, y);
+    } else {
+      canvasCtx.lineTo(x, y);
+    }
+    x += sliceWidth;
+  }
+
+  canvasCtx.lineTo(w, h / 2);
+  canvasCtx.stroke();
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+```
+
+Warning: This example makes a noise!
+
+## [Specifications](#specifications)
+
+Specification
+[Web Audio API# OscillatorNode](https://webaudio.github.io/web-audio-api/#OscillatorNode)
+
+## [Browser compatibility](#browser_compatibility)
+
+## [See also](#see_also)
+
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+
+## Help improve MDN
+
+Was this page helpful to you?YesNo[Learn how to contribute](/en-US/docs/MDN/Community/Getting_started)
+
+ This page was last modified on ⁨Aug 27, 2025⁩ by [MDN contributors](/en-US/docs/Web/API/OscillatorNode/contributors.txt). 
+
+[View this page on GitHub](https://github.com/mdn/content/blob/main/files/en-us/web/api/oscillatornode/index.md?plain=1) • [Report a problem with this content](https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FOscillatorNode&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Foscillatornode%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FOscillatorNode%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Foscillatornode%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2F4c30947ed01579ef12a69bf042a889d3577da9ec%0A*+Document+last+modified%3A+2025-08-27T12%3A32%3A41.000Z%0A%0A%3C%2Fdetails%3E)

@@ -1,5 +1,5 @@
 # detekt Rules
-Version: unknown
+Version: 1.23.8
 
 Source: https://detekt.dev/docs/rules/
 

@@ -1,5 +1,5 @@
 # luacheck Warnings
-Version: unknown
+Version: 0.23.0
 
 Source: https://luacheck.readthedocs.io/en/stable/warnings.html
 

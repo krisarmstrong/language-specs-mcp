@@ -1,3 +1,219 @@
 # CloseWatcher
 
-See: https://developer.mozilla.org/en-US/docs/Web/API/CloseWatcher
+Limited availability
+
+This feature is not Baseline because it does not work in some of the most widely-used browsers.
+
+- [Learn more](/en-US/docs/Glossary/Baseline/Compatibility)
+- [See full compatibility](#browser_compatibility)
+- [Report feedback](https://survey.alchemer.com/s3/7634825/MDN-baseline-feedback?page=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCloseWatcher&level=not)
+
+Experimental:This is an [experimental technology](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)
+Check the [Browser compatibility table](#browser_compatibility) carefully before using this in production.
+
+The `CloseWatcher` interface allows a custom UI component with open and close semantics to respond to device-specific close actions in the same way as a built-in component.
+
+The `CloseWatcher` interface inherits from [EventTarget](/en-US/docs/Web/API/EventTarget).
+
+## In this article
+
+- [Constructor](#constructor)
+- [Instance methods](#instance_methods)
+- [Events](#events)
+- [Description](#description)
+- [Examples](#examples)
+- [Specifications](#specifications)
+- [Browser compatibility](#browser_compatibility)
+- [See also](#see_also)
+
+## [Constructor](#constructor)
+
+[CloseWatcher()](/en-US/docs/Web/API/CloseWatcher/CloseWatcher)Experimental
+
+Creates a new `CloseWatcher` instance.
+
+## [Instance methods](#instance_methods)
+
+This interface also inherits methods from its parent, [EventTarget](/en-US/docs/Web/API/EventTarget).
+
+[CloseWatcher.requestClose()](/en-US/docs/Web/API/CloseWatcher/requestClose)Experimental
+
+Fires a `cancel` event and if that event is not canceled with [Event.preventDefault()](/en-US/docs/Web/API/Event/preventDefault), proceeds to fire a `close` event, and then finally deactivates the close watcher as if `destroy()` was called.
+
+[CloseWatcher.close()](/en-US/docs/Web/API/CloseWatcher/close)Experimental
+
+Immediately fires the `close` event, without firing `cancel` first, and deactivates the close watcher as if `destroy()` was called.
+
+[CloseWatcher.destroy()](/en-US/docs/Web/API/CloseWatcher/destroy)Experimental
+
+Deactivates the close watcher so that it will no longer receive `close` events.
+
+## [Events](#events)
+
+[cancel](/en-US/docs/Web/API/CloseWatcher/cancel_event)Experimental
+
+An event fired before the `close` event, so that `close` can be prevented from firing.
+
+[close](/en-US/docs/Web/API/CloseWatcher/close_event)Experimental
+
+An event fired when a close request was received.
+
+## [Description](#description)
+
+Some UI components have "close behavior", meaning that the component appears, and the user can close it when they are finished with it. For example: sidebars, popups, dialogs, or notifications.
+
+Users generally expect to be able to use a particular mechanism to close these elements, and the mechanism tends to be device-specific. For example, on a device with a keyboard it might be the Esc key, but Android might use the back button. For built-in components, such as [popover](/en-US/docs/Web/API/Popover_API) or [<dialog>](/en-US/docs/Web/HTML/Reference/Elements/dialog) elements, the browser takes care of these differences, closing the element when the user performs the close action appropriate for the device. However, when a web developer implements their own closable UI component (for example, a sidebar), it is hard to implement this kind of device-specific close behavior.
+
+The `CloseWatcher` interface solves this problem by delivering a `cancel` event, followed by a `close` event, when the user executes the device-specific close action. Web applications can use the `onclose` handler to close the UI element in response to the device-specific event. They can also trigger these same events in response to the UI element's normal closing mechanism, and then implement common `close` event handling for both the application- and device-specific close action. Once the `onclose` event handler completes the `CloseWatcher` is destroyed and the events will no longer be fired.
+
+In some applications the UI element may only be allowed to close when it is in a particular state; for example, when some needed information is populated. To address these cases, applications can prevent the `close` event from being emitted by implementing a handler for the `cancel` event that calls [Event.preventDefault()](/en-US/docs/Web/API/Event/preventDefault) if the UI element is not ready to close.
+
+You can create `CloseWatcher` instances without [user activation](/en-US/docs/Web/Security/Defenses/User_activation), and this can be useful to implement cases like session inactivity timeout dialogs. However, if you create more than one `CloseWatcher` without user activation, then the watchers will be grouped, so a single close request will close them both. In addition, the first close watcher does not necessarily have to be a `CloseWatcher` object: it could be a modal dialog element, or a popover generated by an element with the popover attribute
+
+## [Examples](#examples)
+
+### [Processing close requests](#processing_close_requests)
+
+In this example, you have your own UI component (a picker) and you want to support both, the platform's default close method (e.g., the Esc key) and your custom close method (a close button).
+
+You create a `CloseWatcher` to handle all `close` events.
+
+The `onclick` handler of your UI component can call `requestClose` to request a close and to route your close request through the same `onclose` handler the platform close method uses.
+
+js
+
+```
+const watcher = new CloseWatcher();
+const picker = setUpAndShowPickerDOMElement();
+let chosenValue = null;
+
+watcher.onclose = () => {
+  chosenValue = picker.querySelector("input").value;
+  picker.remove();
+};
+
+picker.querySelector(".close-button").onclick = () => watcher.requestClose();
+```
+
+### [Closing a sidebar using a platform close request](#closing_a_sidebar_using_a_platform_close_request)
+
+In this example we have a sidebar component that is displayed when an "Open" button is selected, and hidden using either a "Close" button or platform-native mechanisms. To make it more interesting, this is a live example!
+
+Note also that the example is a little contrived, because normally we would use a toggle button to change a sidebar state. We could certainly do that, but using separate "Open" and "Close" buttons makes it easier to demonstrate the feature.
+
+#### HTML
+
+The HTML defines "Open" and "Close" [<button>](/en-US/docs/Web/HTML/Reference/Elements/button) elements, along with [<div>](/en-US/docs/Web/HTML/Reference/Elements/div) elements for the main content and the sidebar. CSS is used to animate the display of the sidebar element when the `open` class is added or removed from the sidebar and content elements (this CSS is hidden because it is not relevant to the example).
+
+html
+
+```
+<button id="sidebar-open" type="button">Open</button>
+<button id="sidebar-close" type="button">Close</button>
+<div class="sidebar">Sidebar</div>
+<div class="main-content">Main content</div>
+```
+
+```
+.sidebar {
+  position: fixed;
+  top: 20px;
+  left: -300px;
+  right: auto;
+  bottom: 0;
+  width: 300px; /* Adjust the width as needed */
+  background-color: lightblue;
+}
+
+.main-content {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto; /* Adjust the width as needed */
+  background-color: green;
+  margin-left: 0px; /* Adjust for the sidebar width */
+}
+
+.sidebar.open {
+  left: 0; /* Slide the sidebar to the right when open */
+  transition: left 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.main-content.open {
+  margin-left: 300px; /* Adjust for the sidebar width */
+  transition: margin-left 0.3s ease-in-out;
+  background-color: green;
+}
+```
+
+#### JavaScript
+
+The code first gets variables for the buttons and `<div>` elements defined in the HTML. It also defines a function `closeSidebar()` that is called when the sidebar is closed, to remove the `open` class from the `<div>` elements, and adds a `click` event listener that calls the `openSidebar()` method when the "Open" button is clicked.
+
+js
+
+```
+const sidebar = document.querySelector(".sidebar");
+const mainContent = document.querySelector(".main-content");
+const sidebarOpen = document.getElementById("sidebar-open");
+const sidebarClose = document.getElementById("sidebar-close");
+
+function closeSidebar() {
+  sidebar.classList.remove("open");
+  mainContent.classList.remove("open");
+}
+
+sidebarOpen.addEventListener("click", openSidebar);
+```
+
+The implementation of `openSidebar()` is given below. The method first checks if the sidebar is already open, and if not, adds the `open` class to the elements so that the sidebar is displayed.
+
+We then create a new `CloseWatcher` and add a listener that will call [close()](/en-US/docs/Web/API/CloseWatcher/close) on it if the "Close" button is clicked. This ensures that the `close` event is called when either platform native close methods or the "Close" button are used. The implementation of the `onclose()` event handler simply closes the sidebar, and the `CloseWatcher` is then destroyed automatically.
+
+js
+
+```
+function openSidebar() {
+  if (!sidebar.classList.contains("open")) {
+    sidebar.classList.add("open");
+    mainContent.classList.add("open");
+
+    // Add new CloseWatcher
+    const watcher = new CloseWatcher();
+
+    sidebarClose.addEventListener("click", () => watcher.close());
+
+    // Handle close event, invoked by platform mechanisms or "Close" button
+    watcher.onclose = () => {
+      closeSidebar();
+    };
+  }
+}
+```
+
+Note that we chose to call `close()` on the watcher instead of [CloseWatcher.requestClose()](/en-US/docs/Web/API/CloseWatcher/requestClose) because we don't need the `cancel` event to be emitted (we would use `requestClose()` and the `cancel` event handler if there was a reason to ever prevent the sidebar from closing prematurely).
+
+#### Result
+
+Select the "Open" button to open the sidebar. You should be able to close the sidebar using the "Close" button or the usual platform method, such as the Esc key on Windows.
+
+## [Specifications](#specifications)
+
+Specification
+[HTML# closewatcher](https://html.spec.whatwg.org/multipage/interaction.html#closewatcher)
+
+## [Browser compatibility](#browser_compatibility)
+
+## [See also](#see_also)
+
+- [close](/en-US/docs/Web/API/HTMLDialogElement/close_event) event on [HTMLDialogElement](/en-US/docs/Web/API/HTMLDialogElement)
+
+## Help improve MDN
+
+Was this page helpful to you?YesNo[Learn how to contribute](/en-US/docs/MDN/Community/Getting_started)
+
+ This page was last modified on ⁨Nov 30, 2025⁩ by [MDN contributors](/en-US/docs/Web/API/CloseWatcher/contributors.txt). 
+
+[View this page on GitHub](https://github.com/mdn/content/blob/main/files/en-us/web/api/closewatcher/index.md?plain=1) • [Report a problem with this content](https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCloseWatcher&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Fclosewatcher%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCloseWatcher%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fclosewatcher%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2Fca26363fcc6fc861103d40ac0205e5c5b79eb2fa%0A*+Document+last+modified%3A+2025-11-30T02%3A30%3A55.000Z%0A%0A%3C%2Fdetails%3E)

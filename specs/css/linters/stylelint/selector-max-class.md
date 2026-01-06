@@ -1,3 +1,67 @@
+On this page
+
 # selector-max-class
 
-See: https://stylelint.io/user-guide/rules/selector-max-class
+Limit the number of classes in a selector.
+
+```
+div .foo.bar[data-val] > a.baz {}
+/*  ↑   ↑                 ↑
+    ↑   ↑                 ↑
+    1   2                 3  -- this selector contains three classes */
+```
+
+This rule resolves nested selectors before counting the number of classes in a selector. Each selector in a [selector list](https://www.w3.org/TR/selectors4/#selector-list) is evaluated separately.
+
+The `:not()` pseudo-class is also evaluated separately. The rule processes the argument as if it were an independent selector, and the result does not count toward the total for the entire selector.
+
+## Options[​](#options)
+
+### `number`[​](#number)
+
+Specify a maximum classes allowed.
+
+Given:
+
+```
+{
+  "selector-max-class": 2
+}
+```
+
+The following patterns are considered problems:
+
+```
+.foo.bar.baz {}
+```
+
+```
+.foo .bar {
+  & > .baz {}
+}
+```
+
+The following patterns are not considered problems:
+
+```
+div {}
+```
+
+```
+.foo .bar {}
+```
+
+```
+.foo.bar,
+.lorem.ipsum {} /* each selector in a selector list is evaluated separately */
+```
+
+```
+.foo .bar :not(.lorem.ipsum) {} /* `.lorem.ipsum` is inside `:not()`, so it is evaluated separately */
+```
+
+[Previousselector-max-attribute](/user-guide/rules/selector-max-attribute)[Nextselector-max-combinators](/user-guide/rules/selector-max-combinators)
+
+- [Options](#options)
+
+  - [number](#number)

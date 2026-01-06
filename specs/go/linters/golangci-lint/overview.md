@@ -1,5 +1,5 @@
 # golangci-lint Rules (from .golangci.yml)
-Version: unknown
+Version: 2.7.2
 
 Source: https://golangci-lint.run/usage/linters/
 

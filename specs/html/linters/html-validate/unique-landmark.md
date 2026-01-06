@@ -1,3 +1,81 @@
-# unique-landmark
+## Rules
 
-See: https://html-validate.org/rules/unique-landmark
+Rules
+
+1. [Rules reference](index.html)
+2. [Configuration presets](presets.html)
+3. [Third-party rules](third-party.html)
+
+# Requires landmarks to have unique names
+
+Rule ID:unique-landmarkCategory:AccessibilityStandards:-
+
+When the same type of landmark is present more than once in the same document each must be uniquely identifiable with a non-empty and unique name. For instance, if the document has two `<nav>` elements each of them need an accessible name to be distinguished from each other.
+
+This could be as simple as `aria-label="Primary"` and `aria-label="Secondary"` or if they have headings associated with them `aria-labelledby` can reference the heading. The names should not include the name of the landmark as Assistive Technology (AT) typically reads out the landmark as well so `aria-label="Primary navigation"` would be read as "Primary navigation navigation".
+
+The following elements / roles are considered landmarks:
+
+- `aside` or `[role="complementary"]`
+- `footer` or `[role="contentinfo"]`
+- `form` or `[role="form"]`
+- `header` or `[role="banner"]`
+- `main` or `[role="main"]`
+- `nav` or `[role="navigation"]`
+- `section` or `[role="region"]`
+
+Some exceptions apply:
+
+- `<footer>` and `<header>` are not considered landmarks if they are nested under `<main>` or sectioning content.
+- `<form>` and `<section>` is only considered a landmark if it has been given an explicit name.
+
+If the landmark is only present at most once the name does not have to be set.
+
+## [Rule details](#rule-details)
+
+Examples of incorrect code for this rule:
+
+```
+<nav>
+	lorem ipsum
+</nav>
+<nav>
+	dolor sit amet
+</nav>
+```
+
+```
+error: Landmarks must have a non-empty and unique accessible name (aria-label or aria-labelledby) (unique-landmark) at inline:1:2:
+> 1 | <nav>
+    |  ^^^
+  2 | 	lorem ipsum
+  3 | </nav>
+  4 | <nav>
+
+error: Landmarks must have a non-empty and unique accessible name (aria-label or aria-labelledby) (unique-landmark) at inline:4:2:
+  2 | 	lorem ipsum
+  3 | </nav>
+> 4 | <nav>
+    |  ^^^
+  5 | 	dolor sit amet
+  6 | </nav>
+
+2 errors found.
+```
+
+Examples of correct code for this rule:
+
+```
+<nav aria-label="Primary">
+	lorem ipsum
+</nav>
+<h2 id="secondary-nav-heading">Secondary</h2>
+<nav aria-labelledby="secondary-nav-heading">
+	dolor sit amet
+</nav>
+```
+
+## [Version history](#version-history)
+
+- 8.9.1 - Exceptions for `<footer>`, `<form>`, `<header>` and `<section>` added.
+- 8.9.0 - Rule added.

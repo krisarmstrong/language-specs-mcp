@@ -1,5 +1,5 @@
 # Ruff Linter Rules
-Version: unknown
+Version: 0.14.10
 
 Source: https://docs.astral.sh/ruff/rules/
 

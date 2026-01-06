@@ -1,3 +1,8 @@
-# java.desktop.java.awt.image.renderable
+Module[java.desktop](../../../../module-summary.html)
 
-See: https://docs.oracle.com/en/java/javase/21/docs/api/java.desktop/java/awt/image/renderable/package-summary.html
+# Package java.awt.image.renderable
+
+package java.awt.image.renderableProvides classes and interfaces for producing rendering-independent images.Since:1.2
+
+- Related PackagesPackageDescription[java.awt.image](../package-summary.html)Provides classes for creating and modifying images.
+- All Classes and InterfacesInterfacesClassesClassDescription[ContextualRenderedImageFactory](ContextualRenderedImageFactory.html)ContextualRenderedImageFactory provides an interface for the functionality that may differ between instances of RenderableImageOp.[ParameterBlock](ParameterBlock.html)A `ParameterBlock` encapsulates all the information about sources and parameters (Objects) required by a RenderableImageOp, or other classes that process images.[RenderableImage](RenderableImage.html)A RenderableImage is a common interface for rendering-independent images (a notion which subsumes resolution independence).[RenderableImageOp](RenderableImageOp.html)This class handles the renderable aspects of an operation with help from its associated instance of a ContextualRenderedImageFactory.[RenderableImageProducer](RenderableImageProducer.html)An adapter class that implements ImageProducer to allow the asynchronous production of a RenderableImage.[RenderContext](RenderContext.html)A RenderContext encapsulates the information needed to produce a specific rendering from a RenderableImage.[RenderedImageFactory](RenderedImageFactory.html)The RenderedImageFactory interface (often abbreviated RIF) is intended to be implemented by classes that wish to act as factories to produce different renderings, for example by executing a series of BufferedImageOps on a set of sources, depending on a specific set of parameters, properties, and rendering hints.

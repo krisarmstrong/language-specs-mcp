@@ -1,3 +1,44 @@
-# java.management.javax.management.openmbean
+Module[java.management](../../../module-summary.html)
 
-See: https://docs.oracle.com/en/java/javase/21/docs/api/java.management/javax/management/openmbean/package-summary.html
+# Package javax.management.openmbean
+
+package javax.management.openmbean
+
+Provides the open data types and Open MBean descriptor classes. An Open MBean is an MBean where the types of attributes and of operation parameters and return values are built using a small set of predefined Java classes. Open MBeans facilitate operation with remote management programs that do not necessarily have access to application-specific types, including non-Java programs.
+
+Every MBean has an [MBeanInfo](../MBeanInfo.html) with information about the MBean itself, and its attributes, operations, constructors, and notifications. In an Open MBean, this `MBeanInfo` implements the [OpenMBeanInfo](OpenMBeanInfo.html) interface, usually by being an instance of [OpenMBeanInfoSupport](OpenMBeanInfoSupport.html).
+
+The attribute information returned by [MBeanInfo.getAttributes](../MBeanInfo.html#getAttributes()) for an Open MBean is an array of objects implementing [OpenMBeanAttributeInfo](OpenMBeanAttributeInfo.html), usually instances of [OpenMBeanAttributeInfoSupport](OpenMBeanAttributeInfoSupport.html). In addition to the usual information about attributes, an `OpenMBeanAttributeInfo` specifies the [OpenType](OpenType.html) of the attribute. The possible `OpenType` values are predefined, which is what ensures that remote managers will understand them.
+
+Similar remarks apply to the parameter types of operations and constructors, and to the return types of operations.
+
+There is a distinction between an attribute's Java language type, as returned by [getType()](../MBeanAttributeInfo.html#getType()), and its `OpenType`, as returned by [getOpenType()](OpenMBeanParameterInfo.html#getOpenType()). For example, if the Java language type is `java.lang.String`, the `OpenType` will be [SimpleType.String](SimpleType.html#STRING). If the Java language type is [CompositeData](CompositeData.html), the `OpenType` will be a [CompositeType](CompositeType.html) that describes the items in the `CompositeData` instances for the attribute.
+
+## Default values and constraints
+
+In Open MBeans, attributes and parameters can have default values and/or constraints associated with them in the `OpenMBeanAttributeInfo` or `OpenMBeanParameterInfo`. There are two ways to specify these constraints. Either the values are directly specified as parameters to one of the constructors of `OpenMBeanAttributeInfoSupport` or `OpenMBeanParameterInfoSupport`, for example [OpenMBeanParameterInfoSupport(String, String, OpenType, Object, Object[])](OpenMBeanParameterInfoSupport.html#%3Cinit%3E(java.lang.String,java.lang.String,javax.management.openmbean.OpenType,T,T%5B%5D)); or the values are specified in a [Descriptor](../Descriptor.html) given as a parameter to one of the constructors.
+
+When a `Descriptor` is used, the fields of interest are these:
+
+- `defaultValue` defines the value returned by [getDefaultValue()](OpenMBeanParameterInfo.html#getDefaultValue()); 
+- `minValue` defines the value returned by [getMinValue()](OpenMBeanParameterInfo.html#getMinValue()); 
+- `maxValue` defines the value returned by [getMaxValue()](OpenMBeanParameterInfo.html#getMaxValue()); 
+- `legalValues` defines the values returned by [getLegalValues()](OpenMBeanParameterInfo.html#getLegalValues()). 
+
+For `defaultValue`, `minValue`, and `maxValue`, the associated value must either be of the Java type corresponding to `openType`, or be a string that can be converted into that type. The conversion uses the static method `valueOf(String)` if it finds one; otherwise a constructor with a single `String` parameter if it finds one; otherwise it fails.
+
+For `legalValues`, the associated value must be either an array or a `Set`, and the elements of the array or set must be convertible as described for `defaultValue` etc.
+
+The following conditions must be met for these fields:
+
+- the values must be of the appropriate type, or be strings that can be converted to the appropriate type as explained above; 
+- if `legalValues` is present then neither `minValue` nor `maxValue` must be present; 
+- if `defaultValue` is present then it must satisfy the constraints defined by `legalValues`, `minValue`, or `maxValue` when any of these is also present; 
+- if `minValue` and `maxValue` are both present then `minValue` must not be greater than `maxValue`. 
+
+Since:1.5See Also:
+
+- [JMX Specification, version 1.4](https://jcp.org/aboutJava/communityprocess/mrel/jsr160/index2.html)
+
+- Related PackagesPackageDescription[javax.management](../package-summary.html)Provides the core classes for the Java Management Extensions.
+- All Classes and InterfacesInterfacesClassesException ClassesClassDescription[ArrayType](ArrayType.html)<T>The `ArrayType` class is the open type class whose instances describe all open data values which are n-dimensional arrays of open data values.[CompositeData](CompositeData.html)The `CompositeData` interface specifies the behavior of a specific type of complex open data objects which represent composite data structures.[CompositeDataInvocationHandler](CompositeDataInvocationHandler.html)An [InvocationHandler](../../../../java.base/java/lang/reflect/InvocationHandler.html) that forwards getter methods to a [CompositeData](CompositeData.html).[CompositeDataSupport](CompositeDataSupport.html)The `CompositeDataSupport` class is the open data class which implements the `CompositeData` interface.[CompositeDataView](CompositeDataView.html)A Java class can implement this interface to indicate how it is to be converted into a `CompositeData` by the MXBean framework.[CompositeType](CompositeType.html)The `CompositeType` class is the open type class whose instances describe the types of [CompositeData](CompositeData.html) values.[InvalidKeyException](InvalidKeyException.html)This runtime exception is thrown to indicate that a method parameter which was expected to be an item name of a composite data or a row index of a tabular data is not valid.[InvalidOpenTypeException](InvalidOpenTypeException.html)This runtime exception is thrown to indicate that the open type of an open data value is not the one expected.[KeyAlreadyExistsException](KeyAlreadyExistsException.html)This runtime exception is thrown to indicate that the index of a row to be added to a tabular data instance is already used to refer to another row in this tabular data instance.[OpenDataException](OpenDataException.html)This checked exception is thrown when an open type, an open data or an open MBean metadata info instance could not be constructed because one or more validity constraints were not met.[OpenMBeanAttributeInfo](OpenMBeanAttributeInfo.html)Describes an attribute of an open MBean.[OpenMBeanAttributeInfoSupport](OpenMBeanAttributeInfoSupport.html)Describes an attribute of an open MBean.[OpenMBeanConstructorInfo](OpenMBeanConstructorInfo.html)Describes a constructor of an Open MBean.[OpenMBeanConstructorInfoSupport](OpenMBeanConstructorInfoSupport.html)Describes a constructor of an Open MBean.[OpenMBeanInfo](OpenMBeanInfo.html)Describes an Open MBean: an Open MBean is recognized as such if its [getMBeanInfo()](../DynamicMBean.html#getMBeanInfo()) method returns an instance of a class which implements the [OpenMBeanInfo](OpenMBeanInfo.html) interface, typically [OpenMBeanInfoSupport](OpenMBeanInfoSupport.html).[OpenMBeanInfoSupport](OpenMBeanInfoSupport.html)The `OpenMBeanInfoSupport` class describes the management information of an open MBean: it is a subclass of [MBeanInfo](../MBeanInfo.html), and it implements the [OpenMBeanInfo](OpenMBeanInfo.html) interface.[OpenMBeanOperationInfo](OpenMBeanOperationInfo.html)Describes an operation of an Open MBean.[OpenMBeanOperationInfoSupport](OpenMBeanOperationInfoSupport.html)Describes an operation of an Open MBean.[OpenMBeanParameterInfo](OpenMBeanParameterInfo.html)Describes a parameter used in one or more operations or constructors of an open MBean.[OpenMBeanParameterInfoSupport](OpenMBeanParameterInfoSupport.html)Describes a parameter used in one or more operations or constructors of an open MBean.[OpenType](OpenType.html)<T>The `OpenType` class is the parent abstract class of all classes which describe the actual open type of open data values.[SimpleType](SimpleType.html)<T>The `SimpleType` class is the open type class whose instances describe all open data values which are neither arrays, nor [CompositeData](CompositeData.html) values, nor [TabularData](TabularData.html) values.[TabularData](TabularData.html)The `TabularData` interface specifies the behavior of a specific type of complex open data objects which represent tabular data structures.[TabularDataSupport](TabularDataSupport.html)The `TabularDataSupport` class is the open data class which implements the `TabularData` and the `Map` interfaces, and which is internally based on a hash map data structure.[TabularType](TabularType.html)The `TabularType` class is the  open type class whose instances describe the types of [TabularData](TabularData.html) values.

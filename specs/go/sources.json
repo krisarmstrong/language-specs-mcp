@@ -1,12 +1,12 @@
 {
   "language": "go",
-  "generatedAt": "2026-01-05T15:15:48.677576+00:00",
+  "generatedAt": "2026-01-05T20:16:12.487668+00:00",
   "files": [
     {
       "path": "effective-go.md",
-      "sha256": "1e7f6ed8871d535088b91f4090ebd59bb8dd1f6a687e1ed65db150b3e013a219",
+      "sha256": "d8f1b373b3e67771c106239fbc224a1bfb738c21df60ea03c11d1622e998c776",
       "urls": [
-        "https://go.dev/doc/effective_go"
+        "http://chart.apis.google.com/chart?chs=300x300&cht=qr&choe=UTF-8&chl={{.}}"
       ]
     },
     {
@@ -21,40 +21,113 @@
     },
     {
       "path": "formatters/overview.md",
-      "sha256": "9427f3dce04e10e47a55aff096dc6ab07eb9d9014f4820667c250cd5f251cfb0",
-      "urls": [
-        "https://github.com/mvdan/gofumpt",
-        "https://github.com/segmentio/golines",
-        "https://pkg.go.dev/cmd/gofmt",
-        "https://pkg.go.dev/golang.org/x/tools/cmd/goimports"
-      ]
+      "sha256": "a6b9dc33be57eb70d6c8cd4e81d9126043c5b347fc0a6d99eaab574b4f9438c1",
+      "urls": []
     },
     {
       "path": "formatters/goimports.md",
-      "sha256": "9e6866f2e6f34ef3b032097315c3890d2b384ffb323725a3038e47b6ebf22df8",
+      "sha256": "2c0e19cbe441ff873284e6047ed4152e4b1f7449cf41eac9cef7286d687206ea",
       "urls": [
-        "https://pkg.go.dev/golang.org/x/tools/cmd/goimports"
+        "http://michaelwhatcott.com/gosublime-goimports/",
+        "https://cs.opensource.google/go/x/tools",
+        "https://cs.opensource.google/go/x/tools/+/v0.40.0:/go.mod",
+        "https://cs.opensource.google/go/x/tools/+/v0.40.0:cmd/goimports",
+        "https://cs.opensource.google/go/x/tools/+/v0.40.0:cmd/goimports/doc.go",
+        "https://cs.opensource.google/go/x/tools/+/v0.40.0:cmd/goimports/goimports.go",
+        "https://cs.opensource.google/go/x/tools/+/v0.40.0:cmd/goimports/goimports_gc.go",
+        "https://deps.dev/go/golang.org%2Fx%2Ftools/v0.40.0",
+        "https://github.com/dominikh/go-mode.el",
+        "https://go.dev/",
+        "https://go.dev/security/policy",
+        "https://golang.org/change/39c724dd7f252",
+        "https://golang.org/issues/new?title=x/tools/cmd/goimports:+",
+        "https://golang.org/wiki/IDEsAndTextEditorPlugins"
       ]
     },
     {
       "path": "formatters/gofmt.md",
-      "sha256": "fff30c9c21384331b9097cbb6e01bd3da433f43207a964d1adbab73dfcc54779",
+      "sha256": "66832323eb94c872f2dd30d516bcc8b0094e90881b5f08fb030a466131c6930f",
       "urls": [
-        "https://pkg.go.dev/cmd/gofmt"
+        "https://cs.opensource.google/go/go",
+        "https://cs.opensource.google/go/go/+/go1.25.5:src/cmd/gofmt",
+        "https://cs.opensource.google/go/go/+/go1.25.5:src/cmd/gofmt/doc.go",
+        "https://cs.opensource.google/go/go/+/go1.25.5:src/cmd/gofmt/gofmt.go",
+        "https://cs.opensource.google/go/go/+/go1.25.5:src/cmd/gofmt/internal.go",
+        "https://cs.opensource.google/go/go/+/go1.25.5:src/cmd/gofmt/rewrite.go",
+        "https://cs.opensource.google/go/go/+/go1.25.5:src/cmd/gofmt/simplify.go",
+        "https://cs.opensource.google/go/go/+/go1.25.5:src/go.mod",
+        "https://deps.dev/go/std/go1.25.5",
+        "https://go.dev/",
+        "https://go.dev/about#build-context",
+        "https://go.dev/security/policy"
       ]
     },
     {
       "path": "formatters/gofumpt.md",
-      "sha256": "03b3afc68ad2ab835d9490928133d98d73b06c8e1d144d7939061c899f669694",
+      "sha256": "538895247c2e87dfca9edcf6052dfd4143bd6f567566135ea287a2082647ed0c",
       "urls": [
-        "https://github.com/mvdan/gofumpt"
+        "https://emacs-lsp.github.io/lsp-mode/",
+        "https://github.com/AlekSi",
+        "https://github.com/adamroyjones",
+        "https://github.com/ebati",
+        "https://github.com/fatih/vim-go",
+        "https://github.com/golang/go/issues/32819",
+        "https://github.com/golang/go/issues/37641",
+        "https://github.com/golang/vscode-go#readme",
+        "https://github.com/govim/govim",
+        "https://github.com/jakebailey",
+        "https://github.com/joaotavora/eglot",
+        "https://github.com/karelbilek",
+        "https://github.com/moorereason",
+        "https://github.com/muesli",
+        "https://github.com/mvdan",
+        "https://github.com/mvdan/gofumpt",
+        "https://github.com/neovim/nvim-lspconfig",
+        "https://github.com/ravishi",
+        "https://github.com/sbaildon",
+        "https://github.com/scop",
+        "https://github.com/sublimelsp/LSP",
+        "https://github.com/tklauser",
+        "https://github.com/tsnewaz",
+        "https://github.com/twpayne",
+        "https://go.dev/ref/mod#go-mod-file-ignore",
+        "https://invite.slack.golangbridge.org/",
+        "https://pkg.go.dev/mvdan.cc/gofumpt",
+        "https://pkg.go.dev/mvdan.cc/gofumpt/format"
       ]
     },
     {
       "path": "formatters/golines.md",
-      "sha256": "ef77ad89a35c641bc3edf8ad222868a785a89fed02093fa98ffb8c330dc173c6",
+      "sha256": "19bcff2d03820e186372ca251c56e9d762d2a45d0df2c82a9d0e446209e4a4b3",
       "urls": [
-        "https://github.com/segmentio/golines"
+        "https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories",
+        "https://en.wikipedia.org/wiki/Method_chaining",
+        "https://github.com/asaf-erlich",
+        "https://github.com/bhavanki",
+        "https://github.com/chenrui333",
+        "https://github.com/dave",
+        "https://github.com/dave/dst",
+        "https://github.com/echarrod",
+        "https://github.com/falzm",
+        "https://github.com/golang/go/issues/11915",
+        "https://github.com/golangci/golines/",
+        "https://github.com/kgritesh",
+        "https://github.com/mckern",
+        "https://github.com/momaek",
+        "https://github.com/segmentio/golines",
+        "https://github.com/segmentio/golines/",
+        "https://github.com/segmentio/golines/actions/workflows/test.ymlhttps://goreportcard.com/report/github.com/segmentio/golineshttps://godoc.org/github.com/segmentio/golines",
+        "https://github.com/sjackman",
+        "https://github.com/telemachus",
+        "https://github.com/urbanyeti",
+        "https://github.com/wdbetts",
+        "https://github.com/yolken",
+        "https://github.com/yolken-segment",
+        "https://go.dev/ref/mod#go-mod-file-go",
+        "https://godoc.org/golang.org/x/tools/cmd/goimports",
+        "https://golang.org/cmd/gofmt/",
+        "https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave",
+        "https://yolken.net/blog/cleaner-go-code-golines"
       ]
     },
     {
@@ -2077,129 +2150,101 @@
     },
     {
       "path": "spec.md",
-      "sha256": "1f2565704db81a086378c5c2587b84248ecb7ca8a933a66ce34b5cdb2359bebc",
+      "sha256": "4d4a941d588d6b3f294c6914e3d329f4d09e186723ddc3040785522e8b2bfb3d",
       "urls": [
-        "https://go.dev/ref/spec"
+        "https://en.wikipedia.org/wiki/Modulo_operation",
+        "https://en.wikipedia.org/wiki/Two",
+        "https://en.wikipedia.org/wiki/UTF-8",
+        "https://en.wikipedia.org/wiki/Wirth_syntax_notation",
+        "https://go.dev/ref/spec",
+        "https://www.unicode.org/versions/Unicode6.3.0/",
+        "https://www.unicode.org/versions/Unicode8.0.0/"
       ]
     },
     {
       "path": "linters/golangci-lint/staticcheck.md",
-      "sha256": "94d8e3f3095121082a08a5e0e46d5f9c25b8fb4e0f54d40072919c1f4ac69e1b",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/staticcheck/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/interfacebloat.md",
-      "sha256": "72e5ca6ed40a09cfe0ae6efcaa1e91909770ce9d6199cfe7bdb04e0aca1fe58d",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/interfacebloat/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/nonamedreturns.md",
-      "sha256": "639c9d17ecce4ddc86debc73824b18366ecb3706bf1972bc62dcbddcbd6887a7",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/nonamedreturns/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/goheader.md",
-      "sha256": "80f5ab1fdf7b5d6d1daeda2700ac79f72cb0705accf5ab7b749e42ce46cdf1e9",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/goheader/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/godoclint.md",
-      "sha256": "b386e1a1ccbff23d3b9f84bf90852a925df35cf26951c268c442bcaaa66c9191",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/godoclint/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/exhaustive.md",
-      "sha256": "423751adc597d8f7fe7dc4c86c171d817f7ac3a2ce2d1922a8a0f047b30c4602",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/exhaustive/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/recvcheck.md",
-      "sha256": "910ac9d3e07f29ac0dab46165fdf344281735698729ab51ac8527d4ab0890757",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/recvcheck/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/grouper.md",
-      "sha256": "175ffbc030a6cbd82bc66018e2b511f58e6d86def7e05b74a6bdbfac891e1b78",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/grouper/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/unqueryvet.md",
-      "sha256": "149287a10a44f1a7150a2ea9550a370d7a4db4fca50a04f6c2fb3d64440f0664",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/unqueryvet/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/sqlclosecheck.md",
-      "sha256": "85dfa4148865b5669ebe562a723198883a533f98ae0b4d49bb22037db4ab55fa",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/sqlclosecheck/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/perfsprint.md",
-      "sha256": "85f5ea94946b6dbf09da3a43100d364371916fbbe020c2dae7c1e7680971cca4",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/perfsprint/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/fatcontext.md",
-      "sha256": "1ec9d89a79138b06559cb608c6efb92019db41014a6179a325585d9d02a15a07",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/fatcontext/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/cyclop.md",
-      "sha256": "582fdc8de34818c2f9c2acb7e29cc8bcf40285281d854874baa36e54f039f537",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/cyclop/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/nolintlint.md",
-      "sha256": "2e700b72d562cd83d5db8f3963f09dcb6fef2de31dd3ad445766fb37516c22af",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/nolintlint/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/ginkgolinter.md",
-      "sha256": "a96f60bc04933bc23d942c9fc8b16c9716ca23ac7c19ab1264cbc882b6710cc7",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/ginkgolinter/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/gosmopolitan.md",
-      "sha256": "4c8f1dce5d7594aca0f82f12427b1f5aa0d610e3f5b1f13a01123abac5f50f75",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/gosmopolitan/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/govet.md",
-      "sha256": "d876cb4ee2c7afd040257ee6b81d98c94d2f7e1d401d990f393f66850ee00c34",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/govet/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/overview.md",
@@ -2211,353 +2256,253 @@
     },
     {
       "path": "linters/golangci-lint/nilnesserr.md",
-      "sha256": "746185e46beaad8774819109f852fedbd29e41127f55974654a00235816aa16f",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/nilnesserr/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/testableexamples.md",
-      "sha256": "11cb30eb070d50df115ea0fbc9197cf2540b78342134812e46064b62309e0f57",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/testableexamples/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/godox.md",
-      "sha256": "1b0a957487dcbbd3b932829b62433ffbacf95355fca68ea8a634f0cc313d1527",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/godox/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/dogsled.md",
-      "sha256": "e5dba0140bbafced97e28d60621fb119e534a69190029df1e71abe23e2fc76ad",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/dogsled/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/decorder.md",
-      "sha256": "a466efcf56ad5e66b34f0ef0939df7ddcb6cb3e7d1e1d0712c39df36b4e42278",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/decorder/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/predeclared.md",
-      "sha256": "ad0ed4c1943b38de600c68502e0996a4ef82b39ab9cb184388ebc1416219b9e8",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/predeclared/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/iotamixing.md",
-      "sha256": "12d37e52d9bbdd30790094fd4ab8ec70822e47d352b2df229dc62c98ba14b87a",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/iotamixing/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/goprintffuncname.md",
-      "sha256": "aa8bd60270144a3218eb468f963fea9582a8f1e4515ab97899bb23a20a1224d2",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/goprintffuncname/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/paralleltest.md",
-      "sha256": "40aaae03eeaddba42a5e4073a3554efd80aabf1a55d6f4df11c95c55b679f6de",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/paralleltest/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/inamedparam.md",
-      "sha256": "a392299b1346eb2ae5966f1a015e41c38602caae3a3a8c7f3157755ab82036bc",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/inamedparam/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/rowserrcheck.md",
-      "sha256": "bff3c0be59cc4368568cbdac0c38a8ce3dadd2e3ca54dbbd375c146b1679c1f8",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/rowserrcheck/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/unparam.md",
-      "sha256": "d0300417d85a3b04f9b80bed675e25926b888561ae5efbf2fa9bbf5cdd4e8110",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/unparam/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/mnd.md",
-      "sha256": "21a526377ade6180f2cb7dd384a2b2fc18563195aff032668053a2111a92dec2",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/mnd/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/bodyclose.md",
-      "sha256": "a3df188f93f26cf9d173b5ced78705975f063ebde55109241681fa6db8024de1",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/bodyclose/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/misspell.md",
-      "sha256": "71d22c2c3c777076d4a8f857360e00cc5d5e312d346bd4d1eb1dee2af43d4a1c",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/misspell/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/noctx.md",
-      "sha256": "67b8b6f7a6e97162f03528145cf2f366f2dd3f6e654dabb7f55fdb73945b8803",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/noctx/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/copyloopvar.md",
-      "sha256": "703171a8823d35885c47d365859f922732a900e88e79f2b316fb70e6e36af3b3",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/copyloopvar/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/gochecknoinits.md",
-      "sha256": "276a02faa61f40db89b383584de75c7bc7273033d2e8baa1ebfd9a2b9a132876",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/gochecknoinits/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/promlinter.md",
-      "sha256": "87d7445b36701aeec4dcfcd700b3a72203ad90e6624ad329f14c9b1cb17b8b0f",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/promlinter/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/errcheck.md",
-      "sha256": "03446af68e682f530d665c8db6f80c64627ba8b3ba4549fdcf2a993e6dbc9490",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/errcheck/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/funlen.md",
-      "sha256": "2992a63de04c18aa2c128a20a79a3055abb6ad4ede00ce81e95ed4bdad304c4e",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/funlen/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/unused.md",
-      "sha256": "a2315de7cb36a1ef44f7d251c1aa70e67061c699ba505305fabc4ab4d0113e68",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/unused/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/whitespace.md",
-      "sha256": "98b010b5723e816d381bc711e6d43bc7bb68afee9198c2aa4486a0ef34f4c7fe",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/whitespace/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/varnamelen.md",
-      "sha256": "249ce06bee88713bbeb6a50f9c96abbae9f1043e50670d21dda67c7f0bddb691",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/varnamelen/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/gocheckcompilerdirectives.md",
-      "sha256": "a70572026bbb0b31d61958fa896f5fae6bb7294e0c71b8f7a714b3efed37bacc",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/gocheckcompilerdirectives/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/intrange.md",
-      "sha256": "df51e56aba9897209fec741b3ee28a9c9ad9e849475accbd70705e4605f68804",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/intrange/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/durationcheck.md",
-      "sha256": "c19f078b735005f130a958ec60b2e96a4d6df8aafed0464e48b3c3b71ceed06f",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/durationcheck/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/forbidigo.md",
-      "sha256": "974385e1972b2929b20ab455ffa18c6c500642f0ded2f1af1dd412f4c7fb58ec",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/forbidigo/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/canonicalheader.md",
-      "sha256": "00f80a1c431a59b1407b398ad0986c800c90c66d16acf96a883baad0cedad875",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/canonicalheader/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/bidichk.md",
-      "sha256": "6d1e32c676bce8b8f26ce46feffe552a36a47a7fbede5860d9688d4ed1faf656",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/bidichk/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/usetesting.md",
-      "sha256": "1afff8ef0cda3ada78a240558b2481c733a7cef951c8704d06ed2411424f2165",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/usetesting/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/ireturn.md",
-      "sha256": "53a40624f71bd6992fb2cdeabe8e7e69e8fdc8b8962e7eadfe9cfb7b130711da",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/ireturn/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/arangolint.md",
-      "sha256": "bac94b4196d8843854b2d95da730bde63caa4c79f2f659ee9e713b9db05023fa",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/arangolint/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/errname.md",
-      "sha256": "d7140950c1ba031ca59c952bcb63d7c4e3c144fd9050eba761ba2ef4b62ac630",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/errname/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/exptostd.md",
-      "sha256": "a6fd583cd71d705ccaff46ed73bf04067600f20fe5eef25242627ef2fb2dd36e",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/exptostd/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/gochecknoglobals.md",
-      "sha256": "00561ca7e144ed1fff3134892df9ff0095acbf6d238833c3b0374306490120ab",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/gochecknoglobals/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/gomodguard.md",
-      "sha256": "cd919873c71451527c882d60d986108f60b6e16d0406d1c8c673b909cd951882",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/gomodguard/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/errchkjson.md",
-      "sha256": "3bc9cc1e7800fb995d6a2e6416d4d5474a907338a55ffff495028a0e5af9b2af",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/errchkjson/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/nestif.md",
-      "sha256": "e8aa29d4eb8f2cd38bc61fc82ce25263b287ffe6f57e2d2632085566281ac139",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/nestif/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/forcetypeassert.md",
-      "sha256": "57d21a4d1bec2ceb762dd26de9139df040e1c1eab10122dfa1e7d618a3828fd6",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/forcetypeassert/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/nakedret.md",
-      "sha256": "4690fd5b5918d231e94d46f5082ffbebcd138451533c83c6f524135a3e852027",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/nakedret/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/protogetter.md",
-      "sha256": "ffbc8a3715e6f76f085e7a784b6b9db6737cb128386b7824c6a7ba2efa957ef0",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/protogetter/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/gomoddirectives.md",
-      "sha256": "51ab605befc27d35a6e0c8ca58f0b17bddfd005f35bb5eaad0311ac8c356bd60",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/gomoddirectives/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/noinlineerr.md",
-      "sha256": "2f7efc614374e96a7132941dc2b4059d000b42f5efb0774d73b900cfc6ef26e0",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/noinlineerr/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/usestdlibvars.md",
-      "sha256": "3ccd64d0103bef47da370603223569817efe70dc78c23d490c418d1491c35a7d",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/usestdlibvars/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/modernize.md",
-      "sha256": "4ae516d456a8de1eb7efc88393030ff45cbd65a2173a1167ed73c1a56017f1d7",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/modernize/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/depguard.md",
-      "sha256": "5c303e17841b33f40f35630ff49d933496ac68d1fb5d837bf02aa547490624c2",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/depguard/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/gocognit.md",
-      "sha256": "897dbe01c43ef795ed104d43d8306d463d3b9860e195d7562479c0a2e5280cd7",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/gocognit/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/gocyclo.md",
-      "sha256": "d4f3053d2e440d106c55c2be15a39682e8307ff958b7a2949f0a1cb9b9e25f95",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/gocyclo/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/gochecksumtype.md",
-      "sha256": "a6f926b2bec773b7e6c2ee758dfb979c92fe72dcbe15e818189a9d29a097f163",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/gochecksumtype/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/config.md",
@@ -2584,318 +2529,228 @@
     },
     {
       "path": "linters/golangci-lint/importas.md",
-      "sha256": "92c0f44a8d178c41fe8ba33fc38beb99f8d3bafa6ee025a3a0ea51b019a0affa",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/importas/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/asciicheck.md",
-      "sha256": "773e93c333de3ac01883116a80ecc5f81ab5131843bb59f85ab1707e47135178",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/asciicheck/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/reassign.md",
-      "sha256": "96917734373f3231fa060eb47a4bebde5edd7eff488d1dbe4b48230b987a1340",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/reassign/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/mirror.md",
-      "sha256": "8d133534b5b4f84efc33c518375db16157ffb1acd9061955d5bc7757e7143f29",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/mirror/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/unconvert.md",
-      "sha256": "b3d508f505da8d66715c68b2d7d898101c861517a33d8bf1f2d5c08a42934611",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/unconvert/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/asasalint.md",
-      "sha256": "8c7add2ad15bbcbdcd1ebf06f2bd579863b6959bf97f4f4460f200f85c90e0fb",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/asasalint/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/funcorder.md",
-      "sha256": "d7f92f56ca3543eae081548483d4bd0d101952d039d062bb08fe23460e7b85a7",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/funcorder/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/revive.md",
-      "sha256": "e8a95f398edcf32b098e337cd44fc2712a686095ec8435bfe90b3c545c856ce8",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/revive/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/thelper.md",
-      "sha256": "afc5ed9c027c64c22c49c0a3df8ea1125c6e99dd28c25c1fe728ed21db452348",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/thelper/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/nilerr.md",
-      "sha256": "419b170c77c0da1b3e55a78f81bf9d42eaf418ea91be02721c7b0214ea405297",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/nilerr/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/godot.md",
-      "sha256": "53b0a883a2f449960fe4e578d27e873a3f29592beb44fc04eb307fe2849bfacd",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/godot/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/contextcheck.md",
-      "sha256": "3c7e97cd7d1b7ab1b9831c9a256b15f496461c31ca37d45e984f2ebe601cc395",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/contextcheck/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/tagalign.md",
-      "sha256": "371c0c0058e8d00cc33d043f6f1f469025bac93684177fd13164b1a984b05c6f",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/tagalign/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/musttag.md",
-      "sha256": "19e59cab12ae1a4c25367e51d606434b61c1e1ccba8255c913802c4d0e8b86f1",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/musttag/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/err113.md",
-      "sha256": "2de5df7a21fd0ceaa34add591a60a4514d103a5962751276df44a0d8a9bfc79f",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/err113/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/wrapcheck.md",
-      "sha256": "6248ff30528e694d6acf92fe23fa21889211144ffe4eadffaa63789c5d1f309c",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/wrapcheck/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/testifylint.md",
-      "sha256": "922ce947302515a422033fbb8e2e89af2f859ba6f4ffb2c35ecf04273985aaab",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/testifylint/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/containedctx.md",
-      "sha256": "572b58cc03b57716018cd9a7e04f08d85280e91685b8cb2ba8cd3d6d86025b9c",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/containedctx/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/wastedassign.md",
-      "sha256": "0281161a6c41868ca07ccc89d4cc86e332922b250c51794499a1b682efb41d2a",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/wastedassign/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/sloglint.md",
-      "sha256": "e16dfb9f35f0688551d0ee7f0c4e461755aab1be4cfa3e25e99ec92d55c5eb0d",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/sloglint/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/tagliatelle.md",
-      "sha256": "67cfb324866afb93f7616455ef2fb02ad01062848addef8b6abaaa37540dae5a",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/tagliatelle/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/maintidx.md",
-      "sha256": "f371162ef75d73e2e702beea88f44d6bf448929d13ca3e0415b04d5573ea9976",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/maintidx/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/testpackage.md",
-      "sha256": "dcdea95a1f9e9e6cdbb829bbc5301647bdf5f88ca903bb4a74ab9d596c8ddf15",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/testpackage/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/nlreturn.md",
-      "sha256": "a3b6d59c650ada3cf92ce2f398c99f50ae0c8c0ae92b13db7b2c8706b1700c21",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/nlreturn/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/gosec.md",
-      "sha256": "4a17d2f0c7d06d722ae8775b8aa3184569cadef66b6b05372b02a3b2105e0f60",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/gosec/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/loggercheck.md",
-      "sha256": "1408c9c62751c704f2e2cf696ced991f0b9a9cefe7c529939fa6cbe6f658acc5",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/loggercheck/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/spancheck.md",
-      "sha256": "6c0d6283a23ac274a48c482b73c41ccfcae8d43df1d5054d3492575f15e8a544",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/spancheck/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/tparallel.md",
-      "sha256": "2d1d23422ecbf951eab04657c6146f5d99db31ba3678291d5a22d4d8a23f8ca6",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/tparallel/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/exhaustruct.md",
-      "sha256": "52292229e1d725da187dc3c6f432a0dfa5b0002b424dc05fd3ef94a029e28169",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/exhaustruct/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/errorlint.md",
-      "sha256": "ff4712df833ab1049f7d9a78f3ac18ea9ad7665a597bc92fbab3488953ad6a95",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/errorlint/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/goconst.md",
-      "sha256": "13eca2d3489454fbf7d1ac1ab4e6c7776b20d85c234358f16808f3c23ef56752",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/goconst/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/wsl_v5.md",
-      "sha256": "b3025751a7bc2500758d555a09925256b669bf9ba85c39cda3c9177ed97c5a77",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/wsl_v5/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/prealloc.md",
-      "sha256": "63627f8a5eb2b88c76144c66dc7ac1f651dd4799e7b00100f4bd99e2e52c1107",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/prealloc/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/gocritic.md",
-      "sha256": "5aeaf69825d734cf8c4ed74776c3e4621db84243aa7d0ba8f0baf67a73498363",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/gocritic/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/nilnil.md",
-      "sha256": "f542761888b9e983757c232772942037538f8e14d7b6e67fe25428b562375610",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/nilnil/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/dupl.md",
-      "sha256": "2064ff0ba305d19e6df7821fff03d41403088688c30dc3da3556ea2089c7bdd1",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/dupl/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/wsl.md",
-      "sha256": "b33f7b6163781a24310a1209598060db48e420badb956a09e06308233a65d88b",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/wsl/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/zerologlint.md",
-      "sha256": "ff26ec74128a177e0b1508323e7287fbf30a4111c4f8d16a8b9a8a0959ab53ab",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/zerologlint/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/embeddedstructfieldcheck.md",
-      "sha256": "76c0fff0958e51d7b3cbf21130de27fbe1e32d1f7f659f3e6a00b18da20fe70e",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/embeddedstructfieldcheck/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/nosprintfhostport.md",
-      "sha256": "11152a2b7f034236586a09777c5107704b29dd38a63a517be2a26268a2ea0d19",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/nosprintfhostport/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/ineffassign.md",
-      "sha256": "53d011c3b77ce00fd0a62f0d8ec5e04ad56e0cf4a37cd9b12ab499a8011d75c3",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/ineffassign/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/iface.md",
-      "sha256": "625f952a40affb3a7edce7fe4aac97af7b6eed54d48e1b108c1d89b34c8cf4a9",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/iface/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/lll.md",
-      "sha256": "fa029b6a2238fcac287e1ffb1eaa77cc36c9a41111637ebf825492e7d3879de5",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/lll/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/makezero.md",
-      "sha256": "95ceb703d4b67ced0d5067abe705b2e68131a4667bd82d1873880fe9c345ec38",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/makezero/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     },
     {
       "path": "linters/golangci-lint/dupword.md",
-      "sha256": "909954055cca86237f8acff9bf5c6233c7144d0259deb0a38d3410416fadd7e2",
-      "urls": [
-        "https://golangci-lint.run/docs/linters/dupword/"
-      ]
+      "sha256": "dae5960f44524040f05a7efe97ed2ca5c6e087f2cf9ff5dde047eedea40a95fa",
+      "urls": []
     }
   ]
 }

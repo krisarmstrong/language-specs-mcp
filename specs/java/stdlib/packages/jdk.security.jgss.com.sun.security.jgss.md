@@ -1,3 +1,7 @@
-# jdk.security.jgss.com.sun.security.jgss
+Module[jdk.security.jgss](../../../../module-summary.html)
 
-See: https://docs.oracle.com/en/java/javase/21/docs/api/jdk.security.jgss/com/sun/security/jgss/package-summary.html
+# Package com.sun.security.jgss
+
+package com.sun.security.jgssThis package defines classes and interfaces for the JDK extensions to the GSS-API.
+
+- All Classes and InterfacesInterfacesClassesEnum ClassesClassDescription[AuthorizationDataEntry](AuthorizationDataEntry.html)Kerberos 5 AuthorizationData entry.[ExtendedGSSContext](ExtendedGSSContext.html)The extended GSSContext interface for supporting additional functionalities not defined by `org.ietf.jgss.GSSContext`, such as querying context-specific attributes.[ExtendedGSSCredential](ExtendedGSSCredential.html)The extended GSSCredential interface for supporting additional functionalities not defined by `org.ietf.jgss.GSSCredential`.[GSSUtil](GSSUtil.html)GSS-API Utilities for using in conjunction with Sun Microsystem's implementation of Java GSS-API.[InquireSecContextPermission](InquireSecContextPermission.html)This class is used to protect various attributes of an established GSS security context that can be accessed using the [ExtendedGSSContext.inquireSecContext(com.sun.security.jgss.InquireType)](ExtendedGSSContext.html#inquireSecContext(com.sun.security.jgss.InquireType)) method.[InquireType](InquireType.html)Attribute types that can be specified as an argument of [ExtendedGSSContext.inquireSecContext(com.sun.security.jgss.InquireType)](ExtendedGSSContext.html#inquireSecContext(com.sun.security.jgss.InquireType))

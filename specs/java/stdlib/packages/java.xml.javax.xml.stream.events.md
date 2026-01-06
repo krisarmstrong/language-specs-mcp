@@ -1,3 +1,8 @@
-# java.xml.javax.xml.stream.events
+Module[java.xml](../../../../module-summary.html)
 
-See: https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/javax/xml/stream/events/package-summary.html
+# Package javax.xml.stream.events
+
+package javax.xml.stream.eventsDefines event interfaces for the Streaming API for XML (StAX).Since:1.6
+
+- Related PackagesPackageDescription[javax.xml.stream](../package-summary.html) Defines interfaces and classes for the Streaming API for XML (StAX).[javax.xml.stream.util](../util/package-summary.html)Provides utility classes for the Streaming API for XML (StAX).
+- InterfacesClassDescription[Attribute](Attribute.html)An interface that contains information about an attribute.[Characters](Characters.html)This describes the interface to Characters events.[Comment](Comment.html)An interface for comment events[DTD](DTD.html)This is the top level interface for events dealing with DTDs[EndDocument](EndDocument.html)A marker interface for the end of the document[EndElement](EndElement.html)An interface for the end element event.[EntityDeclaration](EntityDeclaration.html)An interface for handling Entity Declarations This interface is used to record and report unparsed entity declarations.[EntityReference](EntityReference.html)An interface for handling Entity events.[Namespace](Namespace.html)An interface that contains information about a namespace.[NotationDeclaration](NotationDeclaration.html)An interface for handling Notation Declarations Receive notification of a notation declaration event.[ProcessingInstruction](ProcessingInstruction.html)An interface that describes the data found in processing instructions[StartDocument](StartDocument.html)An interface for the start document event[StartElement](StartElement.html)The StartElement interface provides access to information about start elements.[XMLEvent](XMLEvent.html)This is the base event interface for handling markup events.

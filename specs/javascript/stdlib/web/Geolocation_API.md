@@ -1,3 +1,118 @@
-# Geolocation_API
+# Geolocation API
 
-See: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
+ Baseline  Widely available 
+
+ This feature is well established and works across many devices and browser versions. It’s been available across browsers since ⁨July 2015⁩. 
+
+- [Learn more](/en-US/docs/Glossary/Baseline/Compatibility)
+- [See full compatibility](#browser_compatibility)
+- [Report feedback](https://survey.alchemer.com/s3/7634825/MDN-baseline-feedback?page=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FGeolocation_API&level=high)
+
+Secure context: This feature is available only in [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts) (HTTPS), in some or all [supporting browsers](#browser_compatibility).
+
+The Geolocation API allows the user to provide their location to web applications if they so desire. For privacy reasons, the user is asked for permission to report location information.
+
+WebExtensions that wish to use the `Geolocation` object must add the `"geolocation"` permission to their manifest. The user's operating system will prompt the user to allow location access the first time it is requested.
+
+## In this article
+
+- [Concepts and usage](#concepts_and_usage)
+- [Interfaces](#interfaces)
+- [Security considerations](#security_considerations)
+- [Examples](#examples)
+- [Specifications](#specifications)
+- [Browser compatibility](#browser_compatibility)
+- [See also](#see_also)
+
+## [Concepts and usage](#concepts_and_usage)
+
+You will often want to retrieve a user's location information in your web app, for example to plot their location on a map, or display personalized information relevant to their location.
+
+The Geolocation API is accessed via a call to [navigator.geolocation](/en-US/docs/Web/API/Navigator/geolocation); this will cause the user's browser to ask them for permission to access their location data. If they accept, then the browser will use the best available functionality on the device to access this information (for example, GPS).
+
+The developer can now access this location information in a couple of different ways:
+
+- [Geolocation.getCurrentPosition()](/en-US/docs/Web/API/Geolocation/getCurrentPosition): Retrieves the device's current location.
+- [Geolocation.watchPosition()](/en-US/docs/Web/API/Geolocation/watchPosition): Registers a handler function that will be called automatically each time the position of the device changes, returning the updated location.
+
+In both cases, the method call takes up to three arguments:
+
+- A mandatory success callback: If the location retrieval is successful, the callback executes with a [GeolocationPosition](/en-US/docs/Web/API/GeolocationPosition) object as its only parameter, providing access to the location data.
+- An optional error callback: If the location retrieval is unsuccessful, the callback executes with a [GeolocationPositionError](/en-US/docs/Web/API/GeolocationPositionError) object as its only parameter, providing access information on what went wrong.
+- An optional object which provides options for retrieval of the position data.
+
+For further information on Geolocation usage, read [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API).
+
+## [Interfaces](#interfaces)
+
+[Geolocation](/en-US/docs/Web/API/Geolocation)
+
+The main class of this API — contains methods to retrieve the user's current position, watch for changes in their position, and clear a previously-set watch.
+
+[GeolocationPosition](/en-US/docs/Web/API/GeolocationPosition)
+
+Represents the position of a user. A `GeolocationPosition` instance is returned by a successful call to one of the methods contained inside [Geolocation](/en-US/docs/Web/API/Geolocation), inside a success callback, and contains a timestamp plus a [GeolocationCoordinates](/en-US/docs/Web/API/GeolocationCoordinates) object instance.
+
+[GeolocationCoordinates](/en-US/docs/Web/API/GeolocationCoordinates)
+
+Represents the coordinates of a user's position; a `GeolocationCoordinates` instance contains latitude, longitude, and other important related information.
+
+[GeolocationPositionError](/en-US/docs/Web/API/GeolocationPositionError)
+
+A `GeolocationPositionError` is returned by an unsuccessful call to one of the methods contained inside [Geolocation](/en-US/docs/Web/API/Geolocation), inside an error callback, and contains an error code and message.
+
+### [Extensions to other interfaces](#extensions_to_other_interfaces)
+
+[Navigator.geolocation](/en-US/docs/Web/API/Navigator/geolocation)
+
+The entry point into the API. Returns a [Geolocation](/en-US/docs/Web/API/Geolocation) object instance, from which all other functionality can be accessed.
+
+## [Security considerations](#security_considerations)
+
+The Geolocation API allows users to programmatically access location information in [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+
+Access may further be controlled by the [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) directive [geolocation](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation). The default allowlist for `geolocation` is `self`, which allows access to location information in same-origin nested frames only. Third party usage is enabled by setting a `Permissions-Policy` response header to grant permission to a particular third party origin:
+
+http
+
+```
+Permissions-Policy: geolocation=(self b.example.com)
+```
+
+The `allow="geolocation"` attribute must then be added to the iframe element with sources from that origin:
+
+html
+
+```
+<iframe src="https://b.example.com" allow="geolocation"></iframe>
+```
+
+Geolocation data may reveal information that the device owner does not want to share. Therefore, users must grant explicit permission via a prompt when either [Geolocation.getCurrentPosition()](/en-US/docs/Web/API/Geolocation/getCurrentPosition) or [Geolocation.watchPosition()](/en-US/docs/Web/API/Geolocation/watchPosition) is called (unless the permission state is already `granted` or `denied`). The lifetime of a granted permission depends on the user agent, and may be time based, session based, or even permanent. The [Permissions API](/en-US/docs/Web/API/Permissions_API)`geolocation` permission can be used to test whether access to use location information is `granted`, `denied` or `prompt` (requires user acknowledgement of a prompt).
+
+## [Examples](#examples)
+
+See [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples) for example code.
+
+## [Specifications](#specifications)
+
+Specification
+[Geolocation# geolocation_interface](https://w3c.github.io/geolocation/#geolocation_interface)
+
+## [Browser compatibility](#browser_compatibility)
+
+### [Availability](#availability)
+
+As Wi-Fi-based locating is often provided by Google, the vanilla Geolocation API may be unavailable in China. You may use local third-party providers such as [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), or [Tencent](https://lbs.qq.com/tool/component-geolocation.html). These services use the user's IP address and/or a local app to provide enhanced positioning.
+
+## [See also](#see_also)
+
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [Who moved my geolocation?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)
+
+## Help improve MDN
+
+Was this page helpful to you?YesNo[Learn how to contribute](/en-US/docs/MDN/Community/Getting_started)
+
+ This page was last modified on ⁨Nov 30, 2025⁩ by [MDN contributors](/en-US/docs/Web/API/Geolocation_API/contributors.txt). 
+
+[View this page on GitHub](https://github.com/mdn/content/blob/main/files/en-us/web/api/geolocation_api/index.md?plain=1) • [Report a problem with this content](https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FGeolocation_API&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Fgeolocation_api%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FGeolocation_API%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fgeolocation_api%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2Fca26363fcc6fc861103d40ac0205e5c5b79eb2fa%0A*+Document+last+modified%3A+2025-11-30T02%3A30%3A55.000Z%0A%0A%3C%2Fdetails%3E)

@@ -1,3 +1,8 @@
-# java.xml.org.xml.sax.helpers
+Module[java.xml](../../../../module-summary.html)
 
-See: https://docs.oracle.com/en/java/javase/21/docs/api/java.xml/org/xml/sax/helpers/package-summary.html
+# Package org.xml.sax.helpers
+
+package org.xml.sax.helpersProvides helper classes, including support for bootstrapping SAX-based applications.API Note:The SAX API, originally developed at [the SAX Project](http://www.saxproject.org), has been defined by Java SE since 1.4.Since:1.4
+
+- Related PackagesPackageDescription[org.xml.sax](../package-summary.html)Provides the interfaces for the Simple API for XML (SAX).[org.xml.sax.ext](../ext/package-summary.html)Provides interfaces to SAX2 facilities that conformant SAX drivers won't necessarily support.
+- ClassesClassDescription[AttributeListImpl](AttributeListImpl.html)Deprecated. This class implements a deprecated interface, [AttributeList](../AttributeList.html); that interface has been replaced by [Attributes](../Attributes.html), which is implemented in the [AttributesImpl](AttributesImpl.html) helper class.[AttributesImpl](AttributesImpl.html)Default implementation of the Attributes interface.[DefaultHandler](DefaultHandler.html)Default base class for SAX2 event handlers.[LocatorImpl](LocatorImpl.html)Provide an optional convenience implementation of Locator.[NamespaceSupport](NamespaceSupport.html)Encapsulate Namespace logic for use by applications using SAX, or internally by SAX drivers.[ParserAdapter](ParserAdapter.html)Adapt a SAX1 Parser as a SAX2 XMLReader.[ParserFactory](ParserFactory.html)Deprecated. This class works with the deprecated [Parser](../Parser.html) interface.[XMLFilterImpl](XMLFilterImpl.html)Base class for deriving an XML filter.[XMLReaderAdapter](XMLReaderAdapter.html)Adapt a SAX2 XMLReader as a SAX1 Parser.[XMLReaderFactory](XMLReaderFactory.html)Deprecated. It is recommended to use [SAXParserFactory](../../../../javax/xml/parsers/SAXParserFactory.html) instead.

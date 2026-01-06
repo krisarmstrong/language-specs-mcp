@@ -1,5 +1,5 @@
 # ktfmt Options
-Version: unknown
+Version: 0.61
 
 Source: https://github.com/facebook/ktfmt
 

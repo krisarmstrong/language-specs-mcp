@@ -1,5 +1,5 @@
 # swift-format Options
-Version: unknown
+Version: 602.0.0
 
 Source: https://github.com/apple/swift-format/blob/main/Documentation/Configuration.md
 

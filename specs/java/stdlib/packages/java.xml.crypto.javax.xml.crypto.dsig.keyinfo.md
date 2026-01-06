@@ -1,3 +1,15 @@
-# java.xml.crypto.javax.xml.crypto.dsig.keyinfo
+Module[java.xml.crypto](../../../../../module-summary.html)
 
-See: https://docs.oracle.com/en/java/javase/21/docs/api/java.xml.crypto/javax/xml/crypto/dsig/keyinfo/package-summary.html
+# Package javax.xml.crypto.dsig.keyinfo
+
+package javax.xml.crypto.dsig.keyinfoClasses for parsing and processing [KeyInfo](KeyInfo.html) elements and structures. `KeyInfo` is an optional element that enables the recipient(s) to obtain the key needed to validate an [XMLSignature](../XMLSignature.html). `KeyInfo` may contain keys, names, certificates and other public key management information, such as in-band key distribution or key agreement data. This package contains classes representing types defined in the W3C specification for XML Signatures, such as [KeyName](KeyName.html), [KeyValue](KeyValue.html), [RetrievalMethod](RetrievalMethod.html), [X509Data](X509Data.html), [X509IssuerSerial](X509IssuerSerial.html), and [PGPData](PGPData.html). [KeyInfoFactory](KeyInfoFactory.html) is an abstract factory that creates `KeyInfo` objects from scratch. 
+
+## Package Specification
+
+- [XML-Signature Syntax and Processing: W3C Recommendation](http://www.w3.org/TR/xmldsig-core/)
+- [RFC 3275: XML-Signature Syntax and Processing](http://www.ietf.org/rfc/rfc3275.txt)
+
+Since:1.6
+
+- Related PackagesPackageDescription[javax.xml.crypto.dsig](../package-summary.html)Classes for generating and validating XML digital signatures.[javax.xml.crypto.dsig.dom](../dom/package-summary.html)DOM-specific classes for the [javax.xml.crypto.dsig](../package-summary.html) package.[javax.xml.crypto.dsig.spec](../spec/package-summary.html)Parameter classes for XML digital signatures.
+- All Classes and InterfacesInterfacesClassesClassDescription[KeyInfo](KeyInfo.html)A representation of the XML `KeyInfo` element as defined in the [W3C Recommendation for XML-Signature Syntax and Processing](http://www.w3.org/TR/xmldsig-core/).[KeyInfoFactory](KeyInfoFactory.html)A factory for creating [KeyInfo](KeyInfo.html) objects from scratch or for unmarshalling a `KeyInfo` object from a corresponding XML representation.[KeyName](KeyName.html)A representation of the XML `KeyName` element as defined in the [W3C Recommendation for XML-Signature Syntax and Processing](http://www.w3.org/TR/xmldsig-core/).[KeyValue](KeyValue.html)A representation of the XML `KeyValue` element as defined in the [W3C Recommendation for XML-Signature Syntax and Processing](http://www.w3.org/TR/xmldsig-core/).[PGPData](PGPData.html)A representation of the XML `PGPData` element as defined in the [W3C Recommendation for XML-Signature Syntax and Processing](http://www.w3.org/TR/xmldsig-core/).[RetrievalMethod](RetrievalMethod.html)A representation of the XML `RetrievalMethod` element as defined in the [W3C Recommendation for XML-Signature Syntax and Processing](http://www.w3.org/TR/xmldsig-core/).[X509Data](X509Data.html)A representation of the XML `X509Data` element as defined in the [W3C Recommendation for XML-Signature Syntax and Processing](http://www.w3.org/TR/xmldsig-core/).[X509IssuerSerial](X509IssuerSerial.html)A representation of the XML `X509IssuerSerial` element as defined in the [W3C Recommendation for XML-Signature Syntax and Processing](http://www.w3.org/TR/xmldsig-core/).

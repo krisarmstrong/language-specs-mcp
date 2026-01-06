@@ -1,14 +1,12 @@
 {
-  "updatedAt": "2025-01-01",
+  "updatedAt": "2026-01-05",
   "tools": [
     {
       "name": "assembly",
       "version": "living",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/assembly/spec.md"
-      ],
+      "files": ["specs/assembly/spec.md"],
       "sources": [
         "https://www.felixcloutier.com/x86/",
         "https://developer.arm.com/documentation/ddi0487/latest",
@@ -21,33 +19,23 @@
       "version": "classic",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/basic/spec.md"
-      ],
-      "sources": [
-        "https://www.qbasic.net/en/reference/qbasic/"
-      ]
+      "files": ["specs/basic/spec.md"],
+      "sources": ["https://en.wikibooks.org/wiki/QBasic"]
     },
     {
       "name": "bash",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/bash/spec.md"
-      ],
-      "sources": [
-        "https://www.gnu.org/software/bash/manual/bash.html"
-      ]
+      "files": ["specs/bash/spec.md"],
+      "sources": ["https://www.gnu.org/software/bash/manual/bash.html"]
     },
     {
       "name": "batch",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/batch/spec.md"
-      ],
+      "files": ["specs/batch/spec.md"],
       "sources": [
         "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands"
       ]
@@ -57,33 +45,23 @@
       "version": "c23",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/c/spec.md"
-      ],
-      "sources": [
-        "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf"
-      ]
+      "files": ["specs/c/spec.md"],
+      "sources": ["https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf"]
     },
     {
       "name": "cpp",
       "version": "c++23",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/cpp/spec.md"
-      ],
-      "sources": [
-        "https://en.cppreference.com/w/cpp"
-      ]
+      "files": ["specs/cpp/spec.md"],
+      "sources": ["https://en.cppreference.com/w/cpp"]
     },
     {
       "name": "csharp",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/csharp/spec.md"
-      ],
+      "files": ["specs/csharp/spec.md"],
       "sources": [
         "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/"
       ]
@@ -93,156 +71,114 @@
       "version": "living",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/css/spec.md"
-      ],
-      "sources": [
-        "https://www.w3.org/TR/css-2023/"
-      ]
+      "files": ["specs/css/spec.md"],
+      "sources": ["https://www.w3.org/TR/css-2023/"]
     },
     {
       "name": "html",
       "version": "living",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/html/spec.md"
-      ],
-      "sources": [
-        "https://html.spec.whatwg.org/"
-      ]
+      "files": ["specs/html/spec.md"],
+      "sources": ["https://html.spec.whatwg.org/"]
     },
     {
       "name": "javascript",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/javascript/spec.md"
-      ],
-      "sources": [
-        "https://tc39.es/ecma262/"
-      ]
+      "files": ["specs/javascript/spec.md"],
+      "sources": ["https://tc39.es/ecma262/"]
     },
     {
       "name": "typescript",
-      "version": "unknown",
+      "version": "5.9.3",
       "latest": {
         "type": "npm",
         "package": "typescript"
       },
       "label": "Version",
-      "files": [
-        "specs/typescript/spec.md"
-      ],
-      "sources": [
-        "https://www.typescriptlang.org/docs/handbook/"
-      ]
+      "files": ["specs/typescript/spec.md"],
+      "sources": ["https://www.typescriptlang.org/docs/handbook/"]
     },
     {
       "name": "python",
-      "version": "unknown",
+      "version": "3.14.0",
       "latest": {
         "type": "github-release",
         "repo": "python/cpython",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/python/spec.md"
-      ],
-      "sources": [
-        "https://docs.python.org/3.14/"
-      ]
+      "files": ["specs/python/spec.md"],
+      "sources": ["https://docs.python.org/3.14/"]
     },
     {
       "name": "rust",
-      "version": "unknown",
+      "version": "1.92.0",
       "latest": {
         "type": "github-release",
         "repo": "rust-lang/rust",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/rust/spec.md"
-      ],
-      "sources": [
-        "https://doc.rust-lang.org/reference/"
-      ]
+      "files": ["specs/rust/spec.md"],
+      "sources": ["https://doc.rust-lang.org/reference/"]
     },
     {
       "name": "java",
-      "version": "unknown",
+      "version": "27+3",
       "latest": {
         "type": "github-release",
         "repo": "openjdk/jdk",
         "tagPrefix": "jdk-"
       },
       "label": "Version",
-      "files": [
-        "specs/java/spec.md"
-      ],
-      "sources": [
-        "https://docs.oracle.com/javase/specs/jls/se21/html/jls-1.html"
-      ]
+      "files": ["specs/java/spec.md"],
+      "sources": ["https://docs.oracle.com/javase/specs/jls/se21/html/jls-1.html"]
     },
     {
       "name": "kotlin",
-      "version": "unknown",
+      "version": "2.3.0",
       "latest": {
         "type": "github-release",
         "repo": "JetBrains/kotlin",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/kotlin/spec.md"
-      ],
-      "sources": [
-        "https://kotlinlang.org/spec/"
-      ]
+      "files": ["specs/kotlin/spec.md"],
+      "sources": ["https://kotlinlang.org/spec/"]
     },
     {
       "name": "swift",
-      "version": "unknown",
+      "version": "6.2.3-RELEASE",
       "latest": {
         "type": "github-release",
         "repo": "apple/swift",
         "tagPrefix": "swift-"
       },
       "label": "Version",
-      "files": [
-        "specs/swift/spec.md"
-      ],
-      "sources": [
-        "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/"
-      ]
+      "files": ["specs/swift/spec.md"],
+      "sources": ["https://docs.swift.org/swift-book/documentation/the-swift-programming-language/"]
     },
     {
       "name": "powershell",
-      "version": "unknown",
+      "version": "7.5.4",
       "latest": {
         "type": "github-release",
         "repo": "PowerShell/PowerShell",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/powershell/spec.md"
-      ],
-      "sources": [
-        "https://learn.microsoft.com/en-us/powershell/scripting/lang-spec/chapter-01"
-      ]
+      "files": ["specs/powershell/spec.md"],
+      "sources": ["https://learn.microsoft.com/en-us/powershell/scripting/lang-spec/chapter-01"]
     },
     {
       "name": "sql",
       "version": "vendor",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/sql/spec.md"
-      ],
+      "files": ["specs/sql/spec.md"],
       "sources": [
         "https://www.postgresql.org/docs/current/sql.html",
         "https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html",
@@ -252,117 +188,87 @@
     },
     {
       "name": "git",
-      "version": "unknown",
+      "version": "2.52.0",
       "latest": {
         "type": "github-release",
         "repo": "git/git",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/git/spec.md"
-      ],
-      "sources": [
-        "https://git-scm.com/docs"
-      ]
+      "files": ["specs/git/spec.md"],
+      "sources": ["https://git-scm.com/docs"]
     },
     {
       "name": "go",
-      "version": "unknown",
+      "version": "1.25.5",
       "latest": {
         "type": "go",
         "url": "https://go.dev/VERSION?m=text"
       },
       "label": "Version",
-      "files": [
-        "specs/go/spec.md"
-      ],
-      "sources": [
-        "https://go.dev/ref/spec"
-      ]
+      "files": ["specs/go/spec.md"],
+      "sources": ["https://go.dev/ref/spec"]
     },
     {
       "name": "node",
-      "version": "unknown",
+      "version": "25.2.1",
       "latest": {
         "type": "node",
         "url": "https://nodejs.org/dist/index.json"
       },
       "label": "Version",
-      "files": [
-        "specs/javascript/stdlib/node/overview.md"
-      ],
-      "sources": [
-        "https://nodejs.org/api/"
-      ]
+      "files": ["specs/javascript/stdlib/node/overview.md"],
+      "sources": ["https://nodejs.org/api/"]
     },
     {
       "name": "clang",
-      "version": "unknown",
+      "version": "21.1.8",
       "latest": {
         "type": "github-release",
         "repo": "llvm/llvm-project",
         "tagPrefix": "llvmorg-"
       },
       "label": "Clang",
-      "files": [
-        "specs/c/compilers.md",
-        "specs/cpp/compilers.md"
-      ],
-      "sources": [
-        "https://clang.llvm.org/"
-      ]
+      "files": ["specs/c/compilers.md", "specs/cpp/compilers.md"],
+      "sources": ["https://clang.llvm.org/"]
     },
     {
       "name": "gcc",
-      "version": "unknown",
+      "version": "15.2.0",
       "latest": {
         "type": "github-release",
         "repo": "gcc-mirror/gcc",
         "tagPrefix": "releases/gcc-"
       },
       "label": "GCC",
-      "files": [
-        "specs/c/compilers.md",
-        "specs/cpp/compilers.md"
-      ],
-      "sources": [
-        "https://gcc.gnu.org/"
-      ]
+      "files": ["specs/c/compilers.md", "specs/cpp/compilers.md"],
+      "sources": ["https://gcc.gnu.org/"]
     },
     {
       "name": "biome",
-      "version": "unknown",
+      "version": "2.3.11",
       "latest": {
         "type": "npm",
         "package": "@biomejs/biome"
       },
       "label": "Version",
-      "files": [
-        "specs/typescript/linters/biome/overview.md"
-      ],
-      "sources": [
-        "https://biomejs.dev/linter/rules/"
-      ]
+      "files": ["specs/typescript/linters/biome/overview.md"],
+      "sources": ["https://biomejs.dev/linter/rules/"]
     },
     {
       "name": "eslint",
-      "version": "unknown",
+      "version": "9.39.2",
       "latest": {
         "type": "npm",
         "package": "eslint"
       },
       "label": "Version",
-      "files": [
-        "specs/javascript/linters/eslint/overview.md"
-      ],
-      "sources": [
-        "https://eslint.org/docs/latest/rules/"
-      ]
+      "files": ["specs/javascript/linters/eslint/overview.md"],
+      "sources": ["https://eslint.org/docs/latest/rules/"]
     },
     {
       "name": "prettier",
-      "version": "unknown",
+      "version": "3.7.4",
       "latest": {
         "type": "npm",
         "package": "prettier"
@@ -374,106 +280,80 @@
         "specs/css/formatters/prettier.md",
         "specs/html/formatters/prettier.md"
       ],
-      "sources": [
-        "https://prettier.io/docs/en/options.html"
-      ]
+      "sources": ["https://prettier.io/docs/en/options.html"]
     },
     {
       "name": "stylelint",
-      "version": "unknown",
+      "version": "16.26.1",
       "latest": {
         "type": "npm",
         "package": "stylelint"
       },
       "label": "Version",
-      "files": [
-        "specs/css/linters/stylelint/overview.md"
-      ],
-      "sources": [
-        "https://stylelint.io/user-guide/rules"
-      ]
+      "files": ["specs/css/linters/stylelint/overview.md"],
+      "sources": ["https://stylelint.io/user-guide/rules"]
     },
     {
       "name": "html-validate",
-      "version": "unknown",
+      "version": "10.5.0",
       "latest": {
         "type": "npm",
         "package": "html-validate"
       },
       "label": "Version",
-      "files": [
-        "specs/html/linters/html-validate/overview.md"
-      ],
-      "sources": [
-        "https://html-validate.org/rules/"
-      ]
+      "files": ["specs/html/linters/html-validate/overview.md"],
+      "sources": ["https://html-validate.org/rules/"]
     },
     {
       "name": "commitlint",
-      "version": "unknown",
+      "version": "20.3.0",
       "latest": {
         "type": "npm",
         "package": "@commitlint/cli"
       },
       "label": "Version",
-      "files": [
-        "specs/git/linters/commitlint/overview.md"
-      ],
-      "sources": [
-        "https://commitlint.js.org/#/reference-rules"
-      ]
+      "files": ["specs/git/linters/commitlint/overview.md"],
+      "sources": ["https://commitlint.js.org/#/reference-rules"]
     },
     {
       "name": "gitlint",
-      "version": "unknown",
+      "version": "0.19.1",
       "latest": {
         "type": "github-release",
         "repo": "jorisroovers/gitlint",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/git/linters/gitlint/overview.md"
-      ],
-      "sources": [
-        "https://jorisroovers.com/gitlint/rules/"
-      ]
+      "files": ["specs/git/linters/gitlint/overview.md"],
+      "sources": ["https://jorisroovers.com/gitlint/rules/"]
     },
     {
       "name": "shellcheck",
-      "version": "unknown",
+      "version": "0.11.0",
       "latest": {
         "type": "github-release",
         "repo": "koalaman/shellcheck",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/bash/linters/shellcheck/overview.md"
-      ],
-      "sources": [
-        "https://www.shellcheck.net/wiki/"
-      ]
+      "files": ["specs/bash/linters/shellcheck/overview.md"],
+      "sources": ["https://www.shellcheck.net/wiki/"]
     },
     {
       "name": "shfmt",
-      "version": "unknown",
+      "version": "3.12.0",
       "latest": {
         "type": "github-release",
         "repo": "mvdan/sh",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/bash/formatters/shfmt.md"
-      ],
-      "sources": [
-        "https://github.com/mvdan/sh#shfmt"
-      ]
+      "files": ["specs/bash/formatters/shfmt.md"],
+      "sources": ["https://github.com/mvdan/sh#shfmt"]
     },
     {
       "name": "clang-tidy",
-      "version": "unknown",
+      "version": "21.1.8",
       "latest": {
         "type": "github-release",
         "repo": "llvm/llvm-project",
@@ -484,651 +364,463 @@
         "specs/c/linters/clang-tidy/overview.md",
         "specs/cpp/linters/clang-tidy/overview.md"
       ],
-      "sources": [
-        "https://clang.llvm.org/extra/clang-tidy/checks/list.html"
-      ]
+      "sources": ["https://clang.llvm.org/extra/clang-tidy/checks/list.html"]
     },
     {
       "name": "clang-format",
-      "version": "unknown",
+      "version": "21.1.8",
       "latest": {
         "type": "github-release",
         "repo": "llvm/llvm-project",
         "tagPrefix": "llvmorg-"
       },
       "label": "Version",
-      "files": [
-        "specs/c/formatters/clang-format.md",
-        "specs/cpp/formatters/clang-format.md"
-      ],
-      "sources": [
-        "https://clang.llvm.org/docs/ClangFormatStyleOptions.html"
-      ]
+      "files": ["specs/c/formatters/clang-format.md", "specs/cpp/formatters/clang-format.md"],
+      "sources": ["https://clang.llvm.org/docs/ClangFormatStyleOptions.html"]
     },
     {
       "name": "cppcheck",
-      "version": "unknown",
+      "version": "2.19.0",
       "latest": {
         "type": "github-release",
         "repo": "danmar/cppcheck",
         "tagPrefix": ""
       },
       "label": "Version",
-      "files": [
-        "specs/c/linters/cppcheck/overview.md",
-        "specs/cpp/linters/cppcheck/overview.md"
-      ],
-      "sources": [
-        "https://cppcheck.sourceforge.io/manual.html"
-      ]
+      "files": ["specs/c/linters/cppcheck/overview.md", "specs/cpp/linters/cppcheck/overview.md"],
+      "sources": ["https://cppcheck.sourceforge.io/manual.html"]
     },
     {
       "name": "dotnet-sdk",
-      "version": "unknown",
+      "version": "10.0.101",
       "latest": {
         "type": "github-release",
         "repo": "dotnet/sdk",
         "tagPrefix": "v"
       },
-      "label": "Version",
-      "files": [
-        "specs/csharp/spec.md"
-      ],
-      "sources": [
-        "https://learn.microsoft.com/en-us/dotnet/"
-      ]
+      "label": "Dotnet SDK",
+      "files": ["specs/csharp/spec.md"],
+      "sources": ["https://learn.microsoft.com/en-us/dotnet/"]
     },
     {
       "name": "roslyn-analyzers",
-      "version": "unknown",
+      "version": "9.0.0",
       "latest": {
         "type": "github-release",
         "repo": "dotnet/roslyn-analyzers",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/csharp/linters/dotnet-analyzers/overview.md"
-      ],
-      "sources": [
-        "https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview"
-      ]
+      "files": ["specs/csharp/linters/dotnet-analyzers/overview.md"],
+      "sources": ["https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview"]
     },
     {
       "name": "stylecop-analyzers",
-      "version": "unknown",
+      "version": "1.1.118",
       "latest": {
         "type": "github-release",
         "repo": "DotNetAnalyzers/StyleCopAnalyzers",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/csharp/linters/stylecop/overview.md"
-      ],
-      "sources": [
-        "https://github.com/DotNetAnalyzers/StyleCopAnalyzers"
-      ]
+      "files": ["specs/csharp/linters/stylecop/overview.md"],
+      "sources": ["https://github.com/DotNetAnalyzers/StyleCopAnalyzers"]
     },
     {
       "name": "golangci-lint",
-      "version": "unknown",
+      "version": "2.7.2",
       "latest": {
         "type": "github-release",
         "repo": "golangci/golangci-lint",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/go/linters/golangci-lint/overview.md"
-      ],
-      "sources": [
-        "https://golangci-lint.run/usage/linters/"
-      ]
+      "files": ["specs/go/linters/golangci-lint/overview.md"],
+      "sources": ["https://golangci-lint.run/usage/linters/"]
     },
     {
       "name": "gofumpt",
-      "version": "unknown",
+      "version": "0.9.2",
       "latest": {
         "type": "github-release",
         "repo": "mvdan/gofumpt",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/go/formatters/gofumpt.md"
-      ],
-      "sources": [
-        "https://github.com/mvdan/gofumpt"
-      ]
+      "files": ["specs/go/formatters/gofumpt.md"],
+      "sources": ["https://github.com/mvdan/gofumpt"]
     },
     {
       "name": "golines",
-      "version": "unknown",
+      "version": "0.13.0",
       "latest": {
         "type": "github-release",
         "repo": "segmentio/golines",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/go/formatters/golines.md"
-      ],
-      "sources": [
-        "https://github.com/segmentio/golines"
-      ]
+      "files": ["specs/go/formatters/golines.md"],
+      "sources": ["https://github.com/segmentio/golines"]
     },
     {
       "name": "error-prone",
-      "version": "unknown",
+      "version": "2.45.0",
       "latest": {
         "type": "github-release",
         "repo": "google/error-prone",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/java/linters/error-prone/overview.md"
-      ],
-      "sources": [
-        "https://errorprone.info/bugpatterns"
-      ]
+      "files": ["specs/java/linters/error-prone/overview.md"],
+      "sources": ["https://errorprone.info/bugpatterns"]
     },
     {
       "name": "spotbugs",
-      "version": "unknown",
+      "version": "4.9.8",
       "latest": {
         "type": "github-release",
         "repo": "spotbugs/spotbugs",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/java/linters/spotbugs/overview.md"
-      ],
-      "sources": [
-        "https://spotbugs.readthedocs.io/en/stable/bugDescriptions.html"
-      ]
+      "files": ["specs/java/linters/spotbugs/overview.md"],
+      "sources": ["https://spotbugs.readthedocs.io/en/stable/bugDescriptions.html"]
     },
     {
       "name": "checkstyle",
-      "version": "unknown",
+      "version": "13.0.0",
       "latest": {
         "type": "github-release",
         "repo": "checkstyle/checkstyle",
         "tagPrefix": "checkstyle-"
       },
       "label": "Version",
-      "files": [
-        "specs/java/linters/checkstyle/overview.md"
-      ],
-      "sources": [
-        "https://checkstyle.sourceforge.io/checks.html"
-      ]
+      "files": ["specs/java/linters/checkstyle/overview.md"],
+      "sources": ["https://checkstyle.sourceforge.io/checks.html"]
     },
     {
       "name": "google-java-format",
-      "version": "unknown",
+      "version": "1.33.0",
       "latest": {
         "type": "github-release",
         "repo": "google/google-java-format",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/java/formatters/google-java-format.md"
-      ],
-      "sources": [
-        "https://github.com/google/google-java-format"
-      ]
+      "files": ["specs/java/formatters/google-java-format.md"],
+      "sources": ["https://github.com/google/google-java-format"]
     },
     {
       "name": "detekt",
-      "version": "unknown",
+      "version": "1.23.8",
       "latest": {
         "type": "github-release",
         "repo": "detekt/detekt",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/kotlin/linters/detekt/overview.md"
-      ],
-      "sources": [
-        "https://detekt.dev/docs/rules/"
-      ]
+      "files": ["specs/kotlin/linters/detekt/overview.md"],
+      "sources": ["https://detekt.dev/docs/rules/"]
     },
     {
       "name": "ktlint",
-      "version": "unknown",
+      "version": "1.8.0",
       "latest": {
         "type": "github-release",
         "repo": "pinterest/ktlint",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/kotlin/linters/ktlint/overview.md"
-      ],
-      "sources": [
-        "https://pinterest.github.io/ktlint/latest/rules/"
-      ]
+      "files": ["specs/kotlin/linters/ktlint/overview.md"],
+      "sources": ["https://pinterest.github.io/ktlint/latest/rules/"]
     },
     {
       "name": "ktfmt",
-      "version": "unknown",
+      "version": "0.61",
       "latest": {
         "type": "github-release",
         "repo": "facebook/ktfmt",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/kotlin/formatters/ktfmt.md"
-      ],
-      "sources": [
-        "https://github.com/facebook/ktfmt"
-      ]
+      "files": ["specs/kotlin/formatters/ktfmt.md"],
+      "sources": ["https://github.com/facebook/ktfmt"]
     },
     {
       "name": "luacheck",
-      "version": "unknown",
+      "version": "0.23.0",
       "latest": {
         "type": "github-release",
         "repo": "mpeterv/luacheck",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/lua/linters/luacheck/overview.md"
-      ],
-      "sources": [
-        "https://luacheck.readthedocs.io/en/stable/warnings.html"
-      ]
+      "files": ["specs/lua/linters/luacheck/overview.md"],
+      "sources": ["https://luacheck.readthedocs.io/en/stable/warnings.html"]
     },
     {
       "name": "stylua",
-      "version": "unknown",
+      "version": "2.3.1",
       "latest": {
         "type": "github-release",
         "repo": "JohnnyMorganz/StyLua",
         "tagPrefix": "v"
       },
       "label": "Version",
-      "files": [
-        "specs/lua/formatters/stylua.md"
-      ],
-      "sources": [
-        "https://github.com/JohnnyMorganz/StyLua"
-      ]
+      "files": ["specs/lua/formatters/stylua.md"],
+      "sources": ["https://github.com/JohnnyMorganz/StyLua"]
     },
     {
       "name": "ruff",
-      "version": "unknown",
+      "version": "0.14.10",
       "latest": {
         "type": "pypi",
         "package": "ruff"
       },
       "label": "Version",
-      "files": [
-        "specs/python/linters/ruff/overview.md"
-      ],
-      "sources": [
-        "https://docs.astral.sh/ruff/rules/"
-      ]
+      "files": ["specs/python/linters/ruff/overview.md"],
+      "sources": ["https://docs.astral.sh/ruff/rules/"]
     },
     {
       "name": "pylint",
-      "version": "unknown",
+      "version": "4.0.4",
       "latest": {
         "type": "pypi",
         "package": "pylint"
       },
       "label": "Version",
-      "files": [
-        "specs/python/linters/pylint/overview.md"
-      ],
-      "sources": [
-        "https://pylint.readthedocs.io/en/stable/user_guide/messages/index.html"
-      ]
+      "files": ["specs/python/linters/pylint/overview.md"],
+      "sources": ["https://pylint.readthedocs.io/en/stable/user_guide/messages/index.html"]
     },
     {
       "name": "black",
-      "version": "unknown",
+      "version": "25.12.0",
       "latest": {
         "type": "pypi",
         "package": "black"
       },
       "label": "Version",
-      "files": [
-        "specs/python/formatters/black.md"
-      ],
-      "sources": [
-        "https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html"
-      ]
+      "files": ["specs/python/formatters/black.md"],
+      "sources": ["https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html"]
     },
     {
       "name": "sqlfluff",
-      "version": "unknown",
+      "version": "3.5.0",
       "latest": {
         "type": "pypi",
         "package": "sqlfluff"
       },
       "label": "Version",
-      "files": [
-        "specs/sql/linters/sqlfluff/overview.md"
-      ],
-      "sources": [
-        "https://docs.sqlfluff.com/en/stable/rules.html"
-      ]
+      "files": ["specs/sql/linters/sqlfluff/overview.md"],
+      "sources": ["https://docs.sqlfluff.com/en/stable/rules.html"]
     },
     {
       "name": "swiftlint",
-      "version": "unknown",
+      "version": "0.63.0",
       "latest": {
         "type": "github-release",
         "repo": "realm/SwiftLint",
         "tagPrefix": ""
       },
       "label": "Version",
-      "files": [
-        "specs/swift/linters/swiftlint/overview.md"
-      ],
-      "sources": [
-        "https://realm.github.io/SwiftLint/rule-directory.html"
-      ]
+      "files": ["specs/swift/linters/swiftlint/overview.md"],
+      "sources": ["https://realm.github.io/SwiftLint/rule-directory.html"]
     },
     {
       "name": "swift-format",
-      "version": "unknown",
+      "version": "602.0.0",
       "latest": {
         "type": "github-release",
         "repo": "apple/swift-format",
         "tagPrefix": ""
       },
       "label": "Version",
-      "files": [
-        "specs/swift/formatters/swift-format.md"
-      ],
-      "sources": [
-        "https://github.com/apple/swift-format/blob/main/Documentation/Configuration.md"
-      ]
+      "files": ["specs/swift/formatters/swift-format.md"],
+      "sources": ["https://github.com/apple/swift-format/blob/main/Documentation/Configuration.md"]
     },
     {
       "name": "php",
       "version": "unknown",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/php/spec.md"
-      ],
-      "sources": [
-        "https://www.php.net/manual/en/langref.php"
-      ]
+      "files": ["specs/php/spec.md"],
+      "sources": ["https://www.php.net/manual/en/langref.php"]
     },
     {
       "name": "ruby",
       "version": "unknown",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/ruby/spec.md"
-      ],
-      "sources": [
-        "https://docs.ruby-lang.org/en/3.3.0/doc/syntax_rdoc.html"
-      ]
+      "files": ["specs/ruby/spec.md"],
+      "sources": ["https://docs.ruby-lang.org/en/3.3.0/doc/syntax_rdoc.html"]
     },
     {
       "name": "dart",
       "version": "unknown",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/dart/spec.md"
-      ],
-      "sources": [
-        "https://dart.dev/guides/language/spec"
-      ]
+      "files": ["specs/dart/spec.md"],
+      "sources": ["https://dart.dev/guides/language/spec"]
     },
     {
       "name": "r",
       "version": "unknown",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/r/spec.md"
-      ],
-      "sources": [
-        "https://cran.r-project.org/doc/manuals/r-release/R-lang.html"
-      ]
+      "files": ["specs/r/spec.md"],
+      "sources": ["https://cran.r-project.org/doc/manuals/r-release/R-lang.html"]
     },
     {
       "name": "julia",
       "version": "unknown",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/julia/spec.md"
-      ],
-      "sources": [
-        "https://docs.julialang.org/en/v1/manual/"
-      ]
+      "files": ["specs/julia/spec.md"],
+      "sources": ["https://docs.julialang.org/en/v1/"]
     },
     {
       "name": "scala",
       "version": "unknown",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/scala/spec.md"
-      ],
-      "sources": [
-        "https://docs.scala-lang.org/scala3/reference/"
-      ]
+      "files": ["specs/scala/spec.md"],
+      "sources": ["https://docs.scala-lang.org/scala3/reference/"]
     },
     {
       "name": "elixir",
       "version": "unknown",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/elixir/spec.md"
-      ],
-      "sources": [
-        "https://hexdocs.pm/elixir/syntax-reference.html"
-      ]
+      "files": ["specs/elixir/spec.md"],
+      "sources": ["https://hexdocs.pm/elixir/syntax-reference.html"]
     },
     {
       "name": "clojure",
       "version": "unknown",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/clojure/spec.md"
-      ],
-      "sources": [
-        "https://clojure.org/reference/reader"
-      ]
+      "files": ["specs/clojure/spec.md"],
+      "sources": ["https://clojure.org/reference/reader"]
     },
     {
       "name": "haskell",
       "version": "2010",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/haskell/spec.md"
-      ],
-      "sources": [
-        "https://www.haskell.org/definition/haskell2010.pdf"
-      ]
+      "files": ["specs/haskell/spec.md"],
+      "sources": ["https://www.haskell.org/definition/haskell2010.pdf"]
     },
     {
       "name": "zig",
       "version": "master",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/zig/spec.md"
-      ],
-      "sources": [
-        "https://ziglang.org/documentation/master/"
-      ]
+      "files": ["specs/zig/spec.md"],
+      "sources": ["https://ziglang.org/documentation/master/"]
     },
     {
       "name": "ocaml",
       "version": "unknown",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/ocaml/spec.md"
-      ],
-      "sources": [
-        "https://ocaml.org/manual/"
-      ]
+      "files": ["specs/ocaml/spec.md"],
+      "sources": ["https://ocaml.org/manual/"]
     },
     {
       "name": "markdown",
       "version": "0.30",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/markdown/spec.md"
-      ],
-      "sources": [
-        "https://spec.commonmark.org/0.30/"
-      ]
+      "files": ["specs/markdown/spec.md"],
+      "sources": ["https://spec.commonmark.org/0.30/"]
     },
     {
       "name": "yaml",
       "version": "1.2.2",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/yaml/spec.md"
-      ],
-      "sources": [
-        "https://yaml.org/spec/1.2.2/"
-      ]
+      "files": ["specs/yaml/spec.md"],
+      "sources": ["https://yaml.org/spec/1.2.2/"]
     },
     {
       "name": "dockerfile",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/dockerfile/spec.md"
-      ],
-      "sources": [
-        "https://docs.docker.com/engine/reference/builder/"
-      ]
+      "files": ["specs/dockerfile/spec.md"],
+      "sources": ["https://docs.docker.com/engine/reference/builder/"]
     },
     {
       "name": "standardjs",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/javascript/linters/standardjs/overview.md"
-      ],
-      "sources": [
-        "https://standardjs.com/rules.html"
-      ]
+      "files": ["specs/javascript/linters/standardjs/overview.md"],
+      "sources": ["https://standardjs.com/rules.html"]
     },
     {
       "name": "xo",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/javascript/linters/xo/overview.md"
-      ],
-      "sources": [
-        "https://github.com/xojs/xo"
-      ]
+      "files": ["specs/javascript/linters/xo/overview.md"],
+      "sources": ["https://github.com/xojs/xo"]
     },
     {
       "name": "htmlhint",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/html/linters/htmlhint/overview.md"
-      ],
-      "sources": [
-        "https://htmlhint.com/docs/user-guide/rules/"
-      ]
+      "files": ["specs/html/linters/htmlhint/overview.md"],
+      "sources": ["https://htmlhint.com/docs/user-guide/rules/"]
     },
     {
       "name": "pmd",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/java/linters/pmd/overview.md"
-      ],
-      "sources": [
-        "https://docs.pmd-code.org/latest/pmd_rules_java.html"
-      ]
+      "files": ["specs/java/linters/pmd/overview.md"],
+      "sources": ["https://docs.pmd-code.org/latest/pmd_rules_java.html"]
     },
     {
       "name": "flake8",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/python/linters/flake8/overview.md"
-      ],
-      "sources": [
-        "https://flake8.pycqa.org/en/latest/user/error-codes.html"
-      ]
+      "files": ["specs/python/linters/flake8/overview.md"],
+      "sources": ["https://flake8.pycqa.org/en/latest/user/error-codes.html"]
     },
     {
       "name": "mypy",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/python/linters/mypy/overview.md"
-      ],
-      "sources": [
-        "https://mypy.readthedocs.io/en/stable/error_code_list.html"
-      ]
+      "files": ["specs/python/linters/mypy/overview.md"],
+      "sources": ["https://mypy.readthedocs.io/en/stable/error_code_list.html"]
     },
     {
       "name": "markdownlint",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/markdown/linters/markdownlint/overview.md"
-      ],
-      "sources": [
-        "https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"
-      ]
+      "files": ["specs/markdown/linters/markdownlint/overview.md"],
+      "sources": ["https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md"]
     },
     {
       "name": "yamllint",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/yaml/linters/yamllint/overview.md"
-      ],
-      "sources": [
-        "https://yamllint.readthedocs.io/en/stable/rules.html"
-      ]
+      "files": ["specs/yaml/linters/yamllint/overview.md"],
+      "sources": ["https://yamllint.readthedocs.io/en/stable/rules.html"]
     },
     {
       "name": "hadolint",
       "version": "latest",
       "latest": null,
       "label": "Version",
-      "files": [
-        "specs/dockerfile/linters/hadolint/overview.md"
-      ],
-      "sources": [
-        "https://github.com/hadolint/hadolint#rules"
-      ]
+      "files": ["specs/dockerfile/linters/hadolint/overview.md"],
+      "sources": ["https://github.com/hadolint/hadolint#rules"]
     }
   ]
 }

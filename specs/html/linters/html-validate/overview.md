@@ -1,5 +1,5 @@
 # HTML-validate Rules
-Version: unknown
+Version: 10.5.0
 
 Source: https://html-validate.org/rules/
 

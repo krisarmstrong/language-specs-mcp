@@ -1,5 +1,5 @@
 # ktlint Rules
-Version: unknown
+Version: 1.8.0
 
 Source: https://pinterest.github.io/ktlint/latest/rules/
 

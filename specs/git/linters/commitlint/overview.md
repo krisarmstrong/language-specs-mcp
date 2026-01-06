@@ -1,5 +1,5 @@
 # commitlint Rules
-Version: unknown
+Version: 20.3.0
 
 Source: https://commitlint.js.org/#/reference-rules
 

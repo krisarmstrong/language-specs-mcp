@@ -1,5 +1,5 @@
 # stylecop-analyzers Version
-Version: unknown
+Version: 1.1.118
 
 Source: https://github.com/DotNetAnalyzers/StyleCopAnalyzers
 

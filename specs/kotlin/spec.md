@@ -1,5 +1,5 @@
 # Kotlin Language Specification
-Version: unknown
+Version: 2.3.0
 
 Source: https://kotlinlang.org/spec/
 

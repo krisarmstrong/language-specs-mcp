@@ -37,3 +37,9 @@ jobs:
 
       - name: Validate freshness
         run: npm run validate:freshness
+
+      - name: Validate versions
+        run: npm run validate:versions
+
+      - name: Validate stubs
+        run: npm run validate:stubs

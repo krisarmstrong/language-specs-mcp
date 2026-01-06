@@ -1,5 +1,5 @@
 # PowerShell Language Specification
-Version: unknown
+Version: 7.5.4
 
 Source: https://learn.microsoft.com/en-us/powershell/scripting/lang-spec/chapter-01
 

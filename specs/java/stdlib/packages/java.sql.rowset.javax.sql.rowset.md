@@ -1,3 +1,72 @@
-# java.sql.rowset.javax.sql.rowset
+Module[java.sql.rowset](../../../module-summary.html)
 
-See: https://docs.oracle.com/en/java/javase/21/docs/api/java.sql.rowset/javax/sql/rowset/package-summary.html
+# Package javax.sql.rowset
+
+package javax.sql.rowsetStandard interfaces and base classes for JDBC `RowSet` implementations. This package contains interfaces and classes that a standard `RowSet` implementation either implements or extends. 
+
+## Table of Contents
+
+- [1.0 Package Specification](#pkgspec)
+- [2.0 Standard RowSet Definitions](#stdrowset)
+- [3.0 Implementer's Guide](#impl)
+- [4.0 Related Specifications](#relspec)
+- [5.0 Related Documentation](#reldocs)
+
+### 1.0 Package Specification
+
+ This package specifies five standard JDBC `RowSet` interfaces. All five extend the [RowSet](../../../../java.sql/javax/sql/RowSet.html) interface described in the JDBC 3.0 specification. It is anticipated that additional definitions of more specialized JDBC `RowSet` types will emerge as this technology matures. Future definitions should be specified as subinterfaces using inheritance similar to the way it is used in this specification. 
+
+Note: The interface definitions provided in this package form the basis for all compliant JDBC `RowSet` implementations. Vendors and more advanced developers who intend to provide their own compliant `RowSet` implementations should pay particular attention to the assertions detailed in specification interfaces. 
+
+### 2.0 Standard RowSet Definitions
+
+- [JdbcRowSet](JdbcRowSet.html) - A wrapper around a `ResultSet` object that makes it possible to use the result set as a JavaBeans component. Thus, a `JdbcRowSet` object can be a Bean that any tool makes available for assembling an application as part of a component based architecture. A `JdbcRowSet` object is a connected `RowSet` object, that is, it must continually maintain its connection to its data source using a JDBC technology-enabled driver ("JDBC driver"). In addition, a `JdbcRowSet` object provides a fully updatable and scrollable tabular data structure as defined in the JDBC 3.0 specification. 
+- [CachedRowSet](CachedRowSet.html) - A `CachedRowSet` object is a JavaBeans component that is scrollable, updatable, serializable, and generally disconnected from the source of its data. A `CachedRowSet` object typically contains rows from a result set, but it can also contain rows from any file with a tabular format, such as a spreadsheet. `CachedRowSet` implementations must use the `SyncFactory` to manage and obtain pluggable `SyncProvider` objects to provide synchronization between the disconnected `RowSet` object and the originating data source. Typically a `SyncProvider` implementation relies upon a JDBC driver to obtain connectivity to a particular data source. Further details on this mechanism are discussed in the [javax.sql.rowset.spi](spi/package-summary.html) package specification. 
+- [WebRowSet](WebRowSet.html) - A `WebRowSet` object is an extension of `CachedRowSet` that can read and write a `RowSet` object in a well formed XML format. This class calls an [XmlReader](spi/XmlReader.html) object (an extension of the [RowSetReader](../../../../java.sql/javax/sql/RowSetReader.html) interface) to read a rowset in XML format. It calls an [XmlWriter](spi/XmlWriter.html) object (an extension of the [RowSetWriter](../../../../java.sql/javax/sql/RowSetWriter.html) interface) to write a rowset in XML format. The reader and writer required by `WebRowSet` objects are provided by the `SyncFactory` in the form of `SyncProvider` implementations. In order to ensure well formed XML usage, a standard generic XML Schema is defined and published at [http://xmlns.jcp.org/xml/ns//jdbc/webrowset.xsd](http://xmlns.jcp.org/xml/ns//jdbc/webrowset.xsd). 
+- [FilteredRowSet](FilteredRowSet.html) - A `FilteredRowSet` object provides filtering functionality in a programmatic and extensible way. There are many instances when a `RowSet``object` has a need to provide filtering in its contents without sacrificing the disconnected environment, thus saving the expense of having to create a connection to the data source. Solutions to this need vary from providing heavyweight full scale SQL query abilities, to portable components, to more lightweight approaches. A `FilteredRowSet` object consumes an implementation of the [Predicate](Predicate.html) interface, which may define a filter at run time. In turn, a `FilteredRowSet` object is tasked with enforcing the set filter for both inbound and outbound read and write operations. That is, all filters can be considered as bi-directional. No standard filters are defined; however, sufficient mechanics are specified to permit any required filter to be implemented. 
+- [JoinRowSet](JoinRowSet.html) - The `JoinRowSet` interface describes a mechanism by which relationships can be established between two or more standard `RowSet` implementations. Any number of `RowSet` objects can be added to a `JoinRowSet` object provided the `RowSet`objects can be related in a SQL `JOIN` like fashion. By definition, the SQL `JOIN` statement is used to combine the data contained in two (or more) relational database tables based upon a common attribute. By establishing and then enforcing column matches, a `JoinRowSet` object establishes relationships between `RowSet` instances without the need to touch the originating data source. 
+
+### 3.0 Implementer's Guide
+
+ Compliant implementations of JDBC `RowSet` Implementations must follow the assertions described in this specification. In accordance with the terms of the [Java Community Process](http://www.jcp.org), a Test Compatibility Kit (TCK) can be licensed to ensure compatibility with the specification. The following paragraphs outline a number of starting points for implementers of the standard JDBC `RowSet` definitions. Implementers should also consult the Implementer's Guide in the [javax.sql.rowset.spi](spi/package-summary.html) package for guidelines on [SyncProvider](spi/SyncProvider.html) implementations. 
+
+- 3.1 Constructor
+
+ All `RowSet` implementations must provide a no-argument constructor. 
+
+- 3.2 Role of the `BaseRowSet` Class
+
+ A compliant JDBC `RowSet` implementation must implement one or more standard interfaces specified in this package and may extend the [BaseRowSet](BaseRowSet.html) abstract class. For example, a `CachedRowSet` implementation must implement the `CachedRowSet` interface and extend the `BaseRowSet` abstract class. The `BaseRowSet` class provides the standard architecture on which all `RowSet` implementations should be built, regardless of whether the `RowSet` objects exist in a connected or disconnected environment. The `BaseRowSet` abstract class provides any `RowSet` implementation with its base functionality, including property manipulation and event notification that is fully compliant with [JavaBeans](https://www.oracle.com/technetwork/java/javase/documentation/spec-136004.html) component requirements. As an example, all implementations provided in the reference implementations (contained in the `com.sun.rowset` package) use the `BaseRowSet` class as a basis for their implementations. 
+
+ The following table illustrates the features that the `BaseRowSet` abstract class provides. Features in `BaseRowSet`FeatureDetailsPropertiesProvides standard JavaBeans property manipulation mechanisms to allow applications to get and set `RowSet` command and property values. Refer to the documentation of the `javax.sql.RowSet` interface (available in the JDBC 3.0 specification) for more details on the standard `RowSet` properties.Event notificationProvides standard JavaBeans event notifications to registered event listeners. Refer to the documentation of `javax.sql.RowSetEvent` interface (available in the JDBC 3.0 specification) for more details on how to register and handle standard RowSet events generated by compliant implementations.Setters for a RowSet object's commandProvides a complete set of setter methods for setting RowSet command parameters.StreamsProvides fields for storing of stream instances in addition to providing a set of constants for stream type designation.
+- 3.3 Connected RowSet Requirements
+
+ The `JdbcRowSet` describes a `RowSet` object that must always be connected to the originating data source. Implementations of the `JdbcRowSet` should ensure that this connection is provided solely by a JDBC driver. Furthermore, `RowSet` objects that are implementations of the `JdbcRowSet` interface and are therefore operating in a connected environment do not use the `SyncFactory` to obtain a `RowSetReader` object or a `RowSetWriter` object. They can safely rely on the JDBC driver to supply their needs by virtue of the presence of an underlying updatable and scrollable `ResultSet` implementation. 
+- 3.4 Disconnected RowSet Requirements
+
+ A disconnected `RowSet` object, such as a `CachedRowSet` object, should delegate connection management to a `SyncProvider` object provided by the `SyncFactory`. To ensure fully disconnected semantics, all disconnected `RowSet` objects must ensure that the original connection made to the data source to populate the `RowSet` object is closed to permit the garbage collector to recover and release resources. The `SyncProvider` object ensures that the critical JDBC properties are maintained in order to re-establish a connection to the data source when a synchronization is required. A disconnected `RowSet` object should therefore ensure that no extraneous references remain on the `Connection` object. 
+- 3.5 Role of RowSetMetaDataImpl
+
+ The `RowsetMetaDataImpl` class is a utility class that provides an implementation of the [RowSetMetaData](../../../../java.sql/javax/sql/RowSetMetaData.html) interface, supplying standard setter method implementations for metadata for both connected and disconnected `RowSet` objects. All implementations are free to use this standard implementation but are not required to do so. 
+- 3.6 RowSetWarning Class
+
+ The `RowSetWarning` class provides warnings that can be set on `RowSet` implementations. Similar to [SQLWarning](../../../../java.sql/java/sql/SQLWarning.html) objects, `RowSetWarning` objects are silently chained to the object whose method caused the warning to be thrown. All `RowSet` implementations should ensure that this chaining occurs if a warning is generated and also ensure that the warnings are available via the `getRowSetWarnings` method defined in either the `JdbcRowSet` interface or the `CachedRowSet` interface. After a warning has been retrieved with one of the `getRowSetWarnings` methods, the `RowSetWarning` method `getNextWarning` can be called on it to retrieve any warnings that might be chained on it. If a warning is returned, `getNextWarning` can be called on it, and so on until there are no more warnings. 
+- 3.7 The Joinable Interface
+
+ The `Joinable` interface provides both connected and disconnected `RowSet` objects with the capability to be added to a `JoinRowSet` object in an SQL `JOIN` operation. A `RowSet` object that has implemented the `Joinable` interface can set a match column, retrieve a match column, or unset a match column. A `JoinRowSet` object can then use the `RowSet` object's match column as a basis for adding the `RowSet` object. 
+
+- 3.8 The RowSetFactory Interface
+
+ A `RowSetFactory` implementation must be provided. 
+
+### 4.0 Related Specifications
+
+- [JDBC 4.3 Specification](https://jcp.org/en/jsr/detail?id=221)
+- [XML Schema](http://www.w3.org/XML/Schema)
+
+### 5.0 Related Documentation
+
+- [JDBC RowSet Tutorial](http://docs.oracle.com/javase/tutorial/jdbc/basics/rowset.html)
+
+- Related PackagesModulePackageDescription[java.sql](../../../../java.sql/module-summary.html)[javax.sql](../../../../java.sql/javax/sql/package-summary.html)Provides the API for server side data source access and processing from the Java programming language.[java.sql.rowset](../../../module-summary.html)[javax.sql.rowset.serial](serial/package-summary.html)Provides utility classes to allow serializable mappings between SQL types and data types in the Java programming language.[java.sql.rowset](../../../module-summary.html)[javax.sql.rowset.spi](spi/package-summary.html)The standard classes and interfaces that a third party vendor has to use in its implementation of a synchronization provider.
+- All Classes and InterfacesInterfacesClassesException ClassesClassDescription[BaseRowSet](BaseRowSet.html)An abstract class providing a `RowSet` object with its basic functionality.[CachedRowSet](CachedRowSet.html)The interface that all standard implementations of `CachedRowSet` must implement.[FilteredRowSet](FilteredRowSet.html)The standard interface that all standard implementations of `FilteredRowSet` must implement.[JdbcRowSet](JdbcRowSet.html)The standard interface that all standard implementations of `JdbcRowSet` must implement.[Joinable](Joinable.html)1.0 Background[JoinRowSet](JoinRowSet.html)The `JoinRowSet` interface provides a mechanism for combining related data from different `RowSet` objects into one `JoinRowSet` object, which represents an SQL `JOIN`.[Predicate](Predicate.html)The standard interface that provides the framework for all `FilteredRowSet` objects to describe their filters.[RowSetFactory](RowSetFactory.html)An interface that defines the implementation of a factory that is used to obtain different types of `RowSet` implementations.[RowSetMetaDataImpl](RowSetMetaDataImpl.html)Provides implementations for the methods that set and get metadata information about a `RowSet` object's columns.[RowSetProvider](RowSetProvider.html)A factory API that enables applications to obtain a `RowSetFactory` implementation that can be used to create different types of `RowSet` implementations.[RowSetWarning](RowSetWarning.html)An extension of `SQLException` that provides information about database warnings set on `RowSet` objects.[WebRowSet](WebRowSet.html)The standard interface that all implementations of a `WebRowSet` must implement.

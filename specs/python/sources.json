@@ -1,6 +1,6 @@
 {
   "language": "python",
-  "generatedAt": "2026-01-05T15:15:50.025501+00:00",
+  "generatedAt": "2026-01-05T20:16:14.601818+00:00",
   "files": [
     {
       "path": "pep8.md",
@@ -14,24 +14,46 @@
     },
     {
       "path": "formatters/ruff.md",
-      "sha256": "7f8b16d1e8dbef848a74335f1d9eca269de78a616d073a94cbe4ff1bc926399b",
+      "sha256": "92d3ee48083c1629f2b65a40c3b81d13c2714b719699b5a9b3dd11c5c08ca08e",
       "urls": [
-        "https://docs.astral.sh/ruff/formatter/"
+        "https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html",
+        "https://black.readthedocs.io/en/stable/the_black_code_style/future_style.html#preview-style",
+        "https://docs.astral.sh/ruff/settings/#format_preview",
+        "https://docs.python.org/3/library/doctest.html",
+        "https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#literal-blocks",
+        "https://github.com/astral-sh/ruff",
+        "https://github.com/astral-sh/ruff/discussions/6998#discussioncomment-7016766",
+        "https://github.com/astral-sh/ruff/issues/8232",
+        "https://github.com/astral-sh/ruff/issues/new",
+        "https://github.com/astral-sh/ruff/issues?q=is%3Aopen+is%3Aissue+label%3Aformatter",
+        "https://github.com/google/yapf",
+        "https://github.com/psf/black",
+        "https://peps.python.org/pep-0701/",
+        "https://prettier.io/docs/en/next/rationale.html#template-literals",
+        "https://pypi.org/project/black/",
+        "https://realpython.com/python-f-strings/#self-documenting-expressions-for-debugging",
+        "https://spec.commonmark.org/0.30/#fenced-code-blocks"
       ]
     },
     {
       "path": "formatters/overview.md",
-      "sha256": "84a8146451f974542169023c6402a5c9bd0aaf0b38ea8a0f7b5e0a720fa70cff",
-      "urls": [
-        "https://black.readthedocs.io/en/stable/",
-        "https://docs.astral.sh/ruff/formatter/"
-      ]
+      "sha256": "3d2801b30cbbcd4355efd35d103912d016844e199e0721d9cde3cb370589d82e",
+      "urls": []
     },
     {
       "path": "formatters/black.md",
-      "sha256": "75a3d4a39f10f16de5cf7e0ee41fabfd39c2f5045f4f895da80383f735202211",
+      "sha256": "97dc5a671e9af05a4b2dbf60a6a614b57109bcb1bf8e33588c44d7cc411fd150",
       "urls": [
-        "https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html"
+        "https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html",
+        "https://docs.python.org/3/library/re.html#re.VERBOSE",
+        "https://flit.readthedocs.io/en/latest/",
+        "https://github.com/google/yapf",
+        "https://github.com/psf/black/issues",
+        "https://github.com/psf/black/issues/4052",
+        "https://github.com/toml-lang/toml",
+        "https://hatch.pypa.io/latest/",
+        "https://python-poetry.org/",
+        "https://www.python.org/dev/peps/pep-0518/"
       ]
     },
     {
@@ -103,366 +125,379 @@
     },
     {
       "path": "linters/pylint/overview.md",
-      "sha256": "7dfdde2e6c58c247f034ec8d1cf5b094d6640e3642fcba11e07bb92c5c819a51",
+      "sha256": "3ef5bc976f914e33d3ab92226103a2de9f3f0b80d7e0329a8492ac9ead8a9961",
       "urls": [
         "https://pylint.readthedocs.io/en/stable/user_guide/messages/index.html"
       ]
     },
     {
       "path": "linters/flake8/C901.md",
-      "sha256": "cb1ad421d26aad723463fd3b7bee8eb62c1a12026c188146b5a7efc97f55d312",
+      "sha256": "9096064cff72ec6f44a7dbe72ecd2ddbfe291a83d95b030cf38324d254afa948",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/overview.md",
-      "sha256": "0c96bd80fcd99c83a6ff693979904d7b834cb7f8721590a2474b905f6518ce3b",
+      "sha256": "330baae9225dd98e1d0cba8b1430020653ae9332b11876581186bfc0ea55f4d9",
       "urls": [
-        "https://flake8.pycqa.org/en/latest/user/error-codes.html"
+        "https://flake8.pycqa.org/en/latest/user/error-codes.html",
+        "https://github.com/readthedocs/sphinx_rtd_theme",
+        "https://pycodestyle.readthedocs.io/en/latest/intro.html#error-codes",
+        "https://readthedocs.org",
+        "https://www.sphinx-doc.org/"
       ]
     },
     {
       "path": "linters/flake8/F405.md",
-      "sha256": "7b09d9198d83dd1030af34ccd4cd17e7c415840418157f47e8c38483459c65a2",
+      "sha256": "7c70bec4a8fedb17b385b864897b1a5aaa325ff3d84721cdb9b3833a3d3e4e80",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F702.md",
-      "sha256": "91f5077a9c43a953dc05d9c92c876956f87b232971d7728d658a25990651e33f",
+      "sha256": "7d1707d7e73c8f58b8bb05b9f84647eb39afc65bc1427b677e0b4f547a8ba5d9",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F811.md",
-      "sha256": "49f25334c9de893349debcb3542d97d3b8ae9cd2a7b23229eebd8b4e34f1badc",
+      "sha256": "11473adff7b412efda266a7cd042fc5248ae6b0bf92a50f3de58b7318daeca02",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F504.md",
-      "sha256": "531e0f6bec3419313ea432accda148c275339d609010b82bf1c88a40171a2572",
+      "sha256": "1e9cd6a6596285418c3270a02cd11773cc66d6fd96c3b64a5316ffe0f4bb4672",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F524.md",
-      "sha256": "feebfc1267c2d738aad5c40e85e0dfcc3e04bf216c4234d7a5ed1542c49762e5",
+      "sha256": "aa2e0a21d95f9b52f0fa4d66eaa6eefd948ecade4f97d96a48a3ce3ed0e745d8",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F706.md",
-      "sha256": "6e8cba73103900518e80c41aad984fdade5b15e70682deded01e0a104ba708de",
+      "sha256": "39b65dc34a1a7438af31f42b2f6ff8b7f3788d7827cb18edbcdd5053cf066ba7",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F541.md",
-      "sha256": "7337e1df3772c1a4a9ad58417ca5e00c27313bd47db0f046eef5dae810753ade",
+      "sha256": "e23a7e3398db06818fc08a01e00b051c1382f3effaf32da331dc9f365b63bb30",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F401.md",
-      "sha256": "3dc4d72abb6072e8ef7fc8d08b80470912dfe06991dfece46d6583f40be41bf1",
+      "sha256": "1b4ecea36b5c973cb9a73c071d263888bb4908dc37b05761921e851283a7713c",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F831.md",
-      "sha256": "1d1034b861560c15bae61844eb1565a7f3495bf33298c9603e24330ccd5842ca",
+      "sha256": "e01472b33835f7fb7fd1620dc358a569744e0d0cda452077f53d72c16be14fb7",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F633.md",
-      "sha256": "da66e408addf7c3b11f8ffd961bd761db368a271cc6ddfbc1fa36b85c4aff312",
+      "sha256": "9d6b710380c600320dc9c7bcb1ba00894f100b18b801955eb69f927513191930",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F821.md",
-      "sha256": "fccb8226e1ae0f3db08166bbba75cddab8efd7f8e2f16d0285d49d702acfeea8",
+      "sha256": "82e8d0ba5edf0585db3abdc732c2e92bdb9496d2de86f9f6394deb45aceffeab",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F722.md",
-      "sha256": "415a51d6547758071e8ea7d4eda989179df86a1154597cc729e2f6c22573ad3e",
+      "sha256": "fda590fcab3375fe34ec5fe24daefd9521558bbbb7384fe7f9867d8e76739dc3",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F525.md",
-      "sha256": "82810209c98ef6fc7b0afbb2076db5d38fef86437974226b05c3eba711052665",
+      "sha256": "4adeb5de6e7792867e58e544387945820322d72fc8f853cd7aeaca6bac410a74",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F707.md",
-      "sha256": "7cd3515944a41b6564bc1901ab159044c0a8c924ca78e1ba2351dffa900d9221",
+      "sha256": "ef046564b03ee229f1a09b7ef809c19e6b3f812f3e0059507792d8ad9fbc1046",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F622.md",
-      "sha256": "4b95a563f0db00064abe6116ffa1db696d6cb42404943819ec86f53f8f66c6ad",
+      "sha256": "1cc1aead99e2b5c7a766c832a13b27801c2cebe9dc6a1bf8bb3db74d6221b3ae",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/E999.md",
-      "sha256": "fedce5ebc2a46c1e4ddef612a24d9c3d571509fda2f68b949bcab2fa8161ff44",
+      "sha256": "7df59ff3b0f17f831974a89b0ec173a9b3b02c28fe0954187534df32081e67cf",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F632.md",
-      "sha256": "e124ee184385c32feba2375e4fe7d01675827d9a4e88c02762a136e603273221",
+      "sha256": "8e3a393fc86b46c0b16f72d7a0051f9a73c958281ff368b2583576886f152257",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F723.md",
-      "sha256": "1574ca1736c702041e4994417aae565f3f33d0b069dd5f60096697353126548c",
+      "sha256": "652c9d47492b6970cc43a4a239cf18e79bd03a646d2ed81287e75814894e3c7b",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F501.md",
-      "sha256": "3ce55144f87524579f87a40fb3b29e70037fc4717e74cfd90e99150410b0da17",
+      "sha256": "4b13bd24453b1333bb562e888a16c234b89bc11b08f69e00d579b3765e735d71",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F404.md",
-      "sha256": "38e10f93030ce74596a4863f6c2d707397d3595c0da99734cd2b4877c361fd16",
+      "sha256": "5f10a174cb15c9f7e3bc2548c221412d7e13dfa9da8773147580e0de5abb8c5d",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F521.md",
-      "sha256": "07fc0b93bb79075ed4cba828e4400a91b62500017b7f51bf33002314e6f5e574",
+      "sha256": "cf7583a2d4a70b26ed0a1d0316cea1f728ab1feb03cfb459a3592bd585bf829b",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F602.md",
-      "sha256": "c4307243a26a7e095188af06bf553b379524efe1e5ff6ead7ef7294fce31a64a",
+      "sha256": "32c4a6b1a0f5bffbdc8366c08e95b46fff3b001174e37f110097ff2eb19bd05a",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F901.md",
-      "sha256": "6d952792bdf20e57806fba6d6b6b262034ff68d26e7e505dc253350c054926d2",
+      "sha256": "22da0f6e34f6b68495a65549855250c713e12e5d01b0794c05bc95cd45328cc6",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F841.md",
-      "sha256": "7894174f7bc2e3752dd3e15665c65aa056b26dda9ff5604bdf6f2228373dc9c9",
+      "sha256": "ef3e3f39ef2bbfffb3aff03aa73050a2f68c3bd898ea4de61958ad794ea7bf5d",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F824.md",
-      "sha256": "554fcc0439c40f9285a64f23e416a878f3a7306aa72d090963c96c3729fbc573",
+      "sha256": "27ad1e1ab822cd64c40c8cfe2ad262d1def5c42656fbab6aa63110a92c15c652",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F505.md",
-      "sha256": "e9565b545ee9f547b1ac4c515c19c4c7a6223353078f14742bb6427feb6e319f",
+      "sha256": "ee74d66024fcde969b5a0f8df5b9313ab980dc363a056e43134a9e21f1d10151",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F704.md",
-      "sha256": "33db9ef21b7395367db3d395cd106c3a3dcb8b5da68e7987a4492c356933a9af",
+      "sha256": "add25a543554d06a0ef1ff71fd6af507ef5e7b7d95b0ab8793db8021233b7382",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F621.md",
-      "sha256": "a7e3107646a6b697c6fb4890f5ef33691b31c82c6b1b11a0f526918f765a43be",
+      "sha256": "2060a6f89152637fcad21e8a6769b7c76dc93f7ddce7eb9582af6933bf3e7580",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F403.md",
-      "sha256": "ae1ba8ee22a655fe7a3420be1a359a7c651fe1f3d51040acf429eee7f599e1de",
+      "sha256": "ac78843a2f29df034e8acc73a18898a8517e2046ff424f8e4e460655622a80ed",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F502.md",
-      "sha256": "bbebb79016116f5ba1b2e1288b11a379b7a489f6442a4a9d796510686b13e30e",
+      "sha256": "9ecf3104407739e44bbd62462a5c12a5312f898073a9c3a7be8eb3ecf9596647",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F823.md",
-      "sha256": "1008e9438e2fc696e8e94721d53e8fb8160dac4716ab79366a5c2b263e2b603f",
+      "sha256": "7a943722ad0168773274321145bd6f8f692492d32ab00abf82aecba973230a16",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F631.md",
-      "sha256": "140c2e1c3efa9e45e8576fdc3d85f148c744b8b54cece2c407a39dbb4568347e",
+      "sha256": "9d17fb74cc094d4fa3ab5805b123c73e8d1055ab85f1d04546373415d784b8f6",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F407.md",
-      "sha256": "83ad1595b5492406c75a62f5e41a40e77e804d68414c979de7ef197c5de858cf",
+      "sha256": "a42cebb6b639884d01dd1889e9fdbcaa498bea78c85ee4c02cc80c78b99b7504",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F522.md",
-      "sha256": "ca67aa2ba009544987fd107df11d9fd2173142de4171d4c65687735cae9743e5",
+      "sha256": "b1a838a59c5d7fc989db795227bb0a662046419038cb0862ac7ee82edd85daf5",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F601.md",
-      "sha256": "90eb3ce1f3457b2dc11780022940683634bfd05c13341ceb0883571b17e2a720",
+      "sha256": "356ce8fedadf7ad1e195a8f9672e95221f029bed6f5d09cf73567abea24fb134",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F506.md",
-      "sha256": "570d120d525c7e50213dc11b6b840303e5f83ba5fbba3a43db53f8faceb55f7f",
+      "sha256": "f057bffcf261722c48efe3956ee9d58cbbcebc05b52b28b6c1e6c094096f1c3b",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F406.md",
-      "sha256": "66f82e3b952e5da5a8a85204d680ee50a774ce59db9fe5b93a06582cc0a6e2d7",
+      "sha256": "e414fdaad7af164da9124caf23342bb3135946ba067161aececc0c9ea1e55e1a",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F701.md",
-      "sha256": "44edc99edf2652391c390d2dcced2d31b6c8849e8f9b1056a7430ecff3f70278",
+      "sha256": "368da8ee0d687c53836d5ae6cf67ffe3599ad267229e258f5b34478173cba3c9",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F523.md",
-      "sha256": "44248aa15d92ce1613430e32c89fe3a094c60e5744b16e8bde7b8c6df5cece6f",
+      "sha256": "433167cf5c189bb055ae41552cefee60dcc16ffa0889f4dd59ab601a1e8f9e25",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F507.md",
-      "sha256": "a7cf946b191ebf9532e0588d73c00336bc0b93d2c4f52d5c91d13fc24275e704",
+      "sha256": "ed2d08f0f3ffd8c8e70019a0049745cb0691dcbf2d6428c922a159ce48741d88",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F634.md",
-      "sha256": "85acc802f58adc94e6ef2b511ec55bd4816392a9cf6f9b3c21bc66dee519d67e",
+      "sha256": "ed3aa2d106a9991e330974f5c738a41edfbdfc8493e3af85de610ac946b62893",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F542.md",
-      "sha256": "e0fde073d265503bb189f68c6b3b6c133e228ae5bb917e4f6789718223869fe1",
+      "sha256": "4829645e3a9dae0be3a2c479550c4ba77400b53584d9bb88f665846b25b47cb4",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F402.md",
-      "sha256": "758928dba98c453595645d636d15072a01b5e61b28c086f838a05cf107987ec6",
+      "sha256": "3219f01512ff7ae2bf06556dcf449552d45c7ae11ba93d2588662d336b6808be",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F503.md",
-      "sha256": "b7b88755d59e7ccf5009c44e4e80d43a0a86e0a8e5ffd1a440acaa03d4f02136",
+      "sha256": "310c7345750d9d66057fe5fb39ebad550cda3d0dc105217fe750ef2c73029738",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F822.md",
-      "sha256": "5a57e8f76e2a253377bd874605b23aae2f6c07154e57db0fc9ad777cb60f0e5a",
+      "sha256": "696fa8ec7b6947974351e80c91782c3d06c1dda287b5e86a0941226738fd449c",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F721.md",
-      "sha256": "4f8194eebf5cff3d6f74ff62ef0afe3943c7a1aa98c7a1f76970e3c7e8c4af36",
+      "sha256": "eff09f62dfa32d87a1b5287ebe89b658835f01fc3da20c0ded7bc528d06bc3c2",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F508.md",
-      "sha256": "49da45a06a29e743c3d6020f6678854edca65841476c4240b267f4edbbb1c33a",
+      "sha256": "4f1ce23c49be0cecccfb2edf70a35d26d5be39671f58f1121afedd91e3961fd7",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/flake8/F509.md",
-      "sha256": "f77c971f83f20358dd3448d0854434b1344bcc21576349934c6ecd69e3a973ba",
+      "sha256": "999b797906c052be8b9dde34103151db280f5479d1c9cb4915b30c6bb0e0a36b",
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html"
       ]
     },
     {
       "path": "linters/mypy/overview.md",
-      "sha256": "eab3277fd2a4d8ea671af2b306ab00ab66e468b30ab53951042dd5d7ea5628fb",
+      "sha256": "170d54e8499546f04e940409a8f369d6a038ae7d5d4fc750dad2a54b3cae127f",
       "urls": [
-        "https://mypy.readthedocs.io/en/stable/error_code_list.html"
+        "https://docs.python.org/3.13/reference/datamodel.html#determining-the-appropriate-metaclass",
+        "https://docs.python.org/3/library/abc.html#module-abc",
+        "https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable",
+        "https://docs.python.org/3/library/functions.html#sorted",
+        "https://docs.python.org/3/library/typing.html#typing.NewType",
+        "https://docs.python.org/3/reference/datamodel.html#object.__exit__",
+        "https://mypy.readthedocs.io/en/stable/error_code_list.html",
+        "https://peps.python.org/pep-0484/",
+        "https://peps.python.org/pep-0705",
+        "https://peps.python.org/pep-0742/"
       ]
     },
     {
