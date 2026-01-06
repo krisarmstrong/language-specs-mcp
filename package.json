@@ -70,7 +70,7 @@
     "fetch:linters": "FETCH_SCOPE=linters python3 scripts/fetch-parallel.py",
     "fetch:formatters": "FETCH_SCOPE=formatters python3 scripts/fetch-parallel.py",
     "fetch:patterns": "FETCH_SCOPE=patterns python3 scripts/fetch-parallel.py",
-    "fetch:delta": "python3 scripts/fetch-delta.py",
+    "fetch:delta": "python3 scripts/fetch-parallel.py --delta",
     "build:site": "tsc -p tsconfig.site.json && cp docs/site/build/health.js docs/site/health.js",
     "generate:health": "npm run build:site && python3 scripts/generate-health.py",
     "generate:index": "python3 scripts/generate-index.py",

@@ -461,3 +461,101 @@ def write_template(template_path: Path, output: Path) -> None:
     if not template_path.exists():
         return
     write_text(output, template_path.read_text(encoding="utf-8"))
+
+
+# --- Version Management Utilities ---
+
+
+def normalize_version(value: str) -> str:
+    """Normalize version string by stripping 'v' prefix and whitespace."""
+    return value.lstrip("v").strip()
+
+
+def strip_tag_prefix(value: str, prefix: str | None) -> str:
+    """Strip tag prefix from version string if present."""
+    if not prefix:
+        return value
+    return value[len(prefix):] if value.startswith(prefix) else value
+
+
+def fetch_json(url: str) -> dict:
+    """Fetch URL and parse as JSON."""
+    import json
+    return json.loads(fetch_url(url))
+
+
+def fetch_github_tag(repo: str, tag_prefix: str | None = None) -> str:
+    """Fetch the latest non-prerelease tag from a GitHub repository."""
+    data = fetch_json(f"https://api.github.com/repos/{repo}/tags?per_page=100")
+    if not isinstance(data, list):
+        return ""
+    for entry in data:
+        name = entry.get("name", "")
+        if tag_prefix and not name.startswith(tag_prefix):
+            continue
+        normalized = normalize_version(strip_tag_prefix(name, tag_prefix))
+        if not is_prerelease_version(normalized):
+            return name
+    return ""
+
+
+def get_latest_version(tool: dict, check_enabled: bool = True) -> str | None:
+    """
+    Fetch the latest version for a tool from its upstream source.
+
+    Args:
+        tool: Tool configuration dict with 'latest' key defining source
+        check_enabled: If False, skip fetching and return None
+
+    Returns:
+        Latest version string or None if unavailable/disabled
+    """
+    import urllib.parse
+
+    latest = tool.get("latest")
+    if not latest or not check_enabled:
+        return None
+    latest_type = latest.get("type")
+
+    if latest_type == "go":
+        text = fetch_url(latest.get("url", "")).splitlines()[0]
+        version = normalize_version(text.replace("go", ""))
+        return None if is_prerelease_version(version) else version
+
+    if latest_type == "node":
+        data = fetch_json(latest.get("url", ""))
+        if isinstance(data, list):
+            for entry in data:
+                version = normalize_version(entry.get("version", ""))
+                if version and not is_prerelease_version(version):
+                    return version
+        return None
+
+    if latest_type == "npm":
+        pkg = latest.get("package", "")
+        data = fetch_json(f"https://registry.npmjs.org/{urllib.parse.quote(pkg)}")
+        version = normalize_version(data.get("dist-tags", {}).get("latest", ""))
+        return None if is_prerelease_version(version) else version
+
+    if latest_type == "pypi":
+        pkg = latest.get("package", "")
+        data = fetch_json(f"https://pypi.org/pypi/{urllib.parse.quote(pkg)}/json")
+        version = normalize_version(data.get("info", {}).get("version", ""))
+        return None if is_prerelease_version(version) else version
+
+    if latest_type == "github-release":
+        repo = latest.get("repo", "")
+        try:
+            data = fetch_json(f"https://api.github.com/repos/{repo}/releases/latest")
+            tag = data.get("tag_name", "")
+        except FetchError as exc:
+            if "HTTP Error 404" not in str(exc):
+                raise
+            tag = fetch_github_tag(repo, latest.get("tagPrefix"))
+        version = normalize_version(strip_tag_prefix(tag, latest.get("tagPrefix")))
+        if is_prerelease_version(version):
+            tag = fetch_github_tag(repo, latest.get("tagPrefix"))
+            version = normalize_version(strip_tag_prefix(tag, latest.get("tagPrefix")))
+        return None if is_prerelease_version(version) else version
+
+    return None
