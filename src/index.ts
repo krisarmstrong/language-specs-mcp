@@ -531,6 +531,20 @@ async function getLinterRule(language: string, linter: string, rule: string): Pr
   return `Linter rule not found: ${language}/${linter}/${rule}`;
 }
 
+async function getChecklist(language: string): Promise<string> {
+  if (!isSupportedLanguage(language)) {
+    return `Unsupported language: ${language}. Supported: ${LANGUAGES.join(", ")}`;
+  }
+
+  const checklistPath = resolveSpecPath(language, "generation-checklist.md");
+  if (checklistPath && (await fileExists(checklistPath))) {
+    return await readFile(checklistPath, "utf-8");
+  }
+
+  // Return a generic message if no checklist exists yet
+  return `No generation checklist available for ${language} yet.\n\nGeneral best practices:\n- Follow language idioms and conventions\n- Use the language's standard formatting tools\n- Handle errors explicitly\n- Prefer immutable data where possible\n- Write self-documenting code with clear names`;
+}
+
 const server = new Server(
   {
     name: "SpecForge",
@@ -633,6 +647,22 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
         required: ["language"],
       },
     },
+    {
+      name: "get_checklist",
+      description:
+        "Get the generation checklist for a language. Call this BEFORE writing code to ensure you follow best practices and avoid common mistakes. Returns critical rules, security guidelines, and anti-patterns.",
+      inputSchema: {
+        type: "object" as const,
+        properties: {
+          language: {
+            type: "string",
+            enum: LANGUAGES,
+            description: "Programming language to get checklist for",
+          },
+        },
+        required: ["language"],
+      },
+    },
   ],
 }));
 
@@ -702,6 +732,12 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       return { content: [{ type: "text", text: content }] };
     }
 
+    case "get_checklist": {
+      const language = parseString(typedArgs.language);
+      const content = await getChecklist(language);
+      return { content: [{ type: "text", text: content }] };
+    }
+
     default:
       return { content: [{ type: "text", text: `Unknown tool: ${name}` }] };
   }
@@ -761,6 +797,7 @@ if (isEntrypoint) {
 export {
   getSpec,
   getLinterRule,
+  getChecklist,
   listCategorySpecs,
   searchSpecs,
   resolveSpecPath,
