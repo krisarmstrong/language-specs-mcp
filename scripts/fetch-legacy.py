@@ -4740,7 +4740,7 @@ def fetch_markdown_lang() -> None:
                     [
                         f"# {rule}",
                         "",
-                        f"See: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md",
+                        "See: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md",
                     ]
                 ),
             )

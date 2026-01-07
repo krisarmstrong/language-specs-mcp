@@ -16,6 +16,7 @@ import json
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT_DIR = SCRIPT_DIR.parent
@@ -67,7 +68,7 @@ def cmd_index() -> int:
     """Generate spec index files."""
     language_dirs = get_language_dirs()
 
-    root_index = {
+    root_index: dict[str, Any] = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "languages": [],
     }
@@ -143,7 +144,7 @@ def cmd_search() -> int:
     """Generate search indexes."""
     language_dirs = get_language_dirs()
 
-    root_index = {
+    root_index: dict[str, Any] = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "languages": [],
     }

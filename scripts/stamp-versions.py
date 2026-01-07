@@ -79,7 +79,7 @@ def ensure_sources(content: str, sources: list[str], label: str, version: str) -
 
 def main() -> None:
     registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
-    entries_by_file: dict[str, list[dict[str, object]]] = {}
+    entries_by_file: dict[str, list[dict]] = {}
 
     for tool in registry.get("tools", []):
         label = tool.get("label") or "Version"

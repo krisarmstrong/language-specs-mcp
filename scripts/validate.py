@@ -96,28 +96,28 @@ def load_allowlist() -> set[str]:
 def cmd_stubs() -> int:
     """Check for stub files."""
     allowlist = load_allowlist()
-    stubs = []
+    stubs: list[str] = []
 
-    for path in SPECS_ROOT.rglob("*.md"):
-        if is_stub_file(path):
-            rel_path = path.relative_to(ROOT_DIR).as_posix()
+    for file_path in SPECS_ROOT.rglob("*.md"):
+        if is_stub_file(file_path):
+            rel_path = file_path.relative_to(ROOT_DIR).as_posix()
             stubs.append(rel_path)
 
-    unexpected = sorted([path for path in stubs if path not in allowlist])
-    stale_allowlist = sorted([path for path in allowlist if path not in stubs])
+    unexpected = sorted([p for p in stubs if p not in allowlist])
+    stale_allowlist = sorted([p for p in allowlist if p not in stubs])
 
     if unexpected:
         print("Stub validation failed (unexpected stub files detected):")
-        for path in unexpected[:100]:
-            print(f"  - {path}")
+        for p in unexpected[:100]:
+            print(f"  - {p}")
         if len(unexpected) > 100:
             print(f"  ... and {len(unexpected) - 100} more")
         return 1
 
     if stale_allowlist:
         print("Warning: allowlist entries no longer stubbed:")
-        for path in stale_allowlist[:50]:
-            print(f"  - {path}")
+        for p in stale_allowlist[:50]:
+            print(f"  - {p}")
         if len(stale_allowlist) > 50:
             print(f"  ... and {len(stale_allowlist) - 50} more")
 

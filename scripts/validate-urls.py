@@ -18,9 +18,8 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
-from pathlib import Path
 from threading import Lock
-from typing import Literal
+from typing import Any, Literal
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
@@ -89,8 +88,8 @@ class URLResult:
     response_time_ms: int | None = None
     checked_at: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
-    def to_dict(self) -> dict:
-        result = {
+    def to_dict(self) -> dict[str, str | int | None]:
+        result: dict[str, str | int | None] = {
             "url": self.url,
             "status": self.status,
             "checkedAt": self.checked_at,
@@ -318,9 +317,9 @@ def build_summary(results: dict[str, URLResult], url_to_languages: dict[str, lis
     }
 
 
-def suggest_fixes(results: dict[str, URLResult]) -> list[dict]:
+def suggest_fixes(results: dict[str, URLResult]) -> list[dict[str, Any]]:
     """Generate suggested URL fixes for redirects and common issues."""
-    suggestions = []
+    suggestions: list[dict[str, Any]] = []
 
     for url, result in results.items():
         if result.status == "redirect" and result.redirect_url:
@@ -403,7 +402,7 @@ def main() -> int:
 
     # Log summary
     s = summary_data["summary"]
-    log(f"=== URL Validation Complete ===")
+    log("=== URL Validation Complete ===")
     log(f"Total: {s['total']} | OK: {s['ok']} | Redirects: {s['redirect']} | Errors: {s['error']} | Timeouts: {s['timeout']}")
     log(f"Results written to {OUTPUT_FILE}")
 
