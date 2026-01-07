@@ -1647,9 +1647,7 @@
     {
       "path": "linters/overview.md",
       "sha256": "f9d4e207c283ef5d83d9e4385e8e1da7e3f5462984fae23e56e54b5d5483c5f6",
-      "urls": [
-        "http://localhost:9000"
-      ]
+      "urls": []
     },
     {
       "path": "linters/spotbugs/overview.md",

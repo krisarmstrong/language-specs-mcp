@@ -32,9 +32,7 @@
     {
       "path": "stdlib/packages/index.md",
       "sha256": "8029c8589c56cae793fd18716ee41b0fb7967a1a779cee917f771b4e842c3c5f",
-      "urls": [
-        "https://kotlinlang.org/api/latest/jvm/stdlib/allpackages-index.html"
-      ]
+      "urls": []
     },
     {
       "path": "spec.md",
@@ -53,15 +51,13 @@
     {
       "path": "linters/detekt/overview.md",
       "sha256": "4090e255888c99b709e4ac2c6e5c8ec3937485448f010250e22406ec5cd1912a",
-      "urls": [
-        "https://detekt.dev/docs/rules/"
-      ]
+      "urls": []
     },
     {
       "path": "linters/detekt/comments.md",
       "sha256": "4a7894eaaa14eb903ac5f77d30cf0fdbea7dbda056ce9dfc17cb7f202644f44f",
       "urls": [
-        "https://detekt.dev/docs/rules/comments"
+        "https://detekt.dev/docs/rules/comments/"
       ]
     },
     {

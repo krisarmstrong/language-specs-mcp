@@ -19,7 +19,7 @@
       "path": "stdlib/overview.md",
       "sha256": "a570646694a32b615e21e232b8c6c83766f2cf3b40627a7a4934ef00191fe3c1",
       "urls": [
-        "https://hackage.haskell.org/package/base/docs/"
+        "https://hackage.haskell.org/package/base-4.22.0.0/docs/"
       ]
     },
     {

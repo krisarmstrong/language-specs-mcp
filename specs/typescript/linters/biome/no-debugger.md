@@ -1,3 +1,116 @@
+noDebugger | Biome[Skip to content](#_top)[Biome](/)[Docs](/guides/getting-started)[Enterprise](/enterprise)[Playground](/playground)SearchCtrlK Cancel [Discord](https://biomejs.dev/chat)[GitHub](https://github.com/biomejs/biome)[Mastodon](https://fosstodon.org/@biomejs)[Open Collective](https://opencollective.com/biome)[YouTube](https://youtube.com/@Biomejs)[BlueSky](https://bsky.app/profile/biomejs.dev)[RSS](https://biomejs.dev/blog/rss.xml)[Blog](/blog/)Select themeDarkLightAutoSelect languageEnglishEspañolFrançais日本語简体中文PolskiPortuguêsУкраїнськаРусскийVersionv1.xv2.xnext
+
+- [Blog](/blog/)
+- [Playground](/playground)
+- [Enterprise](/enterprise)
+- Guides
+
+  - [Getting Started](/guides/getting-started)
+  - [Manual installation](/guides/manual-installation)
+  - [Configure Biome updated](/guides/configure-biome)
+  - [Use Biome in big projects](/guides/big-projects)
+  - [Upgrade to Biome v2](/guides/upgrade-to-biome-v2)
+  - Biome in your IDE
+
+    - [First-party extensions](/guides/editors/first-party-extensions)
+    - [Third-party extensions](/guides/editors/third-party-extensions)
+    - [Integrate Biome in an editor extension](/guides/editors/create-an-extension)
+
+  - [Integrate Biome with your VCS](/guides/integrate-in-vcs)
+  - [Migrate from ESLint & Prettier](/guides/migrate-eslint-prettier)
+  - [Investigate slowness](/guides/investigate-slowness)
+
+- Formatter
+
+  - [Introduction](/formatter)
+  - [Differences with Prettier](/formatter/differences-with-prettier)
+  - [Formatter Option Philosophy](/formatter/option-philosophy)
+
+- Analyzer
+
+  - [Suppressions](/analyzer/suppressions)
+  - Linter
+
+    - [Introduction](/linter)
+    - [Domains](/linter/domains)
+    - [Plugins](/linter/plugins)
+    - [JavaScript Rules](/linter/javascript/rules)
+    - [JavaScript Rules sources](/linter/javascript/sources)
+    - [CSS Rules](/linter/css/rules)
+    - [CSS Rules sources](/linter/css/sources)
+    - [JSON Rules](/linter/json/rules)
+    - [JSON Rules sources](/linter/json/sources)
+    - [GraphQL Rules](/linter/graphql/rules)
+    - [GraphQL Rules sources](/linter/graphql/sources)
+    - [HTML Rules](/linter/html/rules)
+    - [HTML Rules sources](/linter/html/sources)
+
+  - Assist
+
+    - [Introduction](/assist)
+    - [JavaScript Actions](/assist/javascript/actions)
+    - [JavaScript Actions sources](/assist/javascript/sources)
+    - [CSS Actions](/assist/css/actions)
+    - [CSS Actions sources](/assist/css/sources)
+    - [JSON Actions](/assist/json/actions)
+    - [JSON Actions sources](/assist/json/sources)
+    - [GraphQL Actions](/assist/graphql/actions)
+    - [GraphQL Actions sources](/assist/graphql/sources)
+
+- Reference
+
+  - [CLI](/reference/cli)
+  - [Diagnostics](/reference/diagnostics)
+  - [Environment variables](/reference/environment-variables)
+  - [Reporters](/reference/reporters)
+  - [Configuration](/reference/configuration)
+  - [VS Code extension](/reference/vscode)
+  - [Zed extension](/reference/zed)
+  - [GritQL](/reference/gritql)
+
+- Recipes
+
+  - [Continuous Integration](/recipes/continuous-integration)
+  - [Git Hooks](/recipes/git-hooks)
+  - [Renovate](/recipes/renovate)
+  - [Social Badges](/recipes/badges)
+
+- Internals
+
+  - [Philosophy](/internals/philosophy)
+  - [Language support updated](/internals/language-support)
+  - [Architecture](/internals/architecture)
+  - [People and Credits](/internals/people-and-credits)
+  - [Versioning](/internals/versioning)
+  - [Changelog](/internals/changelog/)
+  - [Changelog v1](/internals/changelog_v1)
+
+[Discord](https://biomejs.dev/chat)[GitHub](https://github.com/biomejs/biome)[Mastodon](https://fosstodon.org/@biomejs)[Open Collective](https://opencollective.com/biome)[YouTube](https://youtube.com/@Biomejs)[BlueSky](https://bsky.app/profile/biomejs.dev)[RSS](https://biomejs.dev/blog/rss.xml)[Blog](/blog/)Select themeDarkLightAutoSelect languageEnglishEspañolFrançais日本語简体中文PolskiPortuguêsУкраїнськаРусскийVersionv1.xv2.xnextOn this page
+
+- [Overview](#_top)
+- [Summary](#summary)
+- [How to configure](#how-to-configure)
+- [Description](#description)
+- [Examples](#examples)
+
+  - [Invalid](#invalid)
+  - [Valid](#valid)
+
+- [Related links](#related-links)
+
+## On this page
+
+- [Overview](#_top)
+- [Summary](#summary)
+- [How to configure](#how-to-configure)
+- [Description](#description)
+- [Examples](#examples)
+
+  - [Invalid](#invalid)
+  - [Valid](#valid)
+
+- [Related links](#related-links)
+
 # noDebugger
 
 - [JavaScript (and super languages)](#tab-panel-734)

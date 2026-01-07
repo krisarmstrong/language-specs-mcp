@@ -2,7 +2,7 @@
   "language": "c",
   "fetchedAt": "2026-01-04T18:30:09Z",
   "counts": {
-    "spec": 2,
+    "spec": 3,
     "stdlib": 2,
     "linters": 10,
     "formatters": 2,
@@ -14,6 +14,11 @@
         "category": "spec",
         "path": "compilers.md",
         "name": "compilers"
+      },
+      {
+        "category": "spec",
+        "path": "generation-checklist.md",
+        "name": "generation-checklist"
       },
       {
         "category": "spec",
@@ -110,6 +115,11 @@
       "category": "spec",
       "path": "compilers.md",
       "name": "compilers"
+    },
+    {
+      "category": "spec",
+      "path": "generation-checklist.md",
+      "name": "generation-checklist"
     },
     {
       "category": "spec",

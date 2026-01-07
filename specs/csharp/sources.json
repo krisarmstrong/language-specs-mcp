@@ -65,9 +65,7 @@
     {
       "path": "linters/rules.md",
       "sha256": "b01712e1e12eb362c9abccd3c7c605df7c5fe387939f05f0ad6371a43d2dd7aa",
-      "urls": [
-        "https://api.example.com"
-      ]
+      "urls": []
     }
   ]
 }

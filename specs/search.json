@@ -1,145 +1,145 @@
 {
-  "generatedAt": "2026-01-05T20:16:18.910102+00:00",
+  "generatedAt": "2026-01-06T18:23:21.939921+00:00",
   "languages": [
     {
       "language": "assembly",
-      "count": 11
+      "count": 12
     },
     {
       "language": "bash",
-      "count": 529
+      "count": 530
     },
     {
       "language": "basic",
-      "count": 5
-    },
-    {
-      "language": "batch",
-      "count": 5
-    },
-    {
-      "language": "c",
-      "count": 17
-    },
-    {
-      "language": "clojure",
-      "count": 5
-    },
-    {
-      "language": "cpp",
-      "count": 17
-    },
-    {
-      "language": "csharp",
-      "count": 10
-    },
-    {
-      "language": "css",
-      "count": 148
-    },
-    {
-      "language": "dart",
-      "count": 90
-    },
-    {
-      "language": "dockerfile",
-      "count": 71
-    },
-    {
-      "language": "elixir",
-      "count": 5
-    },
-    {
-      "language": "git",
-      "count": 7
-    },
-    {
-      "language": "go",
-      "count": 472
-    },
-    {
-      "language": "haskell",
-      "count": 5
-    },
-    {
-      "language": "html",
-      "count": 92
-    },
-    {
-      "language": "java",
-      "count": 239
-    },
-    {
-      "language": "javascript",
-      "count": 1393
-    },
-    {
-      "language": "julia",
-      "count": 5
-    },
-    {
-      "language": "kotlin",
-      "count": 10
-    },
-    {
-      "language": "lua",
       "count": 6
     },
     {
-      "language": "markdown",
-      "count": 58
+      "language": "batch",
+      "count": 6
     },
     {
-      "language": "ocaml",
-      "count": 5
+      "language": "c",
+      "count": 18
     },
     {
-      "language": "php",
-      "count": 5
-    },
-    {
-      "language": "powershell",
-      "count": 9
-    },
-    {
-      "language": "python",
-      "count": 70
-    },
-    {
-      "language": "r",
-      "count": 5
-    },
-    {
-      "language": "ruby",
-      "count": 5
-    },
-    {
-      "language": "rust",
-      "count": 831
-    },
-    {
-      "language": "scala",
-      "count": 5
-    },
-    {
-      "language": "sql",
-      "count": 16
-    },
-    {
-      "language": "swift",
+      "language": "clojure",
       "count": 7
     },
     {
+      "language": "cpp",
+      "count": 19
+    },
+    {
+      "language": "csharp",
+      "count": 11
+    },
+    {
+      "language": "css",
+      "count": 149
+    },
+    {
+      "language": "dart",
+      "count": 259
+    },
+    {
+      "language": "dockerfile",
+      "count": 72
+    },
+    {
+      "language": "elixir",
+      "count": 7
+    },
+    {
+      "language": "git",
+      "count": 8
+    },
+    {
+      "language": "go",
+      "count": 474
+    },
+    {
+      "language": "haskell",
+      "count": 6
+    },
+    {
+      "language": "html",
+      "count": 99
+    },
+    {
+      "language": "java",
+      "count": 241
+    },
+    {
+      "language": "javascript",
+      "count": 1394
+    },
+    {
+      "language": "julia",
+      "count": 6
+    },
+    {
+      "language": "kotlin",
+      "count": 11
+    },
+    {
+      "language": "lua",
+      "count": 7
+    },
+    {
+      "language": "markdown",
+      "count": 59
+    },
+    {
+      "language": "ocaml",
+      "count": 6
+    },
+    {
+      "language": "php",
+      "count": 6
+    },
+    {
+      "language": "powershell",
+      "count": 10
+    },
+    {
+      "language": "python",
+      "count": 74
+    },
+    {
+      "language": "r",
+      "count": 6
+    },
+    {
+      "language": "ruby",
+      "count": 13
+    },
+    {
+      "language": "rust",
+      "count": 833
+    },
+    {
+      "language": "scala",
+      "count": 6
+    },
+    {
+      "language": "sql",
+      "count": 17
+    },
+    {
+      "language": "swift",
+      "count": 8
+    },
+    {
       "language": "typescript",
-      "count": 28
+      "count": 33
     },
     {
       "language": "yaml",
-      "count": 5
+      "count": 6
     },
     {
       "language": "zig",
-      "count": 5
+      "count": 6
     }
   ]
 }

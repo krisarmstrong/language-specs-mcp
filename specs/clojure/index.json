@@ -1,15 +1,20 @@
 {
   "language": "clojure",
-  "fetchedAt": "2026-01-04T18:53:55Z",
+  "fetchedAt": "2026-01-05T21:59:32Z",
   "counts": {
-    "spec": 1,
+    "spec": 2,
     "stdlib": 1,
-    "linters": 1,
+    "linters": 2,
     "formatters": 1,
     "patterns": 1
   },
   "categories": {
     "spec": [
+      {
+        "category": "spec",
+        "path": "generation-checklist.md",
+        "name": "generation-checklist"
+      },
       {
         "category": "spec",
         "path": "spec.md",
@@ -26,8 +31,13 @@
     "linters": [
       {
         "category": "linters",
-        "path": "linters/overview.md",
-        "name": "linters/overview"
+        "path": "linters/clj-kondo/overview.md",
+        "name": "linters/clj-kondo/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/clj-kondo/rules.md",
+        "name": "linters/clj-kondo/rules"
       }
     ],
     "formatters": [
@@ -48,6 +58,11 @@
   "items": [
     {
       "category": "spec",
+      "path": "generation-checklist.md",
+      "name": "generation-checklist"
+    },
+    {
+      "category": "spec",
       "path": "spec.md",
       "name": "spec"
     },
@@ -58,8 +73,13 @@
     },
     {
       "category": "linters",
-      "path": "linters/overview.md",
-      "name": "linters/overview"
+      "path": "linters/clj-kondo/overview.md",
+      "name": "linters/clj-kondo/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/clj-kondo/rules.md",
+      "name": "linters/clj-kondo/rules"
     },
     {
       "category": "formatters",

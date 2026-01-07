@@ -1,8 +1,8 @@
 {
   "language": "kotlin",
-  "fetchedAt": "2026-01-04T18:47:57Z",
+  "fetchedAt": "2026-01-05T22:22:17Z",
   "counts": {
-    "spec": 1,
+    "spec": 2,
     "stdlib": 2,
     "linters": 4,
     "formatters": 2,
@@ -10,6 +10,11 @@
   },
   "categories": {
     "spec": [
+      {
+        "category": "spec",
+        "path": "generation-checklist.md",
+        "name": "generation-checklist"
+      },
       {
         "category": "spec",
         "path": "spec.md",
@@ -71,6 +76,11 @@
     ]
   },
   "items": [
+    {
+      "category": "spec",
+      "path": "generation-checklist.md",
+      "name": "generation-checklist"
+    },
     {
       "category": "spec",
       "path": "spec.md",

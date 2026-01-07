@@ -1,3 +1,16 @@
+type UrlStatus = {
+  errors: number;
+  redirects: number;
+  status: "ok" | "degraded" | "critical";
+};
+
+type UrlError = {
+  url: string;
+  status: string;
+  error?: string;
+  httpCode?: number;
+};
+
 type HealthRecord = {
   language: string;
   fetchedAt: string | null;
@@ -12,19 +25,35 @@ type HealthRecord = {
   stubCount: number;
   searchIndexCount?: number;
   searchIndexGeneratedAt?: string | null;
+  urlStatus?: UrlStatus;
+  urlErrors?: UrlError[];
+  urlRedirects?: UrlError[];
   notes: string[];
+};
+
+type UrlSummary = {
+  total: number;
+  ok: number;
+  redirects: number;
+  errors: number;
+  timeouts: number;
 };
 
 type HealthPayload = {
   generatedAt: string;
   searchIndexGeneratedAt?: string | null;
+  urlValidatedAt?: string | null;
+  urlSummary?: UrlSummary;
   languages: HealthRecord[];
 };
 
 const generatedEl = document.getElementById("healthGenerated");
 const searchGeneratedEl = document.getElementById("healthSearchGenerated");
+const urlValidatedEl = document.getElementById("healthUrlValidated");
 const languagesEl = document.getElementById("healthLanguages");
 const staleEl = document.getElementById("healthStale");
+const urlErrorsEl = document.getElementById("healthUrlErrors");
+const urlRedirectsEl = document.getElementById("healthUrlRedirects");
 const tableBody = document.getElementById("healthTableBody");
 
 function formatDate(value: string | null): string {
@@ -38,6 +67,24 @@ function statusClass(language: HealthRecord): string {
   if (freshness <= 7) return "status-good";
   if (freshness <= 30) return "status-warning";
   return "status-stale";
+}
+
+function urlStatusBadge(urlStatus?: UrlStatus): string {
+  if (!urlStatus) return '<span class="url-status url-status-unknown">Not checked</span>';
+  const { status, errors, redirects } = urlStatus;
+  let badgeClass = "url-status-ok";
+  let label = "OK";
+  if (status === "critical") {
+    badgeClass = "url-status-critical";
+    label = `${errors} errors`;
+  } else if (status === "degraded") {
+    badgeClass = "url-status-degraded";
+    label = `${errors} errors`;
+  } else if (redirects > 0) {
+    badgeClass = "url-status-redirects";
+    label = `${redirects} redirects`;
+  }
+  return `<span class="url-status ${badgeClass}">${label}</span>`;
 }
 
 function joinSources(sources: string[]): string {
@@ -79,6 +126,7 @@ function renderRow(language: HealthRecord): void {
     </td>
     <td>${language.stubCount ?? 0}</td>
     <td>${searchCount}</td>
+    <td>${urlStatusBadge(language.urlStatus)}</td>
     <td>${language.toolsVersion ?? "untracked"}</td>
     <td>${joinSources(language.toolSources)}</td>
   `;
@@ -93,16 +141,25 @@ async function init(): Promise<void> {
   const data: HealthPayload = await response.json();
   generatedEl.textContent = formatDate(data.generatedAt);
   searchGeneratedEl.textContent = formatDate(data.searchIndexGeneratedAt ?? null);
+  if (urlValidatedEl) {
+    urlValidatedEl.textContent = formatDate(data.urlValidatedAt ?? null);
+  }
   languagesEl.textContent = String(data.languages.length);
   const staleCount = data.languages.filter(
     (lang) => !lang.fetchedAt || (lang.freshnessDays ?? Number.MAX_SAFE_INTEGER) > 30,
   ).length;
   staleEl.textContent = String(staleCount);
+  if (urlErrorsEl && data.urlSummary) {
+    urlErrorsEl.textContent = String(data.urlSummary.errors + data.urlSummary.timeouts);
+  }
+  if (urlRedirectsEl && data.urlSummary) {
+    urlRedirectsEl.textContent = String(data.urlSummary.redirects);
+  }
   data.languages.forEach(renderRow);
 }
 
 init().catch((err) => {
   if (tableBody) {
-    tableBody.innerHTML = `<tr><td colspan="8">Failed to load health data: ${err.message}</td></tr>`;
+    tableBody.textContent = `Failed to load health data: ${err.message}`;
   }
 });

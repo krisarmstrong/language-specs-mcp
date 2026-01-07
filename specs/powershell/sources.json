@@ -57,9 +57,7 @@
     {
       "path": "linters/psscriptanalyzer/rules.md",
       "sha256": "eaf48c27f3a7fe931074c8a0c74621f289303b5d56d6fbcda400d391508e2c12",
-      "urls": [
-        "https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/rules/rules?view=ps-modules"
-      ]
+      "urls": []
     }
   ]
 }

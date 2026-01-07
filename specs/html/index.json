@@ -1,15 +1,20 @@
 {
   "language": "html",
-  "fetchedAt": "2026-01-04T18:30:48Z",
+  "fetchedAt": "2026-01-05T21:59:47Z",
   "counts": {
-    "spec": 1,
+    "spec": 2,
     "stdlib": 1,
-    "linters": 87,
+    "linters": 93,
     "formatters": 2,
     "patterns": 1
   },
   "categories": {
     "spec": [
+      {
+        "category": "spec",
+        "path": "generation-checklist.md",
+        "name": "generation-checklist"
+      },
       {
         "category": "spec",
         "path": "spec.md",
@@ -211,6 +216,41 @@
       },
       {
         "category": "linters",
+        "path": "linters/html-validate/wcag/h63.md",
+        "name": "linters/html-validate/wcag/h63"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/wcag/h32.md",
+        "name": "linters/html-validate/wcag/h32"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/wcag/h36.md",
+        "name": "linters/html-validate/wcag/h36"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/wcag/h67.md",
+        "name": "linters/html-validate/wcag/h67"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/wcag/h37.md",
+        "name": "linters/html-validate/wcag/h37"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/wcag/h30.md",
+        "name": "linters/html-validate/wcag/h30"
+      },
+      {
+        "category": "linters",
+        "path": "linters/html-validate/wcag/h71.md",
+        "name": "linters/html-validate/wcag/h71"
+      },
+      {
+        "category": "linters",
         "path": "linters/html-validate/hidden-focusable.md",
         "name": "linters/html-validate/hidden-focusable"
       },
@@ -273,11 +313,6 @@
         "category": "linters",
         "path": "linters/html-validate/heading-level.md",
         "name": "linters/html-validate/heading-level"
-      },
-      {
-        "category": "linters",
-        "path": "linters/html-validate/wcag.md",
-        "name": "linters/html-validate/wcag"
       },
       {
         "category": "linters",
@@ -483,6 +518,11 @@
   "items": [
     {
       "category": "spec",
+      "path": "generation-checklist.md",
+      "name": "generation-checklist"
+    },
+    {
+      "category": "spec",
       "path": "spec.md",
       "name": "spec"
     },
@@ -678,6 +718,41 @@
     },
     {
       "category": "linters",
+      "path": "linters/html-validate/wcag/h63.md",
+      "name": "linters/html-validate/wcag/h63"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/wcag/h32.md",
+      "name": "linters/html-validate/wcag/h32"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/wcag/h36.md",
+      "name": "linters/html-validate/wcag/h36"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/wcag/h67.md",
+      "name": "linters/html-validate/wcag/h67"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/wcag/h37.md",
+      "name": "linters/html-validate/wcag/h37"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/wcag/h30.md",
+      "name": "linters/html-validate/wcag/h30"
+    },
+    {
+      "category": "linters",
+      "path": "linters/html-validate/wcag/h71.md",
+      "name": "linters/html-validate/wcag/h71"
+    },
+    {
+      "category": "linters",
       "path": "linters/html-validate/hidden-focusable.md",
       "name": "linters/html-validate/hidden-focusable"
     },
@@ -740,11 +815,6 @@
       "category": "linters",
       "path": "linters/html-validate/heading-level.md",
       "name": "linters/html-validate/heading-level"
-    },
-    {
-      "category": "linters",
-      "path": "linters/html-validate/wcag.md",
-      "name": "linters/html-validate/wcag"
     },
     {
       "category": "linters",

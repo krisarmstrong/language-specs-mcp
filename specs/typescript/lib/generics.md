@@ -1,3 +1,14 @@
+TypeScript: Handbook - Generics[Skip to main content](#handbook-content)[TypeScript](/)
+
+- [Download](/download/)
+- [Docs](/docs/)
+- [Handbook](/docs/handbook/intro.html)
+- [Community](/community/)
+- [Playground](/play/)
+- [Tools](/tools/)
+
+in En
+
 Was this page helpful?
 
 - Get Started
@@ -373,3 +384,80 @@ Contributors to this page:
 RCOTDRMHRC15+
 
 Last updated: Jan 05, 2026
+
+### Customize
+
+Site Colours:
+
+SystemAlways LightAlways Dark
+
+Code Font:
+
+CascadiaCascadia (ligatures)ConsolasDank MonoFira CodeJetBrains MonoOpenDyslexicSF MonoSource Code Pro
+
+### Popular Documentation Pages
+
+- [Everyday Types](/docs/handbook/2/everyday-types.html)
+
+All of the common types in TypeScript
+
+- [Creating Types from Types](/docs/handbook/2/types-from-types.html)
+
+Techniques to make more elegant types
+
+- [More on Functions](/docs/handbook/2/functions.html)
+
+How to provide types to functions in JavaScript
+
+- [More on Objects](/docs/handbook/2/objects.html)
+
+How to provide a type shape to JavaScript objects
+
+- [Narrowing](/docs/handbook/2/narrowing.html)
+
+How TypeScript infers types based on runtime behavior
+
+- [Variable Declarations](/docs/handbook/variable-declarations.html)
+
+How to create and type JavaScript variables
+
+- [TypeScript in 5 minutes](/docs/handbook/typescript-in-5-minutes.html)
+
+An overview of building a TypeScript web app
+
+- [TSConfig Options](/tsconfig/)
+
+All the configuration options for a project
+
+- [Classes](/docs/handbook/2/classes.html)
+
+How to provide types to JavaScript ES6 classes
+
+Made with ♥ in Redmond, Boston, SF & Dublin
+
+© 2012-2026 Microsoft
+[Privacy](https://go.microsoft.com/fwlink/?LinkId=521839)[Terms of Use](https://go.microsoft.com/fwlink/?LinkID=206977)
+
+### Using TypeScript
+
+- [Get Started](/docs/)
+- [Download](/download/)
+- [Community](/community/)
+- [Playground](/play/)
+- [TSConfig Ref](/tsconfig/)
+- [Code Samples](/play/#show-examples)
+- [Why TypeScript](/why-create-typescript/)
+- [Design](/branding/)
+
+### Community
+
+- [Get Help](/community)
+- [Blog](https://devblogs.microsoft.com/typescript/)
+- [GitHub Repo](https://github.com/microsoft/TypeScript/#readme)
+- [Community Chat](https://discord.gg/typescript)
+- [@TypeScript](https://twitter.com/TypeScript)
+- [Mastodon](https://fosstodon.org/@TypeScript)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/typescript)
+- [Web Repo](https://github.com/microsoft/TypeScript-Website)
+
+MSG

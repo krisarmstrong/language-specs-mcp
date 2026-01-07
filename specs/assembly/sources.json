@@ -5,9 +5,7 @@
     {
       "path": "arm32.md",
       "sha256": "a45c4a7a3e7cf1243958c9797912326f1679baff3d30aa07627f687e05c1ffbb",
-      "urls": [
-        "https://developer.arm.com/documentation/ddi0406/latest"
-      ]
+      "urls": []
     },
     {
       "path": "patterns/idioms.md",
@@ -24,9 +22,7 @@
     {
       "path": "aarch64.md",
       "sha256": "411ca360920126bb111067782e7d076663cf2efb954aa71b615bc6342ced0dac",
-      "urls": [
-        "https://developer.arm.com/documentation/ddi0487/latest"
-      ]
+      "urls": []
     },
     {
       "path": "formatters/overview.md",
@@ -45,8 +41,7 @@
       "path": "spec.md",
       "sha256": "9146a58eee8420b68e00f5f375854c8e00c4115d615fde173c065509cabb7f54",
       "urls": [
-        "https://developer.arm.com/documentation/ddi0487/latest",
-        "https://riscv.org/technical/specifications/",
+        "https://riscv.org/specifications/ratified/",
         "https://webassembly.github.io/spec/core/",
         "https://www.felixcloutier.com/x86/"
       ]
@@ -72,7 +67,7 @@
       "path": "riscv.md",
       "sha256": "21e7d747203ef670b559d7bc398a559651f30c01361e84671b405448cd378d58",
       "urls": [
-        "https://riscv.org/technical/specifications/"
+        "https://riscv.org/specifications/ratified/"
       ]
     }
   ]

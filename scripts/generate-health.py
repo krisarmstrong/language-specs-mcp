@@ -15,6 +15,7 @@ ROOT_DIR = SPECS_DIR.parent
 TOOLS_JSON = ROOT_DIR / "tools" / "versions.json"
 OUTPUT_FILE = ROOT_DIR / "docs" / "site" / "health.json"
 SEARCH_SUMMARY = SPECS_DIR / "search.json"
+URL_STATUS_FILE = ROOT_DIR / "docs" / "site" / "url-status.json"
 
 
 def load_tools() -> dict[str, dict]:
@@ -31,6 +32,16 @@ def load_search_summary() -> tuple[str | None, dict[str, int]]:
     generated_at = payload.get("generatedAt")
     counts = {entry["language"]: entry["count"] for entry in payload.get("languages", [])}
     return generated_at, counts
+
+
+def load_url_status() -> dict:
+    """Load URL validation status from url-status.json."""
+    if not URL_STATUS_FILE.exists():
+        return {}
+    try:
+        return json.loads(URL_STATUS_FILE.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
 
 
 def read_fetched_at(lang_dir: Path) -> datetime | None:
@@ -108,7 +119,7 @@ def gather_formatters(lang_dir: Path) -> list[dict]:
     return formatters
 
 
-def build_language_record(language: str, tools: dict[str, dict]) -> dict:
+def build_language_record(language: str, tools: dict[str, dict], url_status: dict) -> dict:
     lang_dir = SPECS_DIR / language
     fetched_at = read_fetched_at(lang_dir)
     now = datetime.now(timezone.utc)
@@ -130,6 +141,20 @@ def build_language_record(language: str, tools: dict[str, dict]) -> dict:
     if stub_count:
         notes.append(f"Contains stub documents ({stub_count})")
 
+    # Extract URL status for this language
+    url_errors = url_status.get("errorsByLanguage", {}).get(language, [])
+    url_redirects = url_status.get("redirectsByLanguage", {}).get(language, [])
+    url_status_summary = {
+        "errors": len(url_errors),
+        "redirects": len(url_redirects),
+        "status": "ok" if not url_errors else "degraded" if len(url_errors) < 3 else "critical",
+    }
+
+    if url_errors:
+        notes.append(f"URL validation errors ({len(url_errors)})")
+    if url_redirects:
+        notes.append(f"URLs with redirects ({len(url_redirects)}) - consider updating")
+
     return {
         "language": language,
         "fetchedAt": fetched_at.isoformat() if fetched_at else None,
@@ -143,6 +168,9 @@ def build_language_record(language: str, tools: dict[str, dict]) -> dict:
         "toolCheckedAt": tool_entry.get("checkedAt") if tool_entry else None,
         "toolSources": tool_entry.get("sources", []) if tool_entry else [],
         "stubCount": stub_count,
+        "urlStatus": url_status_summary,
+        "urlErrors": url_errors[:5] if url_errors else [],  # Include up to 5 errors for display
+        "urlRedirects": url_redirects[:5] if url_redirects else [],  # Include up to 5 redirects
         "notes": notes,
     }
 
@@ -150,28 +178,46 @@ def build_language_record(language: str, tools: dict[str, dict]) -> dict:
 def main() -> None:
     tools = load_tools()
     search_generated_at, search_counts = load_search_summary()
+    url_status = load_url_status()
     languages = sorted([entry.name for entry in SPECS_DIR.iterdir() if entry.is_dir()])
     now = datetime.now(timezone.utc)
     records = []
     for language in languages:
         if language.startswith("."):
             continue
-        record = build_language_record(language, tools)
+        record = build_language_record(language, tools, url_status)
         record["searchIndexCount"] = search_counts.get(language)
         record["searchIndexGeneratedAt"] = search_generated_at
         if record["searchIndexCount"] is None:
             record["notes"].append("Search index missing (run generate:search)")
         records.append(record)
 
+    # Calculate overall URL status
+    url_summary = url_status.get("summary", {})
+    url_validated_at = url_status.get("generatedAt")
+
     payload = {
         "generatedAt": now.isoformat(),
         "searchIndexGeneratedAt": search_generated_at,
+        "urlValidatedAt": url_validated_at,
+        "urlSummary": {
+            "total": url_summary.get("total", 0),
+            "ok": url_summary.get("ok", 0),
+            "redirects": url_summary.get("redirect", 0),
+            "errors": url_summary.get("error", 0),
+            "timeouts": url_summary.get("timeout", 0),
+        },
         "languages": records,
         "totalLanguages": len(records),
     }
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     log(f"Wrote {len(records)} language health records to {OUTPUT_FILE}")
+
+    # Log URL status summary if available
+    if url_validated_at:
+        log(f"URL validation from {url_validated_at}: {url_summary.get('ok', 0)} OK, "
+            f"{url_summary.get('redirect', 0)} redirects, {url_summary.get('error', 0)} errors")
 
 
 if __name__ == "__main__":

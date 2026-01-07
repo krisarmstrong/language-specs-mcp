@@ -1,0 +1,157 @@
+{
+  "language": "_shared",
+  "generatedAt": "2026-01-06T00:00:00.000000+00:00",
+  "files": [
+    {
+      "path": "security/owasp-top-10.md",
+      "sha256": "",
+      "urls": [
+        "https://owasp.org/Top10/",
+        "https://owasp.org/Top10/A01_2021-Broken_Access_Control/",
+        "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/",
+        "https://owasp.org/Top10/A03_2021-Injection/",
+        "https://owasp.org/Top10/A04_2021-Insecure_Design/",
+        "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+        "https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/",
+        "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/",
+        "https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/",
+        "https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/",
+        "https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"
+      ]
+    },
+    {
+      "path": "security/injection-prevention.md",
+      "sha256": "",
+      "urls": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "path": "security/xss-prevention.md",
+      "sha256": "",
+      "urls": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "path": "security/authentication.md",
+      "sha256": "",
+      "urls": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "path": "security/session-management.md",
+      "sha256": "",
+      "urls": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "path": "security/cryptography.md",
+      "sha256": "",
+      "urls": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Key_Management_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "path": "security/input-validation.md",
+      "sha256": "",
+      "urls": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "path": "security/secure-headers.md",
+      "sha256": "",
+      "urls": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "path": "security/access-control.md",
+      "sha256": "",
+      "urls": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "path": "security/api-security.md",
+      "sha256": "",
+      "urls": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Web_Service_Security_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Microservices_Security_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "path": "security/logging-monitoring.md",
+      "sha256": "",
+      "urls": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Application_Logging_Vocabulary_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "path": "security/error-handling.md",
+      "sha256": "",
+      "urls": [
+        "https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html"
+      ]
+    },
+    {
+      "path": "patterns/error-handling.md",
+      "sha256": "",
+      "urls": []
+    },
+    {
+      "path": "patterns/async-concurrency.md",
+      "sha256": "",
+      "urls": []
+    },
+    {
+      "path": "patterns/api-design.md",
+      "sha256": "",
+      "urls": []
+    },
+    {
+      "path": "examples/http-requests.md",
+      "sha256": "",
+      "urls": []
+    },
+    {
+      "path": "examples/file-io.md",
+      "sha256": "",
+      "urls": []
+    },
+    {
+      "path": "examples/database-queries.md",
+      "sha256": "",
+      "urls": []
+    },
+    {
+      "path": "examples/authentication.md",
+      "sha256": "",
+      "urls": []
+    }
+  ]
+}

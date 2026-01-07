@@ -15,16 +15,12 @@
     {
       "path": "stdlib/overview.md",
       "sha256": "82f87a84f84ea5405330c6648e7065e3b61a424456403a4045b4524d9b5f46ec",
-      "urls": [
-        "https://www.qbasic.net/en/reference/qbasic/"
-      ]
+      "urls": []
     },
     {
       "path": "spec.md",
       "sha256": "f4e778d1202f71d1993f102413d61e5938f2f737e56c2329ff46cc468bd1f35f",
-      "urls": [
-        "https://www.qbasic.net/en/reference/qbasic/"
-      ]
+      "urls": []
     },
     {
       "path": "linters/overview.md",

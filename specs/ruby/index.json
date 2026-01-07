@@ -2,14 +2,19 @@
   "language": "ruby",
   "fetchedAt": "2026-01-05T20:05:31Z",
   "counts": {
-    "spec": 1,
+    "spec": 2,
     "stdlib": 1,
-    "linters": 1,
+    "linters": 7,
     "formatters": 1,
     "patterns": 1
   },
   "categories": {
     "spec": [
+      {
+        "category": "spec",
+        "path": "generation-checklist.md",
+        "name": "generation-checklist"
+      },
       {
         "category": "spec",
         "path": "spec.md",
@@ -26,8 +31,38 @@
     "linters": [
       {
         "category": "linters",
-        "path": "linters/overview.md",
-        "name": "linters/overview"
+        "path": "linters/rubocop/overview.md",
+        "name": "linters/rubocop/overview"
+      },
+      {
+        "category": "linters",
+        "path": "linters/rubocop/lint.md",
+        "name": "linters/rubocop/lint"
+      },
+      {
+        "category": "linters",
+        "path": "linters/rubocop/style.md",
+        "name": "linters/rubocop/style"
+      },
+      {
+        "category": "linters",
+        "path": "linters/rubocop/metrics.md",
+        "name": "linters/rubocop/metrics"
+      },
+      {
+        "category": "linters",
+        "path": "linters/rubocop/layout.md",
+        "name": "linters/rubocop/layout"
+      },
+      {
+        "category": "linters",
+        "path": "linters/rubocop/naming.md",
+        "name": "linters/rubocop/naming"
+      },
+      {
+        "category": "linters",
+        "path": "linters/rubocop/security.md",
+        "name": "linters/rubocop/security"
       }
     ],
     "formatters": [
@@ -48,6 +83,11 @@
   "items": [
     {
       "category": "spec",
+      "path": "generation-checklist.md",
+      "name": "generation-checklist"
+    },
+    {
+      "category": "spec",
       "path": "spec.md",
       "name": "spec"
     },
@@ -58,8 +98,38 @@
     },
     {
       "category": "linters",
-      "path": "linters/overview.md",
-      "name": "linters/overview"
+      "path": "linters/rubocop/overview.md",
+      "name": "linters/rubocop/overview"
+    },
+    {
+      "category": "linters",
+      "path": "linters/rubocop/lint.md",
+      "name": "linters/rubocop/lint"
+    },
+    {
+      "category": "linters",
+      "path": "linters/rubocop/style.md",
+      "name": "linters/rubocop/style"
+    },
+    {
+      "category": "linters",
+      "path": "linters/rubocop/metrics.md",
+      "name": "linters/rubocop/metrics"
+    },
+    {
+      "category": "linters",
+      "path": "linters/rubocop/layout.md",
+      "name": "linters/rubocop/layout"
+    },
+    {
+      "category": "linters",
+      "path": "linters/rubocop/naming.md",
+      "name": "linters/rubocop/naming"
+    },
+    {
+      "category": "linters",
+      "path": "linters/rubocop/security.md",
+      "name": "linters/rubocop/security"
     },
     {
       "category": "formatters",

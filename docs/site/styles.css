@@ -229,6 +229,43 @@ h1 {
   color: rgba(29, 26, 22, 0.7);
 }
 
+.url-status {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.url-status-ok {
+  background: rgba(40, 167, 69, 0.15);
+  color: #28a745;
+}
+
+.url-status-degraded {
+  background: rgba(255, 193, 7, 0.2);
+  color: #856404;
+}
+
+.url-status-critical {
+  background: rgba(220, 53, 69, 0.15);
+  color: #dc3545;
+}
+
+.url-status-redirects {
+  background: rgba(13, 110, 253, 0.12);
+  color: #0d6efd;
+}
+
+.url-status-unknown {
+  background: rgba(108, 117, 125, 0.12);
+  color: #6c757d;
+}
+
+.health-meta {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
 .languages .list {
   display: flex;
   flex-direction: column;

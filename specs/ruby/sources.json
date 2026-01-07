@@ -12,7 +12,7 @@
       "sha256": "e4a7e842b00e47e820886108ab200b9f21d05aaf7ed8a5663544d20f0133b943",
       "urls": [
         "https://github.com/rubocop/rubocop/blob/master/config/default.yml",
-        "https://github.com/rubocop/rubocop/edit/master/docs/modules/ROOT/pages/index.adoc",
+        "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Frubocop%2Frubocop%2Fedit%2Fmaster%2Fdocs%2Fmodules%2FROOT%2Fpages%2Findex.adoc",
         "https://minitest.rubystyle.guide/",
         "https://rails.rubystyle.guide/",
         "https://rspec.rubystyle.guide/",
@@ -25,36 +25,31 @@
       "sha256": "28396afd92856f7271c3fc9730db7644bc13d38d8ff660bfc3e5950a7e0f398a",
       "urls": [
         "https://bugs.ruby-lang.org",
-        "https://ci.appveyor.com/project/ruby/ruby/branch/masterhttps://app.travis-ci.com/ruby/ruby",
         "https://docs.ruby-lang.org/en/master/contributing/building_ruby_md.html",
         "https://docs.ruby-lang.org/en/master/contributing/reporting_issues_md.html",
-        "https://docs.ruby-lang.org/en/master/contributing_md.html",
         "https://docs.ruby-lang.org/en/master/index.html",
         "https://docs.ruby-lang.org/en/master/maintainers_md.html#label-Platform+Maintainers",
         "https://docs.ruby-lang.org/ja/master/index.html",
-        "https://git.ruby-lang.org/ruby.git",
-        "https://github.com/ruby/ruby.git",
+        "https://github.com/ruby/ruby",
         "https://github.com/ruby/ruby/actions?query=workflow%3A",
-        "https://stackoverflow.com",
+        "https://stackoverflow.com/questions",
         "https://www.ruby-lang.org",
-        "https://www.ruby-lang.org/en/community/mailing-lists",
-        "https://www.ruby-lang.org/en/downloads",
-        "https://www.ruby-lang.org/en/downloads/releases"
+        "https://www.ruby-lang.org/en/community/mailing-lists/",
+        "https://www.ruby-lang.org/en/downloads/",
+        "https://www.ruby-lang.org/en/downloads/releases/"
       ]
     },
     {
       "path": "spec.md",
       "sha256": "32e1874a89630c5282beaac56f71b3debaca07d3cefdf1d9292dd1b8c998e1f6",
-      "urls": [
-        "https://docs.ruby-lang.org/en/3.3.0/doc/syntax_rdoc.html"
-      ]
+      "urls": []
     },
     {
       "path": "linters/overview.md",
       "sha256": "e4a7e842b00e47e820886108ab200b9f21d05aaf7ed8a5663544d20f0133b943",
       "urls": [
         "https://github.com/rubocop/rubocop/blob/master/config/default.yml",
-        "https://github.com/rubocop/rubocop/edit/master/docs/modules/ROOT/pages/index.adoc",
+        "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Frubocop%2Frubocop%2Fedit%2Fmaster%2Fdocs%2Fmodules%2FROOT%2Fpages%2Findex.adoc",
         "https://minitest.rubystyle.guide/",
         "https://rails.rubystyle.guide/",
         "https://rspec.rubystyle.guide/",

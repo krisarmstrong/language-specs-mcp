@@ -1,8 +1,8 @@
 {
   "language": "csharp",
-  "fetchedAt": "2026-01-04T18:24:14Z",
+  "fetchedAt": "2026-01-06T01:45:29Z",
   "counts": {
-    "spec": 1,
+    "spec": 2,
     "stdlib": 1,
     "linters": 5,
     "formatters": 2,
@@ -10,6 +10,11 @@
   },
   "categories": {
     "spec": [
+      {
+        "category": "spec",
+        "path": "generation-checklist.md",
+        "name": "generation-checklist"
+      },
       {
         "category": "spec",
         "path": "spec.md",
@@ -71,6 +76,11 @@
     ]
   },
   "items": [
+    {
+      "category": "spec",
+      "path": "generation-checklist.md",
+      "name": "generation-checklist"
+    },
     {
       "category": "spec",
       "path": "spec.md",

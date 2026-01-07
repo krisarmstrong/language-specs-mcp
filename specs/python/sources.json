@@ -24,12 +24,12 @@
         "https://github.com/astral-sh/ruff",
         "https://github.com/astral-sh/ruff/discussions/6998#discussioncomment-7016766",
         "https://github.com/astral-sh/ruff/issues/8232",
-        "https://github.com/astral-sh/ruff/issues/new",
+        "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fastral-sh%2Fruff%2Fissues%2Fnew",
         "https://github.com/astral-sh/ruff/issues?q=is%3Aopen+is%3Aissue+label%3Aformatter",
         "https://github.com/google/yapf",
         "https://github.com/psf/black",
         "https://peps.python.org/pep-0701/",
-        "https://prettier.io/docs/en/next/rationale.html#template-literals",
+        "https://prettier.io/docs/next/rationale.html",
         "https://pypi.org/project/black/",
         "https://realpython.com/python-f-strings/#self-documenting-expressions-for-debugging",
         "https://spec.commonmark.org/0.30/#fenced-code-blocks"
@@ -46,14 +46,14 @@
       "urls": [
         "https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html",
         "https://docs.python.org/3/library/re.html#re.VERBOSE",
-        "https://flit.readthedocs.io/en/latest/",
+        "https://flit.pypa.io/en/latest/",
         "https://github.com/google/yapf",
         "https://github.com/psf/black/issues",
         "https://github.com/psf/black/issues/4052",
         "https://github.com/toml-lang/toml",
         "https://hatch.pypa.io/latest/",
         "https://python-poetry.org/",
-        "https://www.python.org/dev/peps/pep-0518/"
+        "https://peps.python.org/pep-0518/"
       ]
     },
     {
@@ -65,10 +65,7 @@
       "path": "spec.md",
       "sha256": "d5133774e029a77af960fabba5f287f1dbd38bde27545b9bfd3a6e5cf43728b4",
       "urls": [
-        "https://docs.python.org/3.14/",
-        "https://example.com/1",
-        "https://example.com/2",
-        "https://example.com/3"
+        "https://docs.python.org/3.14/"
       ]
     },
     {
@@ -143,9 +140,9 @@
       "urls": [
         "https://flake8.pycqa.org/en/latest/user/error-codes.html",
         "https://github.com/readthedocs/sphinx_rtd_theme",
-        "https://pycodestyle.readthedocs.io/en/latest/intro.html#error-codes",
-        "https://readthedocs.org",
-        "https://www.sphinx-doc.org/"
+        "https://pycodestyle.pycqa.org/en/latest/intro.html",
+        "https://about.readthedocs.com/?ref=app.readthedocs.org",
+        "https://www.sphinx-doc.org/en/master/"
       ]
     },
     {
@@ -496,7 +493,7 @@
         "https://docs.python.org/3/reference/datamodel.html#object.__exit__",
         "https://mypy.readthedocs.io/en/stable/error_code_list.html",
         "https://peps.python.org/pep-0484/",
-        "https://peps.python.org/pep-0705",
+        "https://peps.python.org/pep-0705/",
         "https://peps.python.org/pep-0742/"
       ]
     },

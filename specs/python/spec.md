@@ -1,5 +1,5 @@
 # Python 3.14 Language Specification
-Version: 3.14.0
+Version: 3.14.2
 
 Source: https://docs.python.org/3.14/
 

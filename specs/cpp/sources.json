@@ -38,14 +38,14 @@
       "path": "stdlib/headers/index.md",
       "sha256": "22bcd74f7e1c4b68007e291be1e6ced71cf820cfe421cca412cc7a283480be16",
       "urls": [
-        "https://en.cppreference.com/w/cpp/header"
+        "https://en.cppreference.com/w/cpp/header.html"
       ]
     },
     {
       "path": "spec.md",
       "sha256": "d3483abc36395e9d94564b751f518c57c7be457248d947e744b53eccc2c5992b",
       "urls": [
-        "https://en.cppreference.com/w/cpp"
+        "https://en.cppreference.com/w/cpp.html"
       ]
     },
     {

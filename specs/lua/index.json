@@ -1,8 +1,8 @@
 {
   "language": "lua",
-  "fetchedAt": "2026-01-04T18:48:06Z",
+  "fetchedAt": "2026-01-05T22:00:01Z",
   "counts": {
-    "spec": 1,
+    "spec": 2,
     "stdlib": 1,
     "linters": 1,
     "formatters": 2,
@@ -10,6 +10,11 @@
   },
   "categories": {
     "spec": [
+      {
+        "category": "spec",
+        "path": "generation-checklist.md",
+        "name": "generation-checklist"
+      },
       {
         "category": "spec",
         "path": "spec.md",
@@ -51,6 +56,11 @@
     ]
   },
   "items": [
+    {
+      "category": "spec",
+      "path": "generation-checklist.md",
+      "name": "generation-checklist"
+    },
     {
       "category": "spec",
       "path": "spec.md",

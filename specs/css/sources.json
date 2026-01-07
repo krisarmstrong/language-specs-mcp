@@ -11,14 +11,14 @@
       "path": "formatters/overview.md",
       "sha256": "7b51f40135ec3087e2bff911bfeb895e2930bc938bf879b9772787c9326d9b3d",
       "urls": [
-        "https://prettier.io/docs/en/"
+        "https://prettier.io/docs/"
       ]
     },
     {
       "path": "formatters/prettier.md",
       "sha256": "61e0881f6ee1eb297eba4540782e28dc362a547a006a9f1468fbccdcb41d9a0b",
       "urls": [
-        "https://prettier.io/docs/en/options.html"
+        "https://prettier.io/docs/options.html"
       ]
     },
     {
@@ -39,1001 +39,1001 @@
       "path": "linters/stylelint/selector-nested-pattern.md",
       "sha256": "2402da9704fd3898617d084b9e90f145290cbcc7b7a9f644d569957e89d9eb5c",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-nested-pattern"
+        "https://stylelint.io/user-guide/rules/selector-nested-pattern/"
       ]
     },
     {
       "path": "linters/stylelint/selector-max-combinators.md",
       "sha256": "43aaedad160bec0a08a0df015ea366ccd7e9199e5f8a81246ad4cf2f631eca27",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-max-combinators"
+        "https://stylelint.io/user-guide/rules/selector-max-combinators/"
       ]
     },
     {
       "path": "linters/stylelint/selector-pseudo-class-disallowed-list.md",
       "sha256": "73a39961a70a349a2b5520e83ea1e985492b3dd63b4329af3da5b87e4ef5d9cf",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-pseudo-class-disallowed-list"
+        "https://stylelint.io/user-guide/rules/selector-pseudo-class-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/at-rule-no-vendor-prefix.md",
       "sha256": "55c2854ce3a5d9e4f14b9a468d7d74bb1348cff700737cf08ba6876ddb96a929",
       "urls": [
-        "https://stylelint.io/user-guide/rules/at-rule-no-vendor-prefix"
+        "https://stylelint.io/user-guide/rules/at-rule-no-vendor-prefix/"
       ]
     },
     {
       "path": "linters/stylelint/font-weight-notation.md",
       "sha256": "e17589294e4d6f9ce1b670b423571d9ede25174a274e1926808cb2405c1bb0f1",
       "urls": [
-        "https://stylelint.io/user-guide/rules/font-weight-notation"
+        "https://stylelint.io/user-guide/rules/font-weight-notation/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-block-single-line-max-declarations.md",
       "sha256": "eefcbd5705cd39829a994f4405d0e50884778001383c1a8709f8bb6a2d00a4c3",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-block-single-line-max-declarations"
+        "https://stylelint.io/user-guide/rules/declaration-block-single-line-max-declarations/"
       ]
     },
     {
       "path": "linters/stylelint/property-disallowed-list.md",
       "sha256": "ccae2fd86fa313fc33aeb8ac932a68c3bf72d81027ccf33ef8a62104a1e9fba6",
       "urls": [
-        "https://stylelint.io/user-guide/rules/property-disallowed-list"
+        "https://stylelint.io/user-guide/rules/property-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/container-name-pattern.md",
       "sha256": "a52c05d208cf4d386cf68ed03bf939b5be03c277b60740ab30c6383a92f9af3d",
       "urls": [
-        "https://stylelint.io/user-guide/rules/container-name-pattern"
+        "https://stylelint.io/user-guide/rules/container-name-pattern/"
       ]
     },
     {
       "path": "linters/stylelint/media-feature-name-disallowed-list.md",
       "sha256": "df706bd77b53c6994453a64a86027e8186e00b13f77afd5cf98ad22c2d76f101",
       "urls": [
-        "https://stylelint.io/user-guide/rules/media-feature-name-disallowed-list"
+        "https://stylelint.io/user-guide/rules/media-feature-name-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/media-feature-name-value-no-unknown.md",
       "sha256": "a6eb3c2db9386341fa3ea025194e5b4332c78a7717ce37cbc13b010d8d0b0436",
       "urls": [
-        "https://stylelint.io/user-guide/rules/media-feature-name-value-no-unknown"
+        "https://stylelint.io/user-guide/rules/media-feature-name-value-no-unknown/"
       ]
     },
     {
       "path": "linters/stylelint/no-invalid-position-declaration.md",
       "sha256": "d54ba0b7efa1bd696fa43d0ad9433b75ec0c7e26d428ffcd72272f7d860f7ace",
       "urls": [
-        "https://stylelint.io/user-guide/rules/no-invalid-position-declaration"
+        "https://stylelint.io/user-guide/rules/no-invalid-position-declaration/"
       ]
     },
     {
       "path": "linters/stylelint/at-rule-allowed-list.md",
       "sha256": "0954d5f845dbf000c187571a5e213712570a1ae622445cdbabae9ab2881ea97a",
       "urls": [
-        "https://stylelint.io/user-guide/rules/at-rule-allowed-list"
+        "https://stylelint.io/user-guide/rules/at-rule-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/no-unknown-custom-properties.md",
       "sha256": "0cab4330986e9d077ce1be5789af5e867838efa2859ac0351e6a570246f045d0",
       "urls": [
-        "https://stylelint.io/user-guide/rules/no-unknown-custom-properties"
+        "https://stylelint.io/user-guide/rules/no-unknown-custom-properties/"
       ]
     },
     {
       "path": "linters/stylelint/property-no-unknown.md",
       "sha256": "a39732dc89d16f36b41ad1d86e4c6ff758118fe12d5b5df571f0194b222a914f",
       "urls": [
-        "https://stylelint.io/user-guide/rules/property-no-unknown"
+        "https://stylelint.io/user-guide/rules/property-no-unknown/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-property-unit-disallowed-list.md",
       "sha256": "a8d34214fdd0528ad7f4306251c5ac27e5a0bad802e371dcfe076925917122c5",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-property-unit-disallowed-list"
+        "https://stylelint.io/user-guide/rules/declaration-property-unit-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/overview.md",
       "sha256": "f7ca70d5a17490d8c0fc3a789069821ce3dc049b244e6551bce5091f0373f648",
       "urls": [
-        "https://stylelint.io/user-guide/rules"
+        "https://stylelint.io/user-guide/rules/"
       ]
     },
     {
       "path": "linters/stylelint/no-unknown-custom-media.md",
       "sha256": "a19677f1e598035746192b4f8c6d975b9d4a8dfbed7f3016e441d5ef7252833f",
       "urls": [
-        "https://stylelint.io/user-guide/rules/no-unknown-custom-media"
+        "https://stylelint.io/user-guide/rules/no-unknown-custom-media/"
       ]
     },
     {
       "path": "linters/stylelint/unit-no-unknown.md",
       "sha256": "dd514b978c385a797eead88778e602922a8a3b0ce30af563e10a04827d32ea2b",
       "urls": [
-        "https://stylelint.io/user-guide/rules/unit-no-unknown"
+        "https://stylelint.io/user-guide/rules/unit-no-unknown/"
       ]
     },
     {
       "path": "linters/stylelint/custom-media-pattern.md",
       "sha256": "661d2500a8e8298bfc50c54bed35199b2b8ed24075c2f8e0fb19ae998ae90abc",
       "urls": [
-        "https://stylelint.io/user-guide/rules/custom-media-pattern"
+        "https://stylelint.io/user-guide/rules/custom-media-pattern/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-no-important.md",
       "sha256": "82e0d99a22f32620795dc3d485aac1432d457272a34c1c1be628ea95abdc2448",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-no-important"
+        "https://stylelint.io/user-guide/rules/declaration-no-important/"
       ]
     },
     {
       "path": "linters/stylelint/function-calc-no-unspaced-operator.md",
       "sha256": "590bb36bc32fbb725478340a93092803b1ee1d078ada20a7cb1b231fa23401ee",
       "urls": [
-        "https://stylelint.io/user-guide/rules/function-calc-no-unspaced-operator"
+        "https://stylelint.io/user-guide/rules/function-calc-no-unspaced-operator/"
       ]
     },
     {
       "path": "linters/stylelint/property-no-vendor-prefix.md",
       "sha256": "3cdd83658d577fcefd3c22dafac990f93b5611d22748546bc8ddda4210fa8bc4",
       "urls": [
-        "https://stylelint.io/user-guide/rules/property-no-vendor-prefix"
+        "https://stylelint.io/user-guide/rules/property-no-vendor-prefix/"
       ]
     },
     {
       "path": "linters/stylelint/selector-pseudo-element-no-unknown.md",
       "sha256": "be7e88bd0201ee0b1e5c741f203a8f604f4f1de37808eeef3a6c11b745e4886a",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-pseudo-element-no-unknown"
+        "https://stylelint.io/user-guide/rules/selector-pseudo-element-no-unknown/"
       ]
     },
     {
       "path": "linters/stylelint/comment-no-empty.md",
       "sha256": "07859f14d862d60601af3265ca81200d7f07759024fb2ba686eb83d1a10b6005",
       "urls": [
-        "https://stylelint.io/user-guide/rules/comment-no-empty"
+        "https://stylelint.io/user-guide/rules/comment-no-empty/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-property-value-disallowed-list.md",
       "sha256": "cf6edbe67adbd9c52cb43dd94210aa944967dc579ae1c9464f369cab95a0fb40",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-property-value-disallowed-list"
+        "https://stylelint.io/user-guide/rules/declaration-property-value-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-block-no-redundant-longhand-properties.md",
       "sha256": "ca97d84329f6192d68556fc2c12a7d8ddbf949d8dd9d2c55c31046dd28f16b1a",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties"
+        "https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/"
       ]
     },
     {
       "path": "linters/stylelint/color-hex-length.md",
       "sha256": "1f6b4518b0f1f4e8b12a16147f69271f8ab602dba461e75186d48a0cefcb0eda",
       "urls": [
-        "https://stylelint.io/user-guide/rules/color-hex-length"
+        "https://stylelint.io/user-guide/rules/color-hex-length/"
       ]
     },
     {
       "path": "linters/stylelint/value-keyword-case.md",
       "sha256": "e7af84b9518f426bfdb8ea0ef642eacf4f0dab8f3690c37949a85c0f58056f08",
       "urls": [
-        "https://stylelint.io/user-guide/rules/value-keyword-case"
+        "https://stylelint.io/user-guide/rules/value-keyword-case/"
       ]
     },
     {
       "path": "linters/stylelint/selector-disallowed-list.md",
       "sha256": "58f479356c3e75a9cce1c1fee083c03dfbb8b07b843223a3c1925b14474ebd4a",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-disallowed-list"
+        "https://stylelint.io/user-guide/rules/selector-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/at-rule-empty-line-before.md",
       "sha256": "1413426836fd1332faf7a25524551e7cb7758e8e64128fbe1ccb626bae01b23d",
       "urls": [
-        "https://stylelint.io/user-guide/rules/at-rule-empty-line-before"
+        "https://stylelint.io/user-guide/rules/at-rule-empty-line-before/"
       ]
     },
     {
       "path": "linters/stylelint/function-url-scheme-allowed-list.md",
       "sha256": "ac314ab0af215a90baf0bd6171d0fefa0d398c38935d09fa0ea8e86e00787726",
       "urls": [
-        "https://stylelint.io/user-guide/rules/function-url-scheme-allowed-list"
+        "https://stylelint.io/user-guide/rules/function-url-scheme-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/font-family-name-quotes.md",
       "sha256": "1652676e857ed6d9df2e626af6b62328ecb72bce21bc8f7733ab7550d5ac4a23",
       "urls": [
-        "https://stylelint.io/user-guide/rules/font-family-name-quotes"
+        "https://stylelint.io/user-guide/rules/font-family-name-quotes/"
       ]
     },
     {
       "path": "linters/stylelint/selector-anb-no-unmatchable.md",
       "sha256": "559bf76a35f389252aaaeedd70a6d644777fe947fc0dab7463493a19e0a5046f",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-anb-no-unmatchable"
+        "https://stylelint.io/user-guide/rules/selector-anb-no-unmatchable/"
       ]
     },
     {
       "path": "linters/stylelint/selector-not-notation.md",
       "sha256": "4e241164bcf481d80da8ce13d4339c9ad03b73bc20ec2588d82cbb80fff1fcb7",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-not-notation"
+        "https://stylelint.io/user-guide/rules/selector-not-notation/"
       ]
     },
     {
       "path": "linters/stylelint/selector-max-universal.md",
       "sha256": "e061d7644bf590778443c50c4550a9fb8aacbd3a07e8aaefeda81198158fa92c",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-max-universal"
+        "https://stylelint.io/user-guide/rules/selector-max-universal/"
       ]
     },
     {
       "path": "linters/stylelint/no-invalid-double-slash-comments.md",
       "sha256": "fc6abca744fc2dcaa2c2abacbfcbba6068ec5c60d89f2408d8c37cdb96595643",
       "urls": [
-        "https://stylelint.io/user-guide/rules/no-invalid-double-slash-comments"
+        "https://stylelint.io/user-guide/rules/no-invalid-double-slash-comments/"
       ]
     },
     {
       "path": "linters/stylelint/color-no-hex.md",
       "sha256": "61344b647887f7b6d77e7350cb99119078bdee5329a4db8cb83e1755912992a1",
       "urls": [
-        "https://stylelint.io/user-guide/rules/color-no-hex"
+        "https://stylelint.io/user-guide/rules/color-no-hex/"
       ]
     },
     {
       "path": "linters/stylelint/custom-property-pattern.md",
       "sha256": "db5bd0d2ce97324c28023e239e2ec9fef85edb61bc610a09d0c7ba7c9b9f42cf",
       "urls": [
-        "https://stylelint.io/user-guide/rules/custom-property-pattern"
+        "https://stylelint.io/user-guide/rules/custom-property-pattern/"
       ]
     },
     {
       "path": "linters/stylelint/selector-type-case.md",
       "sha256": "7f2a9fce251b0a9efbcd348c5c7573543cbd4d20c9b7d9e102e2f6bdbe67997d",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-type-case"
+        "https://stylelint.io/user-guide/rules/selector-type-case/"
       ]
     },
     {
       "path": "linters/stylelint/color-no-invalid-hex.md",
       "sha256": "65daaf6756af580062bbedc1fcea0b1cad39c42292b8e63f9009e4ecab416133",
       "urls": [
-        "https://stylelint.io/user-guide/rules/color-no-invalid-hex"
+        "https://stylelint.io/user-guide/rules/color-no-invalid-hex/"
       ]
     },
     {
       "path": "linters/stylelint/comment-whitespace-inside.md",
       "sha256": "79e88be42fd008912ef36098a8b861cb2fb664cbc338ea4b7bad940ce90e15b4",
       "urls": [
-        "https://stylelint.io/user-guide/rules/comment-whitespace-inside"
+        "https://stylelint.io/user-guide/rules/comment-whitespace-inside/"
       ]
     },
     {
       "path": "linters/stylelint/no-invalid-position-at-import-rule.md",
       "sha256": "d9c34966d4c5e81cb3d8bc58abdb153cf02bd50dc94f725a8ce925331919dd2c",
       "urls": [
-        "https://stylelint.io/user-guide/rules/no-invalid-position-at-import-rule"
+        "https://stylelint.io/user-guide/rules/no-invalid-position-at-import-rule/"
       ]
     },
     {
       "path": "linters/stylelint/no-duplicate-selectors.md",
       "sha256": "6f329c9c24586884d38e7c900cb4a3726f254dbb62dad214c5d54e4e3ccfe2d8",
       "urls": [
-        "https://stylelint.io/user-guide/rules/no-duplicate-selectors"
+        "https://stylelint.io/user-guide/rules/no-duplicate-selectors/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-property-max-values.md",
       "sha256": "2df55e840007a24eff36a6c377b9c39a17756e037146f388a0bb08207f5f5f4a",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-property-max-values"
+        "https://stylelint.io/user-guide/rules/declaration-property-max-values/"
       ]
     },
     {
       "path": "linters/stylelint/property-allowed-list.md",
       "sha256": "f7b8ea254e4605c6a30f70e7ded39b6c6c7824e52946b90ee64eb777551b3bbc",
       "urls": [
-        "https://stylelint.io/user-guide/rules/property-allowed-list"
+        "https://stylelint.io/user-guide/rules/property-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/nesting-selector-no-missing-scoping-root.md",
       "sha256": "3ca5ef3208c9fc3c733e88a981f569e6dd0063fab59becd2af8994b7c90f89e5",
       "urls": [
-        "https://stylelint.io/user-guide/rules/nesting-selector-no-missing-scoping-root"
+        "https://stylelint.io/user-guide/rules/nesting-selector-no-missing-scoping-root/"
       ]
     },
     {
       "path": "linters/stylelint/lightness-notation.md",
       "sha256": "a6e7fa038b40c32e34ccd3c465243953f246977849e1916bb0a47e50362ce64a",
       "urls": [
-        "https://stylelint.io/user-guide/rules/lightness-notation"
+        "https://stylelint.io/user-guide/rules/lightness-notation/"
       ]
     },
     {
       "path": "linters/stylelint/font-family-no-duplicate-names.md",
       "sha256": "7c5b86db200afe423050fc2de0dd485a6cc9c8d891259e76d69f44bfe3b36a9a",
       "urls": [
-        "https://stylelint.io/user-guide/rules/font-family-no-duplicate-names"
+        "https://stylelint.io/user-guide/rules/font-family-no-duplicate-names/"
       ]
     },
     {
       "path": "linters/stylelint/media-feature-name-value-allowed-list.md",
       "sha256": "8b17eb5ece4b89d163244438a3e372f3f01256636e9aa1c13955d0c5d5214ff9",
       "urls": [
-        "https://stylelint.io/user-guide/rules/media-feature-name-value-allowed-list"
+        "https://stylelint.io/user-guide/rules/media-feature-name-value-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/max-nesting-depth.md",
       "sha256": "b26fd6da0105128e344ae3ab2c5f02d163582b939f61342d97aaf698dc0ee794",
       "urls": [
-        "https://stylelint.io/user-guide/rules/max-nesting-depth"
+        "https://stylelint.io/user-guide/rules/max-nesting-depth/"
       ]
     },
     {
       "path": "linters/stylelint/selector-max-specificity.md",
       "sha256": "e94ccbd95862cb580da780687867f96d211c75d99cd4063406e4264572e6e515",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-max-specificity"
+        "https://stylelint.io/user-guide/rules/selector-max-specificity/"
       ]
     },
     {
       "path": "linters/stylelint/selector-combinator-disallowed-list.md",
       "sha256": "7cf1605434ac94f81c7437cbd00c549e2055dc7d87ba938d60ded2a6550e0565",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-combinator-disallowed-list"
+        "https://stylelint.io/user-guide/rules/selector-combinator-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/selector-id-pattern.md",
       "sha256": "cb6139b43ac4e4e04ccc01e1372d21b09744e5c7a53dc51ae7a87c908bbfaab0",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-id-pattern"
+        "https://stylelint.io/user-guide/rules/selector-id-pattern/"
       ]
     },
     {
       "path": "linters/stylelint/selector-combinator-allowed-list.md",
       "sha256": "7e02e1d04ed4e231573b4f1b4680fcf93642ee65a4baebd475c6fdc0b3f806fe",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-combinator-allowed-list"
+        "https://stylelint.io/user-guide/rules/selector-combinator-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/selector-pseudo-element-disallowed-list.md",
       "sha256": "deffebc1450955d60a40c69f62241f520e377b61c486297fb1a8f82719e87060",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-pseudo-element-disallowed-list"
+        "https://stylelint.io/user-guide/rules/selector-pseudo-element-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/selector-attribute-operator-allowed-list.md",
       "sha256": "5e1b220079e7bcccb1abafc6afe9b2e9725c9d1c9aea582541e23510bf2255d4",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-attribute-operator-allowed-list"
+        "https://stylelint.io/user-guide/rules/selector-attribute-operator-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/rule-selector-property-disallowed-list.md",
       "sha256": "719d276569d06204169f4b142907d4d0c4500def2a2b7c54935acf7550a7d2ea",
       "urls": [
-        "https://stylelint.io/user-guide/rules/rule-selector-property-disallowed-list"
+        "https://stylelint.io/user-guide/rules/rule-selector-property-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/selector-attribute-name-disallowed-list.md",
       "sha256": "98571bbac83ccb87a1641311353bd35b1633222c6b452a33bde23bca48a017a9",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-attribute-name-disallowed-list"
+        "https://stylelint.io/user-guide/rules/selector-attribute-name-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/no-descending-specificity.md",
       "sha256": "785f237892605dddc2f563c882abb00b075b1ef638639af2cef9e7b125e9018d",
       "urls": [
-        "https://stylelint.io/user-guide/rules/no-descending-specificity"
+        "https://stylelint.io/user-guide/rules/no-descending-specificity/"
       ]
     },
     {
       "path": "linters/stylelint/time-min-milliseconds.md",
       "sha256": "a5249bc11639af2064e0d494a9aaab037be314686da15cbcd15eb9bfcf35382e",
       "urls": [
-        "https://stylelint.io/user-guide/rules/time-min-milliseconds"
+        "https://stylelint.io/user-guide/rules/time-min-milliseconds/"
       ]
     },
     {
       "path": "linters/stylelint/block-no-empty.md",
       "sha256": "6f69625109db958e5b67ea082a580cb84e3fb85fc0baea8c0c04b71dbc1e6b72",
       "urls": [
-        "https://stylelint.io/user-guide/rules/block-no-empty"
+        "https://stylelint.io/user-guide/rules/block-no-empty/"
       ]
     },
     {
       "path": "linters/stylelint/selector-no-qualifying-type.md",
       "sha256": "f6ee23424f9a7feffc9e051c120fe847f8ece7b8fc37a1c9202c873673331e12",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-no-qualifying-type"
+        "https://stylelint.io/user-guide/rules/selector-no-qualifying-type/"
       ]
     },
     {
       "path": "linters/stylelint/selector-class-pattern.md",
       "sha256": "c2eef2ab384efa10abe4af452ccd8ca789c474cfb0fa642877aeaff2ea87ea04",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-class-pattern"
+        "https://stylelint.io/user-guide/rules/selector-class-pattern/"
       ]
     },
     {
       "path": "linters/stylelint/string-no-newline.md",
       "sha256": "5d7c77999d0f8a84e6ba52eaf062fd5c848c6ef36e8a0cdd27cadce187bc5e27",
       "urls": [
-        "https://stylelint.io/user-guide/rules/string-no-newline"
+        "https://stylelint.io/user-guide/rules/string-no-newline/"
       ]
     },
     {
       "path": "linters/stylelint/no-empty-source.md",
       "sha256": "a7f77b2c73cf88bc7d0e68d1d858f0bab98d8a0fa42d3610ad4741082d4de548",
       "urls": [
-        "https://stylelint.io/user-guide/rules/no-empty-source"
+        "https://stylelint.io/user-guide/rules/no-empty-source/"
       ]
     },
     {
       "path": "linters/stylelint/selector-type-no-unknown.md",
       "sha256": "162e1c08c640e10b2933dd6a590a7070e39125c4675001e3b81d0535c13bb136",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-type-no-unknown"
+        "https://stylelint.io/user-guide/rules/selector-type-no-unknown/"
       ]
     },
     {
       "path": "linters/stylelint/selector-max-id.md",
       "sha256": "4462f19b33ecff5145e1e4c1fccb91472203b4897759ed48996b389ba97bc7b8",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-max-id"
+        "https://stylelint.io/user-guide/rules/selector-max-id/"
       ]
     },
     {
       "path": "linters/stylelint/function-allowed-list.md",
       "sha256": "bd936fef196601ddf76fb706280edfeefb5799f950c25f474eb662b1a5ec6e64",
       "urls": [
-        "https://stylelint.io/user-guide/rules/function-allowed-list"
+        "https://stylelint.io/user-guide/rules/function-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/selector-pseudo-element-allowed-list.md",
       "sha256": "227c21e6b0a217953e364ddb78527d61d9edd76d1d3602c10ca968c65715f724",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-pseudo-element-allowed-list"
+        "https://stylelint.io/user-guide/rules/selector-pseudo-element-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/at-rule-no-deprecated.md",
       "sha256": "204db615e86a00bf3c349a1c0e3d7cd47b050bed408dd0532f421d6532047578",
       "urls": [
-        "https://stylelint.io/user-guide/rules/at-rule-no-deprecated"
+        "https://stylelint.io/user-guide/rules/at-rule-no-deprecated/"
       ]
     },
     {
       "path": "linters/stylelint/value-no-vendor-prefix.md",
       "sha256": "42c2fdf3d27c2c410f354a22d112c0ef84b724d4ccd6706715cc9d08157dafac",
       "urls": [
-        "https://stylelint.io/user-guide/rules/value-no-vendor-prefix"
+        "https://stylelint.io/user-guide/rules/value-no-vendor-prefix/"
       ]
     },
     {
       "path": "linters/stylelint/keyframe-declaration-no-important.md",
       "sha256": "3711705be750061ad9dd19d9513b2f3ede439bacddb778dc59e284ec3eab5f64",
       "urls": [
-        "https://stylelint.io/user-guide/rules/keyframe-declaration-no-important"
+        "https://stylelint.io/user-guide/rules/keyframe-declaration-no-important/"
       ]
     },
     {
       "path": "linters/stylelint/selector-max-type.md",
       "sha256": "fb7280a96b9d12b82efb63425752b895de6a5d9e448375f72cf8b2915b359fe5",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-max-type"
+        "https://stylelint.io/user-guide/rules/selector-max-type/"
       ]
     },
     {
       "path": "linters/stylelint/function-linear-gradient-no-nonstandard-direction.md",
       "sha256": "7cda23100a670d9b4b2fd9495e2eab11608a9709fa52624824077220517cd24a",
       "urls": [
-        "https://stylelint.io/user-guide/rules/function-linear-gradient-no-nonstandard-direction"
+        "https://stylelint.io/user-guide/rules/function-linear-gradient-no-nonstandard-direction/"
       ]
     },
     {
       "path": "linters/stylelint/length-zero-no-unit.md",
       "sha256": "5c772d722eb3d1705f4887d89eb2f419ab126ef2d93cd654bfa6147f2727dbe9",
       "urls": [
-        "https://stylelint.io/user-guide/rules/length-zero-no-unit"
+        "https://stylelint.io/user-guide/rules/length-zero-no-unit/"
       ]
     },
     {
       "path": "linters/stylelint/keyframe-block-no-duplicate-selectors.md",
       "sha256": "d43a2bca764173ede028887abbcd4716fbbfbc41151b25a7755b2dae344aaec9",
       "urls": [
-        "https://stylelint.io/user-guide/rules/keyframe-block-no-duplicate-selectors"
+        "https://stylelint.io/user-guide/rules/keyframe-block-no-duplicate-selectors/"
       ]
     },
     {
       "path": "linters/stylelint/no-duplicate-at-import-rules.md",
       "sha256": "91735d0f628e58da45675e919776f0adabbdc55edf06c14ee921cc6125e9c979",
       "urls": [
-        "https://stylelint.io/user-guide/rules/no-duplicate-at-import-rules"
+        "https://stylelint.io/user-guide/rules/no-duplicate-at-import-rules/"
       ]
     },
     {
       "path": "linters/stylelint/color-named.md",
       "sha256": "d1d50e491a16d13d922799cffc89ec1567406ca2e5bf69f70c2e79074efcc9db",
       "urls": [
-        "https://stylelint.io/user-guide/rules/color-named"
+        "https://stylelint.io/user-guide/rules/color-named/"
       ]
     },
     {
       "path": "linters/stylelint/custom-property-no-missing-var-function.md",
       "sha256": "d628e57547fbc0bde764f409754bb5c43f165ddb0de82bd4d0642b6144a9ef23",
       "urls": [
-        "https://stylelint.io/user-guide/rules/custom-property-no-missing-var-function"
+        "https://stylelint.io/user-guide/rules/custom-property-no-missing-var-function/"
       ]
     },
     {
       "path": "linters/stylelint/selector-pseudo-class-allowed-list.md",
       "sha256": "9f45fdac134fa37edd1b20a7c7b08af02d7be6db6f3ef094ce7634ba4f7a3815",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-pseudo-class-allowed-list"
+        "https://stylelint.io/user-guide/rules/selector-pseudo-class-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-property-value-keyword-no-deprecated.md",
       "sha256": "79da0c591b4580a7ff30dd61dad22d96588440671897c3f1a8373b9231e31d62",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-property-value-keyword-no-deprecated"
+        "https://stylelint.io/user-guide/rules/declaration-property-value-keyword-no-deprecated/"
       ]
     },
     {
       "path": "linters/stylelint/at-rule-descriptor-value-no-unknown.md",
       "sha256": "673b3f9b436cbbc26b8e490142ba369ef67eb22942ee3ad2a8fbd54e6cec2f7e",
       "urls": [
-        "https://stylelint.io/user-guide/rules/at-rule-descriptor-value-no-unknown"
+        "https://stylelint.io/user-guide/rules/at-rule-descriptor-value-no-unknown/"
       ]
     },
     {
       "path": "linters/stylelint/function-disallowed-list.md",
       "sha256": "bfac80f0314e0a3490ad13f0a2cc6fbff467286a057f9d594baa1954c41f3cf8",
       "urls": [
-        "https://stylelint.io/user-guide/rules/function-disallowed-list"
+        "https://stylelint.io/user-guide/rules/function-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/function-no-unknown.md",
       "sha256": "6eb6fbed26ab8423b45dbf9a287b7844bc71e3b636f8ebb5f4b24d15f9a2a49b",
       "urls": [
-        "https://stylelint.io/user-guide/rules/function-no-unknown"
+        "https://stylelint.io/user-guide/rules/function-no-unknown/"
       ]
     },
     {
       "path": "linters/stylelint/media-feature-range-notation.md",
       "sha256": "c629dfbbb298297b105f886cbc126419cd99528cef6cbe1785785d9f5195f72c",
       "urls": [
-        "https://stylelint.io/user-guide/rules/media-feature-range-notation"
+        "https://stylelint.io/user-guide/rules/media-feature-range-notation/"
       ]
     },
     {
       "path": "linters/stylelint/selector-pseudo-class-no-unknown.md",
       "sha256": "a053fbbd07ef977c24eb5b7de2caa2906a10f1f6de6bbd5d74bff99d0f9a549a",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-pseudo-class-no-unknown"
+        "https://stylelint.io/user-guide/rules/selector-pseudo-class-no-unknown/"
       ]
     },
     {
       "path": "linters/stylelint/media-feature-name-unit-allowed-list.md",
       "sha256": "f60f144761688f10b8b2b1c9848cb65fbc953a61eb02401cf5652ca2f272dddd",
       "urls": [
-        "https://stylelint.io/user-guide/rules/media-feature-name-unit-allowed-list"
+        "https://stylelint.io/user-guide/rules/media-feature-name-unit-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/shorthand-property-no-redundant-values.md",
       "sha256": "dda65b257db1b680a2b007c819c0bce6d8f3dac101d2d85756495deb8b3d9903",
       "urls": [
-        "https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values"
+        "https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values/"
       ]
     },
     {
       "path": "linters/stylelint/function-url-no-scheme-relative.md",
       "sha256": "1c197f84f916e109424df410fc04eecb7d50c436e6e6a757dac6942901fddd04",
       "urls": [
-        "https://stylelint.io/user-guide/rules/function-url-no-scheme-relative"
+        "https://stylelint.io/user-guide/rules/function-url-no-scheme-relative/"
       ]
     },
     {
       "path": "linters/stylelint/block-no-redundant-nested-style-rules.md",
       "sha256": "0a1cf687f07a6a4c3d61a2d88c87b69ffd7889b2f83f1be3372d129c3104e947",
       "urls": [
-        "https://stylelint.io/user-guide/rules/block-no-redundant-nested-style-rules"
+        "https://stylelint.io/user-guide/rules/block-no-redundant-nested-style-rules/"
       ]
     },
     {
       "path": "linters/stylelint/rule-nesting-at-rule-required-list.md",
       "sha256": "ccc65017c45edc7ed6f5aac0bb913130e9afe777d1df3387f3bd92f18c4c3af7",
       "urls": [
-        "https://stylelint.io/user-guide/rules/rule-nesting-at-rule-required-list"
+        "https://stylelint.io/user-guide/rules/rule-nesting-at-rule-required-list/"
       ]
     },
     {
       "path": "linters/stylelint/keyframe-selector-notation.md",
       "sha256": "a10bb70349013056b18602839919ba0cdee45c4541afca2b704d8b86d230487a",
       "urls": [
-        "https://stylelint.io/user-guide/rules/keyframe-selector-notation"
+        "https://stylelint.io/user-guide/rules/keyframe-selector-notation/"
       ]
     },
     {
       "path": "linters/stylelint/font-family-no-missing-generic-family-keyword.md",
       "sha256": "b2c505b93d3eeba736728753b445b77172d7c311d3b834d09aa7cc885e2ffad8",
       "urls": [
-        "https://stylelint.io/user-guide/rules/font-family-no-missing-generic-family-keyword"
+        "https://stylelint.io/user-guide/rules/font-family-no-missing-generic-family-keyword/"
       ]
     },
     {
       "path": "linters/stylelint/media-feature-name-no-vendor-prefix.md",
       "sha256": "8487d3a7cb62bf8abdea7db1ac40483e437588d43812227dbbf120acc8d53b3c",
       "urls": [
-        "https://stylelint.io/user-guide/rules/media-feature-name-no-vendor-prefix"
+        "https://stylelint.io/user-guide/rules/media-feature-name-no-vendor-prefix/"
       ]
     },
     {
       "path": "linters/stylelint/import-notation.md",
       "sha256": "e535fbe68101c1b5a051de3ebbda659985dc8cde0aa1f06f4f573ceb034928ef",
       "urls": [
-        "https://stylelint.io/user-guide/rules/import-notation"
+        "https://stylelint.io/user-guide/rules/import-notation/"
       ]
     },
     {
       "path": "linters/stylelint/named-grid-areas-no-invalid.md",
       "sha256": "a0b892f5ae564da1cb7171c512ad7451dcbfc2483e401d3bb377b819bca8d16c",
       "urls": [
-        "https://stylelint.io/user-guide/rules/named-grid-areas-no-invalid"
+        "https://stylelint.io/user-guide/rules/named-grid-areas-no-invalid/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-empty-line-before.md",
       "sha256": "aa4ffa9a59c5ddcf677fbb48c7d2e86f66a043ea07a470c115a5e0fb75575de7",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-empty-line-before"
+        "https://stylelint.io/user-guide/rules/declaration-empty-line-before/"
       ]
     },
     {
       "path": "linters/stylelint/keyframes-name-pattern.md",
       "sha256": "c3ad4682e90c47b23c420a174a2acfcabc9461429865f277ad687847c1858fcf",
       "urls": [
-        "https://stylelint.io/user-guide/rules/keyframes-name-pattern"
+        "https://stylelint.io/user-guide/rules/keyframes-name-pattern/"
       ]
     },
     {
       "path": "linters/stylelint/unit-allowed-list.md",
       "sha256": "1c14016e4ab4ebe43fc88347e93affab72c2f37be1525b75adef7e2aec80f92e",
       "urls": [
-        "https://stylelint.io/user-guide/rules/unit-allowed-list"
+        "https://stylelint.io/user-guide/rules/unit-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/custom-property-empty-line-before.md",
       "sha256": "8bb76fb1da125d770f40bdf9dc132946dbc0872e975b0847cc920bb3d58f62a5",
       "urls": [
-        "https://stylelint.io/user-guide/rules/custom-property-empty-line-before"
+        "https://stylelint.io/user-guide/rules/custom-property-empty-line-before/"
       ]
     },
     {
       "path": "linters/stylelint/alpha-value-notation.md",
       "sha256": "e57afa2c33370d011dfc5e132a9a4788f806e357e170befc5b3ee3118cdda39f",
       "urls": [
-        "https://stylelint.io/user-guide/rules/alpha-value-notation"
+        "https://stylelint.io/user-guide/rules/alpha-value-notation/"
       ]
     },
     {
       "path": "linters/stylelint/no-unknown-animations.md",
       "sha256": "0b8b2c01ede86ba5228e1e1f1696f2a8ae9daebe95b6d15cfd6e3c91c3f9f5cd",
       "urls": [
-        "https://stylelint.io/user-guide/rules/no-unknown-animations"
+        "https://stylelint.io/user-guide/rules/no-unknown-animations/"
       ]
     },
     {
       "path": "linters/stylelint/color-function-alias-notation.md",
       "sha256": "3a8defb9a2274f25eb7a371d8dcbcb5d5d284cf2437e15ba85c409fab38821ef",
       "urls": [
-        "https://stylelint.io/user-guide/rules/color-function-alias-notation"
+        "https://stylelint.io/user-guide/rules/color-function-alias-notation/"
       ]
     },
     {
       "path": "linters/stylelint/at-rule-prelude-no-invalid.md",
       "sha256": "84a25657d900ad8a1234cc3fe6138d3edba32bd7602b1926d71a1334bff91996",
       "urls": [
-        "https://stylelint.io/user-guide/rules/at-rule-prelude-no-invalid"
+        "https://stylelint.io/user-guide/rules/at-rule-prelude-no-invalid/"
       ]
     },
     {
       "path": "linters/stylelint/annotation-no-unknown.md",
       "sha256": "1d1a65b0d30877606380ad451b3daa1ecc407930e903cd3b1b274d28a862b43a",
       "urls": [
-        "https://stylelint.io/user-guide/rules/annotation-no-unknown"
+        "https://stylelint.io/user-guide/rules/annotation-no-unknown/"
       ]
     },
     {
       "path": "linters/stylelint/media-feature-name-no-unknown.md",
       "sha256": "20d242d75ee3402364c533e542aa34e69fc0bb2988d111f8980866688868a8d1",
       "urls": [
-        "https://stylelint.io/user-guide/rules/media-feature-name-no-unknown"
+        "https://stylelint.io/user-guide/rules/media-feature-name-no-unknown/"
       ]
     },
     {
       "path": "linters/stylelint/layer-name-pattern.md",
       "sha256": "3414a8585f352f322f8743cebaf2b47a034dcfdf839b2b29aaefa3f283c3cb2c",
       "urls": [
-        "https://stylelint.io/user-guide/rules/layer-name-pattern"
+        "https://stylelint.io/user-guide/rules/layer-name-pattern/"
       ]
     },
     {
       "path": "linters/stylelint/function-url-quotes.md",
       "sha256": "8be68d1e9254594a8474780574437a82e7534bddca54bd68fb1936388be1d25d",
       "urls": [
-        "https://stylelint.io/user-guide/rules/function-url-quotes"
+        "https://stylelint.io/user-guide/rules/function-url-quotes/"
       ]
     },
     {
       "path": "linters/stylelint/media-type-no-deprecated.md",
       "sha256": "4b833edb48f02ca914580df1379611d945110383f3c897c855a76a923d1b6c49",
       "urls": [
-        "https://stylelint.io/user-guide/rules/media-type-no-deprecated"
+        "https://stylelint.io/user-guide/rules/media-type-no-deprecated/"
       ]
     },
     {
       "path": "linters/stylelint/function-url-scheme-disallowed-list.md",
       "sha256": "303da5005fddaaf4fdae48319d1618b3d99fd24df9b89bdd3d6f6a5d1e9eb653",
       "urls": [
-        "https://stylelint.io/user-guide/rules/function-url-scheme-disallowed-list"
+        "https://stylelint.io/user-guide/rules/function-url-scheme-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/selector-max-class.md",
       "sha256": "cf1c03c14d8bdf0e0bc5704b87e10e858ef13c6ddd3fe1bdfac7f485696580ee",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-max-class"
+        "https://stylelint.io/user-guide/rules/selector-max-class/"
       ]
     },
     {
       "path": "linters/stylelint/number-max-precision.md",
       "sha256": "691538bac43135ba51b9ec38edd58d88a3fce0ff724d1a8e022e5b8a603f78b7",
       "urls": [
-        "https://stylelint.io/user-guide/rules/number-max-precision"
+        "https://stylelint.io/user-guide/rules/number-max-precision/"
       ]
     },
     {
       "path": "linters/stylelint/at-rule-disallowed-list.md",
       "sha256": "49055830658ff2108881481bc5089d77a7a00ab2cc271e0640df0e929c4e465a",
       "urls": [
-        "https://stylelint.io/user-guide/rules/at-rule-disallowed-list"
+        "https://stylelint.io/user-guide/rules/at-rule-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/function-name-case.md",
       "sha256": "e3ff405dce067cb6f87c82b982b86b9dc58ba31aea83294137f0e20af534311e",
       "urls": [
-        "https://stylelint.io/user-guide/rules/function-name-case"
+        "https://stylelint.io/user-guide/rules/function-name-case/"
       ]
     },
     {
       "path": "linters/stylelint/comment-word-disallowed-list.md",
       "sha256": "d1f16f8a8b6ade68c2ae7f9caa00c80e2e5c4c9a2ba17042337f7a57ec815ee3",
       "urls": [
-        "https://stylelint.io/user-guide/rules/comment-word-disallowed-list"
+        "https://stylelint.io/user-guide/rules/comment-word-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/unit-disallowed-list.md",
       "sha256": "22e901073de2ebea5b2df49b9f0b8c0454af29dfef4badf580b40d0a561059b2",
       "urls": [
-        "https://stylelint.io/user-guide/rules/unit-disallowed-list"
+        "https://stylelint.io/user-guide/rules/unit-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-block-no-duplicate-properties.md",
       "sha256": "d47b40528c3079d34bcecbb5f33580b2c4ff407e8fc330abe3ee1a8c6410e78c",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties"
+        "https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties/"
       ]
     },
     {
       "path": "linters/stylelint/selector-attribute-operator-disallowed-list.md",
       "sha256": "bfe2da073ab5378587fc9e907f9d4393a20540a5c1edb762df3ab6d8ee6308d0",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-attribute-operator-disallowed-list"
+        "https://stylelint.io/user-guide/rules/selector-attribute-operator-disallowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/color-function-notation.md",
       "sha256": "8fec25ec1b2c5e3f312b12fe858ec49042a488d57bd3610c53763d762165d33d",
       "urls": [
-        "https://stylelint.io/user-guide/rules/color-function-notation"
+        "https://stylelint.io/user-guide/rules/color-function-notation/"
       ]
     },
     {
       "path": "linters/stylelint/media-query-no-invalid.md",
       "sha256": "17394871cf9f2bc103d96148e470309cf54a06ecdd6bd7cb9420a8957df6edf7",
       "urls": [
-        "https://stylelint.io/user-guide/rules/media-query-no-invalid"
+        "https://stylelint.io/user-guide/rules/media-query-no-invalid/"
       ]
     },
     {
       "path": "linters/stylelint/property-no-deprecated.md",
       "sha256": "320da73093dfda395b9a8d843c6da28d796fee81d23369e27957ca7b56f503aa",
       "urls": [
-        "https://stylelint.io/user-guide/rules/property-no-deprecated"
+        "https://stylelint.io/user-guide/rules/property-no-deprecated/"
       ]
     },
     {
       "path": "linters/stylelint/no-irregular-whitespace.md",
       "sha256": "645aa69842564a9139889eb3a350d30ebaaa8cba6e90407d7621006f37ab58ba",
       "urls": [
-        "https://stylelint.io/user-guide/rules/no-irregular-whitespace"
+        "https://stylelint.io/user-guide/rules/no-irregular-whitespace/"
       ]
     },
     {
       "path": "linters/stylelint/selector-pseudo-element-colon-notation.md",
       "sha256": "4f6e318a0e5bfc05f3ac8590a6997e7442a265cd12b40a7d25c50599f8d9177c",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-pseudo-element-colon-notation"
+        "https://stylelint.io/user-guide/rules/selector-pseudo-element-colon-notation/"
       ]
     },
     {
       "path": "linters/stylelint/at-rule-descriptor-no-unknown.md",
       "sha256": "d65679475dca0f06e4df2e6e1e0afae82c52768f2484448526eaee7eec69f0ca",
       "urls": [
-        "https://stylelint.io/user-guide/rules/at-rule-descriptor-no-unknown"
+        "https://stylelint.io/user-guide/rules/at-rule-descriptor-no-unknown/"
       ]
     },
     {
       "path": "linters/stylelint/comment-pattern.md",
       "sha256": "6e1f4062a8d42ba7292216a1add8d072fb74ffe07f09708dd5f85f4c7d3338a9",
       "urls": [
-        "https://stylelint.io/user-guide/rules/comment-pattern"
+        "https://stylelint.io/user-guide/rules/comment-pattern/"
       ]
     },
     {
       "path": "linters/stylelint/rule-empty-line-before.md",
       "sha256": "04e2ce0d24371990c1f99ffa583fe904e18c63a3f3489c150250da1a180f746f",
       "urls": [
-        "https://stylelint.io/user-guide/rules/rule-empty-line-before"
+        "https://stylelint.io/user-guide/rules/rule-empty-line-before/"
       ]
     },
     {
       "path": "linters/stylelint/selector-attribute-quotes.md",
       "sha256": "ed6a00711434f8e1898563f1e60edee77ea8134eea33eb5624d08f7b882ff78a",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-attribute-quotes"
+        "https://stylelint.io/user-guide/rules/selector-attribute-quotes/"
       ]
     },
     {
       "path": "linters/stylelint/selector-max-attribute.md",
       "sha256": "735b90406549d01fc2466bafb0432959e456fcd31386f90965fd1aa37dbcde3f",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-max-attribute"
+        "https://stylelint.io/user-guide/rules/selector-max-attribute/"
       ]
     },
     {
       "path": "linters/stylelint/selector-max-pseudo-class.md",
       "sha256": "e5c670c4c27c054edf2956e72d1cce31cc90d6b5d4ab647907f762140aee9e7b",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-max-pseudo-class"
+        "https://stylelint.io/user-guide/rules/selector-max-pseudo-class/"
       ]
     },
     {
       "path": "linters/stylelint/at-rule-property-required-list.md",
       "sha256": "4e6278c3b56d871efcbcc71a55546d8f6ed891b2df529dee1806a7a456cde973",
       "urls": [
-        "https://stylelint.io/user-guide/rules/at-rule-property-required-list"
+        "https://stylelint.io/user-guide/rules/at-rule-property-required-list/"
       ]
     },
     {
       "path": "linters/stylelint/syntax-string-no-invalid.md",
       "sha256": "b939df6ca350aeef1153b9758fc4389fb8d3b30e0da459fe98965708aa61c431",
       "urls": [
-        "https://stylelint.io/user-guide/rules/syntax-string-no-invalid"
+        "https://stylelint.io/user-guide/rules/syntax-string-no-invalid/"
       ]
     },
     {
       "path": "linters/stylelint/at-rule-no-unknown.md",
       "sha256": "d226d955d205bec269a932641b14a309be868175677488ea7ef2c3d42e521090",
       "urls": [
-        "https://stylelint.io/user-guide/rules/at-rule-no-unknown"
+        "https://stylelint.io/user-guide/rules/at-rule-no-unknown/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-property-unit-allowed-list.md",
       "sha256": "6ccd6db71ca47f16b4ab798f687b9dc4105d046043afdd7c0a109158a979de51",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-property-unit-allowed-list"
+        "https://stylelint.io/user-guide/rules/declaration-property-unit-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-block-no-shorthand-property-overrides.md",
       "sha256": "7b74d8ad483c444740dedbc6ad04a54e3eb88894c5b82826ffa08f536fdcbc27",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-block-no-shorthand-property-overrides"
+        "https://stylelint.io/user-guide/rules/declaration-block-no-shorthand-property-overrides/"
       ]
     },
     {
       "path": "linters/stylelint/selector-no-vendor-prefix.md",
       "sha256": "01b63cbbe18c25354a174c2b99cb4d5098a7d9b91c5536acd13953e20df5bbd0",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-no-vendor-prefix"
+        "https://stylelint.io/user-guide/rules/selector-no-vendor-prefix/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-property-value-allowed-list.md",
       "sha256": "1d4bbade5d6492ed55bb77fb1cf0892380ae9127ec4b65757c2c85faedf96200",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-property-value-allowed-list"
+        "https://stylelint.io/user-guide/rules/declaration-property-value-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/color-hex-alpha.md",
       "sha256": "7388ba9e8af8474256944cfb14a06c3d15542a23016d77a0d2240946933cc18c",
       "urls": [
-        "https://stylelint.io/user-guide/rules/color-hex-alpha"
+        "https://stylelint.io/user-guide/rules/color-hex-alpha/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-block-no-duplicate-custom-properties.md",
       "sha256": "ad5ed4ebac83751948d0ca11750347c9f35d2cb4a5d72c06d6313e76cf262150",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-custom-properties"
+        "https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-custom-properties/"
       ]
     },
     {
       "path": "linters/stylelint/hue-degree-notation.md",
       "sha256": "e1b2b3d177f238d96a415837779892c3d053e3196127a5267c6ebe9c028856f1",
       "urls": [
-        "https://stylelint.io/user-guide/rules/hue-degree-notation"
+        "https://stylelint.io/user-guide/rules/hue-degree-notation/"
       ]
     },
     {
       "path": "linters/stylelint/declaration-property-value-no-unknown.md",
       "sha256": "61ccde1e9db1e9dd0ac406f9f74d265cb79b10e1997b0709c77550d688fddaf0",
       "urls": [
-        "https://stylelint.io/user-guide/rules/declaration-property-value-no-unknown"
+        "https://stylelint.io/user-guide/rules/declaration-property-value-no-unknown/"
       ]
     },
     {
       "path": "linters/stylelint/comment-empty-line-before.md",
       "sha256": "35a5603fb9a739bcad0596b436797edca6ce31ad27a49b78336ba7fe80a41eb8",
       "urls": [
-        "https://stylelint.io/user-guide/rules/comment-empty-line-before"
+        "https://stylelint.io/user-guide/rules/comment-empty-line-before/"
       ]
     },
     {
       "path": "linters/stylelint/media-feature-name-allowed-list.md",
       "sha256": "4b0889bac457011dc8c7e157487f4b5233ac93ed1b9ab3ccc889a0c3f8067033",
       "urls": [
-        "https://stylelint.io/user-guide/rules/media-feature-name-allowed-list"
+        "https://stylelint.io/user-guide/rules/media-feature-name-allowed-list/"
       ]
     },
     {
       "path": "linters/stylelint/selector-max-compound-selectors.md",
       "sha256": "7ef0c442a867a695c7a06e4a2be9479aaf4b1ae462b9595b8447076c41ed541e",
       "urls": [
-        "https://stylelint.io/user-guide/rules/selector-max-compound-selectors"
+        "https://stylelint.io/user-guide/rules/selector-max-compound-selectors/"
       ]
     }
   ]

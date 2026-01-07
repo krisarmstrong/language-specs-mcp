@@ -2,7 +2,7 @@
   "language": "dockerfile",
   "fetchedAt": "2026-01-04T18:55:03Z",
   "counts": {
-    "spec": 1,
+    "spec": 2,
     "stdlib": 1,
     "linters": 67,
     "formatters": 1,
@@ -10,6 +10,11 @@
   },
   "categories": {
     "spec": [
+      {
+        "category": "spec",
+        "path": "generation-checklist.md",
+        "name": "generation-checklist"
+      },
       {
         "category": "spec",
         "path": "spec.md",
@@ -376,6 +381,11 @@
     ]
   },
   "items": [
+    {
+      "category": "spec",
+      "path": "generation-checklist.md",
+      "name": "generation-checklist"
+    },
     {
       "category": "spec",
       "path": "spec.md",

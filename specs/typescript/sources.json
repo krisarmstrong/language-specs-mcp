@@ -5,16 +5,14 @@
     {
       "path": "patterns/idioms.md",
       "sha256": "cfc11bc0bd4e361284ebace0074147ec77e75bb4195f77bbb9ce3f50b0e84230",
-      "urls": [
-        "https://api.example.com"
-      ]
+      "urls": []
     },
     {
       "path": "formatters/overview.md",
       "sha256": "b93a96da9d0f6c033433a516b38b185225be11b9aa18e5fc97227d78e74eafa7",
       "urls": [
         "https://biomejs.dev/formatter/",
-        "https://prettier.io/docs/en/"
+        "https://prettier.io/docs/"
       ]
     },
     {
@@ -28,7 +26,7 @@
       "path": "formatters/prettier.md",
       "sha256": "61e0881f6ee1eb297eba4540782e28dc362a547a006a9f1468fbccdcb41d9a0b",
       "urls": [
-        "https://prettier.io/docs/en/options.html"
+        "https://prettier.io/docs/options.html"
       ]
     },
     {
@@ -91,7 +89,6 @@
       "path": "spec.md",
       "sha256": "abdd03cc11acba074d92640c56acc8bb76b71ba04adb520e28583c13233075f2",
       "urls": [
-        "https://api.example.com",
         "https://www.typescriptlang.org/docs/handbook/"
       ]
     },
@@ -105,7 +102,6 @@
       "sha256": "477b9e0cacb4529de4ee93a64bb8a4755588dd75fb9a45b0afb0cbf669e60b29",
       "urls": [
         "https://biomejs.dev/linter/",
-        "https://biomejs.dev/linter/rules/",
         "https://biomejs.dev/schemas/2.3.10/schema.json"
       ]
     },
@@ -118,7 +114,7 @@
       "path": "linters/biome/no-debugger.md",
       "sha256": "7885055c598e41f649f16ff74a8808f21c430a65f354763e2dab3bcc55a28b80",
       "urls": [
-        "https://biomejs.dev/linter/rules/no-debugger"
+        "https://biomejs.dev/linter/rules/no-debugger/"
       ]
     },
     {

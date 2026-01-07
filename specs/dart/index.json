@@ -1,15 +1,20 @@
 {
   "language": "dart",
-  "fetchedAt": "2026-01-04T18:52:50Z",
+  "fetchedAt": "2026-01-06T01:57:37Z",
   "counts": {
-    "spec": 1,
+    "spec": 2,
     "stdlib": 1,
-    "linters": 85,
+    "linters": 253,
     "formatters": 2,
     "patterns": 1
   },
   "categories": {
     "spec": [
+      {
+        "category": "spec",
+        "path": "generation-checklist.md",
+        "name": "generation-checklist"
+      },
       {
         "category": "spec",
         "path": "spec.md",
@@ -26,53 +31,173 @@
     "linters": [
       {
         "category": "linters",
-        "path": "linters/dart-linter/noop.md",
-        "name": "linters/dart-linter/noop"
+        "path": "linters/dart-linter/unnecessary_string_interpolations.md",
+        "name": "linters/dart-linter/unnecessary_string_interpolations"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/document.md",
-        "name": "linters/dart-linter/document"
+        "path": "linters/dart-linter/package_names.md",
+        "name": "linters/dart-linter/package_names"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/implementation.md",
-        "name": "linters/dart-linter/implementation"
+        "path": "linters/dart-linter/omit_local_variable_types.md",
+        "name": "linters/dart-linter/omit_local_variable_types"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/do.md",
-        "name": "linters/dart-linter/do"
+        "path": "linters/dart-linter/use_is_even_rather_than_modulo.md",
+        "name": "linters/dart-linter/use_is_even_rather_than_modulo"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/throw.md",
-        "name": "linters/dart-linter/throw"
+        "path": "linters/dart-linter/always_put_required_named_parameters_first.md",
+        "name": "linters/dart-linter/always_put_required_named_parameters_first"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/exhaustive.md",
-        "name": "linters/dart-linter/exhaustive"
+        "path": "linters/dart-linter/invalid_runtime_check_with_js_interop_types.md",
+        "name": "linters/dart-linter/invalid_runtime_check_with_js_interop_types"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/prefer.md",
-        "name": "linters/dart-linter/prefer"
+        "path": "linters/dart-linter/prefer_generic_function_type_aliases.md",
+        "name": "linters/dart-linter/prefer_generic_function_type_aliases"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/depend.md",
-        "name": "linters/dart-linter/depend"
+        "path": "linters/dart-linter/cancel_subscriptions.md",
+        "name": "linters/dart-linter/cancel_subscriptions"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/collection.md",
-        "name": "linters/dart-linter/collection"
+        "path": "linters/dart-linter/prefer_foreach.md",
+        "name": "linters/dart-linter/prefer_foreach"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/tighten.md",
-        "name": "linters/dart-linter/tighten"
+        "path": "linters/dart-linter/type_annotate_public_apis.md",
+        "name": "linters/dart-linter/type_annotate_public_apis"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/exhaustive_cases.md",
+        "name": "linters/dart-linter/exhaustive_cases"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_typing_uninitialized_variables.md",
+        "name": "linters/dart-linter/prefer_typing_uninitialized_variables"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/tighten_type_of_initializing_formals.md",
+        "name": "linters/dart-linter/tighten_type_of_initializing_formals"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/specify_nonobvious_local_variable_types.md",
+        "name": "linters/dart-linter/specify_nonobvious_local_variable_types"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/combinators_ordering.md",
+        "name": "linters/dart-linter/combinators_ordering"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/library_annotations.md",
+        "name": "linters/dart-linter/library_annotations"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_relative_lib_imports.md",
+        "name": "linters/dart-linter/avoid_relative_lib_imports"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/file_names.md",
+        "name": "linters/dart-linter/file_names"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_initializing_formals.md",
+        "name": "linters/dart-linter/prefer_initializing_formals"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/library_prefixes.md",
+        "name": "linters/dart-linter/library_prefixes"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/require_trailing_commas.md",
+        "name": "linters/dart-linter/require_trailing_commas"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_double_and_int_checks.md",
+        "name": "linters/dart-linter/avoid_double_and_int_checks"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_multiple_declarations_per_line.md",
+        "name": "linters/dart-linter/avoid_multiple_declarations_per_line"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_conditional_assignment.md",
+        "name": "linters/dart-linter/prefer_conditional_assignment"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_to_and_as_if_applicable.md",
+        "name": "linters/dart-linter/use_to_and_as_if_applicable"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_returning_null_for_void.md",
+        "name": "linters/dart-linter/avoid_returning_null_for_void"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/annotate_redeclares.md",
+        "name": "linters/dart-linter/annotate_redeclares"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_test_throws_matchers.md",
+        "name": "linters/dart-linter/use_test_throws_matchers"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_enums.md",
+        "name": "linters/dart-linter/use_enums"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_if_elements_to_conditional_expressions.md",
+        "name": "linters/dart-linter/prefer_if_elements_to_conditional_expressions"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_final_in_for_each.md",
+        "name": "linters/dart-linter/prefer_final_in_for_each"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/parameter_assignments.md",
+        "name": "linters/dart-linter/parameter_assignments"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_null_aware_method_calls.md",
+        "name": "linters/dart-linter/prefer_null_aware_method_calls"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/no_leading_underscores_for_library_prefixes.md",
+        "name": "linters/dart-linter/no_leading_underscores_for_library_prefixes"
       },
       {
         "category": "linters",
@@ -81,178 +206,623 @@
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/diagnostic.md",
-        "name": "linters/dart-linter/diagnostic"
+        "path": "linters/dart-linter/no_literal_bool_comparisons.md",
+        "name": "linters/dart-linter/no_literal_bool_comparisons"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/hash.md",
-        "name": "linters/dart-linter/hash"
+        "path": "linters/dart-linter/unnecessary_string_escapes.md",
+        "name": "linters/dart-linter/unnecessary_string_escapes"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/matching.md",
-        "name": "linters/dart-linter/matching"
+        "path": "linters/dart-linter/only_throw_errors.md",
+        "name": "linters/dart-linter/only_throw_errors"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/avoid.md",
-        "name": "linters/dart-linter/avoid"
+        "path": "linters/dart-linter/prefer_iterable_where.md",
+        "name": "linters/dart-linter/prefer_iterable_where"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/lines.md",
-        "name": "linters/dart-linter/lines"
+        "path": "linters/dart-linter/diagnostic_describe_all_properties.md",
+        "name": "linters/dart-linter/diagnostic_describe_all_properties"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/unsafe.md",
-        "name": "linters/dart-linter/unsafe"
+        "path": "linters/dart-linter/prefer_double_quotes.md",
+        "name": "linters/dart-linter/prefer_double_quotes"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/directives.md",
-        "name": "linters/dart-linter/directives"
+        "path": "linters/dart-linter/unnecessary_to_list_in_spreads.md",
+        "name": "linters/dart-linter/unnecessary_to_list_in_spreads"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/await.md",
-        "name": "linters/dart-linter/await"
+        "path": "linters/dart-linter/prefer_interpolation_to_compose_strings.md",
+        "name": "linters/dart-linter/prefer_interpolation_to_compose_strings"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/file.md",
-        "name": "linters/dart-linter/file"
+        "path": "linters/dart-linter/prefer_const_constructors_in_immutables.md",
+        "name": "linters/dart-linter/prefer_const_constructors_in_immutables"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/camel.md",
-        "name": "linters/dart-linter/camel"
+        "path": "linters/dart-linter/avoid_web_libraries_in_flutter.md",
+        "name": "linters/dart-linter/avoid_web_libraries_in_flutter"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/cascade.md",
-        "name": "linters/dart-linter/cascade"
+        "path": "linters/dart-linter/prefer_final_fields.md",
+        "name": "linters/dart-linter/prefer_final_fields"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/eol.md",
-        "name": "linters/dart-linter/eol"
+        "path": "linters/dart-linter/no_leading_underscores_for_local_identifiers.md",
+        "name": "linters/dart-linter/no_leading_underscores_for_local_identifiers"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/unawaited.md",
-        "name": "linters/dart-linter/unawaited"
+        "path": "linters/dart-linter/avoid_function_literals_in_foreach_calls.md",
+        "name": "linters/dart-linter/avoid_function_literals_in_foreach_calls"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/conditional.md",
-        "name": "linters/dart-linter/conditional"
+        "path": "linters/dart-linter/throw_in_finally.md",
+        "name": "linters/dart-linter/throw_in_finally"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/invariant.md",
-        "name": "linters/dart-linter/invariant"
+        "path": "linters/dart-linter/package_api_docs.md",
+        "name": "linters/dart-linter/package_api_docs"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/constant.md",
-        "name": "linters/dart-linter/constant"
+        "path": "linters/dart-linter/omit_obvious_local_variable_types.md",
+        "name": "linters/dart-linter/omit_obvious_local_variable_types"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/parameter.md",
-        "name": "linters/dart-linter/parameter"
+        "path": "linters/dart-linter/sort_pub_dependencies.md",
+        "name": "linters/dart-linter/sort_pub_dependencies"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/dangling.md",
-        "name": "linters/dart-linter/dangling"
+        "path": "linters/dart-linter/avoid_js_rounded_ints.md",
+        "name": "linters/dart-linter/avoid_js_rounded_ints"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/enable.md",
-        "name": "linters/dart-linter/enable"
+        "path": "linters/dart-linter/missing_code_block_language_in_doc_comment.md",
+        "name": "linters/dart-linter/missing_code_block_language_in_doc_comment"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/require.md",
-        "name": "linters/dart-linter/require"
+        "path": "linters/dart-linter/unnecessary_late.md",
+        "name": "linters/dart-linter/unnecessary_late"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/list.md",
-        "name": "linters/dart-linter/list"
+        "path": "linters/dart-linter/cascade_invocations.md",
+        "name": "linters/dart-linter/cascade_invocations"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/use.md",
-        "name": "linters/dart-linter/use"
+        "path": "linters/dart-linter/use_if_null_to_convert_nulls_to_bools.md",
+        "name": "linters/dart-linter/use_if_null_to_convert_nulls_to_bools"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/close.md",
-        "name": "linters/dart-linter/close"
+        "path": "linters/dart-linter/collection_methods_unrelated_type.md",
+        "name": "linters/dart-linter/collection_methods_unrelated_type"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/library.md",
-        "name": "linters/dart-linter/library"
+        "path": "linters/dart-linter/super_goes_last.md",
+        "name": "linters/dart-linter/super_goes_last"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/valid.md",
-        "name": "linters/dart-linter/valid"
+        "path": "linters/dart-linter/use_truncating_division.md",
+        "name": "linters/dart-linter/use_truncating_division"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/overridden.md",
-        "name": "linters/dart-linter/overridden"
+        "path": "linters/dart-linter/use_full_hex_values_for_flutter_colors.md",
+        "name": "linters/dart-linter/use_full_hex_values_for_flutter_colors"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/unreachable.md",
-        "name": "linters/dart-linter/unreachable"
+        "path": "linters/dart-linter/avoid_private_typedef_functions.md",
+        "name": "linters/dart-linter/avoid_private_typedef_functions"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/discarded.md",
-        "name": "linters/dart-linter/discarded"
+        "path": "linters/dart-linter/avoid_void_async.md",
+        "name": "linters/dart-linter/avoid_void_async"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/unintended.md",
-        "name": "linters/dart-linter/unintended"
+        "path": "linters/dart-linter/no_duplicate_case_values.md",
+        "name": "linters/dart-linter/no_duplicate_case_values"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/comment.md",
-        "name": "linters/dart-linter/comment"
+        "path": "linters/dart-linter/null_closures.md",
+        "name": "linters/dart-linter/null_closures"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/combinators.md",
-        "name": "linters/dart-linter/combinators"
+        "path": "linters/dart-linter/prefer_equal_for_default_values.md",
+        "name": "linters/dart-linter/prefer_equal_for_default_values"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/slash.md",
-        "name": "linters/dart-linter/slash"
+        "path": "linters/dart-linter/unnecessary_const.md",
+        "name": "linters/dart-linter/unnecessary_const"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/flutter.md",
-        "name": "linters/dart-linter/flutter"
+        "path": "linters/dart-linter/prefer_collection_literals.md",
+        "name": "linters/dart-linter/prefer_collection_literals"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/cancel.md",
-        "name": "linters/dart-linter/cancel"
+        "path": "linters/dart-linter/avoid_futureor_void.md",
+        "name": "linters/dart-linter/avoid_futureor_void"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/always.md",
-        "name": "linters/dart-linter/always"
+        "path": "linters/dart-linter/sized_box_for_whitespace.md",
+        "name": "linters/dart-linter/sized_box_for_whitespace"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_final_parameters.md",
+        "name": "linters/dart-linter/avoid_final_parameters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/always_use_package_imports.md",
+        "name": "linters/dart-linter/always_use_package_imports"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_positional_boolean_parameters.md",
+        "name": "linters/dart-linter/avoid_positional_boolean_parameters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/always_put_control_body_on_new_line.md",
+        "name": "linters/dart-linter/always_put_control_body_on_new_line"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/no_runtime.md",
+        "name": "linters/dart-linter/no_runtime"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_empty_else.md",
+        "name": "linters/dart-linter/avoid_empty_else"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_this.md",
+        "name": "linters/dart-linter/unnecessary_this"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/provide_deprecation_message.md",
+        "name": "linters/dart-linter/provide_deprecation_message"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/implicit_reopen.md",
+        "name": "linters/dart-linter/implicit_reopen"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_return_types_on_setters.md",
+        "name": "linters/dart-linter/avoid_return_types_on_setters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/recursive_getters.md",
+        "name": "linters/dart-linter/recursive_getters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/empty_catches.md",
+        "name": "linters/dart-linter/empty_catches"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_types_on_closure_parameters.md",
+        "name": "linters/dart-linter/avoid_types_on_closure_parameters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_escaping_inner_quotes.md",
+        "name": "linters/dart-linter/avoid_escaping_inner_quotes"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/discarded_futures.md",
+        "name": "linters/dart-linter/discarded_futures"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_setters_to_change_properties.md",
+        "name": "linters/dart-linter/use_setters_to_change_properties"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/dangling_library_doc_comments.md",
+        "name": "linters/dart-linter/dangling_library_doc_comments"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_raw_strings.md",
+        "name": "linters/dart-linter/unnecessary_raw_strings"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/type_literal_in_constant_pattern.md",
+        "name": "linters/dart-linter/type_literal_in_constant_pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/no_default_cases.md",
+        "name": "linters/dart-linter/no_default_cases"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/annotate_overrides.md",
+        "name": "linters/dart-linter/annotate_overrides"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/specify_nonobvious_property_types.md",
+        "name": "linters/dart-linter/specify_nonobvious_property_types"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_raw_strings.md",
+        "name": "linters/dart-linter/use_raw_strings"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_catching_errors.md",
+        "name": "linters/dart-linter/avoid_catching_errors"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/camel_case_types.md",
+        "name": "linters/dart-linter/camel_case_types"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_dynamic_calls.md",
+        "name": "linters/dart-linter/avoid_dynamic_calls"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_named_constants.md",
+        "name": "linters/dart-linter/use_named_constants"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/overridden_fields.md",
+        "name": "linters/dart-linter/overridden_fields"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/deprecated_consistency.md",
+        "name": "linters/dart-linter/deprecated_consistency"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_renaming_method_parameters.md",
+        "name": "linters/dart-linter/avoid_renaming_method_parameters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unawaited_futures.md",
+        "name": "linters/dart-linter/unawaited_futures"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/invalid_case_patterns.md",
+        "name": "linters/dart-linter/invalid_case_patterns"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/list_remove_unrelated_type.md",
+        "name": "linters/dart-linter/list_remove_unrelated_type"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_catches_without_on_clauses.md",
+        "name": "linters/dart-linter/avoid_catches_without_on_clauses"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/one_member_abstracts.md",
+        "name": "linters/dart-linter/one_member_abstracts"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unsafe_html.md",
+        "name": "linters/dart-linter/unsafe_html"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_brace_in_string_interps.md",
+        "name": "linters/dart-linter/unnecessary_brace_in_string_interps"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_bool_literals_in_conditional_expressions.md",
+        "name": "linters/dart-linter/avoid_bool_literals_in_conditional_expressions"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_null_aware_assignments.md",
+        "name": "linters/dart-linter/unnecessary_null_aware_assignments"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_rethrow_when_possible.md",
+        "name": "linters/dart-linter/use_rethrow_when_possible"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_function_declarations_over_variables.md",
+        "name": "linters/dart-linter/prefer_function_declarations_over_variables"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/package_prefixed_library_names.md",
+        "name": "linters/dart-linter/package_prefixed_library_names"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_slow_async_io.md",
+        "name": "linters/dart-linter/avoid_slow_async_io"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/implicit_call_tearoffs.md",
+        "name": "linters/dart-linter/implicit_call_tearoffs"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/depend_on_referenced_packages.md",
+        "name": "linters/dart-linter/depend_on_referenced_packages"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_string_in_part_of_directives.md",
+        "name": "linters/dart-linter/use_string_in_part_of_directives"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/remove_deprecations_in_breaking_versions.md",
+        "name": "linters/dart-linter/remove_deprecations_in_breaking_versions"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/public_member_api_docs.md",
+        "name": "linters/dart-linter/public_member_api_docs"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/lines_longer_than_80_chars.md",
+        "name": "linters/dart-linter/lines_longer_than_80_chars"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_equals_and_hash_code_on_mutable_classes.md",
+        "name": "linters/dart-linter/avoid_equals_and_hash_code_on_mutable_classes"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_getters_setters.md",
+        "name": "linters/dart-linter/unnecessary_getters_setters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_late_for_private_fields_and_variables.md",
+        "name": "linters/dart-linter/use_late_for_private_fields_and_variables"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_void_to_null.md",
+        "name": "linters/dart-linter/prefer_void_to_null"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/empty_constructor_bodies.md",
+        "name": "linters/dart-linter/empty_constructor_bodies"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_mixin.md",
+        "name": "linters/dart-linter/prefer_mixin"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_null_in_if_null_operators.md",
+        "name": "linters/dart-linter/unnecessary_null_in_if_null_operators"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_shadowing_type_parameters.md",
+        "name": "linters/dart-linter/avoid_shadowing_type_parameters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/omit_obvious_property_types.md",
+        "name": "linters/dart-linter/omit_obvious_property_types"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_async.md",
+        "name": "linters/dart-linter/unnecessary_async"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_types_as_parameter_names.md",
+        "name": "linters/dart-linter/avoid_types_as_parameter_names"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/control_flow_in_finally.md",
+        "name": "linters/dart-linter/control_flow_in_finally"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_overrides.md",
+        "name": "linters/dart-linter/unnecessary_overrides"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/always_specify_types.md",
+        "name": "linters/dart-linter/always_specify_types"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/invariant_booleans.md",
+        "name": "linters/dart-linter/invariant_booleans"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_redundant_argument_values.md",
+        "name": "linters/dart-linter/avoid_redundant_argument_values"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_if_null_operators.md",
+        "name": "linters/dart-linter/prefer_if_null_operators"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_constructors_over_static_methods.md",
+        "name": "linters/dart-linter/prefer_constructors_over_static_methods"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/valid_regexps.md",
+        "name": "linters/dart-linter/valid_regexps"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/void_checks.md",
+        "name": "linters/dart-linter/void_checks"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/comment_references.md",
+        "name": "linters/dart-linter/comment_references"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/slash_for_doc_comments.md",
+        "name": "linters/dart-linter/slash_for_doc_comments"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_for_elements_to_map_from.md",
+        "name": "linters/dart-linter/prefer_for_elements_to_map_from"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_asserts_with_message.md",
+        "name": "linters/dart-linter/prefer_asserts_with_message"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_relative_imports.md",
+        "name": "linters/dart-linter/prefer_relative_imports"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/empty_statements.md",
+        "name": "linters/dart-linter/empty_statements"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/sort_child_properties_last.md",
+        "name": "linters/dart-linter/sort_child_properties_last"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_unstable_final_fields.md",
+        "name": "linters/dart-linter/avoid_unstable_final_fields"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_unnecessary_containers.md",
+        "name": "linters/dart-linter/avoid_unnecessary_containers"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_constructor_name.md",
+        "name": "linters/dart-linter/unnecessary_constructor_name"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_implementing_value_types.md",
+        "name": "linters/dart-linter/avoid_implementing_value_types"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/await_only_futures.md",
+        "name": "linters/dart-linter/await_only_futures"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_int_literals.md",
+        "name": "linters/dart-linter/prefer_int_literals"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/literal_only_boolean_expressions.md",
+        "name": "linters/dart-linter/literal_only_boolean_expressions"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_library_name.md",
+        "name": "linters/dart-linter/unnecessary_library_name"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_decorated_box.md",
+        "name": "linters/dart-linter/use_decorated_box"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_bool_in_asserts.md",
+        "name": "linters/dart-linter/prefer_bool_in_asserts"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_type_to_string.md",
+        "name": "linters/dart-linter/avoid_type_to_string"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_statements.md",
+        "name": "linters/dart-linter/unnecessary_statements"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/join_return_with_assignment.md",
+        "name": "linters/dart-linter/join_return_with_assignment"
       },
       {
         "category": "linters",
@@ -261,93 +831,323 @@
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/literal.md",
-        "name": "linters/dart-linter/literal"
+        "path": "linters/dart-linter/do_not_use_environment.md",
+        "name": "linters/dart-linter/do_not_use_environment"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/simplify.md",
-        "name": "linters/dart-linter/simplify"
+        "path": "linters/dart-linter/unreachable_from_main.md",
+        "name": "linters/dart-linter/unreachable_from_main"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/omit.md",
-        "name": "linters/dart-linter/omit"
+        "path": "linters/dart-linter/matching_super_parameters.md",
+        "name": "linters/dart-linter/matching_super_parameters"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/package.md",
-        "name": "linters/dart-linter/package"
+        "path": "linters/dart-linter/unnecessary_breaks.md",
+        "name": "linters/dart-linter/unnecessary_breaks"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/missing.md",
-        "name": "linters/dart-linter/missing"
+        "path": "linters/dart-linter/curly_braces_in_flow_control_structures.md",
+        "name": "linters/dart-linter/curly_braces_in_flow_control_structures"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/iterable.md",
-        "name": "linters/dart-linter/iterable"
+        "path": "linters/dart-linter/prefer_single_quotes.md",
+        "name": "linters/dart-linter/prefer_single_quotes"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/public.md",
-        "name": "linters/dart-linter/public"
+        "path": "linters/dart-linter/prefer_expression_function_bodies.md",
+        "name": "linters/dart-linter/prefer_expression_function_bodies"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/provide.md",
-        "name": "linters/dart-linter/provide"
+        "path": "linters/dart-linter/unnecessary_final.md",
+        "name": "linters/dart-linter/unnecessary_final"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/sized.md",
-        "name": "linters/dart-linter/sized"
+        "path": "linters/dart-linter/prefer_const_declarations.md",
+        "name": "linters/dart-linter/prefer_const_declarations"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/cast.md",
-        "name": "linters/dart-linter/cast"
+        "path": "linters/dart-linter/eol_at_end_of_file.md",
+        "name": "linters/dart-linter/eol_at_end_of_file"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/one.md",
-        "name": "linters/dart-linter/one"
+        "path": "linters/dart-linter/always_declare_return_types.md",
+        "name": "linters/dart-linter/always_declare_return_types"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/unnecessary.md",
-        "name": "linters/dart-linter/unnecessary"
+        "path": "linters/dart-linter/avoid_annotating_with_dynamic.md",
+        "name": "linters/dart-linter/avoid_annotating_with_dynamic"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/curly.md",
-        "name": "linters/dart-linter/curly"
+        "path": "linters/dart-linter/unnecessary_ignore.md",
+        "name": "linters/dart-linter/unnecessary_ignore"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/specify.md",
-        "name": "linters/dart-linter/specify"
+        "path": "linters/dart-linter/avoid_null_checks_in_equality_operators.md",
+        "name": "linters/dart-linter/avoid_null_checks_in_equality_operators"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/switch.md",
-        "name": "linters/dart-linter/switch"
+        "path": "linters/dart-linter/camel_case_extensions.md",
+        "name": "linters/dart-linter/camel_case_extensions"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/super.md",
-        "name": "linters/dart-linter/super"
+        "path": "linters/dart-linter/secure_pubspec_urls.md",
+        "name": "linters/dart-linter/secure_pubspec_urls"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/join.md",
-        "name": "linters/dart-linter/join"
+        "path": "linters/dart-linter/prefer_asserts_in_initializer_lists.md",
+        "name": "linters/dart-linter/prefer_asserts_in_initializer_lists"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/annotate.md",
-        "name": "linters/dart-linter/annotate"
+        "path": "linters/dart-linter/avoid_returning_null.md",
+        "name": "linters/dart-linter/avoid_returning_null"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/sort_constructors_first.md",
+        "name": "linters/dart-linter/sort_constructors_first"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_super_parameters.md",
+        "name": "linters/dart-linter/use_super_parameters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_string_buffers.md",
+        "name": "linters/dart-linter/use_string_buffers"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_is_not_operator.md",
+        "name": "linters/dart-linter/prefer_is_not_operator"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_nullable_for_final_variable_declarations.md",
+        "name": "linters/dart-linter/unnecessary_nullable_for_final_variable_declarations"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/strict_top_level_inference.md",
+        "name": "linters/dart-linter/strict_top_level_inference"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_setters_without_getters.md",
+        "name": "linters/dart-linter/avoid_setters_without_getters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/flutter_style_todos.md",
+        "name": "linters/dart-linter/flutter_style_todos"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_returning_null_for_future.md",
+        "name": "linters/dart-linter/avoid_returning_null_for_future"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_const_constructors.md",
+        "name": "linters/dart-linter/prefer_const_constructors"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/test_types_in_equals.md",
+        "name": "linters/dart-linter/test_types_in_equals"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unsafe_variance.md",
+        "name": "linters/dart-linter/unsafe_variance"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_contains.md",
+        "name": "linters/dart-linter/prefer_contains"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_as.md",
+        "name": "linters/dart-linter/avoid_as"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_returning_this.md",
+        "name": "linters/dart-linter/avoid_returning_this"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/library_names.md",
+        "name": "linters/dart-linter/library_names"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/directives_ordering.md",
+        "name": "linters/dart-linter/directives_ordering"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_final_parameters.md",
+        "name": "linters/dart-linter/prefer_final_parameters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_underscores.md",
+        "name": "linters/dart-linter/unnecessary_underscores"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_null_aware_operator_on_extension_on_nullable.md",
+        "name": "linters/dart-linter/unnecessary_null_aware_operator_on_extension_on_nullable"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_print.md",
+        "name": "linters/dart-linter/avoid_print"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/always_require_non_null_named_parameters.md",
+        "name": "linters/dart-linter/always_require_non_null_named_parameters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_adjacent_string_concatenation.md",
+        "name": "linters/dart-linter/prefer_adjacent_string_concatenation"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/missing_whitespace_between_adjacent_strings.md",
+        "name": "linters/dart-linter/missing_whitespace_between_adjacent_strings"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/no_logic_in_create_state.md",
+        "name": "linters/dart-linter/no_logic_in_create_state"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_library_directive.md",
+        "name": "linters/dart-linter/unnecessary_library_directive"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/leading_newlines_in_multiline_strings.md",
+        "name": "linters/dart-linter/leading_newlines_in_multiline_strings"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/iterable_contains_unrelated_type.md",
+        "name": "linters/dart-linter/iterable_contains_unrelated_type"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_classes_with_only_static_members.md",
+        "name": "linters/dart-linter/avoid_classes_with_only_static_members"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/simplify_variable_pattern.md",
+        "name": "linters/dart-linter/simplify_variable_pattern"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/non_constant_identifier_names.md",
+        "name": "linters/dart-linter/non_constant_identifier_names"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_function_type_syntax_for_parameters.md",
+        "name": "linters/dart-linter/use_function_type_syntax_for_parameters"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unrelated_type_equality_checks.md",
+        "name": "linters/dart-linter/unrelated_type_equality_checks"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_init_to_null.md",
+        "name": "linters/dart-linter/avoid_init_to_null"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/type_init_formals.md",
+        "name": "linters/dart-linter/type_init_formals"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/noop_primitive_operations.md",
+        "name": "linters/dart-linter/noop_primitive_operations"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/avoid_field_initializers_in_const_classes.md",
+        "name": "linters/dart-linter/avoid_field_initializers_in_const_classes"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_is_empty.md",
+        "name": "linters/dart-linter/prefer_is_empty"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_key_in_widget_constructors.md",
+        "name": "linters/dart-linter/use_key_in_widget_constructors"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/switch_on_type.md",
+        "name": "linters/dart-linter/switch_on_type"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_lambdas.md",
+        "name": "linters/dart-linter/unnecessary_lambdas"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_null_checks.md",
+        "name": "linters/dart-linter/unnecessary_null_checks"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/implementation_imports.md",
+        "name": "linters/dart-linter/implementation_imports"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unnecessary_unawaited.md",
+        "name": "linters/dart-linter/unnecessary_unawaited"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_build_context_synchronously.md",
+        "name": "linters/dart-linter/use_build_context_synchronously"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_null_aware_elements.md",
+        "name": "linters/dart-linter/use_null_aware_elements"
       },
       {
         "category": "linters",
@@ -356,98 +1156,143 @@
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/implicit.md",
-        "name": "linters/dart-linter/implicit"
+        "path": "linters/dart-linter/avoid_single_cascade_in_expression_statements.md",
+        "name": "linters/dart-linter/avoid_single_cascade_in_expression_statements"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/no.md",
-        "name": "linters/dart-linter/no"
+        "path": "linters/dart-linter/prefer_is_not_empty.md",
+        "name": "linters/dart-linter/prefer_is_not_empty"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/test.md",
-        "name": "linters/dart-linter/test"
+        "path": "linters/dart-linter/document_ignores.md",
+        "name": "linters/dart-linter/document_ignores"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/type.md",
-        "name": "linters/dart-linter/type"
+        "path": "linters/dart-linter/sized_box_shrink_expand.md",
+        "name": "linters/dart-linter/sized_box_shrink_expand"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/only.md",
-        "name": "linters/dart-linter/only"
+        "path": "linters/dart-linter/unnecessary_await_in_return.md",
+        "name": "linters/dart-linter/unnecessary_await_in_return"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/void.md",
-        "name": "linters/dart-linter/void"
+        "path": "linters/dart-linter/no_wildcard_variable_uses.md",
+        "name": "linters/dart-linter/no_wildcard_variable_uses"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/recursive.md",
-        "name": "linters/dart-linter/recursive"
+        "path": "linters/dart-linter/avoid_unused_constructor_parameters.md",
+        "name": "linters/dart-linter/avoid_unused_constructor_parameters"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/strict.md",
-        "name": "linters/dart-linter/strict"
+        "path": "linters/dart-linter/deprecated_member_use_from_same_package.md",
+        "name": "linters/dart-linter/deprecated_member_use_from_same_package"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/null.md",
-        "name": "linters/dart-linter/null"
+        "path": "linters/dart-linter/hash_and_equals.md",
+        "name": "linters/dart-linter/hash_and_equals"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/sort.md",
-        "name": "linters/dart-linter/sort"
+        "path": "linters/dart-linter/prefer_null_aware_operators.md",
+        "name": "linters/dart-linter/prefer_null_aware_operators"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/unrelated.md",
-        "name": "linters/dart-linter/unrelated"
+        "path": "linters/dart-linter/no_adjacent_strings_in_list.md",
+        "name": "linters/dart-linter/no_adjacent_strings_in_list"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/secure.md",
-        "name": "linters/dart-linter/secure"
+        "path": "linters/dart-linter/conditional_uri_does_not_exist.md",
+        "name": "linters/dart-linter/conditional_uri_does_not_exist"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/remove.md",
-        "name": "linters/dart-linter/remove"
+        "path": "linters/dart-linter/library_private_types_in_public_api.md",
+        "name": "linters/dart-linter/library_private_types_in_public_api"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/leading.md",
-        "name": "linters/dart-linter/leading"
+        "path": "linters/dart-linter/unnecessary_parenthesis.md",
+        "name": "linters/dart-linter/unnecessary_parenthesis"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/empty.md",
-        "name": "linters/dart-linter/empty"
+        "path": "linters/dart-linter/prefer_final_locals.md",
+        "name": "linters/dart-linter/prefer_final_locals"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/deprecated.md",
-        "name": "linters/dart-linter/deprecated"
+        "path": "linters/dart-linter/cast_nullable_to_non_nullable.md",
+        "name": "linters/dart-linter/cast_nullable_to_non_nullable"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/invalid.md",
-        "name": "linters/dart-linter/invalid"
+        "path": "linters/dart-linter/unnecessary_new.md",
+        "name": "linters/dart-linter/unnecessary_new"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/control.md",
-        "name": "linters/dart-linter/control"
+        "path": "linters/dart-linter/sort_unnamed_constructors_first.md",
+        "name": "linters/dart-linter/sort_unnamed_constructors_first"
       },
       {
         "category": "linters",
-        "path": "linters/dart-linter/non.md",
-        "name": "linters/dart-linter/non"
+        "path": "linters/dart-linter/close_sinks.md",
+        "name": "linters/dart-linter/close_sinks"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_const_literals_to_create_immutables.md",
+        "name": "linters/dart-linter/prefer_const_literals_to_create_immutables"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_inlined_adds.md",
+        "name": "linters/dart-linter/prefer_inlined_adds"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/prefer_spread_collections.md",
+        "name": "linters/dart-linter/prefer_spread_collections"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/constant_identifier_names.md",
+        "name": "linters/dart-linter/constant_identifier_names"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/null_check_on_nullable_type_parameter.md",
+        "name": "linters/dart-linter/null_check_on_nullable_type_parameter"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/use_colored_box.md",
+        "name": "linters/dart-linter/use_colored_box"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/no_self_assignments.md",
+        "name": "linters/dart-linter/no_self_assignments"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/enable_null_safety.md",
+        "name": "linters/dart-linter/enable_null_safety"
+      },
+      {
+        "category": "linters",
+        "path": "linters/dart-linter/unintended_html_in_doc_comment.md",
+        "name": "linters/dart-linter/unintended_html_in_doc_comment"
       }
     ],
     "formatters": [
@@ -473,6 +1318,11 @@
   "items": [
     {
       "category": "spec",
+      "path": "generation-checklist.md",
+      "name": "generation-checklist"
+    },
+    {
+      "category": "spec",
       "path": "spec.md",
       "name": "spec"
     },
@@ -483,53 +1333,173 @@
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/noop.md",
-      "name": "linters/dart-linter/noop"
+      "path": "linters/dart-linter/unnecessary_string_interpolations.md",
+      "name": "linters/dart-linter/unnecessary_string_interpolations"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/document.md",
-      "name": "linters/dart-linter/document"
+      "path": "linters/dart-linter/package_names.md",
+      "name": "linters/dart-linter/package_names"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/implementation.md",
-      "name": "linters/dart-linter/implementation"
+      "path": "linters/dart-linter/omit_local_variable_types.md",
+      "name": "linters/dart-linter/omit_local_variable_types"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/do.md",
-      "name": "linters/dart-linter/do"
+      "path": "linters/dart-linter/use_is_even_rather_than_modulo.md",
+      "name": "linters/dart-linter/use_is_even_rather_than_modulo"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/throw.md",
-      "name": "linters/dart-linter/throw"
+      "path": "linters/dart-linter/always_put_required_named_parameters_first.md",
+      "name": "linters/dart-linter/always_put_required_named_parameters_first"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/exhaustive.md",
-      "name": "linters/dart-linter/exhaustive"
+      "path": "linters/dart-linter/invalid_runtime_check_with_js_interop_types.md",
+      "name": "linters/dart-linter/invalid_runtime_check_with_js_interop_types"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/prefer.md",
-      "name": "linters/dart-linter/prefer"
+      "path": "linters/dart-linter/prefer_generic_function_type_aliases.md",
+      "name": "linters/dart-linter/prefer_generic_function_type_aliases"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/depend.md",
-      "name": "linters/dart-linter/depend"
+      "path": "linters/dart-linter/cancel_subscriptions.md",
+      "name": "linters/dart-linter/cancel_subscriptions"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/collection.md",
-      "name": "linters/dart-linter/collection"
+      "path": "linters/dart-linter/prefer_foreach.md",
+      "name": "linters/dart-linter/prefer_foreach"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/tighten.md",
-      "name": "linters/dart-linter/tighten"
+      "path": "linters/dart-linter/type_annotate_public_apis.md",
+      "name": "linters/dart-linter/type_annotate_public_apis"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/exhaustive_cases.md",
+      "name": "linters/dart-linter/exhaustive_cases"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_typing_uninitialized_variables.md",
+      "name": "linters/dart-linter/prefer_typing_uninitialized_variables"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/tighten_type_of_initializing_formals.md",
+      "name": "linters/dart-linter/tighten_type_of_initializing_formals"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/specify_nonobvious_local_variable_types.md",
+      "name": "linters/dart-linter/specify_nonobvious_local_variable_types"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/combinators_ordering.md",
+      "name": "linters/dart-linter/combinators_ordering"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/library_annotations.md",
+      "name": "linters/dart-linter/library_annotations"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_relative_lib_imports.md",
+      "name": "linters/dart-linter/avoid_relative_lib_imports"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/file_names.md",
+      "name": "linters/dart-linter/file_names"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_initializing_formals.md",
+      "name": "linters/dart-linter/prefer_initializing_formals"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/library_prefixes.md",
+      "name": "linters/dart-linter/library_prefixes"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/require_trailing_commas.md",
+      "name": "linters/dart-linter/require_trailing_commas"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_double_and_int_checks.md",
+      "name": "linters/dart-linter/avoid_double_and_int_checks"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_multiple_declarations_per_line.md",
+      "name": "linters/dart-linter/avoid_multiple_declarations_per_line"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_conditional_assignment.md",
+      "name": "linters/dart-linter/prefer_conditional_assignment"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_to_and_as_if_applicable.md",
+      "name": "linters/dart-linter/use_to_and_as_if_applicable"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_returning_null_for_void.md",
+      "name": "linters/dart-linter/avoid_returning_null_for_void"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/annotate_redeclares.md",
+      "name": "linters/dart-linter/annotate_redeclares"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_test_throws_matchers.md",
+      "name": "linters/dart-linter/use_test_throws_matchers"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_enums.md",
+      "name": "linters/dart-linter/use_enums"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_if_elements_to_conditional_expressions.md",
+      "name": "linters/dart-linter/prefer_if_elements_to_conditional_expressions"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_final_in_for_each.md",
+      "name": "linters/dart-linter/prefer_final_in_for_each"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/parameter_assignments.md",
+      "name": "linters/dart-linter/parameter_assignments"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_null_aware_method_calls.md",
+      "name": "linters/dart-linter/prefer_null_aware_method_calls"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/no_leading_underscores_for_library_prefixes.md",
+      "name": "linters/dart-linter/no_leading_underscores_for_library_prefixes"
     },
     {
       "category": "linters",
@@ -538,178 +1508,623 @@
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/diagnostic.md",
-      "name": "linters/dart-linter/diagnostic"
+      "path": "linters/dart-linter/no_literal_bool_comparisons.md",
+      "name": "linters/dart-linter/no_literal_bool_comparisons"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/hash.md",
-      "name": "linters/dart-linter/hash"
+      "path": "linters/dart-linter/unnecessary_string_escapes.md",
+      "name": "linters/dart-linter/unnecessary_string_escapes"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/matching.md",
-      "name": "linters/dart-linter/matching"
+      "path": "linters/dart-linter/only_throw_errors.md",
+      "name": "linters/dart-linter/only_throw_errors"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/avoid.md",
-      "name": "linters/dart-linter/avoid"
+      "path": "linters/dart-linter/prefer_iterable_where.md",
+      "name": "linters/dart-linter/prefer_iterable_where"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/lines.md",
-      "name": "linters/dart-linter/lines"
+      "path": "linters/dart-linter/diagnostic_describe_all_properties.md",
+      "name": "linters/dart-linter/diagnostic_describe_all_properties"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/unsafe.md",
-      "name": "linters/dart-linter/unsafe"
+      "path": "linters/dart-linter/prefer_double_quotes.md",
+      "name": "linters/dart-linter/prefer_double_quotes"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/directives.md",
-      "name": "linters/dart-linter/directives"
+      "path": "linters/dart-linter/unnecessary_to_list_in_spreads.md",
+      "name": "linters/dart-linter/unnecessary_to_list_in_spreads"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/await.md",
-      "name": "linters/dart-linter/await"
+      "path": "linters/dart-linter/prefer_interpolation_to_compose_strings.md",
+      "name": "linters/dart-linter/prefer_interpolation_to_compose_strings"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/file.md",
-      "name": "linters/dart-linter/file"
+      "path": "linters/dart-linter/prefer_const_constructors_in_immutables.md",
+      "name": "linters/dart-linter/prefer_const_constructors_in_immutables"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/camel.md",
-      "name": "linters/dart-linter/camel"
+      "path": "linters/dart-linter/avoid_web_libraries_in_flutter.md",
+      "name": "linters/dart-linter/avoid_web_libraries_in_flutter"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/cascade.md",
-      "name": "linters/dart-linter/cascade"
+      "path": "linters/dart-linter/prefer_final_fields.md",
+      "name": "linters/dart-linter/prefer_final_fields"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/eol.md",
-      "name": "linters/dart-linter/eol"
+      "path": "linters/dart-linter/no_leading_underscores_for_local_identifiers.md",
+      "name": "linters/dart-linter/no_leading_underscores_for_local_identifiers"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/unawaited.md",
-      "name": "linters/dart-linter/unawaited"
+      "path": "linters/dart-linter/avoid_function_literals_in_foreach_calls.md",
+      "name": "linters/dart-linter/avoid_function_literals_in_foreach_calls"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/conditional.md",
-      "name": "linters/dart-linter/conditional"
+      "path": "linters/dart-linter/throw_in_finally.md",
+      "name": "linters/dart-linter/throw_in_finally"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/invariant.md",
-      "name": "linters/dart-linter/invariant"
+      "path": "linters/dart-linter/package_api_docs.md",
+      "name": "linters/dart-linter/package_api_docs"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/constant.md",
-      "name": "linters/dart-linter/constant"
+      "path": "linters/dart-linter/omit_obvious_local_variable_types.md",
+      "name": "linters/dart-linter/omit_obvious_local_variable_types"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/parameter.md",
-      "name": "linters/dart-linter/parameter"
+      "path": "linters/dart-linter/sort_pub_dependencies.md",
+      "name": "linters/dart-linter/sort_pub_dependencies"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/dangling.md",
-      "name": "linters/dart-linter/dangling"
+      "path": "linters/dart-linter/avoid_js_rounded_ints.md",
+      "name": "linters/dart-linter/avoid_js_rounded_ints"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/enable.md",
-      "name": "linters/dart-linter/enable"
+      "path": "linters/dart-linter/missing_code_block_language_in_doc_comment.md",
+      "name": "linters/dart-linter/missing_code_block_language_in_doc_comment"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/require.md",
-      "name": "linters/dart-linter/require"
+      "path": "linters/dart-linter/unnecessary_late.md",
+      "name": "linters/dart-linter/unnecessary_late"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/list.md",
-      "name": "linters/dart-linter/list"
+      "path": "linters/dart-linter/cascade_invocations.md",
+      "name": "linters/dart-linter/cascade_invocations"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/use.md",
-      "name": "linters/dart-linter/use"
+      "path": "linters/dart-linter/use_if_null_to_convert_nulls_to_bools.md",
+      "name": "linters/dart-linter/use_if_null_to_convert_nulls_to_bools"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/close.md",
-      "name": "linters/dart-linter/close"
+      "path": "linters/dart-linter/collection_methods_unrelated_type.md",
+      "name": "linters/dart-linter/collection_methods_unrelated_type"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/library.md",
-      "name": "linters/dart-linter/library"
+      "path": "linters/dart-linter/super_goes_last.md",
+      "name": "linters/dart-linter/super_goes_last"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/valid.md",
-      "name": "linters/dart-linter/valid"
+      "path": "linters/dart-linter/use_truncating_division.md",
+      "name": "linters/dart-linter/use_truncating_division"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/overridden.md",
-      "name": "linters/dart-linter/overridden"
+      "path": "linters/dart-linter/use_full_hex_values_for_flutter_colors.md",
+      "name": "linters/dart-linter/use_full_hex_values_for_flutter_colors"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/unreachable.md",
-      "name": "linters/dart-linter/unreachable"
+      "path": "linters/dart-linter/avoid_private_typedef_functions.md",
+      "name": "linters/dart-linter/avoid_private_typedef_functions"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/discarded.md",
-      "name": "linters/dart-linter/discarded"
+      "path": "linters/dart-linter/avoid_void_async.md",
+      "name": "linters/dart-linter/avoid_void_async"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/unintended.md",
-      "name": "linters/dart-linter/unintended"
+      "path": "linters/dart-linter/no_duplicate_case_values.md",
+      "name": "linters/dart-linter/no_duplicate_case_values"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/comment.md",
-      "name": "linters/dart-linter/comment"
+      "path": "linters/dart-linter/null_closures.md",
+      "name": "linters/dart-linter/null_closures"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/combinators.md",
-      "name": "linters/dart-linter/combinators"
+      "path": "linters/dart-linter/prefer_equal_for_default_values.md",
+      "name": "linters/dart-linter/prefer_equal_for_default_values"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/slash.md",
-      "name": "linters/dart-linter/slash"
+      "path": "linters/dart-linter/unnecessary_const.md",
+      "name": "linters/dart-linter/unnecessary_const"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/flutter.md",
-      "name": "linters/dart-linter/flutter"
+      "path": "linters/dart-linter/prefer_collection_literals.md",
+      "name": "linters/dart-linter/prefer_collection_literals"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/cancel.md",
-      "name": "linters/dart-linter/cancel"
+      "path": "linters/dart-linter/avoid_futureor_void.md",
+      "name": "linters/dart-linter/avoid_futureor_void"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/always.md",
-      "name": "linters/dart-linter/always"
+      "path": "linters/dart-linter/sized_box_for_whitespace.md",
+      "name": "linters/dart-linter/sized_box_for_whitespace"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_final_parameters.md",
+      "name": "linters/dart-linter/avoid_final_parameters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/always_use_package_imports.md",
+      "name": "linters/dart-linter/always_use_package_imports"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_positional_boolean_parameters.md",
+      "name": "linters/dart-linter/avoid_positional_boolean_parameters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/always_put_control_body_on_new_line.md",
+      "name": "linters/dart-linter/always_put_control_body_on_new_line"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/no_runtime.md",
+      "name": "linters/dart-linter/no_runtime"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_empty_else.md",
+      "name": "linters/dart-linter/avoid_empty_else"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_this.md",
+      "name": "linters/dart-linter/unnecessary_this"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/provide_deprecation_message.md",
+      "name": "linters/dart-linter/provide_deprecation_message"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/implicit_reopen.md",
+      "name": "linters/dart-linter/implicit_reopen"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_return_types_on_setters.md",
+      "name": "linters/dart-linter/avoid_return_types_on_setters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/recursive_getters.md",
+      "name": "linters/dart-linter/recursive_getters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/empty_catches.md",
+      "name": "linters/dart-linter/empty_catches"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_types_on_closure_parameters.md",
+      "name": "linters/dart-linter/avoid_types_on_closure_parameters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_escaping_inner_quotes.md",
+      "name": "linters/dart-linter/avoid_escaping_inner_quotes"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/discarded_futures.md",
+      "name": "linters/dart-linter/discarded_futures"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_setters_to_change_properties.md",
+      "name": "linters/dart-linter/use_setters_to_change_properties"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/dangling_library_doc_comments.md",
+      "name": "linters/dart-linter/dangling_library_doc_comments"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_raw_strings.md",
+      "name": "linters/dart-linter/unnecessary_raw_strings"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/type_literal_in_constant_pattern.md",
+      "name": "linters/dart-linter/type_literal_in_constant_pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/no_default_cases.md",
+      "name": "linters/dart-linter/no_default_cases"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/annotate_overrides.md",
+      "name": "linters/dart-linter/annotate_overrides"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/specify_nonobvious_property_types.md",
+      "name": "linters/dart-linter/specify_nonobvious_property_types"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_raw_strings.md",
+      "name": "linters/dart-linter/use_raw_strings"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_catching_errors.md",
+      "name": "linters/dart-linter/avoid_catching_errors"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/camel_case_types.md",
+      "name": "linters/dart-linter/camel_case_types"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_dynamic_calls.md",
+      "name": "linters/dart-linter/avoid_dynamic_calls"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_named_constants.md",
+      "name": "linters/dart-linter/use_named_constants"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/overridden_fields.md",
+      "name": "linters/dart-linter/overridden_fields"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/deprecated_consistency.md",
+      "name": "linters/dart-linter/deprecated_consistency"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_renaming_method_parameters.md",
+      "name": "linters/dart-linter/avoid_renaming_method_parameters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unawaited_futures.md",
+      "name": "linters/dart-linter/unawaited_futures"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/invalid_case_patterns.md",
+      "name": "linters/dart-linter/invalid_case_patterns"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/list_remove_unrelated_type.md",
+      "name": "linters/dart-linter/list_remove_unrelated_type"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_catches_without_on_clauses.md",
+      "name": "linters/dart-linter/avoid_catches_without_on_clauses"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/one_member_abstracts.md",
+      "name": "linters/dart-linter/one_member_abstracts"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unsafe_html.md",
+      "name": "linters/dart-linter/unsafe_html"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_brace_in_string_interps.md",
+      "name": "linters/dart-linter/unnecessary_brace_in_string_interps"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_bool_literals_in_conditional_expressions.md",
+      "name": "linters/dart-linter/avoid_bool_literals_in_conditional_expressions"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_null_aware_assignments.md",
+      "name": "linters/dart-linter/unnecessary_null_aware_assignments"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_rethrow_when_possible.md",
+      "name": "linters/dart-linter/use_rethrow_when_possible"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_function_declarations_over_variables.md",
+      "name": "linters/dart-linter/prefer_function_declarations_over_variables"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/package_prefixed_library_names.md",
+      "name": "linters/dart-linter/package_prefixed_library_names"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_slow_async_io.md",
+      "name": "linters/dart-linter/avoid_slow_async_io"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/implicit_call_tearoffs.md",
+      "name": "linters/dart-linter/implicit_call_tearoffs"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/depend_on_referenced_packages.md",
+      "name": "linters/dart-linter/depend_on_referenced_packages"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_string_in_part_of_directives.md",
+      "name": "linters/dart-linter/use_string_in_part_of_directives"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/remove_deprecations_in_breaking_versions.md",
+      "name": "linters/dart-linter/remove_deprecations_in_breaking_versions"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/public_member_api_docs.md",
+      "name": "linters/dart-linter/public_member_api_docs"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/lines_longer_than_80_chars.md",
+      "name": "linters/dart-linter/lines_longer_than_80_chars"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_equals_and_hash_code_on_mutable_classes.md",
+      "name": "linters/dart-linter/avoid_equals_and_hash_code_on_mutable_classes"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_getters_setters.md",
+      "name": "linters/dart-linter/unnecessary_getters_setters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_late_for_private_fields_and_variables.md",
+      "name": "linters/dart-linter/use_late_for_private_fields_and_variables"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_void_to_null.md",
+      "name": "linters/dart-linter/prefer_void_to_null"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/empty_constructor_bodies.md",
+      "name": "linters/dart-linter/empty_constructor_bodies"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_mixin.md",
+      "name": "linters/dart-linter/prefer_mixin"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_null_in_if_null_operators.md",
+      "name": "linters/dart-linter/unnecessary_null_in_if_null_operators"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_shadowing_type_parameters.md",
+      "name": "linters/dart-linter/avoid_shadowing_type_parameters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/omit_obvious_property_types.md",
+      "name": "linters/dart-linter/omit_obvious_property_types"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_async.md",
+      "name": "linters/dart-linter/unnecessary_async"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_types_as_parameter_names.md",
+      "name": "linters/dart-linter/avoid_types_as_parameter_names"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/control_flow_in_finally.md",
+      "name": "linters/dart-linter/control_flow_in_finally"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_overrides.md",
+      "name": "linters/dart-linter/unnecessary_overrides"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/always_specify_types.md",
+      "name": "linters/dart-linter/always_specify_types"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/invariant_booleans.md",
+      "name": "linters/dart-linter/invariant_booleans"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_redundant_argument_values.md",
+      "name": "linters/dart-linter/avoid_redundant_argument_values"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_if_null_operators.md",
+      "name": "linters/dart-linter/prefer_if_null_operators"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_constructors_over_static_methods.md",
+      "name": "linters/dart-linter/prefer_constructors_over_static_methods"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/valid_regexps.md",
+      "name": "linters/dart-linter/valid_regexps"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/void_checks.md",
+      "name": "linters/dart-linter/void_checks"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/comment_references.md",
+      "name": "linters/dart-linter/comment_references"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/slash_for_doc_comments.md",
+      "name": "linters/dart-linter/slash_for_doc_comments"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_for_elements_to_map_from.md",
+      "name": "linters/dart-linter/prefer_for_elements_to_map_from"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_asserts_with_message.md",
+      "name": "linters/dart-linter/prefer_asserts_with_message"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_relative_imports.md",
+      "name": "linters/dart-linter/prefer_relative_imports"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/empty_statements.md",
+      "name": "linters/dart-linter/empty_statements"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/sort_child_properties_last.md",
+      "name": "linters/dart-linter/sort_child_properties_last"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_unstable_final_fields.md",
+      "name": "linters/dart-linter/avoid_unstable_final_fields"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_unnecessary_containers.md",
+      "name": "linters/dart-linter/avoid_unnecessary_containers"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_constructor_name.md",
+      "name": "linters/dart-linter/unnecessary_constructor_name"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_implementing_value_types.md",
+      "name": "linters/dart-linter/avoid_implementing_value_types"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/await_only_futures.md",
+      "name": "linters/dart-linter/await_only_futures"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_int_literals.md",
+      "name": "linters/dart-linter/prefer_int_literals"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/literal_only_boolean_expressions.md",
+      "name": "linters/dart-linter/literal_only_boolean_expressions"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_library_name.md",
+      "name": "linters/dart-linter/unnecessary_library_name"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_decorated_box.md",
+      "name": "linters/dart-linter/use_decorated_box"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_bool_in_asserts.md",
+      "name": "linters/dart-linter/prefer_bool_in_asserts"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_type_to_string.md",
+      "name": "linters/dart-linter/avoid_type_to_string"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_statements.md",
+      "name": "linters/dart-linter/unnecessary_statements"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/join_return_with_assignment.md",
+      "name": "linters/dart-linter/join_return_with_assignment"
     },
     {
       "category": "linters",
@@ -718,93 +2133,323 @@
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/literal.md",
-      "name": "linters/dart-linter/literal"
+      "path": "linters/dart-linter/do_not_use_environment.md",
+      "name": "linters/dart-linter/do_not_use_environment"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/simplify.md",
-      "name": "linters/dart-linter/simplify"
+      "path": "linters/dart-linter/unreachable_from_main.md",
+      "name": "linters/dart-linter/unreachable_from_main"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/omit.md",
-      "name": "linters/dart-linter/omit"
+      "path": "linters/dart-linter/matching_super_parameters.md",
+      "name": "linters/dart-linter/matching_super_parameters"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/package.md",
-      "name": "linters/dart-linter/package"
+      "path": "linters/dart-linter/unnecessary_breaks.md",
+      "name": "linters/dart-linter/unnecessary_breaks"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/missing.md",
-      "name": "linters/dart-linter/missing"
+      "path": "linters/dart-linter/curly_braces_in_flow_control_structures.md",
+      "name": "linters/dart-linter/curly_braces_in_flow_control_structures"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/iterable.md",
-      "name": "linters/dart-linter/iterable"
+      "path": "linters/dart-linter/prefer_single_quotes.md",
+      "name": "linters/dart-linter/prefer_single_quotes"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/public.md",
-      "name": "linters/dart-linter/public"
+      "path": "linters/dart-linter/prefer_expression_function_bodies.md",
+      "name": "linters/dart-linter/prefer_expression_function_bodies"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/provide.md",
-      "name": "linters/dart-linter/provide"
+      "path": "linters/dart-linter/unnecessary_final.md",
+      "name": "linters/dart-linter/unnecessary_final"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/sized.md",
-      "name": "linters/dart-linter/sized"
+      "path": "linters/dart-linter/prefer_const_declarations.md",
+      "name": "linters/dart-linter/prefer_const_declarations"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/cast.md",
-      "name": "linters/dart-linter/cast"
+      "path": "linters/dart-linter/eol_at_end_of_file.md",
+      "name": "linters/dart-linter/eol_at_end_of_file"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/one.md",
-      "name": "linters/dart-linter/one"
+      "path": "linters/dart-linter/always_declare_return_types.md",
+      "name": "linters/dart-linter/always_declare_return_types"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/unnecessary.md",
-      "name": "linters/dart-linter/unnecessary"
+      "path": "linters/dart-linter/avoid_annotating_with_dynamic.md",
+      "name": "linters/dart-linter/avoid_annotating_with_dynamic"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/curly.md",
-      "name": "linters/dart-linter/curly"
+      "path": "linters/dart-linter/unnecessary_ignore.md",
+      "name": "linters/dart-linter/unnecessary_ignore"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/specify.md",
-      "name": "linters/dart-linter/specify"
+      "path": "linters/dart-linter/avoid_null_checks_in_equality_operators.md",
+      "name": "linters/dart-linter/avoid_null_checks_in_equality_operators"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/switch.md",
-      "name": "linters/dart-linter/switch"
+      "path": "linters/dart-linter/camel_case_extensions.md",
+      "name": "linters/dart-linter/camel_case_extensions"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/super.md",
-      "name": "linters/dart-linter/super"
+      "path": "linters/dart-linter/secure_pubspec_urls.md",
+      "name": "linters/dart-linter/secure_pubspec_urls"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/join.md",
-      "name": "linters/dart-linter/join"
+      "path": "linters/dart-linter/prefer_asserts_in_initializer_lists.md",
+      "name": "linters/dart-linter/prefer_asserts_in_initializer_lists"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/annotate.md",
-      "name": "linters/dart-linter/annotate"
+      "path": "linters/dart-linter/avoid_returning_null.md",
+      "name": "linters/dart-linter/avoid_returning_null"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/sort_constructors_first.md",
+      "name": "linters/dart-linter/sort_constructors_first"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_super_parameters.md",
+      "name": "linters/dart-linter/use_super_parameters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_string_buffers.md",
+      "name": "linters/dart-linter/use_string_buffers"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_is_not_operator.md",
+      "name": "linters/dart-linter/prefer_is_not_operator"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_nullable_for_final_variable_declarations.md",
+      "name": "linters/dart-linter/unnecessary_nullable_for_final_variable_declarations"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/strict_top_level_inference.md",
+      "name": "linters/dart-linter/strict_top_level_inference"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_setters_without_getters.md",
+      "name": "linters/dart-linter/avoid_setters_without_getters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/flutter_style_todos.md",
+      "name": "linters/dart-linter/flutter_style_todos"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_returning_null_for_future.md",
+      "name": "linters/dart-linter/avoid_returning_null_for_future"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_const_constructors.md",
+      "name": "linters/dart-linter/prefer_const_constructors"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/test_types_in_equals.md",
+      "name": "linters/dart-linter/test_types_in_equals"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unsafe_variance.md",
+      "name": "linters/dart-linter/unsafe_variance"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_contains.md",
+      "name": "linters/dart-linter/prefer_contains"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_as.md",
+      "name": "linters/dart-linter/avoid_as"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_returning_this.md",
+      "name": "linters/dart-linter/avoid_returning_this"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/library_names.md",
+      "name": "linters/dart-linter/library_names"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/directives_ordering.md",
+      "name": "linters/dart-linter/directives_ordering"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_final_parameters.md",
+      "name": "linters/dart-linter/prefer_final_parameters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_underscores.md",
+      "name": "linters/dart-linter/unnecessary_underscores"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_null_aware_operator_on_extension_on_nullable.md",
+      "name": "linters/dart-linter/unnecessary_null_aware_operator_on_extension_on_nullable"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_print.md",
+      "name": "linters/dart-linter/avoid_print"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/always_require_non_null_named_parameters.md",
+      "name": "linters/dart-linter/always_require_non_null_named_parameters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_adjacent_string_concatenation.md",
+      "name": "linters/dart-linter/prefer_adjacent_string_concatenation"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/missing_whitespace_between_adjacent_strings.md",
+      "name": "linters/dart-linter/missing_whitespace_between_adjacent_strings"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/no_logic_in_create_state.md",
+      "name": "linters/dart-linter/no_logic_in_create_state"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_library_directive.md",
+      "name": "linters/dart-linter/unnecessary_library_directive"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/leading_newlines_in_multiline_strings.md",
+      "name": "linters/dart-linter/leading_newlines_in_multiline_strings"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/iterable_contains_unrelated_type.md",
+      "name": "linters/dart-linter/iterable_contains_unrelated_type"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_classes_with_only_static_members.md",
+      "name": "linters/dart-linter/avoid_classes_with_only_static_members"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/simplify_variable_pattern.md",
+      "name": "linters/dart-linter/simplify_variable_pattern"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/non_constant_identifier_names.md",
+      "name": "linters/dart-linter/non_constant_identifier_names"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_function_type_syntax_for_parameters.md",
+      "name": "linters/dart-linter/use_function_type_syntax_for_parameters"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unrelated_type_equality_checks.md",
+      "name": "linters/dart-linter/unrelated_type_equality_checks"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_init_to_null.md",
+      "name": "linters/dart-linter/avoid_init_to_null"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/type_init_formals.md",
+      "name": "linters/dart-linter/type_init_formals"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/noop_primitive_operations.md",
+      "name": "linters/dart-linter/noop_primitive_operations"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/avoid_field_initializers_in_const_classes.md",
+      "name": "linters/dart-linter/avoid_field_initializers_in_const_classes"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_is_empty.md",
+      "name": "linters/dart-linter/prefer_is_empty"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_key_in_widget_constructors.md",
+      "name": "linters/dart-linter/use_key_in_widget_constructors"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/switch_on_type.md",
+      "name": "linters/dart-linter/switch_on_type"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_lambdas.md",
+      "name": "linters/dart-linter/unnecessary_lambdas"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_null_checks.md",
+      "name": "linters/dart-linter/unnecessary_null_checks"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/implementation_imports.md",
+      "name": "linters/dart-linter/implementation_imports"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unnecessary_unawaited.md",
+      "name": "linters/dart-linter/unnecessary_unawaited"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_build_context_synchronously.md",
+      "name": "linters/dart-linter/use_build_context_synchronously"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_null_aware_elements.md",
+      "name": "linters/dart-linter/use_null_aware_elements"
     },
     {
       "category": "linters",
@@ -813,98 +2458,143 @@
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/implicit.md",
-      "name": "linters/dart-linter/implicit"
+      "path": "linters/dart-linter/avoid_single_cascade_in_expression_statements.md",
+      "name": "linters/dart-linter/avoid_single_cascade_in_expression_statements"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/no.md",
-      "name": "linters/dart-linter/no"
+      "path": "linters/dart-linter/prefer_is_not_empty.md",
+      "name": "linters/dart-linter/prefer_is_not_empty"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/test.md",
-      "name": "linters/dart-linter/test"
+      "path": "linters/dart-linter/document_ignores.md",
+      "name": "linters/dart-linter/document_ignores"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/type.md",
-      "name": "linters/dart-linter/type"
+      "path": "linters/dart-linter/sized_box_shrink_expand.md",
+      "name": "linters/dart-linter/sized_box_shrink_expand"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/only.md",
-      "name": "linters/dart-linter/only"
+      "path": "linters/dart-linter/unnecessary_await_in_return.md",
+      "name": "linters/dart-linter/unnecessary_await_in_return"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/void.md",
-      "name": "linters/dart-linter/void"
+      "path": "linters/dart-linter/no_wildcard_variable_uses.md",
+      "name": "linters/dart-linter/no_wildcard_variable_uses"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/recursive.md",
-      "name": "linters/dart-linter/recursive"
+      "path": "linters/dart-linter/avoid_unused_constructor_parameters.md",
+      "name": "linters/dart-linter/avoid_unused_constructor_parameters"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/strict.md",
-      "name": "linters/dart-linter/strict"
+      "path": "linters/dart-linter/deprecated_member_use_from_same_package.md",
+      "name": "linters/dart-linter/deprecated_member_use_from_same_package"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/null.md",
-      "name": "linters/dart-linter/null"
+      "path": "linters/dart-linter/hash_and_equals.md",
+      "name": "linters/dart-linter/hash_and_equals"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/sort.md",
-      "name": "linters/dart-linter/sort"
+      "path": "linters/dart-linter/prefer_null_aware_operators.md",
+      "name": "linters/dart-linter/prefer_null_aware_operators"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/unrelated.md",
-      "name": "linters/dart-linter/unrelated"
+      "path": "linters/dart-linter/no_adjacent_strings_in_list.md",
+      "name": "linters/dart-linter/no_adjacent_strings_in_list"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/secure.md",
-      "name": "linters/dart-linter/secure"
+      "path": "linters/dart-linter/conditional_uri_does_not_exist.md",
+      "name": "linters/dart-linter/conditional_uri_does_not_exist"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/remove.md",
-      "name": "linters/dart-linter/remove"
+      "path": "linters/dart-linter/library_private_types_in_public_api.md",
+      "name": "linters/dart-linter/library_private_types_in_public_api"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/leading.md",
-      "name": "linters/dart-linter/leading"
+      "path": "linters/dart-linter/unnecessary_parenthesis.md",
+      "name": "linters/dart-linter/unnecessary_parenthesis"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/empty.md",
-      "name": "linters/dart-linter/empty"
+      "path": "linters/dart-linter/prefer_final_locals.md",
+      "name": "linters/dart-linter/prefer_final_locals"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/deprecated.md",
-      "name": "linters/dart-linter/deprecated"
+      "path": "linters/dart-linter/cast_nullable_to_non_nullable.md",
+      "name": "linters/dart-linter/cast_nullable_to_non_nullable"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/invalid.md",
-      "name": "linters/dart-linter/invalid"
+      "path": "linters/dart-linter/unnecessary_new.md",
+      "name": "linters/dart-linter/unnecessary_new"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/control.md",
-      "name": "linters/dart-linter/control"
+      "path": "linters/dart-linter/sort_unnamed_constructors_first.md",
+      "name": "linters/dart-linter/sort_unnamed_constructors_first"
     },
     {
       "category": "linters",
-      "path": "linters/dart-linter/non.md",
-      "name": "linters/dart-linter/non"
+      "path": "linters/dart-linter/close_sinks.md",
+      "name": "linters/dart-linter/close_sinks"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_const_literals_to_create_immutables.md",
+      "name": "linters/dart-linter/prefer_const_literals_to_create_immutables"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_inlined_adds.md",
+      "name": "linters/dart-linter/prefer_inlined_adds"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/prefer_spread_collections.md",
+      "name": "linters/dart-linter/prefer_spread_collections"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/constant_identifier_names.md",
+      "name": "linters/dart-linter/constant_identifier_names"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/null_check_on_nullable_type_parameter.md",
+      "name": "linters/dart-linter/null_check_on_nullable_type_parameter"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/use_colored_box.md",
+      "name": "linters/dart-linter/use_colored_box"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/no_self_assignments.md",
+      "name": "linters/dart-linter/no_self_assignments"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/enable_null_safety.md",
+      "name": "linters/dart-linter/enable_null_safety"
+    },
+    {
+      "category": "linters",
+      "path": "linters/dart-linter/unintended_html_in_doc_comment.md",
+      "name": "linters/dart-linter/unintended_html_in_doc_comment"
     },
     {
       "category": "formatters",

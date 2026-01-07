@@ -21,7 +21,7 @@
       "path": "spec.md",
       "sha256": "3590eda43371abd21ec1a774e1fd6554fabce129a04b5e07b95d2a1d790d1763",
       "urls": [
-        "https://docs.docker.com/engine/reference/builder/"
+        "https://docs.docker.com/reference/dockerfile"
       ]
     },
     {

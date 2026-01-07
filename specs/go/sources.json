@@ -5,9 +5,7 @@
     {
       "path": "effective-go.md",
       "sha256": "d8f1b373b3e67771c106239fbc224a1bfb738c21df60ea03c11d1622e998c776",
-      "urls": [
-        "http://chart.apis.google.com/chart?chs=300x300&cht=qr&choe=UTF-8&chl={{.}}"
-      ]
+      "urls": []
     },
     {
       "path": "patterns/proverbs.md",
@@ -28,7 +26,7 @@
       "path": "formatters/goimports.md",
       "sha256": "2c0e19cbe441ff873284e6047ed4152e4b1f7449cf41eac9cef7286d687206ea",
       "urls": [
-        "http://michaelwhatcott.com/gosublime-goimports/",
+        "https://michaelwhatcott.com/gosublime-goimports/",
         "https://cs.opensource.google/go/x/tools",
         "https://cs.opensource.google/go/x/tools/+/v0.40.0:/go.mod",
         "https://cs.opensource.google/go/x/tools/+/v0.40.0:cmd/goimports",
@@ -38,10 +36,10 @@
         "https://deps.dev/go/golang.org%2Fx%2Ftools/v0.40.0",
         "https://github.com/dominikh/go-mode.el",
         "https://go.dev/",
-        "https://go.dev/security/policy",
-        "https://golang.org/change/39c724dd7f252",
-        "https://golang.org/issues/new?title=x/tools/cmd/goimports:+",
-        "https://golang.org/wiki/IDEsAndTextEditorPlugins"
+        "https://go.dev/doc/security/policy",
+        "https://go.googlesource.com/go/+/c4f5421",
+        "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fgolang%2Fgo%2Fissues%2Fnew%3Ftitle%3Dx%2Ftools%2Fcmd%2Fgoimports%3A%2B",
+        "https://go.dev/wiki/IDEsAndTextEditorPlugins"
       ]
     },
     {
@@ -58,8 +56,8 @@
         "https://cs.opensource.google/go/go/+/go1.25.5:src/go.mod",
         "https://deps.dev/go/std/go1.25.5",
         "https://go.dev/",
-        "https://go.dev/about#build-context",
-        "https://go.dev/security/policy"
+        "https://pkg.go.dev/about",
+        "https://go.dev/doc/security/policy"
       ]
     },
     {
@@ -91,7 +89,7 @@
         "https://github.com/tsnewaz",
         "https://github.com/twpayne",
         "https://go.dev/ref/mod#go-mod-file-ignore",
-        "https://invite.slack.golangbridge.org/",
+        "https://gophers.slack.com/join/shared_invite/zt-36e17ogh3-ACjB~mD0PE_iRC_RWZd78w",
         "https://pkg.go.dev/mvdan.cc/gofumpt",
         "https://pkg.go.dev/mvdan.cc/gofumpt/format"
       ]
@@ -124,9 +122,8 @@
         "https://github.com/yolken",
         "https://github.com/yolken-segment",
         "https://go.dev/ref/mod#go-mod-file-go",
-        "https://godoc.org/golang.org/x/tools/cmd/goimports",
-        "https://golang.org/cmd/gofmt/",
-        "https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave",
+        "https://pkg.go.dev/golang.org/x/tools/cmd/goimports?utm_source=godoc",
+        "https://pkg.go.dev/cmd/gofmt",
         "https://yolken.net/blog/cleaner-go-code-golines"
       ]
     },
@@ -134,7 +131,7 @@
       "path": "stdlib/debug-elf.md",
       "sha256": "91583bc368dc1c957923dcdab826dfda35ed059781a30539f5bdb01ffd1d0354",
       "urls": [
-        "https://go.dev/security/policy"
+        "https://go.dev/doc/security/policy"
       ]
     },
     {
@@ -156,13 +153,7 @@
       "path": "stdlib/net-http-pprof.md",
       "sha256": "219667eab964e2e42821caca97d72c18718b86aeffcd0f0cb6f59cd847d4bedc",
       "urls": [
-        "http://localhost:6060/debug/pprof/",
-        "http://localhost:6060/debug/pprof/block",
-        "http://localhost:6060/debug/pprof/heap",
-        "http://localhost:6060/debug/pprof/mutex",
-        "http://localhost:6060/debug/pprof/profile?seconds=30",
-        "http://localhost:6060/debug/pprof/trace?seconds=5",
-        "https://blog.golang.org/2011/06/profiling-go-programs.html"
+        "https://go.dev/blog/pprof"
       ]
     },
     {
@@ -251,10 +242,7 @@
       "path": "stdlib/internal-types-errors.md",
       "sha256": "1cd2cb9dfab257f1cbba7c65162db922268256b650903212d7be3a875c474501",
       "urls": [
-        "https://golang.org/ref/spec#Appending_and_copying_slices",
-        "https://golang.org/ref/spec#Conversions",
-        "https://golang.org/ref/spec#Length_and_capacity",
-        "https://golang.org/ref/spec#Making_slices_maps_and_channels"
+        "https://go.dev/ref/spec"
       ]
     },
     {
@@ -317,7 +305,7 @@
       "sha256": "33e4c3f9a9bd66d66c895f9aaf532eb3b883e8d358f394ef897263ca69c05549",
       "urls": [
         "https://go.dev/doc/gc-guide",
-        "https://golang.org/s/go15heapdump"
+        "https://github.com/golang/go/wiki/heapdump15"
       ]
     },
     {
@@ -329,7 +317,7 @@
       "path": "stdlib/plugin.md",
       "sha256": "94ecbd5c5825c72105e75d6e9128ad910a2ea849a97e044cb80ff062808da398",
       "urls": [
-        "https://go.dev/issue/24245"
+        "https://github.com/golang/go/issues/24245"
       ]
     },
     {
@@ -350,9 +338,7 @@
     {
       "path": "stdlib/testing-synctest.md",
       "sha256": "3890cb99e7c050fce29a7e916219fc08062ef4c0484ab3aa35706224f442f533",
-      "urls": [
-        "http://test.tld/"
-      ]
+      "urls": []
     },
     {
       "path": "stdlib/crypto-internal-fips140deps-cpu.md",
@@ -368,14 +354,14 @@
       "path": "stdlib/runtime-race.md",
       "sha256": "8a2e5a92337c80574c1fe9fc19471435536014629c5f8c834cc69a42eb6f52f2",
       "urls": [
-        "https://golang.org/doc/articles/race_detector.html"
+        "https://go.dev/doc/articles/race_detector"
       ]
     },
     {
       "path": "stdlib/syscall.md",
       "sha256": "9503f074ddfb6a6484eae9d03422245358e5e76ae81f659f892b1038e706f0ef",
       "urls": [
-        "https://golang.org/s/go1.4-syscall"
+        "https://go.googlesource.com/proposal/+/refs/heads/master/design/freeze-syscall.md"
       ]
     },
     {
@@ -449,7 +435,7 @@
       "path": "stdlib/hash.md",
       "sha256": "c402f3d6dda3f48fa894fe1f68b2b3fb350eba5aaa95e8dfa175f38ad16f4fc2",
       "urls": [
-        "https://golang.org/doc/go1compat"
+        "https://go.dev/doc/go1compat"
       ]
     },
     {
@@ -465,16 +451,12 @@
     {
       "path": "stdlib/net-http-httptest.md",
       "sha256": "14f42a84029cbbe7a76edf0c1362a7fc3643714f554af17a1c72abe258501756",
-      "urls": [
-        "http://ipaddr:port"
-      ]
+      "urls": []
     },
     {
       "path": "stdlib/crypto-tls.md",
       "sha256": "93a2af9d7b8c94343c55b1e769a82bf63c1c29f5e39f802ea4756ea7912381c9",
       "urls": [
-        "http://www.isg.rhul.ac.uk/tls/TLStiming.pdf",
-        "https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format",
         "https://go.dev/doc/security/fips140",
         "https://www.iana.org/assignments/tls-parameters/tls-parameters.xml",
         "https://www.iana.org/assignments/tls-parameters/tls-parameters.xml#tls-parameters-8",
@@ -550,7 +532,7 @@
       "path": "stdlib/debug-plan9obj.md",
       "sha256": "e815db56c30913962b38e1a095ea2e664d46829c2ee62b998b3422a8f3e51ddf",
       "urls": [
-        "https://go.dev/security/policy"
+        "https://go.dev/doc/security/policy"
       ]
     },
     {
@@ -567,7 +549,7 @@
       "path": "stdlib/context.md",
       "sha256": "1b6d6bd8a254c777649c6c9d97c649d5bbfc719e02034ab0d431e2656ffd54e4",
       "urls": [
-        "https://blog.golang.org/pipelines",
+        "https://go.dev/blog/pipelines",
         "https://go.dev/blog/context",
         "https://go.dev/blog/context-and-structs"
       ]
@@ -628,7 +610,7 @@
       "path": "stdlib/regexp.md",
       "sha256": "4f3369672b6651c754c8c142d35423e6baa994cb2307908e8318741ed1bf229e",
       "urls": [
-        "https://golang.org/s/re2syntax",
+        "https://github.com/google/re2/wiki/Syntax",
         "https://swtch.com/~rsc/regexp/regexp1.html",
         "https://swtch.com/~rsc/regexp/regexp2.html#posix"
       ]
@@ -642,7 +624,7 @@
       "path": "stdlib/net-rpc-jsonrpc.md",
       "sha256": "2f2fd9576486ab280d1e9d653f9c186e7b67a3b8b4ab3b31890d2db0736f24b4",
       "urls": [
-        "https://godoc.org/?q=json-rpc+2.0"
+        "https://pkg.go.dev/search?q=json-rpc+2.0&utm_source=godoc"
       ]
     },
     {
@@ -661,16 +643,15 @@
       "path": "stdlib/database-sql.md",
       "sha256": "cf09775c48368fd6805fe848878206a8a2d1d57cefa57f9e9928dac84f3b887c",
       "urls": [
-        "https://en.wikipedia.org/wiki/Isolation_(database_systems",
-        "https://golang.org/s/sqldrivers",
-        "https://golang.org/s/sqlwiki"
+        "https://go.dev/wiki/SQLDrivers",
+        "https://go.dev/wiki/SQLInterface"
       ]
     },
     {
       "path": "stdlib/net-smtp.md",
       "sha256": "d7438e77227f4109a694f6bec5c560ac5753e7dabf7c7bf6b1a72016282ed141",
       "urls": [
-        "https://godoc.org/?q=smtp"
+        "https://pkg.go.dev/search?q=smtp&utm_source=godoc"
       ]
     },
     {
@@ -689,7 +670,7 @@
       "path": "stdlib/strings.md",
       "sha256": "76f02c3bd408a1c9db214c2f58ff5d06eede8ab8b5dcc7f67e3cb78b3dcde90b",
       "urls": [
-        "https://blog.golang.org/strings"
+        "https://go.dev/blog/strings"
       ]
     },
     {
@@ -706,8 +687,8 @@
       "path": "stdlib/log-syslog.md",
       "sha256": "6a6d9e1ff0178fd60dd6416e05cd20fd945e3cf1547cdb5d28782b8c96e8bd92",
       "urls": [
-        "https://godoc.org/?q=syslog",
-        "https://golang.org/issue/1108"
+        "https://pkg.go.dev/search?q=syslog&utm_source=godoc",
+        "https://github.com/golang/go/issues/1108"
       ]
     },
     {
@@ -739,8 +720,8 @@
       "path": "stdlib/image.md",
       "sha256": "1d2022c56df1b55c2be83b0c04357f7d975706e83fcab05df8faced6a702159a",
       "urls": [
-        "https://go.dev/security/policy",
-        "https://golang.org/doc/articles/image_package.html"
+        "https://go.dev/doc/security/policy",
+        "https://go.dev/blog/image"
       ]
     },
     {
@@ -771,9 +752,7 @@
     {
       "path": "stdlib/path.md",
       "sha256": "a3f38fae9003347677ee685e59c4cb5d8d94680078ed18e8a990d58fc3373cbd",
-      "urls": [
-        "https://9p.io/sys/doc/lexnames.html"
-      ]
+      "urls": []
     },
     {
       "path": "stdlib/mime-quotedprintable.md",
@@ -784,7 +763,7 @@
       "path": "stdlib/debug-macho.md",
       "sha256": "779201e9fabd90d821ab2d7613358d376018f314eea1073286d2e3e125a8dbe8",
       "urls": [
-        "https://go.dev/security/policy"
+        "https://go.dev/doc/security/policy"
       ]
     },
     {
@@ -835,9 +814,9 @@
       "path": "stdlib/encoding-gob.md",
       "sha256": "1e4574b132b652d6c7ad2688d778113077235a0b7ff42adf81f0da33499fbfd2",
       "urls": [
-        "https://blog.golang.org/gobs-of-data",
-        "https://go.dev/security/policy",
-        "https://golang.org/doc/go1compat"
+        "https://go.dev/blog/gob",
+        "https://go.dev/doc/security/policy",
+        "https://go.dev/doc/go1compat"
       ]
     },
     {
@@ -864,9 +843,9 @@
       "path": "stdlib/reflect.md",
       "sha256": "68ea9ce34aa1cd71d02bc4296321bd621dc4abd50100fa5b8dbb9336e947f0c7",
       "urls": [
-        "https://golang.org/doc/articles/laws_of_reflection.html",
-        "https://golang.org/issue/4876",
-        "https://golang.org/ref/spec#Uniqueness_of_identifiers"
+        "https://go.dev/blog/laws-of-reflection",
+        "https://github.com/golang/go/issues/4876",
+        "https://go.dev/ref/spec"
       ]
     },
     {
@@ -893,24 +872,19 @@
       "path": "stdlib/net-http.md",
       "sha256": "353398dbb557c314543768b28d3a8bc7cdb48e25101919d3537f320224fcdaff",
       "urls": [
-        "http://example.com",
-        "http://example.com/",
-        "http://example.com/form",
-        "http://example.com/upload",
         "https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP",
-        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin",
-        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Origin",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-Site",
         "https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/CSRF",
-        "https://example.com",
-        "https://go.dev/issue/21955",
-        "https://go.dev/issue/67813",
-        "https://golang.org/s/http2bug",
+        "https://github.com/golang/go/issues/21955",
+        "https://github.com/golang/go/issues/67813",
+        "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fgolang%2Fgo%2Fissues%2Fnew%3Ftitle%3Dx%2Fnet%2Fhttp2%3A%2B",
         "https://mimesniff.spec.whatwg.org/",
         "https://pkg.go.dev/net/http#ResponseWriter",
         "https://pkg.go.dev/net/http#example-ResponseWriter-Trailers",
-        "https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00",
-        "https://tools.ietf.org/html/rfc6265",
-        "https://tools.ietf.org/html/rfc7540#section-8.2",
+        "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-cookie-same-site-00",
+        "https://datatracker.ietf.org/doc/html/rfc6265",
+        "https://datatracker.ietf.org/doc/html/rfc7540",
         "https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml"
       ]
     },
@@ -943,7 +917,7 @@
       "path": "stdlib/crypto-internal-fips140-aes-gcm.md",
       "sha256": "2fb012a18202578c04b32fea3a0451521171d1c153bb4d504cbdc93dcd857796",
       "urls": [
-        "https://c2sp.org/XAES-256-GCM"
+        "https://github.com/C2SP/C2SP/blob/main/XAES-256-GCM.md"
       ]
     },
     {
@@ -960,7 +934,7 @@
       "path": "stdlib/internal-chacha8rand.md",
       "sha256": "d7b0714e43a4bfbdbcf1c6429b87b7a6167f6df79d27e0352a38f2137cf96a1d",
       "urls": [
-        "https://c2sp.org/chacha8rand",
+        "https://github.com/C2SP/C2SP/blob/main/chacha8rand.md",
         "https://cr.yp.to/chacha/chacha-20080128.pdf"
       ]
     },
@@ -1020,8 +994,8 @@
       "path": "stdlib/archive-tar.md",
       "sha256": "1ec1aae5770227d1486cc7e8e24db02ea566a33add5364e8270eb13a02f85789",
       "urls": [
-        "http://pubs.opengroup.org/onlinepubs/009695399/utilities/pax.html",
-        "http://pubs.opengroup.org/onlinepubs/9699919799/utilities/pax.html#tag_20_92_13_06",
+        "https://pubs.opengroup.org/onlinepubs/009695399/utilities/pax.html",
+        "https://pubs.opengroup.org/onlinepubs/9699919799/utilities/pax.html",
         "https://www.gnu.org/software/tar/manual/html_node/Standard.html"
       ]
     },
@@ -1044,7 +1018,7 @@
       "path": "stdlib/crypto-mlkem.md",
       "sha256": "9fe140364de34125c592225c54e57720a9bcd3eff4c318889f4230f5991a1dac",
       "urls": [
-        "https://doi.org/10.6028/NIST.FIPS.203"
+        "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf"
       ]
     },
     {
@@ -1063,9 +1037,8 @@
       "path": "stdlib/testing.md",
       "sha256": "00b562ca6b31b9d8266d3f760667006603696c0c0c70742a8c036a948406e185",
       "urls": [
-        "https://go.dev/design/14313-benchmark-format",
-        "https://go.dev/doc/fuzz",
-        "https://golang.org/design/14313-benchmark-format",
+        "https://go.googlesource.com/proposal/+/master/design/14313-benchmark-format.md",
+        "https://go.dev/doc/security/fuzz/",
         "https://pkg.go.dev/cmd/go#hdr-Test_packages",
         "https://pkg.go.dev/cmd/go#hdr-Testing_flags"
       ]
@@ -1084,7 +1057,6 @@
       "path": "stdlib/image-color-palette.md",
       "sha256": "5a9f53a8af53078d005f77509fbfbf60843b22c11dee8c4b371fdfe65cc8989f",
       "urls": [
-        "https://9p.io/magic/man2html/6/color",
         "https://en.wikipedia.org/wiki/Web_colors#Web-safe_colors"
       ]
     },
@@ -1168,8 +1140,8 @@
       "path": "stdlib/debug-dwarf.md",
       "sha256": "0b94d0d0593786aa43957192ac7578f9d263175b1c9e101ad52e658b6351351e",
       "urls": [
-        "http://dwarfstd.org/doc/dwarf-2.0.0.pdf",
-        "https://go.dev/security/policy"
+        "https://dwarfstd.org/doc/dwarf-2.0.0.pdf",
+        "https://go.dev/doc/security/policy"
       ]
     },
     {
@@ -1216,7 +1188,6 @@
       "path": "stdlib/crypto-cipher.md",
       "sha256": "b8b1482d4861d447d4c88df6885fbc37427e3e6bebe1a329bc03978d5d70b598",
       "urls": [
-        "https://csrc.nist.gov/groups/ST/toolkit/BCM/current_modes.html",
         "https://en.wikipedia.org/wiki/Authenticated_encryption"
       ]
     },
@@ -1236,8 +1207,8 @@
       "path": "stdlib/hash-crc32.md",
       "sha256": "675dac636410e9c2c4f2ab09fab726502520c72ccc8eab46a738dd55400b43d2",
       "urls": [
-        "https://dx.doi.org/10.1109/26.231911",
-        "https://dx.doi.org/10.1109/DSN.2002.1028931",
+        "https://ieeexplore.ieee.org/document/231911/",
+        "https://ieeexplore.ieee.org/document/1028931/",
         "https://en.wikipedia.org/wiki/Cyclic_redundancy_check",
         "https://en.wikipedia.org/wiki/Mathematics_of_cyclic_redundancy_checks#Reversed_representations_and_reciprocal_polynomials"
       ]
@@ -1291,8 +1262,8 @@
       "urls": [
         "https://github.com/google/pprof/blob/main/doc/README.md",
         "https://github.com/google/pprof/tree/main/proto#overview",
-        "https://golang.org/issue/13841",
-        "https://golang.org/issue/23458"
+        "https://github.com/golang/go/issues/13841",
+        "https://github.com/golang/go/issues/23458"
       ]
     },
     {
@@ -1313,9 +1284,7 @@
     {
       "path": "stdlib/crypto-subtle.md",
       "sha256": "902440a52df08a24218716b2d39d54417a23d2eaa36cb97518b5da6e9f93ba9d",
-      "urls": [
-        "https://developer.arm.com/documentation/ka005181/1-0/?lang=en"
-      ]
+      "urls": []
     },
     {
       "path": "stdlib/net-http-cgi.md",
@@ -1326,10 +1295,10 @@
       "path": "stdlib/html-template.md",
       "sha256": "d9b825e02336c85aff1e4aaa717b4a5c4158986dcb903bc8985b12d4c6e3374c",
       "urls": [
-        "https://w3c.github.io/html/semantics-embedded-content.html#element-attrdef-img-srcset",
+        "https://html.spec.whatwg.org/multipage/embedded-content.html",
         "https://web.archive.org/web/20090211114933/http://w3.org/TR/css3-syntax#style",
         "https://web.archive.org/web/20160501113828/http://js-quasis-libraries-and-repl.googlecode.com/svn/trunk/safetemplate.html#problem_definition",
-        "https://www.w3.org/TR/css3-syntax/#parsing"
+        "https://www.w3.org/TR/css-syntax-3/"
       ]
     },
     {
@@ -1400,7 +1369,7 @@
       "path": "stdlib/text-tabwriter.md",
       "sha256": "b705ba859bf8729a0508e1fbe03db6462124836d1e82e96610655d56f64b5fbd",
       "urls": [
-        "http://nickgravgaard.com/elastictabstops/index.html"
+        "https://nick-gravgaard.com/elastic-tabstops/"
       ]
     },
     {
@@ -1422,7 +1391,7 @@
       "path": "stdlib/crypto-internal-fips140-mlkem.md",
       "sha256": "19da7e606fe9e45b0841dbf644fbfd5633bfc1fd810480e8f5e0fd197912e05c",
       "urls": [
-        "https://doi.org/10.6028/NIST.FIPS.203"
+        "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf"
       ]
     },
     {
@@ -1529,7 +1498,7 @@
       "path": "stdlib/crypto-internal-fips140-hmac.md",
       "sha256": "36adcd71642ffad42bd3f4a0f3508c7b2866f93dd8aa156bb03007e7042af0b8",
       "urls": [
-        "https://doi.org/10.6028/NIST.FIPS.198-1"
+        "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.198-1.pdf"
       ]
     },
     {
@@ -1597,8 +1566,8 @@
       "path": "stdlib/go-build-constraint.md",
       "sha256": "5e5b4473120d8fd1227def562257cecdb08ce7b2d3281685ac7e4ae9ce22212b",
       "urls": [
-        "https://golang.org/cmd/go/#hdr-Build_constraints",
-        "https://golang.org/design/draft-gobuild"
+        "https://pkg.go.dev/cmd/go",
+        "https://go.googlesource.com/proposal/+/master/design/draft-gobuild.md"
       ]
     },
     {
@@ -1640,7 +1609,7 @@
       "path": "stdlib/net-http-httptrace.md",
       "sha256": "1ccfde494bd940922512ced162a81e16883234e6b5c9e7e3f49b95772c64fbd7",
       "urls": [
-        "https://blog.golang.org/http-tracing"
+        "https://go.dev/blog/http-tracing"
       ]
     },
     {
@@ -1684,9 +1653,9 @@
       "urls": [
         "https://github.com/golang/go/issues/57497",
         "https://go.dev/ref/spec#Underlying_types",
-        "https://go.dev/s/types-tutorial",
-        "https://golang.org/ref/spec#Address_operators",
-        "https://golang.org/s/go15vendor"
+        "https://github.com/golang/example/tree/master/gotypes",
+        "https://go.dev/ref/spec",
+        "https://go.googlesource.com/proposal/+/master/design/25719-go15vendor.md"
       ]
     },
     {
@@ -1717,9 +1686,7 @@
     {
       "path": "stdlib/crypto-ecdsa.md",
       "sha256": "8aa8689d1c30cf536143edcc4f030f93e74609820cc50a2a136326534b60b604",
-      "urls": [
-        "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-5.pdf"
-      ]
+      "urls": []
     },
     {
       "path": "stdlib/crypto-internal-fips140deps-godebug.md",
@@ -1750,10 +1717,8 @@
       "path": "stdlib/debug-pe.md",
       "sha256": "d2b7c1885d342bd1c2b41d79a12cbaf40d2ddc5420e28aead9b2255c9549972a",
       "urls": [
-        "https://docs.microsoft.com/en-us/windows/win32/debug/pe-format#auxiliary-format-5-section-definitions",
-        "https://docs.microsoft.com/en-us/windows/win32/debug/pe-format#auxiliary-symbol-records",
-        "https://docs.microsoft.com/en-us/windows/win32/debug/pe-format#comdat-sections-object-only",
-        "https://go.dev/security/policy"
+        "https://learn.microsoft.com/en-us/windows/win32/debug/pe-format",
+        "https://go.dev/doc/security/policy"
       ]
     },
     {
@@ -1770,7 +1735,7 @@
       "path": "stdlib/os.md",
       "sha256": "2014c38a7797f4fe71536467fdee2d770f68b479879285e07e24276a8df6da49",
       "urls": [
-        "https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html"
+        "https://specifications.freedesktop.org/basedir/basedir-spec-latest.html"
       ]
     },
     {
@@ -1801,7 +1766,7 @@
       "path": "stdlib/image-draw.md",
       "sha256": "c272c7fd8943b9f3934baf81343b18a621a420499b7e1cf43b41f3e56c5677b0",
       "urls": [
-        "https://golang.org/doc/articles/image_draw.html"
+        "https://go.dev/blog/image-draw"
       ]
     },
     {
@@ -1818,18 +1783,16 @@
       "path": "stdlib/log-slog.md",
       "sha256": "8add2644cdf1aabbbc5b3c5844830a0e5f2f4ad4521e93c62cdfcde46556ea14",
       "urls": [
-        "http://example.com",
-        "https://go.dev/s/slog-handler-guide",
-        "https://golang.org/s/slog-handler-guide"
+        "https://github.com/golang/example/blob/master/slog-handler-guide/README.md"
       ]
     },
     {
       "path": "stdlib/go-ast.md",
       "sha256": "60be52d26ce56d10cde8986c41c46415023853af4c980c8d68aa15179964b605",
       "urls": [
-        "https://go.dev/issue/18593",
-        "https://go.dev/issue/20744",
-        "https://go.dev/s/generatedcode"
+        "https://github.com/golang/go/issues/18593",
+        "https://github.com/golang/go/issues/20744",
+        "https://pkg.go.dev/cmd/go"
       ]
     },
     {
@@ -1840,7 +1803,7 @@
         "https://go.dev/doc/gc-guide#Finalizers_cleanups_and_weak_pointers",
         "https://go.dev/doc/gc-guide#Linux_transparent_huge_pages",
         "https://go.dev/doc/godebug#default",
-        "https://go.dev/issue/64332",
+        "https://github.com/golang/go/issues/64332",
         "https://go.dev/ref/spec#Size_and_alignment_guarantees",
         "https://pkg.go.dev/internal/goexperiment"
       ]
@@ -1904,7 +1867,7 @@
       "path": "stdlib/image-png.md",
       "sha256": "daef1d4499e977ac9b8537bcc9b2cab3fcc44235286d66042e0ef342334773fb",
       "urls": [
-        "https://www.w3.org/TR/PNG/"
+        "https://www.w3.org/TR/png/"
       ]
     },
     {
@@ -1959,7 +1922,7 @@
       "sha256": "54a824eca46597ae2d9d2d19b69ff25c56b1dfc6b53202e2529e18309d3da3eb",
       "urls": [
         "https://go.dev/doc/go1compat",
-        "https://golang.org/doc/articles/json_and_go.html"
+        "https://go.dev/blog/json"
       ]
     },
     {
@@ -1980,15 +1943,13 @@
     {
       "path": "stdlib/path-filepath.md",
       "sha256": "7daffa7d54ffb24ea8145d90156fa6da1435a09f0ecabbbf202a024a9891e114",
-      "urls": [
-        "https://9p.io/sys/doc/lexnames.html"
-      ]
+      "urls": []
     },
     {
       "path": "stdlib/net-http-internal-ascii.md",
       "sha256": "b57b99139053ea36af826a8cb3c2e4ff9c924b71d2efed819b002975f5e00e3b",
       "urls": [
-        "https://tools.ietf.org/html/rfc20#section-4.2"
+        "https://datatracker.ietf.org/doc/html/rfc20"
       ]
     },
     {
@@ -2025,7 +1986,7 @@
       "path": "stdlib/encoding-binary.md",
       "sha256": "ce92c0c6491a0f95189cd836dd9975f29aa19ab71b73969030d9e3c721ad3a9b",
       "urls": [
-        "https://developers.google.com/protocol-buffers/docs/encoding"
+        "https://protobuf.dev/programming-guides/encoding/"
       ]
     },
     {
@@ -2104,7 +2065,7 @@
       "path": "stdlib/crypto-rsa.md",
       "sha256": "fbb479f319f7ab1ccaa086be8bfec7b1a7cefd63e2c89a39c19573eb00b4815c",
       "urls": [
-        "http://www.cacr.math.uwaterloo.ca/techreports/2006/cacr2006-16.pdf",
+        "https://cacr.uwaterloo.ca/",
         "https://pkg.go.dev/crypto/rsa#example-GenerateKey-TestKey",
         "https://pkg.go.dev/crypto/rsa#hdr-Minimum_key_size",
         "https://www.rfc-editor.org/rfc/rfc3218.html"
@@ -2128,10 +2089,7 @@
     {
       "path": "stdlib/crypto-internal-fips140-sha3.md",
       "sha256": "cbb573ec6dab1fa3f3bad98392f192fea13f6501092f06cd78da7ab7e94f41ef",
-      "urls": [
-        "https://doi.org/10.6028/NIST.FIPS.202",
-        "https://doi.org/10.6028/NIST.SP.800-185"
-      ]
+      "urls": []
     },
     {
       "path": "stdlib/internal-coverage-test.md",
@@ -2508,7 +2466,7 @@
       "path": "linters/golangci-lint/config.md",
       "sha256": "64012b169cade3b0dc4084ad2bee711134701e17059a025f16fec079a04c671d",
       "urls": [
-        "https://developers.google.com/protocol-buffers/docs/reference/go/faq#modules",
+        "https://protobuf.dev/reference/go/faq/",
         "https://github.com/breml/errchkjson",
         "https://github.com/curioswitch/go-reassign#usage",
         "https://github.com/go-simpler/sloglint?tab=readme-ov-file#context-only",

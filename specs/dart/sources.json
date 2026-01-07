@@ -23,85 +23,65 @@
       "path": "stdlib/overview.md",
       "sha256": "aa494eae7ce4ec114e494c2997745f567de36905620212a0d59258d5a59d473a",
       "urls": [
-        "https://api.dart.dev/stable/"
+        "https://api.dart.dev/"
       ]
     },
     {
       "path": "spec.md",
       "sha256": "2565e546fd41be9b07dcdb6f80f93fa0da62b0836d6f43bc0298e4c927fa663f",
       "urls": [
-        "https://dart.dev/guides/language/spec"
+        "https://dart.dev/resources/language/spec"
       ]
     },
     {
       "path": "linters/dart-linter/noop.md",
       "sha256": "5ea612f78c83958bc8a584a50f6f45291438348bd286e582bae3121a1531ce8a",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/noop"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/document.md",
       "sha256": "93c1ae86256f6332bb9c97fa74ebf0a16b359323c1bacf0099d8cbd171f5993b",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/document"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/implementation.md",
       "sha256": "fe18ec3edac49eb9ebbc749d01633da0e6dd437792e4f36e7f5569449800b47d",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/implementation"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/do.md",
       "sha256": "48bf5dcb6c4fdd976f2233a0669cd7fe3b3d9077fbaf7ea533f51680e122905d",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/do"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/throw.md",
       "sha256": "4f1eca95b0d3284daf0d3e2f4c48049eba368478f924fb8a91c7e28b8b7cf318",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/throw"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/exhaustive.md",
       "sha256": "6a76a853467ccdc5642971259e4aec77c1a20ad34e2b5537920a963a8c4f2d40",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/exhaustive"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/prefer.md",
       "sha256": "539253bcbfd0f0d129d1d3f6218152349465ca04bdde914e2b240b994507e3f1",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/prefer"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/depend.md",
       "sha256": "df49b0e17b6d1838024ae81db4cdac6eeda9a06a29a20834b832f6889ca7a395",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/depend"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/collection.md",
       "sha256": "14b49623873349a9bb4b973cbac2950aeae9599bdc4dd50d14e50dbd651a6e62",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/collection"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/tighten.md",
       "sha256": "615639394dba2ebfac243290accbc39ac972c4cb5c539be758b4fa3283d82a97",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/tighten"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/overview.md",
@@ -113,380 +93,274 @@
     {
       "path": "linters/dart-linter/diagnostic.md",
       "sha256": "0511bc590ff464019e5cca0f9f36453a66b8faaf04c420042f13444b110ec8e7",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/diagnostic"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/hash.md",
       "sha256": "f61ad18e6fe91ef536a7d9a7613470670ff026fd477e14d6124dc33dcd4f1cf0",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/hash"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/matching.md",
       "sha256": "61ac8d173ff36918c0bd15f503d7e38635fa1d67545122ded84f54dfd5385b66",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/matching"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/avoid.md",
       "sha256": "603f8d645b29ed5946d8e2ee59b89d150cd99b49978a3f280f28ac5d9c059947",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/avoid"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/lines.md",
       "sha256": "0c185478be31c89bccb48912193a388f73341291a055b7ad8fc154c43da80e6d",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/lines"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/unsafe.md",
       "sha256": "9d2732f3e6909806d1976fead1a6296a420468706fe570308ca132ed990c7445",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/unsafe"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/directives.md",
       "sha256": "f8174dda6063ca0cbe388eae7f0a3b85d6a63727515dc8b0c49fde843ea2c258",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/directives"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/await.md",
       "sha256": "7ae62a4c81e1342a5c58140b5d6d6da0696a245608ef632cbee7713c79c93c89",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/await"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/file.md",
       "sha256": "034661a9d5f214171562ea8d1e1085cdc8cd53092961c725b1a3f86e557aabfa",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/file"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/camel.md",
       "sha256": "63101afdadede64ab16f0c1c17ae0c57ae9dace5a92ff405532141762b9f4e36",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/camel"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/cascade.md",
       "sha256": "35b3f9e04680e77d1bf9f4de46bb7722ee5c8a291178f8982f57df819b747984",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/cascade"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/eol.md",
       "sha256": "3c25eb7e0c86a28bb2b7e49154bf76c9a88d9ab2cbd7268925d61ac9e47cef31",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/eol"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/unawaited.md",
       "sha256": "314a909bc15087645b8ab163c2123dda3cbb1e65ed6734ed68f460fc3a4182cc",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/unawaited"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/conditional.md",
       "sha256": "dc877bd5f6ea0cfb980868aadbf761b31dae3aa647af7533dbefbe18567c105d",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/conditional"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/invariant.md",
       "sha256": "3c603a376d840a7d666baceb8590c4472220f189e73699660cef4d519355c72d",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/invariant"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/constant.md",
       "sha256": "2dbe1b2ce08373008f8c028d5daa1e954ac9fa8097d3eb8c95cca337d783286d",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/constant"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/parameter.md",
       "sha256": "f68185a628a96db00d3e6e3265a45f11441f2f2c38995746594340b174fc2ee3",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/parameter"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/dangling.md",
       "sha256": "23180c08d008391c0a3639b7f2d1fbfa8783362ee4f88fd040a7c026ed27789b",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/dangling"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/enable.md",
       "sha256": "803598063fc3e175286b3dd0851059ea1786d3afd6c05bbc93b0811197bed143",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/enable"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/require.md",
       "sha256": "c7cc69825ef1357f16ded882b9943e960e5ad72d297951de000df999a04ad2b5",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/require"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/list.md",
       "sha256": "2e043c2966ac75da9047ba12cfc8ad201768fd5c3afdf76ce31a9ab98fa284c4",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/list"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/use.md",
       "sha256": "06bf1a4e9083bf668302b119c2704a1b59b6721e8e0dd9cf2abc40be8c91e9d0",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/use"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/close.md",
       "sha256": "61e275ba6a8415a7738837e8a7a3f0b7dd9de0b8aba20cd4da01fb622919890c",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/close"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/library.md",
       "sha256": "502cc41b6809fe56fbe0171b9bda7c010dbd628ed728e77766749967396962ab",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/library"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/valid.md",
       "sha256": "6059ffcc78dbd37d54303af966246f44a84c236e116f5d7970e6761b6ba2e198",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/valid"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/overridden.md",
       "sha256": "5edd8ea215283f3c76611cd1bc4a8fb928a94f37216b3ce1bfdf82f8d13b90b4",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/overridden"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/unreachable.md",
       "sha256": "b0d547c240a186b92e039ef23860a321c67493d935c9ab85cd6592f59ea8e91f",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/unreachable"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/discarded.md",
       "sha256": "8cc38a4a00201a2732a9d0a39d7ff23ab34558d4db4ef3c185910900a1f1282c",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/discarded"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/unintended.md",
       "sha256": "ad025dddf62819e6476b97f202d35e8004f82f7c9f3bf49ed1a3846778aad2d8",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/unintended"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/comment.md",
       "sha256": "a5da2f22d504c1ac7253556b265716187741021316314e3debb82c617394ff8c",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/comment"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/combinators.md",
       "sha256": "eb1378b294fd1e30a26eb076fbbca2c0d63e78a8111c15165211cdb159ec95b6",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/combinators"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/slash.md",
       "sha256": "daf608af9ccd076731ef530b152847489e8aad3f5edf00220b777d3195a53f8f",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/slash"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/flutter.md",
       "sha256": "a52eaeed76dc5b72b3cfe59194a4f6d09d1910566a78545a598dc06e1a7d7256",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/flutter"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/cancel.md",
       "sha256": "375b70c21212732f2603175a5017df09da94f16cbb10195d34a6be3c9ebd5d65",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/cancel"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/always.md",
       "sha256": "1bb688a9b6df7297a9fdba16525a22415148f391ffbbd2a2e4a1c7942ad3ae3b",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/always"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/index.md",
       "sha256": "26550ba2bb076c2aefb357b5a85e0b8777c3d3e7e57a6373e77b6fb10bc04b07",
       "urls": [
-        "https://dart.dev/tools/linter-rules/index"
+        "https://dart.dev/tools/linter-rules"
       ]
     },
     {
       "path": "linters/dart-linter/literal.md",
       "sha256": "dd37a49fcdb154c8baeceecab5579d3927183046024b33c9677af9379f37f222",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/literal"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/simplify.md",
       "sha256": "284f66a2953f3b94058e8b237ecfb57028bc2d318107029b8ed72626cfdebccc",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/simplify"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/omit.md",
       "sha256": "1fa3873619daafa45922fb544925505178cbc041ab13e5478ca0a6226b909bba",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/omit"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/package.md",
       "sha256": "bd2d6dd83203f0a7052859cd5d9416094c906b0605f602787fb7849db00bf9dd",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/package"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/missing.md",
       "sha256": "30643cd2ee02d342b68b20ffec9b74731a65fdeded9a73bb81e38e391b3beac6",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/missing"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/iterable.md",
       "sha256": "01b5b655b4653c48359ee4f7616e167cd708a8f24cb8a2262485b5691e180e51",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/iterable"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/public.md",
       "sha256": "01a703b0803f29cbf3f164ca4dde272ef2fcdd66d7ea1d52cbe74fcbe0ab62d4",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/public"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/provide.md",
       "sha256": "84b888d29f754e4f82e001f732c989c47cb67a7e8d85be4a968194e85c213127",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/provide"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/sized.md",
       "sha256": "969be288faaf2151e5f708135c50be1dd2a07f9d3799162766db0a8ca9be29c1",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/sized"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/cast.md",
       "sha256": "b45e92cfc8a399262fdefa077efa04707f58c4fe013dfc2ca5e4506d9077c5f4",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/cast"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/one.md",
       "sha256": "98422186812b8ae1cbe83cac497b2edb606bd4eb815ff7b84b551aa0f3f5dd16",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/one"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/unnecessary.md",
       "sha256": "631a639ce1a9c1a71fc00c8b2aec9b1bc27ecda1e90119d138f1500ad62b1cdb",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/unnecessary"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/curly.md",
       "sha256": "e75e2b89c7ae9c48a82f36e64828535e555bab6eb4944a4a0b2984da3ed0b9e0",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/curly"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/specify.md",
       "sha256": "bba6599fe101dfda01e8fdb382e20daa229fb35bf801b21bc3799e1b87871739",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/specify"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/switch.md",
       "sha256": "f86f78ff6905f190612b1b13b2d9bc47f05bf21ea8e8a5358133c2d4d3f04661",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/switch"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/super.md",
       "sha256": "a14b4f54509c87a3dcb5d049efb4b134ecf33d4d0a48deda2fed45c62d004b41",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/super"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/join.md",
       "sha256": "9959120acf6390ace91b4e581e2544e940ba36beaca9b5dd6158d067b13e3fde",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/join"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/annotate.md",
       "sha256": "d5f9c9857e50b2e7d85190870246fd5b3ddeae31c2d93218cf3835766fdfe963",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/annotate"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/all.md",
@@ -498,135 +372,97 @@
     {
       "path": "linters/dart-linter/implicit.md",
       "sha256": "068dbc51ff0493e839675542f5598a605ad9a88b86a3b4e47b8044ea53416804",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/implicit"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/no.md",
       "sha256": "51510bba567a5d189bd4dae688b634eeec4ce9e571ccc4064436b2d9ede7a4c2",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/no"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/test.md",
       "sha256": "41c11499f342abd9db9c7dc65ff8e61c6168d9a252335c49bba2f4494cd9ddf3",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/test"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/type.md",
       "sha256": "e09f191a5d2448e614c58c38b228cd1b042fde13b1423b399316170ecac3b502",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/type"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/only.md",
       "sha256": "0df336546a48ac8f43c5e69d29f4b492f225732d3d6bbcc5092fdc837a4fdac4",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/only"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/void.md",
       "sha256": "fd265add91aa0a65d0e374ebe73bb1ff3c1017b35178baaeb63eb9dc684339a7",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/void"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/recursive.md",
       "sha256": "3269208a8a39822750f1e064ead1aa5985c6f4a89585d5268bd5ef2ed2ea5780",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/recursive"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/strict.md",
       "sha256": "953e033f2d74183e2cfecca3aacfce717e5f1bffc98058db5a004565950778b1",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/strict"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/null.md",
       "sha256": "a3cb0c1407b210679089b0c34a4515dfe083a3430c424f4e321e8189206dec68",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/null"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/sort.md",
       "sha256": "6232265bbebee2956d5b55363094e4c8afb712b0a319ef2121e123ee8a138471",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/sort"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/unrelated.md",
       "sha256": "fe3cef0688d6233a316d4c1f73677b875b88bf6b7fc6d81ca14778c05538dffe",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/unrelated"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/secure.md",
       "sha256": "8369f8ac07a0b7c3419db4c99762447b4a09e35f30d6b027bbd7c43148b4ff2b",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/secure"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/remove.md",
       "sha256": "a1d6ec27dab00342480b666b27fd27743bfacac5a00a827449d30d9e1d9599f6",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/remove"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/leading.md",
       "sha256": "6ae90670bb7723cf9d7092060a5feeaadedbee67d047bce8cae879371a78ac5d",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/leading"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/empty.md",
       "sha256": "dc0a663d75806beba43fbceb1b95e1edad0839dbdcb28b09b44a02edf2394273",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/empty"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/deprecated.md",
       "sha256": "8df0636ffdc5f62d9de99e695ab8508b0433677f13740f010d0ec41c62057d3b",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/deprecated"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/invalid.md",
       "sha256": "d66be5cd6e88a8f4eef5fb2315df01157fc4894b8385266809f452fa80023805",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/invalid"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/control.md",
       "sha256": "f50728acbd8ba7c40650c9c0675ca4ad1142b90af39add375433a0bf56cb60cc",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/control"
-      ]
+      "urls": []
     },
     {
       "path": "linters/dart-linter/non.md",
       "sha256": "4f0668f3be0f1c83bfea24eea8ff6704859be095442c88f02ba17399a85102c7",
-      "urls": [
-        "https://dart.dev/tools/linter-rules/non"
-      ]
+      "urls": []
     }
   ]
 }

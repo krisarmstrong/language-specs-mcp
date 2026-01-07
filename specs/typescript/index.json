@@ -1,15 +1,20 @@
 {
   "language": "typescript",
-  "fetchedAt": "2026-01-04T19:32:36Z",
+  "fetchedAt": "2026-01-06T18:09:03Z",
   "counts": {
-    "spec": 1,
+    "spec": 2,
     "stdlib": 8,
     "linters": 15,
     "formatters": 3,
-    "patterns": 1
+    "patterns": 2
   },
   "categories": {
     "spec": [
+      {
+        "category": "spec",
+        "path": "generation-checklist.md",
+        "name": "generation-checklist"
+      },
       {
         "category": "spec",
         "path": "spec.md",
@@ -157,10 +162,20 @@
         "category": "patterns",
         "path": "patterns/idioms.md",
         "name": "patterns/idioms"
+      },
+      {
+        "category": "patterns",
+        "path": "patterns/anti-patterns.md",
+        "name": "patterns/anti-patterns"
       }
     ]
   },
   "items": [
+    {
+      "category": "spec",
+      "path": "generation-checklist.md",
+      "name": "generation-checklist"
+    },
     {
       "category": "spec",
       "path": "spec.md",
@@ -300,6 +315,11 @@
       "category": "patterns",
       "path": "patterns/idioms.md",
       "name": "patterns/idioms"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/anti-patterns.md",
+      "name": "patterns/anti-patterns"
     }
   ]
 }

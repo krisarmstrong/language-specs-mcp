@@ -11,21 +11,21 @@
       "path": "formatters/swift-format.md",
       "sha256": "baf3d32c70cbc5a9a4890c2058ec5ce6d627d3a5984afab165d23ce046e0a08a",
       "urls": [
-        "https://github.com/apple/swift-format/blob/main/Documentation/Configuration.md"
+        "https://github.com/swiftlang/swift-format/blob/main/Documentation/Configuration.md"
       ]
     },
     {
       "path": "formatters/overview.md",
       "sha256": "7e021253b51102053e39c17f6fbef967ff71646cce79c9da5208d67e3e16b6dd",
       "urls": [
-        "https://github.com/apple/swift-format"
+        "https://github.com/swiftlang/swift-format"
       ]
     },
     {
       "path": "stdlib/overview.md",
       "sha256": "e7c660dab4eaafcb2b5d18689eae216938b8fa586578d45a889211a4c575d894",
       "urls": [
-        "https://developer.apple.com/documentation/swift/swift_standard_library"
+        "https://developer.apple.com/documentation/swift/swift-standard-library"
       ]
     },
     {

@@ -1,8 +1,8 @@
 {
   "language": "css",
-  "fetchedAt": "2026-01-04T18:24:27Z",
+  "fetchedAt": "2026-01-05T21:59:35Z",
   "counts": {
-    "spec": 1,
+    "spec": 2,
     "stdlib": 1,
     "linters": 143,
     "formatters": 2,
@@ -10,6 +10,11 @@
   },
   "categories": {
     "spec": [
+      {
+        "category": "spec",
+        "path": "generation-checklist.md",
+        "name": "generation-checklist"
+      },
       {
         "category": "spec",
         "path": "spec.md",
@@ -761,6 +766,11 @@
     ]
   },
   "items": [
+    {
+      "category": "spec",
+      "path": "generation-checklist.md",
+      "name": "generation-checklist"
+    },
     {
       "category": "spec",
       "path": "spec.md",

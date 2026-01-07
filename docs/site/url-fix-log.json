@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-01-06T15:24:45.676858+00:00",
+  "dryRun": true,
+  "totalChanges": 2,
+  "changes": [
+    {
+      "oldUrl": "https://golang.org/ref/spec#Conversions",
+      "newUrl": "https://go.dev/ref/spec",
+      "dryRun": true
+    },
+    {
+      "oldUrl": "https://golang.org/doc/go1compat",
+      "newUrl": "https://go.dev/doc/go1compat",
+      "dryRun": true
+    }
+  ]
+}

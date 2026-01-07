@@ -2,7 +2,7 @@
   "language": "javascript",
   "fetchedAt": "2026-01-05T19:56:58Z",
   "counts": {
-    "spec": 1,
+    "spec": 2,
     "stdlib": 1176,
     "linters": 212,
     "formatters": 3,
@@ -10,6 +10,11 @@
   },
   "categories": {
     "spec": [
+      {
+        "category": "spec",
+        "path": "generation-checklist.md",
+        "name": "generation-checklist"
+      },
       {
         "category": "spec",
         "path": "spec.md",
@@ -6986,6 +6991,11 @@
     ]
   },
   "items": [
+    {
+      "category": "spec",
+      "path": "generation-checklist.md",
+      "name": "generation-checklist"
+    },
     {
       "category": "spec",
       "path": "spec.md",

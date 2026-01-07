@@ -18,14 +18,14 @@
       "path": "stdlib/overview.md",
       "sha256": "536aa3a316be20e66d4ce321bd9ec02e969e0262345de4692fc2d638701aff3c",
       "urls": [
-        "https://ocaml.org/manual/stdlib.html"
+        "https://ocaml.org/manual/5.4/stdlib.html"
       ]
     },
     {
       "path": "spec.md",
       "sha256": "98c8fd545edeb91b0242580d7c3f2f1a507e1045c430d9584bdfdd6fa827d3c8",
       "urls": [
-        "https://ocaml.org/manual/"
+        "https://ocaml.org/manual/5.4/index.html"
       ]
     },
     {

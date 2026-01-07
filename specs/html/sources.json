@@ -11,21 +11,21 @@
       "path": "formatters/overview.md",
       "sha256": "f33adc65c705c4251f2919bf006f10dd6922a9b36d15b3d280586df39eabb582",
       "urls": [
-        "https://prettier.io/docs/en/"
+        "https://prettier.io/docs/"
       ]
     },
     {
       "path": "formatters/prettier.md",
       "sha256": "61e0881f6ee1eb297eba4540782e28dc362a547a006a9f1468fbccdcb41d9a0b",
       "urls": [
-        "https://prettier.io/docs/en/options.html"
+        "https://prettier.io/docs/options.html"
       ]
     },
     {
       "path": "stdlib/overview.md",
       "sha256": "73db32fd45fdab6cc93211c09f9a171f4a08566bc6e3ce64c863051fd723fb9e",
       "urls": [
-        "https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements"
       ]
     },
     {
@@ -388,9 +388,7 @@
     {
       "path": "linters/html-validate/wcag.md",
       "sha256": "edd5d5f81c2cac574b5719117b29890d1ba88c867361e61e48d9bfdf28282ad8",
-      "urls": [
-        "https://html-validate.org/rules/wcag"
-      ]
+      "urls": []
     },
     {
       "path": "linters/html-validate/aria-hidden-body.md",
@@ -640,9 +638,7 @@
     {
       "path": "linters/htmlhint/overview.md",
       "sha256": "fc1f2f693e3c93f3cc8a322623a600376f0402d520a9d4317b8347e39eb23466",
-      "urls": [
-        "https://htmlhint.com/docs/user-guide/rules/"
-      ]
+      "urls": []
     }
   ]
 }

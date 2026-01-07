@@ -18,7 +18,7 @@
       "path": "formatters/rustfmt.md",
       "sha256": "db563206f015d7bd52651df87578d2e26e18600ed9ca3f615dbf49a4f7d1f159",
       "urls": [
-        "https://github.com/rust-lang/rustfmt/blob/master/Configurations.md"
+        "https://github.com/rust-lang/rustfmt/blob/main/Configurations.md"
       ]
     },
     {

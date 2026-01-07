@@ -10,9 +10,7 @@
     {
       "path": "formatters/overview.md",
       "sha256": "9558df5ccf1acd1a9c868232be526d042769050304ef23d863b057c078732371",
-      "urls": [
-        "https://docs.sqlfluff.com/en/stable/formatter.html"
-      ]
+      "urls": []
     },
     {
       "path": "formatters/sqlfluff.md",
@@ -73,16 +71,12 @@
     {
       "path": "stdlib/mysql/commands.md",
       "sha256": "932c5733723abb053c8ee2544973af39e5ad7e43f23f9fa83e8514117d42d9b8",
-      "urls": [
-        "https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html"
-      ]
+      "urls": []
     },
     {
       "path": "stdlib/mysql/functions.md",
       "sha256": "d2c7cfe763d602c13c80f8fc74b7603794aaed043105e58fa8bd175b3e2a17de",
-      "urls": [
-        "https://dev.mysql.com/doc/refman/8.0/en/functions.html"
-      ]
+      "urls": []
     },
     {
       "path": "stdlib/sqlserver/commands.md",
@@ -102,7 +96,6 @@
       "path": "spec.md",
       "sha256": "54ef109baab4f43b4f20c304144734e84a00e2bb5b3ea096d48e874f6d4abc34",
       "urls": [
-        "https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html",
         "https://learn.microsoft.com/en-us/sql/t-sql/language-reference?view=sql-server-ver16",
         "https://www.postgresql.org/docs/current/sql.html",
         "https://www.sqlite.org/lang.html"

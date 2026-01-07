@@ -17,16 +17,12 @@
     {
       "path": "stdlib/overview.md",
       "sha256": "5605c60dfb2ac30125e564ec92113ddd8be54586ae1d316a2e1fb124bb2db85c",
-      "urls": [
-        "https://docs.julialang.org/en/v1/stdlib/"
-      ]
+      "urls": []
     },
     {
       "path": "spec.md",
       "sha256": "73db41fbd0d064bb34290399e56814c34708479b6be4ea27830f6bc3a0fc24cc",
-      "urls": [
-        "https://docs.julialang.org/en/v1/manual/"
-      ]
+      "urls": []
     },
     {
       "path": "linters/overview.md",

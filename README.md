@@ -1,8 +1,45 @@
 # SpecForge MCP Server
 
-SpecForge MCP server providing authoritative language specifications, style guides, and linter rule explanations.
+Make LLMs write better code, not just code that works.
 
-**Purpose:** Give AI assistants access to authoritative sources instead of training data garbage.
+**Purpose:** Give AI assistants authoritative language specs, generation checklists, and linter rules—replacing training data from Stack Overflow and random GitHub repos with actual best practices.
+
+## Quick Start
+
+**New here?** See [QUICKSTART.md](QUICKSTART.md) for 5-minute setup.
+
+**LLM Integration:** See [System Prompt Template](docs/SYSTEM_PROMPT_TEMPLATE.md) to configure LLMs to use SpecForge automatically.
+
+## Key Feature: Generation Checklists
+
+Every supported language now has a `generation-checklist.md` with 10-20 critical rules to follow BEFORE writing code:
+
+```
+specs/python/generation-checklist.md     # Type hints, pathlib, context managers...
+specs/typescript/generation-checklist.md # const/let, ===, Promise handling...
+specs/go/generation-checklist.md         # Error handling, defer, context...
+specs/rust/generation-checklist.md       # Ownership, ?, no unwrap...
+... (35 languages total)
+```
+
+**The Difference:**
+
+| Without SpecForge | With SpecForge |
+|-------------------|----------------|
+| Code that "works" | Code that follows best practices |
+| Silent bugs | Caught by linter-aware patterns |
+| Security vulnerabilities | Security anti-patterns avoided |
+| Inconsistent style | Idiomatic code |
+
+### MCP Tools
+
+| Tool | Purpose |
+|------|---------|
+| `get_checklist(language)` | **Call FIRST** - Critical rules before writing code |
+| `get_spec(language, category, topic)` | Full language specification |
+| `get_linter_rule(language, linter, rule)` | Specific linter rule explanation |
+| `search_specs(query)` | Search across all specs |
+| `list_available(language, category)` | List available topics |
 
 ## Supported Languages
 

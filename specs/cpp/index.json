@@ -2,11 +2,11 @@
   "language": "cpp",
   "fetchedAt": "2026-01-04T18:23:59Z",
   "counts": {
-    "spec": 2,
+    "spec": 3,
     "stdlib": 2,
     "linters": 10,
     "formatters": 2,
-    "patterns": 1
+    "patterns": 2
   },
   "categories": {
     "spec": [
@@ -14,6 +14,11 @@
         "category": "spec",
         "path": "compilers.md",
         "name": "compilers"
+      },
+      {
+        "category": "spec",
+        "path": "generation-checklist.md",
+        "name": "generation-checklist"
       },
       {
         "category": "spec",
@@ -102,6 +107,11 @@
         "category": "patterns",
         "path": "patterns/idioms.md",
         "name": "patterns/idioms"
+      },
+      {
+        "category": "patterns",
+        "path": "patterns/anti-patterns.md",
+        "name": "patterns/anti-patterns"
       }
     ]
   },
@@ -110,6 +120,11 @@
       "category": "spec",
       "path": "compilers.md",
       "name": "compilers"
+    },
+    {
+      "category": "spec",
+      "path": "generation-checklist.md",
+      "name": "generation-checklist"
     },
     {
       "category": "spec",
@@ -190,6 +205,11 @@
       "category": "patterns",
       "path": "patterns/idioms.md",
       "name": "patterns/idioms"
+    },
+    {
+      "category": "patterns",
+      "path": "patterns/anti-patterns.md",
+      "name": "patterns/anti-patterns"
     }
   ]
 }
