@@ -1,4 +1,31 @@
-Module[java.naming](../../../module-summary.html)
+javax.naming.event (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../index.html)
+- [Module](../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../preview-list.html)
+- [New](../../../../new-list.html)
+- [Deprecated](../../../../deprecated-list.html)
+- [Index](../../../../index-files/index-1.html)
+- [Help](../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../search.html)Module[java.naming](../../../module-summary.html)
 
 # Package javax.naming.event
 
@@ -52,3 +79,9 @@ class ChangeHandler implements ObjectChangeListener {
 
 - Related PackagesPackageDescription[javax.naming](../package-summary.html)Provides the classes and interfaces for accessing naming services.[javax.naming.directory](../directory/package-summary.html)Extends the `javax.naming` package to provide functionality for accessing directory services.[javax.naming.ldap](../ldap/package-summary.html)Provides support for LDAPv3 extended operations and controls.[javax.naming.spi](../spi/package-summary.html)Provides the means for dynamically plugging in support for accessing naming and directory services through the `javax.naming` and related packages.
 - All Classes and InterfacesInterfacesClassesClassDescription[EventContext](EventContext.html)Contains methods for registering/deregistering listeners to be notified of events fired when objects named in a context changes.[EventDirContext](EventDirContext.html)Contains methods for registering listeners to be notified of events fired when objects named in a directory context changes.[NamespaceChangeListener](NamespaceChangeListener.html)Specifies the methods that a listener interested in namespace changes must implement.[NamingEvent](NamingEvent.html)This class represents an event fired by a naming/directory service.[NamingExceptionEvent](NamingExceptionEvent.html)This class represents an event fired when the procedures/processes used to collect information for notifying listeners of `NamingEvent`s threw a `NamingException`.[NamingListener](NamingListener.html)This interface is the root of listener interfaces that handle `NamingEvent`s.[ObjectChangeListener](ObjectChangeListener.html)Specifies the method that a listener of a `NamingEvent` with event type of `OBJECT_CHANGED` must implement.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

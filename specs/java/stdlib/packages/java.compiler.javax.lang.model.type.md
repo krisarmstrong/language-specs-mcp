@@ -1,4 +1,31 @@
-Module[java.compiler](../../../../module-summary.html)
+javax.lang.model.type (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../../index.html)
+- [Module](../../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../../preview-list.html)
+- [New](../../../../../new-list.html)
+- [Deprecated](../../../../../deprecated-list.html)
+- [Index](../../../../../index-files/index-1.html)
+- [Help](../../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../../search.html)Module[java.compiler](../../../../module-summary.html)
 
 # Package javax.lang.model.type
 
@@ -23,3 +50,9 @@ Since:1.6See Also:
 
 - Related PackagesPackageDescription[javax.lang.model](../package-summary.html)Types and hierarchies of packages comprising a Java language model, a model of the declarations and types of the Java programming language.[javax.lang.model.element](../element/package-summary.html)Interfaces used to model elements of the Java programming language.[javax.lang.model.util](../util/package-summary.html)Utilities to assist in the processing of [program elements](../element/package-summary.html) and [types](package-summary.html).
 - All Classes and InterfacesInterfacesEnum ClassesException ClassesClassDescription[ArrayType](ArrayType.html)Represents an array type.[DeclaredType](DeclaredType.html)Represents a declared type, either a class type or an interface type.[ErrorType](ErrorType.html)Represents a class or interface type that cannot be properly modeled.[ExecutableType](ExecutableType.html)Represents the type of an executable.[IntersectionType](IntersectionType.html)Represents an intersection type.[MirroredTypeException](MirroredTypeException.html)Thrown when an application attempts to access the [Class](../../../../../java.base/java/lang/Class.html) object corresponding to a [TypeMirror](TypeMirror.html).[MirroredTypesException](MirroredTypesException.html)Thrown when an application attempts to access a sequence of [Class](../../../../../java.base/java/lang/Class.html) objects each corresponding to a [TypeMirror](TypeMirror.html).[NoType](NoType.html)A pseudo-type used where no actual type is appropriate.[NullType](NullType.html)Represents the null type.[PrimitiveType](PrimitiveType.html)Represents a primitive type.[ReferenceType](ReferenceType.html)Represents a reference type.[TypeKind](TypeKind.html)The kind of a type mirror.[TypeMirror](TypeMirror.html)Represents a type in the Java programming language.[TypeVariable](TypeVariable.html)Represents a type variable.[TypeVisitor](TypeVisitor.html)<R,P>A visitor of types, in the style of the visitor design pattern.[UnionType](UnionType.html)Represents a union type.[UnknownTypeException](UnknownTypeException.html)Indicates that an unknown kind of type was encountered.[WildcardType](WildcardType.html)Represents a wildcard type argument.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

@@ -1,3 +1,14 @@
+HTML-validate - Disallow usage of abstract WAI-ARIA roles (no-abstract-role)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -54,3 +65,5 @@ Examples of correct code for this rule:
 ## [Version history](#version-history)
 
 - 8.12.0 - Rule added.
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/no-abstract-role.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/no-abstract-role.ts)

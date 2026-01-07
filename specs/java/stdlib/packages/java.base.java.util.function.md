@@ -1,4 +1,31 @@
-Module[java.base](../../../module-summary.html)
+java.util.function (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../index.html)
+- [Module](../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../preview-list.html)
+- [New](../../../../new-list.html)
+- [Deprecated](../../../../deprecated-list.html)
+- [Index](../../../../index-files/index-1.html)
+- [Help](../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../search.html)Module[java.base](../../../module-summary.html)
 
 # Package java.util.function
 
@@ -37,3 +64,9 @@ Since:1.8See Also:
 
 - Related PackagesPackageDescription[java.util](../package-summary.html)Contains the collections framework, some internationalization support classes, a service loader, properties, random number generation, string parsing and scanning classes, base64 encoding and decoding, a bit array, and several miscellaneous utility classes.
 - InterfacesClassDescription[BiConsumer](BiConsumer.html)<T,U>Represents an operation that accepts two input arguments and returns no result.[BiFunction](BiFunction.html)<T,U,R>Represents a function that accepts two arguments and produces a result.[BinaryOperator](BinaryOperator.html)<T>Represents an operation upon two operands of the same type, producing a result of the same type as the operands.[BiPredicate](BiPredicate.html)<T,U>Represents a predicate (boolean-valued function) of two arguments.[BooleanSupplier](BooleanSupplier.html)Represents a supplier of `boolean`-valued results.[Consumer](Consumer.html)<T>Represents an operation that accepts a single input argument and returns no result.[DoubleBinaryOperator](DoubleBinaryOperator.html)Represents an operation upon two `double`-valued operands and producing a `double`-valued result.[DoubleConsumer](DoubleConsumer.html)Represents an operation that accepts a single `double`-valued argument and returns no result.[DoubleFunction](DoubleFunction.html)<R>Represents a function that accepts a double-valued argument and produces a result.[DoublePredicate](DoublePredicate.html)Represents a predicate (boolean-valued function) of one `double`-valued argument.[DoubleSupplier](DoubleSupplier.html)Represents a supplier of `double`-valued results.[DoubleToIntFunction](DoubleToIntFunction.html)Represents a function that accepts a double-valued argument and produces an int-valued result.[DoubleToLongFunction](DoubleToLongFunction.html)Represents a function that accepts a double-valued argument and produces a long-valued result.[DoubleUnaryOperator](DoubleUnaryOperator.html)Represents an operation on a single `double`-valued operand that produces a `double`-valued result.[Function](Function.html)<T,R>Represents a function that accepts one argument and produces a result.[IntBinaryOperator](IntBinaryOperator.html)Represents an operation upon two `int`-valued operands and producing an `int`-valued result.[IntConsumer](IntConsumer.html)Represents an operation that accepts a single `int`-valued argument and returns no result.[IntFunction](IntFunction.html)<R>Represents a function that accepts an int-valued argument and produces a result.[IntPredicate](IntPredicate.html)Represents a predicate (boolean-valued function) of one `int`-valued argument.[IntSupplier](IntSupplier.html)Represents a supplier of `int`-valued results.[IntToDoubleFunction](IntToDoubleFunction.html)Represents a function that accepts an int-valued argument and produces a double-valued result.[IntToLongFunction](IntToLongFunction.html)Represents a function that accepts an int-valued argument and produces a long-valued result.[IntUnaryOperator](IntUnaryOperator.html)Represents an operation on a single `int`-valued operand that produces an `int`-valued result.[LongBinaryOperator](LongBinaryOperator.html)Represents an operation upon two `long`-valued operands and producing a `long`-valued result.[LongConsumer](LongConsumer.html)Represents an operation that accepts a single `long`-valued argument and returns no result.[LongFunction](LongFunction.html)<R>Represents a function that accepts a long-valued argument and produces a result.[LongPredicate](LongPredicate.html)Represents a predicate (boolean-valued function) of one `long`-valued argument.[LongSupplier](LongSupplier.html)Represents a supplier of `long`-valued results.[LongToDoubleFunction](LongToDoubleFunction.html)Represents a function that accepts a long-valued argument and produces a double-valued result.[LongToIntFunction](LongToIntFunction.html)Represents a function that accepts a long-valued argument and produces an int-valued result.[LongUnaryOperator](LongUnaryOperator.html)Represents an operation on a single `long`-valued operand that produces a `long`-valued result.[ObjDoubleConsumer](ObjDoubleConsumer.html)<T>Represents an operation that accepts an object-valued and a `double`-valued argument, and returns no result.[ObjIntConsumer](ObjIntConsumer.html)<T>Represents an operation that accepts an object-valued and a `int`-valued argument, and returns no result.[ObjLongConsumer](ObjLongConsumer.html)<T>Represents an operation that accepts an object-valued and a `long`-valued argument, and returns no result.[Predicate](Predicate.html)<T>Represents a predicate (boolean-valued function) of one argument.[Supplier](Supplier.html)<T>Represents a supplier of results.[ToDoubleBiFunction](ToDoubleBiFunction.html)<T,U>Represents a function that accepts two arguments and produces a double-valued result.[ToDoubleFunction](ToDoubleFunction.html)<T>Represents a function that produces a double-valued result.[ToIntBiFunction](ToIntBiFunction.html)<T,U>Represents a function that accepts two arguments and produces an int-valued result.[ToIntFunction](ToIntFunction.html)<T>Represents a function that produces an int-valued result.[ToLongBiFunction](ToLongBiFunction.html)<T,U>Represents a function that accepts two arguments and produces a long-valued result.[ToLongFunction](ToLongFunction.html)<T>Represents a function that produces a long-valued result.[UnaryOperator](UnaryOperator.html)<T>Represents an operation on a single operand that produces a result of the same type as its operand.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

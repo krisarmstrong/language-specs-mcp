@@ -1,4 +1,31 @@
-Module[java.desktop](../../../module-summary.html)
+javax.sound.sampled (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../index.html)
+- [Module](../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../preview-list.html)
+- [New](../../../../new-list.html)
+- [Deprecated](../../../../deprecated-list.html)
+- [Index](../../../../index-files/index-1.html)
+- [Help](../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../search.html)Module[java.desktop](../../../module-summary.html)
 
 # Package javax.sound.sampled
 
@@ -14,3 +41,9 @@ package javax.sound.sampledProvides interfaces and classes for capture, processi
 
 - Related PackagesPackageDescription[javax.sound.sampled.spi](spi/package-summary.html)Supplies abstract classes for service providers to subclass when offering new audio devices, sound file readers and writers, or audio format converters.
 - All Classes and InterfacesInterfacesClassesException ClassesClassDescription[AudioFileFormat](AudioFileFormat.html)An instance of the `AudioFileFormat` class describes an audio file, including the file type, the file's length in bytes, the length in sample frames of the audio data contained in the file, and the format of the audio data.[AudioFileFormat.Type](AudioFileFormat.Type.html)An instance of the `Type` class represents one of the standard types of audio file.[AudioFormat](AudioFormat.html)`AudioFormat` is the class that specifies a particular arrangement of data in a sound stream.[AudioFormat.Encoding](AudioFormat.Encoding.html)The `Encoding` class names the specific type of data representation used for an audio stream.[AudioInputStream](AudioInputStream.html)An audio input stream is an input stream with a specified audio format and length.[AudioPermission](AudioPermission.html)The `AudioPermission` class represents access rights to the audio system resources.[AudioSystem](AudioSystem.html)The `AudioSystem` class acts as the entry point to the sampled-audio system resources.[BooleanControl](BooleanControl.html)A `BooleanControl` provides the ability to switch between two possible settings that affect a line's audio.[BooleanControl.Type](BooleanControl.Type.html)An instance of the `BooleanControl.Type` class identifies one kind of boolean control.[Clip](Clip.html)The `Clip` interface represents a special kind of data line whose audio data can be loaded prior to playback, instead of being streamed in real time.[CompoundControl](CompoundControl.html)A `CompoundControl`, such as a graphic equalizer, provides control over two or more related properties, each of which is itself represented as a `Control`.[CompoundControl.Type](CompoundControl.Type.html)An instance of the `CompoundControl.Type` inner class identifies one kind of compound control.[Control](Control.html)[Lines](Line.html) often have a set of controls, such as gain and pan, that affect the audio signal passing through the line.[Control.Type](Control.Type.html)An instance of the `Type` class represents the type of the control.[DataLine](DataLine.html)`DataLine` adds media-related functionality to its superinterface, `Line`.[DataLine.Info](DataLine.Info.html)Besides the class information inherited from its superclass, `DataLine.Info` provides additional information specific to data lines.[EnumControl](EnumControl.html)An `EnumControl` provides control over a set of discrete possible values, each represented by an object.[EnumControl.Type](EnumControl.Type.html)An instance of the `EnumControl.Type` inner class identifies one kind of enumerated control.[FloatControl](FloatControl.html)A `FloatControl` object provides control over a range of floating-point values.[FloatControl.Type](FloatControl.Type.html)An instance of the `FloatControl.Type` inner class identifies one kind of float control.[Line](Line.html)The `Line` interface represents a mono or multi-channel audio feed.[Line.Info](Line.Info.html)A `Line.Info` object contains information about a line.[LineEvent](LineEvent.html)The `LineEvent` class encapsulates information that a line sends its listeners whenever the line opens, closes, starts, or stops.[LineEvent.Type](LineEvent.Type.html)The LineEvent.Type inner class identifies what kind of event occurred on a line.[LineListener](LineListener.html)Instances of classes that implement the `LineListener` interface can register to receive events when a line's status changes.[LineUnavailableException](LineUnavailableException.html)A `LineUnavailableException` is an exception indicating that a line cannot be opened because it is unavailable.[Mixer](Mixer.html)A mixer is an audio device with one or more lines.[Mixer.Info](Mixer.Info.html)The `Mixer.Info` class represents information about an audio mixer, including the product's name, version, and vendor, along with a textual description.[Port](Port.html)Ports are simple lines for input or output of audio to or from audio devices.[Port.Info](Port.Info.html)The `Port.Info` class extends `Line.Info` with additional information specific to ports, including the port's name and whether it is a source or a target for its mixer.[ReverbType](ReverbType.html)The `ReverbType` class provides methods for accessing various reverberation settings to be applied to an audio signal.[SourceDataLine](SourceDataLine.html)A source data line is a data line to which data may be written.[TargetDataLine](TargetDataLine.html)A target data line is a type of [DataLine](DataLine.html) from which audio data can be read.[UnsupportedAudioFileException](UnsupportedAudioFileException.html)An `UnsupportedAudioFileException` is an exception indicating that an operation failed because a file did not contain valid data of a recognized file type and format.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

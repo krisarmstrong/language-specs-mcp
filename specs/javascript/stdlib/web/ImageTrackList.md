@@ -1,52 +1,206 @@
-# ImageTrackList
+content/files/en-us/web/api/imagetracklist/index.md at main · mdn/content · GitHub[Skip to content](#start-of-content)
 
-Limited availability
+## Navigation Menu
 
-This feature is not Baseline because it does not work in some of the most widely-used browsers.
+Toggle navigation/[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fimagetracklist%2Findex.md%3Fplain%3D1)Appearance settings
 
-- [Learn more](/en-US/docs/Glossary/Baseline/Compatibility)
-- [See full compatibility](#browser_compatibility)
-- [Report feedback](https://survey.alchemer.com/s3/7634825/MDN-baseline-feedback?page=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FImageTrackList&level=not)
+- Platform
 
-Note: This feature is available in [Dedicated Web Workers](/en-US/docs/Web/API/DedicatedWorkerGlobalScope).
+  - AI CODE CREATION
 
-The `ImageTrackList` interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) represents a list of image tracks.
+    - [GitHub CopilotWrite better code with AI](https://github.com/features/copilot)
+    - [GitHub SparkBuild and deploy intelligent apps](https://github.com/features/spark)
+    - [GitHub ModelsManage and compare prompts](https://github.com/features/models)
+    - [MCP RegistryNewIntegrate external tools](https://github.com/mcp)
 
-## In this article
+  - DEVELOPER WORKFLOWS
 
-- [Instance properties](#instance_properties)
-- [Specifications](#specifications)
-- [Browser compatibility](#browser_compatibility)
+    - [ActionsAutomate any workflow](https://github.com/features/actions)
+    - [CodespacesInstant dev environments](https://github.com/features/codespaces)
+    - [IssuesPlan and track work](https://github.com/features/issues)
+    - [Code ReviewManage code changes](https://github.com/features/code-review)
 
-## [Instance properties](#instance_properties)
+  - APPLICATION SECURITY
 
-[ImageTrackList.ready](/en-US/docs/Web/API/ImageTrackList/ready)Read only
+    - [GitHub Advanced SecurityFind and fix vulnerabilities](https://github.com/security/advanced-security)
+    - [Code securitySecure your code as you build](https://github.com/security/advanced-security/code-security)
+    - [Secret protectionStop leaks before they start](https://github.com/security/advanced-security/secret-protection)
 
-Returns a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves once the `ImageTrackList` has been populated with [tracks](/en-US/docs/Web/API/ImageTrack).
+  - EXPLORE
 
-[ImageTrackList.length](/en-US/docs/Web/API/ImageTrackList/length)Read only
+    - [Why GitHub](https://github.com/why-github)
+    - [Documentation](https://docs.github.com)
+    - [Blog](https://github.blog)
+    - [Changelog](https://github.blog/changelog)
+    - [Marketplace](https://github.com/marketplace)
 
-Returns an integer indicating the length of the `ImageTrackList`.
+[View all features](https://github.com/features)
+- Solutions
 
-[ImageTrackList.selectedIndex](/en-US/docs/Web/API/ImageTrackList/selectedIndex)Read only
+  - BY COMPANY SIZE
 
-Returns an integer indicating the index of the `selectedTrack`.
+    - [Enterprises](https://github.com/enterprise)
+    - [Small and medium teams](https://github.com/team)
+    - [Startups](https://github.com/enterprise/startups)
+    - [Nonprofits](https://github.com/solutions/industry/nonprofits)
 
-[ImageTrackList.selectedTrack](/en-US/docs/Web/API/ImageTrackList/selectedTrack)Read only
+  - BY USE CASE
 
-Returns the selected [ImageTrack](/en-US/docs/Web/API/ImageTrack).
+    - [App Modernization](https://github.com/solutions/use-case/app-modernization)
+    - [DevSecOps](https://github.com/solutions/use-case/devsecops)
+    - [DevOps](https://github.com/solutions/use-case/devops)
+    - [CI/CD](https://github.com/solutions/use-case/ci-cd)
+    - [View all use cases](https://github.com/solutions/use-case)
 
-## [Specifications](#specifications)
+  - BY INDUSTRY
 
-Specification
-[WebCodecs# imagetracklist-interface](https://w3c.github.io/webcodecs/#imagetracklist-interface)
+    - [Healthcare](https://github.com/solutions/industry/healthcare)
+    - [Financial services](https://github.com/solutions/industry/financial-services)
+    - [Manufacturing](https://github.com/solutions/industry/manufacturing)
+    - [Government](https://github.com/solutions/industry/government)
+    - [View all industries](https://github.com/solutions/industry)
 
-## [Browser compatibility](#browser_compatibility)
+[View all solutions](https://github.com/solutions)
+- Resources
 
-## Help improve MDN
+  - EXPLORE BY TOPIC
 
-Was this page helpful to you?YesNo[Learn how to contribute](/en-US/docs/MDN/Community/Getting_started)
+    - [AI](https://github.com/resources/articles?topic=ai)
+    - [Software Development](https://github.com/resources/articles?topic=software-development)
+    - [DevOps](https://github.com/resources/articles?topic=devops)
+    - [Security](https://github.com/resources/articles?topic=security)
+    - [View all topics](https://github.com/resources/articles)
 
- This page was last modified on ⁨Oct 31, 2024⁩ by [MDN contributors](/en-US/docs/Web/API/ImageTrackList/contributors.txt). 
+  - EXPLORE BY TYPE
 
-[View this page on GitHub](https://github.com/mdn/content/blob/main/files/en-us/web/api/imagetracklist/index.md?plain=1) • [Report a problem with this content](https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FImageTrackList&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Fimagetracklist%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FImageTrackList%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fimagetracklist%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2Fa7482281c4570bb7f932dce381f510d87ddf9924%0A*+Document+last+modified%3A+2024-10-31T03%3A19%3A16.000Z%0A%0A%3C%2Fdetails%3E)
+    - [Customer stories](https://github.com/customer-stories)
+    - [Events & webinars](https://github.com/resources/events)
+    - [Ebooks & reports](https://github.com/resources/whitepapers)
+    - [Business insights](https://github.com/solutions/executive-insights)
+    - [GitHub Skills](https://skills.github.com)
+
+  - SUPPORT & SERVICES
+
+    - [Documentation](https://docs.github.com)
+    - [Customer support](https://support.github.com)
+    - [Community forum](https://github.com/orgs/community/discussions)
+    - [Trust center](https://github.com/trust-center)
+    - [Partners](https://github.com/partners)
+
+- Open Source
+
+  - COMMUNITY
+
+    - [GitHub SponsorsFund open source developers](https://github.com/sponsors)
+
+  - PROGRAMS
+
+    - [Security Lab](https://securitylab.github.com)
+    - [Maintainer Community](https://maintainers.github.com)
+    - [Accelerator](https://github.com/accelerator)
+    - [Archive Program](https://archiveprogram.github.com)
+
+  - REPOSITORIES
+
+    - [Topics](https://github.com/topics)
+    - [Trending](https://github.com/trending)
+    - [Collections](https://github.com/collections)
+
+- Enterprise
+
+  - ENTERPRISE SOLUTIONS
+
+    - [Enterprise platformAI-powered developer platform](https://github.com/enterprise)
+
+  - AVAILABLE ADD-ONS
+
+    - [GitHub Advanced SecurityEnterprise-grade security features](https://github.com/security/advanced-security)
+    - [Copilot for BusinessEnterprise-grade AI features](https://github.com/features/copilot/copilot-business)
+    - [Premium SupportEnterprise-grade 24/7 support](https://github.com/premium-support)
+
+- [Pricing](https://github.com/pricing)
+
+Search or jump to...
+
+# Search code, repositories, users, issues, pull requests...
+
+ Search Clear
+
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
+
+#  Provide feedback 
+
+We read every piece of feedback, and take your input very seriously.
+
+Include my email address so I can be contacted Cancel  Submit feedback 
+
+#  Saved searches 
+
+## Use saved searches to filter your results more quickly
+
+NameQuery
+
+ To see all available qualifiers, see our [documentation](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax). 
+
+ Cancel  Create saved search [Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fimagetracklist%2Findex.md%3Fplain%3D1)[Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&source=header-repo&source_repo=mdn%2Fcontent)Appearance settingsResetting focusYou signed in with another tab or window. Reload to refresh your session.You signed out in another tab or window. Reload to refresh your session.You switched accounts on another tab or window. Reload to refresh your session.Dismiss alert{{ message }}[mdn](/mdn)/[content](/mdn/content)Public
+
+- [Notifications](/login?return_to=%2Fmdn%2Fcontent)You must be signed in to change notification settings
+- [Fork
+    23.1k](/login?return_to=%2Fmdn%2Fcontent)
+- [Star
+          10.4k](/login?return_to=%2Fmdn%2Fcontent)
+
+- [Code](/mdn/content)
+- [Issues
+          320](/mdn/content/issues)
+- [Pull requests
+          96](/mdn/content/pulls)
+- [Actions](/mdn/content/actions)
+- [Projects
+          0](/mdn/content/projects)
+- 
+
+### 
+
+[Security
+          
+  
+  
+    
+  
+    
+      
+
+              Uh oh!
+
+              There was an error while loading. Please reload this page](/mdn/content/security).
+
+- [Insights](/mdn/content/pulse)
+
+Additional navigation options
+
+- [Code](/mdn/content)
+- [Issues](/mdn/content/issues)
+- [Pull requests](/mdn/content/pulls)
+- [Actions](/mdn/content/actions)
+- [Projects](/mdn/content/projects)
+- [Security](/mdn/content/security)
+- [Insights](/mdn/content/pulse)
+
+## Footer
+
+https://github.com © 2026 GitHub, Inc. 
+
+### Footer navigation
+
+- [Terms](https://docs.github.com/site-policy/github-terms/github-terms-of-service)
+- [Privacy](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement)
+- [Security](https://github.com/security)
+- [Status](https://www.githubstatus.com/)
+- [Community](https://github.community/)
+- [Docs](https://docs.github.com/)
+- [Contact](https://support.github.com?tags=dotcom-footer)
+-  Manage cookies 
+-  Do not share my personal information 
+
+ You can’t perform that action at this time.

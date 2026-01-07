@@ -1,4 +1,31 @@
-Module[java.base](../../../module-summary.html)
+javax.net.ssl (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../index.html)
+- [Module](../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../preview-list.html)
+- [New](../../../../new-list.html)
+- [Deprecated](../../../../deprecated-list.html)
+- [Index](../../../../index-files/index-1.html)
+- [Help](../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../search.html)Module[java.base](../../../module-summary.html)
 
 # Package javax.net.ssl
 
@@ -11,3 +38,9 @@ Since:1.4
 - Related PackagesPackageDescription[javax.net](../package-summary.html)Provides classes for networking applications.
 - All Classes and InterfacesInterfacesClassesEnum ClassesException ClassesClassDescription[CertPathTrustManagerParameters](CertPathTrustManagerParameters.html)A wrapper for CertPathParameters.[ExtendedSSLSession](ExtendedSSLSession.html)Extends the `SSLSession` interface to support additional session attributes.[HandshakeCompletedEvent](HandshakeCompletedEvent.html)This event indicates that an SSL handshake completed on a given SSL connection.[HandshakeCompletedListener](HandshakeCompletedListener.html)This interface is implemented by any class which wants to receive notifications about the completion of an SSL protocol handshake on a given SSL connection.[HostnameVerifier](HostnameVerifier.html)This class is the base interface for hostname verification.[HttpsURLConnection](HttpsURLConnection.html)`HttpsURLConnection` extends `HttpURLConnection` with support for https-specific features.[KeyManager](KeyManager.html)This is the base interface for JSSE key managers.[KeyManagerFactory](KeyManagerFactory.html)This class acts as a factory for key managers based on a source of key material.[KeyManagerFactorySpi](KeyManagerFactorySpi.html)This class defines the Service Provider Interface (SPI) for the `KeyManagerFactory` class.[KeyStoreBuilderParameters](KeyStoreBuilderParameters.html)A parameters object for X509KeyManagers that encapsulates a List of KeyStore.Builders.[ManagerFactoryParameters](ManagerFactoryParameters.html)This class is the base interface for providing algorithm-specific information to a KeyManagerFactory or TrustManagerFactory.[SNIHostName](SNIHostName.html)Instances of this class represent a server name of type [host_name](StandardConstants.html#SNI_HOST_NAME) in a Server Name Indication (SNI) extension.[SNIMatcher](SNIMatcher.html)Instances of this class represent a matcher that performs match operations on an [SNIServerName](SNIServerName.html) instance.[SNIServerName](SNIServerName.html)Instances of this class represent a server name in a Server Name Indication (SNI) extension.[SSLContext](SSLContext.html)Instances of this class represent a secure socket protocol implementation which acts as a factory for secure socket factories or `SSLEngine`s.[SSLContextSpi](SSLContextSpi.html)This class defines the Service Provider Interface (SPI) for the `SSLContext` class.[SSLEngine](SSLEngine.html)A class which enables secure communications using protocols such as the Secure Sockets Layer (SSL) or [IETF RFC 2246 "Transport
  Layer Security" (TLS)](http://www.ietf.org/rfc/rfc2246.txt) protocols, but is transport independent.[SSLEngineResult](SSLEngineResult.html)An encapsulation of the result state produced by `SSLEngine` I/O calls.[SSLEngineResult.HandshakeStatus](SSLEngineResult.HandshakeStatus.html)An `SSLEngineResult` enum describing the current handshaking state of this `SSLEngine`.[SSLEngineResult.Status](SSLEngineResult.Status.html)An `SSLEngineResult` enum describing the overall result of the `SSLEngine` operation.[SSLException](SSLException.html)Indicates some kind of error detected by an SSL subsystem.[SSLHandshakeException](SSLHandshakeException.html)Indicates that the client and server could not negotiate the desired level of security.[SSLKeyException](SSLKeyException.html)Reports a bad SSL key.[SSLParameters](SSLParameters.html)Encapsulates parameters for an SSL/TLS/DTLS connection.[SSLPeerUnverifiedException](SSLPeerUnverifiedException.html)Indicates that the peer's identity has not been verified.[SSLPermission](SSLPermission.html)This class is for various network permissions.[SSLProtocolException](SSLProtocolException.html)Reports an error in the operation of the SSL protocol.[SSLServerSocket](SSLServerSocket.html)This class extends `ServerSocket` and provides secure server sockets using protocols such as the Secure Sockets Layer (SSL) or Transport Layer Security (TLS) protocols.[SSLServerSocketFactory](SSLServerSocketFactory.html)`SSLServerSocketFactory`s create `SSLServerSocket`s.[SSLSession](SSLSession.html)In SSL, sessions are used to describe an ongoing relationship between two entities.[SSLSessionBindingEvent](SSLSessionBindingEvent.html)This event is propagated to a SSLSessionBindingListener.[SSLSessionBindingListener](SSLSessionBindingListener.html)This interface is implemented by objects which want to know when they are being bound or unbound from a SSLSession.[SSLSessionContext](SSLSessionContext.html)A `SSLSessionContext` represents a set of `SSLSession`s associated with a single entity.[SSLSocket](SSLSocket.html)This class extends `Socket` and provides secure sockets using protocols such as the "Secure Sockets Layer" (SSL) or IETF "Transport Layer Security" (TLS) protocols.[SSLSocketFactory](SSLSocketFactory.html)`SSLSocketFactory`s create `SSLSocket`s.[StandardConstants](StandardConstants.html)Standard constants definitions[TrustManager](TrustManager.html)This is the base interface for JSSE trust managers.[TrustManagerFactory](TrustManagerFactory.html)This class acts as a factory for trust managers based on a source of trust material.[TrustManagerFactorySpi](TrustManagerFactorySpi.html)This class defines the Service Provider Interface (SPI) for the `TrustManagerFactory` class.[X509ExtendedKeyManager](X509ExtendedKeyManager.html)Abstract class that provides for extension of the X509KeyManager interface.[X509ExtendedTrustManager](X509ExtendedTrustManager.html)Extensions to the `X509TrustManager` interface to support SSL/TLS/DTLS connection sensitive trust management.[X509KeyManager](X509KeyManager.html)Instances of this interface manage which X509 certificate-based key pairs are used to authenticate the local side of a secure socket.[X509TrustManager](X509TrustManager.html)Instance of this interface manage which X509 certificates may be used to authenticate the remote side of a secure socket.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

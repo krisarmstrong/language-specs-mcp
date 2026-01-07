@@ -1,422 +1,445 @@
-package strings // import "strings"
-
-Package strings implements simple functions to manipulate UTF-8 encoded strings.
-
-For information about UTF-8 strings in Go, see https://blog.golang.org/strings.
-
-FUNCTIONS
-
-func Clone(s string) string
-    Clone returns a fresh copy of s. It guarantees to make a copy of s into a
-    new allocation, which can be important when retaining only a small substring
-    of a much larger string. Using Clone can help such programs use less memory.
-    Of course, since using Clone makes a copy, overuse of Clone can make
-    programs use more memory. Clone should typically be used only rarely,
-    and only when profiling indicates that it is needed. For strings of length
-    zero the string "" will be returned and no allocation is made.
-
-func Compare(a, b string) int
-    Compare returns an integer comparing two strings lexicographically.
-    The result will be 0 if a == b, -1 if a < b, and +1 if a > b.
-
-    Use Compare when you need to perform a three-way comparison (with
-    slices.SortFunc, for example). It is usually clearer and always faster to
-    use the built-in string comparison operators ==, <, >, and so on.
-
-func Contains(s, substr string) bool
-    Contains reports whether substr is within s.
-
-func ContainsAny(s, chars string) bool
-    ContainsAny reports whether any Unicode code points in chars are within s.
-
-func ContainsFunc(s string, f func(rune) bool) bool
-    ContainsFunc reports whether any Unicode code points r within s satisfy
-    f(r).
-
-func ContainsRune(s string, r rune) bool
-    ContainsRune reports whether the Unicode code point r is within s.
-
-func Count(s, substr string) int
-    Count counts the number of non-overlapping instances of substr in s.
-    If substr is an empty string, Count returns 1 + the number of Unicode code
-    points in s.
-
-func Cut(s, sep string) (before, after string, found bool)
-    Cut slices s around the first instance of sep, returning the text before and
-    after sep. The found result reports whether sep appears in s. If sep does
-    not appear in s, cut returns s, "", false.
-
-func CutPrefix(s, prefix string) (after string, found bool)
-    CutPrefix returns s without the provided leading prefix string and reports
-    whether it found the prefix. If s doesn't start with prefix, CutPrefix
-    returns s, false. If prefix is the empty string, CutPrefix returns s, true.
-
-func CutSuffix(s, suffix string) (before string, found bool)
-    CutSuffix returns s without the provided ending suffix string and reports
-    whether it found the suffix. If s doesn't end with suffix, CutSuffix returns
-    s, false. If suffix is the empty string, CutSuffix returns s, true.
-
-func EqualFold(s, t string) bool
-    EqualFold reports whether s and t, interpreted as UTF-8 strings,
-    are equal under simple Unicode case-folding, which is a more general form of
-    case-insensitivity.
-
-func Fields(s string) []string
-    Fields splits the string s around each instance of one or more consecutive
-    white space characters, as defined by unicode.IsSpace, returning a slice
-    of substrings of s or an empty slice if s contains only white space.
-    Every element of the returned slice is non-empty. Unlike Split, leading and
-    trailing runs runs of white space characters are discarded.
-
-func FieldsFunc(s string, f func(rune) bool) []string
-    FieldsFunc splits the string s at each run of Unicode code points c
-    satisfying f(c) and returns an array of slices of s. If all code points
-    in s satisfy f(c) or the string is empty, an empty slice is returned.
-    Every element of the returned slice is non-empty. Unlike [SplitFunc],
-    leading and trailing runs of code points satisfying f(c) are discarded.
-
-    FieldsFunc makes no guarantees about the order in which it calls f(c) and
-    assumes that f always returns the same value for a given c.
-
-func FieldsFuncSeq(s string, f func(rune) bool) iter.Seq[string]
-    FieldsFuncSeq returns an iterator over substrings of s split around runs of
-    Unicode code points satisfying f(c). The iterator yields the same strings
-    that would be returned by FieldsFunc(s), but without constructing the slice.
-
-func FieldsSeq(s string) iter.Seq[string]
-    FieldsSeq returns an iterator over substrings of s split around runs
-    of whitespace characters, as defined by unicode.IsSpace. The iterator
-    yields the same strings that would be returned by Fields(s), but without
-    constructing the slice.
-
-func HasPrefix(s, prefix string) bool
-    HasPrefix reports whether the string s begins with prefix.
-
-func HasSuffix(s, suffix string) bool
-    HasSuffix reports whether the string s ends with suffix.
-
-func Index(s, substr string) int
-    Index returns the index of the first instance of substr in s, or -1 if
-    substr is not present in s.
-
-func IndexAny(s, chars string) int
-    IndexAny returns the index of the first instance of any Unicode code point
-    from chars in s, or -1 if no Unicode code point from chars is present in s.
+Strings, bytes, runes and characters in Go - The Go Programming Language/[Skip to Main Content](#main-content)
 
-func IndexByte(s string, c byte) int
-    IndexByte returns the index of the first instance of c in s, or -1 if c is
-    not present in s.
+- [Why Go arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
 
-func IndexFunc(s string, f func(rune) bool) int
-    IndexFunc returns the index into s of the first Unicode code point
-    satisfying f(c), or -1 if none do.
+  - [Case Studies](/solutions/case-studies)
 
-func IndexRune(s string, r rune) int
-    IndexRune returns the index of the first instance of the Unicode code point
-    r, or -1 if rune is not present in s. If r is utf8.RuneError, it returns the
-    first instance of any invalid UTF-8 byte sequence.
-
-func Join(elems []string, sep string) string
-    Join concatenates the elements of its first argument to create a single
-    string. The separator string sep is placed between elements in the resulting
-    string.
-
-func LastIndex(s, substr string) int
-    LastIndex returns the index of the last instance of substr in s, or -1 if
-    substr is not present in s.
-
-func LastIndexAny(s, chars string) int
-    LastIndexAny returns the index of the last instance of any Unicode code
-    point from chars in s, or -1 if no Unicode code point from chars is present
-    in s.
+Common problems companies solve with Go
 
-func LastIndexByte(s string, c byte) int
-    LastIndexByte returns the index of the last instance of c in s, or -1 if c
-    is not present in s.
-
-func LastIndexFunc(s string, f func(rune) bool) int
-    LastIndexFunc returns the index into s of the last Unicode code point
-    satisfying f(c), or -1 if none do.
-
-func Lines(s string) iter.Seq[string]
-    Lines returns an iterator over the newline-terminated lines in the string s.
-    The lines yielded by the iterator include their terminating newlines.
-    If s is empty, the iterator yields no lines at all. If s does not end in
-    a newline, the final yielded line will not end in a newline. It returns a
-    single-use iterator.
+  - [Use Cases](/solutions/use-cases)
 
-func Map(mapping func(rune) rune, s string) string
-    Map returns a copy of the string s with all its characters modified
-    according to the mapping function. If mapping returns a negative value,
-    the character is dropped from the string with no replacement.
+Stories about how and why companies use Go
 
-func Repeat(s string, count int) string
-    Repeat returns a new string consisting of count copies of the string s.
+  - [Security](/security/)
 
-    It panics if count is negative or if the result of (len(s) * count)
-    overflows.
-
-func Replace(s, old, new string, n int) string
-    Replace returns a copy of the string s with the first n non-overlapping
-    instances of old replaced by new. If old is empty, it matches at the
-    beginning of the string and after each UTF-8 sequence, yielding up to k+1
-    replacements for a k-rune string. If n < 0, there is no limit on the number
-    of replacements.
+How Go can help keep you secure by default
 
-func ReplaceAll(s, old, new string) string
-    ReplaceAll returns a copy of the string s with all non-overlapping instances
-    of old replaced by new. If old is empty, it matches at the beginning of the
-    string and after each UTF-8 sequence, yielding up to k+1 replacements for a
-    k-rune string.
+- [Learn](/learn/) Press Enter to activate/deactivate dropdown 
+- [Docs arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
 
-func Split(s, sep string) []string
-    Split slices s into all substrings separated by sep and returns a slice of
-    the substrings between those separators.
+  - [Go Spec](/ref/spec)
 
-    If s does not contain sep and sep is not empty, Split returns a slice of
-    length 1 whose only element is s.
-
-    If sep is empty, Split splits after each UTF-8 sequence. If both s and sep
-    are empty, Split returns an empty slice.
+The official Go language specification
 
-    It is equivalent to SplitN with a count of -1.
+  - [Go User Manual](/doc)
 
-    To split around the first instance of a separator, see Cut.
+A complete introduction to building software with Go
 
-func SplitAfter(s, sep string) []string
-    SplitAfter slices s into all substrings after each instance of sep and
-    returns a slice of those substrings.
+  - [Standard library](https://pkg.go.dev/std)
 
-    If s does not contain sep and sep is not empty, SplitAfter returns a slice
-    of length 1 whose only element is s.
+Reference documentation for Go's standard library
 
-    If sep is empty, SplitAfter splits after each UTF-8 sequence. If both s and
-    sep are empty, SplitAfter returns an empty slice.
+  - [Release Notes](/doc/devel/release)
 
-    It is equivalent to SplitAfterN with a count of -1.
+Learn what's new in each Go release
 
-func SplitAfterN(s, sep string, n int) []string
-    SplitAfterN slices s into substrings after each instance of sep and returns
-    a slice of those substrings.
+  - [Effective Go](/doc/effective_go)
 
-    The count determines the number of substrings to return:
-      - n > 0: at most n substrings; the last substring will be the unsplit
-        remainder;
-      - n == 0: the result is nil (zero substrings);
-      - n < 0: all substrings.
+Tips for writing clear, performant, and idiomatic Go code
 
-    Edge cases for s and sep (for example, empty strings) are handled as
-    described in the documentation for SplitAfter.
+- [Packages](https://pkg.go.dev) Press Enter to activate/deactivate dropdown 
+- [Community arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
 
-func SplitAfterSeq(s, sep string) iter.Seq[string]
-    SplitAfterSeq returns an iterator over substrings of s split after each
-    instance of sep. The iterator yields the same strings that would be returned
-    by SplitAfter(s, sep), but without constructing the slice. It returns a
-    single-use iterator.
+  - [Recorded Talks](/talks/)
 
-func SplitN(s, sep string, n int) []string
-    SplitN slices s into substrings separated by sep and returns a slice of the
-    substrings between those separators.
+Videos from prior events
 
-    The count determines the number of substrings to return:
-      - n > 0: at most n substrings; the last substring will be the unsplit
-        remainder;
-      - n == 0: the result is nil (zero substrings);
-      - n < 0: all substrings.
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
 
-    Edge cases for s and sep (for example, empty strings) are handled as
-    described in the documentation for Split.
+Meet other local Go developers
 
-    To split around the first instance of a separator, see Cut.
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
 
-func SplitSeq(s, sep string) iter.Seq[string]
-    SplitSeq returns an iterator over all substrings of s separated by sep.
-    The iterator yields the same strings that would be returned by Split(s,
-    sep), but without constructing the slice. It returns a single-use iterator.
+Learn and network with Go developers from around the world
 
-func Title(s string) string
-    Title returns a copy of the string s with all Unicode letters that begin
-    words mapped to their Unicode title case.
+  - [Go blog](/blog)
 
-    Deprecated: The rule Title uses for word boundaries does not handle Unicode
-    punctuation properly. Use golang.org/x/text/cases instead.
+The Go project's official blog.
 
-func ToLower(s string) string
-    ToLower returns s with all Unicode letters mapped to their lower case.
+  - [Go project](/help)
 
-func ToLowerSpecial(c unicode.SpecialCase, s string) string
-    ToLowerSpecial returns a copy of the string s with all Unicode letters
-    mapped to their lower case using the case mapping specified by c.
+Get help and stay informed from Go
 
-func ToTitle(s string) string
-    ToTitle returns a copy of the string s with all Unicode letters mapped to
-    their Unicode title case.
+  -  Get connected 
 
-func ToTitleSpecial(c unicode.SpecialCase, s string) string
-    ToTitleSpecial returns a copy of the string s with all Unicode letters
-    mapped to their Unicode title case, giving priority to the special casing
-    rules.
+https://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
 
-func ToUpper(s string) string
-    ToUpper returns s with all Unicode letters mapped to their upper case.
+/
 
-func ToUpperSpecial(c unicode.SpecialCase, s string) string
-    ToUpperSpecial returns a copy of the string s with all Unicode letters
-    mapped to their upper case using the case mapping specified by c.
+- [Why Go navigate_next](#)[navigate_beforeWhy Go](#)
 
-func ToValidUTF8(s, replacement string) string
-    ToValidUTF8 returns a copy of the string s with each run of invalid UTF-8
-    byte sequences replaced by the replacement string, which may be empty.
+  - [Case Studies](/solutions/case-studies)
+  - [Use Cases](/solutions/use-cases)
+  - [Security](/security/)
 
-func Trim(s, cutset string) string
-    Trim returns a slice of the string s with all leading and trailing Unicode
-    code points contained in cutset removed.
+- [Learn](/learn/)
+- [Docs navigate_next](#)[navigate_beforeDocs](#)
 
-func TrimFunc(s string, f func(rune) bool) string
-    TrimFunc returns a slice of the string s with all leading and trailing
-    Unicode code points c satisfying f(c) removed.
+  - [Go Spec](/ref/spec)
+  - [Go User Manual](/doc)
+  - [Standard library](https://pkg.go.dev/std)
+  - [Release Notes](/doc/devel/release)
+  - [Effective Go](/doc/effective_go)
 
-func TrimLeft(s, cutset string) string
-    TrimLeft returns a slice of the string s with all leading Unicode code
-    points contained in cutset removed.
+- [Packages](https://pkg.go.dev)
+- [Community navigate_next](#)[navigate_beforeCommunity](#)
 
-    To remove a prefix, use TrimPrefix instead.
+  - [Recorded Talks](/talks/)
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+  - [Go blog](/blog)
+  - [Go project](/help)
+  - Get connectedhttps://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
 
-func TrimLeftFunc(s string, f func(rune) bool) string
-    TrimLeftFunc returns a slice of the string s with all leading Unicode code
-    points c satisfying f(c) removed.
+# [The Go Blog](/blog/)
 
-func TrimPrefix(s, prefix string) string
-    TrimPrefix returns s without the provided leading prefix string. If s
-    doesn't start with prefix, s is returned unchanged.
+# Strings, bytes, runes and characters in Go
 
-func TrimRight(s, cutset string) string
-    TrimRight returns a slice of the string s, with all trailing Unicode code
-    points contained in cutset removed.
+ Rob Pike
+ 23 October 2013 
 
-    To remove a suffix, use TrimSuffix instead.
+## Introduction
 
-func TrimRightFunc(s string, f func(rune) bool) string
-    TrimRightFunc returns a slice of the string s with all trailing Unicode code
-    points c satisfying f(c) removed.
+The [previous blog post](/blog/slices) explained how slices work in Go, using a number of examples to illustrate the mechanism behind their implementation. Building on that background, this post discusses strings in Go. At first, strings might seem too simple a topic for a blog post, but to use them well requires understanding not only how they work, but also the difference between a byte, a character, and a rune, the difference between Unicode and UTF-8, the difference between a string and a string literal, and other even more subtle distinctions.
 
-func TrimSpace(s string) string
-    TrimSpace returns a slice of the string s, with all leading and trailing
-    white space removed, as defined by Unicode.
+One way to approach this topic is to think of it as an answer to the frequently asked question, “When I index a Go string at position n, why don’t I get the nth character?” As you’ll see, this question leads us to many details about how text works in the modern world.
 
-func TrimSuffix(s, suffix string) string
-    TrimSuffix returns s without the provided trailing suffix string. If s
-    doesn't end with suffix, s is returned unchanged.
+An excellent introduction to some of these issues, independent of Go, is Joel Spolsky’s famous blog post, [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](http://www.joelonsoftware.com/articles/Unicode.html). Many of the points he raises will be echoed here.
 
+## What is a string?
 
-TYPES
+Let’s start with some basics.
 
-type Builder struct {
-	// Has unexported fields.
+In Go, a string is in effect a read-only slice of bytes. If you’re at all uncertain about what a slice of bytes is or how it works, please read the [previous blog post](/blog/slices); we’ll assume here that you have.
+
+It’s important to state right up front that a string holds arbitrary bytes. It is not required to hold Unicode text, UTF-8 text, or any other predefined format. As far as the content of a string is concerned, it is exactly equivalent to a slice of bytes.
+
+Here is a string literal (more about those soon) that uses the `\xNN` notation to define a string constant holding some peculiar byte values. (Of course, bytes range from hexadecimal values 00 through FF, inclusive.)
+
+```
+    const sample = "\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98"
+```
+
+## Printing strings
+
+Because some of the bytes in our sample string are not valid ASCII, not even valid UTF-8, printing the string directly will produce ugly output. The simple print statement
+
+```
+    fmt.Println(sample)
+```
+
+produces this mess (whose exact appearance varies with the environment):
+
+```
+��=� ⌘
+```
+
+To find out what that string really holds, we need to take it apart and examine the pieces. There are several ways to do this. The most obvious is to loop over its contents and pull out the bytes individually, as in this `for` loop:
+
+```
+    for i := 0; i < len(sample); i++ {
+        fmt.Printf("%x ", sample[i])
+    }
+```
+
+As implied up front, indexing a string accesses individual bytes, not characters. We’ll return to that topic in detail below. For now, let’s stick with just the bytes. This is the output from the byte-by-byte loop:
+
+```
+bd b2 3d bc 20 e2 8c 98
+```
+
+Notice how the individual bytes match the hexadecimal escapes that defined the string.
+
+A shorter way to generate presentable output for a messy string is to use the `%x` (hexadecimal) format verb of `fmt.Printf`. It just dumps out the sequential bytes of the string as hexadecimal digits, two per byte.
+
+```
+    fmt.Printf("%x\n", sample)
+```
+
+Compare its output to that above:
+
+```
+bdb23dbc20e28c98
+```
+
+A nice trick is to use the “space” flag in that format, putting a space between the `%` and the `x`. Compare the format string used here to the one above,
+
+```
+    fmt.Printf("% x\n", sample)
+```
+
+and notice how the bytes come out with spaces between, making the result a little less imposing:
+
+```
+bd b2 3d bc 20 e2 8c 98
+```
+
+There’s more. The `%q` (quoted) verb will escape any non-printable byte sequences in a string so the output is unambiguous.
+
+```
+    fmt.Printf("%q\n", sample)
+```
+
+This technique is handy when much of the string is intelligible as text but there are peculiarities to root out; it produces:
+
+```
+"\xbd\xb2=\xbc ⌘"
+```
+
+If we squint at that, we can see that buried in the noise is one ASCII equals sign, along with a regular space, and at the end appears the well-known Swedish “Place of Interest” symbol. That symbol has Unicode value U+2318, encoded as UTF-8 by the bytes after the space (hex value `20`): `e2``8c``98`.
+
+If we are unfamiliar or confused by strange values in the string, we can use the “plus” flag to the `%q` verb. This flag causes the output to escape not only non-printable sequences, but also any non-ASCII bytes, all while interpreting UTF-8. The result is that it exposes the Unicode values of properly formatted UTF-8 that represents non-ASCII data in the string:
+
+```
+    fmt.Printf("%+q\n", sample)
+```
+
+With that format, the Unicode value of the Swedish symbol shows up as a `\u` escape:
+
+```
+"\xbd\xb2=\xbc \u2318"
+```
+
+These printing techniques are good to know when debugging the contents of strings, and will be handy in the discussion that follows. It’s worth pointing out as well that all these methods behave exactly the same for byte slices as they do for strings.
+
+Here’s the full set of printing options we’ve listed, presented as a complete program you can run (and edit) right in the browser:
+
+```
+
+// Copyright 2013 The Go Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+```
+
+```
+package main
+
+import "fmt"
+
+func main() {
+    const sample = "\xbd\xb2\x3d\xbc\x20\xe2\x8c\x98"
+
+    fmt.Println("Println:")
+    fmt.Println(sample)
+
+    fmt.Println("Byte loop:")
+    for i := 0; i < len(sample); i++ {
+        fmt.Printf("%x ", sample[i])
+    }
+    fmt.Printf("\n")
+
+    fmt.Println("Printf with %x:")
+    fmt.Printf("%x\n", sample)
+
+    fmt.Println("Printf with % x:")
+    fmt.Printf("% x\n", sample)
+
+    fmt.Println("Printf with %q:")
+    fmt.Printf("%q\n", sample)
+
+    fmt.Println("Printf with %+q:")
+    fmt.Printf("%+q\n", sample)
 }
-    A Builder is used to efficiently build a string using Builder.Write methods.
-    It minimizes memory copying. The zero value is ready to use. Do not copy a
-    non-zero Builder.
+```
 
-func (b *Builder) Cap() int
-    Cap returns the capacity of the builder's underlying byte slice. It is the
-    total space allocated for the string being built and includes any bytes
-    already written.
+[Exercise: Modify the examples above to use a slice of bytes instead of a string. Hint: Use a conversion to create the slice.]
 
-func (b *Builder) Grow(n int)
-    Grow grows b's capacity, if necessary, to guarantee space for another n
-    bytes. After Grow(n), at least n bytes can be written to b without another
-    allocation. If n is negative, Grow panics.
+[Exercise: Loop over the string using the `%q` format on each byte. What does the output tell you?]
 
-func (b *Builder) Len() int
-    Len returns the number of accumulated bytes; b.Len() == len(b.String()).
+## UTF-8 and string literals
 
-func (b *Builder) Reset()
-    Reset resets the Builder to be empty.
+As we saw, indexing a string yields its bytes, not its characters: a string is just a bunch of bytes. That means that when we store a character value in a string, we store its byte-at-a-time representation. Let’s look at a more controlled example to see how that happens.
 
-func (b *Builder) String() string
-    String returns the accumulated string.
+Here’s a simple program that prints a string constant with a single character three different ways, once as a plain string, once as an ASCII-only quoted string, and once as individual bytes in hexadecimal. To avoid any confusion, we create a “raw string”, enclosed by back quotes, so it can contain only literal text. (Regular strings, enclosed by double quotes, can contain escape sequences as we showed above.)
 
-func (b *Builder) Write(p []byte) (int, error)
-    Write appends the contents of p to b's buffer. Write always returns len(p),
-    nil.
+```
 
-func (b *Builder) WriteByte(c byte) error
-    WriteByte appends the byte c to b's buffer. The returned error is always
-    nil.
+// Copyright 2013 The Go Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
 
-func (b *Builder) WriteRune(r rune) (int, error)
-    WriteRune appends the UTF-8 encoding of Unicode code point r to b's buffer.
-    It returns the length of r and a nil error.
+package main
 
-func (b *Builder) WriteString(s string) (int, error)
-    WriteString appends the contents of s to b's buffer. It returns the length
-    of s and a nil error.
+import "fmt"
 
-type Reader struct {
-	// Has unexported fields.
+```
+
+```
+func main() {
+    const placeOfInterest = `⌘`
+
+    fmt.Printf("plain string: ")
+    fmt.Printf("%s", placeOfInterest)
+    fmt.Printf("\n")
+
+    fmt.Printf("quoted string: ")
+    fmt.Printf("%+q", placeOfInterest)
+    fmt.Printf("\n")
+
+    fmt.Printf("hex bytes: ")
+    for i := 0; i < len(placeOfInterest); i++ {
+        fmt.Printf("%x ", placeOfInterest[i])
+    }
+    fmt.Printf("\n")
 }
-    A Reader implements the io.Reader, io.ReaderAt, io.ByteReader,
-    io.ByteScanner, io.RuneReader, io.RuneScanner, io.Seeker, and io.WriterTo
-    interfaces by reading from a string. The zero value for Reader operates like
-    a Reader of an empty string.
+```
 
-func NewReader(s string) *Reader
-    NewReader returns a new Reader reading from s. It is similar to
-    bytes.NewBufferString but more efficient and non-writable.
+The output is:
 
-func (r *Reader) Len() int
-    Len returns the number of bytes of the unread portion of the string.
+```
+plain string: ⌘
+quoted string: "\u2318"
+hex bytes: e2 8c 98
+```
 
-func (r *Reader) Read(b []byte) (n int, err error)
-    Read implements the io.Reader interface.
+which reminds us that the Unicode character value U+2318, the “Place of Interest” symbol ⌘, is represented by the bytes `e2``8c``98`, and that those bytes are the UTF-8 encoding of the hexadecimal value 2318.
 
-func (r *Reader) ReadAt(b []byte, off int64) (n int, err error)
-    ReadAt implements the io.ReaderAt interface.
+It may be obvious or it may be subtle, depending on your familiarity with UTF-8, but it’s worth taking a moment to explain how the UTF-8 representation of the string was created. The simple fact is: it was created when the source code was written.
 
-func (r *Reader) ReadByte() (byte, error)
-    ReadByte implements the io.ByteReader interface.
+Source code in Go is defined to be UTF-8 text; no other representation is allowed. That implies that when, in the source code, we write the text
 
-func (r *Reader) ReadRune() (ch rune, size int, err error)
-    ReadRune implements the io.RuneReader interface.
+```
+`⌘`
+```
 
-func (r *Reader) Reset(s string)
-    Reset resets the Reader to be reading from s.
+the text editor used to create the program places the UTF-8 encoding of the symbol ⌘ into the source text. When we print out the hexadecimal bytes, we’re just dumping the data the editor placed in the file.
 
-func (r *Reader) Seek(offset int64, whence int) (int64, error)
-    Seek implements the io.Seeker interface.
+In short, Go source code is UTF-8, so the source code for the string literal is UTF-8 text. If that string literal contains no escape sequences, which a raw string cannot, the constructed string will hold exactly the source text between the quotes. Thus by definition and by construction the raw string will always contain a valid UTF-8 representation of its contents. Similarly, unless it contains UTF-8-breaking escapes like those from the previous section, a regular string literal will also always contain valid UTF-8.
 
-func (r *Reader) Size() int64
-    Size returns the original length of the underlying string. Size is the
-    number of bytes available for reading via Reader.ReadAt. The returned value
-    is always the same and is not affected by calls to any other method.
+Some people think Go strings are always UTF-8, but they are not: only string literals are UTF-8. As we showed in the previous section, string values can contain arbitrary bytes; as we showed in this one, string literals always contain UTF-8 text as long as they have no byte-level escapes.
 
-func (r *Reader) UnreadByte() error
-    UnreadByte implements the io.ByteScanner interface.
+To summarize, strings can contain arbitrary bytes, but when constructed from string literals, those bytes are (almost always) UTF-8.
 
-func (r *Reader) UnreadRune() error
-    UnreadRune implements the io.RuneScanner interface.
+## Code points, characters, and runes
 
-func (r *Reader) WriteTo(w io.Writer) (n int64, err error)
-    WriteTo implements the io.WriterTo interface.
+We’ve been very careful so far in how we use the words “byte” and “character”. That’s partly because strings hold bytes, and partly because the idea of “character” is a little hard to define. The Unicode standard uses the term “code point” to refer to the item represented by a single value. The code point U+2318, with hexadecimal value 2318, represents the symbol ⌘. (For lots more information about that code point, see [its Unicode page](http://unicode.org/cldr/utility/character.jsp?a=2318).)
 
-type Replacer struct {
-	// Has unexported fields.
+To pick a more prosaic example, the Unicode code point U+0061 is the lower case Latin letter ‘A’: a.
+
+But what about the lower case grave-accented letter ‘A’, à? That’s a character, and it’s also a code point (U+00E0), but it has other representations. For example we can use the “combining” grave accent code point, U+0300, and attach it to the lower case letter a, U+0061, to create the same character à. In general, a character may be represented by a number of different sequences of code points, and therefore different sequences of UTF-8 bytes.
+
+The concept of character in computing is therefore ambiguous, or at least confusing, so we use it with care. To make things dependable, there are normalization techniques that guarantee that a given character is always represented by the same code points, but that subject takes us too far off the topic for now. A later blog post will explain how the Go libraries address normalization.
+
+“Code point” is a bit of a mouthful, so Go introduces a shorter term for the concept: rune. The term appears in the libraries and source code, and means exactly the same as “code point”, with one interesting addition.
+
+The Go language defines the word `rune` as an alias for the type `int32`, so programs can be clear when an integer value represents a code point. Moreover, what you might think of as a character constant is called a rune constant in Go. The type and value of the expression
+
+```
+'⌘'
+```
+
+is `rune` with integer value `0x2318`.
+
+To summarize, here are the salient points:
+
+- Go source code is always UTF-8.
+- A string holds arbitrary bytes.
+- A string literal, absent byte-level escapes, always holds valid UTF-8 sequences.
+- Those sequences represent Unicode code points, called runes.
+- No guarantee is made in Go that characters in strings are normalized.
+
+## Range loops
+
+Besides the axiomatic detail that Go source code is UTF-8, there’s really only one way that Go treats UTF-8 specially, and that is when using a `for``range` loop on a string.
+
+We’ve seen what happens with a regular `for` loop. A `for``range` loop, by contrast, decodes one UTF-8-encoded rune on each iteration. Each time around the loop, the index of the loop is the starting position of the current rune, measured in bytes, and the code point is its value. Here’s an example using yet another handy `Printf` format, `%#U`, which shows the code point’s Unicode value and its printed representation:
+
+```
+
+// Copyright 2013 The Go Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+package main
+
+import "fmt"
+
+func main() {
+
+```
+
+```
+    const nihongo = "日本語"
+    for index, runeValue := range nihongo {
+        fmt.Printf("%#U starts at byte position %d\n", runeValue, index)
+    }
+```
+
+```
 }
-    Replacer replaces a list of strings with replacements. It is safe for
-    concurrent use by multiple goroutines.
 
-func NewReplacer(oldnew ...string) *Replacer
-    NewReplacer returns a new Replacer from a list of old, new string pairs.
-    Replacements are performed in the order they appear in the target string,
-    without overlapping matches. The old string comparisons are done in argument
-    order.
+```
 
-    NewReplacer panics if given an odd number of arguments.
+The output shows how each code point occupies multiple bytes:
 
-func (r *Replacer) Replace(s string) string
-    Replace returns a copy of s with all replacements performed.
+```
+U+65E5 '日' starts at byte position 0
+U+672C '本' starts at byte position 3
+U+8A9E '語' starts at byte position 6
+```
 
-func (r *Replacer) WriteString(w io.Writer, s string) (n int, err error)
-    WriteString writes s to w with all replacements performed.
+[Exercise: Put an invalid UTF-8 byte sequence into the string. (How?) What happens to the iterations of the loop?]
 
+## Libraries
+
+Go’s standard library provides strong support for interpreting UTF-8 text. If a `for``range` loop isn’t sufficient for your purposes, chances are the facility you need is provided by a package in the library.
+
+The most important such package is [unicode/utf8](/pkg/unicode/utf8/), which contains helper routines to validate, disassemble, and reassemble UTF-8 strings. Here is a program equivalent to the `for``range` example above, but using the `DecodeRuneInString` function from that package to do the work. The return values from the function are the rune and its width in UTF-8-encoded bytes.
+
+```
+
+// Copyright 2013 The Go Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+package main
+
+import (
+    "fmt"
+    "unicode/utf8"
+)
+
+func main() {
+
+```
+
+```
+    const nihongo = "日本語"
+    for i, w := 0, 0; i < len(nihongo); i += w {
+        runeValue, width := utf8.DecodeRuneInString(nihongo[i:])
+        fmt.Printf("%#U starts at byte position %d\n", runeValue, i)
+        w = width
+    }
+```
+
+```
+}
+
+```
+
+Run it to see that it performs the same. The `for``range` loop and `DecodeRuneInString` are defined to produce exactly the same iteration sequence.
+
+Look at the [documentation](/pkg/unicode/utf8/) for the `unicode/utf8` package to see what other facilities it provides.
+
+## Conclusion
+
+To answer the question posed at the beginning: Strings are built from bytes so indexing them yields bytes, not characters. A string might not even hold characters. In fact, the definition of “character” is ambiguous and it would be a mistake to try to resolve the ambiguity by defining that strings are made of characters.
+
+There’s much more to say about Unicode, UTF-8, and the world of multilingual text processing, but it can wait for another post. For now, we hope you have a better understanding of how Go strings behave and that, although they may contain arbitrary bytes, UTF-8 is a central part of their design.
+
+Next article: [Four years of Go](/blog/4years)
+Previous article: [Arrays, slices (and strings): The mechanics of 'append'](/blog/slices)
+[Blog Index](/blog/all)[Why Go](/solutions/)[Use Cases](/solutions/use-cases)[Case Studies](/solutions/case-studies)[Get Started](/learn/)[Playground](/play)[Tour](/tour/)[Stack Overflow](https://stackoverflow.com/questions/tagged/go?tab=Newest)[Help](/help/)[Packages](https://pkg.go.dev)[Standard Library](/pkg/)[About Go Packages](https://pkg.go.dev/about)[About](/project)[Download](/dl/)[Blog](/blog/)[Issue Tracker](https://github.com/golang/go/issues)[Release Notes](/doc/devel/release)[Brand Guidelines](/brand)[Code of Conduct](/conduct)[Connect](https://www.twitter.com/golang)[Twitter](https://www.twitter.com/golang)[GitHub](https://github.com/golang)[Slack](https://invite.slack.golangbridge.org/)[r/golang](https://reddit.com/r/golang)[Meetup](https://www.meetup.com/pro/go)[Golang Weekly](https://golangweekly.com/) Opens in new window. 
+
+- [Copyright](/copyright)
+- [Terms of Service](/tos)
+- [Privacy Policy](http://www.google.com/intl/en/policies/privacy/)
+- [Report an Issue](/s/website-issue)
+- 
+
+https://google.comgo.dev uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic. [Learn more.](https://policies.google.com/technologies/cookies)Okay

@@ -1,3 +1,9 @@
+Dart - Dart API docsmenu
+
+1. [Dart SDK](https://github.com/dart-lang/sdk)
+
+Dart dark_mode  light_mode 
+
 # Welcome!
 
 Welcome to the Dart API reference documentation, covering the [Dart core libraries](https://dart.dev/guides/libraries). These include:
@@ -81,3 +87,5 @@ This API reference is generated from the SDK source at [dart-lang/sdk](https://g
 24. [dart:svg](dart-svg/)
 25. [dart:web_audio](dart-web_audio/)
 26. [dart:web_gl](dart-web_gl/)
+
+ Dart 3.10.7  | [Terms](https://dart.dev/terms) | [Privacy](https://policies.google.com/privacy) | [Security](https://dart.dev/security) Except as otherwise noted, this site is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) and code samples are licensed under the [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause) Cookies management controls

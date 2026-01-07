@@ -1,79 +1,206 @@
-# XRPose
+content/files/en-us/web/api/xrpose/index.md at main · mdn/content · GitHub[Skip to content](#start-of-content)
 
-Limited availability
+## Navigation Menu
 
-This feature is not Baseline because it does not work in some of the most widely-used browsers.
+Toggle navigation/[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fxrpose%2Findex.md%3Fplain%3D1)Appearance settings
 
-- [Learn more](/en-US/docs/Glossary/Baseline/Compatibility)
-- [See full compatibility](#browser_compatibility)
-- [Report feedback](https://survey.alchemer.com/s3/7634825/MDN-baseline-feedback?page=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FXRPose&level=not)
+- Platform
 
-Secure context: This feature is available only in [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts) (HTTPS), in some or all [supporting browsers](#browser_compatibility).
+  - AI CODE CREATION
 
-`XRPose` is a [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) interface representing a position and orientation in the 3D space, relative to the [XRSpace](/en-US/docs/Web/API/XRSpace) within which it resides. The `XRSpace`—which is either an [XRReferenceSpace](/en-US/docs/Web/API/XRReferenceSpace) or an [XRBoundedReferenceSpace](/en-US/docs/Web/API/XRBoundedReferenceSpace)—defines the coordinate system used for the pose and, in the case of an [XRViewerPose](/en-US/docs/Web/API/XRViewerPose), its underlying views.
+    - [GitHub CopilotWrite better code with AI](https://github.com/features/copilot)
+    - [GitHub SparkBuild and deploy intelligent apps](https://github.com/features/spark)
+    - [GitHub ModelsManage and compare prompts](https://github.com/features/models)
+    - [MCP RegistryNewIntegrate external tools](https://github.com/mcp)
 
-To obtain the `XRPose` for the `XRSpace` used as the local coordinate system of an object, call [XRFrame.getPose()](/en-US/docs/Web/API/XRFrame/getPose), specifying that local `XRSpace` and the space to which you wish to convert:
+  - DEVELOPER WORKFLOWS
 
-js
+    - [ActionsAutomate any workflow](https://github.com/features/actions)
+    - [CodespacesInstant dev environments](https://github.com/features/codespaces)
+    - [IssuesPlan and track work](https://github.com/features/issues)
+    - [Code ReviewManage code changes](https://github.com/features/code-review)
 
-```
-thePose = xrFrame.getPose(localSpace, baseSpace);
-```
+  - APPLICATION SECURITY
 
-The pose for a viewer (or camera) is represented by the [XRViewerPose](/en-US/docs/Web/API/XRViewerPose) subclass of `XRPose`. This is obtained using [XRFrame.getViewerPose()](/en-US/docs/Web/API/XRFrame/getViewerPose) instead of `getPose()`, specifying a reference space which has been adjusted to position and orient the node to provide the desired viewing position and angle:
+    - [GitHub Advanced SecurityFind and fix vulnerabilities](https://github.com/security/advanced-security)
+    - [Code securitySecure your code as you build](https://github.com/security/advanced-security/code-security)
+    - [Secret protectionStop leaks before they start](https://github.com/security/advanced-security/secret-protection)
 
-js
+  - EXPLORE
 
-```
-viewerPose = xrFrame.getViewerPose(adjReferenceSpace);
-```
+    - [Why GitHub](https://github.com/why-github)
+    - [Documentation](https://docs.github.com)
+    - [Blog](https://github.blog)
+    - [Changelog](https://github.blog/changelog)
+    - [Marketplace](https://github.com/marketplace)
 
-Here, `adjReferenceSpace` is a reference space which has been updated using the base frame of reference for the frame and any adjustments needed to position the viewer based on movement or rotation which is being supplied from a source other than the XR device, such as keyboard or mouse inputs.
+[View all features](https://github.com/features)
+- Solutions
 
-See the article [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion) for further details and an example with thorough explanations of what's going on.
+  - BY COMPANY SIZE
 
-## In this article
+    - [Enterprises](https://github.com/enterprise)
+    - [Small and medium teams](https://github.com/team)
+    - [Startups](https://github.com/enterprise/startups)
+    - [Nonprofits](https://github.com/solutions/industry/nonprofits)
 
-- [Instance properties](#instance_properties)
-- [Specifications](#specifications)
-- [Browser compatibility](#browser_compatibility)
-- [See also](#see_also)
+  - BY USE CASE
 
-## [Instance properties](#instance_properties)
+    - [App Modernization](https://github.com/solutions/use-case/app-modernization)
+    - [DevSecOps](https://github.com/solutions/use-case/devsecops)
+    - [DevOps](https://github.com/solutions/use-case/devops)
+    - [CI/CD](https://github.com/solutions/use-case/ci-cd)
+    - [View all use cases](https://github.com/solutions/use-case)
 
-[XRPose.angularVelocity](/en-US/docs/Web/API/XRPose/angularVelocity)Read only
+  - BY INDUSTRY
 
-A [DOMPointReadOnly](/en-US/docs/Web/API/DOMPointReadOnly) describing the angular velocity in radians per second relative to the base [XRSpace](/en-US/docs/Web/API/XRSpace).
+    - [Healthcare](https://github.com/solutions/industry/healthcare)
+    - [Financial services](https://github.com/solutions/industry/financial-services)
+    - [Manufacturing](https://github.com/solutions/industry/manufacturing)
+    - [Government](https://github.com/solutions/industry/government)
+    - [View all industries](https://github.com/solutions/industry)
 
-[XRPose.emulatedPosition](/en-US/docs/Web/API/XRPose/emulatedPosition)Read only
+[View all solutions](https://github.com/solutions)
+- Resources
 
-A Boolean value which is `false` if the position and orientation given by [transform](/en-US/docs/Web/API/XRPose/transform) is obtained directly from a full six degree of freedom (6DoF) XR device (that is, a device which tracks not only the pitch, yaw, and roll of the head but also the forward, backward, and side-to-side motion of the viewer). If any component of the `transform` is computed or created artificially (such as by using mouse or keyboard controls to move through space), this value is instead `true`, indicating that the `transform` is in part emulated in software.
+  - EXPLORE BY TOPIC
 
-[XRPose.linearVelocity](/en-US/docs/Web/API/XRPose/linearVelocity)Read only
+    - [AI](https://github.com/resources/articles?topic=ai)
+    - [Software Development](https://github.com/resources/articles?topic=software-development)
+    - [DevOps](https://github.com/resources/articles?topic=devops)
+    - [Security](https://github.com/resources/articles?topic=security)
+    - [View all topics](https://github.com/resources/articles)
 
-A [DOMPointReadOnly](/en-US/docs/Web/API/DOMPointReadOnly) describing the linear velocity in meters per second relative to the base [XRSpace](/en-US/docs/Web/API/XRSpace).
+  - EXPLORE BY TYPE
 
-[XRPose.transform](/en-US/docs/Web/API/XRPose/transform)Read only
+    - [Customer stories](https://github.com/customer-stories)
+    - [Events & webinars](https://github.com/resources/events)
+    - [Ebooks & reports](https://github.com/resources/whitepapers)
+    - [Business insights](https://github.com/solutions/executive-insights)
+    - [GitHub Skills](https://skills.github.com)
 
-A [XRRigidTransform](/en-US/docs/Web/API/XRRigidTransform) which provides the position and orientation of the pose relative to the base [XRSpace](/en-US/docs/Web/API/XRSpace).
+  - SUPPORT & SERVICES
 
-## [Specifications](#specifications)
+    - [Documentation](https://docs.github.com)
+    - [Customer support](https://support.github.com)
+    - [Community forum](https://github.com/orgs/community/discussions)
+    - [Trust center](https://github.com/trust-center)
+    - [Partners](https://github.com/partners)
 
-Specification
-[WebXR Device API# xrpose-interface](https://immersive-web.github.io/webxr/#xrpose-interface)
+- Open Source
 
-## [Browser compatibility](#browser_compatibility)
+  - COMMUNITY
 
-## [See also](#see_also)
+    - [GitHub SponsorsFund open source developers](https://github.com/sponsors)
 
-- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- [XRFrame.getPose()](/en-US/docs/Web/API/XRFrame/getPose)
-- [XRViewerPose](/en-US/docs/Web/API/XRViewerPose)
+  - PROGRAMS
 
-## Help improve MDN
+    - [Security Lab](https://securitylab.github.com)
+    - [Maintainer Community](https://maintainers.github.com)
+    - [Accelerator](https://github.com/accelerator)
+    - [Archive Program](https://archiveprogram.github.com)
 
-Was this page helpful to you?YesNo[Learn how to contribute](/en-US/docs/MDN/Community/Getting_started)
+  - REPOSITORIES
 
- This page was last modified on ⁨Feb 18, 2023⁩ by [MDN contributors](/en-US/docs/Web/API/XRPose/contributors.txt). 
+    - [Topics](https://github.com/topics)
+    - [Trending](https://github.com/trending)
+    - [Collections](https://github.com/collections)
 
-[View this page on GitHub](https://github.com/mdn/content/blob/main/files/en-us/web/api/xrpose/index.md?plain=1) • [Report a problem with this content](https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FXRPose&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Fxrpose%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FXRPose%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fxrpose%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2Fb5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2%0A*+Document+last+modified%3A+2023-02-18T09%3A00%3A03.000Z%0A%0A%3C%2Fdetails%3E)
+- Enterprise
+
+  - ENTERPRISE SOLUTIONS
+
+    - [Enterprise platformAI-powered developer platform](https://github.com/enterprise)
+
+  - AVAILABLE ADD-ONS
+
+    - [GitHub Advanced SecurityEnterprise-grade security features](https://github.com/security/advanced-security)
+    - [Copilot for BusinessEnterprise-grade AI features](https://github.com/features/copilot/copilot-business)
+    - [Premium SupportEnterprise-grade 24/7 support](https://github.com/premium-support)
+
+- [Pricing](https://github.com/pricing)
+
+Search or jump to...
+
+# Search code, repositories, users, issues, pull requests...
+
+ Search Clear
+
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
+
+#  Provide feedback 
+
+We read every piece of feedback, and take your input very seriously.
+
+Include my email address so I can be contacted Cancel  Submit feedback 
+
+#  Saved searches 
+
+## Use saved searches to filter your results more quickly
+
+NameQuery
+
+ To see all available qualifiers, see our [documentation](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax). 
+
+ Cancel  Create saved search [Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fxrpose%2Findex.md%3Fplain%3D1)[Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&source=header-repo&source_repo=mdn%2Fcontent)Appearance settingsResetting focusYou signed in with another tab or window. Reload to refresh your session.You signed out in another tab or window. Reload to refresh your session.You switched accounts on another tab or window. Reload to refresh your session.Dismiss alert{{ message }}[mdn](/mdn)/[content](/mdn/content)Public
+
+- [Notifications](/login?return_to=%2Fmdn%2Fcontent)You must be signed in to change notification settings
+- [Fork
+    23.1k](/login?return_to=%2Fmdn%2Fcontent)
+- [Star
+          10.4k](/login?return_to=%2Fmdn%2Fcontent)
+
+- [Code](/mdn/content)
+- [Issues
+          320](/mdn/content/issues)
+- [Pull requests
+          96](/mdn/content/pulls)
+- [Actions](/mdn/content/actions)
+- [Projects
+          0](/mdn/content/projects)
+- 
+
+### 
+
+[Security
+          
+  
+  
+    
+  
+    
+      
+
+              Uh oh!
+
+              There was an error while loading. Please reload this page](/mdn/content/security).
+
+- [Insights](/mdn/content/pulse)
+
+Additional navigation options
+
+- [Code](/mdn/content)
+- [Issues](/mdn/content/issues)
+- [Pull requests](/mdn/content/pulls)
+- [Actions](/mdn/content/actions)
+- [Projects](/mdn/content/projects)
+- [Security](/mdn/content/security)
+- [Insights](/mdn/content/pulse)
+
+## Footer
+
+https://github.com © 2026 GitHub, Inc. 
+
+### Footer navigation
+
+- [Terms](https://docs.github.com/site-policy/github-terms/github-terms-of-service)
+- [Privacy](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement)
+- [Security](https://github.com/security)
+- [Status](https://www.githubstatus.com/)
+- [Community](https://github.community/)
+- [Docs](https://docs.github.com/)
+- [Contact](https://support.github.com?tags=dotcom-footer)
+-  Manage cookies 
+-  Do not share my personal information 
+
+ You can’t perform that action at this time.

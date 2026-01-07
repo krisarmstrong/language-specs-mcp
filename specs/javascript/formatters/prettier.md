@@ -1,489 +1,371 @@
+@babel/parser · Babel[Skip to main content](#__docusaurus_skipToContent_fallback)/[Docs](/docs/)[Setup](/setup)[Try it out](/repl)[Videos](/videos/)[Blog](/blog)Search[Donate](https://opencollective.com/babel)[Team](/team)[GitHub](https://github.com/babel/babel)
+
+- [Guides](/docs/)
+- [Config Reference](/docs/config-files)
+- [Presets](/docs/presets)
+- [Misc](/docs/roadmap)
+- [Integration Packages](/docs/babel-cli)
+- [Tooling Packages](/docs/babel-parser)
+
+  - [@babel/parser](/docs/babel-parser)
+  - [@babel/core](/docs/babel-core)
+  - [@babel/generator](/docs/babel-generator)
+  - [@babel/compat-data](/docs/babel-compat-data)
+  - [@babel/code-frame](/docs/babel-code-frame)
+  - [@babel/runtime](/docs/babel-runtime)
+  - [@babel/template](/docs/babel-template)
+  - [@babel/traverse](/docs/babel-traverse)
+  - [@babel/types](/docs/babel-types)
+
+- [Helper Packages](/docs/babel-helper-compilation-targets)
+
+- /
+- Tooling Packages
+- @babel/parser
+
 On this page
 
-# Options
-Version: 3.7.4
+# @babel/parser
 
-Source: https://prettier.io/docs/en/options.html
+The Babel parser (previously Babylon) is a JavaScript parser used in [Babel](https://github.com/babel/babel).
 
+- The latest ECMAScript version enabled by default (ES2020).
+- Comment attachment.
+- Support for JSX, Flow, TypeScript.
+- Support for experimental language proposals (accepting PRs for anything at least [stage-0](https://github.com/tc39/proposals/blob/master/stage-0-proposals.md)).
 
-Prettier ships with a handful of format options.
+## Credits[​](#credits)
 
-To learn more about Prettier’s stance on options – see the [Option Philosophy](/docs/option-philosophy).
+Heavily based on [acorn](https://github.com/marijnh/acorn) and [acorn-jsx](https://github.com/RReverser/acorn-jsx), thanks to the awesome work of [@RReverser](https://github.com/RReverser) and [@marijnh](https://github.com/marijnh).
 
-If you change any options, it’s recommended to do it via a [configuration file](/docs/configuration). This way the Prettier CLI, [editor integrations](/docs/editors) and other tooling knows what options you use.
+## API[​](#api)
 
-## Experimental Ternaries[​](#experimental-ternaries)
+### `babelParser.parse(code, [options])`[​](#babelparserparsecode-options)
 
-Try prettier's [new ternary formatting](https://github.com/prettier/prettier/pull/13183) before it becomes the default behavior.
+### `babelParser.parseExpression(code, [options])`[​](#babelparserparseexpressioncode-options)
 
-Valid options:
+`parse()` parses the provided `code` as an entire ECMAScript program, while `parseExpression()` tries to parse a single Expression with performance in mind. When in doubt, use `.parse()`.
 
-- `true` - Use curious ternaries, with the question mark after the condition.
-- `false` - Retain the default behavior of ternaries; keep question marks on the same line as the consequent.
+### Options[​](#options)
 
-DefaultCLI OverrideAPI Override`false``--experimental-ternaries``experimentalTernaries: <bool>`
+HistoryVersionChanges`v7.28.0`Added `sourceType: "commonjs"``v7.27.0`Added `allowYieldOutsideFunction``v7.26.0`Added `startIndex``v7.23.0`Added `createImportExpressions``v7.21.0`Added `allowNewTargetOutsideFunction` and `annexB``v7.16.0`Added `startColumn``v7.15.0`Added `attachComment``v7.7.0`Added `errorRecovery``v7.5.0`Added `allowUndeclaredExports``v7.2.0`Added `createParenthesizedExpressions`
 
-## Experimental Operator Position[​](#experimental-operator-position)
+- 
 
-Valid options:
+allowImportExportEverywhere: By default, `import` and `export` declarations can only appear at a program's top level. Setting this option to `true` allows them anywhere where a statement is allowed.
 
-- `"start"` - When binary expressions wrap lines, print operators at the start of new lines.
-- `"end"` - Default behavior; when binary expressions wrap lines, print operators at the end of previous lines.
+- 
 
-DefaultCLI OverrideAPI Override`"end"``--experimental-operator-position <start|end>``experimentalOperatorPosition: "<start|end>"`
+allowAwaitOutsideFunction: By default, `await` use is only allowed inside of an async function or, when the `topLevelAwait` plugin is enabled, in the top-level scope of modules. Set this to `true` to also accept it in the top-level scope of scripts. This option is discouraged in favor of `topLevelAwait` plugin.
 
-## Print Width[​](#print-width)
+- 
 
-Specify the line length that the printer will wrap on.
+allowYieldOutsideFunction: By default, `yield` use is only allowed inside of a generator function. Set this to `true` to also accept it in the top-level.
 
-warning
+- 
 
-For readability we recommend against using more than 80 characters:
+allowNewTargetOutsideFunction: By default, `new.target` use is not allowed outside of a function or class. Set this to `true` to accept such code.
 
-In code styleguides, maximum line length rules are often set to 100 or 120. However, when humans write code, they don’t strive to reach the maximum number of columns on every line. Developers often use whitespace to break up long lines for readability. In practice, the average line length often ends up well below the maximum.
+- 
 
-Prettier’s printWidth option does not work the same way. It is not the hard upper allowed line length limit. It is a way to say to Prettier roughly how long you’d like lines to be. Prettier will make both shorter and longer lines, but generally strive to meet the specified printWidth.
+allowReturnOutsideFunction: By default, a return statement at the top level raises an error. Set this to `true` to accept such code.
 
-Remember, computers are dumb. You need to explicitly tell them what to do, while humans can make their own (implicit) judgements, for example on when to break a line.
+- 
 
-In other words, don’t try to use printWidth as if it was ESLint’s [max-len](https://eslint.org/docs/rules/max-len) – they’re not the same. max-len just says what the maximum allowed line length is, but not what the generally preferred length is – which is what printWidth specifies.DefaultCLI OverrideAPI Override`80``--print-width <int>``printWidth: <int>`
+allowSuperOutsideMethod: By default, `super` use is not allowed outside of class and object methods. Set this to `true` to accept such code.
 
-Setting `max_line_length` in an [.editorconfig file](https://editorconfig.org/) will configure Prettier’s print width, unless overridden.
+- 
 
-(If you don’t want line wrapping when formatting Markdown, you can set the [Prose Wrap](#prose-wrap) option to disable it.)
+allowUndeclaredExports: By default, exporting an identifier that was not declared in the current module scope will raise an error. While this behavior is required by the ECMAScript modules specification, Babel's parser cannot anticipate transforms later in the plugin pipeline that might insert the appropriate declarations, so it is sometimes important to set this option to `true` to prevent the parser from prematurely complaining about undeclared exports that will be added later.
 
-## Tab Width[​](#tab-width)
+- 
 
-Specify the number of spaces per indentation-level.
+attachComment: By default, Babel attaches comments to adjacent AST nodes. When this option is set to `false`, comments are not attached. It can provide up to 30% performance improvement when the input code has many comments. `@babel/eslint-parser` will set it for you. It is not recommended to use `attachComment: false` with Babel transform, as doing so removes all the comments in output code, and renders annotations such as `/* istanbul ignore next */` nonfunctional.
 
-DefaultCLI OverrideAPI Override`2``--tab-width <int>``tabWidth: <int>`
+- 
 
-Setting `indent_size` or `tab_width` in an [.editorconfig file](https://editorconfig.org/) will configure Prettier’s tab width, unless overridden.
+annexB: By default, Babel parses JavaScript according to [ECMAScript's Annex B "Additional ECMAScript Features for Web Browsers"](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) syntax. When this option is set to `false`, Babel will parse syntax without the extensions specific to Annex B.
 
-## Tabs[​](#tabs)
+- 
 
-Indent lines with tabs instead of spaces.
+createImportExpressions: By default, the parser parses dynamic import `import()` as call expression nodes. When this option is set to `true`, `ImportExpression` AST nodes are created instead. This option will default to `true` in Babel 8.
 
-DefaultCLI OverrideAPI Override`false``--use-tabs``useTabs: <bool>`
+- 
 
-Setting `indent_style` in an [.editorconfig file](https://editorconfig.org/) will configure Prettier’s tab usage, unless overridden.
+createParenthesizedExpressions: By default, the parser sets `extra.parenthesized` on the expression nodes. When this option is set to `true`, `ParenthesizedExpression` AST nodes are created instead.
 
-(Tabs will be used for indentation but Prettier uses spaces to align things, such as in ternaries. This behavior is known as [SmartTabs](https://www.emacswiki.org/emacs/SmartTabs).)
+- 
 
-## Semicolons[​](#semicolons)
+errorRecovery: By default, Babel always throws an error when it finds some invalid code. When this option is set to `true`, it will store the parsing error and try to continue parsing the invalid input file. The resulting AST will have an `errors` property representing an array of all the parsing errors. Note that even when this option is enabled, `@babel/parser` could throw for unrecoverable errors.
 
-Print semicolons at the ends of statements.
+- 
 
-Valid options:
+plugins: Array containing the plugins that you want to enable.
 
-- `true` - Add a semicolon at the end of every statement.
-- `false` - Only add semicolons at the beginning of lines that [may introduce ASI failures](/docs/rationale#semicolons).
+- 
 
-DefaultCLI OverrideAPI Override`true``--no-semi``semi: <bool>`
+sourceType: Indicate the mode the code should be parsed in. Can be one of `"script"`, `"commonjs"`, `"module"` or `"unambiguous"`. Defaults to `"script"`. `"unambiguous"` will make @babel/parser attempt to guess, based on the presence of ES6 `import` or `export` statements. Files with ES6 `import`s and `export`s are considered `"module"` and are otherwise `"script"`.
 
-## Quotes[​](#quotes)
+The `"commonjs"` mode indicates that the code should be run in a CommonJS environment such as Node.js. It is mostly compatible with the `"script"` mode except that `return`, `new.target` and `using`/`await using` declarations are allowed in the top level.
 
-Use single quotes instead of double quotes.
+- 
 
-Notes:
+sourceFilename: Correlate output AST nodes with their source filename. Useful when generating code and source maps from the ASTs of multiple input files.
 
-- JSX quotes ignore this option – see [jsx-single-quote](#jsx-quotes).
-- If the number of quotes outweighs the other quote, the quote which is less used will be used to format the string - Example: `"I'm double quoted"` results in `"I'm double quoted"` and `"This \"example\" is single quoted"` results in `'This "example" is single quoted'`.
+- 
 
-See the [strings rationale](/docs/rationale#strings) for more information.
+startColumn: By default, the parsed code is treated as if it starts from line 1, column 0. You can provide a column number to alternatively start with. Useful for integration with other source tools.
 
-DefaultCLI OverrideAPI Override`false``--single-quote``singleQuote: <bool>`
+- 
 
-## Quote Props[​](#quote-props)
+startLine: By default, the parsed code is treated as if it starts from line 1, column 0. You can provide a line number to alternatively start with. Useful for integration with other source tools.
 
-Change when properties in objects are quoted.
+- 
 
-Valid options:
+startIndex: By default, all source indexes start from 0. With this option you can provide an alternative start index. To ensure accurate AST source indexes this option should always be provided when `startLine` is greater than 1. Useful for integration with other source tools.
 
-- `"as-needed"` - Only add quotes around object properties where required.
-- `"consistent"` - If at least one property in an object requires quotes, quote all properties.
-- `"preserve"` - Respect the input use of quotes in object properties.
+- 
 
-DefaultCLI OverrideAPI Override`"as-needed"``--quote-props <as-needed|consistent|preserve>``quoteProps: "<as-needed|consistent|preserve>"`
+strictMode: By default, ECMAScript code is parsed as strict only if a `"use strict";` directive is present or if the parsed file is an ECMAScript module. Set this option to `true` to always parse files in strict mode.
 
-Note that Prettier never unquotes numeric property names in Angular expressions, TypeScript, and Flow because the distinction between string and numeric keys is significant in these languages. See: [Angular](https://codesandbox.io/s/hungry-morse-foj87?file=/src/app/app.component.html), [TypeScript](https://www.typescriptlang.org/play?#code/DYUwLgBAhhC8EG8IEYBcKA0EBM7sQF8AoUSAIzkQgHJlr1ktrt6dCiiATEAY2CgBOICKWhR0AaxABPAPYAzCGGkAHEAugBuLr35CR4CGTKSZG5Wo1ltRKDHjHtQA), [Flow](https://flow.org/try/#0PQKgBAAgZgNg9gdzCYAoVBjOA7AzgFzAA8wBeMAb1TDAAYAuMARlQF8g). Also Prettier doesn’t unquote numeric properties for Vue (see the [issue](https://github.com/prettier/prettier/issues/10127) about that).
+- 
 
-## JSX Quotes[​](#jsx-quotes)
+ranges: Adds a `range` property to each node: `[node.start, node.end]`
 
-Use single quotes instead of double quotes in JSX.
+- 
 
-DefaultCLI OverrideAPI Override`false``--jsx-single-quote``jsxSingleQuote: <bool>`
+tokens: Adds all parsed tokens to a `tokens` property on the `File` node
 
-## Trailing Commas[​](#trailing-commas)
+### Output[​](#output)
 
-Default value changed from `es5` to `all` in v3.0.0
+The Babel parser generates AST according to [Babel AST format](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md). It is based on [ESTree spec](https://github.com/estree/estree) with the following deviations:
 
-Print trailing commas wherever possible in multi-line comma-separated syntactic structures. (A single-line array, for example, never gets trailing commas.)
+- [Literal](https://github.com/estree/estree/blob/master/es5.md#literal) token is replaced with [StringLiteral](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#stringliteral), [NumericLiteral](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#numericliteral), [BigIntLiteral](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#bigintliteral), [BooleanLiteral](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#booleanliteral), [NullLiteral](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#nullliteral), [RegExpLiteral](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#regexpliteral)
+- [Property](https://github.com/estree/estree/blob/master/es5.md#property) token is replaced with [ObjectProperty](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#objectproperty) and [ObjectMethod](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#objectmethod)
+- [MethodDefinition](https://github.com/estree/estree/blob/master/es2015.md#methoddefinition) is replaced with [ClassMethod](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#classmethod) and [ClassPrivateMethod](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#classprivatemethod)
+- [PropertyDefinition](https://github.com/estree/estree/blob/master/es2022.md#propertydefinition) is replaced with [ClassProperty](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#classproperty) and [ClassPrivateProperty](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#classprivateproperty)
+- [PrivateIdentifier](https://github.com/estree/estree/blob/master/es2022.md#privateidentifier) is replaced with [PrivateName](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#privatename)
+- [Program](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#programs) and [BlockStatement](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#blockstatement) contain additional `directives` field with [Directive](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#directive) and [DirectiveLiteral](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#directiveliteral)
+- [ClassMethod](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#classmethod), [ClassPrivateMethod](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#classprivatemethod), [ObjectProperty](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#objectproperty), and [ObjectMethod](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#objectmethod) value property's properties in [FunctionExpression](https://github.com/babel/babel/tree/main/packages/babel-parser/ast/spec.md#functionexpression) is coerced/brought into the main method node.
+- [ChainExpression](https://github.com/estree/estree/blob/master/es2020.md#chainexpression) is replaced with [OptionalMemberExpression](https://github.com/babel/babel/blob/main/packages/babel-parser/ast/spec.md#optionalmemberexpression) and [OptionalCallExpression](https://github.com/babel/babel/blob/main/packages/babel-parser/ast/spec.md#optionalcallexpression)
+- [ImportExpression](https://github.com/estree/estree/blob/master/es2020.md#importexpression) is replaced with a [CallExpression](https://github.com/babel/babel/blob/main/packages/babel-parser/ast/spec.md#callexpression) whose `callee` is an [Import](https://github.com/babel/babel/blob/main/packages/babel-parser/ast/spec.md#import) node. This change will be reversed in Babel 8.
+- [ExportAllDeclaration](https://github.com/estree/estree/blob/master/es2020.md#exportalldeclaration) with `exported` field is replaced with an [ExportNamedDeclaration](https://github.com/babel/babel/blob/main/packages/babel-parser/ast/spec.md#exportnameddeclaration) containing an [ExportNamespaceSpecifier](https://github.com/babel/babel/blob/main/packages/babel-parser/ast/spec.md#exportnamespacespecifier) node.
 
-Valid options:
+note
 
-- `"all"` - Trailing commas wherever possible (including [function parameters and calls](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Trailing_commas_in_functions)). To run, JavaScript code formatted this way needs an engine that supports ES2017 (Node.js 8+ or a modern browser) or [downlevel compilation](https://babeljs.io/docs/index). This also enables trailing commas in type parameters in TypeScript (supported since TypeScript 2.7 released in January 2018).
-- `"es5"` - Trailing commas where valid in ES5 (objects, arrays, etc.). Trailing commas in type parameters in TypeScript and Flow.
-- `"none"` - No trailing commas.
+The `estree` plugin can revert these deviations. Use it only if you are passing Babel AST to other ESTree-compliant tools.
 
-DefaultCLI OverrideAPI Override`"all"``--trailing-comma <all|es5|none>``trailingComma: "<all|es5|none>"`
+AST for JSX code is based on [Facebook JSX AST](https://github.com/facebook/jsx/blob/main/AST.md).
 
-## Bracket Spacing[​](#bracket-spacing)
+### Semver[​](#semver)
 
-Print spaces between brackets in object literals.
+The Babel Parser follows semver in most situations. The only thing to note is that some spec-compliancy bug fixes may be released under patch versions.
 
-Valid options:
+For example: We push a fix to early error on something like [#107](https://github.com/babel/babylon/pull/107) - multiple default exports per file. That would be considered a bug fix even though it would cause a build to fail.
 
-- `true` - Example: `{ foo: bar }`.
-- `false` - Example: `{foo: bar}`.
+### Example[​](#example)
 
-DefaultCLI OverrideAPI Override`true``--no-bracket-spacing``bracketSpacing: <bool>`
-
-## Object Wrap[​](#object-wrap)
-
-First available in v3.5.0
-
-Configure how Prettier wraps object literals when they could fit on one line or span multiple lines.
-
-By default, Prettier formats objects as multi-line if there is a newline prior to the first property. Authors can use this heuristic to contextually improve readability, though it has some downsides. See [Multi-line objects](/docs/rationale#multi-line-objects).
-
-Valid options:
-
-- `"preserve"` - Keep as multi-line, if there is a newline between the opening brace and first property.
-- `"collapse"` - Fit to a single line when possible.
-
-DefaultCLI OverrideAPI Override`"preserve"``--object-wrap <preserve|collapse>``objectWrap: "<preserve|collapse>"`
-
-## Bracket Line[​](#bracket-line)
-
-Put the `>` of a multi-line HTML (HTML, JSX, Vue, Angular) element at the end of the last line instead of being alone on the next line (does not apply to self closing elements).
-
-Valid options:
-
-- `true` - Example:
+JavaScript
 
 ```
-<button
-  className="prettier-class"
-  id="prettier-id"
-  onClick={this.handleClick}>
-  Click Here
-</button>
+require("@babel/parser").parse("code", {
+  // parse in strict mode and allow module declarations
+  sourceType: "module",
+
+  plugins: [
+    // enable jsx and flow syntax
+    "jsx",
+    "flow",
+  ],
+});
 ```
 
-- `false` - Example:
+### Plugins[​](#plugins)
+
+#### Miscellaneous[​](#miscellaneous)
+
+NameCode Example`estree` ([repo](https://github.com/estree/estree))n/a
+
+#### Language extensions[​](#language-extensions)
+
+HistoryVersionChanges`v7.6.0`Added `v8intrinsic`NameCode Example`flow` ([repo](https://github.com/facebook/flow))`var a: string = "";``flowComments` ([docs](https://flow.org/en/docs/types/comments/))`/*:: type Foo = {...}; */``jsx` ([repo](https://facebook.github.io/jsx/))`<a attr="b">{s}</a>``typescript` ([repo](https://github.com/Microsoft/TypeScript))`var a: string = "";``v8intrinsic``%DebugPrint(foo);`
+
+#### ECMAScript [proposals](https://github.com/babel/proposals)[​](#ecmascript-proposals)
+
+HistoryVersionChanges`v7.23.0`Added `sourcePhaseImports`, `deferredImportEvaluation`, `optionalChainingAssign``v7.22.0`Enabled `regexpUnicodeSets` by default, added `importAttributes``v7.20.0`Added `explicitResourceManagement`, `importReflection``v7.17.0`Added `regexpUnicodeSets`, `destructuringPrivate`, `decoratorAutoAccessors``v7.15.0`Added `hack` to the `proposal` option of `pipelineOperator`. Moved `topLevelAwait`, `privateIn` to Latest ECMAScript features`v7.14.0`Added `asyncDoExpressions`. Moved `classProperties`, `classPrivateProperties`, `classPrivateMethods`, `moduleStringNames` to Latest ECMAScript features`v7.13.0`Added `moduleBlocks``v7.12.0`Added `classStaticBlock`, `moduleStringNames``v7.11.0`Added `decimal``v7.10.0`Added `privateIn``v7.9.0`Added `recordAndTuple``v7.7.0`Added `topLevelAwait``v7.4.0`Added `partialApplication``v7.2.0`Added `classPrivateMethods`NameCode Example`asyncDoExpressions` ([proposal](https://github.com/tc39/proposal-async-do-expressions))`async do { await requestAPI().json() }``decimal` ([proposal](https://github.com/tc39/proposal-decimal))`0.3m``decorators` ([proposal](https://github.com/tc39/proposal-decorators)) 
+`decorators-legacy``@a class A {}``decoratorAutoAccessors` ([proposal](https://github.com/tc39/proposal-decorators))`class Example { @reactive accessor myBool = false; }``deferredImportEvaluation` ([proposal](https://github.com/tc39/proposal-defer-import-eval))`import defer * as ns from "dep";``deprecatedImportAssert` (⚠️ deprecated, legacy syntax of [import attributes](https://github.com/tc39/proposal-import-attributes)) 
+`importAssertions` (⚠️ deprecated)`import json from "./foo.json" assert { type: "json" };``destructuringPrivate` ([proposal](https://github.com/tc39/proposal-destructuring-private))`class Example { #x = 1; method() { const { #x: x } = this; } }``doExpressions` ([proposal](https://github.com/tc39/proposal-do-expressions))`var a = do { if (true) { 'hi'; } };``explicitResourceManagement` ([proposal](https://github.com/tc39/proposal-explicit-resource-management))`using reader = getReader()``exportDefaultFrom` ([proposal](https://github.com/tc39/ecmascript-export-default-from))`export v from "mod"``functionBind` ([proposal](https://github.com/zenparsing/es-function-bind))`a::b`, `::console.log``functionSent` ([proposal](https://github.com/tc39/proposal-function.sent))`function.sent``importReflection` ([proposal](https://github.com/tc39/proposal-import-reflection))`import module foo from "./foo.wasm";``moduleBlocks` ([proposal](https://github.com/tc39/proposal-js-module-blocks))`let m = module { export let y = 1; };``optionalChainingAssign` ([proposal](https://github.com/tc39/proposal-optional-chaining-assignment))`x?.prop = 2``partialApplication` ([proposal](https://github.com/babel/proposals/issues/32))`f(?, a)``pipelineOperator` ([proposal](https://github.com/babel/proposals/issues/29))`a |> b``recordAndTuple` ([proposal](https://github.com/tc39/proposal-record-tuple))`#{x: 1}`, `#[1, 2]``sourcePhaseImports` ([proposal](https://github.com/tc39/proposal-source-phase-imports))`import source x from "./x"``throwExpressions` ([proposal](https://github.com/babel/proposals/issues/23))`() => throw new Error("")`
+
+#### Latest ECMAScript features[​](#latest-ecmascript-features)
+
+The following features are already enabled on the latest version of `@babel/parser`, and cannot be disabled because they are part of the language. You should enable these features only if you are using an older version.
+
+NameCode Example`asyncGenerators` ([proposal](https://github.com/tc39/proposal-async-iteration))`async function*() {}`, `for await (let a of b) {}``bigInt` ([proposal](https://github.com/tc39/proposal-bigint))`100n``classProperties` ([proposal](https://github.com/tc39/proposal-class-public-fields))`class A { b = 1; }``classPrivateProperties` ([proposal](https://github.com/tc39/proposal-private-fields))`class A { #b = 1; }``classPrivateMethods` ([proposal](https://github.com/tc39/proposal-private-methods))`class A { #c() {} }``classStaticBlock` ([proposal](https://github.com/tc39/proposal-class-static-block))`class A { static {} }``dynamicImport` ([proposal](https://github.com/tc39/proposal-dynamic-import))`import('./guy').then(a)``exportNamespaceFrom` ([proposal](https://github.com/leebyron/ecmascript-export-ns-from))`export * as ns from "mod"``logicalAssignment` ([proposal](https://github.com/tc39/proposal-logical-assignment))`a &&= b``moduleStringNames` ([proposal](https://github.com/tc39/ecma262/pull/2154))`import { "😄" as smile } from "emoji";``nullishCoalescingOperator` ([proposal](https://github.com/babel/proposals/issues/14))`a ?? b``numericSeparator` ([proposal](https://github.com/tc39/proposal-numeric-separator))`1_000_000``objectRestSpread` ([proposal](https://github.com/tc39/proposal-object-rest-spread))`var a = { b, ...c };``optionalCatchBinding` ([proposal](https://github.com/babel/proposals/issues/7))`try {throw 0;} catch{do();}``optionalChaining` ([proposal](https://github.com/tc39/proposal-optional-chaining))`a?.b``privateIn` ([proposal](https://github.com/tc39/proposal-private-fields-in-in))`#p in obj``regexpUnicodeSets` ([proposal](https://github.com/tc39/proposal-regexp-set-notation))`/[\p{Decimal_Number}--[0-9]]/v;``topLevelAwait` ([proposal](https://github.com/tc39/proposal-top-level-await/))`await promise` in modules`importAttributes` ([proposal](https://github.com/tc39/proposal-import-attributes))`import json from "./foo.json" with { type: "json" };`
+
+#### Plugins options[​](#plugins-options)
+
+HistoryVersionChanges`7.21.0`The default behavior of the `decorators`' `decoratorsBeforeExport` option is to allow decorators either before or after the `export` keyword.`7.19.0`The `syntaxType` option of the `recordAndTuple` plugin defaults to `hash`; added `allowCallParenthesized` option for the `decorators` plugin.`7.17.0`Added `@@` and `^^` to the `topicToken` option of the `hack` pipeline operator`7.16.0`Added `disallowAmbiguousJSXLike` for `typescript` plugin. Added `^` to the `topicToken` option of the `hack` pipeline operators`7.14.0`Added `dts` for `typescript` pluginnote
+
+When a plugin is specified multiple times, only the first options are considered.
+
+- 
+
+`decorators`:
+
+  - 
+
+`allowCallParenthesized` (`boolean`, defaults to `true`)
+
+When `false`, disallow decorators in the `@(...)()` form in favor of `@(...())`. The stage 3 decorators proposal uses `allowCallParenthesized: false`.
+
+  - 
+
+`decoratorsBeforeExport` (`boolean`)
+
+By default decorators on exported classes can be placed either before or after the `export` keyword. When this option is set, decorators will only be allowed in the specified position.
+
+JavaScript
 
 ```
-<button
-  className="prettier-class"
-  id="prettier-id"
-  onClick={this.handleClick}
->
-  Click Here
-</button>
+// decoratorsBeforeExport: true
+@dec
+export class C {}
+
+// decoratorsBeforeExport: false
+export @dec class C {}
 ```
 
-DefaultCLI OverrideAPI Override`false``--bracket-same-line``bracketSameLine: <bool>`
+caution
 
-## [Deprecated] JSX Brackets[​](#deprecated-jsx-brackets)
+This option is deprecated and will be removed in a future version. Code that is valid when this option is explicitly set to `true` or `false` is also valid when this option is not set.
 
-danger
+- 
 
-This option has been deprecated in v2.4.0, use --bracket-same-line instead.
+`optionalChainingAssign`:
 
-Put the `>` of a multi-line JSX element at the end of the last line instead of being alone on the next line (does not apply to self closing elements).
+  - `version` (required, accepted values: `2023-07`) This proposal is still at Stage 1, and thus it's likely that it will be affected by breaking changes. You must specify which version of the proposal you are using to ensure that Babel will continue to parse your code in a compatible way.
 
-Valid options:
+- 
 
-- `true` - Example:
+`pipelineOperator`:
 
-```
-<button
-  className="prettier-class"
-  id="prettier-id"
-  onClick={this.handleClick}>
-  Click Here
-</button>
-```
+  - `proposal` (required, accepted values: `fsharp`, `hack`, `minimal`, `smart` (deprecated)) There are several different proposals for the pipeline operator. This option chooses which proposal to use. See [plugin-proposal-pipeline-operator](/docs/babel-plugin-proposal-pipeline-operator) for more information, including a table comparing their behavior.
 
-- `false` - Example:
+  - `topicToken` (required when `proposal` is `hack`, accepted values: `%`, `#`, `^`, `@@`, `^^`) The `hack` proposal uses a “topic” placeholder in its pipe. There are two different choices for this topic placeholder. This option chooses what token to use to refer to the topic. `topicToken: "#"` is incompatible with `recordAndTuple` with `syntaxType: "hash"`. See [plugin-proposal-pipeline-operator](/docs/babel-plugin-proposal-pipeline-operator) for more information.
 
-```
-<button
-  className="prettier-class"
-  id="prettier-id"
-  onClick={this.handleClick}
->
-  Click Here
-</button>
-```
+- 
 
-DefaultCLI OverrideAPI Override`false``--jsx-bracket-same-line``jsxBracketSameLine: <bool>`
+`recordAndTuple`:
 
-## Arrow Function Parentheses[​](#arrow-function-parentheses)
+  - `syntaxType` (`hash` or `bar`, defaults to `hash`) There are two syntax variants for `recordAndTuple`. They share exactly same runtime semantics.SyntaxTypeRecord ExampleTuple Example`"hash"``#{ a: 1 }``#[1, 2]``"bar"``{| a: 1 |}``[|1, 2|]`See [Ergonomics of #{}/#[]](https://github.com/tc39/proposal-record-tuple/issues/10) for more information.
 
-First available in v1.9.0, default value changed from `avoid` to `always` in v2.0.0
+- 
 
-Include parentheses around a sole arrow function parameter.
+`flow`:
 
-Valid options:
+  - `all` (`boolean`, default: `false`) Some code has different meaning in Flow and in vanilla JavaScript. For example, `foo<T>(x)` is parsed as a call expression with a type argument in Flow, but as a comparison (`foo < T > x`) accordingly to the ECMAScript specification. By default, `babel-parser` parses those ambiguous constructs as Flow types only if the file starts with a `// @flow` pragma. Set this option to `true` to always parse files as if `// @flow` was specified.
 
-- `"always"` - Always include parens. Example: `(x) => x`
-- `"avoid"` - Omit parens when possible. Example: `x => x`
+- 
 
-DefaultCLI OverrideAPI Override`"always"``--arrow-parens <always|avoid>``arrowParens: "<always|avoid>"`
+`typescript`
 
-At first glance, avoiding parentheses may look like a better choice because of less visual noise. However, when Prettier removes parentheses, it becomes harder to add type annotations, extra arguments or default values as well as making other changes. Consistent use of parentheses provides a better developer experience when editing real codebases, which justifies the default value for the option.
+  - `dts` (`boolean`, default `false`) This option will enable parsing within a TypeScript ambient context, where certain syntax have different rules (like `.d.ts` files and inside `declare module` blocks). Please see [https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) and [https://basarat.gitbook.io/typescript/type-system/intro](https://basarat.gitbook.io/typescript/type-system/intro) for more information about ambient contexts.
+  - `disallowAmbiguousJSXLike` (`boolean`, default `false`) Even when the `jsx` plugin is not enabled, this option disallows using syntax that would be ambiguous with JSX (`<X> y` type assertions and `<X>() => {}` type arguments). It matches the `tsc` behavior when parsing `.mts` and `.mjs` files.
 
-## Range[​](#range)
+- 
 
-Format only a segment of a file.
+`importAttributes`:
 
-These two options can be used to format code starting and ending at a given character offset (inclusive and exclusive, respectively). The range will extend:
+  - 
 
-- Backwards to the start of the first line containing the selected statement.
-- Forwards to the end of the selected statement.
+`deprecatedAssertSyntax` (`boolean`, defaults to `false`)
 
-DefaultCLI OverrideAPI Override`0``--range-start <int>``rangeStart: <int>``Infinity``--range-end <int>``rangeEnd: <int>`
+When `true`, allow parsing an old version of the import attributes, which used the `assert` keyword instead of `with`.
 
-## Parser[​](#parser)
+This matches the syntax originally supported by the `importAssertions` parser plugin.
 
-Specify which parser to use.
+### Error codes[​](#error-codes)
 
-Prettier automatically infers the parser from the input file path, so you shouldn’t have to change this setting.
+HistoryVersionChanges`v7.14.0`Added error codes
 
-Both the `babel` and `flow` parsers support the same set of JavaScript features (including Flow type annotations). They might differ in some edge cases, so if you run into one of those you can try `flow` instead of `babel`. Almost the same applies to `typescript` and `babel-ts`. `babel-ts` might support JavaScript features (proposals) not yet supported by TypeScript, but it’s less permissive when it comes to invalid code and less battle-tested than the `typescript` parser.
+Error codes are useful for handling the errors thrown by `@babel/parser`.
 
-Valid options:
+There are two error codes, `code` and `reasonCode`.
 
-- `"babel"` (via [@babel/parser](https://github.com/babel/babel/tree/main/packages/babel-parser)) Named `"babylon"` until v1.16.0
-- `"babel-flow"` (same as `"babel"` but enables Flow parsing explicitly to avoid ambiguity) First available in v1.16.0
-- `"babel-ts"` (similar to `"typescript"` but uses Babel and its TypeScript plugin) First available in v2.0.0
-- `"flow"` (via [flow-parser](https://github.com/facebook/flow/tree/master/src/parser))
-- `"typescript"` (via [@typescript-eslint/typescript-estree](https://github.com/typescript-eslint/typescript-eslint)) First available in v1.4.0
-- `"espree"` (via [espree](https://github.com/eslint/espree)) First available in v2.2.0
-- `"meriyah"` (via [meriyah](https://github.com/meriyah/meriyah)) First available in v2.2.0
-- `"acorn"` (via [acorn](https://github.com/acornjs/acorn)) First available in v2.6.0
-- `"css"` (via [postcss](https://github.com/postcss/postcss)) First available in v1.7.1
-- `"scss"` (via [postcss-scss](https://github.com/postcss/postcss-scss)) First available in v1.7.1
-- `"less"` (via [postcss-less](https://github.com/shellscape/postcss-less)) First available in v1.7.1
-- `"json"` (via [@babel/parser parseExpression](https://babeljs.io/docs/babel-parser#babelparserparseexpressioncode-options)) First available in v1.5.0
-- `"json5"` (same parser as `"json"`, but outputs as [json5](https://json5.org/)) First available in v1.13.0
-- `"jsonc"` (same parser as `"json"`, but outputs as "JSON with Comments") First available in v3.2.0
-- `"json-stringify"` (same parser as `"json"`, but outputs like `JSON.stringify`) First available in v1.13.0
-- `"graphql"` (via [graphql/language](https://github.com/graphql/graphql-js/tree/master/src/language)) First available in v1.5.0
-- `"markdown"` (via [remark-parse](https://github.com/wooorm/remark/tree/main/packages/remark-parse)) First available in v1.8.0
-- `"mdx"` (via [remark-parse](https://github.com/wooorm/remark/tree/main/packages/remark-parse) and [@mdx-js/mdx](https://github.com/mdx-js/mdx/tree/master/packages/mdx)) First available in v1.15.0
-- `"html"` (via [angular-html-parser](https://github.com/ikatyang/angular-html-parser/tree/master/packages/angular-html-parser)) First available in 1.15.0
-- `"vue"` (same parser as `"html"`, but also formats vue-specific syntax) First available in 1.10.0
-- `"angular"` (same parser as `"html"`, but also formats angular-specific syntax via [angular-estree-parser](https://github.com/ikatyang/angular-estree-parser)) First available in 1.15.0
-- `"lwc"` (same parser as `"html"`, but also formats LWC-specific syntax for unquoted template attributes) First available in 1.17.0
-- `"mjml"` (same parser as `"html"`, but also formats MJML-specific syntax) First available in 3.6.0
-- `"yaml"` (via [yaml](https://github.com/eemeli/yaml) and [yaml-unist-parser](https://github.com/ikatyang/yaml-unist-parser)) First available in 1.14.0
+- `code`
 
-DefaultCLI OverrideAPI OverrideNone`--parser <string>``parser: "<string>"`
+  - Rough classification of errors (e.g. `BABEL_PARSER_SYNTAX_ERROR`, `BABEL_PARSER_SOURCETYPE_MODULE_REQUIRED`).
 
-Note: the default value was `"babylon"` until v1.13.0.
+- `reasonCode`
 
-Note: the Custom parser API has been removed in v3.0.0. Use [plugins](/docs/plugins) instead ([how to migrate](/docs/api#custom-parser-api-removed)).
+  - Detailed classification of errors (e.g. `MissingSemicolon`, `VarRedeclaration`).
 
-## File Path[​](#file-path)
+Example of using error codes with `errorRecovery`:
 
-Specify the file name to use to infer which parser to use.
-
-For example, the following will use the CSS parser:
+JavaScript
 
 ```
-cat foo | prettier --stdin-filepath foo.css
+const { parse } = require("@babel/parser");
+
+const ast = parse(`a b`, { errorRecovery: true });
+
+console.log(ast.errors[0].code); // BABEL_PARSER_SYNTAX_ERROR
+console.log(ast.errors[0].reasonCode); // MissingSemicolon
 ```
 
-This option is only useful in the CLI and API. It doesn’t make sense to use it in a configuration file.
+### FAQ[​](#faq)
 
-DefaultCLI OverrideAPI OverrideNone`--stdin-filepath <string>``filepath: "<string>"`
+#### Will the Babel parser support a plugin system?[​](#will-the-babel-parser-support-a-plugin-system)
 
-## Require Pragma[​](#require-pragma)
+Previous issues: [#1351](https://github.com/babel/babel/issues/1351), [#6694](https://github.com/babel/babel/issues/6694).
 
-First available in v1.7.0
+We currently aren't willing to commit to supporting the API for plugins or the resulting ecosystem (there is already enough work maintaining Babel's own plugin system). It's not clear how to make that API effective, and it would limit our ability to refactor and optimize the codebase.
 
-Prettier can restrict itself to only format files that contain a special comment, called a pragma, at the top of the file. This is very useful when gradually transitioning large, unformatted codebases to Prettier.
+Our current recommendation for those that want to create their own custom syntax is for users to fork the parser.
 
-A file with the following as its first comment will be formatted when `--require-pragma` is supplied:
+To consume your custom parser, you can add a plugin to your [options](/docs/options#plugins) to call the parser via its npm package name or require it if using JavaScript,
 
-```
-/**
- * @prettier
- */
-```
-
-or
+JavaScript
 
 ```
-/**
- * @format
- */
+const parse = require("custom-fork-of-babel-parser-on-npm-here");
+
+module.exports = {
+  plugins: [
+    {
+      parserOverride(code, opts) {
+        return parse(code, opts);
+      },
+    },
+  ],
+};
 ```
 
-DefaultCLI OverrideAPI Override`false``--require-pragma``requirePragma: <bool>`
+[Edit this page](https://github.com/babel/website/edit/main/docs/../docs/parser.md)[Previous@babel/standalone](/docs/babel-standalone)[Next@babel/core](/docs/babel-core)
 
-## Insert Pragma[​](#insert-pragma)
+- [Credits](#credits)
+- [API](#api)
 
-First available in v1.8.0
+  - [babelParser.parse(code, [options])](#babelparserparsecode-options)
+  - [babelParser.parseExpression(code, [options])](#babelparserparseexpressioncode-options)
+  - [Options](#options)
+  - [Output](#output)
+  - [Semver](#semver)
+  - [Example](#example)
+  - [Plugins](#plugins)
+  - [Error codes](#error-codes)
+  - [FAQ](#faq)
 
-Prettier can insert a special `@format` marker at the top of files specifying that the file has been formatted with Prettier. This works well when used in tandem with the `--require-pragma` option. If there is already a docblock at the top of the file then this option will add a newline to it with the `@format` marker.
+/
 
-Note that “in tandem” doesn’t mean “at the same time”. When the two options are used simultaneously, `--require-pragma` has priority, so `--insert-pragma` is ignored. The idea is that during an incremental adoption of Prettier in a big codebase, the developers participating in the transition process use `--insert-pragma` whereas `--require-pragma` is used by the rest of the team and automated tooling to process only files already transitioned. The feature has been inspired by Facebook’s [adoption strategy](https://prettier.io/blog/2017/05/03/1.3.0.html#facebook-adoption-update).
+##### Docs
 
-DefaultCLI OverrideAPI Override`false``--insert-pragma``insertPragma: <bool>`
+[Learn ES2015](/docs/learn)
 
-## Check Ignore Pragma[​](#check-ignore-pragma)
+##### Community
 
-First available in v3.6.0
+[Videos](/videos)[User Showcase](/users)[Stack Overflow](http://stackoverflow.com/questions/tagged/babeljs)[Slack Channel](https://babeljs.slack.com/)[X (Twitter)](https://x.com/babeljs)[Bluesky](https://bsky.app/profile/babel.dev)
 
-Prettier can allow individual files to opt out of formatting if they contain a special comment, called a pragma, at the top of the file.
+##### More
 
-Checking for these markers incurs a small upfront cost during formatting, so it's not enabled by default.
-
-A file with the following as its first comment will not be formatted when `--check-ignore-pragma` is supplied:
-
-```
-/**
- * @noprettier
- */
-```
-
-or
-
-```
-/**
- * @noformat
- */
-```
-
-DefaultCLI OverrideAPI Override`false``--check-ignore-pragma``checkIgnorePragma: <bool>`
-
-## Prose Wrap[​](#prose-wrap)
-
-First available in v1.8.2
-
-By default, Prettier will not change wrapping in markdown text since some services use a linebreak-sensitive renderer, e.g. GitHub comments and BitBucket. To have Prettier wrap prose to the print width, change this option to "always". If you want Prettier to force all prose blocks to be on a single line and rely on editor/viewer soft wrapping instead, you can use `"never"`.
-
-Valid options:
-
-- `"always"` - Wrap prose if it exceeds the print width.
-- `"never"` - Un-wrap each block of prose into one line.
-- `"preserve"` - Do nothing, leave prose as-is. First available in v1.9.0
-
-DefaultCLI OverrideAPI Override`"preserve"``--prose-wrap <always|never|preserve>``proseWrap: "<always|never|preserve>"`
-
-## HTML Whitespace Sensitivity[​](#html-whitespace-sensitivity)
-
-First available in v1.15.0. First available for Handlebars in 2.3.0
-
-Specify the global whitespace sensitivity for HTML, Vue, Angular, and Handlebars. See [whitespace-sensitive formatting](https://prettier.io/blog/2018/11/07/1.15.0.html#whitespace-sensitive-formatting) for more info.
-
-Valid options:
-
-- `"css"` - Respect the default value of CSS `display` property. For Handlebars treated same as `strict`.
-- `"strict"` - Whitespace (or the lack of it) around all tags is considered significant.
-- `"ignore"` - Whitespace (or the lack of it) around all tags is considered insignificant.
-
-DefaultCLI OverrideAPI Override`"css"``--html-whitespace-sensitivity <css|strict|ignore>``htmlWhitespaceSensitivity: "<css|strict|ignore>"`
-
-## Vue files script and style tags indentation[​](#vue-files-script-and-style-tags-indentation)
-
-First available in v1.19.0
-
-Whether or not to indent the code inside `<script>` and `<style>` tags in Vue files.
-
-Valid options:
-
-- `false` - Do not indent script and style tags in Vue files.
-- `true` - Indent script and style tags in Vue files.
-
-DefaultCLI OverrideAPI Override`false``--vue-indent-script-and-style``vueIndentScriptAndStyle: <bool>`
-
-## End of Line[​](#end-of-line)
-
-First available in v1.15.0, default value changed from `auto` to `lf` in v2.0.0
-
-For historical reasons, there exist two common flavors of line endings in text files. That is `\n` (or `LF` for Line Feed) and `\r\n` (or `CRLF` for Carriage Return + Line Feed). The former is common on Linux and macOS, while the latter is prevalent on Windows. Some details explaining why it is so [can be found on Wikipedia](https://en.wikipedia.org/wiki/Newline).
-
-When people collaborate on a project from different operating systems, it becomes easy to end up with mixed line endings in a shared git repository. It is also possible for Windows users to accidentally change line endings in a previously committed file from `LF` to `CRLF`. Doing so produces a large `git diff` and thus makes the line-by-line history for a file (`git blame`) harder to explore.
-
-If you want to make sure that your entire git repository only contains Linux-style line endings in files covered by Prettier:
-
-1. Ensure Prettier’s `endOfLine` option is set to `lf` (this is a default value since v2.0.0)
-2. Configure [a pre-commit hook](/docs/precommit) that will run Prettier
-3. Configure Prettier to run in your CI pipeline using [--check flag](/docs/cli#--check). If you use Travis CI, set [the autocrlf option](https://docs.travis-ci.com/user/customizing-the-build#git-end-of-line-conversion-control) to `input` in `.travis.yml`.
-4. Add `* text=auto eol=lf` to the repo’s `.gitattributes` file. You may need to ask Windows users to re-clone your repo after this change to ensure git has not converted `LF` to `CRLF` on checkout.
-
-All modern text editors in all operating systems are able to correctly display line endings when `\n` (`LF`) is used. However, old versions of Notepad for Windows will visually squash such lines into one as they can only deal with `\r\n` (`CRLF`).
-
-Valid options:
-
-- `"lf"` – Line Feed only (`\n`), common on Linux and macOS as well as inside git repos
-- `"crlf"` - Carriage Return + Line Feed characters (`\r\n`), common on Windows
-- `"cr"` - Carriage Return character only (`\r`), used very rarely
-- `"auto"` - Maintain existing line endings (mixed values within one file are normalised by looking at what’s used after the first line)
-
-DefaultCLI OverrideAPI Override`"lf"``--end-of-line <lf|crlf|cr|auto>``endOfLine: "<lf|crlf|cr|auto>"`
-
-Setting `end_of_line` in an [.editorconfig file](https://editorconfig.org/) will configure Prettier’s end of line usage, unless overridden.
-
-## Embedded Language Formatting[​](#embedded-language-formatting)
-
-First available in v2.1.0
-
-Control whether Prettier formats quoted code embedded in the file.
-
-When Prettier identifies cases where it looks like you've placed some code it knows how to format within a string in another file, like in a tagged template in JavaScript with a tag named `html` or in code blocks in Markdown, it will by default try to format that code.
-
-Sometimes this behavior is undesirable, particularly in cases where you might not have intended the string to be interpreted as code. This option allows you to switch between the default behavior (`auto`) and disabling this feature entirely (`off`).
-
-Valid options:
-
-- `"auto"` – Format embedded code if Prettier can automatically identify it.
-- `"off"` - Never automatically format embedded code.
-
-DefaultCLI OverrideAPI Override`"auto"``--embedded-language-formatting=<off|auto>``embeddedLanguageFormatting: "<off|auto>"`
-
-## Single Attribute Per Line[​](#single-attribute-per-line)
-
-First available in v2.6.0
-
-Enforce single attribute per line in HTML, Vue, and JSX.
-
-Valid options:
-
-- `false` - Do not enforce single attribute per line.
-- `true` - Enforce single attribute per line.
-
-DefaultCLI OverrideAPI Override`false``--single-attribute-per-line``singleAttributePerLine: <bool>`[Edit this page](https://github.com/prettier/prettier/edit/main/docs/options.md)[PreviousRun Prettier on CI](/docs/ci)[NextConfiguration File](/docs/configuration)
-
-- [Experimental Ternaries](#experimental-ternaries)
-- [Experimental Operator Position](#experimental-operator-position)
-- [Print Width](#print-width)
-- [Tab Width](#tab-width)
-- [Tabs](#tabs)
-- [Semicolons](#semicolons)
-- [Quotes](#quotes)
-- [Quote Props](#quote-props)
-- [JSX Quotes](#jsx-quotes)
-- [Trailing Commas](#trailing-commas)
-- [Bracket Spacing](#bracket-spacing)
-- [Object Wrap](#object-wrap)
-- [Bracket Line](#bracket-line)
-- [[Deprecated] JSX Brackets](#deprecated-jsx-brackets)
-- [Arrow Function Parentheses](#arrow-function-parentheses)
-- [Range](#range)
-- [Parser](#parser)
-- [File Path](#file-path)
-- [Require Pragma](#require-pragma)
-- [Insert Pragma](#insert-pragma)
-- [Check Ignore Pragma](#check-ignore-pragma)
-- [Prose Wrap](#prose-wrap)
-- [HTML Whitespace Sensitivity](#html-whitespace-sensitivity)
-- [Vue files script and style tags indentation](#vue-files-script-and-style-tags-indentation)
-- [End of Line](#end-of-line)
-- [Embedded Language Formatting](#embedded-language-formatting)
-- [Single Attribute Per Line](#single-attribute-per-line)
+[Blog](/blog)[GitHub Org](https://github.com/babel)[GitHub Repo](https://github.com/babel/babel)[Website Repo](https://github.com/babel/website)[Old 6.x Site](https://old.babeljs.io)[Old 5.x Site](http://henryzoo.com/babel.github.io)

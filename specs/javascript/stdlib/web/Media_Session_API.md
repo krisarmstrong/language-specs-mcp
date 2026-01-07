@@ -1,213 +1,252 @@
-# Media Session API
+1648100 - Enable MediaControl in release
 
-Limited availability
+- [Mozilla Home](https://www.mozilla.org/)
+- 
+- [Privacy](https://www.mozilla.org/privacy/websites/)
+- [Cookies](https://www.mozilla.org/privacy/websites/#cookies)
+- [Legal](https://www.mozilla.org/about/legal/)
 
-This feature is not Baseline because it does not work in some of the most widely-used browsers.
+# [Bugzilla](https://bugzilla.mozilla.org/home)
 
-- [Learn more](/en-US/docs/Glossary/Baseline/Compatibility)
-- [See full compatibility](#browser_compatibility)
-- [Report feedback](https://survey.alchemer.com/s3/7634825/MDN-baseline-feedback?page=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FMedia_Session_API&level=not)
+[Quick Search Tips](/page.cgi?id=quicksearch.html)[Advanced Search](/query.cgi?format=advanced)
 
-The Media Session API provides a way to customize media notifications. It does this by providing metadata for display by the user agent for the media your web app is playing.
+- [Browse](/describecomponents.cgi)
+- [Advanced Search](/query.cgi?format=advanced)
+- [New Bug](/enter_bug.cgi)
 
-It also provides action handlers that the browser can use to access platform media keys such as hardware keys found on keyboards, headsets, remote controls, and software keys found in notification areas and on lock screens of mobile devices. So you can seamlessly control web-provided media via your device, even when not looking at the web page.
+- [Reports](/report.cgi)
+- 
+- [Documentation](https://bmo.readthedocs.io/en/latest/)
 
-The aim is to allow users to know what's playing and to control it, without needing to open the specific page that launched it. To be able to support the Media Session API, a browser first needs a mechanism by which to access and be controlled by the OS-level media controls (such as Firefox's [MediaControl](https://bugzil.la/1648100)).
+- [Log In](/index.cgi?GoAheadAndLogIn=1) Log In with GitHub orRemember me#[Create an Account](/createaccount.cgi) · [Forgot Password](/index.cgi?GoAheadAndLogIn=1#forgot)#
 
-## In this article
+- [Browse](/describecomponents.cgi)
+- [Advanced Search](/query.cgi?format=advanced)
+- [New Bug](/enter_bug.cgi)
+- [Reports](/report.cgi)
+- 
+- [Documentation](https://bmo.readthedocs.io/en/latest/)
 
-- [Media Session concepts and usage](#media_session_concepts_and_usage)
-- [Accessing the Media Session API](#accessing_the_media_session_api)
-- [Interfaces](#interfaces)
-- [Examples](#examples)
-- [Specifications](#specifications)
-- [Browser compatibility](#browser_compatibility)
-- [See also](#see_also)
+Copy Summary▾
 
-## [Media Session concepts and usage](#media_session_concepts_and_usage)
+- Markdown
+- Markdown (bug number)
+- Plain Text
+- HTML
 
-The [MediaMetadata](/en-US/docs/Web/API/MediaMetadata) interface lets a website provide rich metadata to the platform UI for media that is playing. This metadata includes the title, artist (creator) name, album (collection), artwork, and chapter information. The platform can show this metadata in media centers, notifications, device lock screens, and so on. For example, different devices might present the Media Session API data like so:
+View ▾
 
- Original image source: [Customize media notifications and playback controls with the Media Session API](https://web.dev/articles/media-session) on web.dev (2024)
+- Reset Sections
+- Expand All Sections
+- Collapse All Sections
+- 
+- History
+- 
+- [JSON](/rest/bug/1648100)
+- [XML](/show_bug.cgi?ctype=xml&id=1648100)
 
-The [MediaSession](/en-US/docs/Web/API/MediaSession) interface lets users control the playback of media through user-agent-defined interface elements. Interaction with these elements triggers action handlers on the web page playing the media. Since multiple pages may be simultaneously using this API, the user agent is responsible for calling the correct page's action handlers. The user agent provides default behaviors when no page-defined behavior is available.
+Closed[Bug 1648100](/show_bug.cgi?id=1648100)Opened 5 years agoClosed 5 years ago
 
-## [Accessing the Media Session API](#accessing_the_media_session_api)
+# Enable MediaControl in release
 
-The primary interface for the Media Session API is the [MediaSession](/en-US/docs/Web/API/MediaSession) interface. Rather than creating your own `MediaSession` instance, you access the API using the [navigator.mediaSession](/en-US/docs/Web/API/Navigator/mediaSession) property. For example, to set the current state of the media session to `playing`:
+*[Summary:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#short_desc) Enable MediaControl in release 
 
-js
+## Categories
 
-```
-navigator.mediaSession.playbackState = "playing";
-```
+###  (Core :: Audio/Video: Playback, task) 
 
-## [Interfaces](#interfaces)
+[Product:](/describecomponents.cgi?product=Core)Core ▾CoreShared components used by Firefox and other Mozilla software, including handling of Web content; Gecko, HTML, CSS, layout, DOM, scripts, images, networking, etc. Issues with web page layout probably go here, while Firefox user interface issues belong in the [Firefox](https://bugzilla.mozilla.org/describecomponents.cgi?product=Firefox) product. ([More info](https://wiki.mozilla.org/Modules/All#Core))
+- [See Open Bugs in This Product](/buglist.cgi?product=Core&bug_status=__open__)[File New Bug in This Product](/enter_bug.cgi?product=Core)Watch This Product[Component:](/describecomponents.cgi?product=Core&component=Audio%2FVideo%3A%20Playback#Audio%2FVideo%3A%20Playback)Audio/Video: Playback ▾Core :: Audio/Video: PlaybackFor problems related to the HTML 5 media elements (<video> and <audio>) -- including WebM, MP4, MSE and EME issues. This would also typically include decoding problems in the codecs themselves (e.g. VP8, VP9, H.264, AAC) experienced during playback.
+- [See Open Bugs in This Component](/buglist.cgi?product=Core&component=Audio%2FVideo%3A%20Playback&bug_status=__open__)[Recently Fixed Bugs in This Component](/buglist.cgi?product=Core&component=Audio%2FVideo%3A%20Playback&chfield=resolution&chfieldfrom=-6m&chfieldvalue=FIXED&bug_status=__closed__)[File New Bug in This Component](/enter_bug.cgi?product=Core&component=Audio%2FVideo%3A%20Playback)Watch This Component[Version:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#version) unspecified [Platform:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#rep_platform) Unspecified  Unspecified [Type:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#bug_type)task[Priority:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#priority)Not set[Severity:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#bug_severity) --  Points:  --- 
 
-[ChapterInformation](/en-US/docs/Web/API/ChapterInformation)
+## Tracking
 
-Represents the metadata for an individual chapter of a media resource (i.e., a video or audio file).
+###  () 
 
-[MediaMetadata](/en-US/docs/Web/API/MediaMetadata)
+[Status:](https://wiki.mozilla.org/BMO/UserGuide/BugStatuses)RESOLVED FIXED [Status:](https://wiki.mozilla.org/BMO/UserGuide/BugStatuses) RESOLVED  FIXED  Mark as Assigned [Milestone:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#target_milestone) 81 Branch  Iteration:  --- [Project Flags:](https://wiki.mozilla.org/BMO/UserGuide#Project_Flags)a11y-review--- Accessibility Severity--- Performance Impact--- Size Estimate--- Webcompat Priority--- Webcompat Score--- [Tracking Flags:](https://wiki.mozilla.org/BMO/UserGuide#Tracking_Flags)TrackingStatusrelnote-firefox--- [81+](/buglist.cgi?f1=cf_tracking_firefox_relnote&o1=equals&v1=81%2B)firefox81--- [fixed](/buglist.cgi?f1=cf_status_firefox81&o1=equals&v1=fixed)TrackingStatusrelnote-firefox81+ thunderbird_esr115--- --- thunderbird_esr140--- --- firefox-esr115--- --- firefox-esr140--- --- firefox81fixed firefox146--- --- firefox147--- --- firefox148--- --- 
 
-Allows a web page to provide rich media metadata for display in a platform UI.
+## People
 
-[MediaSession](/en-US/docs/Web/API/MediaSession)
+###  (Reporter: evilpies, Assigned: alwu) 
 
-Allows a web page to provide custom behaviors for standard media playback interactions.
+[Assignee:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#assigned_to)[alwu](/user_profile?user_id=517691)[Assignee:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#assigned_to)Reset Assignee to default[Mentors:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#bug_mentor)--- [QA Contact:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#qa_contact)Reset QA Contact to default[Reporter:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#reporter)[evilpies](/user_profile?user_id=393835)[Triage Owner:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#triage_owner)[jimm](/user_profile?user_id=279663)[CC:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#cc)4 people 
 
-## [Examples](#examples)
+## References
 
-### [Setting up action handlers for a music player](#setting_up_action_handlers_for_a_music_player)
+[Depends on:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#dependson) --- [Blocks:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#blocks)[media-control](/show_bug.cgi?id=1572869) Dependency [tree](/showdependencytree.cgi?id=1648100&hide_resolved=1) / [graph](/showdependencygraph.cgi?id=1648100)[Regressions:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#regresses) --- [Regressed by:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#regressed_by) --- [URL:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#bug_file_loc)[See Also:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#see_also) --- 
 
-The following example shows feature detection for the Media Session API. It then instantiates a metadata object for the session, and adds action handlers for the user control actions:
+## Details
 
-js
+[Alias:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#alias) --- [Keywords:](/describekeywords.cgi)--- [Whiteboard:](https://wiki.mozilla.org/BMO/UserGuide/Whiteboard)---  QA Whiteboard:  ---  Has STR:  ---  Change Request:  --- [Votes:](https://wiki.mozilla.org/BMO/UserGuide/BugFields#votes)0  Bug Flags: behind-preffirefox-backlogsec-bounty?sec-bounty-hofin-qa-testsuitein-testsuiteqe-verify
 
-```
-if ("mediaSession" in navigator) {
-  navigator.mediaSession.metadata = new MediaMetadata({
-    title: "Unforgettable",
-    artist: "Nat King Cole",
-    album: "The Ultimate Collection (Remastered)",
-    artwork: [
-      {
-        src: "https://dummyimage.com/96x96",
-        sizes: "96x96",
-        type: "image/png",
-      },
-      {
-        src: "https://dummyimage.com/128x128",
-        sizes: "128x128",
-        type: "image/png",
-      },
-      {
-        src: "https://dummyimage.com/192x192",
-        sizes: "192x192",
-        type: "image/png",
-      },
-      {
-        src: "https://dummyimage.com/256x256",
-        sizes: "256x256",
-        type: "image/png",
-      },
-      {
-        src: "https://dummyimage.com/384x384",
-        sizes: "384x384",
-        type: "image/png",
-      },
-      {
-        src: "https://dummyimage.com/512x512",
-        sizes: "512x512",
-        type: "image/png",
-      },
-    ],
-  });
+## Crash Data
 
-  navigator.mediaSession.setActionHandler("play", () => {
-    /* Code excerpted. */
-  });
-  navigator.mediaSession.setActionHandler("pause", () => {
-    /* Code excerpted. */
-  });
-  navigator.mediaSession.setActionHandler("stop", () => {
-    /* Code excerpted. */
-  });
-  navigator.mediaSession.setActionHandler("seekbackward", () => {
-    /* Code excerpted. */
-  });
-  navigator.mediaSession.setActionHandler("seekforward", () => {
-    /* Code excerpted. */
-  });
-  navigator.mediaSession.setActionHandler("seekto", () => {
-    /* Code excerpted. */
-  });
-  navigator.mediaSession.setActionHandler("previoustrack", () => {
-    /* Code excerpted. */
-  });
-  navigator.mediaSession.setActionHandler("nexttrack", () => {
-    /* Code excerpted. */
-  });
-  navigator.mediaSession.setActionHandler("skipad", () => {
-    /* Code excerpted. */
-  });
-  navigator.mediaSession.setActionHandler("togglecamera", () => {
-    /* Code excerpted. */
-  });
-  navigator.mediaSession.setActionHandler("togglemicrophone", () => {
-    /* Code excerpted. */
-  });
-  navigator.mediaSession.setActionHandler("hangup", () => {
-    /* Code excerpted. */
-  });
-}
-```
+ Signature: None
 
-Some user agents disable autoplay for media elements on mobile devices and require a user gesture to start media. The following example adds a `pointerup` event to an on-page play button, which is then used to kick off the media session code:
+## Security
 
-js
+###  (public) 
+
+ This bug is publicly visible. 
+
+## User Story
 
 ```
-playButton.addEventListener("pointerup", (event) => {
-  const audio = document.querySelector("audio");
-
-  // User interacted with the page. Let's play audio!
-  audio
-    .play()
-    .then(() => {
-      /* Set up media session controls, as shown above. */
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-});
 ```
 
-### [Using action handlers to control a slide presentation](#using_action_handlers_to_control_a_slide_presentation)
+## Attachments
 
-The `"previousslide"` and `"nextslide"` action handlers can be used to handle moving forward and backward through a slide presentation, for example when the user puts their presentation into a [Picture-in-Picture](/en-US/docs/Web/API/Picture-in-Picture_API) window, and presses the browser-supplied controls for navigating through slides.
+###  (1 file) 
 
-js
+[Bug 1648100 - enable media control by default.](/attachment.cgi?id=9169883)[5 years ago](#c3)[Alastor Wu [:alwu]](/user_profile?user_id=517691)47 bytes, text/x-phabricator-request [Details](/attachment.cgi?id=9169883&action=edit) | [Review](/attachment.cgi?id=9169883)Bottom ↓Tags ▾
 
-```
-try {
-  navigator.mediaSession.setActionHandler("previousslide", () => {
-    log('> User clicked "Previous Slide" icon.');
-    if (slideNumber > 1) slideNumber--;
-    updateSlide();
-  });
-} catch (error) {
-  log('Warning! The "previousslide" media session action is not supported.');
-}
+- Reset
 
-try {
-  navigator.mediaSession.setActionHandler("nextslide", () => {
-    log('> User clicked "Next Slide" icon.');
-    slideNumber++;
-    updateSlide();
-  });
-} catch (error) {
-  log('Warning! The "nextslide" media session action is not supported.');
-}
-```
+Timeline ▾
 
-See [Presenting Slides / Media Session Sample](https://googlechrome.github.io/samples/media-session/slides.html) for a working example.
+- Reset
+- 
+- Collapse All
+- Expand All
+- Comments Only
 
-## [Specifications](#specifications)
+[Tom S. (please needinfo tschuster)](/user_profile?user_id=393835)Reporter
 
-Specification
-[Media Session# the-mediasession-interface](https://w3c.github.io/mediasession/#the-mediasession-interface)
+### [Description](/show_bug.cgi?id=1648100#c0)
 
-## [Browser compatibility](#browser_compatibility)
+ • 5 years ago
 
-## [See also](#see_also)
+What is the plan for enabling MediaControl on release? From my point of view it works well enough and some features like album images could be implemented later. This has been shipping in Chrome for a long while now.
 
-- [Customize media notifications and playback controls with the Media Session API](https://web.dev/articles/media-session) on web.dev (2024)
+[Florian Scholz (Open Web Docs)](/user_profile?user_id=374863)
 
-## Help improve MDN
+### [Updated](/show_bug.cgi?id=1648100#a154370_374863)
 
-Was this page helpful to you?YesNo[Learn how to contribute](/en-US/docs/MDN/Community/Getting_started)
+ • 5 years agoKeywords: [dev-doc-needed](/buglist.cgi?keywords=dev-doc-needed&resolution=---)[Tom S. (please needinfo tschuster)](/user_profile?user_id=393835)Reporter
 
- This page was last modified on ⁨Aug 7, 2024⁩ by [MDN contributors](/en-US/docs/Web/API/Media_Session_API/contributors.txt). 
+### [Comment 1](/show_bug.cgi?id=1648100#c1)
 
-[View this page on GitHub](https://github.com/mdn/content/blob/main/files/en-us/web/api/media_session_api/index.md?plain=1) • [Report a problem with this content](https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FMedia_Session_API&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Fmedia_session_api%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FMedia_Session_API%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fmedia_session_api%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2F033bcb33784ef00e5c95c0333d51c771125f9f94%0A*+Document+last+modified%3A+2024-08-07T09%3A59%3A17.000Z%0A%0A%3C%2Fdetails%3E)
+ • 5 years ago
+
+I know r/firefox is not super representative, but this has been starting to be requested a lot more often.
+
+Flags: needinfo?(alwu)[Alastor Wu [:alwu]](/user_profile?user_id=517691)Assignee
+
+### [Comment 2](/show_bug.cgi?id=1648100#c2)
+
+ • 5 years ago
+
+Our old plan was enabling media control on Fx80, but due to lacking of the testing resource, we don't have a chace to have a full testing and enough time to fix discovered bugs on Fx80. Therefore, we would let it ride a train with Fx81.
+
+Assignee: nobody → alwuFlags: needinfo?(alwu)[Alastor Wu [:alwu]](/user_profile?user_id=517691)Assignee
+
+### [Comment 3](/show_bug.cgi?id=1648100#c3)
+
+ • 5 years ago Attached file [Bug 1648100 - enable media control by default.](attachment.cgi?id=9169883) — [Details](attachment.cgi?id=9169883&action=edit)
+
+We're going to enable media control on Fx81.
+
+[Pulsebot](/user_profile?user_id=510726)
+
+### [Comment 4](/show_bug.cgi?id=1648100#c4)
+
+ • 5 years agoPushed by [alwu@mozilla.com](mailto:alwu@mozilla.com): [https://hg.mozilla.org/integration/autoland/rev/02f5b24041eb](https://hg.mozilla.org/integration/autoland/rev/02f5b24041eb) enable media control by default. r=chunmin[Atila Butkovits](/user_profile?user_id=661920)
+
+### [Comment 5](/show_bug.cgi?id=1648100#c5)
+
+ • 5 years agobugherder 
+
+[https://hg.mozilla.org/mozilla-central/rev/02f5b24041eb](https://hg.mozilla.org/mozilla-central/rev/02f5b24041eb)
+
+Status: NEW → RESOLVEDClosed: 5 years ago[status-firefox81](/buglist.cgi?f1=cf_status_firefox81&o1=isnotempty): --- → [fixed](/buglist.cgi?f1=cf_status_firefox81&o1=equals&v1=fixed)Resolution: --- → FIXEDTarget Milestone: --- → 81 Branch[Tom S. (please needinfo tschuster)](/user_profile?user_id=393835)Reporter
+
+### [Comment 6](/show_bug.cgi?id=1648100#c6)
+
+ • 5 years ago
+
+Nice. I think we should add this to the release notes, do you agree?
+
+[relnote-firefox](/buglist.cgi?f1=cf_tracking_firefox_relnote&o1=isnotempty): --- → [?](/buglist.cgi?f1=cf_tracking_firefox_relnote&o1=equals&v1=%3F)Flags: needinfo?(alwu)[Tom S. (please needinfo tschuster)](/user_profile?user_id=393835)Reporter
+
+### [Updated](/show_bug.cgi?id=1648100#a4393628_393835)
+
+ • 5 years ago[relnote-firefox](/buglist.cgi?f1=cf_tracking_firefox_relnote&o1=isnotempty): [?](/buglist.cgi?f1=cf_tracking_firefox_relnote&o1=equals&v1=%3F) → ---[Alastor Wu [:alwu]](/user_profile?user_id=517691)Assignee
+
+### [Comment 7](/show_bug.cgi?id=1648100#c7)
+
+ • 5 years ago
+
+Sure.
+
+Flags: needinfo?(alwu)[Tom S. (please needinfo tschuster)](/user_profile?user_id=393835)Reporter
+
+### [Comment 8](/show_bug.cgi?id=1648100#c8)
+
+ • 5 years ago• [Edited](/page.cgi?id=comment-revisions.html&bug_id=1648100&comment_id=14993374)
+
+Edit: see below
+ I was hoping Alastor would fill this out, but I just put this request in so that we don't forget about it.
+
+[relnote-firefox](/buglist.cgi?f1=cf_tracking_firefox_relnote&o1=isnotempty): --- → [?](/buglist.cgi?f1=cf_tracking_firefox_relnote&o1=equals&v1=%3F)[Alastor Wu [:alwu]](/user_profile?user_id=517691)Assignee
+
+### [Comment 9](/show_bug.cgi?id=1648100#c9)
+
+ • 5 years ago
+
+Add my version of release note request.
+
+Release Note Request (optional, but appreciated)
+ [Why is this notable]: Allow user to control media playback via hardware media keys (keyborad, headset) or virtual media control interface (Windows/Linux/Mac Touchbar)
+ [Affects Firefox for Android]: No, Android firefox is still using their own component, which is unrelated with desktop implementation
+ [Suggested wording]: not sure, maybe media control?
+ [Links (documentation, blog post, etc)]: [https://bit.ly/321pza2](https://bit.ly/321pza2) (but it's little out of date, will update it later)
+
+[Ryan VanderMeulen [:RyanVM]](/user_profile?user_id=75935)
+
+### [Updated](/show_bug.cgi?id=1648100#a4857405_75935)
+
+ • 5 years ago[relnote-firefox](/buglist.cgi?f1=cf_tracking_firefox_relnote&o1=isnotempty): [?](/buglist.cgi?f1=cf_tracking_firefox_relnote&o1=equals&v1=%3F) → [81+](/buglist.cgi?f1=cf_tracking_firefox_relnote&o1=equals&v1=81%2B)[Chris Mills [:cmills]](/user_profile?user_id=475085)
+
+### [Comment 10](/show_bug.cgi?id=1648100#c10)
+
+ • 5 years ago
+
+I'm removing dev-doc-needed from this — seems that this is just the mechanism by which Firefox is able to hook into OS-level media controls to allow web page media to be cntrolled by them. MediaSession is the API that allows developers to customize the behavior, and we've already documented that.
+
+I might just add a note to the main MediaSession API page on MDN to say that such a mechanism is required for MediaSession to work, but let me know if you think anything else is needed here.
+
+Keywords: [dev-doc-needed](/buglist.cgi?keywords=dev-doc-needed&resolution=---)[Alastor Wu [:alwu]](/user_profile?user_id=517691)Assignee
+
+### [Comment 11](/show_bug.cgi?id=1648100#c11)
+
+ • 5 years ago
+
+Hi, Chris,
+ This feature can work even if we don't have MediaSession API. However, having MediaSession API would enhence its ability, eg. setting customize metadata and action handlers.
+ Thank you.
+
+Flags: needinfo?(cmills)[Chris Mills [:cmills]](/user_profile?user_id=475085)
+
+### [Comment 12](/show_bug.cgi?id=1648100#c12)
+
+ • 5 years ago
+
+:alwu thanks for the clarifying note.
+
+Flags: needinfo?(cmills) You need to [log in](/show_bug.cgi?id=1648100&GoAheadAndLogIn=1) before you can comment on or make changes to this bug. Top ↑
+
+## Attachment
+
+Hide Details
+
+### General
+
+ Creator: [Alastor Wu [:alwu]](/user_profile?user_id=517691)Created: Updated: Size: 
+
+### Description
+
+### File Name
+
+### Content Type
+
+RawDiffSplinter Review

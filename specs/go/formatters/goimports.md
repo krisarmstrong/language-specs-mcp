@@ -1,116 +1,42 @@
-1. [Discover Packages](/)
-2. [golang.org/x/tools](/golang.org/x/tools)
-3. [cmd](/golang.org/x/tools/cmd)
-4. [goimports](/golang.org/x/tools@v0.40.0/cmd/goimports)
+Michael Whatcott on "GoSublime + GoImports = :)"
 
-https://go.dev/
+# [🏠  Michael Whatcott](/)
 
-# goimports
+## GoSublime + GoImports = :)
 
-command[Version: 
-        v0.40.0](?tab=versions) Opens a new window with list of versions in this module. Latest Latest 
+## Had enough? -- build failed: imported and not used: 'fmt' --
 
-This package is not in the latest version of its module.
+25 December 2013[programming](/topics/#programming)[golang](/topics/#golang)[dev-tools](/topics/#dev-tools)[sublime-text](/topics/#sublime-text)[goland](/topics/#goland)[jetbrains](/topics/#jetbrains)
 
-[Go to latest](/golang.org/x/tools/cmd/goimports) Published: Dec 8, 2025  License: [BSD-3-Clause](/golang.org/x/tools/cmd/goimports?tab=licenses) Opens a new window with license information. [Imports: 18](/golang.org/x/tools/cmd/goimports?tab=imports) Opens a new window with list of imports. [Imported by: 32](/golang.org/x/tools/cmd/goimports?tab=importedby) Opens a new window with list of known importers. Main Versions  Licenses  Imports  Imported By 
+# TL;DR
 
-## Details
+[JetBrains](https://www.jetbrains.com) now has an IDE for Go (called [GoLand](https://www.jetbrains.com/go/)) which resolves missing imports on the fly and will remove superfluous imports as well, all out-of-the-box. If you're already on the JetBrains bandwagon, just install GoLand and you're off to the races. Otherwise, read on...
 
--  Valid [go.mod](https://cs.opensource.google/go/x/tools/+/v0.40.0:/go.mod) file 
+It bothers me to no end that the go compiler throws a fit when an extra import statement is left around. I realize that the go authors had important reasons for this and I don't mean to start a flame war but I still wish that another tool (go vet?) did the job of warning us of extra stuff (imports, variables, etc...) being left around in the code and allow us to go on our merry (read: sloppy) way.
 
- The Go module system was introduced in Go 1.11 and is the official dependency management solution for Go. 
+[Brad Fitz](https://github.com/bradfitz) has come to our rescue by creating a tool that does everything `go fmt` does and it also helps with adding/removing imports: [goimports](https://github.com/bradfitz/goimports). This tool can be invoked from [GoSublime](https://github.com/DisposaBoy/GoSublime), a plugin for [Sublime Text](http://www.sublimetext.com/3). I’ve anxiously awaited this addition to GoSublime for a [little while now](https://github.com/DisposaBoy/GoSublime/issues/362). Here’s how to get it working:
 
--  Redistributable license 
-
- Redistributable licenses place minimal restrictions on how software can be used, modified, and redistributed. 
-
--  Tagged version 
-
-Modules with tagged versions give importers more predictable builds.
-
--  Stable version 
-
-When a project reaches major version v1 it is considered stable.
-
-- [Learn more about best practices](/about#best-practices)
-
-## Repository
-
-[cs.opensource.google/go/x/tools](https://cs.opensource.google/go/x/tools)
-
-## Links
-
-- [Report a Vulnerability](https://go.dev/security/policy)
-- [Open Source Insights](https://deps.dev/go/golang.org%2Fx%2Ftools/v0.40.0)
-- [Code Wiki](/codewiki?url=https%3A%2F%2Fcodewiki.google%2Fgithub.com%2Fgolang%2Ftools%3Futm_source%3Dfirst_party_link%26utm_medium%3Dgo_pkg_web%26utm_campaign%3Dgithub.com%2Fgolang%2Ftools)
-
- Jump to ... 
-
-- [Documentation](#section-documentation)
-
-  - [Overview](#pkg-overview)
-
-- [Source Files](#section-sourcefiles)
-
-Documentation
-
-##  Documentation [¶](#section-documentation)
-
-### Overview [¶](#pkg-overview)
-
-Command goimports updates your Go import lines, adding missing ones and removing unreferenced ones. 
+1. Make sure `$GOPATH/bin` is in your `$PATH` (Windows: `%GOPATH%\bin` goes in your `%PATH%`).
+2. Run `go get -u golang.org/x/tools/cmd/goimports` (you may have to install [mercurial](http://mercurial.selenic.com/)).
+3. Install Sublime Text and GoSublime (or make sure you've got the latest update if it's already installed).
+4. Open the gosublime user config/preference file (Mac: `⌘. ⌘5` Windows: `Ctrl+. Ctrl+5`). Make sure you keep the command button down for the whole shortcut sequence.
+5. Make it look like this:
 
 ```
-$ go install golang.org/x/tools/cmd/goimports@latest
+{
+	"fmt_cmd": ["goimports"]
+}
 ```
 
-In addition to fixing imports, goimports also formats your code in the same style as gofmt so it can be used as a replacement for your editor's gofmt-on-save hook. 
+Now, when you save, imports from the standard library will be resolved/removed as necessary. No more build errors related to package imports!
 
-For emacs, make sure you have the latest go-mode.el: 
-
-```
-https://github.com/dominikh/go-mode.el
-```
-
-Then in your .emacs file: 
+NOTE: If Sublime Text isn't seeing your configured GOPATH or PATH (and is therefore not seeing `goimports` as a result), try using this as the contents of your gosublime config/preference file:
 
 ```
-(setq gofmt-command "goimports")
-(add-hook 'before-save-hook 'gofmt-before-save)
+{
+    "fmt_cmd": ["goimports"],
+    "env": {
+        "GOPATH": "/your/gopath/here"
+    }
+}
 ```
-
-For vim, set "gofmt_command" to "goimports": 
-
-```
-https://golang.org/change/39c724dd7f252
-https://golang.org/wiki/IDEsAndTextEditorPlugins
-etc
-```
-
-For GoSublime, follow the steps described here: 
-
-```
-http://michaelwhatcott.com/gosublime-goimports/
-```
-
-For other editors, you probably know what to do. 
-
-To exclude directories in your $GOPATH from being scanned for Go files, goimports respects a configuration file at $GOPATH/src/.goimportsignore which may contain blank lines, comment lines (beginning with '#'), or lines naming a directory relative to the configuration file to ignore when scanning. No globbing or regex patterns are allowed. Use the "-v" verbose flag to verify it's working and see what goimports is doing. 
-
-File bugs or feature requests at: 
-
-```
-https://golang.org/issues/new?title=x/tools/cmd/goimports:+
-```
-
-Happy hacking! 
-
-##  Source Files [¶](#section-sourcefiles)
-
-[View all Source files](https://cs.opensource.google/go/x/tools/+/v0.40.0:cmd/goimports)
-
-- [doc.go](https://cs.opensource.google/go/x/tools/+/v0.40.0:cmd/goimports/doc.go)
-- [goimports.go](https://cs.opensource.google/go/x/tools/+/v0.40.0:cmd/goimports/goimports.go)
-- [goimports_gc.go](https://cs.opensource.google/go/x/tools/+/v0.40.0:cmd/goimports/goimports_gc.go)
-
- Click to show internal directories.  Click to hide internal directories.

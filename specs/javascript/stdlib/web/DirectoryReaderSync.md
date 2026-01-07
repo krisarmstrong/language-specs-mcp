@@ -1,146 +1,206 @@
-# DirectoryReaderSync
+content/files/en-us/web/api/directoryreadersync/index.md at main · mdn/content · GitHub[Skip to content](#start-of-content)
 
-Non-standard: This feature is not standardized. We do not recommend using non-standard features in production, as they have limited browser support, and may change or be removed. However, they can be a suitable alternative in specific cases where no standard option exists.
+## Navigation Menu
 
-Deprecated: This feature is no longer recommended. Though some browsers might still support it, it may have already been removed from the relevant web standards, may be in the process of being dropped, or may only be kept for compatibility purposes. Avoid using it, and update existing code if possible; see the [compatibility table](#browser_compatibility) at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.
+Toggle navigation/[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fdirectoryreadersync%2Findex.md%3Fplain%3D1)Appearance settings
 
-The `DirectoryReaderSync` interface lets you read the entries in a directory.
+- Platform
 
-Warning: This interface is deprecated and is no more on the standard track. Do not use it anymore. Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
+  - AI CODE CREATION
 
-## In this article
+    - [GitHub CopilotWrite better code with AI](https://github.com/features/copilot)
+    - [GitHub SparkBuild and deploy intelligent apps](https://github.com/features/spark)
+    - [GitHub ModelsManage and compare prompts](https://github.com/features/models)
+    - [MCP RegistryNewIntegrate external tools](https://github.com/mcp)
 
-- [Basic concepts](#basic_concepts)
-- [Method](#method)
-- [Specifications](#specifications)
-- [Browser compatibility](#browser_compatibility)
-- [See also](#see_also)
+  - DEVELOPER WORKFLOWS
 
-## [Basic concepts](#basic_concepts)
+    - [ActionsAutomate any workflow](https://github.com/features/actions)
+    - [CodespacesInstant dev environments](https://github.com/features/codespaces)
+    - [IssuesPlan and track work](https://github.com/features/issues)
+    - [Code ReviewManage code changes](https://github.com/features/code-review)
 
-Before you call the only method in this interface, [readEntries()](#readentries), create the [DirectoryEntrySync](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [FileEntrySync](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with `resolveLocalFileSystemURL()`. That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
+  - APPLICATION SECURITY
 
-### [Example](#example)
+    - [GitHub Advanced SecurityFind and fix vulnerabilities](https://github.com/security/advanced-security)
+    - [Code securitySecure your code as you build](https://github.com/security/advanced-security/code-security)
+    - [Secret protectionStop leaks before they start](https://github.com/security/advanced-security/secret-protection)
 
-In the following code snippet from [HTML5Rocks (web.dev)](https://web.dev/articles/filesystem-sync), we create Web Workers and pass data from it to the main app.
+  - EXPLORE
 
-js
+    - [Why GitHub](https://github.com/why-github)
+    - [Documentation](https://docs.github.com)
+    - [Blog](https://github.blog)
+    - [Changelog](https://github.blog/changelog)
+    - [Marketplace](https://github.com/marketplace)
 
-```
-// Taking care of the browser-specific prefixes.
-window.resolveLocalFileSystemURL =
-  window.resolveLocalFileSystemURL || window.webkitResolveLocalFileSystemURL;
+[View all features](https://github.com/features)
+- Solutions
 
-// Create web workers
-const worker = new Worker("worker.js");
-worker.onmessage = (e) => {
-  const urls = e.data.entries;
-  urls.forEach((url) => {
-    window.resolveLocalFileSystemURL(url, (fileEntry) => {
-      // Print out file's name.
-      console.log(fileEntry.name);
-    });
-  });
-};
+  - BY COMPANY SIZE
 
-worker.postMessage({ cmd: "list" });
-```
+    - [Enterprises](https://github.com/enterprise)
+    - [Small and medium teams](https://github.com/team)
+    - [Startups](https://github.com/enterprise/startups)
+    - [Nonprofits](https://github.com/solutions/industry/nonprofits)
 
-The following is `worker.js` code that gets the contents of the directory.
+  - BY USE CASE
 
-js
+    - [App Modernization](https://github.com/solutions/use-case/app-modernization)
+    - [DevSecOps](https://github.com/solutions/use-case/devsecops)
+    - [DevOps](https://github.com/solutions/use-case/devops)
+    - [CI/CD](https://github.com/solutions/use-case/ci-cd)
+    - [View all use cases](https://github.com/solutions/use-case)
 
-```
-// worker.js
+  - BY INDUSTRY
 
-// Taking care of the browser-specific prefixes.
-self.requestFileSystemSync =
-  self.webkitRequestFileSystemSync || self.requestFileSystemSync;
+    - [Healthcare](https://github.com/solutions/industry/healthcare)
+    - [Financial services](https://github.com/solutions/industry/financial-services)
+    - [Manufacturing](https://github.com/solutions/industry/manufacturing)
+    - [Government](https://github.com/solutions/industry/government)
+    - [View all industries](https://github.com/solutions/industry)
 
-// Global for holding the list of entry file system URLs.
-const paths = [];
+[View all solutions](https://github.com/solutions)
+- Resources
 
-function getAllEntries(dirReader) {
-  const entries = dirReader.readEntries();
+  - EXPLORE BY TOPIC
 
-  for (const entry of entries) {
-    // Stash this entry's filesystem in URL
-    paths.push(entry.toURL());
+    - [AI](https://github.com/resources/articles?topic=ai)
+    - [Software Development](https://github.com/resources/articles?topic=software-development)
+    - [DevOps](https://github.com/resources/articles?topic=devops)
+    - [Security](https://github.com/resources/articles?topic=security)
+    - [View all topics](https://github.com/resources/articles)
 
-    // If this is a directory, traverse.
-    if (entry.isDirectory) {
-      getAllEntries(entry.createReader());
-    }
-  }
-}
+  - EXPLORE BY TYPE
 
-// Forward the error to main app.
-function onError(e) {
-  postMessage(`ERROR: ${e.toString()}`);
-}
+    - [Customer stories](https://github.com/customer-stories)
+    - [Events & webinars](https://github.com/resources/events)
+    - [Ebooks & reports](https://github.com/resources/whitepapers)
+    - [Business insights](https://github.com/solutions/executive-insights)
+    - [GitHub Skills](https://skills.github.com)
 
-self.onmessage = (e) => {
-  const cmd = e.data.cmd;
+  - SUPPORT & SERVICES
 
-  // Ignore everything else except our 'list' command.
-  if (!cmd || cmd !== "list") {
-    return;
-  }
+    - [Documentation](https://docs.github.com)
+    - [Customer support](https://support.github.com)
+    - [Community forum](https://github.com/orgs/community/discussions)
+    - [Trust center](https://github.com/trust-center)
+    - [Partners](https://github.com/partners)
 
-  try {
-    const fs = requestFileSystemSync(TEMPORARY, 1024 * 1024 /* 1MB */);
+- Open Source
 
-    getAllEntries(fs.root.createReader());
+  - COMMUNITY
 
-    self.postMessage({ entries: paths });
-  } catch (e) {
-    onError(e);
-  }
-};
-```
+    - [GitHub SponsorsFund open source developers](https://github.com/sponsors)
 
-## [Method](#method)
+  - PROGRAMS
 
-### [readEntries()](#readentries)
+    - [Security Lab](https://securitylab.github.com)
+    - [Maintainer Community](https://maintainers.github.com)
+    - [Accelerator](https://github.com/accelerator)
+    - [Archive Program](https://archiveprogram.github.com)
 
-Returns a list of entries from a specific directory. Call this method until an empty array is returned.
+  - REPOSITORIES
 
-#### Syntax
+    - [Topics](https://github.com/topics)
+    - [Trending](https://github.com/trending)
+    - [Collections](https://github.com/collections)
 
-js
+- Enterprise
 
-```
-readEntries()
-```
+  - ENTERPRISE SOLUTIONS
 
-##### Parameters
+    - [Enterprise platformAI-powered developer platform](https://github.com/enterprise)
 
-None.
+  - AVAILABLE ADD-ONS
 
-##### Return value
+    - [GitHub Advanced SecurityEnterprise-grade security features](https://github.com/security/advanced-security)
+    - [Copilot for BusinessEnterprise-grade AI features](https://github.com/features/copilot/copilot-business)
+    - [Premium SupportEnterprise-grade 24/7 support](https://github.com/premium-support)
 
-Array containing [FileEntrySync](/en-US/docs/Web/API/FileEntrySync) and [DirectoryEntrySync](/en-US/docs/Web/API/DirectoryEntrySync).
+- [Pricing](https://github.com/pricing)
 
-##### Exceptions
+Search or jump to...
 
-This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with the following codes:
+# Search code, repositories, users, issues, pull requests...
 
-ExceptionDescription`NOT_FOUND_ERR`The directory does not exist.`INVALID_STATE_ERR`The directory has been modified since the first call to readEntries was processed.`SECURITY_ERR`The browser determined that it was not safe to look up the metadata.
+ Search Clear
 
-## [Specifications](#specifications)
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-This feature is not part of any specification anymore. It is no longer on track to become a standard.
+#  Provide feedback 
 
-## [Browser compatibility](#browser_compatibility)
+We read every piece of feedback, and take your input very seriously.
 
-## [See also](#see_also)
+Include my email address so I can be contacted Cancel  Submit feedback 
 
-- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+#  Saved searches 
 
-## Help improve MDN
+## Use saved searches to filter your results more quickly
 
-Was this page helpful to you?YesNo[Learn how to contribute](/en-US/docs/MDN/Community/Getting_started)
+NameQuery
 
- This page was last modified on ⁨May 23, 2025⁩ by [MDN contributors](/en-US/docs/Web/API/DirectoryReaderSync/contributors.txt). 
+ To see all available qualifiers, see our [documentation](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax). 
 
-[View this page on GitHub](https://github.com/mdn/content/blob/main/files/en-us/web/api/directoryreadersync/index.md?plain=1) • [Report a problem with this content](https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDirectoryReaderSync&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Fdirectoryreadersync%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDirectoryReaderSync%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fdirectoryreadersync%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2Fe6d43da6c6d28a6ac92cdd47882809ffbdf987ce%0A*+Document+last+modified%3A+2025-05-23T11%3A17%3A22.000Z%0A%0A%3C%2Fdetails%3E)
+ Cancel  Create saved search [Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fdirectoryreadersync%2Findex.md%3Fplain%3D1)[Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&source=header-repo&source_repo=mdn%2Fcontent)Appearance settingsResetting focusYou signed in with another tab or window. Reload to refresh your session.You signed out in another tab or window. Reload to refresh your session.You switched accounts on another tab or window. Reload to refresh your session.Dismiss alert{{ message }}[mdn](/mdn)/[content](/mdn/content)Public
+
+- [Notifications](/login?return_to=%2Fmdn%2Fcontent)You must be signed in to change notification settings
+- [Fork
+    23.1k](/login?return_to=%2Fmdn%2Fcontent)
+- [Star
+          10.4k](/login?return_to=%2Fmdn%2Fcontent)
+
+- [Code](/mdn/content)
+- [Issues
+          320](/mdn/content/issues)
+- [Pull requests
+          96](/mdn/content/pulls)
+- [Actions](/mdn/content/actions)
+- [Projects
+          0](/mdn/content/projects)
+- 
+
+### 
+
+[Security
+          
+  
+  
+    
+  
+    
+      
+
+              Uh oh!
+
+              There was an error while loading. Please reload this page](/mdn/content/security).
+
+- [Insights](/mdn/content/pulse)
+
+Additional navigation options
+
+- [Code](/mdn/content)
+- [Issues](/mdn/content/issues)
+- [Pull requests](/mdn/content/pulls)
+- [Actions](/mdn/content/actions)
+- [Projects](/mdn/content/projects)
+- [Security](/mdn/content/security)
+- [Insights](/mdn/content/pulse)
+
+## Footer
+
+https://github.com © 2026 GitHub, Inc. 
+
+### Footer navigation
+
+- [Terms](https://docs.github.com/site-policy/github-terms/github-terms-of-service)
+- [Privacy](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement)
+- [Security](https://github.com/security)
+- [Status](https://www.githubstatus.com/)
+- [Community](https://github.community/)
+- [Docs](https://docs.github.com/)
+- [Contact](https://support.github.com?tags=dotcom-footer)
+-  Manage cookies 
+-  Do not share my personal information 
+
+ You can’t perform that action at this time.

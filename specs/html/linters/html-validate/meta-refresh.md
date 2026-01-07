@@ -1,3 +1,14 @@
+HTML-validate - Require meta refresh to have 0 second delay (meta-refresh)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -104,3 +115,5 @@ With this option enabled:
 ## [Version history](#version-history)
 
 - 8.14.0 - `allowLongDelay` option added.
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/meta-refresh.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/meta-refresh.ts)

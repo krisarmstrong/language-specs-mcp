@@ -1,0 +1,723 @@
+GitHub - clj-kondo/clj-kondo: Static analyzer and linter for Clojure code that sparks joy[Skip to content](#start-of-content)
+
+## Navigation Menu
+
+Toggle navigation/[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fclj-kondo%2Fclj-kondo)Appearance settings
+
+- Platform
+
+  - AI CODE CREATION
+
+    - [GitHub CopilotWrite better code with AI](https://github.com/features/copilot)
+    - [GitHub SparkBuild and deploy intelligent apps](https://github.com/features/spark)
+    - [GitHub ModelsManage and compare prompts](https://github.com/features/models)
+    - [MCP RegistryNewIntegrate external tools](https://github.com/mcp)
+
+  - DEVELOPER WORKFLOWS
+
+    - [ActionsAutomate any workflow](https://github.com/features/actions)
+    - [CodespacesInstant dev environments](https://github.com/features/codespaces)
+    - [IssuesPlan and track work](https://github.com/features/issues)
+    - [Code ReviewManage code changes](https://github.com/features/code-review)
+
+  - APPLICATION SECURITY
+
+    - [GitHub Advanced SecurityFind and fix vulnerabilities](https://github.com/security/advanced-security)
+    - [Code securitySecure your code as you build](https://github.com/security/advanced-security/code-security)
+    - [Secret protectionStop leaks before they start](https://github.com/security/advanced-security/secret-protection)
+
+  - EXPLORE
+
+    - [Why GitHub](https://github.com/why-github)
+    - [Documentation](https://docs.github.com)
+    - [Blog](https://github.blog)
+    - [Changelog](https://github.blog/changelog)
+    - [Marketplace](https://github.com/marketplace)
+
+[View all features](https://github.com/features)
+- Solutions
+
+  - BY COMPANY SIZE
+
+    - [Enterprises](https://github.com/enterprise)
+    - [Small and medium teams](https://github.com/team)
+    - [Startups](https://github.com/enterprise/startups)
+    - [Nonprofits](https://github.com/solutions/industry/nonprofits)
+
+  - BY USE CASE
+
+    - [App Modernization](https://github.com/solutions/use-case/app-modernization)
+    - [DevSecOps](https://github.com/solutions/use-case/devsecops)
+    - [DevOps](https://github.com/solutions/use-case/devops)
+    - [CI/CD](https://github.com/solutions/use-case/ci-cd)
+    - [View all use cases](https://github.com/solutions/use-case)
+
+  - BY INDUSTRY
+
+    - [Healthcare](https://github.com/solutions/industry/healthcare)
+    - [Financial services](https://github.com/solutions/industry/financial-services)
+    - [Manufacturing](https://github.com/solutions/industry/manufacturing)
+    - [Government](https://github.com/solutions/industry/government)
+    - [View all industries](https://github.com/solutions/industry)
+
+[View all solutions](https://github.com/solutions)
+- Resources
+
+  - EXPLORE BY TOPIC
+
+    - [AI](https://github.com/resources/articles?topic=ai)
+    - [Software Development](https://github.com/resources/articles?topic=software-development)
+    - [DevOps](https://github.com/resources/articles?topic=devops)
+    - [Security](https://github.com/resources/articles?topic=security)
+    - [View all topics](https://github.com/resources/articles)
+
+  - EXPLORE BY TYPE
+
+    - [Customer stories](https://github.com/customer-stories)
+    - [Events & webinars](https://github.com/resources/events)
+    - [Ebooks & reports](https://github.com/resources/whitepapers)
+    - [Business insights](https://github.com/solutions/executive-insights)
+    - [GitHub Skills](https://skills.github.com)
+
+  - SUPPORT & SERVICES
+
+    - [Documentation](https://docs.github.com)
+    - [Customer support](https://support.github.com)
+    - [Community forum](https://github.com/orgs/community/discussions)
+    - [Trust center](https://github.com/trust-center)
+    - [Partners](https://github.com/partners)
+
+- Open Source
+
+  - COMMUNITY
+
+    - [GitHub SponsorsFund open source developers](https://github.com/sponsors)
+
+  - PROGRAMS
+
+    - [Security Lab](https://securitylab.github.com)
+    - [Maintainer Community](https://maintainers.github.com)
+    - [Accelerator](https://github.com/accelerator)
+    - [Archive Program](https://archiveprogram.github.com)
+
+  - REPOSITORIES
+
+    - [Topics](https://github.com/topics)
+    - [Trending](https://github.com/trending)
+    - [Collections](https://github.com/collections)
+
+- Enterprise
+
+  - ENTERPRISE SOLUTIONS
+
+    - [Enterprise platformAI-powered developer platform](https://github.com/enterprise)
+
+  - AVAILABLE ADD-ONS
+
+    - [GitHub Advanced SecurityEnterprise-grade security features](https://github.com/security/advanced-security)
+    - [Copilot for BusinessEnterprise-grade AI features](https://github.com/features/copilot/copilot-business)
+    - [Premium SupportEnterprise-grade 24/7 support](https://github.com/premium-support)
+
+- [Pricing](https://github.com/pricing)
+
+Search or jump to...
+
+# Search code, repositories, users, issues, pull requests...
+
+ Search Clear
+
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
+
+#  Provide feedback 
+
+We read every piece of feedback, and take your input very seriously.
+
+Include my email address so I can be contacted Cancel  Submit feedback 
+
+#  Saved searches 
+
+## Use saved searches to filter your results more quickly
+
+NameQuery
+
+ To see all available qualifiers, see our [documentation](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax). 
+
+ Cancel  Create saved search [Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fclj-kondo%2Fclj-kondo)[Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=clj-kondo%2Fclj-kondo)Appearance settingsResetting focusYou signed in with another tab or window. Reload to refresh your session.You signed out in another tab or window. Reload to refresh your session.You switched accounts on another tab or window. Reload to refresh your session.Dismiss alert{{ message }}[clj-kondo](/clj-kondo)/[clj-kondo](/clj-kondo/clj-kondo)Public
+
+- 
+
+###  Uh oh! 
+
+There was an error while loading. Please reload this page.
+
+- [Notifications](/login?return_to=%2Fclj-kondo%2Fclj-kondo)You must be signed in to change notification settings
+- [Fork
+    295](/login?return_to=%2Fclj-kondo%2Fclj-kondo)
+- [Star
+          1.8k](/login?return_to=%2Fclj-kondo%2Fclj-kondo)
+
+ Static analyzer and linter for Clojure code that sparks joy 
+
+### License
+
+[EPL-1.0 license](/clj-kondo/clj-kondo/blob/master/LICENSE)[1.8k
+          stars](/clj-kondo/clj-kondo/stargazers)[295
+          forks](/clj-kondo/clj-kondo/forks)[Branches](/clj-kondo/clj-kondo/branches)[Tags](/clj-kondo/clj-kondo/tags)[Activity](/clj-kondo/clj-kondo/activity)[Star](/login?return_to=%2Fclj-kondo%2Fclj-kondo)[Notifications](/login?return_to=%2Fclj-kondo%2Fclj-kondo)You must be signed in to change notification settings
+
+- [Code](/clj-kondo/clj-kondo)
+- [Issues
+          92](/clj-kondo/clj-kondo/issues)
+- [Pull requests
+          10](/clj-kondo/clj-kondo/pulls)
+- [Discussions](/clj-kondo/clj-kondo/discussions)
+- [Actions](/clj-kondo/clj-kondo/actions)
+- [Projects
+          1](/clj-kondo/clj-kondo/projects)
+- [Wiki](/clj-kondo/clj-kondo/wiki)
+- 
+
+### 
+
+[Security
+          
+  
+  
+    
+  
+    
+      
+
+              Uh oh!
+
+              There was an error while loading. Please reload this page](/clj-kondo/clj-kondo/security).
+
+- [Insights](/clj-kondo/clj-kondo/pulse)
+
+Additional navigation options
+
+- [Code](/clj-kondo/clj-kondo)
+- [Issues](/clj-kondo/clj-kondo/issues)
+- [Pull requests](/clj-kondo/clj-kondo/pulls)
+- [Discussions](/clj-kondo/clj-kondo/discussions)
+- [Actions](/clj-kondo/clj-kondo/actions)
+- [Projects](/clj-kondo/clj-kondo/projects)
+- [Wiki](/clj-kondo/clj-kondo/wiki)
+- [Security](/clj-kondo/clj-kondo/security)
+- [Insights](/clj-kondo/clj-kondo/pulse)
+
+# clj-kondo/clj-kondo
+
+master[Branches](/clj-kondo/clj-kondo/branches)[Tags](/clj-kondo/clj-kondo/tags)/clj-kondo/clj-kondo/branches/clj-kondo/clj-kondo/tagsGo to fileCodeOpen more actions menu
+
+## Folders and files
+
+NameNameLast commit messageLast commit date
+
+## Latest commit
+
+## History
+
+[2,572 Commits](/clj-kondo/clj-kondo/commits/master/)/clj-kondo/clj-kondo/commits/master/[.carve](/clj-kondo/clj-kondo/tree/master/.carve)[.carve](/clj-kondo/clj-kondo/tree/master/.carve)[.circleci](/clj-kondo/clj-kondo/tree/master/.circleci)[.circleci](/clj-kondo/clj-kondo/tree/master/.circleci)[.clj-kondo](/clj-kondo/clj-kondo/tree/master/.clj-kondo)[.clj-kondo](/clj-kondo/clj-kondo/tree/master/.clj-kondo)[.github](/clj-kondo/clj-kondo/tree/master/.github)[.github](/clj-kondo/clj-kondo/tree/master/.github)[analysis](/clj-kondo/clj-kondo/tree/master/analysis)[analysis](/clj-kondo/clj-kondo/tree/master/analysis)[corpus](/clj-kondo/clj-kondo/tree/master/corpus)[corpus](/clj-kondo/clj-kondo/tree/master/corpus)[doc](/clj-kondo/clj-kondo/tree/master/doc)[doc](/clj-kondo/clj-kondo/tree/master/doc)[examples](/clj-kondo/clj-kondo/tree/master/examples)[examples](/clj-kondo/clj-kondo/tree/master/examples)[extract/clj_kondo/impl](/clj-kondo/clj-kondo/tree/master/extract/clj_kondo/impl)[extract/clj_kondo/impl](/clj-kondo/clj-kondo/tree/master/extract/clj_kondo/impl)[inlined/clj_kondo/impl/toolsreader/v1v2v2](/clj-kondo/clj-kondo/tree/master/inlined/clj_kondo/impl/toolsreader/v1v2v2)[inlined/clj_kondo/impl/toolsreader/v1v2v2](/clj-kondo/clj-kondo/tree/master/inlined/clj_kondo/impl/toolsreader/v1v2v2)[logo](/clj-kondo/clj-kondo/tree/master/logo)[logo](/clj-kondo/clj-kondo/tree/master/logo)[parser/clj_kondo/impl/rewrite_clj](/clj-kondo/clj-kondo/tree/master/parser/clj_kondo/impl/rewrite_clj)[parser/clj_kondo/impl/rewrite_clj](/clj-kondo/clj-kondo/tree/master/parser/clj_kondo/impl/rewrite_clj)[pod-test/clj_kondo](/clj-kondo/clj-kondo/tree/master/pod-test/clj_kondo)[pod-test/clj_kondo](/clj-kondo/clj-kondo/tree/master/pod-test/clj_kondo)[resources](/clj-kondo/clj-kondo/tree/master/resources)[resources](/clj-kondo/clj-kondo/tree/master/resources)[screenshots](/clj-kondo/clj-kondo/tree/master/screenshots)[screenshots](/clj-kondo/clj-kondo/tree/master/screenshots)[script](/clj-kondo/clj-kondo/tree/master/script)[script](/clj-kondo/clj-kondo/tree/master/script)[src-profile/clj_kondo](/clj-kondo/clj-kondo/tree/master/src-profile/clj_kondo)[src-profile/clj_kondo](/clj-kondo/clj-kondo/tree/master/src-profile/clj_kondo)[src](/clj-kondo/clj-kondo/tree/master/src)[src](/clj-kondo/clj-kondo/tree/master/src)[test-regression/clj_kondo](/clj-kondo/clj-kondo/tree/master/test-regression/clj_kondo)[test-regression/clj_kondo](/clj-kondo/clj-kondo/tree/master/test-regression/clj_kondo)[test/clj_kondo](/clj-kondo/clj-kondo/tree/master/test/clj_kondo)[test/clj_kondo](/clj-kondo/clj-kondo/tree/master/test/clj_kondo)[.cirrus.yml](/clj-kondo/clj-kondo/blob/master/.cirrus.yml)[.cirrus.yml](/clj-kondo/clj-kondo/blob/master/.cirrus.yml)[.dir-locals.el](/clj-kondo/clj-kondo/blob/master/.dir-locals.el)[.dir-locals.el](/clj-kondo/clj-kondo/blob/master/.dir-locals.el)[.dockerignore](/clj-kondo/clj-kondo/blob/master/.dockerignore)[.dockerignore](/clj-kondo/clj-kondo/blob/master/.dockerignore)[.gitignore](/clj-kondo/clj-kondo/blob/master/.gitignore)[.gitignore](/clj-kondo/clj-kondo/blob/master/.gitignore)[.pre-commit-hooks.yaml](/clj-kondo/clj-kondo/blob/master/.pre-commit-hooks.yaml)[.pre-commit-hooks.yaml](/clj-kondo/clj-kondo/blob/master/.pre-commit-hooks.yaml)[.pre-commit-hooks.yaml.template](/clj-kondo/clj-kondo/blob/master/.pre-commit-hooks.yaml.template)[.pre-commit-hooks.yaml.template](/clj-kondo/clj-kondo/blob/master/.pre-commit-hooks.yaml.template)[API.md](/clj-kondo/clj-kondo/blob/master/API.md)[API.md](/clj-kondo/clj-kondo/blob/master/API.md)[CHANGELOG.md](/clj-kondo/clj-kondo/blob/master/CHANGELOG.md)[CHANGELOG.md](/clj-kondo/clj-kondo/blob/master/CHANGELOG.md)[CONTRIBUTING.md](/clj-kondo/clj-kondo/blob/master/CONTRIBUTING.md)[CONTRIBUTING.md](/clj-kondo/clj-kondo/blob/master/CONTRIBUTING.md)[Dockerfile](/clj-kondo/clj-kondo/blob/master/Dockerfile)[Dockerfile](/clj-kondo/clj-kondo/blob/master/Dockerfile)[Dockerfile.alpine](/clj-kondo/clj-kondo/blob/master/Dockerfile.alpine)[Dockerfile.alpine](/clj-kondo/clj-kondo/blob/master/Dockerfile.alpine)[Dockerfile.ci](/clj-kondo/clj-kondo/blob/master/Dockerfile.ci)[Dockerfile.ci](/clj-kondo/clj-kondo/blob/master/Dockerfile.ci)[LICENSE](/clj-kondo/clj-kondo/blob/master/LICENSE)[LICENSE](/clj-kondo/clj-kondo/blob/master/LICENSE)[README.md](/clj-kondo/clj-kondo/blob/master/README.md)[README.md](/clj-kondo/clj-kondo/blob/master/README.md)[appveyor.yml](/clj-kondo/clj-kondo/blob/master/appveyor.yml)[appveyor.yml](/clj-kondo/clj-kondo/blob/master/appveyor.yml)[bb.edn](/clj-kondo/clj-kondo/blob/master/bb.edn)[bb.edn](/clj-kondo/clj-kondo/blob/master/bb.edn)[deps.edn](/clj-kondo/clj-kondo/blob/master/deps.edn)[deps.edn](/clj-kondo/clj-kondo/blob/master/deps.edn)[project.clj](/clj-kondo/clj-kondo/blob/master/project.clj)[project.clj](/clj-kondo/clj-kondo/blob/master/project.clj)[project.clj.template](/clj-kondo/clj-kondo/blob/master/project.clj.template)[project.clj.template](/clj-kondo/clj-kondo/blob/master/project.clj.template)[snapcraft.yaml](/clj-kondo/clj-kondo/blob/master/snapcraft.yaml)[snapcraft.yaml](/clj-kondo/clj-kondo/blob/master/snapcraft.yaml)View all files
+
+## Repository files navigation
+
+- [README](#)
+- [Contributing](#)
+- [EPL-1.0 license](#)
+
+/clj-kondo/clj-kondo/blob/master/logo/logo-300dpi.png
+
+https://clojars.org/clj-kondohttps://opencollective.com/clj-kondohttps://circleci.com/gh/clj-kondo/clj-kondo/tree/masterhttps://ci.appveyor.com/project/clj-kondo/clj-kondo/branch/masterhttps://cljdoc.org/d/clj-kondo/clj-kondo/CURRENThttps://clojurians.slack.com/messages/CHY97NXE2https://twitter.com/search?q=%23cljkondo&src=typed_query&f=live
+
+A static analyzer and linter for Clojure code that sparks joy.
+
+/clj-kondo/clj-kondo/blob/master/screenshots/demo.png
+
+Thanks a lot for clj-kondo. It is like a companion for me. It has made clojure fun again.
+
+ — [@geraldodev](https://github.com/geraldodev) on Clojurians Slack 
+
+## Rationale
+
+#rationale
+
+Clj-kondo performs [static analysis](/clj-kondo/clj-kondo/blob/master) on Clojure, ClojureScript and EDN. It informs you about potential errors while you are typing (without executing your program).
+
+## Features
+
+#features
+
+Clj-kondo detects:
+
+- inline `def` expressions
+- redundant `do` and `let` wrappings
+- arity errors: 
+
+  - within the same namespace and across namespaces
+  - of static Java method calls
+  - of local `let` and `letfn` binding calls
+  - of recursive calls (including `recur`)
+  - conflicting arities in overloaded functions
+
+- unused private vars
+- private and deprecated var usage
+- required but unused namespaces
+- unsorted required namespaces
+- referred but unused vars
+- duplicate requires
+- unused function arguments and let bindings
+- marked as unused, but used arguments and let bindings (optional)
+- unused imports
+- redefined vars
+- unresolved symbols, vars and namespaces
+- misplaced docstrings
+- duplicate map keys and set elements
+- duplicates and quoting in case test constants
+- missing map keys
+- invalid number of forms in binding vectors
+- missing assertions in `clojure.test/deftest`
+- alias consistency
+- [type checking](/clj-kondo/clj-kondo/blob/master/doc/types.md)
+- Datalog syntax checking
+- format string argument mismatches
+- shadowed vars
+- 2 argument usage of reduce (optional)
+
+before your form hits the REPL.
+
+It suggests several style guide recommendations, such as:
+
+- rules from Stuart Sierra's [how to ns](https://stuartsierra.com/2016/clojure-how-to-ns.html)
+- use `:else` as the catch-all test expression in `cond` (see [Clojure style guide](https://github.com/bbatsov/clojure-style-guide#else-keyword-in-cond))
+- use `seq` instead of `(not (empty? ,,,))` (see [Clojure style guide](https://github.com/bbatsov/clojure-style-guide#nil-punning))
+- don't make your lines too long (see [Clojure style guide](https://github.com/bbatsov/clojure-style-guide#80-character-limits))
+
+/clj-kondo/clj-kondo/blob/master/screenshots/wrong-arity.png
+
+It has support for syntax of commonly used macros like `clojure.core.async/alt!!`, `schema.core/defn` and `potemkin/import-vars`.
+
+It detects common errors in `deps.edn` and `bb.edn`
+
+It provides [analysis data](/clj-kondo/clj-kondo/blob/master/analysis) so you build your own custom linters.
+
+View all available linters [here](/clj-kondo/clj-kondo/blob/master/doc/linters.md).
+
+This linter is:
+
+- compatible with `.clj`, `.cljs`, `.cljc` and `.edn` files
+- build tool and editor agnostic
+- a static code analyzer
+- compiled to native code using GraalVM
+
+Try clj-kondo at the [interactive playground](https://clj-kondo.michielborkent.nl).
+
+Watch the talk:
+
+https://www.youtube.com/watch?v=MB3vVREkI7s
+
+## Support ❤️
+
+#support-heart
+
+You can support this project via [Github
+Sponsors](https://github.com/sponsors/borkdude), [OpenCollective](https://opencollective.com/clj-kondo), [Ko-fi](https://ko-fi.com/borkdude) or indirectly via [Clojurists
+Together](https://www.clojuriststogether.org/).
+
+Top sponsors
+
+- [Clojurists Together](https://clojuriststogether.org/)
+- [Roam Research](https://roamresearch.com/)
+- [Nextjournal](https://nextjournal.com/)
+- [Toyokumo](https://toyokumo.co.jp/)
+- [Cognitect](https://www.cognitect.com/)
+- [Kepler16](https://kepler16.com/)
+- [Adgoji](https://www.adgoji.com/)
+
+## [Installation](/clj-kondo/clj-kondo/blob/master/doc/install.md)
+
+#installation
+
+## [Running on the JVM](/clj-kondo/clj-kondo/blob/master/doc/jvm.md)
+
+#running-on-the-jvm
+
+## [Running with Docker](/clj-kondo/clj-kondo/blob/master/doc/docker.md)
+
+#running-with-docker
+
+## Usage
+
+#usage
+
+### Command line
+
+#command-line
+
+Lint from stdin:
+
+```
+$ echo '(def x (def x 1))' | clj-kondo --lint -
+<stdin>:1:8: warning: inline def
+```
+
+Lint a file:
+
+```
+$ echo '(def x (def x 1))' > /tmp/foo.clj
+$ clj-kondo --lint /tmp/foo.clj
+/tmp/foo.clj:1:8: warning: inline def
+```
+
+Lint a directory:
+
+```
+$ clj-kondo --lint src
+src/clj_kondo/test.cljs:7:1: warning: redundant do
+src/clj_kondo/calls.clj:291:3: error: Wrong number of args (1) passed to clj-kondo.calls/analyze-calls
+```
+
+Lint a project classpath:
+
+```
+$ clj-kondo --lint "$(lein classpath)"
+```
+
+Help:
+
+```
+$ clj-kondo --help
+clj-kondo v2024.11.14
+
+Options:
+
+--lint <file>: a file can either be a normal file, directory or classpath. In the
+case of a directory or classpath, only .clj, .cljs and .cljc will be
+processed. Use - as filename for reading from stdin.
+
+--lang <lang>: if lang cannot be derived from the file extension this option will be
+used. Supported values: clj, cljs, cljc.
+
+--filename <file>: in case stdin is used for linting, use this to set the
+reported filename.
+
+--cache-dir: when this option is provided, the cache will be resolved to this
+directory. If --cache is false, this option will be ignored.
+
+--cache: if false, won't use cache. Otherwise, will try to resolve cache
+using `--cache-dir`. If `--cache-dir` is not set, cache is resolved using the
+nearest `.clj-kondo` directory in the current and parent directories.
+
+--config <config>: extra config that is merged. May be a file or an EDN expression. See https://github.com/clj-kondo/clj-kondo/blob/master/doc/config.md.
+
+--config-dir <config-dir>: use this config directory instead of auto-detected
+.clj-kondo dir.
+
+--parallel: lint sources in parallel.
+
+--dependencies: don't report any findings. Useful for populating cache while linting dependencies.
+
+--copy-configs: copy configs from dependencies while linting.
+
+--skip-lint: skip lint/analysis, still check for other tasks like copy-configs.
+
+--fail-level <level>: minimum severity for exit with error code.  Supported values:
+warning, error.  The default level if unspecified is warning.
+
+--report-level <level>: minimum severity for which to report.  Supported values:
+info, warning, error.  The default level if unspecified is info.
+
+--debug: print debug information.
+```
+
+## Project setup
+
+#project-setup
+
+To detect lint errors across namespaces in your project, a cache is needed. To let clj-kondo know where to create one, make a `.clj-kondo` directory in the root of your project, meaning on the same level as your `project.clj`, `deps.edn` or `build.boot`:
+
+```
+$ mkdir -p .clj-kondo
+```
+
+A cache will be created inside of it when you run `clj-kondo`. Before linting inside your editor, it is recommended to lint the entire classpath to teach `clj-kondo` about all the libraries you are using, including Clojure and/or ClojureScript itself. Some libraries come with configurations. To import them, first run:
+
+```
+$ clj-kondo --lint "<classpath>" --dependencies --copy-configs --skip-lint
+```
+
+The `--copy-configs` flag will search and copy configurations from dependencies into the `.clj-kondo` directory, while linting (see [config.md](/clj-kondo/clj-kondo/blob/master/doc/config.md#exporting-and-importing-configuration)).
+
+With the configurations in place, now we can analyze the dependencies properly:
+
+```
+$ clj-kondo --lint "<classpath>" --dependencies --parallel
+```
+
+The `--dependencies` flag indicates that clj-kondo is used to analyze sources to populate the cache. When enabled, clj-kondo will suppress warnings and skips over already linted `.jar` files for performance.
+
+The `--parallel` option will use multiple threads to lint your sources, going through them faster.
+
+NOTE: in the version after `2024.05.24` copying configs and linting dependencies can be done in one go using:
+
+```
+$ clj-kondo --lint "<classpath>" --dependencies --parallel --copy-configs
+```
+
+Build tool specific ways to get a classpath:
+
+- `lein classpath`
+- `boot with-cp -w -f -`
+- `clojure -Spath`
+- `npx shadow-cljs classpath`
+
+So for `lein` the entire command would be:
+
+```
+$ clj-kondo --lint "$(lein classpath)" --dependencies --parallel --copy-configs
+```
+
+Now you are ready to lint single files using [editor
+integration](/clj-kondo/clj-kondo/blob/master/doc/editor-integration.md). A simulation of what happens when you edit a file in your editor:
+
+```
+$ echo '(select-keys)' | clj-kondo --lang cljs --lint -
+<stdin>:1:1: error: Wrong number of args (0) passed to cljs.core/select-keys
+```
+
+Since clj-kondo now knows about your version of ClojureScript via the cache, it detects that the number of arguments you passed to `select-keys` is invalid. Each time you edit a file, the cache is incrementally updated, so clj-kondo is informed about new functions you just wrote.
+
+If you want to use a different directory to read and write the cache, use the `--cache-dir` option. To disable the cache even if you have a `.clj-kondo` directory, use `--cache false`.
+
+For your project's version control, we recommend that you commit everything under the `./.clj-kondo/` dir, except for the cache dir. Add `.cache` to your `.gitignore` to ignore all `.cache` dirs, including the one under `./.clj-kondo`. Adjust accordingly if you are using a different `--cache-dir`.
+
+## [Configuration](/clj-kondo/clj-kondo/blob/master/doc/config.md)
+
+#configuration
+
+## [Editor integration](/clj-kondo/clj-kondo/blob/master/doc/editor-integration.md)
+
+#editor-integration
+
+## Exit codes
+
+#exit-codes
+
+Exit codes can be controlled by the `--fail-level <level>` option. The default fail level is `warning` which returns exit codes as follows:
+
+- `0`: no errors or warnings were found
+- `2`: one or more warnings were found
+- `3`: one or more errors were found
+
+If `--fail-level error` is supplied, warnings do not lead to a non-zero exit code:
+
+- `0`: no errors were found
+- `0`: one or more warnings were found
+- `3`: one or more errors were found
+
+All exit codes other than `0`, `2` and `3` indicate an error because of a bug in clj-kondo or some other unexpected error beyond the control of clj-kondo.
+
+## [CI Integration](/clj-kondo/clj-kondo/blob/master/doc/ci-integration.md)
+
+#ci-integration
+
+## [Analysis data](/clj-kondo/clj-kondo/blob/master/analysis)
+
+#analysis-data
+
+## [Developer documentation](/clj-kondo/clj-kondo/blob/master/doc/dev.md)
+
+#developer-documentation
+
+## [Companies](/clj-kondo/clj-kondo/blob/master/doc/companies.md) using clj-kondo
+
+#companies-using-clj-kondo
+
+## Macros
+
+#macros
+
+As clj-kondo is a static analyzer is does not need a runtime (JVM, browser, Node.js, etc.). It doesn't execute your code. As such it can be a faster alternative to linters that do use a runtime, like [eastwood](https://github.com/jonase/eastwood). This approach comes with the limitation that clj-kondo cannot execute your macros as macros can use arbitrary features from a runtime. Clj-kondo has support for clojure core macros and some popular libraries from the community. Macros that are not supported out of the box can be supported using [configuration](https://github.com/clj-kondo/clj-kondo/blob/master/doc/config.md#unrecognized-macros). One of the ways to configure macros is to write [hooks](https://github.com/clj-kondo/clj-kondo/blob/master/doc/hooks.md) for them (also see this [blogpost](https://blog.michielborkent.nl/clj-kondo-hooks.html)). For many libraries there is already a configuration available that you can [import](https://github.com/clj-kondo/clj-kondo/blob/master/doc/config.md#importing). Also check out clj-kondo [configs](https://github.com/clj-kondo/configs) which contains configurations for third party libraries.
+
+## Babashka pod
+
+#babashka-pod
+
+Clj-kondo can be invoked as a [babashka
+pod](https://github.com/babashka/babashka.pods).
+
+```
+#!/usr/bin/env bb
+(ns script
+  (:require [babashka.pods :as pods]))
+
+(pods/load-pod "clj-kondo")
+(require '[pod.borkdude.clj-kondo :as clj-kondo])
+
+(clj-kondo/merge-configs
+ '{:linters {:unresolved-symbol {:exclude [(foo1.bar)]}}}
+ '{:linters {:unresolved-symbol {:exclude [(foo2.bar)]}}})
+;;=> {:linters {:unresolved-symbol {:exclude [(foo1.bar) (foo2.bar)]}}}
+
+(-> (clj-kondo/run! {:lint ["src"]})
+    :summary)
+;;=> {:error 0, :warning 0, :info 0, :type :summary, :duration 779}
+```
+
+## Podcasts
+
+#podcasts
+
+- [defnpodcast](https://soundcloud.com/defn-771544745)
+- [ClojureScript Podcast](https://clojurescriptpodcast.com/)
+
+## Articles
+
+#articles
+
+- [How to catch derived Vars with a clj-kondo hook](https://www.mikkokoski.com/blog/derived-vars/index.html) by Mikko Koski
+- [Taking your linting to the next level](https://blog.tvaisanen.com/take-your-linting-game-to-the-next-level?showSharer=true#heading-benefits-of-types-in-the-editor) by Toni Vaisanen
+- [Replacing clojure-lsp with clj-kondo and Refactor-nREPL](https://andreyor.st/posts/2025-09-21-replacing-clojure-lsp-with-clj-kondo-and-refactor-nrepl/)
+
+## Thanks to:
+
+#thanks-to
+
+- [joker](https://github.com/candid82/joker) for inspiration
+- [rewrite-clj](https://github.com/xsc/rewrite-clj) for the Clojure parser code
+- [eastwood](https://github.com/jonase/eastwood) for `var-info.edn` and inspiration
+- [contributors](https://github.com/clj-kondo/clj-kondo/graphs/contributors) and other users posting issues with bug reports and ideas
+- [Nikita Prokopov](https://github.com/tonsky) for the logo
+- [adgoji](https://www.adgoji.com/) for financial support
+- [Clojurists Together](https://www.clojuriststogether.org/) for sponsoring work on hooks
+
+## License
+
+#license
+
+Copyright © 2019 - 2023 Michiel Borkent
+
+Distributed under the EPL License, same as Clojure. See LICENSE.
+
+The directory `inlined` contains source from [tools.reader](https://github.com/clojure/tools.reader) which is licensed under the EPL license.
+
+The directory `parser` contains modified source from [rewrite-clj](https://github.com/xsc/rewrite-clj) which is licensed under the MIT license.
+
+## About
+
+ Static analyzer and linter for Clojure code that sparks joy 
+
+### Topics
+
+[clojure](/topics/clojure)[clojurescript](/topics/clojurescript)[linter](/topics/linter)[static-analysis](/topics/static-analysis)[graalvm](/topics/graalvm)[graalvm-native-image](/topics/graalvm-native-image)
+
+### Resources
+
+[Readme](#readme-ov-file)
+
+### License
+
+[EPL-1.0 license](#EPL-1.0-1-ov-file)
+
+### Contributing
+
+[Contributing](#contributing-ov-file)
+
+###  Uh oh! 
+
+There was an error while loading. Please reload this page.
+
+[Activity](/clj-kondo/clj-kondo/activity)[Custom properties](/clj-kondo/clj-kondo/custom-properties)
+
+### Stars
+
+[1.8k
+        stars](/clj-kondo/clj-kondo/stargazers)
+
+### Watchers
+
+[17
+        watching](/clj-kondo/clj-kondo/watchers)
+
+### Forks
+
+[295
+        forks](/clj-kondo/clj-kondo/forks)[Report repository](/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fclj-kondo%2Fclj-kondo&report=clj-kondo+%28user%29)
+
+## [Releases
+      122](/clj-kondo/clj-kondo/releases)
+
+[v2025.12.23
+        
+          Latest
+      
+      Dec 23, 2025](/clj-kondo/clj-kondo/releases/tag/v2025.12.23)[+ 121 releases](/clj-kondo/clj-kondo/releases)
+
+## Sponsor this project
+
+- 
+
+###  Uh oh! 
+
+There was an error while loading. Please reload this page.
+
+- [opencollective.com/clj-kondo](https://opencollective.com/clj-kondo)
+- [ko-fi.com/borkdude](https://ko-fi.com/borkdude)
+
+[Learn more about GitHub Sponsors](/sponsors)
+
+## [Packages
+      0](/orgs/clj-kondo/packages?repo_name=clj-kondo)
+
+###  Uh oh! 
+
+There was an error while loading. Please reload this page.
+
+###  Uh oh! 
+
+There was an error while loading. Please reload this page.
+
+## [Contributors
+      166](/clj-kondo/clj-kondo/graphs/contributors)
+
+- https://github.com/borkdude
+- https://github.com/ericdallo
+- https://github.com/lread
+- https://github.com/tomdl89
+- https://github.com/mknoszlig
+- https://github.com/NoahTheDuke
+- https://github.com/lispyclouds
+- https://github.com/jramosg
+- https://github.com/yuhan0
+- https://github.com/snoe
+- https://github.com/Heliosmaster
+- https://github.com/sogaiu
+- https://github.com/samumbach
+- https://github.com/benedekfazekas
+
+[+ 152 contributors](/clj-kondo/clj-kondo/graphs/contributors)
+
+## Languages
+
+- [Clojure
+          98.7%](/clj-kondo/clj-kondo/search?l=clojure)
+- [Shell
+          1.1%](/clj-kondo/clj-kondo/search?l=shell)
+- Other0.2%
+
+## Footer
+
+https://github.com © 2026 GitHub, Inc. 
+
+### Footer navigation
+
+- [Terms](https://docs.github.com/site-policy/github-terms/github-terms-of-service)
+- [Privacy](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement)
+- [Security](https://github.com/security)
+- [Status](https://www.githubstatus.com/)
+- [Community](https://github.community/)
+- [Docs](https://docs.github.com/)
+- [Contact](https://support.github.com?tags=dotcom-footer)
+-  Manage cookies 
+-  Do not share my personal information 
+
+ You can’t perform that action at this time.

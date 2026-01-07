@@ -1,3 +1,14 @@
+HTML-validate - Disallow link types (allowed-links)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -163,3 +174,5 @@ error: External link to this destination is not allowed by current configuration
 ## [Version history](#version-history)
 
 - 6.1.0 - Added support for `include` and `exclude`.
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/allowed-links.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/allowed-links.ts)

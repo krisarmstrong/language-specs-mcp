@@ -1,3 +1,14 @@
+HTML-validate - Available rulesToggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -57,4 +68,4 @@ These rules is to be used on full documents.
 
 ## Uncategorized
 
-[no-unknown-elements](/rules/no-unknown-elements.html)Disallow usage of unknown elements[no-unused-disable](/rules/no-unused-disable.html)Disallow unused disable directives
+[no-unknown-elements](/rules/no-unknown-elements.html)Disallow usage of unknown elements[no-unused-disable](/rules/no-unused-disable.html)Disallow unused disable directives[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/index.md)

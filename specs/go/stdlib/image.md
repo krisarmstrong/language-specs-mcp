@@ -1,764 +1,222 @@
-package image // import "image"
+Go Security Policy - The Go Programming Language/[Skip to Main Content](#main-content)
 
-Package image implements a basic 2-D image library.
+- [Why Go arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
 
-The fundamental interface is called Image. An Image contains colors, which are
-described in the image/color package.
+  - [Case Studies](/solutions/case-studies)
 
-Values of the Image interface are created either by calling functions such as
-NewRGBA and NewPaletted, or by calling Decode on an io.Reader containing image
-data in a format such as GIF, JPEG or PNG. Decoding any particular image format
-requires the prior registration of a decoder function. Registration is typically
-automatic as a side effect of initializing that format's package so that,
-to decode a PNG image, it suffices to have
+Common problems companies solve with Go
 
-    import _ "image/png"
+  - [Use Cases](/solutions/use-cases)
 
-in a program's main package. The _ means to import a package purely for its
-initialization side effects.
+Stories about how and why companies use Go
 
-See "The Go image package" for more details:
-https://golang.org/doc/articles/image_package.html
+  - [Security](/security/)
 
-# Security Considerations
+How Go can help keep you secure by default
 
-The image package can be used to parse arbitrarily large images, which can cause
-resource exhaustion on machines which do not have enough memory to store them.
-When operating on arbitrary images, DecodeConfig should be called before
-Decode, so that the program can decide whether the image, as defined in
-the returned header, can be safely decoded with the available resources.
-A call to Decode which produces an extremely large image, as defined in the
-header returned by DecodeConfig, is not considered a security issue, regardless
-of whether the image is itself malformed or not. A call to DecodeConfig which
-returns a header which does not match the image returned by Decode may be
-considered a security issue, and should be reported per the [Go Security
-Policy](https://go.dev/security/policy).
+- [Learn](/learn/) Press Enter to activate/deactivate dropdown 
+- [Docs arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
 
-VARIABLES
+  - [Go Spec](/ref/spec)
 
-var (
-	// Black is an opaque black uniform image.
-	Black = NewUniform(color.Black)
-	// White is an opaque white uniform image.
-	White = NewUniform(color.White)
-	// Transparent is a fully transparent uniform image.
-	Transparent = NewUniform(color.Transparent)
-	// Opaque is a fully opaque uniform image.
-	Opaque = NewUniform(color.Opaque)
-)
-var ErrFormat = errors.New("image: unknown format")
-    ErrFormat indicates that decoding encountered an unknown format.
+The official Go language specification
 
+  - [Go User Manual](/doc)
 
-FUNCTIONS
+A complete introduction to building software with Go
 
-func RegisterFormat(name, magic string, decode func(io.Reader) (Image, error), decodeConfig func(io.Reader) (Config, error))
-    RegisterFormat registers an image format for use by Decode. Name is the
-    name of the format, like "jpeg" or "png". Magic is the magic prefix
-    that identifies the format's encoding. The magic string can contain "?"
-    wildcards that each match any one byte. Decode is the function that decodes
-    the encoded image. DecodeConfig is the function that decodes just its
-    configuration.
+  - [Standard library](https://pkg.go.dev/std)
 
+Reference documentation for Go's standard library
 
-TYPES
+  - [Release Notes](/doc/devel/release)
 
-type Alpha struct {
-	// Pix holds the image's pixels, as alpha values. The pixel at
-	// (x, y) starts at Pix[(y-Rect.Min.Y)*Stride + (x-Rect.Min.X)*1].
-	Pix []uint8
-	// Stride is the Pix stride (in bytes) between vertically adjacent pixels.
-	Stride int
-	// Rect is the image's bounds.
-	Rect Rectangle
-}
-    Alpha is an in-memory image whose At method returns color.Alpha values.
+Learn what's new in each Go release
 
-func NewAlpha(r Rectangle) *Alpha
-    NewAlpha returns a new Alpha image with the given bounds.
+  - [Effective Go](/doc/effective_go)
 
-func (p *Alpha) AlphaAt(x, y int) color.Alpha
+Tips for writing clear, performant, and idiomatic Go code
 
-func (p *Alpha) At(x, y int) color.Color
+- [Packages](https://pkg.go.dev) Press Enter to activate/deactivate dropdown 
+- [Community arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
 
-func (p *Alpha) Bounds() Rectangle
+  - [Recorded Talks](/talks/)
 
-func (p *Alpha) ColorModel() color.Model
+Videos from prior events
 
-func (p *Alpha) Opaque() bool
-    Opaque scans the entire image and reports whether it is fully opaque.
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
 
-func (p *Alpha) PixOffset(x, y int) int
-    PixOffset returns the index of the first element of Pix that corresponds to
-    the pixel at (x, y).
+Meet other local Go developers
 
-func (p *Alpha) RGBA64At(x, y int) color.RGBA64
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
 
-func (p *Alpha) Set(x, y int, c color.Color)
+Learn and network with Go developers from around the world
 
-func (p *Alpha) SetAlpha(x, y int, c color.Alpha)
+  - [Go blog](/blog)
 
-func (p *Alpha) SetRGBA64(x, y int, c color.RGBA64)
+The Go project's official blog.
 
-func (p *Alpha) SubImage(r Rectangle) Image
-    SubImage returns an image representing the portion of the image p visible
-    through r. The returned value shares pixels with the original image.
+  - [Go project](/help)
 
-type Alpha16 struct {
-	// Pix holds the image's pixels, as alpha values in big-endian format. The pixel at
-	// (x, y) starts at Pix[(y-Rect.Min.Y)*Stride + (x-Rect.Min.X)*2].
-	Pix []uint8
-	// Stride is the Pix stride (in bytes) between vertically adjacent pixels.
-	Stride int
-	// Rect is the image's bounds.
-	Rect Rectangle
-}
-    Alpha16 is an in-memory image whose At method returns color.Alpha16 values.
+Get help and stay informed from Go
 
-func NewAlpha16(r Rectangle) *Alpha16
-    NewAlpha16 returns a new Alpha16 image with the given bounds.
+  -  Get connected 
 
-func (p *Alpha16) Alpha16At(x, y int) color.Alpha16
+https://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
 
-func (p *Alpha16) At(x, y int) color.Color
+/
 
-func (p *Alpha16) Bounds() Rectangle
+- [Why Go navigate_next](#)[navigate_beforeWhy Go](#)
 
-func (p *Alpha16) ColorModel() color.Model
+  - [Case Studies](/solutions/case-studies)
+  - [Use Cases](/solutions/use-cases)
+  - [Security](/security/)
 
-func (p *Alpha16) Opaque() bool
-    Opaque scans the entire image and reports whether it is fully opaque.
+- [Learn](/learn/)
+- [Docs navigate_next](#)[navigate_beforeDocs](#)
 
-func (p *Alpha16) PixOffset(x, y int) int
-    PixOffset returns the index of the first element of Pix that corresponds to
-    the pixel at (x, y).
+  - [Go Spec](/ref/spec)
+  - [Go User Manual](/doc)
+  - [Standard library](https://pkg.go.dev/std)
+  - [Release Notes](/doc/devel/release)
+  - [Effective Go](/doc/effective_go)
 
-func (p *Alpha16) RGBA64At(x, y int) color.RGBA64
+- [Packages](https://pkg.go.dev)
+- [Community navigate_next](#)[navigate_beforeCommunity](#)
 
-func (p *Alpha16) Set(x, y int, c color.Color)
+  - [Recorded Talks](/talks/)
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+  - [Go blog](/blog)
+  - [Go project](/help)
+  - Get connectedhttps://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
 
-func (p *Alpha16) SetAlpha16(x, y int, c color.Alpha16)
+1. [Documentation](/doc/)
+2. [Security](/doc/security/)
+3. [Go Security Policy](/doc/security/policy)
 
-func (p *Alpha16) SetRGBA64(x, y int, c color.RGBA64)
+# Go Security Policy
 
-func (p *Alpha16) SubImage(r Rectangle) Image
-    SubImage returns an image representing the portion of the image p visible
-    through r. The returned value shares pixels with the original image.
+## Overview
 
-type CMYK struct {
-	// Pix holds the image's pixels, in C, M, Y, K order. The pixel at
-	// (x, y) starts at Pix[(y-Rect.Min.Y)*Stride + (x-Rect.Min.X)*4].
-	Pix []uint8
-	// Stride is the Pix stride (in bytes) between vertically adjacent pixels.
-	Stride int
-	// Rect is the image's bounds.
-	Rect Rectangle
-}
-    CMYK is an in-memory image whose At method returns color.CMYK values.
+This document explains the Go Security team’s process for handling issues reported and what to expect in return.
 
-func NewCMYK(r Rectangle) *CMYK
-    NewCMYK returns a new CMYK image with the given bounds.
+## Reporting a Security Bug
 
-func (p *CMYK) At(x, y int) color.Color
+All security bugs in the Go distribution should be reported by email to [security@golang.org](mailto:security@golang.org). This mail is delivered to the Go Security team.
 
-func (p *CMYK) Bounds() Rectangle
+To ensure your report is not marked as spam, please include the word “vulnerability” anywhere in your email. Please use a descriptive subject line for your report email.
 
-func (p *CMYK) CMYKAt(x, y int) color.CMYK
+Your email will be acknowledged within 7 days, and you’ll be kept up to date with the progress until resolution. Your issue will be fixed or made public within 90 days.
 
-func (p *CMYK) ColorModel() color.Model
+If you have not received a reply to your email within 7 days, please follow up with the Go Security team again at [security@golang.org](mailto:security@golang.org). Please make sure the word vulnerability is in your email.
 
-func (p *CMYK) Opaque() bool
-    Opaque scans the entire image and reports whether it is fully opaque.
+If after 3 more days you have still not received an acknowledgement of your report, it is possible that your email might have been marked as spam. In that case, please [file an issue here](https://g.co/vulnz). Select “I want to report a technical security or an abuse risk related bug in a Google product (SQLi, XSS, etc.)”, and list “Go” as the affected product.
 
-func (p *CMYK) PixOffset(x, y int) int
-    PixOffset returns the index of the first element of Pix that corresponds to
-    the pixel at (x, y).
+## Tracks
 
-func (p *CMYK) RGBA64At(x, y int) color.RGBA64
+Depending on the nature of your issue, it will be categorized by the Go Security team as an issue in the PUBLIC, PRIVATE, or URGENT track. All security issues will be issued CVE numbers.
 
-func (p *CMYK) Set(x, y int, c color.Color)
+The Go Security team does not assign traditional fine-grained severity labels (e.g CRITICAL, HIGH, MEDIUM, LOW) to security issues because severity depends highly on how a user is using the affected API or functionality.
 
-func (p *CMYK) SetCMYK(x, y int, c color.CMYK)
+For example, the impact of a resource exhaustion issue in the `encoding/json` parser depends on what is being parsed. If the user is parsing trusted JSON files from their local filesystem, the impact is likely to be low. If the user is parsing untrusted arbitrary JSON from an HTTP request body, the impact may be much higher.
 
-func (p *CMYK) SetRGBA64(x, y int, c color.RGBA64)
+That said, the following issue tracks do signal how severe and/or wide-reaching the Security team believes an issue to be. For example, an issue with medium to significant impact for many users is a PRIVATE track issue in this policy, and an issue with negligible to minor impact, or which affects only a small subset of users, is a PUBLIC track issue.
 
-func (p *CMYK) SubImage(r Rectangle) Image
-    SubImage returns an image representing the portion of the image p visible
-    through r. The returned value shares pixels with the original image.
+### PUBLIC
 
-type Config struct {
-	ColorModel    color.Model
-	Width, Height int
-}
-    Config holds an image's color model and dimensions.
+Issues in the PUBLIC track affect niche configurations, have very limited impact, or are already widely known.
 
-func DecodeConfig(r io.Reader) (Config, string, error)
-    DecodeConfig decodes the color model and dimensions of an image that has
-    been encoded in a registered format. The string returned is the format name
-    used during format registration. Format registration is typically done by an
-    init function in the codec-specific package.
+PUBLIC track issues are labeled with [Proposal-Security](https://github.com/golang/go/labels/Proposal-Security), discussed through the [Go proposal review process](https://go.googlesource.com/proposal/+/master/README.md#proposal-review)fixed in public, and get backported to the next scheduled [minor
+releases](/wiki/MinorReleases) (which occur ~monthly). The release announcement includes details of these issues, but there is no pre-announcement.
 
-type Gray struct {
-	// Pix holds the image's pixels, as gray values. The pixel at
-	// (x, y) starts at Pix[(y-Rect.Min.Y)*Stride + (x-Rect.Min.X)*1].
-	Pix []uint8
-	// Stride is the Pix stride (in bytes) between vertically adjacent pixels.
-	Stride int
-	// Rect is the image's bounds.
-	Rect Rectangle
-}
-    Gray is an in-memory image whose At method returns color.Gray values.
+Examples of past PUBLIC issues include:
 
-func NewGray(r Rectangle) *Gray
-    NewGray returns a new Gray image with the given bounds.
+- [#44916](/issue/44916): archive/zip: can panic when calling Reader.Open
+- [#44913](/issue/44913): encoding/xml: infinite loop when using xml.NewTokenDecoder with a custom TokenReader
+- [#43786](/issue/43786): crypto/elliptic: incorrect operations on the P-224 curve
+- [#40928](/issue/40928): net/http/cgi,net/http/fcgi: Cross-Site Scripting (XSS) when Content-Type is not specified
+- [#40618](/issue/40618): encoding/binary: ReadUvarint and ReadVarint can read an unlimited number of bytes from invalid inputs
+- [#36834](/issue/36834): crypto/x509: certificate validation bypass on Windows 10
 
-func (p *Gray) At(x, y int) color.Color
+### PRIVATE
 
-func (p *Gray) Bounds() Rectangle
+Issues in the PRIVATE track are violations of committed security properties.
 
-func (p *Gray) ColorModel() color.Model
+PRIVATE track issues are fixed in the next scheduled [minor
+releases](/wiki/MinorReleases), and are kept private until then.
 
-func (p *Gray) GrayAt(x, y int) color.Gray
+Three to seven days before the release, a pre-announcement is sent to golang-announce, announcing the presence of one or more security fixes in the upcoming releases, and whether the issues affect the standard library, the toolchain, or both, as well as reserved CVE IDs for each of the fixes.
 
-func (p *Gray) Opaque() bool
-    Opaque scans the entire image and reports whether it is fully opaque.
+For issues that are present in a [major version release candidate](/s/release), we follow the same process, including fixes in the next scheduled release candidate.
 
-func (p *Gray) PixOffset(x, y int) int
-    PixOffset returns the index of the first element of Pix that corresponds to
-    the pixel at (x, y).
+Some examples of past PRIVATE issues include:
 
-func (p *Gray) RGBA64At(x, y int) color.RGBA64
+- [#53416](/issue/53416): path/filepath: stack exhaustion in Glob
+- [#53616](/issue/53616): go/parser: stack exhaustion in all Parse* functions
+- [#54658](/issue/54658): net/http: handle server errors after sending GOAWAY
+- [#56284](/issue/56284): syscall, os/exec: unsanitized NUL in environment variables
 
-func (p *Gray) Set(x, y int, c color.Color)
+### URGENT
 
-func (p *Gray) SetGray(x, y int, c color.Gray)
+URGENT track issues are a threat to the Go ecosystem’s integrity, or are being actively exploited in the wild leading to severe damage. There are no recent examples, but they would include remote code execution in net/http, or practical key recovery in crypto/tls.
 
-func (p *Gray) SetRGBA64(x, y int, c color.RGBA64)
+URGENT track issues are fixed in private, and trigger an immediate dedicated security release, possibly with no pre-announcement.
 
-func (p *Gray) SubImage(r Rectangle) Image
-    SubImage returns an image representing the portion of the image p visible
-    through r. The returned value shares pixels with the original image.
+## Flagging Existing Issues as Security-related
 
-type Gray16 struct {
-	// Pix holds the image's pixels, as gray values in big-endian format. The pixel at
-	// (x, y) starts at Pix[(y-Rect.Min.Y)*Stride + (x-Rect.Min.X)*2].
-	Pix []uint8
-	// Stride is the Pix stride (in bytes) between vertically adjacent pixels.
-	Stride int
-	// Rect is the image's bounds.
-	Rect Rectangle
-}
-    Gray16 is an in-memory image whose At method returns color.Gray16 values.
+If you believe that an [existing issue](/issue) is security-related, we ask that you send an email to [security@golang.org](mailto:security@golang.org). The email should include the issue ID and a short description of why it should be handled according to this security policy.
 
-func NewGray16(r Rectangle) *Gray16
-    NewGray16 returns a new Gray16 image with the given bounds.
+## Disclosure Process
 
-func (p *Gray16) At(x, y int) color.Color
+The Go project uses the following disclosure process:
 
-func (p *Gray16) Bounds() Rectangle
+1. 
 
-func (p *Gray16) ColorModel() color.Model
+Once the security report is received it is assigned a primary handler. This person coordinates the fix and release process.
 
-func (p *Gray16) Gray16At(x, y int) color.Gray16
+2. 
 
-func (p *Gray16) Opaque() bool
-    Opaque scans the entire image and reports whether it is fully opaque.
+The issue is confirmed and a list of affected software is determined.
 
-func (p *Gray16) PixOffset(x, y int) int
-    PixOffset returns the index of the first element of Pix that corresponds to
-    the pixel at (x, y).
+3. 
 
-func (p *Gray16) RGBA64At(x, y int) color.RGBA64
+Code is audited to find any potential similar problems.
 
-func (p *Gray16) Set(x, y int, c color.Color)
+4. 
 
-func (p *Gray16) SetGray16(x, y int, c color.Gray16)
+If it is determined, in consultation with the submitter, that a CVE number is required, the primary handler will obtain one.
 
-func (p *Gray16) SetRGBA64(x, y int, c color.RGBA64)
+5. 
 
-func (p *Gray16) SubImage(r Rectangle) Image
-    SubImage returns an image representing the portion of the image p visible
-    through r. The returned value shares pixels with the original image.
+Fixes are prepared for the two most recent major releases and the head/master revision. Fixes are prepared for the two most recent major releases and merged to head/master.
 
-type Image interface {
-	// ColorModel returns the Image's color model.
-	ColorModel() color.Model
-	// Bounds returns the domain for which At can return non-zero color.
-	// The bounds do not necessarily contain the point (0, 0).
-	Bounds() Rectangle
-	// At returns the color of the pixel at (x, y).
-	// At(Bounds().Min.X, Bounds().Min.Y) returns the upper-left pixel of the grid.
-	// At(Bounds().Max.X-1, Bounds().Max.Y-1) returns the lower-right one.
-	At(x, y int) color.Color
-}
-    Image is a finite rectangular grid of color.Color values taken from a color
-    model.
+6. 
 
-func Decode(r io.Reader) (Image, string, error)
-    Decode decodes an image that has been encoded in a registered format.
-    The string returned is the format name used during format registration.
-    Format registration is typically done by an init function in the codec-
-    specific package.
+On the date that the fixes are applied, announcements are sent to [golang-announce](https://groups.google.com/group/golang-announce), [golang-dev](https://groups.google.com/group/golang-dev), and [golang-nuts](https://groups.google.com/group/golang-nuts).
 
-type NRGBA struct {
-	// Pix holds the image's pixels, in R, G, B, A order. The pixel at
-	// (x, y) starts at Pix[(y-Rect.Min.Y)*Stride + (x-Rect.Min.X)*4].
-	Pix []uint8
-	// Stride is the Pix stride (in bytes) between vertically adjacent pixels.
-	Stride int
-	// Rect is the image's bounds.
-	Rect Rectangle
-}
-    NRGBA is an in-memory image whose At method returns color.NRGBA values.
+This process can take some time, especially when coordination is required with maintainers of other projects. Every effort will be made to handle the bug in as timely a manner as possible, however it’s important that we follow the process described above to ensure that disclosures are handled consistently.
 
-func NewNRGBA(r Rectangle) *NRGBA
-    NewNRGBA returns a new NRGBA image with the given bounds.
+For security issues that include the assignment of a CVE number, the issue is listed publicly under the [“Golang” product on the CVEDetails website](https://www.cvedetails.com/vulnerability-list/vendor_id-14185/Golang.html) as well as the [National Vulnerability Disclosure site](https://web.nvd.nist.gov/view/vuln/search).
 
-func (p *NRGBA) At(x, y int) color.Color
+## Receiving Security Updates
 
-func (p *NRGBA) Bounds() Rectangle
+The best way to receive security announcements is to subscribe to the [golang-announce](https://groups.google.com/forum/#!forum/golang-announce) mailing list. Any messages pertaining to a security issue will be prefixed with `[security]`.
 
-func (p *NRGBA) ColorModel() color.Model
+## Comments on This Policy
 
-func (p *NRGBA) NRGBAAt(x, y int) color.NRGBA
+If you have any suggestions to improve this policy, please [file an issue](/issue/new) for discussion.
 
-func (p *NRGBA) Opaque() bool
-    Opaque scans the entire image and reports whether it is fully opaque.
+[Why Go](/solutions/)[Use Cases](/solutions/use-cases)[Case Studies](/solutions/case-studies)[Get Started](/learn/)[Playground](/play)[Tour](/tour/)[Stack Overflow](https://stackoverflow.com/questions/tagged/go?tab=Newest)[Help](/help/)[Packages](https://pkg.go.dev)[Standard Library](/pkg/)[About Go Packages](https://pkg.go.dev/about)[About](/project)[Download](/dl/)[Blog](/blog/)[Issue Tracker](https://github.com/golang/go/issues)[Release Notes](/doc/devel/release)[Brand Guidelines](/brand)[Code of Conduct](/conduct)[Connect](https://www.twitter.com/golang)[Twitter](https://www.twitter.com/golang)[GitHub](https://github.com/golang)[Slack](https://invite.slack.golangbridge.org/)[r/golang](https://reddit.com/r/golang)[Meetup](https://www.meetup.com/pro/go)[Golang Weekly](https://golangweekly.com/) Opens in new window. 
 
-func (p *NRGBA) PixOffset(x, y int) int
-    PixOffset returns the index of the first element of Pix that corresponds to
-    the pixel at (x, y).
+- [Copyright](/copyright)
+- [Terms of Service](/tos)
+- [Privacy Policy](http://www.google.com/intl/en/policies/privacy/)
+- [Report an Issue](/s/website-issue)
+- 
 
-func (p *NRGBA) RGBA64At(x, y int) color.RGBA64
-
-func (p *NRGBA) Set(x, y int, c color.Color)
-
-func (p *NRGBA) SetNRGBA(x, y int, c color.NRGBA)
-
-func (p *NRGBA) SetRGBA64(x, y int, c color.RGBA64)
-
-func (p *NRGBA) SubImage(r Rectangle) Image
-    SubImage returns an image representing the portion of the image p visible
-    through r. The returned value shares pixels with the original image.
-
-type NRGBA64 struct {
-	// Pix holds the image's pixels, in R, G, B, A order and big-endian format. The pixel at
-	// (x, y) starts at Pix[(y-Rect.Min.Y)*Stride + (x-Rect.Min.X)*8].
-	Pix []uint8
-	// Stride is the Pix stride (in bytes) between vertically adjacent pixels.
-	Stride int
-	// Rect is the image's bounds.
-	Rect Rectangle
-}
-    NRGBA64 is an in-memory image whose At method returns color.NRGBA64 values.
-
-func NewNRGBA64(r Rectangle) *NRGBA64
-    NewNRGBA64 returns a new NRGBA64 image with the given bounds.
-
-func (p *NRGBA64) At(x, y int) color.Color
-
-func (p *NRGBA64) Bounds() Rectangle
-
-func (p *NRGBA64) ColorModel() color.Model
-
-func (p *NRGBA64) NRGBA64At(x, y int) color.NRGBA64
-
-func (p *NRGBA64) Opaque() bool
-    Opaque scans the entire image and reports whether it is fully opaque.
-
-func (p *NRGBA64) PixOffset(x, y int) int
-    PixOffset returns the index of the first element of Pix that corresponds to
-    the pixel at (x, y).
-
-func (p *NRGBA64) RGBA64At(x, y int) color.RGBA64
-
-func (p *NRGBA64) Set(x, y int, c color.Color)
-
-func (p *NRGBA64) SetNRGBA64(x, y int, c color.NRGBA64)
-
-func (p *NRGBA64) SetRGBA64(x, y int, c color.RGBA64)
-
-func (p *NRGBA64) SubImage(r Rectangle) Image
-    SubImage returns an image representing the portion of the image p visible
-    through r. The returned value shares pixels with the original image.
-
-type NYCbCrA struct {
-	YCbCr
-	A       []uint8
-	AStride int
-}
-    NYCbCrA is an in-memory image of non-alpha-premultiplied Y'CbCr-with-alpha
-    colors. A and AStride are analogous to the Y and YStride fields of the
-    embedded YCbCr.
-
-func NewNYCbCrA(r Rectangle, subsampleRatio YCbCrSubsampleRatio) *NYCbCrA
-    NewNYCbCrA returns a new NYCbCrA image with the given bounds and subsample
-    ratio.
-
-func (p *NYCbCrA) AOffset(x, y int) int
-    AOffset returns the index of the first element of A that corresponds to the
-    pixel at (x, y).
-
-func (p *NYCbCrA) At(x, y int) color.Color
-
-func (p *NYCbCrA) ColorModel() color.Model
-
-func (p *NYCbCrA) NYCbCrAAt(x, y int) color.NYCbCrA
-
-func (p *NYCbCrA) Opaque() bool
-    Opaque scans the entire image and reports whether it is fully opaque.
-
-func (p *NYCbCrA) RGBA64At(x, y int) color.RGBA64
-
-func (p *NYCbCrA) SubImage(r Rectangle) Image
-    SubImage returns an image representing the portion of the image p visible
-    through r. The returned value shares pixels with the original image.
-
-type Paletted struct {
-	// Pix holds the image's pixels, as palette indices. The pixel at
-	// (x, y) starts at Pix[(y-Rect.Min.Y)*Stride + (x-Rect.Min.X)*1].
-	Pix []uint8
-	// Stride is the Pix stride (in bytes) between vertically adjacent pixels.
-	Stride int
-	// Rect is the image's bounds.
-	Rect Rectangle
-	// Palette is the image's palette.
-	Palette color.Palette
-}
-    Paletted is an in-memory image of uint8 indices into a given palette.
-
-func NewPaletted(r Rectangle, p color.Palette) *Paletted
-    NewPaletted returns a new Paletted image with the given width, height and
-    palette.
-
-func (p *Paletted) At(x, y int) color.Color
-
-func (p *Paletted) Bounds() Rectangle
-
-func (p *Paletted) ColorIndexAt(x, y int) uint8
-
-func (p *Paletted) ColorModel() color.Model
-
-func (p *Paletted) Opaque() bool
-    Opaque scans the entire image and reports whether it is fully opaque.
-
-func (p *Paletted) PixOffset(x, y int) int
-    PixOffset returns the index of the first element of Pix that corresponds to
-    the pixel at (x, y).
-
-func (p *Paletted) RGBA64At(x, y int) color.RGBA64
-
-func (p *Paletted) Set(x, y int, c color.Color)
-
-func (p *Paletted) SetColorIndex(x, y int, index uint8)
-
-func (p *Paletted) SetRGBA64(x, y int, c color.RGBA64)
-
-func (p *Paletted) SubImage(r Rectangle) Image
-    SubImage returns an image representing the portion of the image p visible
-    through r. The returned value shares pixels with the original image.
-
-type PalettedImage interface {
-	// ColorIndexAt returns the palette index of the pixel at (x, y).
-	ColorIndexAt(x, y int) uint8
-	Image
-}
-    PalettedImage is an image whose colors may come from a limited palette.
-    If m is a PalettedImage and m.ColorModel() returns a color.Palette p, then
-    m.At(x, y) should be equivalent to p[m.ColorIndexAt(x, y)]. If m's color
-    model is not a color.Palette, then ColorIndexAt's behavior is undefined.
-
-type Point struct {
-	X, Y int
-}
-    A Point is an X, Y coordinate pair. The axes increase right and down.
-
-var ZP Point
-    ZP is the zero Point.
-
-    Deprecated: Use a literal image.Point instead.
-
-func Pt(X, Y int) Point
-    Pt is shorthand for Point{X, Y}.
-
-func (p Point) Add(q Point) Point
-    Add returns the vector p+q.
-
-func (p Point) Div(k int) Point
-    Div returns the vector p/k.
-
-func (p Point) Eq(q Point) bool
-    Eq reports whether p and q are equal.
-
-func (p Point) In(r Rectangle) bool
-    In reports whether p is in r.
-
-func (p Point) Mod(r Rectangle) Point
-    Mod returns the point q in r such that p.X-q.X is a multiple of r's width
-    and p.Y-q.Y is a multiple of r's height.
-
-func (p Point) Mul(k int) Point
-    Mul returns the vector p*k.
-
-func (p Point) String() string
-    String returns a string representation of p like "(3,4)".
-
-func (p Point) Sub(q Point) Point
-    Sub returns the vector p-q.
-
-type RGBA struct {
-	// Pix holds the image's pixels, in R, G, B, A order. The pixel at
-	// (x, y) starts at Pix[(y-Rect.Min.Y)*Stride + (x-Rect.Min.X)*4].
-	Pix []uint8
-	// Stride is the Pix stride (in bytes) between vertically adjacent pixels.
-	Stride int
-	// Rect is the image's bounds.
-	Rect Rectangle
-}
-    RGBA is an in-memory image whose At method returns color.RGBA values.
-
-func NewRGBA(r Rectangle) *RGBA
-    NewRGBA returns a new RGBA image with the given bounds.
-
-func (p *RGBA) At(x, y int) color.Color
-
-func (p *RGBA) Bounds() Rectangle
-
-func (p *RGBA) ColorModel() color.Model
-
-func (p *RGBA) Opaque() bool
-    Opaque scans the entire image and reports whether it is fully opaque.
-
-func (p *RGBA) PixOffset(x, y int) int
-    PixOffset returns the index of the first element of Pix that corresponds to
-    the pixel at (x, y).
-
-func (p *RGBA) RGBA64At(x, y int) color.RGBA64
-
-func (p *RGBA) RGBAAt(x, y int) color.RGBA
-
-func (p *RGBA) Set(x, y int, c color.Color)
-
-func (p *RGBA) SetRGBA(x, y int, c color.RGBA)
-
-func (p *RGBA) SetRGBA64(x, y int, c color.RGBA64)
-
-func (p *RGBA) SubImage(r Rectangle) Image
-    SubImage returns an image representing the portion of the image p visible
-    through r. The returned value shares pixels with the original image.
-
-type RGBA64 struct {
-	// Pix holds the image's pixels, in R, G, B, A order and big-endian format. The pixel at
-	// (x, y) starts at Pix[(y-Rect.Min.Y)*Stride + (x-Rect.Min.X)*8].
-	Pix []uint8
-	// Stride is the Pix stride (in bytes) between vertically adjacent pixels.
-	Stride int
-	// Rect is the image's bounds.
-	Rect Rectangle
-}
-    RGBA64 is an in-memory image whose At method returns color.RGBA64 values.
-
-func NewRGBA64(r Rectangle) *RGBA64
-    NewRGBA64 returns a new RGBA64 image with the given bounds.
-
-func (p *RGBA64) At(x, y int) color.Color
-
-func (p *RGBA64) Bounds() Rectangle
-
-func (p *RGBA64) ColorModel() color.Model
-
-func (p *RGBA64) Opaque() bool
-    Opaque scans the entire image and reports whether it is fully opaque.
-
-func (p *RGBA64) PixOffset(x, y int) int
-    PixOffset returns the index of the first element of Pix that corresponds to
-    the pixel at (x, y).
-
-func (p *RGBA64) RGBA64At(x, y int) color.RGBA64
-
-func (p *RGBA64) Set(x, y int, c color.Color)
-
-func (p *RGBA64) SetRGBA64(x, y int, c color.RGBA64)
-
-func (p *RGBA64) SubImage(r Rectangle) Image
-    SubImage returns an image representing the portion of the image p visible
-    through r. The returned value shares pixels with the original image.
-
-type RGBA64Image interface {
-	// RGBA64At returns the RGBA64 color of the pixel at (x, y). It is
-	// equivalent to calling At(x, y).RGBA() and converting the resulting
-	// 32-bit return values to a color.RGBA64, but it can avoid allocations
-	// from converting concrete color types to the color.Color interface type.
-	RGBA64At(x, y int) color.RGBA64
-	Image
-}
-    RGBA64Image is an Image whose pixels can be converted directly to a
-    color.RGBA64.
-
-type Rectangle struct {
-	Min, Max Point
-}
-    A Rectangle contains the points with Min.X <= X < Max.X, Min.Y <= Y < Max.Y.
-    It is well-formed if Min.X <= Max.X and likewise for Y. Points are always
-    well-formed. A rectangle's methods always return well-formed outputs for
-    well-formed inputs.
-
-    A Rectangle is also an Image whose bounds are the rectangle itself.
-    At returns color.Opaque for points in the rectangle and color.Transparent
-    otherwise.
-
-var ZR Rectangle
-    ZR is the zero Rectangle.
-
-    Deprecated: Use a literal image.Rectangle instead.
-
-func Rect(x0, y0, x1, y1 int) Rectangle
-    Rect is shorthand for Rectangle{Pt(x0, y0), Pt(x1, y1)}. The returned
-    rectangle has minimum and maximum coordinates swapped if necessary so that
-    it is well-formed.
-
-func (r Rectangle) Add(p Point) Rectangle
-    Add returns the rectangle r translated by p.
-
-func (r Rectangle) At(x, y int) color.Color
-    At implements the Image interface.
-
-func (r Rectangle) Bounds() Rectangle
-    Bounds implements the Image interface.
-
-func (r Rectangle) Canon() Rectangle
-    Canon returns the canonical version of r. The returned rectangle has minimum
-    and maximum coordinates swapped if necessary so that it is well-formed.
-
-func (r Rectangle) ColorModel() color.Model
-    ColorModel implements the Image interface.
-
-func (r Rectangle) Dx() int
-    Dx returns r's width.
-
-func (r Rectangle) Dy() int
-    Dy returns r's height.
-
-func (r Rectangle) Empty() bool
-    Empty reports whether the rectangle contains no points.
-
-func (r Rectangle) Eq(s Rectangle) bool
-    Eq reports whether r and s contain the same set of points. All empty
-    rectangles are considered equal.
-
-func (r Rectangle) In(s Rectangle) bool
-    In reports whether every point in r is in s.
-
-func (r Rectangle) Inset(n int) Rectangle
-    Inset returns the rectangle r inset by n, which may be negative. If either
-    of r's dimensions is less than 2*n then an empty rectangle near the center
-    of r will be returned.
-
-func (r Rectangle) Intersect(s Rectangle) Rectangle
-    Intersect returns the largest rectangle contained by both r and s. If the
-    two rectangles do not overlap then the zero rectangle will be returned.
-
-func (r Rectangle) Overlaps(s Rectangle) bool
-    Overlaps reports whether r and s have a non-empty intersection.
-
-func (r Rectangle) RGBA64At(x, y int) color.RGBA64
-    RGBA64At implements the RGBA64Image interface.
-
-func (r Rectangle) Size() Point
-    Size returns r's width and height.
-
-func (r Rectangle) String() string
-    String returns a string representation of r like "(3,4)-(6,5)".
-
-func (r Rectangle) Sub(p Point) Rectangle
-    Sub returns the rectangle r translated by -p.
-
-func (r Rectangle) Union(s Rectangle) Rectangle
-    Union returns the smallest rectangle that contains both r and s.
-
-type Uniform struct {
-	C color.Color
-}
-    Uniform is an infinite-sized Image of uniform color. It implements the
-    color.Color, color.Model, and Image interfaces.
-
-func NewUniform(c color.Color) *Uniform
-    NewUniform returns a new Uniform image of the given color.
-
-func (c *Uniform) At(x, y int) color.Color
-
-func (c *Uniform) Bounds() Rectangle
-
-func (c *Uniform) ColorModel() color.Model
-
-func (c *Uniform) Convert(color.Color) color.Color
-
-func (c *Uniform) Opaque() bool
-    Opaque scans the entire image and reports whether it is fully opaque.
-
-func (c *Uniform) RGBA() (r, g, b, a uint32)
-
-func (c *Uniform) RGBA64At(x, y int) color.RGBA64
-
-type YCbCr struct {
-	Y, Cb, Cr      []uint8
-	YStride        int
-	CStride        int
-	SubsampleRatio YCbCrSubsampleRatio
-	Rect           Rectangle
-}
-    YCbCr is an in-memory image of Y'CbCr colors. There is one Y sample per
-    pixel, but each Cb and Cr sample can span one or more pixels. YStride is
-    the Y slice index delta between vertically adjacent pixels. CStride is the
-    Cb and Cr slice index delta between vertically adjacent pixels that map to
-    separate chroma samples. It is not an absolute requirement, but YStride and
-    len(Y) are typically multiples of 8, and:
-
-        For 4:4:4, CStride == YStride/1 && len(Cb) == len(Cr) == len(Y)/1.
-        For 4:2:2, CStride == YStride/2 && len(Cb) == len(Cr) == len(Y)/2.
-        For 4:2:0, CStride == YStride/2 && len(Cb) == len(Cr) == len(Y)/4.
-        For 4:4:0, CStride == YStride/1 && len(Cb) == len(Cr) == len(Y)/2.
-        For 4:1:1, CStride == YStride/4 && len(Cb) == len(Cr) == len(Y)/4.
-        For 4:1:0, CStride == YStride/4 && len(Cb) == len(Cr) == len(Y)/8.
-
-func NewYCbCr(r Rectangle, subsampleRatio YCbCrSubsampleRatio) *YCbCr
-    NewYCbCr returns a new YCbCr image with the given bounds and subsample
-    ratio.
-
-func (p *YCbCr) At(x, y int) color.Color
-
-func (p *YCbCr) Bounds() Rectangle
-
-func (p *YCbCr) COffset(x, y int) int
-    COffset returns the index of the first element of Cb or Cr that corresponds
-    to the pixel at (x, y).
-
-func (p *YCbCr) ColorModel() color.Model
-
-func (p *YCbCr) Opaque() bool
-
-func (p *YCbCr) RGBA64At(x, y int) color.RGBA64
-
-func (p *YCbCr) SubImage(r Rectangle) Image
-    SubImage returns an image representing the portion of the image p visible
-    through r. The returned value shares pixels with the original image.
-
-func (p *YCbCr) YCbCrAt(x, y int) color.YCbCr
-
-func (p *YCbCr) YOffset(x, y int) int
-    YOffset returns the index of the first element of Y that corresponds to the
-    pixel at (x, y).
-
-type YCbCrSubsampleRatio int
-    YCbCrSubsampleRatio is the chroma subsample ratio used in a YCbCr image.
-
-const (
-	YCbCrSubsampleRatio444 YCbCrSubsampleRatio = iota
-	YCbCrSubsampleRatio422
-	YCbCrSubsampleRatio420
-	YCbCrSubsampleRatio440
-	YCbCrSubsampleRatio411
-	YCbCrSubsampleRatio410
-)
-func (s YCbCrSubsampleRatio) String() string
-
+https://google.comgo.dev uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic. [Learn more.](https://policies.google.com/technologies/cookies)Okay

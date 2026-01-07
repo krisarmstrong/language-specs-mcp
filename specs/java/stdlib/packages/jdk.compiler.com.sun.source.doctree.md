@@ -1,4 +1,31 @@
-Module[jdk.compiler](../../../../module-summary.html)
+com.sun.source.doctree (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../../index.html)
+- [Module](../../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../../preview-list.html)
+- [New](../../../../../new-list.html)
+- [Deprecated](../../../../../deprecated-list.html)
+- [Index](../../../../../index-files/index-1.html)
+- [Help](../../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - Related Packages
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- Related Packages | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../../search.html)Module[jdk.compiler](../../../../module-summary.html)
 
 # Package com.sun.source.doctree
 
@@ -7,3 +34,9 @@ package com.sun.source.doctreeProvides interfaces to represent documentation com
 - [Documentation Comment Specification for the Standard Doclet](../../../../../../specs/javadoc/doc-comment-spec.html)
 
 - All Classes and InterfacesInterfacesEnum ClassesClassDescription[AttributeTree](AttributeTree.html)A tree node for an attribute in an HTML element or tag.[AttributeTree.ValueKind](AttributeTree.ValueKind.html)The kind of an attribute value.[AuthorTree](AuthorTree.html)A tree node for an `@author` block tag.[BlockTagTree](BlockTagTree.html)A tree node used as the base class for the different types of block tags.[CommentTree](CommentTree.html)An embedded HTML comment.[DeprecatedTree](DeprecatedTree.html)A tree node for an `@deprecated` block tag.[DocCommentTree](DocCommentTree.html)The top-level representation of a documentation comment.[DocRootTree](DocRootTree.html)A tree node for an `@docRoot` inline tag.[DocTree](DocTree.html)Common interface for all nodes in a documentation syntax tree.[DocTree.Kind](DocTree.Kind.html)Enumerates all kinds of trees.[DocTreeVisitor](DocTreeVisitor.html)<R,P>A visitor of trees, in the style of the visitor design pattern.[DocTypeTree](DocTypeTree.html)A tree node for a `doctype` declaration.[EndElementTree](EndElementTree.html)A tree node for the end of an HTML element.[EntityTree](EntityTree.html)A tree node for an HTML entity.[ErroneousTree](ErroneousTree.html)A tree node to stand in for malformed text.[EscapeTree](EscapeTree.html)A tree node for a character represented by an escape sequence.[HiddenTree](HiddenTree.html)A tree node for an `@hidden` block tag.[IdentifierTree](IdentifierTree.html)An identifier in a documentation comment.[IndexTree](IndexTree.html)A tree node for an `@index` inline tag.[InheritDocTree](InheritDocTree.html)A tree node for an `@inheritDoc` inline tag.[InlineTagTree](InlineTagTree.html)A tree node used as the base class for the different types of inline tags.[LinkTree](LinkTree.html)A tree node for an `@link` or `@linkplain` inline tag.[LiteralTree](LiteralTree.html)A tree node for an `@literal` or `@code` inline tag.[ParamTree](ParamTree.html)A tree node for an `@param` block tag.[ProvidesTree](ProvidesTree.html)A tree node for a `@provides` block tag.[ReferenceTree](ReferenceTree.html)A tree node for a reference to a Java language element.[ReturnTree](ReturnTree.html)A tree node for an `@return` block tag.[SeeTree](SeeTree.html)A tree node for an `@see` block tag.[SerialDataTree](SerialDataTree.html)A tree node for an `@serialData` block tag.[SerialFieldTree](SerialFieldTree.html)A tree node for an `@serialField` block tag.[SerialTree](SerialTree.html)A tree node for an `@serial` block tag.[SinceTree](SinceTree.html)A tree node for an `@since` block tag.[SnippetTree](SnippetTree.html)A tree node for an `@snippet` inline tag.[SpecTree](SpecTree.html)A tree node for an `@spec` block tag.[StartElementTree](StartElementTree.html)A tree node for the start of an HTML element.[SummaryTree](SummaryTree.html)A tree node for an `@summary` inline tag.[SystemPropertyTree](SystemPropertyTree.html)A tree node for an `@systemProperty` inline tag.[TextTree](TextTree.html)A tree node for plain text.[ThrowsTree](ThrowsTree.html)A tree node for an `@exception` or `@throws` block tag.[UnknownBlockTagTree](UnknownBlockTagTree.html)A tree node for an unrecognized block tag.[UnknownInlineTagTree](UnknownInlineTagTree.html)A tree node for an unrecognized inline tag.[UsesTree](UsesTree.html)A tree node for an `@uses` block tag.[ValueTree](ValueTree.html)A tree node for an `@value` inline tag.[VersionTree](VersionTree.html)A tree node for an `@version` block tag.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

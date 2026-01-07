@@ -1,4 +1,31 @@
-Module[java.desktop](../../../module-summary.html)
+javax.swing.plaf (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../index.html)
+- [Module](../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../preview-list.html)
+- [New](../../../../new-list.html)
+- [Deprecated](../../../../deprecated-list.html)
+- [Index](../../../../index-files/index-1.html)
+- [Help](../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../search.html)Module[java.desktop](../../../module-summary.html)
 
 # Package javax.swing.plaf
 
@@ -10,3 +37,9 @@ Since:1.2
 
 - Related PackagesPackageDescription[javax.swing](../package-summary.html)Provides a set of "lightweight" (all-Java language) components that, to the maximum degree possible, work the same on all platforms.[javax.swing.plaf.basic](basic/package-summary.html)Provides user interface objects built according to the Basic look and feel.[javax.swing.plaf.metal](metal/package-summary.html)Provides user interface objects built according to the Java look and feel (once codenamed Metal), which is the default look and feel.[javax.swing.plaf.multi](multi/package-summary.html)Provides user interface objects that combine two or more look and feels.[javax.swing.plaf.nimbus](nimbus/package-summary.html)Provides user interface objects built according to the cross-platform Nimbus look and feel.[javax.swing.plaf.synth](synth/package-summary.html)Synth is a skinnable look and feel in which all painting is delegated.
 - All Classes and InterfacesInterfacesClassesClassDescription[ActionMapUIResource](ActionMapUIResource.html)A subclass of javax.swing.ActionMap that implements UIResource.[BorderUIResource](BorderUIResource.html)A Border wrapper class which implements UIResource.[BorderUIResource.BevelBorderUIResource](BorderUIResource.BevelBorderUIResource.html)A bevel border UI resource.[BorderUIResource.CompoundBorderUIResource](BorderUIResource.CompoundBorderUIResource.html)A compound border UI resource.[BorderUIResource.EmptyBorderUIResource](BorderUIResource.EmptyBorderUIResource.html)An empty border UI resource.[BorderUIResource.EtchedBorderUIResource](BorderUIResource.EtchedBorderUIResource.html)An etched border UI resource.[BorderUIResource.LineBorderUIResource](BorderUIResource.LineBorderUIResource.html)A line border UI resource.[BorderUIResource.MatteBorderUIResource](BorderUIResource.MatteBorderUIResource.html)A matte border UI resource.[BorderUIResource.TitledBorderUIResource](BorderUIResource.TitledBorderUIResource.html)A titled border UI resource.[ButtonUI](ButtonUI.html)Pluggable look and feel interface for JButton.[ColorChooserUI](ColorChooserUI.html)Pluggable look and feel interface for JColorChooser.[ColorUIResource](ColorUIResource.html)A subclass of Color that implements UIResource.[ComboBoxUI](ComboBoxUI.html)Pluggable look and feel interface for JComboBox.[ComponentInputMapUIResource](ComponentInputMapUIResource.html)A subclass of javax.swing.ComponentInputMap that implements UIResource.[ComponentUI](ComponentUI.html)The base class for all UI delegate objects in the Swing pluggable look and feel architecture.[DesktopIconUI](DesktopIconUI.html)Pluggable look and feel interface for JDesktopIcon.[DesktopPaneUI](DesktopPaneUI.html)Pluggable look and feel interface for JDesktopPane.[DimensionUIResource](DimensionUIResource.html)A subclass of `Dimension` that implements `UIResource`.[FileChooserUI](FileChooserUI.html)Pluggable look and feel interface for `JFileChooser`.[FontUIResource](FontUIResource.html)A subclass of java.awt.Font that implements UIResource.[IconUIResource](IconUIResource.html)An Icon wrapper class which implements UIResource.[InputMapUIResource](InputMapUIResource.html)A subclass of javax.swing.InputMap that implements UIResource.[InsetsUIResource](InsetsUIResource.html)A subclass of Insets that implements UIResource.[InternalFrameUI](InternalFrameUI.html)Pluggable look and feel interface for JInternalFrame.[LabelUI](LabelUI.html)Pluggable look and feel interface for JLabel.[LayerUI](LayerUI.html)<V extends [Component](../../../java/awt/Component.html)>The base class for all [JLayer](../JLayer.html)'s UI delegates.[ListUI](ListUI.html)The `JList` pluggable look and feel delegate.[MenuBarUI](MenuBarUI.html)Pluggable look and feel interface for JMenuBar.[MenuItemUI](MenuItemUI.html)Pluggable look and feel interface for JMenuItem.[OptionPaneUI](OptionPaneUI.html)Pluggable look and feel interface for JOptionPane.[PanelUI](PanelUI.html)Pluggable look and feel interface for Panel.[PopupMenuUI](PopupMenuUI.html)Pluggable look and feel interface for JPopupMenu.[ProgressBarUI](ProgressBarUI.html)Pluggable look and feel interface for JProgressBar.[RootPaneUI](RootPaneUI.html)Pluggable look and feel interface for JRootPane.[ScrollBarUI](ScrollBarUI.html)Pluggable look and feel interface for JScrollBar.[ScrollPaneUI](ScrollPaneUI.html)Pluggable look and feel interface for JScrollPane.[SeparatorUI](SeparatorUI.html)Pluggable look and feel interface for JSeparator.[SliderUI](SliderUI.html)Pluggable look and feel interface for JSlider.[SpinnerUI](SpinnerUI.html)Pluggable look and feel interface for JSpinner[SplitPaneUI](SplitPaneUI.html)Pluggable look and feel interface for JSplitPane.[TabbedPaneUI](TabbedPaneUI.html)Pluggable look and feel interface for JTabbedPane.[TableHeaderUI](TableHeaderUI.html)Pluggable look and feel interface for JTableHeader.[TableUI](TableUI.html)Pluggable look and feel interface for JTable.[TextUI](TextUI.html)Text editor user interface[ToolBarUI](ToolBarUI.html)Pluggable look and feel interface for JToolBar.[ToolTipUI](ToolTipUI.html)Pluggable look and feel interface for JToolTip.[TreeUI](TreeUI.html)Pluggable look and feel interface for JTree.[UIResource](UIResource.html)This interface is used to mark objects created by ComponentUI delegates.[ViewportUI](ViewportUI.html)Pluggable look and feel interface for JViewport.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

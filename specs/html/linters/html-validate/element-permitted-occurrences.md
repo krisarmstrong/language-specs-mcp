@@ -1,3 +1,14 @@
+HTML-validate - Validate permitted number of element occurrences (element-permitted-occurrences)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -44,3 +55,5 @@ Examples of correct code for this rule:
     <tfoot></tfoot>
 </table>
 ```
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/element-permitted-occurrences.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/element-permitted-occurrences.ts)

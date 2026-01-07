@@ -1,3 +1,5 @@
+API Reference — Elixir v1.19.4https://elixir-lang.org/docs.html[Elixir](https://elixir-lang.org/docs.html) v1.19.4 
+
 Search documentation of ElixirDefaultDefaultIn-browser searchSettings
 
 # API Reference Elixir v#1.19.4

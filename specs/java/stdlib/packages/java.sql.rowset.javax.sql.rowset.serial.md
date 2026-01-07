@@ -1,4 +1,31 @@
-Module[java.sql.rowset](../../../../module-summary.html)
+javax.sql.rowset.serial (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../../index.html)
+- [Module](../../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../../preview-list.html)
+- [New](../../../../../new-list.html)
+- [Deprecated](../../../../../deprecated-list.html)
+- [Index](../../../../../index-files/index-1.html)
+- [Help](../../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../../search.html)Module[java.sql.rowset](../../../../module-summary.html)
 
 # Package javax.sql.rowset.serial
 
@@ -123,3 +150,9 @@ package javax.sql.rowset.serialProvides utility classes to allow serializable ma
 
 - Related PackagesPackageDescription[javax.sql.rowset](../package-summary.html)Standard interfaces and base classes for JDBC `RowSet` implementations.[javax.sql.rowset.spi](../spi/package-summary.html)The standard classes and interfaces that a third party vendor has to use in its implementation of a synchronization provider.
 - All Classes and InterfacesClassesException ClassesClassDescription[SerialArray](SerialArray.html)A serialized version of an `Array` object, which is the mapping in the Java programming language of an SQL `ARRAY` value.[SerialBlob](SerialBlob.html)A serialized mapping in the Java programming language of an SQL `BLOB` value.[SerialClob](SerialClob.html)A serialized mapping in the Java programming language of an SQL `CLOB` value.[SerialDatalink](SerialDatalink.html)A serialized mapping in the Java programming language of an SQL `DATALINK` value.[SerialException](SerialException.html)Indicates and an error with the serialization or de-serialization of SQL types such as `BLOB, CLOB, STRUCT or ARRAY` in addition to SQL types such as `DATALINK and JAVAOBJECT`[SerialJavaObject](SerialJavaObject.html)A serializable mapping in the Java programming language of an SQL `JAVA_OBJECT` value.[SerialRef](SerialRef.html)A serialized mapping of a `Ref` object, which is the mapping in the Java programming language of an SQL `REF` value.[SerialStruct](SerialStruct.html)A serialized mapping in the Java programming language of an SQL structured type.[SQLInputImpl](SQLInputImpl.html)An input stream used for custom mapping user-defined types (UDTs).[SQLOutputImpl](SQLOutputImpl.html)The output stream for writing the attributes of a custom-mapped user-defined type (UDT) back to the database.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

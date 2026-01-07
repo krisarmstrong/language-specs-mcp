@@ -1,508 +1,160 @@
-package json // import "encoding/json"
-
-Package json implements encoding and decoding of JSON as defined in RFC 7159.
-The mapping between JSON and Go values is described in the documentation for the
-Marshal and Unmarshal functions.
-
-See "JSON and Go" for an introduction to this package:
-https://golang.org/doc/articles/json_and_go.html
-
-# Security Considerations
-
-The JSON standard (RFC 7159) is lax in its definition of a number of parser
-behaviors. As such, many JSON parsers behave differently in various scenarios.
-These differences in parsers mean that systems that use multiple independent
-JSON parser implementations may parse the same JSON object in differing ways.
-
-Systems that rely on a JSON object being parsed consistently for security
-purposes should be careful to understand the behaviors of this parser, as well
-as how these behaviors may cause interoperability issues with other parser
-implementations.
-
-Due to the Go Backwards Compatibility promise (https://go.dev/doc/go1compat)
-there are a number of behaviors this package exhibits that may cause
-interopability issues, but cannot be changed. In particular the following
-parsing behaviors may cause issues:
-
-  - If a JSON object contains duplicate keys, keys are processed in the order
-    they are observed, meaning later values will replace or be merged into prior
-    values, depending on the field type (in particular maps and structs will
-    have values merged, while other types have values replaced).
-  - When parsing a JSON object into a Go struct, keys are considered in a
-    case-insensitive fashion.
-  - When parsing a JSON object into a Go struct, unknown keys in the JSON object
-    are ignored (unless a Decoder is used and Decoder.DisallowUnknownFields has
-    been called).
-  - Invalid UTF-8 bytes in JSON strings are replaced by the Unicode replacement
-    character.
-  - Large JSON number integers will lose precision when unmarshaled into
-    floating-point types.
-
-FUNCTIONS
-
-func Compact(dst *bytes.Buffer, src []byte) error
-    Compact appends to dst the JSON-encoded src with insignificant space
-    characters elided.
-
-func HTMLEscape(dst *bytes.Buffer, src []byte)
-    HTMLEscape appends to dst the JSON-encoded src with <, >, &, U+2028 and
-    U+2029 characters inside string literals changed to \u003c, \u003e, \u0026,
-    \u2028, \u2029 so that the JSON will be safe to embed inside HTML <script>
-    tags. For historical reasons, web browsers don't honor standard HTML
-    escaping within <script> tags, so an alternative JSON encoding must be used.
-
-func Indent(dst *bytes.Buffer, src []byte, prefix, indent string) error
-    Indent appends to dst an indented form of the JSON-encoded src. Each element
-    in a JSON object or array begins on a new, indented line beginning with
-    prefix followed by one or more copies of indent according to the indentation
-    nesting. The data appended to dst does not begin with the prefix nor any
-    indentation, to make it easier to embed inside other formatted JSON data.
-    Although leading space characters (space, tab, carriage return, newline) at
-    the beginning of src are dropped, trailing space characters at the end of
-    src are preserved and copied to dst. For example, if src has no trailing
-    spaces, neither will dst; if src ends in a trailing newline, so will dst.
-
-func Marshal(v any) ([]byte, error)
-    Marshal returns the JSON encoding of v.
-
-    Marshal traverses the value v recursively. If an encountered
-    value implements Marshaler and is not a nil pointer, Marshal calls
-    [Marshaler.MarshalJSON] to produce JSON. If no [Marshaler.MarshalJSON]
-    method is present but the value implements encoding.TextMarshaler instead,
-    Marshal calls encoding.TextMarshaler.MarshalText and encodes the
-    result as a JSON string. The nil pointer exception is not strictly
-    necessary but mimics a similar, necessary exception in the behavior of
-    [Unmarshaler.UnmarshalJSON].
-
-    Otherwise, Marshal uses the following type-dependent default encodings:
-
-    Boolean values encode as JSON booleans.
-
-    Floating point, integer, and Number values encode as JSON numbers. NaN and
-    +/-Inf values will return an UnsupportedValueError.
-
-    String values encode as JSON strings coerced to valid UTF-8, replacing
-    invalid bytes with the Unicode replacement rune. So that the JSON will
-    be safe to embed inside HTML <script> tags, the string is encoded using
-    HTMLEscape, which replaces "<", ">", "&", U+2028, and U+2029 are escaped to
-    "\u003c","\u003e", "\u0026", "\u2028", and "\u2029". This replacement can be
-    disabled when using an Encoder, by calling Encoder.SetEscapeHTML(false).
-
-    Array and slice values encode as JSON arrays, except that []byte encodes as
-    a base64-encoded string, and a nil slice encodes as the null JSON value.
-
-    Struct values encode as JSON objects. Each exported struct field becomes
-    a member of the object, using the field name as the object key, unless the
-    field is omitted for one of the reasons given below.
-
-    The encoding of each struct field can be customized by the format string
-    stored under the "json" key in the struct field's tag. The format string
-    gives the name of the field, possibly followed by a comma-separated list
-    of options. The name may be empty in order to specify options without
-    overriding the default field name.
+Go 1 and the Future of Go Programs - The Go Programming Language/[Skip to Main Content](#main-content)
 
-    The "omitempty" option specifies that the field should be omitted from
-    the encoding if the field has an empty value, defined as false, 0,
-    a nil pointer, a nil interface value, and any array, slice, map, or string
-    of length zero.
+- [Why Go arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
 
-    As a special case, if the field tag is "-", the field is always omitted.
-    Note that a field with name "-" can still be generated using the tag "-,".
+  - [Case Studies](/solutions/case-studies)
 
-    Examples of struct field tags and their meanings:
+Common problems companies solve with Go
 
-        // Field appears in JSON as key "myName".
-        Field int `json:"myName"`
+  - [Use Cases](/solutions/use-cases)
 
-        // Field appears in JSON as key "myName" and
-        // the field is omitted from the object if its value is empty,
-        // as defined above.
-        Field int `json:"myName,omitempty"`
+Stories about how and why companies use Go
 
-        // Field appears in JSON as key "Field" (the default), but
-        // the field is skipped if empty.
-        // Note the leading comma.
-        Field int `json:",omitempty"`
-
-        // Field is ignored by this package.
-        Field int `json:"-"`
-
-        // Field appears in JSON as key "-".
-        Field int `json:"-,"`
-
-    The "omitzero" option specifies that the field should be omitted from the
-    encoding if the field has a zero value, according to rules:
-
-    1) If the field type has an "IsZero() bool" method, that will be used to
-    determine whether the value is zero.
-
-    2) Otherwise, the value is zero if it is the zero value for its type.
-
-    If both "omitempty" and "omitzero" are specified, the field will be omitted
-    if the value is either empty or zero (or both).
-
-    The "string" option signals that a field is stored as JSON inside a
-    JSON-encoded string. It applies only to fields of string, floating point,
-    integer, or boolean types. This extra level of encoding is sometimes used
-    when communicating with JavaScript programs:
-
-        Int64String int64 `json:",string"`
-
-    The key name will be used if it's a non-empty string consisting of only
-    Unicode letters, digits, and ASCII punctuation except quotation marks,
-    backslash, and comma.
-
-    Embedded struct fields are usually marshaled as if their inner exported
-    fields were fields in the outer struct, subject to the usual Go visibility
-    rules amended as described in the next paragraph. An anonymous struct field
-    with a name given in its JSON tag is treated as having that name, rather
-    than being anonymous. An anonymous struct field of interface type is treated
-    the same as having that type as its name, rather than being anonymous.
-
-    The Go visibility rules for struct fields are amended for JSON when deciding
-    which field to marshal or unmarshal. If there are multiple fields at the
-    same level, and that level is the least nested (and would therefore be the
-    nesting level selected by the usual Go rules), the following extra rules
-    apply:
-
-    1) Of those fields, if any are JSON-tagged, only tagged fields are
-    considered, even if there are multiple untagged fields that would otherwise
-    conflict.
-
-    2) If there is exactly one field (tagged or not according to the first
-    rule), that is selected.
-
-    3) Otherwise there are multiple fields, and all are ignored; no error
-    occurs.
-
-    Handling of anonymous struct fields is new in Go 1.1. Prior to Go 1.1,
-    anonymous struct fields were ignored. To force ignoring of an anonymous
-    struct field in both current and earlier versions, give the field a JSON tag
-    of "-".
-
-    Map values encode as JSON objects. The map's key type must either be a
-    string, an integer type, or implement encoding.TextMarshaler. The map keys
-    are sorted and used as JSON object keys by applying the following rules,
-    subject to the UTF-8 coercion described for string values above:
-      - keys of any string type are used directly
-      - keys that implement encoding.TextMarshaler are marshaled
-      - integer keys are converted to strings
-
-    Pointer values encode as the value pointed to. A nil pointer encodes as the
-    null JSON value.
-
-    Interface values encode as the value contained in the interface. A nil
-    interface value encodes as the null JSON value.
-
-    Channel, complex, and function values cannot be encoded in JSON. Attempting
-    to encode such a value causes Marshal to return an UnsupportedTypeError.
-
-    JSON cannot represent cyclic data structures and Marshal does not handle
-    them. Passing cyclic structures to Marshal will result in an error.
-
-func MarshalIndent(v any, prefix, indent string) ([]byte, error)
-    MarshalIndent is like Marshal but applies Indent to format the output.
-    Each JSON element in the output will begin on a new line beginning with
-    prefix followed by one or more copies of indent according to the indentation
-    nesting.
-
-func Unmarshal(data []byte, v any) error
-    Unmarshal parses the JSON-encoded data and stores the result in the
-    value pointed to by v. If v is nil or not a pointer, Unmarshal returns an
-    InvalidUnmarshalError.
-
-    Unmarshal uses the inverse of the encodings that Marshal uses, allocating
-    maps, slices, and pointers as necessary, with the following additional
-    rules:
-
-    To unmarshal JSON into a pointer, Unmarshal first handles the case of the
-    JSON being the JSON literal null. In that case, Unmarshal sets the pointer
-    to nil. Otherwise, Unmarshal unmarshals the JSON into the value pointed at
-    by the pointer. If the pointer is nil, Unmarshal allocates a new value for
-    it to point to.
-
-    To unmarshal JSON into a value implementing Unmarshaler, Unmarshal
-    calls that value's [Unmarshaler.UnmarshalJSON] method, including
-    when the input is a JSON null. Otherwise, if the value implements
-    encoding.TextUnmarshaler and the input is a JSON quoted string, Unmarshal
-    calls encoding.TextUnmarshaler.UnmarshalText with the unquoted form of the
-    string.
-
-    To unmarshal JSON into a struct, Unmarshal matches incoming object keys
-    to the keys used by Marshal (either the struct field name or its tag),
-    ignoring case. If multiple struct fields match an object key, an exact case
-    match is preferred over a case-insensitive one.
-
-    Incoming object members are processed in the order observed. If an object
-    includes duplicate keys, later duplicates will replace or be merged into
-    prior values.
-
-    To unmarshal JSON into an interface value, Unmarshal stores one of these in
-    the interface value:
-
-      - bool, for JSON booleans
-      - float64, for JSON numbers
-      - string, for JSON strings
-      - []any, for JSON arrays
-      - map[string]any, for JSON objects
-      - nil for JSON null
-
-    To unmarshal a JSON array into a slice, Unmarshal resets the slice length
-    to zero and then appends each element to the slice. As a special case,
-    to unmarshal an empty JSON array into a slice, Unmarshal replaces the slice
-    with a new empty slice.
-
-    To unmarshal a JSON array into a Go array, Unmarshal decodes JSON array
-    elements into corresponding Go array elements. If the Go array is smaller
-    than the JSON array, the additional JSON array elements are discarded.
-    If the JSON array is smaller than the Go array, the additional Go array
-    elements are set to zero values.
-
-    To unmarshal a JSON object into a map, Unmarshal first establishes
-    a map to use. If the map is nil, Unmarshal allocates a new map.
-    Otherwise Unmarshal reuses the existing map, keeping existing entries.
-    Unmarshal then stores key-value pairs from the JSON object into the map.
-    The map's key type must either be any string type, an integer, or implement
-    encoding.TextUnmarshaler.
-
-    If the JSON-encoded data contain a syntax error, Unmarshal returns a
-    SyntaxError.
-
-    If a JSON value is not appropriate for a given target type, or if a JSON
-    number overflows the target type, Unmarshal skips that field and completes
-    the unmarshaling as best it can. If no more serious errors are encountered,
-    Unmarshal returns an UnmarshalTypeError describing the earliest such error.
-    In any case, it's not guaranteed that all the remaining fields following the
-    problematic one will be unmarshaled into the target object.
-
-    The JSON null value unmarshals into an interface, map, pointer, or slice
-    by setting that Go value to nil. Because null is often used in JSON to mean
-    “not present,” unmarshaling a JSON null into any other Go type has no effect
-    on the value and produces no error.
-
-    When unmarshaling quoted strings, invalid UTF-8 or invalid UTF-16 surrogate
-    pairs are not treated as an error. Instead, they are replaced by the Unicode
-    replacement character U+FFFD.
-
-func Valid(data []byte) bool
-    Valid reports whether data is a valid JSON encoding.
-
-
-TYPES
-
-type Decoder struct {
-	// Has unexported fields.
-}
-    A Decoder reads and decodes JSON values from an input stream.
-
-func NewDecoder(r io.Reader) *Decoder
-    NewDecoder returns a new decoder that reads from r.
-
-    The decoder introduces its own buffering and may read data from r beyond the
-    JSON values requested.
-
-func (dec *Decoder) Buffered() io.Reader
-    Buffered returns a reader of the data remaining in the Decoder's buffer.
-    The reader is valid until the next call to Decoder.Decode.
-
-func (dec *Decoder) Decode(v any) error
-    Decode reads the next JSON-encoded value from its input and stores it in the
-    value pointed to by v.
-
-    See the documentation for Unmarshal for details about the conversion of JSON
-    into a Go value.
-
-func (dec *Decoder) DisallowUnknownFields()
-    DisallowUnknownFields causes the Decoder to return an error when the
-    destination is a struct and the input contains object keys which do not
-    match any non-ignored, exported fields in the destination.
-
-func (dec *Decoder) InputOffset() int64
-    InputOffset returns the input stream byte offset of the current decoder
-    position. The offset gives the location of the end of the most recently
-    returned token and the beginning of the next token.
-
-func (dec *Decoder) More() bool
-    More reports whether there is another element in the current array or object
-    being parsed.
-
-func (dec *Decoder) Token() (Token, error)
-    Token returns the next JSON token in the input stream. At the end of the
-    input stream, Token returns nil, io.EOF.
-
-    Token guarantees that the delimiters [ ] { } it returns are properly nested
-    and matched: if Token encounters an unexpected delimiter in the input,
-    it will return an error.
-
-    The input stream consists of basic JSON values—bool, string, number,
-    and null—along with delimiters [ ] { } of type Delim to mark the start and
-    end of arrays and objects. Commas and colons are elided.
-
-func (dec *Decoder) UseNumber()
-    UseNumber causes the Decoder to unmarshal a number into an interface value
-    as a Number instead of as a float64.
-
-type Delim rune
-    A Delim is a JSON array or object delimiter, one of [ ] { or }.
-
-func (d Delim) String() string
-
-type Encoder struct {
-	// Has unexported fields.
-}
-    An Encoder writes JSON values to an output stream.
-
-func NewEncoder(w io.Writer) *Encoder
-    NewEncoder returns a new encoder that writes to w.
-
-func (enc *Encoder) Encode(v any) error
-    Encode writes the JSON encoding of v to the stream, with insignificant space
-    characters elided, followed by a newline character.
-
-    See the documentation for Marshal for details about the conversion of Go
-    values to JSON.
-
-func (enc *Encoder) SetEscapeHTML(on bool)
-    SetEscapeHTML specifies whether problematic HTML characters should be
-    escaped inside JSON quoted strings. The default behavior is to escape &, <,
-    and > to \u0026, \u003c, and \u003e to avoid certain safety problems that
-    can arise when embedding JSON in HTML.
-
-    In non-HTML settings where the escaping interferes with the readability of
-    the output, SetEscapeHTML(false) disables this behavior.
-
-func (enc *Encoder) SetIndent(prefix, indent string)
-    SetIndent instructs the encoder to format each subsequent encoded value as
-    if indented by the package-level function Indent(dst, src, prefix, indent).
-    Calling SetIndent("", "") disables indentation.
-
-type InvalidUTF8Error struct {
-	S string // the whole string value that caused the error
-}
-    Before Go 1.2, an InvalidUTF8Error was returned by Marshal when attempting
-    to encode a string value with invalid UTF-8 sequences. As of Go 1.2,
-    Marshal instead coerces the string to valid UTF-8 by replacing invalid bytes
-    with the Unicode replacement rune U+FFFD.
-
-    Deprecated: No longer used; kept for compatibility.
-
-func (e *InvalidUTF8Error) Error() string
-
-type InvalidUnmarshalError struct {
-	Type reflect.Type
-}
-    An InvalidUnmarshalError describes an invalid argument passed to Unmarshal.
-    (The argument to Unmarshal must be a non-nil pointer.)
-
-func (e *InvalidUnmarshalError) Error() string
-
-type Marshaler interface {
-	MarshalJSON() ([]byte, error)
-}
-    Marshaler is the interface implemented by types that can marshal themselves
-    into valid JSON.
-
-type MarshalerError struct {
-	Type reflect.Type
-	Err  error
-	// Has unexported fields.
-}
-    A MarshalerError represents an error from calling a [Marshaler.MarshalJSON]
-    or encoding.TextMarshaler.MarshalText method.
-
-func (e *MarshalerError) Error() string
-
-func (e *MarshalerError) Unwrap() error
-    Unwrap returns the underlying error.
-
-type Number string
-    A Number represents a JSON number literal.
-
-func (n Number) Float64() (float64, error)
-    Float64 returns the number as a float64.
-
-func (n Number) Int64() (int64, error)
-    Int64 returns the number as an int64.
-
-func (n Number) String() string
-    String returns the literal text of the number.
-
-type RawMessage []byte
-    RawMessage is a raw encoded JSON value. It implements Marshaler and
-    Unmarshaler and can be used to delay JSON decoding or precompute a JSON
-    encoding.
-
-func (m RawMessage) MarshalJSON() ([]byte, error)
-    MarshalJSON returns m as the JSON encoding of m.
-
-func (m *RawMessage) UnmarshalJSON(data []byte) error
-    UnmarshalJSON sets *m to a copy of data.
-
-type SyntaxError struct {
-	Offset int64 // error occurred after reading Offset bytes
-	// Has unexported fields.
-}
-    A SyntaxError is a description of a JSON syntax error. Unmarshal will return
-    a SyntaxError if the JSON can't be parsed.
-
-func (e *SyntaxError) Error() string
-
-type Token any
-    A Token holds a value of one of these types:
-
-      - Delim, for the four JSON delimiters [ ] { }
-      - bool, for JSON booleans
-      - float64, for JSON numbers
-      - Number, for JSON numbers
-      - string, for JSON string literals
-      - nil, for JSON null
-
-type UnmarshalFieldError struct {
-	Key   string
-	Type  reflect.Type
-	Field reflect.StructField
-}
-    An UnmarshalFieldError describes a JSON object key that led to an unexported
-    (and therefore unwritable) struct field.
-
-    Deprecated: No longer used; kept for compatibility.
-
-func (e *UnmarshalFieldError) Error() string
-
-type UnmarshalTypeError struct {
-	Value  string       // description of JSON value - "bool", "array", "number -5"
-	Type   reflect.Type // type of Go value it could not be assigned to
-	Offset int64        // error occurred after reading Offset bytes
-	Struct string       // name of the struct type containing the field
-	Field  string       // the full path from root node to the field, include embedded struct
-}
-    An UnmarshalTypeError describes a JSON value that was not appropriate for a
-    value of a specific Go type.
-
-func (e *UnmarshalTypeError) Error() string
-
-type Unmarshaler interface {
-	UnmarshalJSON([]byte) error
-}
-    Unmarshaler is the interface implemented by types that can unmarshal a JSON
-    description of themselves. The input can be assumed to be a valid encoding
-    of a JSON value. UnmarshalJSON must copy the JSON data if it wishes to
-    retain the data after returning.
-
-type UnsupportedTypeError struct {
-	Type reflect.Type
-}
-    An UnsupportedTypeError is returned by Marshal when attempting to encode an
-    unsupported value type.
-
-func (e *UnsupportedTypeError) Error() string
-
-type UnsupportedValueError struct {
-	Value reflect.Value
-	Str   string
-}
-    An UnsupportedValueError is returned by Marshal when attempting to encode an
-    unsupported value.
-
-func (e *UnsupportedValueError) Error() string
+  - [Security](/security/)
 
+How Go can help keep you secure by default
+
+- [Learn](/learn/) Press Enter to activate/deactivate dropdown 
+- [Docs arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
+
+  - [Go Spec](/ref/spec)
+
+The official Go language specification
+
+  - [Go User Manual](/doc)
+
+A complete introduction to building software with Go
+
+  - [Standard library](https://pkg.go.dev/std)
+
+Reference documentation for Go's standard library
+
+  - [Release Notes](/doc/devel/release)
+
+Learn what's new in each Go release
+
+  - [Effective Go](/doc/effective_go)
+
+Tips for writing clear, performant, and idiomatic Go code
+
+- [Packages](https://pkg.go.dev) Press Enter to activate/deactivate dropdown 
+- [Community arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
+
+  - [Recorded Talks](/talks/)
+
+Videos from prior events
+
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+
+Meet other local Go developers
+
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+
+Learn and network with Go developers from around the world
+
+  - [Go blog](/blog)
+
+The Go project's official blog.
+
+  - [Go project](/help)
+
+Get help and stay informed from Go
+
+  -  Get connected 
+
+https://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
+
+/
+
+- [Why Go navigate_next](#)[navigate_beforeWhy Go](#)
+
+  - [Case Studies](/solutions/case-studies)
+  - [Use Cases](/solutions/use-cases)
+  - [Security](/security/)
+
+- [Learn](/learn/)
+- [Docs navigate_next](#)[navigate_beforeDocs](#)
+
+  - [Go Spec](/ref/spec)
+  - [Go User Manual](/doc)
+  - [Standard library](https://pkg.go.dev/std)
+  - [Release Notes](/doc/devel/release)
+  - [Effective Go](/doc/effective_go)
+
+- [Packages](https://pkg.go.dev)
+- [Community navigate_next](#)[navigate_beforeCommunity](#)
+
+  - [Recorded Talks](/talks/)
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+  - [Go blog](/blog)
+  - [Go project](/help)
+  - Get connectedhttps://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
+
+1. [Documentation](/doc/)
+2. [Go 1 and the Future of Go Programs](/doc/go1compat)
+
+# Go 1 and the Future of Go Programs
+
+## Introduction
+
+ The release of Go version 1, Go 1 for short, is a major milestone in the development of the language. Go 1 is a stable platform for the growth of programs and projects written in Go. 
+
+ Go 1 defines two things: first, the specification of the language; and second, the specification of a set of core APIs, the "standard packages" of the Go library. The Go 1 release includes their implementation in the form of two compiler suites (gc and gccgo), and the core libraries themselves. 
+
+ It is intended that programs written to the Go 1 specification will continue to compile and run correctly, unchanged, over the lifetime of that specification. At some indefinite point, a Go 2 specification may arise, but until that time, Go programs that work today should continue to work even as future "point" releases of Go 1 arise (Go 1.1, Go 1.2, etc.). 
+
+ Compatibility is at the source level. Binary compatibility for compiled packages is not guaranteed between releases. After a point release, Go source will need to be recompiled to link against the new release. 
+
+ The APIs may grow, acquiring new packages and features, but not in a way that breaks existing Go 1 code. 
+
+## Expectations
+
+ Although we expect that the vast majority of programs will maintain this compatibility over time, it is impossible to guarantee that no future change will break any program. This document is an attempt to set expectations for the compatibility of Go 1 software in the future. There are a number of ways in which a program that compiles and runs today may fail to do so after a future point release. They are all unlikely but worth recording. 
+
+-  Security. A security issue in the specification or implementation may come to light whose resolution requires breaking compatibility. We reserve the right to address such security issues. 
+-  Unspecified behavior. The Go specification tries to be explicit about most properties of the language, but there are some aspects that are undefined. Programs that depend on such unspecified behavior may break in future releases. 
+-  Specification errors. If it becomes necessary to address an inconsistency or incompleteness in the specification, resolving the issue could affect the meaning or legality of existing programs. We reserve the right to address such issues, including updating the implementations. Except for security issues, no incompatible changes to the specification would be made. 
+-  Bugs. If a compiler or library has a bug that violates the specification, a program that depends on the buggy behavior may break if the bug is fixed. We reserve the right to fix such bugs. 
+-  Struct literals. For the addition of features in later point releases, it may be necessary to add fields to exported structs in the API. Code that uses unkeyed struct literals (such as pkg.T{3, "x"}) to create values of these types would fail to compile after such a change. However, code that uses keyed literals (pkg.T{A: 3, B: "x"}) will continue to compile after such a change. We will update such data structures in a way that allows keyed struct literals to remain compatible, although unkeyed literals may fail to compile. (There are also more intricate cases involving nested data structures or interfaces, but they have the same resolution.) We therefore recommend that composite literals whose type is defined in a separate package should use the keyed notation. 
+-  Methods. As with struct fields, it may be necessary to add methods to non-interface types. Under some circumstances, such as when the type is embedded in a struct along with another type, the addition of the new method may break the struct by creating a conflict with an existing method of the other embedded type. We cannot protect against this rare case and do not guarantee compatibility should it arise. 
+-  Dot imports. If a program imports a standard package using `import . "path"`, additional names defined in the imported package in future releases may conflict with other names defined in the program. We do not recommend the use of `import .` outside of tests, and using it may cause a program to fail to compile in future releases. 
+-  Use of package `unsafe`. Packages that import [unsafe](/pkg/unsafe/) may depend on internal properties of the Go implementation. We reserve the right to make changes to the implementation that may break such programs. 
+
+ Of course, for all of these possibilities, should they arise, we would endeavor whenever feasible to update the specification, compilers, or libraries without affecting existing code. 
+
+ These same considerations apply to successive point releases. For instance, code that runs under Go 1.2 should be compatible with Go 1.2.1, Go 1.3, Go 1.4, etc., although not necessarily with Go 1.1 since it may use features added only in Go 1.2 
+
+ Features added between releases, available in the source repository but not part of the numbered binary releases, are under active development. No promise of compatibility is made for software using such features until they have been released. 
+
+ Finally, although it is not a correctness issue, it is possible that the performance of a program may be affected by changes in the implementation of the compilers or libraries upon which it depends. No guarantee can be made about the performance of a given program between releases. 
+
+ Although these expectations apply to Go 1 itself, we hope similar considerations would be made for the development of externally developed software based on Go 1. 
+
+## Sub-repositories
+
+ Code in sub-repositories of the main go tree, such as [golang.org/x/net](https://golang.org/x/net), may be developed under looser compatibility requirements. However, the sub-repositories will be tagged as appropriate to identify versions that are compatible with the Go 1 point releases. 
+
+## Operating systems
+
+ It is impossible to guarantee long-term compatibility with operating system interfaces, which are changed by outside parties. The [syscall](/pkg/syscall/) package is therefore outside the purview of the guarantees made here. As of Go version 1.4, the `syscall` package is frozen. Any evolution of the system call interface must be supported elsewhere, such as in the [go.sys](https://golang.org/x/sys) subrepository. For details and background, see [this document](/s/go1.4-syscall). 
+
+## Tools
+
+ Finally, the Go toolchain (compilers, linkers, build tools, and so on) is under active development and may change behavior. This means, for instance, that scripts that depend on the location and properties of the tools may be broken by a point release. 
+
+ These caveats aside, we believe that Go 1 will be a firm foundation for the development of Go and its ecosystem. 
+
+[Why Go](/solutions/)[Use Cases](/solutions/use-cases)[Case Studies](/solutions/case-studies)[Get Started](/learn/)[Playground](/play)[Tour](/tour/)[Stack Overflow](https://stackoverflow.com/questions/tagged/go?tab=Newest)[Help](/help/)[Packages](https://pkg.go.dev)[Standard Library](/pkg/)[About Go Packages](https://pkg.go.dev/about)[About](/project)[Download](/dl/)[Blog](/blog/)[Issue Tracker](https://github.com/golang/go/issues)[Release Notes](/doc/devel/release)[Brand Guidelines](/brand)[Code of Conduct](/conduct)[Connect](https://www.twitter.com/golang)[Twitter](https://www.twitter.com/golang)[GitHub](https://github.com/golang)[Slack](https://invite.slack.golangbridge.org/)[r/golang](https://reddit.com/r/golang)[Meetup](https://www.meetup.com/pro/go)[Golang Weekly](https://golangweekly.com/) Opens in new window. 
+
+- [Copyright](/copyright)
+- [Terms of Service](/tos)
+- [Privacy Policy](http://www.google.com/intl/en/policies/privacy/)
+- [Report an Issue](/s/website-issue)
+- 
+
+https://google.comgo.dev uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic. [Learn more.](https://policies.google.com/technologies/cookies)Okay

@@ -1,7 +1,7 @@
-# Kotlin Language Specification
-Version: 2.3.0
-
-Source: https://kotlinlang.org/spec/
-
-
-See: https://kotlinlang.org/spec/
+<!DOCTYPE html>
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script>window.location.href = "./introduction.html";</script>
+</head>
+<body></body>
+</html>

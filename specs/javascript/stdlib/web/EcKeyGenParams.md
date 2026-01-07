@@ -1,50 +1,206 @@
-# EcKeyGenParams
+content/files/en-us/web/api/eckeygenparams/index.md at main · mdn/content · GitHub[Skip to content](#start-of-content)
 
-The `EcKeyGenParams` dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into [SubtleCrypto.generateKey()](/en-US/docs/Web/API/SubtleCrypto/generateKey), when generating any elliptic-curve-based key pair: that is, when the algorithm is identified as either of [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh).
+## Navigation Menu
 
-## In this article
+Toggle navigation/[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Feckeygenparams%2Findex.md%3Fplain%3D1)Appearance settings
 
-- [Instance properties](#instance_properties)
-- [Examples](#examples)
-- [Specifications](#specifications)
-- [Browser compatibility](#browser_compatibility)
-- [See also](#see_also)
+- Platform
 
-## [Instance properties](#instance_properties)
+  - AI CODE CREATION
 
-[name](#name)
+    - [GitHub CopilotWrite better code with AI](https://github.com/features/copilot)
+    - [GitHub SparkBuild and deploy intelligent apps](https://github.com/features/spark)
+    - [GitHub ModelsManage and compare prompts](https://github.com/features/models)
+    - [MCP RegistryNewIntegrate external tools](https://github.com/mcp)
 
-A string. This should be set to `ECDSA` or `ECDH`, depending on the algorithm you want to use.
+  - DEVELOPER WORKFLOWS
 
-[namedCurve](#namedcurve)
+    - [ActionsAutomate any workflow](https://github.com/features/actions)
+    - [CodespacesInstant dev environments](https://github.com/features/codespaces)
+    - [IssuesPlan and track work](https://github.com/features/issues)
+    - [Code ReviewManage code changes](https://github.com/features/code-review)
 
-A string representing the name of the elliptic curve to use. This may be any of the following names for [NIST](https://www.nist.gov/)-approved curves:
+  - APPLICATION SECURITY
 
-- `P-256`
-- `P-384`
-- `P-521`
+    - [GitHub Advanced SecurityFind and fix vulnerabilities](https://github.com/security/advanced-security)
+    - [Code securitySecure your code as you build](https://github.com/security/advanced-security/code-security)
+    - [Secret protectionStop leaks before they start](https://github.com/security/advanced-security/secret-protection)
 
-## [Examples](#examples)
+  - EXPLORE
 
-See the examples for [SubtleCrypto.generateKey()](/en-US/docs/Web/API/SubtleCrypto/generateKey).
+    - [Why GitHub](https://github.com/why-github)
+    - [Documentation](https://docs.github.com)
+    - [Blog](https://github.blog)
+    - [Changelog](https://github.blog/changelog)
+    - [Marketplace](https://github.com/marketplace)
 
-## [Specifications](#specifications)
+[View all features](https://github.com/features)
+- Solutions
 
-Specification
-[Web Cryptography Level 2# dfn-EcKeyGenParams](https://w3c.github.io/webcrypto/#dfn-EcKeyGenParams)
+  - BY COMPANY SIZE
 
-## [Browser compatibility](#browser_compatibility)
+    - [Enterprises](https://github.com/enterprise)
+    - [Small and medium teams](https://github.com/team)
+    - [Startups](https://github.com/enterprise/startups)
+    - [Nonprofits](https://github.com/solutions/industry/nonprofits)
 
-Browsers that support the "ECDH" or "ECDSA" algorithms for the [SubtleCrypto.generateKey()](/en-US/docs/Web/API/SubtleCrypto/generateKey) method will support this type.
+  - BY USE CASE
 
-## [See also](#see_also)
+    - [App Modernization](https://github.com/solutions/use-case/app-modernization)
+    - [DevSecOps](https://github.com/solutions/use-case/devsecops)
+    - [DevOps](https://github.com/solutions/use-case/devops)
+    - [CI/CD](https://github.com/solutions/use-case/ci-cd)
+    - [View all use cases](https://github.com/solutions/use-case)
 
-- [SubtleCrypto.generateKey()](/en-US/docs/Web/API/SubtleCrypto/generateKey).
+  - BY INDUSTRY
 
-## Help improve MDN
+    - [Healthcare](https://github.com/solutions/industry/healthcare)
+    - [Financial services](https://github.com/solutions/industry/financial-services)
+    - [Manufacturing](https://github.com/solutions/industry/manufacturing)
+    - [Government](https://github.com/solutions/industry/government)
+    - [View all industries](https://github.com/solutions/industry)
 
-Was this page helpful to you?YesNo[Learn how to contribute](/en-US/docs/MDN/Community/Getting_started)
+[View all solutions](https://github.com/solutions)
+- Resources
 
- This page was last modified on ⁨Jun 23, 2025⁩ by [MDN contributors](/en-US/docs/Web/API/EcKeyGenParams/contributors.txt). 
+  - EXPLORE BY TOPIC
 
-[View this page on GitHub](https://github.com/mdn/content/blob/main/files/en-us/web/api/eckeygenparams/index.md?plain=1) • [Report a problem with this content](https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FEcKeyGenParams&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Feckeygenparams%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FEcKeyGenParams%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Feckeygenparams%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2F3e543cdfe8dddfb4774a64bf3decdcbab42a4111%0A*+Document+last+modified%3A+2025-06-23T16%3A41%3A39.000Z%0A%0A%3C%2Fdetails%3E)
+    - [AI](https://github.com/resources/articles?topic=ai)
+    - [Software Development](https://github.com/resources/articles?topic=software-development)
+    - [DevOps](https://github.com/resources/articles?topic=devops)
+    - [Security](https://github.com/resources/articles?topic=security)
+    - [View all topics](https://github.com/resources/articles)
+
+  - EXPLORE BY TYPE
+
+    - [Customer stories](https://github.com/customer-stories)
+    - [Events & webinars](https://github.com/resources/events)
+    - [Ebooks & reports](https://github.com/resources/whitepapers)
+    - [Business insights](https://github.com/solutions/executive-insights)
+    - [GitHub Skills](https://skills.github.com)
+
+  - SUPPORT & SERVICES
+
+    - [Documentation](https://docs.github.com)
+    - [Customer support](https://support.github.com)
+    - [Community forum](https://github.com/orgs/community/discussions)
+    - [Trust center](https://github.com/trust-center)
+    - [Partners](https://github.com/partners)
+
+- Open Source
+
+  - COMMUNITY
+
+    - [GitHub SponsorsFund open source developers](https://github.com/sponsors)
+
+  - PROGRAMS
+
+    - [Security Lab](https://securitylab.github.com)
+    - [Maintainer Community](https://maintainers.github.com)
+    - [Accelerator](https://github.com/accelerator)
+    - [Archive Program](https://archiveprogram.github.com)
+
+  - REPOSITORIES
+
+    - [Topics](https://github.com/topics)
+    - [Trending](https://github.com/trending)
+    - [Collections](https://github.com/collections)
+
+- Enterprise
+
+  - ENTERPRISE SOLUTIONS
+
+    - [Enterprise platformAI-powered developer platform](https://github.com/enterprise)
+
+  - AVAILABLE ADD-ONS
+
+    - [GitHub Advanced SecurityEnterprise-grade security features](https://github.com/security/advanced-security)
+    - [Copilot for BusinessEnterprise-grade AI features](https://github.com/features/copilot/copilot-business)
+    - [Premium SupportEnterprise-grade 24/7 support](https://github.com/premium-support)
+
+- [Pricing](https://github.com/pricing)
+
+Search or jump to...
+
+# Search code, repositories, users, issues, pull requests...
+
+ Search Clear
+
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
+
+#  Provide feedback 
+
+We read every piece of feedback, and take your input very seriously.
+
+Include my email address so I can be contacted Cancel  Submit feedback 
+
+#  Saved searches 
+
+## Use saved searches to filter your results more quickly
+
+NameQuery
+
+ To see all available qualifiers, see our [documentation](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax). 
+
+ Cancel  Create saved search [Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Feckeygenparams%2Findex.md%3Fplain%3D1)[Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&source=header-repo&source_repo=mdn%2Fcontent)Appearance settingsResetting focusYou signed in with another tab or window. Reload to refresh your session.You signed out in another tab or window. Reload to refresh your session.You switched accounts on another tab or window. Reload to refresh your session.Dismiss alert{{ message }}[mdn](/mdn)/[content](/mdn/content)Public
+
+- [Notifications](/login?return_to=%2Fmdn%2Fcontent)You must be signed in to change notification settings
+- [Fork
+    23.1k](/login?return_to=%2Fmdn%2Fcontent)
+- [Star
+          10.4k](/login?return_to=%2Fmdn%2Fcontent)
+
+- [Code](/mdn/content)
+- [Issues
+          320](/mdn/content/issues)
+- [Pull requests
+          96](/mdn/content/pulls)
+- [Actions](/mdn/content/actions)
+- [Projects
+          0](/mdn/content/projects)
+- 
+
+### 
+
+[Security
+          
+  
+  
+    
+  
+    
+      
+
+              Uh oh!
+
+              There was an error while loading. Please reload this page](/mdn/content/security).
+
+- [Insights](/mdn/content/pulse)
+
+Additional navigation options
+
+- [Code](/mdn/content)
+- [Issues](/mdn/content/issues)
+- [Pull requests](/mdn/content/pulls)
+- [Actions](/mdn/content/actions)
+- [Projects](/mdn/content/projects)
+- [Security](/mdn/content/security)
+- [Insights](/mdn/content/pulse)
+
+## Footer
+
+https://github.com © 2026 GitHub, Inc. 
+
+### Footer navigation
+
+- [Terms](https://docs.github.com/site-policy/github-terms/github-terms-of-service)
+- [Privacy](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement)
+- [Security](https://github.com/security)
+- [Status](https://www.githubstatus.com/)
+- [Community](https://github.community/)
+- [Docs](https://docs.github.com/)
+- [Contact](https://support.github.com?tags=dotcom-footer)
+-  Manage cookies 
+-  Do not share my personal information 
+
+ You can’t perform that action at this time.

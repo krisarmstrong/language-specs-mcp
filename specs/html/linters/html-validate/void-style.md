@@ -1,3 +1,14 @@
+HTML-validate - Require a specific style for closing void elements (void-style)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -52,3 +63,5 @@ This rule takes an optional object:
 
 - `omit` requires end tag to be omitted and disallows self-closing elements (default).
 - `selfclosing` requests self-closing all void element.
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/void-style.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/void-style.ts)

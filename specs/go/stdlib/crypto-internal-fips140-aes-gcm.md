@@ -1,144 +1,203 @@
-package gcm // import "crypto/internal/fips140/aes/gcm"
+C2SP/XAES-256-GCM.md at main · C2SP/C2SP · GitHub[Skip to content](#start-of-content)
 
+## Navigation Menu
 
-FUNCTIONS
+Toggle navigation/[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2FC2SP%2FC2SP%2Fblob%2Fmain%2FXAES-256-GCM.md)Appearance settings
 
-func GHASH(key *[16]byte, inputs ...[]byte) []byte
-    GHASH is exposed to allow crypto/cipher to implement non-AES GCM modes.
-    It is not allowed as a stand-alone operation in FIPS mode because it is not
-    ACVP tested.
+- Platform
 
-func SealWithRandomNonce(g *GCM, nonce, out, plaintext, additionalData []byte)
-    SealWithRandomNonce encrypts plaintext to out, and writes a random
-    nonce to nonce. nonce must be 12 bytes, and out must be 16 bytes longer
-    than plaintext. out and plaintext may overlap exactly or not at all.
-    additionalData and out must not overlap.
+  - AI CODE CREATION
 
-    This complies with FIPS 140-3 IG C.H Scenario 2.
+    - [GitHub CopilotWrite better code with AI](https://github.com/features/copilot)
+    - [GitHub SparkBuild and deploy intelligent apps](https://github.com/features/spark)
+    - [GitHub ModelsManage and compare prompts](https://github.com/features/models)
+    - [MCP RegistryNewIntegrate external tools](https://github.com/mcp)
 
-    Note that this is NOT a [cipher.AEAD].Seal method.
+  - DEVELOPER WORKFLOWS
 
+    - [ActionsAutomate any workflow](https://github.com/features/actions)
+    - [CodespacesInstant dev environments](https://github.com/features/codespaces)
+    - [IssuesPlan and track work](https://github.com/features/issues)
+    - [Code ReviewManage code changes](https://github.com/features/code-review)
 
-TYPES
+  - APPLICATION SECURITY
 
-type CMAC struct {
-	// Has unexported fields.
-}
-    CMAC implements the CMAC mode from NIST SP 800-38B.
+    - [GitHub Advanced SecurityFind and fix vulnerabilities](https://github.com/security/advanced-security)
+    - [Code securitySecure your code as you build](https://github.com/security/advanced-security/code-security)
+    - [Secret protectionStop leaks before they start](https://github.com/security/advanced-security/secret-protection)
 
-    It is optimized for use in Counter KDF (SP 800-108r1) and XAES-256-GCM
-    (https://c2sp.org/XAES-256-GCM), rather than for exposing it to applications
-    as a stand-alone MAC.
+  - EXPLORE
 
-func NewCMAC(b *aes.Block) *CMAC
+    - [Why GitHub](https://github.com/why-github)
+    - [Documentation](https://docs.github.com)
+    - [Blog](https://github.blog)
+    - [Changelog](https://github.blog/changelog)
+    - [Marketplace](https://github.com/marketplace)
 
-func (c *CMAC) MAC(m []byte) [aes.BlockSize]byte
+[View all features](https://github.com/features)
+- Solutions
 
-type CounterKDF struct {
-	// Has unexported fields.
-}
-    CounterKDF implements a KDF in Counter Mode instantiated with CMAC-AES,
-    according to NIST SP 800-108 Revision 1 Update 1, Section 4.1.
+  - BY COMPANY SIZE
 
-    It produces a 256-bit output, and accepts a 8-bit Label and a 96-bit
-    Context. It uses a counter of 16 bits placed before the fixed data. The
-    fixed data is the sequence Label || 0x00 || Context. The L field is omitted,
-    since the output key length is fixed.
+    - [Enterprises](https://github.com/enterprise)
+    - [Small and medium teams](https://github.com/team)
+    - [Startups](https://github.com/enterprise/startups)
+    - [Nonprofits](https://github.com/solutions/industry/nonprofits)
 
-    It's optimized for use in XAES-256-GCM (https://c2sp.org/XAES-256-GCM),
-    rather than for exposing it to applications as a stand-alone KDF.
+  - BY USE CASE
 
-func NewCounterKDF(b *aes.Block) *CounterKDF
-    NewCounterKDF creates a new CounterKDF with the given key.
+    - [App Modernization](https://github.com/solutions/use-case/app-modernization)
+    - [DevSecOps](https://github.com/solutions/use-case/devsecops)
+    - [DevOps](https://github.com/solutions/use-case/devops)
+    - [CI/CD](https://github.com/solutions/use-case/ci-cd)
+    - [View all use cases](https://github.com/solutions/use-case)
 
-func (kdf *CounterKDF) DeriveKey(label byte, context [12]byte) [32]byte
-    DeriveKey derives a key from the given label and context.
+  - BY INDUSTRY
 
-type GCM struct {
-	// Has unexported fields.
-}
-    GCM represents a Galois Counter Mode with a specific key.
+    - [Healthcare](https://github.com/solutions/industry/healthcare)
+    - [Financial services](https://github.com/solutions/industry/financial-services)
+    - [Manufacturing](https://github.com/solutions/industry/manufacturing)
+    - [Government](https://github.com/solutions/industry/government)
+    - [View all industries](https://github.com/solutions/industry)
 
-func New(cipher *aes.Block, nonceSize, tagSize int) (*GCM, error)
+[View all solutions](https://github.com/solutions)
+- Resources
 
-func (g *GCM) NonceSize() int
+  - EXPLORE BY TOPIC
 
-func (g *GCM) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)
+    - [AI](https://github.com/resources/articles?topic=ai)
+    - [Software Development](https://github.com/resources/articles?topic=software-development)
+    - [DevOps](https://github.com/resources/articles?topic=devops)
+    - [Security](https://github.com/resources/articles?topic=security)
+    - [View all topics](https://github.com/resources/articles)
 
-func (g *GCM) Overhead() int
+  - EXPLORE BY TYPE
 
-func (g *GCM) Seal(dst, nonce, plaintext, data []byte) []byte
+    - [Customer stories](https://github.com/customer-stories)
+    - [Events & webinars](https://github.com/resources/events)
+    - [Ebooks & reports](https://github.com/resources/whitepapers)
+    - [Business insights](https://github.com/solutions/executive-insights)
+    - [GitHub Skills](https://skills.github.com)
 
-type GCMForSSH struct {
-	// Has unexported fields.
-}
+  - SUPPORT & SERVICES
 
-func NewGCMForSSH(cipher *aes.Block) (*GCMForSSH, error)
-    NewGCMForSSH returns a new AEAD that works like GCM, but enforces the
-    construction of nonces as specified in RFC 5647.
+    - [Documentation](https://docs.github.com)
+    - [Customer support](https://support.github.com)
+    - [Community forum](https://github.com/orgs/community/discussions)
+    - [Trust center](https://github.com/trust-center)
+    - [Partners](https://github.com/partners)
 
-    This complies with FIPS 140-3 IG C.H Scenario 1.d.
+- Open Source
 
-func (g *GCMForSSH) NonceSize() int
+  - COMMUNITY
 
-func (g *GCMForSSH) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)
+    - [GitHub SponsorsFund open source developers](https://github.com/sponsors)
 
-func (g *GCMForSSH) Overhead() int
+  - PROGRAMS
 
-func (g *GCMForSSH) Seal(dst, nonce, plaintext, data []byte) []byte
+    - [Security Lab](https://securitylab.github.com)
+    - [Maintainer Community](https://maintainers.github.com)
+    - [Accelerator](https://github.com/accelerator)
+    - [Archive Program](https://archiveprogram.github.com)
 
-type GCMForTLS12 struct {
-	// Has unexported fields.
-}
+  - REPOSITORIES
 
-func NewGCMForTLS12(cipher *aes.Block) (*GCMForTLS12, error)
-    NewGCMForTLS12 returns a new AEAD that works like GCM, but enforces the
-    construction of nonces as specified in RFC 5288, Section 3 and RFC 9325,
-    Section 7.2.1.
+    - [Topics](https://github.com/topics)
+    - [Trending](https://github.com/trending)
+    - [Collections](https://github.com/collections)
 
-    This complies with FIPS 140-3 IG C.H Scenario 1.a.
+- Enterprise
 
-func (g *GCMForTLS12) NonceSize() int
+  - ENTERPRISE SOLUTIONS
 
-func (g *GCMForTLS12) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)
+    - [Enterprise platformAI-powered developer platform](https://github.com/enterprise)
 
-func (g *GCMForTLS12) Overhead() int
+  - AVAILABLE ADD-ONS
 
-func (g *GCMForTLS12) Seal(dst, nonce, plaintext, data []byte) []byte
+    - [GitHub Advanced SecurityEnterprise-grade security features](https://github.com/security/advanced-security)
+    - [Copilot for BusinessEnterprise-grade AI features](https://github.com/features/copilot/copilot-business)
+    - [Premium SupportEnterprise-grade 24/7 support](https://github.com/premium-support)
 
-type GCMForTLS13 struct {
-	// Has unexported fields.
-}
+- [Pricing](https://github.com/pricing)
 
-func NewGCMForTLS13(cipher *aes.Block) (*GCMForTLS13, error)
-    NewGCMForTLS13 returns a new AEAD that works like GCM, but enforces the
-    construction of nonces as specified in RFC 8446, Section 5.3.
+Search or jump to...
 
-func (g *GCMForTLS13) NonceSize() int
+# Search code, repositories, users, issues, pull requests...
 
-func (g *GCMForTLS13) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)
+ Search Clear
 
-func (g *GCMForTLS13) Overhead() int
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-func (g *GCMForTLS13) Seal(dst, nonce, plaintext, data []byte) []byte
+#  Provide feedback 
 
-type GCMWithCounterNonce struct {
-	// Has unexported fields.
-}
+We read every piece of feedback, and take your input very seriously.
 
-func NewGCMWithCounterNonce(cipher *aes.Block) (*GCMWithCounterNonce, error)
-    NewGCMWithCounterNonce returns a new AEAD that works like GCM, but enforces
-    the construction of deterministic nonces. The nonce must be 96 bits,
-    the first 32 bits must be an encoding of the module name, and the last 64
-    bits must be a counter.
+Include my email address so I can be contacted Cancel  Submit feedback 
 
-    This complies with FIPS 140-3 IG C.H Scenario 3.
+#  Saved searches 
 
-func (g *GCMWithCounterNonce) NonceSize() int
+## Use saved searches to filter your results more quickly
 
-func (g *GCMWithCounterNonce) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)
+NameQuery
 
-func (g *GCMWithCounterNonce) Overhead() int
+ To see all available qualifiers, see our [documentation](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax). 
 
-func (g *GCMWithCounterNonce) Seal(dst, nonce, plaintext, data []byte) []byte
+ Cancel  Create saved search [Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2FC2SP%2FC2SP%2Fblob%2Fmain%2FXAES-256-GCM.md)[Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&source=header-repo&source_repo=C2SP%2FC2SP)Appearance settingsResetting focusYou signed in with another tab or window. Reload to refresh your session.You signed out in another tab or window. Reload to refresh your session.You switched accounts on another tab or window. Reload to refresh your session.Dismiss alert{{ message }}[C2SP](/C2SP)/[C2SP](/C2SP/C2SP)Public
 
+- [Notifications](/login?return_to=%2FC2SP%2FC2SP)You must be signed in to change notification settings
+- [Fork
+    72](/login?return_to=%2FC2SP%2FC2SP)
+- [Star
+          498](/login?return_to=%2FC2SP%2FC2SP)
+
+- [Code](/C2SP/C2SP)
+- [Issues
+          28](/C2SP/C2SP/issues)
+- [Pull requests
+          11](/C2SP/C2SP/pulls)
+- [Actions](/C2SP/C2SP/actions)
+- 
+
+### 
+
+[Security
+          
+  
+  
+    
+  
+    
+      
+
+              Uh oh!
+
+              There was an error while loading. Please reload this page](/C2SP/C2SP/security).
+
+- [Insights](/C2SP/C2SP/pulse)
+
+Additional navigation options
+
+- [Code](/C2SP/C2SP)
+- [Issues](/C2SP/C2SP/issues)
+- [Pull requests](/C2SP/C2SP/pulls)
+- [Actions](/C2SP/C2SP/actions)
+- [Security](/C2SP/C2SP/security)
+- [Insights](/C2SP/C2SP/pulse)
+
+## Footer
+
+https://github.com © 2026 GitHub, Inc. 
+
+### Footer navigation
+
+- [Terms](https://docs.github.com/site-policy/github-terms/github-terms-of-service)
+- [Privacy](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement)
+- [Security](https://github.com/security)
+- [Status](https://www.githubstatus.com/)
+- [Community](https://github.community/)
+- [Docs](https://docs.github.com/)
+- [Contact](https://support.github.com?tags=dotcom-footer)
+-  Manage cookies 
+-  Do not share my personal information 
+
+ You can’t perform that action at this time.

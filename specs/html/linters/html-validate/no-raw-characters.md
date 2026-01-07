@@ -1,3 +1,14 @@
+HTML-validate - Disallow the use of unescaped special characters (no-raw-characters)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -110,3 +121,5 @@ Examples of correct code with this option:
 <!-- Not ambiguous: even unquoted & is understood to be stopped by > -->
 <a href=?foo&bar></p>
 ```
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/no-raw-characters.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/no-raw-characters.ts)

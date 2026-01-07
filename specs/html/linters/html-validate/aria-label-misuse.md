@@ -1,3 +1,14 @@
+HTML-validate - Disallow `aria-label` and `aria-labelledby` misuse (aria-label-misuse)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -108,3 +119,5 @@ This option is disabled by default and `html-validate:recommended` but enabled b
 - 10.2.0 - validates `aria-labelledby` in addition to `aria-label`.
 - 8.11.0 - `allowAnyNamable` option added.
 - 7.17.0 - Allow usage on custom elements.
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/aria-label-misuse.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/aria-label-misuse.ts)

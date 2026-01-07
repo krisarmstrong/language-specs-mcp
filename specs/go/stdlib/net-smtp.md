@@ -1,164 +1,273 @@
-package smtp // import "net/smtp"
+smtp - Search Results - Go Packageshttps://go.dev/[Skip to Main Content](#main-content)
 
-Package smtp implements the Simple Mail Transfer Protocol as defined in RFC
-5321. It also implements the following extensions:
+- [Why Go](#)
 
-    8BITMIME  RFC 1652
-    AUTH      RFC 2554
-    STARTTLS  RFC 3207
+  - [Case Studies](https://go.dev/solutions#case-studies)
 
-Additional extensions may be handled by clients.
+Common problems companies solve with Go
 
-The smtp package is frozen and is not accepting new features. Some external
-packages provide more functionality. See:
+  - [Use Cases](https://go.dev/solutions#use-cases)
 
-    https://godoc.org/?q=smtp
+Stories about how and why companies use Go
 
-FUNCTIONS
+  - [Security](https://go.dev/security/)
 
-func SendMail(addr string, a Auth, from string, to []string, msg []byte) error
-    SendMail connects to the server at addr, switches to TLS if possible,
-    authenticates with the optional mechanism a if possible, and then sends an
-    email from address from, to addresses to, with message msg. The addr must
-    include a port, as in "mail.example.com:smtp".
+How Go can help keep you secure by default
 
-    The addresses in the to parameter are the SMTP RCPT addresses.
+- [Learn](https://go.dev/learn/)
+- [Docs](#)
 
-    The msg parameter should be an RFC 822-style email with headers first,
-    a blank line, and then the message body. The lines of msg should be CRLF
-    terminated. The msg headers should usually include fields such as "From",
-    "To", "Subject", and "Cc". Sending "Bcc" messages is accomplished by
-    including an email address in the to parameter but not including it in the
-    msg headers.
+  - [Effective Go](https://go.dev/doc/effective_go)
 
-    The SendMail function and the net/smtp package are low-level mechanisms
-    and provide no support for DKIM signing, MIME attachments (see the
-    mime/multipart package), or other mail functionality. Higher-level packages
-    exist outside of the standard library.
+Tips for writing clear, performant, and idiomatic Go code
 
+  - [Go User Manual](https://go.dev/doc/)
 
-TYPES
+A complete introduction to building software with Go
 
-type Auth interface {
-	// Start begins an authentication with a server.
-	// It returns the name of the authentication protocol
-	// and optionally data to include in the initial AUTH message
-	// sent to the server.
-	// If it returns a non-nil error, the SMTP client aborts
-	// the authentication attempt and closes the connection.
-	Start(server *ServerInfo) (proto string, toServer []byte, err error)
+  - [Standard library](https://pkg.go.dev/std)
 
-	// Next continues the authentication. The server has just sent
-	// the fromServer data. If more is true, the server expects a
-	// response, which Next should return as toServer; otherwise
-	// Next should return toServer == nil.
-	// If Next returns a non-nil error, the SMTP client aborts
-	// the authentication attempt and closes the connection.
-	Next(fromServer []byte, more bool) (toServer []byte, err error)
-}
-    Auth is implemented by an SMTP authentication mechanism.
+Reference documentation for Go's standard library
 
-func CRAMMD5Auth(username, secret string) Auth
-    CRAMMD5Auth returns an Auth that implements the CRAM-MD5 authentication
-    mechanism as defined in RFC 2195. The returned Auth uses the given username
-    and secret to authenticate to the server using the challenge-response
-    mechanism.
+  - [Release Notes](https://go.dev/doc/devel/release)
 
-func PlainAuth(identity, username, password, host string) Auth
-    PlainAuth returns an Auth that implements the PLAIN authentication mechanism
-    as defined in RFC 4616. The returned Auth uses the given username and
-    password to authenticate to host and act as identity. Usually identity
-    should be the empty string, to act as username.
+Learn what's new in each Go release
 
-    PlainAuth will only send the credentials if the connection is using TLS or
-    is connected to localhost. Otherwise authentication will fail with an error,
-    without sending the credentials.
+- [Packages](/)
+- [Community](#)
 
-type Client struct {
-	// Text is the textproto.Conn used by the Client. It is exported to allow for
-	// clients to add extensions.
-	Text *textproto.Conn
+  - [Recorded Talks](https://go.dev/talks/)
 
-	// Has unexported fields.
-}
-    A Client represents a client connection to an SMTP server.
+Videos from prior events
 
-func Dial(addr string) (*Client, error)
-    Dial returns a new Client connected to an SMTP server at addr. The addr must
-    include a port, as in "mail.example.com:smtp".
+  - [Meetups](https://www.meetup.com/pro/go)
 
-func NewClient(conn net.Conn, host string) (*Client, error)
-    NewClient returns a new Client using an existing connection and host as a
-    server name to be used when authenticating.
+Meet other local Go developers
 
-func (c *Client) Auth(a Auth) error
-    Auth authenticates a client using the provided authentication mechanism.
-    A failed authentication closes the connection. Only servers that advertise
-    the AUTH extension support this function.
+  - [Conferences](https://github.com/golang/go/wiki/Conferences)
 
-func (c *Client) Close() error
-    Close closes the connection.
+Learn and network with Go developers from around the world
 
-func (c *Client) Data() (io.WriteCloser, error)
-    Data issues a DATA command to the server and returns a writer that can be
-    used to write the mail headers and body. The caller should close the writer
-    before calling any more methods on c. A call to Data must be preceded by one
-    or more calls to Client.Rcpt.
+  - [Go blog](https://go.dev/blog)
 
-func (c *Client) Extension(ext string) (bool, string)
-    Extension reports whether an extension is support by the server. The
-    extension name is case-insensitive. If the extension is supported, Extension
-    also returns a string that contains any parameters the server specifies for
-    the extension.
+The Go project's official blog.
 
-func (c *Client) Hello(localName string) error
-    Hello sends a HELO or EHLO to the server as the given host name. Calling
-    this method is only necessary if the client needs control over the host
-    name used. The client will introduce itself as "localhost" automatically
-    otherwise. If Hello is called, it must be called before any of the other
-    methods.
+  - [Go project](https://go.dev/help)
 
-func (c *Client) Mail(from string) error
-    Mail issues a MAIL command to the server using the provided email address.
-    If the server supports the 8BITMIME extension, Mail adds the BODY=8BITMIME
-    parameter. If the server supports the SMTPUTF8 extension, Mail adds the
-    SMTPUTF8 parameter. This initiates a mail transaction and is followed by one
-    or more Client.Rcpt calls.
+Get help and stay informed from Go
 
-func (c *Client) Noop() error
-    Noop sends the NOOP command to the server. It does nothing but check that
-    the connection to the server is okay.
+  -  Get connected 
 
-func (c *Client) Quit() error
-    Quit sends the QUIT command and closes the connection to the server.
+https://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/collectives/go
 
-func (c *Client) Rcpt(to string) error
-    Rcpt issues a RCPT command to the server using the provided email address.
-    A call to Rcpt must be preceded by a call to Client.Mail and may be followed
-    by a Client.Data call or another Rcpt call.
+https://go.dev/
 
-func (c *Client) Reset() error
-    Reset sends the RSET command to the server, aborting the current mail
-    transaction.
+- [Why Go](#)[Why Go](#)
 
-func (c *Client) StartTLS(config *tls.Config) error
-    StartTLS sends the STARTTLS command and encrypts all further communication.
-    Only servers that advertise the STARTTLS extension support this function.
+  - [Case Studies](https://go.dev/solutions#case-studies)
+  - [Use Cases](https://go.dev/solutions#use-cases)
+  - [Security](https://go.dev/security/)
 
-func (c *Client) TLSConnectionState() (state tls.ConnectionState, ok bool)
-    TLSConnectionState returns the client's TLS connection state. The return
-    values are their zero values if Client.StartTLS did not succeed.
+- [Learn](https://go.dev/learn/)
+- [Docs](#)[Docs](#)
 
-func (c *Client) Verify(addr string) error
-    Verify checks the validity of an email address on the server. If Verify
-    returns nil, the address is valid. A non-nil return does not necessarily
-    indicate an invalid address. Many servers will not verify addresses for
-    security reasons.
+  - [Effective Go](https://go.dev/doc/effective_go)
+  - [Go User Manual](https://go.dev/doc/)
+  - [Standard library](https://pkg.go.dev/std)
+  - [Release Notes](https://go.dev/doc/devel/release)
 
-type ServerInfo struct {
-	Name string   // SMTP server name
-	TLS  bool     // using TLS, with valid certificate for Name
-	Auth []string // advertised authentication mechanisms
-}
-    ServerInfo records information about an SMTP server.
+- [Packages](/)
+- [Community](#)[Community](#)
 
+  - [Recorded Talks](https://go.dev/talks/)
+  - [Meetups](https://www.meetup.com/pro/go)
+  - [Conferences](https://github.com/golang/go/wiki/Conferences)
+  - [Go blog](https://go.dev/blog)
+  - [Go project](https://go.dev/help)
+  - Get connectedhttps://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/collectives/go
+
+https://go.dev/
+
+- [Packages](/search?limit=25&m=package&q=smtp&utm_source=godoc)
+- [Symbols](/search?limit=25&m=symbol&q=smtp&utm_source=godoc)
+
+ Showing 25 modules with matching packages. [Search help](/search-help)
+
+## [smtp
+              (net/smtp)](/net/smtp)
+
+standard library
+
+ Package smtp implements the Simple Mail Transfer Protocol as defined in RFC 5321. 
+
+[Imported by 12,041](/net/smtp?tab=importedby)|go1.25.5 published on Dec 2, 2025|[BSD-3-Clause](/net/smtp?tab=licenses)
+
+## [textproto
+              (net/textproto)](/net/textproto)
+
+standard library
+
+ Package textproto implements generic support for text-based request/response protocols in the style of HTTP, NNTP, and SMTP. 
+
+[Imported by 17,188](/net/textproto?tab=importedby)|go1.25.5 published on Dec 2, 2025|[BSD-3-Clause](/net/textproto?tab=licenses)
+
+## [smtp
+              (github.com/emersion/go-smtp)](/github.com/emersion/go-smtp)
+
+ Package smtp implements the Simple Mail Transfer Protocol as defined in RFC 5321. 
+
+[Imported by 383](/github.com/emersion/go-smtp?tab=importedby)|v0.24.0 published on Jul 8, 2025|[MIT](/github.com/emersion/go-smtp?tab=licenses)
+
+## [mail
+              (github.com/xhit/go-simple-mail/v2)](/github.com/xhit/go-simple-mail/v2)
+
+[Imported by 663](/github.com/xhit/go-simple-mail/v2?tab=importedby)|v2.16.0 published on Aug 17, 2023|[MIT](/github.com/xhit/go-simple-mail/v2?tab=licenses)Other major versions:[v1](/github.com/xhit/go-simple-mail)
+
+## [smtp
+              (github.com/mailhog/smtp)](/github.com/mailhog/smtp)
+
+[Imported by 64](/github.com/mailhog/smtp?tab=importedby)|v1.0.1 published on Nov 19, 2016|[MIT](/github.com/mailhog/smtp?tab=licenses)
+
+## [smtp
+              (github.com/influxdata/kapacitor/services/smtp)](/github.com/influxdata/kapacitor/services/smtp)
+
+[Imported by 80](/github.com/influxdata/kapacitor/services/smtp?tab=importedby)|v1.8.2 published on Sep 29, 2025|[MIT](/github.com/influxdata/kapacitor/services/smtp?tab=licenses)
+
+## [mailyak
+              (github.com/domodwyer/mailyak/v3)](/github.com/domodwyer/mailyak/v3)
+
+ Package mailyak provides a simple interface for generating MIME compliant emails, and optionally sending them over SMTP. 
+
+[Imported by 73](/github.com/domodwyer/mailyak/v3?tab=importedby)|v3.6.2 published on Aug 3, 2023|[MIT](/github.com/domodwyer/mailyak/v3?tab=licenses)Other major versions:[v1](/github.com/domodwyer/mailyak)
+
+## [smtp
+              (github.com/mailhog/MailHog-Server/smtp)](/github.com/mailhog/MailHog-Server/smtp)
+
+[Imported by 185](/github.com/mailhog/MailHog-Server/smtp?tab=importedby)|v1.0.1 published on Apr 16, 2017|[MIT](/github.com/mailhog/MailHog-Server/smtp?tab=licenses)
+
+## [smtpd
+              (github.com/mhale/smtpd)](/github.com/mhale/smtpd)
+
+ Package smtpd implements a basic SMTP server. 
+
+[Imported by 41](/github.com/mhale/smtpd?tab=importedby)|v0.8.3 published on May 8, 2024|[Unlicense](/github.com/mhale/smtpd?tab=licenses)
+
+## [smtpd
+              (github.com/chrj/smtpd)](/github.com/chrj/smtpd)
+
+ Package smtpd implements an SMTP server with support for STARTTLS, authentication (PLAIN/LOGIN), XCLIENT and optional restrictions on the different stages of the SMTP session. 
+
+[Imported by 16](/github.com/chrj/smtpd?tab=importedby)|v0.3.1 published on Nov 21, 2021|[MIT](/github.com/chrj/smtpd?tab=licenses)
+
+## [guerrilla
+              (github.com/phires/go-guerrilla)](/github.com/phires/go-guerrilla)
+
+[Imported by 10](/github.com/phires/go-guerrilla?tab=importedby)|v1.6.7 published on Apr 1, 2025|[MIT](/github.com/phires/go-guerrilla?tab=licenses)
+
+## [smtpmock
+              (github.com/mocktools/go-smtp-mock/v2)](/github.com/mocktools/go-smtp-mock/v2)
+
+[Imported by 9](/github.com/mocktools/go-smtp-mock/v2?tab=importedby)|v2.5.1 published on Jun 24, 2025|[MIT](/github.com/mocktools/go-smtp-mock/v2?tab=licenses)Other major versions:[v1](/github.com/mocktools/go-smtp-mock)
+
+## [smtpMessage
+              (github.com/mailhedgehog/smtpMessage)](/github.com/mailhedgehog/smtpMessage)
+
+[Imported by 8](/github.com/mailhedgehog/smtpMessage?tab=importedby)|v1.0.4 published on Dec 27, 2023|[MIT-0](/github.com/mailhedgehog/smtpMessage?tab=licenses)
+
+## [smtpd
+              (github.com/bradfitz/go-smtpd/smtpd)](/github.com/bradfitz/go-smtpd/smtpd)
+
+ Package smtpd implements an SMTP server. 
+
+[Imported by 27](/github.com/bradfitz/go-smtpd/smtpd?tab=importedby)|v0.0.0-...-deb6d62 published on Apr 4, 2017|[BSD-3-Clause](/github.com/bradfitz/go-smtpd/smtpd?tab=licenses)
+
+## [smtp
+              (github.com/wneessen/go-mail/smtp)](/github.com/wneessen/go-mail/smtp)
+
+ Package smtp implements the Simple Mail Transfer Protocol as defined in RFC 5321. 
+
+[Imported by 6](/github.com/wneessen/go-mail/smtp?tab=importedby)|v0.7.2 published on Sep 29, 2025|[BSD-3-Clause, MIT](/github.com/wneessen/go-mail/smtp?tab=licenses)
+
+## [smtp
+              (github.com/praetorian-inc/fingerprintx/pkg/plugins/services/smtp)](/github.com/praetorian-inc/fingerprintx/pkg/plugins/services/smtp)
+
+[Imported by 12](/github.com/praetorian-inc/fingerprintx/pkg/plugins/services/smtp?tab=importedby)|v1.1.19 published on 5 days ago|[Apache-2.0](/github.com/praetorian-inc/fingerprintx/pkg/plugins/services/smtp?tab=licenses)
+
+## [smtpd
+              (github.com/pivotal/go-smtpd/smtpd)](/github.com/pivotal/go-smtpd/smtpd)
+
+ Package smtpd implements an SMTP server. 
+
+[Imported by 23](/github.com/pivotal/go-smtpd/smtpd?tab=importedby)|v0.0.0-...-0af6982 published on Jan 8, 2014|[BSD-3-Clause](/github.com/pivotal/go-smtpd/smtpd?tab=licenses)
+
+## [smtpd
+              (bitbucket.org/chrj/smtpd)](/bitbucket.org/chrj/smtpd)
+
+ Package smtpd implements an SMTP server with support for STARTTLS, authentication (PLAIN/LOGIN), XCLIENT and optional restrictions on the different stages of the SMTP session. 
+
+[Imported by 10](/bitbucket.org/chrj/smtpd?tab=importedby)|v0.0.0-...-9ddcdbd published on Aug 17, 2017|[MIT](/bitbucket.org/chrj/smtpd?tab=licenses)
+
+## [smtp
+              (github.com/irdaislakhuafa/go-sdk/smtp)](/github.com/irdaislakhuafa/go-sdk/smtp)
+
+[Imported by 10](/github.com/irdaislakhuafa/go-sdk/smtp?tab=importedby)|v0.0.36 published on Jun 9, 2025|[MIT](/github.com/irdaislakhuafa/go-sdk/smtp?tab=licenses)
+
+## [smtp
+              (github.com/mistralmail/smtp/smtp)](/github.com/mistralmail/smtp/smtp)
+
+[Imported by 10](/github.com/mistralmail/smtp/smtp?tab=importedby)|v0.0.0-...-0f5e0da published on Nov 1, 2023|[MIT](/github.com/mistralmail/smtp/smtp?tab=licenses)Other packages in module github.com/mistralmail/smtp:[server](/github.com/mistralmail/smtp/server)
+
+## [message
+              (github.com/sloonz/go-mime-message)](/github.com/sloonz/go-mime-message)
+
+ The package mime/message can be used to procduce MIME messages which can be sent as mails to a SMTP server, or put in a local mailbox. 
+
+[Imported by 8](/github.com/sloonz/go-mime-message?tab=importedby)|v0.0.0-...-cb2e834 published on Apr 17, 2021|[Unlicense](/github.com/sloonz/go-mime-message?tab=licenses)
+
+## [smtppool
+              (github.com/knadh/smtppool)](/github.com/knadh/smtppool)
+
+ Package smtppool creates a pool of reusable SMTP connections for high throughput e-mailing. 
+
+[Imported by 7](/github.com/knadh/smtppool?tab=importedby)|v1.3.0 published on Dec 26, 2024|[MIT](/github.com/knadh/smtppool?tab=licenses)
+
+## [smtpsrv
+              (github.com/alash3al/go-smtpsrv/v3)](/github.com/alash3al/go-smtpsrv/v3)
+
+[Imported by 1](/github.com/alash3al/go-smtpsrv/v3?tab=importedby)|v3.0.1 published on Jun 6, 2020|[MIT](/github.com/alash3al/go-smtpsrv/v3?tab=licenses)Other major versions:[v0](/github.com/alash3al/go-smtpsrv)
+
+## [smtp
+              (github.com/zmap/zgrab2/modules/smtp)](/github.com/zmap/zgrab2/modules/smtp)
+
+ Package smtp provides a zgrab2 module that scans for SMTP mail servers. 
+
+[Imported by 3](/github.com/zmap/zgrab2/modules/smtp?tab=importedby)|v1.0.0 published on Dec 1, 2025|[Apache-2.0, ISC](/github.com/zmap/zgrab2/modules/smtp?tab=licenses)
+
+## [smtp
+              (github.com/documize/community/domain/smtp)](/github.com/documize/community/domain/smtp)
+
+ Package smtp provides access to SMTP server for sending email. 
+
+[Imported by 6](/github.com/documize/community/domain/smtp?tab=importedby)|v3.2.0+incompatible published on Aug 29, 2019|[AGPL-3.0](/github.com/documize/community/domain/smtp?tab=licenses) Didn't find what you were looking for? [Show more results.](/search?limit=100&m=package&q=smtp&utm_source=godoc#more-results)[Why Go](https://go.dev/solutions)[Use Cases](https://go.dev/solutions#use-cases)[Case Studies](https://go.dev/solutions#case-studies)[Get Started](https://learn.go.dev/)[Playground](https://play.golang.org)[Tour](https://tour.golang.org)[Stack Overflow](https://stackoverflow.com/questions/tagged/go?tab=Newest)[Help](https://go.dev/help)[Packages](https://pkg.go.dev)[Standard Library](/std)[Sub-repositories](/golang.org/x)[About Go Packages](https://pkg.go.dev/about)[About](https://go.dev/project)[Download](https://go.dev/dl/)[Blog](https://go.dev/blog)[Issue Tracker](https://github.com/golang/go/issues)[Release Notes](https://go.dev/doc/devel/release.html)[Brand Guidelines](https://go.dev/brand)[Code of Conduct](https://go.dev/conduct)[Connect](https://www.twitter.com/golang)[Twitter](https://www.twitter.com/golang)[GitHub](https://github.com/golang)[Slack](https://invite.slack.golangbridge.org/)[r/golang](https://reddit.com/r/golang)[Meetup](https://www.meetup.com/pro/go)[Golang Weekly](https://golangweekly.com/)
+
+- [Copyright](https://go.dev/copyright)
+- [Terms of Service](https://go.dev/tos)
+- [Privacy Policy](http://www.google.com/intl/en/policies/privacy/)
+- [Report an Issue](https://go.dev/s/pkgsite-feedback)
+- 
+
+ Theme Toggle 
+
+- 
+
+ Shortcuts Modal 
+
+https://google.com
+
+## Jump to
+
+Close
+
+## Keyboard shortcuts
+
+? : This menu/ : Search sitef or F : Jump toy or Y : Canonical URLClosego.dev uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic. [Learn more.](https://policies.google.com/technologies/cookies)Okay

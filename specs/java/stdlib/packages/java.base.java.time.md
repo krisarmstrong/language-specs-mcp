@@ -1,4 +1,31 @@
-Module[java.base](../../module-summary.html)
+java.time (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../index.html)
+- [Module](../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../preview-list.html)
+- [New](../../../new-list.html)
+- [Deprecated](../../../deprecated-list.html)
+- [Index](../../../index-files/index-1.html)
+- [Help](../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../search.html)Module[java.base](../../module-summary.html)
 
 # Package java.time
 
@@ -108,3 +135,9 @@ Since:1.8
 
 - Related PackagesPackageDescription[java.time.chrono](chrono/package-summary.html) Generic API for calendar systems other than the default ISO.[java.time.format](format/package-summary.html) Provides classes to print and parse dates and times.[java.time.temporal](temporal/package-summary.html) Access to date and time using fields and units, and date time adjusters.[java.time.zone](zone/package-summary.html) Support for time-zones and their rules.
 - All Classes and InterfacesInterfacesClassesEnum ClassesException ClassesClassDescription[Clock](Clock.html)A clock providing access to the current instant, date and time using a time-zone.[DateTimeException](DateTimeException.html)Exception used to indicate a problem while calculating a date-time.[DayOfWeek](DayOfWeek.html)A day-of-week, such as 'Tuesday'.[Duration](Duration.html)A time-based amount of time, such as '34.5 seconds'.[Instant](Instant.html)An instantaneous point on the time-line.[InstantSource](InstantSource.html)Provides access to the current instant.[LocalDate](LocalDate.html)A date without a time-zone in the ISO-8601 calendar system, such as `2007-12-03`.[LocalDateTime](LocalDateTime.html)A date-time without a time-zone in the ISO-8601 calendar system, such as `2007-12-03T10:15:30`.[LocalTime](LocalTime.html)A time without a time-zone in the ISO-8601 calendar system, such as `10:15:30`.[Month](Month.html)A month-of-year, such as 'July'.[MonthDay](MonthDay.html)A month-day in the ISO-8601 calendar system, such as `--12-03`.[OffsetDateTime](OffsetDateTime.html)A date-time with an offset from UTC/Greenwich in the ISO-8601 calendar system, such as `2007-12-03T10:15:30+01:00`.[OffsetTime](OffsetTime.html)A time with an offset from UTC/Greenwich in the ISO-8601 calendar system, such as `10:15:30+01:00`.[Period](Period.html)A date-based amount of time in the ISO-8601 calendar system, such as '2 years, 3 months and 4 days'.[Year](Year.html)A year in the ISO-8601 calendar system, such as `2007`.[YearMonth](YearMonth.html)A year-month in the ISO-8601 calendar system, such as `2007-12`.[ZonedDateTime](ZonedDateTime.html)A date-time with a time-zone in the ISO-8601 calendar system, such as `2007-12-03T10:15:30+01:00 Europe/Paris`.[ZoneId](ZoneId.html)A time-zone ID, such as `Europe/Paris`.[ZoneOffset](ZoneOffset.html)A time-zone offset from Greenwich/UTC, such as `+02:00`.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

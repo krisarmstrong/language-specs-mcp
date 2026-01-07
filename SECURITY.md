@@ -42,7 +42,7 @@ FETCH_INSECURE=1 python scripts/fetch.py
 
 Known security considerations:
 
-- **MCP SDK**: Check for updates regularly
+- **MCP SDK**: Contains a ReDoS vulnerability ([GHSA-8r9q-7v3j-jr4g](https://github.com/advisories/GHSA-8r9q-7v3j-jr4g)) - upstream issue, no fix available yet. Monitor for updates.
 - **Node.js dependencies**: Run `npm audit` to check for vulnerabilities
 - **Python dependencies**: Minimal external dependencies used
 

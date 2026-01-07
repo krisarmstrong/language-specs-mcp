@@ -1,3 +1,14 @@
+HTML-validate - Require a specific case for DOCTYPE (doctype-style)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -50,3 +61,5 @@ This rule takes an optional object:
 
 - `uppercase` requires DOCTYPE to be uppercase.
 - `lowercase` requires DOCTYPE to be lowercase.
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/doctype-style.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/doctype-style.ts)

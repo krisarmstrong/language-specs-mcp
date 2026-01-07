@@ -1,4 +1,31 @@
-Module[java.base](../../../module-summary.html)
+java.util.random (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../index.html)
+- [Module](../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../preview-list.html)
+- [New](../../../../new-list.html)
+- [Deprecated](../../../../deprecated-list.html)
+- [Index](../../../../index-files/index-1.html)
+- [Help](../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../search.html)Module[java.base](../../../module-summary.html)
 
 # Package java.util.random
 
@@ -90,3 +117,9 @@ Since:17
 
 - Related PackagesPackageDescription[java.util](../package-summary.html)Contains the collections framework, some internationalization support classes, a service loader, properties, random number generation, string parsing and scanning classes, base64 encoding and decoding, a bit array, and several miscellaneous utility classes.
 - All Classes and InterfacesInterfacesClassesClassDescription[RandomGenerator](RandomGenerator.html)The [RandomGenerator](RandomGenerator.html) interface is designed to provide a common protocol for objects that generate random or (more typically) pseudorandom sequences of numbers (or Boolean values).[RandomGenerator.ArbitrarilyJumpableGenerator](RandomGenerator.ArbitrarilyJumpableGenerator.html)This interface is designed to provide a common protocol for objects that generate sequences of pseudorandom values and can easily jump forward, by an arbitrary amount, to a distant point in the state cycle.[RandomGenerator.JumpableGenerator](RandomGenerator.JumpableGenerator.html)This interface is designed to provide a common protocol for objects that generate pseudorandom values and can easily jump forward, by a moderate amount (ex. 264) to a distant point in the state cycle.[RandomGenerator.LeapableGenerator](RandomGenerator.LeapableGenerator.html)This interface is designed to provide a common protocol for objects that generate sequences of pseudorandom values and can easily not only jump but also leap forward, by a large amount (ex. 2128), to a very distant point in the state cycle.[RandomGenerator.SplittableGenerator](RandomGenerator.SplittableGenerator.html)This interface is designed to provide a common protocol for objects that generate sequences of pseudorandom values and can be split into two objects (the original one and a new one) each of which obey that same protocol (and therefore can be recursively split indefinitely).[RandomGenerator.StreamableGenerator](RandomGenerator.StreamableGenerator.html)The [RandomGenerator.StreamableGenerator](RandomGenerator.StreamableGenerator.html) interface augments the [RandomGenerator](RandomGenerator.html) interface to provide methods that return streams of [RandomGenerator](RandomGenerator.html) objects.[RandomGeneratorFactory](RandomGeneratorFactory.html)<T extends [RandomGenerator](RandomGenerator.html)>This is a factory class for generating multiple random number generators of a specific [algorithm](package-summary.html#algorithms).
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

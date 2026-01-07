@@ -1,90 +1,203 @@
-package chacha8rand // import "internal/chacha8rand"
+C2SP/chacha8rand.md at main · C2SP/C2SP · GitHub[Skip to content](#start-of-content)
 
-Package chacha8rand implements a pseudorandom generator based on ChaCha8.
-It is used by both runtime and math/rand/v2 and must have minimal dependencies.
+## Navigation Menu
 
-ChaCha8 is ChaCha with 8 rounds. See
-https://cr.yp.to/chacha/chacha-20080128.pdf.
+Toggle navigation/[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2FC2SP%2FC2SP%2Fblob%2Fmain%2Fchacha8rand.md)Appearance settings
 
-ChaCha8 operates on a 4x4 matrix of uint32 values, initially set to:
+- Platform
 
-    const1 const2 const3 const4
-    seed   seed   seed   seed
-    seed   seed   seed   seed
-    counter64     0      0
+  - AI CODE CREATION
 
-We use the same constants as ChaCha20 does, a random seed, and a counter.
-Running ChaCha8 on this input produces a 4x4 matrix of pseudo-random values with
-as much entropy as the seed.
+    - [GitHub CopilotWrite better code with AI](https://github.com/features/copilot)
+    - [GitHub SparkBuild and deploy intelligent apps](https://github.com/features/spark)
+    - [GitHub ModelsManage and compare prompts](https://github.com/features/models)
+    - [MCP RegistryNewIntegrate external tools](https://github.com/mcp)
 
-Given SIMD registers that can hold N uint32s, it is possible to run N ChaCha8
-block transformations in parallel by filling the first register with the N
-copies of const1, the second with N copies of const2, and so on, and then
-running the operations.
+  - DEVELOPER WORKFLOWS
 
-Each iteration of ChaCha8Rand operates over 32 bytes of input and produces 992
-bytes of RNG output, plus 32 bytes of input for the next iteration.
+    - [ActionsAutomate any workflow](https://github.com/features/actions)
+    - [CodespacesInstant dev environments](https://github.com/features/codespaces)
+    - [IssuesPlan and track work](https://github.com/features/issues)
+    - [Code ReviewManage code changes](https://github.com/features/code-review)
 
-The 32 bytes of input are used as a ChaCha8 key, with a zero nonce, to produce
-1024 bytes of output (16 blocks, with counters 0 to 15). First, for each block,
-the values 0x61707865, 0x3320646e, 0x79622d32, 0x6b206574 are subtracted from
-the 32-bit little-endian words at position 0, 1, 2, and 3 respectively, and an
-increasing counter starting at zero is subtracted from each word at position 12.
-Then, this stream is permuted such that for each sequence of four blocks,
-first we output the first four bytes of each block, then the next four bytes
-of each block, and so on. Finally, the last 32 bytes of output are used as the
-input of the next iteration, and the remaining 992 bytes are the RNG output.
+  - APPLICATION SECURITY
 
-See https://c2sp.org/chacha8rand for additional details.
+    - [GitHub Advanced SecurityFind and fix vulnerabilities](https://github.com/security/advanced-security)
+    - [Code securitySecure your code as you build](https://github.com/security/advanced-security/code-security)
+    - [Secret protectionStop leaks before they start](https://github.com/security/advanced-security/secret-protection)
 
-Normal ChaCha20 implementations for encryption use this same parallelism
-but then have to deinterlace the results so that it appears the blocks were
-generated separately. For the purposes of generating random numbers, the
-interlacing is fine. We are simply locked in to preserving the 4-way interlacing
-in any future optimizations.
+  - EXPLORE
 
-FUNCTIONS
+    - [Why GitHub](https://github.com/why-github)
+    - [Documentation](https://docs.github.com)
+    - [Blog](https://github.blog)
+    - [Changelog](https://github.blog/changelog)
+    - [Marketplace](https://github.com/marketplace)
 
-func Marshal(s *State) []byte
-    Marshal marshals the state into a byte slice. Marshal and Unmarshal are
-    functions, not methods, so that they will not be linked into the runtime
-    when it uses the State struct, since the runtime does not need these.
+[View all features](https://github.com/features)
+- Solutions
 
-func Unmarshal(s *State, data []byte) error
-    Unmarshal unmarshals the state from a byte slice.
+  - BY COMPANY SIZE
 
+    - [Enterprises](https://github.com/enterprise)
+    - [Small and medium teams](https://github.com/team)
+    - [Startups](https://github.com/enterprise/startups)
+    - [Nonprofits](https://github.com/solutions/industry/nonprofits)
 
-TYPES
+  - BY USE CASE
 
-type State struct {
-	// Has unexported fields.
-}
-    A State holds the state for a single random generator. It must be used
-    from one goroutine at a time. If used by multiple goroutines at a time,
-    the goroutines may see the same random values, but the code will not crash
-    or cause out-of-bounds memory accesses.
+    - [App Modernization](https://github.com/solutions/use-case/app-modernization)
+    - [DevSecOps](https://github.com/solutions/use-case/devsecops)
+    - [DevOps](https://github.com/solutions/use-case/devops)
+    - [CI/CD](https://github.com/solutions/use-case/ci-cd)
+    - [View all use cases](https://github.com/solutions/use-case)
 
-func (s *State) Init(seed [32]byte)
-    Init seeds the State with the given seed value.
+  - BY INDUSTRY
 
-func (s *State) Init64(seed [4]uint64)
-    Init64 seeds the state with the given seed value.
+    - [Healthcare](https://github.com/solutions/industry/healthcare)
+    - [Financial services](https://github.com/solutions/industry/financial-services)
+    - [Manufacturing](https://github.com/solutions/industry/manufacturing)
+    - [Government](https://github.com/solutions/industry/government)
+    - [View all industries](https://github.com/solutions/industry)
 
-func (s *State) Next() (uint64, bool)
-    Next returns the next random value, along with a boolean indicating whether
-    one was available. If one is not available, the caller should call Refill
-    and then repeat the call to Next.
+[View all solutions](https://github.com/solutions)
+- Resources
 
-    Next is //go:nosplit to allow its use in the runtime with per-m data without
-    holding the per-m lock.
+  - EXPLORE BY TOPIC
 
-func (s *State) Refill()
-    Refill refills the state with more random values. After a call to Refill,
-    an immediate call to Next will succeed (unless multiple goroutines are
-    incorrectly sharing a state).
+    - [AI](https://github.com/resources/articles?topic=ai)
+    - [Software Development](https://github.com/resources/articles?topic=software-development)
+    - [DevOps](https://github.com/resources/articles?topic=devops)
+    - [Security](https://github.com/resources/articles?topic=security)
+    - [View all topics](https://github.com/resources/articles)
 
-func (s *State) Reseed()
-    Reseed reseeds the state with new random values. After a call to Reseed,
-    any previously returned random values have been erased from the memory of
-    the state and cannot be recovered.
+  - EXPLORE BY TYPE
 
+    - [Customer stories](https://github.com/customer-stories)
+    - [Events & webinars](https://github.com/resources/events)
+    - [Ebooks & reports](https://github.com/resources/whitepapers)
+    - [Business insights](https://github.com/solutions/executive-insights)
+    - [GitHub Skills](https://skills.github.com)
+
+  - SUPPORT & SERVICES
+
+    - [Documentation](https://docs.github.com)
+    - [Customer support](https://support.github.com)
+    - [Community forum](https://github.com/orgs/community/discussions)
+    - [Trust center](https://github.com/trust-center)
+    - [Partners](https://github.com/partners)
+
+- Open Source
+
+  - COMMUNITY
+
+    - [GitHub SponsorsFund open source developers](https://github.com/sponsors)
+
+  - PROGRAMS
+
+    - [Security Lab](https://securitylab.github.com)
+    - [Maintainer Community](https://maintainers.github.com)
+    - [Accelerator](https://github.com/accelerator)
+    - [Archive Program](https://archiveprogram.github.com)
+
+  - REPOSITORIES
+
+    - [Topics](https://github.com/topics)
+    - [Trending](https://github.com/trending)
+    - [Collections](https://github.com/collections)
+
+- Enterprise
+
+  - ENTERPRISE SOLUTIONS
+
+    - [Enterprise platformAI-powered developer platform](https://github.com/enterprise)
+
+  - AVAILABLE ADD-ONS
+
+    - [GitHub Advanced SecurityEnterprise-grade security features](https://github.com/security/advanced-security)
+    - [Copilot for BusinessEnterprise-grade AI features](https://github.com/features/copilot/copilot-business)
+    - [Premium SupportEnterprise-grade 24/7 support](https://github.com/premium-support)
+
+- [Pricing](https://github.com/pricing)
+
+Search or jump to...
+
+# Search code, repositories, users, issues, pull requests...
+
+ Search Clear
+
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
+
+#  Provide feedback 
+
+We read every piece of feedback, and take your input very seriously.
+
+Include my email address so I can be contacted Cancel  Submit feedback 
+
+#  Saved searches 
+
+## Use saved searches to filter your results more quickly
+
+NameQuery
+
+ To see all available qualifiers, see our [documentation](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax). 
+
+ Cancel  Create saved search [Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2FC2SP%2FC2SP%2Fblob%2Fmain%2Fchacha8rand.md)[Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&source=header-repo&source_repo=C2SP%2FC2SP)Appearance settingsResetting focusYou signed in with another tab or window. Reload to refresh your session.You signed out in another tab or window. Reload to refresh your session.You switched accounts on another tab or window. Reload to refresh your session.Dismiss alert{{ message }}[C2SP](/C2SP)/[C2SP](/C2SP/C2SP)Public
+
+- [Notifications](/login?return_to=%2FC2SP%2FC2SP)You must be signed in to change notification settings
+- [Fork
+    72](/login?return_to=%2FC2SP%2FC2SP)
+- [Star
+          498](/login?return_to=%2FC2SP%2FC2SP)
+
+- [Code](/C2SP/C2SP)
+- [Issues
+          28](/C2SP/C2SP/issues)
+- [Pull requests
+          11](/C2SP/C2SP/pulls)
+- [Actions](/C2SP/C2SP/actions)
+- 
+
+### 
+
+[Security
+          
+  
+  
+    
+  
+    
+      
+
+              Uh oh!
+
+              There was an error while loading. Please reload this page](/C2SP/C2SP/security).
+
+- [Insights](/C2SP/C2SP/pulse)
+
+Additional navigation options
+
+- [Code](/C2SP/C2SP)
+- [Issues](/C2SP/C2SP/issues)
+- [Pull requests](/C2SP/C2SP/pulls)
+- [Actions](/C2SP/C2SP/actions)
+- [Security](/C2SP/C2SP/security)
+- [Insights](/C2SP/C2SP/pulse)
+
+## Footer
+
+https://github.com © 2026 GitHub, Inc. 
+
+### Footer navigation
+
+- [Terms](https://docs.github.com/site-policy/github-terms/github-terms-of-service)
+- [Privacy](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement)
+- [Security](https://github.com/security)
+- [Status](https://www.githubstatus.com/)
+- [Community](https://github.community/)
+- [Docs](https://docs.github.com/)
+- [Contact](https://support.github.com?tags=dotcom-footer)
+-  Manage cookies 
+-  Do not share my personal information 
+
+ You can’t perform that action at this time.

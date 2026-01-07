@@ -1,3 +1,14 @@
+HTML-validate - Require a specific case for attribute names (attr-case)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -85,3 +96,5 @@ With this option enabled the following is valid despite camelcase attribute:
 ```
 
 Disable this option if you want to validate attributes on foreign elements as well.
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/attr-case.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/attr-case.ts)

@@ -1,4 +1,31 @@
-Module[jdk.sctp](../../../../module-summary.html)
+com.sun.nio.sctp (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../../index.html)
+- [Module](../../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../../preview-list.html)
+- [New](../../../../../new-list.html)
+- [Deprecated](../../../../../deprecated-list.html)
+- [Index](../../../../../index-files/index-1.html)
+- [Help](../../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - Related Packages
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- Related Packages | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../../search.html)Module[jdk.sctp](../../../../module-summary.html)
 
 # Package com.sun.nio.sctp
 
@@ -19,3 +46,9 @@ package com.sun.nio.sctpA Java API for Stream Control Transport Protocol.
 Since:1.7
 
 - All Classes and InterfacesInterfacesClassesEnum ClassesException ClassesClassDescription[AbstractNotificationHandler](AbstractNotificationHandler.html)<T>A skeletal handler that consumes notifications and continues.[Association](Association.html)A class that represents an SCTP association.[AssociationChangeNotification](AssociationChangeNotification.html)Notification emitted when an association has either opened or closed.[AssociationChangeNotification.AssocChangeEvent](AssociationChangeNotification.AssocChangeEvent.html)Defines the type of change event that happened to the association.[HandlerResult](HandlerResult.html)Defines notification handler results.[IllegalReceiveException](IllegalReceiveException.html)Unchecked exception thrown when an attempt is made to invoke the `receive` method of [SctpChannel](SctpChannel.html) or [SctpMultiChannel](SctpMultiChannel.html) from a notification handler.[IllegalUnbindException](IllegalUnbindException.html)Unchecked exception thrown when an attempt is made to remove an address that is not bound to the channel, or remove an address from a channel that has only one address bound to it.[InvalidStreamException](InvalidStreamException.html)Unchecked exception thrown when an attempt is made to send a message to an invalid stream.[MessageInfo](MessageInfo.html)The `MessageInfo` class provides additional ancillary information about messages.[Notification](Notification.html)A notification from the SCTP stack.[NotificationHandler](NotificationHandler.html)<T>A handler for consuming notifications from the SCTP stack.[PeerAddressChangeNotification](PeerAddressChangeNotification.html)Notification emitted when a destination address on a multi-homed peer encounters a change.[PeerAddressChangeNotification.AddressChangeEvent](PeerAddressChangeNotification.AddressChangeEvent.html)Defines the type of address change event that occurred to the destination address on a multi-homed peer when it encounters a change of interface details.[SctpChannel](SctpChannel.html)A selectable channel for message-oriented connected SCTP sockets.[SctpMultiChannel](SctpMultiChannel.html)A selectable channel for message-oriented SCTP sockets.[SctpServerChannel](SctpServerChannel.html)A selectable channel for message-oriented listening SCTP sockets.[SctpSocketOption](SctpSocketOption.html)<T>A socket option associated with an SCTP channel.[SctpStandardSocketOptions](SctpStandardSocketOptions.html)SCTP channels supports the socket options defined by this class (as well as those listed in the particular channel class) and may support additional Implementation specific socket options.[SctpStandardSocketOptions.InitMaxStreams](SctpStandardSocketOptions.InitMaxStreams.html)This class is used to set the maximum number of inbound/outbound streams used by the local endpoint during association initialization.[SendFailedNotification](SendFailedNotification.html)Notification emitted when a send failed notification has been received.[ShutdownNotification](ShutdownNotification.html)Notification emitted when a peer shuts down an association.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

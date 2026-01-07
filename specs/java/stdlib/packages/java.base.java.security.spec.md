@@ -1,4 +1,31 @@
-Module[java.base](../../../module-summary.html)
+java.security.spec (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../index.html)
+- [Module](../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../preview-list.html)
+- [New](../../../../new-list.html)
+- [Deprecated](../../../../deprecated-list.html)
+- [Index](../../../../index-files/index-1.html)
+- [Help](../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../search.html)Module[java.base](../../../module-summary.html)
 
 # Package java.security.spec
 
@@ -28,3 +55,9 @@ Since:1.2
  Digital Signature Algorithm (EdDSA)](https://tools.ietf.org/html/rfc8032).[EdECPrivateKeySpec](EdECPrivateKeySpec.html)A class representing elliptic curve private keys as defined in [RFC 8032: Edwards-Curve
  Digital Signature Algorithm (EdDSA)](https://tools.ietf.org/html/rfc8032), including the curve and other algorithm parameters.[EdECPublicKeySpec](EdECPublicKeySpec.html)A class representing elliptic curve public keys as defined in [RFC 8032: Edwards-Curve
  Digital Signature Algorithm (EdDSA)](https://tools.ietf.org/html/rfc8032), including the curve and other algorithm parameters.[EllipticCurve](EllipticCurve.html)This immutable class holds the necessary values needed to represent an elliptic curve.[EncodedKeySpec](EncodedKeySpec.html)This class represents a public or private key in encoded format.[InvalidKeySpecException](InvalidKeySpecException.html)This is the exception for invalid key specifications.[InvalidParameterSpecException](InvalidParameterSpecException.html)This is the exception for invalid parameter specifications.[KeySpec](KeySpec.html)A (transparent) specification of the key material that constitutes a cryptographic key.[MGF1ParameterSpec](MGF1ParameterSpec.html)This class specifies the set of parameters used with mask generation function MGF1 in OAEP Padding and RSASSA-PSS signature scheme, as defined in the [PKCS#1 v2.2](https://tools.ietf.org/rfc/rfc8017.txt) standard.[NamedParameterSpec](NamedParameterSpec.html)This class is used to specify any algorithm parameters that are determined by a standard name.[PKCS8EncodedKeySpec](PKCS8EncodedKeySpec.html)This class represents the ASN.1 encoding of a private key, encoded according to the ASN.1 type `PrivateKeyInfo`.[PSSParameterSpec](PSSParameterSpec.html)This class specifies a parameter spec for the RSASSA-PSS signature scheme, as defined in the [PKCS#1 v2.2](https://tools.ietf.org/rfc/rfc8017.txt) standard.[RSAKeyGenParameterSpec](RSAKeyGenParameterSpec.html)This class specifies the set of parameters used to generate an RSA key pair.[RSAMultiPrimePrivateCrtKeySpec](RSAMultiPrimePrivateCrtKeySpec.html)This class specifies an RSA multi-prime private key, as defined in the [PKCS#1 v2.2](https://tools.ietf.org/rfc/rfc8017.txt) standard using the Chinese Remainder Theorem (CRT) information values for efficiency.[RSAOtherPrimeInfo](RSAOtherPrimeInfo.html)This class represents the triplet (prime, exponent, and coefficient) inside RSA's OtherPrimeInfo structure, as defined in the [PKCS#1 v2.2](https://tools.ietf.org/rfc/rfc8017.txt) standard.[RSAPrivateCrtKeySpec](RSAPrivateCrtKeySpec.html)This class specifies an RSA private key, as defined in the [PKCS#1 v2.2](https://tools.ietf.org/rfc/rfc8017.txt) standard, using the Chinese Remainder Theorem (CRT) information values for efficiency.[RSAPrivateKeySpec](RSAPrivateKeySpec.html)This class specifies an RSA private key.[RSAPublicKeySpec](RSAPublicKeySpec.html)This class specifies an RSA public key.[X509EncodedKeySpec](X509EncodedKeySpec.html)This class represents the ASN.1 encoding of a public key, encoded according to the ASN.1 type `SubjectPublicKeyInfo`.[XECPrivateKeySpec](XECPrivateKeySpec.html)A class representing elliptic curve private keys as defined in RFC 7748, including the curve and other algorithm parameters.[XECPublicKeySpec](XECPublicKeySpec.html)A class representing elliptic curve public keys as defined in RFC 7748, including the curve and other algorithm parameters.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

@@ -1,4 +1,31 @@
-Module[java.base](../../../module-summary.html)
+java.lang.ref (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../index.html)
+- [Module](../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../preview-list.html)
+- [New](../../../../new-list.html)
+- [Deprecated](../../../../deprecated-list.html)
+- [Index](../../../../index-files/index-1.html)
+- [Help](../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../search.html)Module[java.base](../../../module-summary.html)
 
 # Package java.lang.ref
 
@@ -32,3 +59,9 @@ Since:1.2
 
 - Related PackagesPackageDescription[java.lang](../package-summary.html)Provides classes that are fundamental to the design of the Java programming language.
 - All Classes and InterfacesInterfacesClassesClassDescription[Cleaner](Cleaner.html)`Cleaner` manages a set of object references and corresponding cleaning actions.[Cleaner.Cleanable](Cleaner.Cleanable.html)`Cleanable` represents an object and a cleaning action registered in a `Cleaner`.[PhantomReference](PhantomReference.html)<T>Phantom reference objects, which are enqueued after the collector determines that their referents may otherwise be reclaimed.[Reference](Reference.html)<T>Abstract base class for reference objects.[ReferenceQueue](ReferenceQueue.html)<T>Reference queues, to which registered reference objects are appended by the garbage collector after the appropriate reachability changes are detected.[SoftReference](SoftReference.html)<T>Soft reference objects, which are cleared at the discretion of the garbage collector in response to memory demand.[WeakReference](WeakReference.html)<T>Weak reference objects, which do not prevent their referents from being made finalizable, finalized, and then reclaimed.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

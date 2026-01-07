@@ -1,3 +1,14 @@
+HTML-validate - Require SRI for resources (require-sri)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -144,3 +155,5 @@ error: SRI "integrity" attribute is required on <link> element (require-sri) at 
 
 - 9.2.1 - only tests `<link>` with `rel` set to one of `stylesheet`, `preload` or `modulepreload`.
 - 7.1.0 - `include` and `exclude` options added
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/require-sri.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/require-sri.ts)

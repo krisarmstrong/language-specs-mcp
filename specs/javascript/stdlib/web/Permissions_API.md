@@ -1,112 +1,243 @@
-# Permissions API
+Using the Permissions API to Detect How Often Users Allow or Deny Camera Accesshttps://addpipe.com/
 
-Note: This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+https://addpipe.com/
+- Product[Audio Recorder](https://addpipe.com/audio-recorder)[Video Recorder](https://addpipe.com/video-recorder)[Screen Recorder](https://addpipe.com/screen-recorder)[Recording Client](https://addpipe.com/recording-client)[Infrastructure](https://addpipe.com/infrastructure)[Security & Privacy](https://addpipe.com/security-and-privacy/)
+- Use Cases[Legal and Compliance Recordings](https://addpipe.com/use-cases/legal-and-compliance-recordings)[Online Proctoring](https://addpipe.com/use-cases/online-proctored-exams)[Remote Identity Verification (KYC)](https://addpipe.com/use-cases/remote-identity-verification-kyc)[User-Generated Content (UGC) for Marketing](https://addpipe.com/use-cases/user-generated-content-ugc-for-marketing)[Video Interviews Resumes](https://addpipe.com/use-cases/video-interviews-resumes)
+- [Pricing](https://addpipe.com/pricing)
+- [About](https://addpipe.com/about)
+- [Blog](https://blog.addpipe.com/)
+- [Integrations](https://addpipe.com/integrations)
+- [Sign in](https://dashboard.addpipe.com/signin)
+- [Get Started](https://dashboard.addpipe.com/signup)
 
-The Permissions API provides a consistent programmatic way to query the status of API permissions attributed to the current context, such as a web page or worker. For example, it can be used to determine if permission to access a particular feature or API has been granted, denied, or requires specific user permission.
+2 May 2019 / [getUserMedia](/tag/getusermedia/)
 
-## In this article
+# Using the Permissions API to Detect How Often Users Allow or Deny Camera Access
 
-- [Concepts and usage](#concepts_and_usage)
-- [Interfaces](#interfaces)
-- [Examples](#examples)
-- [Specifications](#specifications)
-- [Browser compatibility](#browser_compatibility)
-- [See also](#see_also)
+9 May update: we've updated the TTA & Permission API numbers to reflect the same 100k getUserMedia() calls dataset. The updated numbers result in the same conclusions.
 
-## [Concepts and usage](#concepts_and_usage)
+While building our new [getUserMedia() Logs section](https://blog.addpipe.com/getusermedia-recorder-logs/) two questions came up:
 
-Historically different APIs handle their own permissions inconsistently — for example the [Notifications API](/en-US/docs/Web/API/Notifications_API) provided its own methods for requesting permissions and checking permission status, whereas the [Geolocation API](/en-US/docs/Web/API/Geolocation) did not. The Permissions API provides the tools to allow developers to implement a consistent user experience for working with permissions.
+1. How often is the permissions dialog shown in Chrome and Firefox?
+2. When it IS shown, how often do users deny/allow access or dismiss it altogether?
 
-The permissions from this API effectively aggregate all security restrictions for the context, including any requirement for an API to be used in a secure context, [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) restrictions applied to the document, requirements for user interaction, and user prompts. So, for example, if an API is restricted by permissions policy, the returned permission would be `denied` and the user would not be prompted for access.
+To calculate the above stats we knew exactly how many of the `getUserMedia()` attempts were denied or allowed but we did not know whether the response was the result of human interaction with the permissions dialog or an automatic response as a result of a previously given persistent permission.
 
-The `permissions` property has been made available on the [Navigator](/en-US/docs/Web/API/Navigator) object, both in the standard browsing context and the worker context ([WorkerNavigator](/en-US/docs/Web/API/WorkerNavigator) — so permission checks are available inside workers), and returns a [Permissions](/en-US/docs/Web/API/Permissions) object that provides access to the Permissions API functionality.
+The browsers (Chrome & Firefox) did not give us any obvious information so we decided to use the time passed between calling `getUserMedia()` and receiving a success or failure promise. We called this interval Time To Action.
 
-Once you have this object you can then use the [Permissions.query()](/en-US/docs/Web/API/Permissions/query) method to return a promise that resolves with the [PermissionStatus](/en-US/docs/Web/API/PermissionStatus) for a specific API.
+## Using `getUserMedia()` response times to detect whether or not the permission dialog is shown
 
-### [Requesting permission](#requesting_permission)
+With this measurement in place, the next question was where do automatic responses end and manual interactions start? On a scale from 0 ms to 20.000 ms where do we draw the line in the sand between them?
 
-If the permission status is `prompt`, the user must acknowledge a prompt to grant access to the feature.
+Our first attempt at setting a limit was pretty simple: in our testing 1000ms was about the fastest we could interact with the permission dialog so we decided to consider everything below 1000ms an automatic response based on a previous allow/deny permission and consider everything above... a manual human interaction with the Chrome/Firefox permission dialog. 
 
-The mechanism that triggers this prompt will depend on the specific API — it is not defined as part of the Permissions API. Generally the trigger is code calling a method to access or open the feature, or that registers for notifications from the feature that will subsequently access it.
+But the data did not suggest such a limit existed:
 
-Note that not all features require a prompt. Permission might be granted by a `Permission Policy`, implicitly by [transient activation](/en-US/docs/Glossary/Transient_activation), or via some other mechanism.
+This chart plots the time it takes for a `getUserMedia()`call to return any kind of response.
 
-### [Revoking permission](#revoking_permission)
+When plotting the response times of our last 100k `getUserMedia()` calls there's no obvious line in the sand. We hoped to see a big dip between 200-300ms (where we imagined automatic responses would end) and 1.2-1.5 seconds (where we expected manual interactions to start) but no such dip exists.
 
-Permission revocation is not managed by the API. More specifically, a [Permissions.revoke()](/en-US/docs/Web/API/Permissions/revoke) method was proposed, but has since been removed from those browsers where it was implemented.
+Venturing to use a 1000ms limit to distinguish between who gets the prompt and who doesn't results in the following conclusions when using the data in the graph above.
 
-Users can manually remove permission for particular sites using browser settings:
+Chrome:
 
-- Firefox: Hamburger Menu > Settings > Privacy & Security > Permissions (then select the Settings button for the permission of interest).
-- Chrome: Hamburger Menu > Settings > Show advanced settings. In the Privacy section, click Content Settings. In the resulting dialog, find the Location section and select Ask when a site tries to…. Finally, click Manage Exceptions and remove the permissions you granted to the sites you are interested in.
+- 67% of the responses are under 1000ms => they're not getting the prompt. 
+- 33% of the responses are above 1000ms => they're getting the prompt.
 
-### [Permission-aware APIs](#permission-aware_apis)
+Firefox:
 
-Not all APIs' permission statuses can be queried using the Permissions API. A non-exhaustive list of permission-aware APIs includes:
+- 35% of the responses are under 1000ms => they're not getting the prompt. 
+- 65% of the responses are above 1000ms => they're getting the prompt.
 
-- [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API): `background-sync` (should always be granted)
-- [Clipboard API](/en-US/docs/Web/API/Clipboard_API#security_considerations): `clipboard-read`, `clipboard-write`
-- [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API): `compute-pressure`
-- [Geolocation API](/en-US/docs/Web/API/Geolocation_API#security_considerations): `geolocation`
-- [Local Font Access API](/en-US/docs/Web/API/Local_Font_Access_API): `local-fonts`
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API): `microphone`, `camera`
-- [Notifications API](/en-US/docs/Web/API/Notifications_API): `notifications`
-- [Payment Handler API](/en-US/docs/Web/API/Payment_Handler_API): `payment-handler`
-- [Push API](/en-US/docs/Web/API/Push_API): `push`
-- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): `captured-surface-control`, `display-capture`
-- [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API): `screen-wake-lock`
-- [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs): `accelerometer`, `gyroscope`, `magnetometer`, `ambient-light-sensor`
-- [Storage Access API](/en-US/docs/Web/API/Storage_Access_API): `storage-access`, `top-level-storage-access`
-- [Storage API](/en-US/docs/Web/API/Storage_API): `persistent-storage`
-- [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API): `bluetooth`
-- [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API): `midi`
-- [Window Management API](/en-US/docs/Web/API/Window_Management_API): `window-management`
+As we'll see these percentages are relatively far from the real ones.
 
-## [Interfaces](#interfaces)
+The data does confirm the differences between Chrome's and Firefox's respective permission persistence. Chrome's permissions are persistent while Firefox's Allow permission is not persistent by default. This is why Firefox responses are heavily distributed more to the right with about 50% requests taking more than 2 seconds to resolve.
 
-[Permissions](/en-US/docs/Web/API/Permissions)
+PermissionChromeFirefoxAllowpersistentnot persistentDenypersistenttemporarily persistentDismissnot persistentyou can't dismiss in Firefox
 
-Provides the core Permission API functionality, such as methods for querying and revoking permissions.
+## The Permissions API
 
-[PermissionStatus](/en-US/docs/Web/API/PermissionStatus)
+Uncertain that we could present reliable numbers we've looked for other solutions, that's when we discovered the [Permissions API](https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API).
 
-Provides access to the current status of a permission, and an event handler to respond to changes in permission status.
+As opposed to the binary info (prompt/no prompt) we tried to deduct above, the Permissions API gives us accurate granular information about the state of both the microphone and camera permissions BEFORE calling `getUserMedia()`. 
 
-### [Extensions to other interfaces](#extensions_to_other_interfaces)
+More exactly it gives us 3 values for each permission (camera/microphone):
 
-[Navigator.permissions](/en-US/docs/Web/API/Navigator/permissions) and [WorkerNavigator.permissions](/en-US/docs/Web/API/WorkerNavigator/permissions)Read only
+- prompt: the browser has no record of a persistent permission having been given so the user will be shown a permissions dialogue
+- granted: the user has previously given permission and the answer is persistent
+- denied: the user has previously denied permission and the answer is persistent
 
-Provides access to the [Permissions](/en-US/docs/Web/API/Permissions) object from the main context and worker context respectively.
+On top of that the camera and microphone parts of the Permissions API [have been implemented since Chrome 64 (January 2018)](https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API#Browser_compatibility) so they are now widely supported by the Chrome user base.
 
-## [Examples](#examples)
+Here's some sample code to run in the Chrome console:
 
-We have created an example called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages), or read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
+```
+navigator.permissions.query({name:'camera'}).then(function(result) {
+    alert(result.state);
+    if (result.state === 'granted') {
+        //permission has already been granted, no prompt is shown
+    } else if (result.state === 'prompt') {
+       //there's no peristent permission registered, will be showing the prompt
+    } else if (result.state === 'denied') {
+       //permission has been denied
+    }
+});
+```
 
-The [Permissions.query() example](/en-US/docs/Web/API/Permissions/query#test_support_for_various_permissions) also so shows code that tests most permissions on the current browser and logs the result.
+Looking at the Permissions API data from Chrome from the same 100k `getUserMedia()` calls we can confidently say that:
 
-## [Specifications](#specifications)
+- only about 21% of the `getUserMedia()` calls on Chrome on our platform resulted in a prompt.This number will strongly depend on your use case. Our platform does video recordings and our clients' use case favors repeat video recordings during a session (and thus repeat `getUserMedia()` calls). End users will only be prompted for permission to access the camera and microphone once - the 1st time they use the recorder - as Chrome's permissions are persistent. 
+- of those who did get the permissions prompt 10% denied access or dismissed the dialog (dismissing is possible in Chrome) resulting in a 2.3% percentage across our last 100k `getUserMedia()` calls. This number is more steady between use cases.
 
-Specification[Permissions](https://w3c.github.io/permissions/)
+The 21% number we now got on Chrome is very different than the 33% we got by drawing a line in the sand at 1000ms. Big difference! The cause? Camera & microphone initialization times vary a lot as we'll see in a blog post I'm preparing.
 
-## [Browser compatibility](#browser_compatibility)
+Since launching the new [getUserMedia() Logs section](https://blog.addpipe.com/getusermedia-recorder-logs/) we've made these stats available to our users. The Pipe platform will show [in the account area](https://addpipe.com/logs):
 
-### [api.Permissions](#api.Permissions)
+- how often your Chrome users get to see the prompt
+- how often they dismiss the dialog
+- how often they deny access
 
-### [api.Navigator.permissions](#api.Navigator.permissions)
+Here's an example where in 12.1% of cases the dialog is shown and in 9.15% of those cases the user denies access or dismisses the dialog (1.1% out of 26799):
 
-### [api.WorkerNavigator.permissions](#api.WorkerNavigator.permissions)
+`getUserMedia()` stats shown in the Pipe account area
 
-## [See also](#see_also)
+#### [Octavian](/author/octavn/)
 
-- [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)
-- [Using the Permissions API to Detect How Often Users Allow or Deny Camera Access](https://blog.addpipe.com/using-permissions-api-to-detect-getusermedia-responses/)
-- [Notification.permission](/en-US/docs/Web/API/Notification/permission_static)
-- [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)
+Read [more posts](/author/octavn/) by this author.
 
-## Help improve MDN
+[Read More](/author/octavn/)/webcam-tester-library/
 
-Was this page helpful to you?YesNo[Learn how to contribute](/en-US/docs/MDN/Community/Getting_started)
+## 
 
- This page was last modified on ⁨Sep 20, 2025⁩ by [MDN contributors](/en-US/docs/Web/API/Permissions_API/contributors.txt). 
+[Introducing the Webcam Tester Library: Test Webcams and Microphones
+            
+                Testing camera and microphone functionality in web browsers has always been a challenge for developers building video recording applications, video conferencing tools, or any web app that relies on getUserMedia. How many times](/webcam-tester-library/)
 
-[View this page on GitHub](https://github.com/mdn/content/blob/main/files/en-us/web/api/permissions_api/index.md?plain=1) • [Report a problem with this content](https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPermissions_API&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Fpermissions_api%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPermissions_API%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fpermissions_api%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2F01658f45c6d90bd1098ad02f42fd32e95b59beaf%0A*+Document+last+modified%3A+2025-09-20T16%3A40%3A58.000Z%0A%0A%3C%2Fdetails%3E)
+7 min read
+
+## 
+
+[Significant Updates to Pipe’s Terms of Service [2025]
+            
+                Important Update: We're Launching New, Comprehensive Terms of Service
+
+At Pipe, we believe in clear, transparent communication. That also applies to the legal terms that govern your use of our video,](/pipe-terms-of-service-october-30th-2025/)
+
+3 min read
+
+## 
+
+[Switch Your Screen Share Source Without Restarting
+            
+                We’ve introduced two changes to the Pipe Recording Client to make screen recording even more reliable, flexible and easier to use.
+
+Change Shared Surface
+
+You can now change the shared surface after](/switch-your-screen-share-source-without-restarting/)
+
+1 min read[Deconstruct - A Blog From the Makers of Pipe](https://blog.addpipe.com)—Using the Permissions API to Detect How Often Users Allow or Deny Camera AccessShare this https://twitter.com/share?text=Using%20the%20Permissions%20API%20to%20Detect%20How%20Often%20Users%20Allow%20or%20Deny%20Camera%20Access&url=https://blog.addpipe.com/using-permissions-api-to-detect-getusermedia-responses/https://www.facebook.com/sharer/sharer.php?u=https://blog.addpipe.com/using-permissions-api-to-detect-getusermedia-responses/IT TAKES 1 MINUTESign up for a 14 Day Trial
+
+With our 14 days (336 hours) trial you can add audio, video and screen + camera recording to your website today and explore Pipe for 2 weeks
+
+[Get Started](https://dashboard.addpipe.com/signup)https://addpipe.com/
+- 
+
+### Main
+
+- [Home](https://addpipe.com/)
+- [Audio Recorder](https://addpipe.com/audio-recorder)
+- [Video Recorder](https://addpipe.com/video-recorder)
+- [Screen Recorder](https://addpipe.com/screen-recorder)
+- [Recording Client](https://addpipe.com/recording-client)
+- [Infrastructure](https://addpipe.com/infrastructure)
+- [Security & Privacy](https://addpipe.com/security-and-privacy/)
+- [Custom Development](https://addpipe.com/custom-development/)
+- [Pricing](https://addpipe.com/pricing)
+- 
+
+### Account
+
+- [Get Started](https://dashboard.addpipe.com/signup)
+- [Sign In](https://dashboard.addpipe.com/signin)
+- [Reset Password](https://dashboard.addpipe.com/reset-password)
+- 
+
+### Tools
+
+- [Online Audio Recorder](https://addpipe.com/online-audio-recorder)
+- [Online Video Recorder](https://addpipe.com/online-video-recorder)
+- [Online Screen Recorder](https://addpipe.com/online-screen-recorder)
+- [Webcam Tester](https://addpipe.com/webcam-tester/)
+- [Webcam Resolution Tester](https://addpipe.com/webcam-resolution-tester/)
+- 
+
+### Developers
+
+- [Documentation](https://addpipe.com/docs)
+- [Changelog](https://changelog.addpipe.com/)
+- [React Demo Integration](https://addpipe.com/react-demo/)
+- [Custom UI Demo HTML](https://addpipe.com/embed-code-v2-demos/embed-html.html)
+- [Custom UI Demo JavaScript](https://addpipe.com/embed-code-v2-demos/embed-javascript.html)
+- [Simple Form With Video Recorder](https://addpipe.com/embed-code-v2-demos/custom-form.html)
+- [Platform Status](https://addpipe.instatus.com/)
+- 
+
+### Tech Demos
+
+- [getUserMedia Examples](https://addpipe.com/getusermedia-examples/)
+- [HTML Media Capture](https://addpipe.com/html-media-capture-demo/)
+- [Media Recorder API](https://addpipe.com/media-recorder-api-demo/)
+- [Media Recorder API Audio](https://addpipe.com/media-recorder-api-demo-audio/)
+- [getDisplayMedia Demo](https://addpipe.com/getdisplaymedia-demo/)
+- [Screen + Camera Recording](https://addpipe.com/get-display-media-with-cam/)
+- [Recorder.js Demo](https://addpipe.com/simple-recorderjs-demo)
+- [VMSG Demo](https://addpipe.com/simple-vmsg-demo)
+- [WebAudioRecorder.js Demo](https://addpipe.com/webaudiorecorder-demo/)
+- [Speech to Text Demo](https://addpipe.com/web-speech-api-demo/)
+- [Text to Speech Demo](https://addpipe.com/web-speech-api-text-to-speech-demo/)
+- 
+
+### Integrations
+
+- [React NPM Package](https://www.npmjs.com/package/@addpipe/react-pipe-media-recorder)
+- [WordPress](https://addpipe.com/integrations/cms/wordpress/)
+- [Gravity Forms](https://addpipe.com/integrations/forms/gravity/)
+- [Ninja Forms](https://addpipe.com/integrations/forms/ninjaforms3/)
+- [Formstack](https://addpipe.com/integrations/forms/formstack/)
+- [Alchemer](https://addpipe.com/integrations/forms/alchemer/)
+- [Formsite](https://addpipe.com/integrations/forms/formsite/)
+- [Squarespace](https://addpipe.com/integrations/cms/squarespace/)
+- [Qualtrics](https://addpipe.com/integrations/forms/qualtrics/)
+- [Wix](https://addpipe.com/integrations/cms/wix/)
+- [Webflow](https://addpipe.com/integrations/cms/webflow/)
+- [Bubble](https://addpipe.com/integrations/cms/bubble/)
+- [OttoKit](https://ottokit.com/integrations/Pipe_Video_Recorder)
+- [Zapier](https://addpipe.com/integrations/other/zapier/)
+- [Nfield by Nipo](https://addpipe.com/integrations/forms/nfield/)
+- 
+
+### Transcriptions
+
+- [Amazon Transcribe](https://addpipe.com/integrations/transcriptions/amazon/)
+- [11ElevenLabs Scribe](https://addpipe.com/integrations/transcriptions/elevenlabs/)
+- [OpenAI's Whisper via Replicate](https://addpipe.com/integrations/transcriptions/replicate-and-whisper/)
+- 
+
+### Company
+
+- [Blog](https://blog.addpipe.com)
+- [Privacy Policy](https://addpipe.com/03.03.2022_Privacy-PolicyEN_final.pdf)
+- [Terms of Service](https://addpipe.com/terms)
+- [GDPR](https://addpipe.com/gdpr)
+- [Contact](https://addpipe.com/contact)
+- 
+
+### Compare
+
+- [Ziggeo](https://addpipe.com/vs/ziggeo)
+- [CameraTag](https://addpipe.com/vs/cameratag)
+- 
+
+### Get In Touch
+
+https://x.com/piperecorderhttps://github.com/addpipehttps://www.linkedin.com/company/addpipe/ Pipe Services S.R.L. 2015-2026

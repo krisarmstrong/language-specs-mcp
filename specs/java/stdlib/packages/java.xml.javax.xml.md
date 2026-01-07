@@ -1,4 +1,31 @@
-Module[java.xml](../../module-summary.html)
+javax.xml (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../index.html)
+- [Module](../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../preview-list.html)
+- [New](../../../new-list.html)
+- [Deprecated](../../../deprecated-list.html)
+- [Index](../../../index-files/index-1.html)
+- [Help](../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../search.html)Module[java.xml](../../module-summary.html)
 
 # Package javax.xml
 
@@ -6,3 +33,9 @@ package javax.xmlDefines constants for XML processing.Since:1.5
 
 - Related PackagesModulePackageDescription[java.xml](../../module-summary.html)[javax.xml.catalog](catalog/package-summary.html)Provides the classes for implementing [XML Catalogs OASIS Standard V1.1, 7 October 2005](https://www.oasis-open.org/committees/download.php/14809/xml-catalogs.html).[java.xml.crypto](../../../java.xml.crypto/module-summary.html)[javax.xml.crypto](../../../java.xml.crypto/javax/xml/crypto/package-summary.html)Common classes for XML cryptography.[java.xml](../../module-summary.html)[javax.xml.datatype](datatype/package-summary.html) Defines XML/Java Type Mappings.[java.xml](../../module-summary.html)[javax.xml.namespace](namespace/package-summary.html) Defines XML Namespace processing.[java.xml](../../module-summary.html)[javax.xml.parsers](parsers/package-summary.html) Provides the classes for processing XML documents with a SAX (Simple API for XML) parser or a DOM (Document Object Model) Document builder.[java.xml](../../module-summary.html)[javax.xml.stream](stream/package-summary.html) Defines interfaces and classes for the Streaming API for XML (StAX).[java.xml](../../module-summary.html)[javax.xml.transform](transform/package-summary.html)Defines the generic APIs for processing transformation instructions, and performing a transformation from source to result.[java.xml](../../module-summary.html)[javax.xml.validation](validation/package-summary.html) Provides an API for validation of XML documents.[java.xml](../../module-summary.html)[javax.xml.xpath](xpath/package-summary.html)Provides an object-model neutral API for the evaluation of XPath expressions and access to the evaluation environment.
 - ClassesClassDescription[XMLConstants](XMLConstants.html)Defines constants for XML Processing APIs.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

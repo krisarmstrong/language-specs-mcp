@@ -1,92 +1,160 @@
-package hash // import "hash"
+Go 1 and the Future of Go Programs - The Go Programming Language/[Skip to Main Content](#main-content)
 
-Package hash provides interfaces for hash functions.
+- [Why Go arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
 
-TYPES
+  - [Case Studies](/solutions/case-studies)
 
-type Cloner interface {
-	Hash
-	Clone() (Cloner, error)
-}
-    A Cloner is a hash function whose state can be cloned, returning a value
-    with equivalent and independent state.
+Common problems companies solve with Go
 
-    All Hash implementations in the standard library implement this interface,
-    unless GOFIPS140=v1.0.0 is set.
+  - [Use Cases](/solutions/use-cases)
 
-    If a hash can only determine at runtime if it can be cloned (e.g.
-    if it wraps another hash), Clone may return an error wrapping
-    errors.ErrUnsupported. Otherwise, Clone must always return a nil error.
+Stories about how and why companies use Go
 
-type Hash interface {
-	// Write (via the embedded io.Writer interface) adds more data to the running hash.
-	// It never returns an error.
-	io.Writer
+  - [Security](/security/)
 
-	// Sum appends the current hash to b and returns the resulting slice.
-	// It does not change the underlying hash state.
-	Sum(b []byte) []byte
+How Go can help keep you secure by default
 
-	// Reset resets the Hash to its initial state.
-	Reset()
+- [Learn](/learn/) Press Enter to activate/deactivate dropdown 
+- [Docs arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
 
-	// Size returns the number of bytes Sum will return.
-	Size() int
+  - [Go Spec](/ref/spec)
 
-	// BlockSize returns the hash's underlying block size.
-	// The Write method must be able to accept any amount
-	// of data, but it may operate more efficiently if all writes
-	// are a multiple of the block size.
-	BlockSize() int
-}
-    Hash is the common interface implemented by all hash functions.
+The official Go language specification
 
-    Hash implementations in the standard library (e.g. hash/crc32
-    and crypto/sha256) implement the encoding.BinaryMarshaler,
-    encoding.BinaryAppender, encoding.BinaryUnmarshaler and Cloner interfaces.
-    Marshaling a hash implementation allows its internal state to be saved and
-    used for additional processing later, without having to re-write the data
-    previously written to the hash. The hash state may contain portions of the
-    input in its original form, which users are expected to handle for any
-    possible security implications.
+  - [Go User Manual](/doc)
 
-    Compatibility: Any future changes to hash or crypto packages will endeavor
-    to maintain compatibility with state encoded using previous versions.
-    That is, any released versions of the packages should be able to decode
-    data written with any previously released version, subject to issues such
-    as security fixes. See the Go compatibility document for background:
-    https://golang.org/doc/go1compat
+A complete introduction to building software with Go
 
-type Hash32 interface {
-	Hash
-	Sum32() uint32
-}
-    Hash32 is the common interface implemented by all 32-bit hash functions.
+  - [Standard library](https://pkg.go.dev/std)
 
-type Hash64 interface {
-	Hash
-	Sum64() uint64
-}
-    Hash64 is the common interface implemented by all 64-bit hash functions.
+Reference documentation for Go's standard library
 
-type XOF interface {
-	// Write absorbs more data into the XOF's state. It panics if called
-	// after Read.
-	io.Writer
+  - [Release Notes](/doc/devel/release)
 
-	// Read reads more output from the XOF. It may return io.EOF if there
-	// is a limit to the XOF output length.
-	io.Reader
+Learn what's new in each Go release
 
-	// Reset resets the XOF to its initial state.
-	Reset()
+  - [Effective Go](/doc/effective_go)
 
-	// BlockSize returns the XOF's underlying block size.
-	// The Write method must be able to accept any amount
-	// of data, but it may operate more efficiently if all writes
-	// are a multiple of the block size.
-	BlockSize() int
-}
-    XOF (extendable output function) is a hash function with arbitrary or
-    unlimited output length.
+Tips for writing clear, performant, and idiomatic Go code
 
+- [Packages](https://pkg.go.dev) Press Enter to activate/deactivate dropdown 
+- [Community arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
+
+  - [Recorded Talks](/talks/)
+
+Videos from prior events
+
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+
+Meet other local Go developers
+
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+
+Learn and network with Go developers from around the world
+
+  - [Go blog](/blog)
+
+The Go project's official blog.
+
+  - [Go project](/help)
+
+Get help and stay informed from Go
+
+  -  Get connected 
+
+https://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
+
+/
+
+- [Why Go navigate_next](#)[navigate_beforeWhy Go](#)
+
+  - [Case Studies](/solutions/case-studies)
+  - [Use Cases](/solutions/use-cases)
+  - [Security](/security/)
+
+- [Learn](/learn/)
+- [Docs navigate_next](#)[navigate_beforeDocs](#)
+
+  - [Go Spec](/ref/spec)
+  - [Go User Manual](/doc)
+  - [Standard library](https://pkg.go.dev/std)
+  - [Release Notes](/doc/devel/release)
+  - [Effective Go](/doc/effective_go)
+
+- [Packages](https://pkg.go.dev)
+- [Community navigate_next](#)[navigate_beforeCommunity](#)
+
+  - [Recorded Talks](/talks/)
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+  - [Go blog](/blog)
+  - [Go project](/help)
+  - Get connectedhttps://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
+
+1. [Documentation](/doc/)
+2. [Go 1 and the Future of Go Programs](/doc/go1compat)
+
+# Go 1 and the Future of Go Programs
+
+## Introduction
+
+ The release of Go version 1, Go 1 for short, is a major milestone in the development of the language. Go 1 is a stable platform for the growth of programs and projects written in Go. 
+
+ Go 1 defines two things: first, the specification of the language; and second, the specification of a set of core APIs, the "standard packages" of the Go library. The Go 1 release includes their implementation in the form of two compiler suites (gc and gccgo), and the core libraries themselves. 
+
+ It is intended that programs written to the Go 1 specification will continue to compile and run correctly, unchanged, over the lifetime of that specification. At some indefinite point, a Go 2 specification may arise, but until that time, Go programs that work today should continue to work even as future "point" releases of Go 1 arise (Go 1.1, Go 1.2, etc.). 
+
+ Compatibility is at the source level. Binary compatibility for compiled packages is not guaranteed between releases. After a point release, Go source will need to be recompiled to link against the new release. 
+
+ The APIs may grow, acquiring new packages and features, but not in a way that breaks existing Go 1 code. 
+
+## Expectations
+
+ Although we expect that the vast majority of programs will maintain this compatibility over time, it is impossible to guarantee that no future change will break any program. This document is an attempt to set expectations for the compatibility of Go 1 software in the future. There are a number of ways in which a program that compiles and runs today may fail to do so after a future point release. They are all unlikely but worth recording. 
+
+-  Security. A security issue in the specification or implementation may come to light whose resolution requires breaking compatibility. We reserve the right to address such security issues. 
+-  Unspecified behavior. The Go specification tries to be explicit about most properties of the language, but there are some aspects that are undefined. Programs that depend on such unspecified behavior may break in future releases. 
+-  Specification errors. If it becomes necessary to address an inconsistency or incompleteness in the specification, resolving the issue could affect the meaning or legality of existing programs. We reserve the right to address such issues, including updating the implementations. Except for security issues, no incompatible changes to the specification would be made. 
+-  Bugs. If a compiler or library has a bug that violates the specification, a program that depends on the buggy behavior may break if the bug is fixed. We reserve the right to fix such bugs. 
+-  Struct literals. For the addition of features in later point releases, it may be necessary to add fields to exported structs in the API. Code that uses unkeyed struct literals (such as pkg.T{3, "x"}) to create values of these types would fail to compile after such a change. However, code that uses keyed literals (pkg.T{A: 3, B: "x"}) will continue to compile after such a change. We will update such data structures in a way that allows keyed struct literals to remain compatible, although unkeyed literals may fail to compile. (There are also more intricate cases involving nested data structures or interfaces, but they have the same resolution.) We therefore recommend that composite literals whose type is defined in a separate package should use the keyed notation. 
+-  Methods. As with struct fields, it may be necessary to add methods to non-interface types. Under some circumstances, such as when the type is embedded in a struct along with another type, the addition of the new method may break the struct by creating a conflict with an existing method of the other embedded type. We cannot protect against this rare case and do not guarantee compatibility should it arise. 
+-  Dot imports. If a program imports a standard package using `import . "path"`, additional names defined in the imported package in future releases may conflict with other names defined in the program. We do not recommend the use of `import .` outside of tests, and using it may cause a program to fail to compile in future releases. 
+-  Use of package `unsafe`. Packages that import [unsafe](/pkg/unsafe/) may depend on internal properties of the Go implementation. We reserve the right to make changes to the implementation that may break such programs. 
+
+ Of course, for all of these possibilities, should they arise, we would endeavor whenever feasible to update the specification, compilers, or libraries without affecting existing code. 
+
+ These same considerations apply to successive point releases. For instance, code that runs under Go 1.2 should be compatible with Go 1.2.1, Go 1.3, Go 1.4, etc., although not necessarily with Go 1.1 since it may use features added only in Go 1.2 
+
+ Features added between releases, available in the source repository but not part of the numbered binary releases, are under active development. No promise of compatibility is made for software using such features until they have been released. 
+
+ Finally, although it is not a correctness issue, it is possible that the performance of a program may be affected by changes in the implementation of the compilers or libraries upon which it depends. No guarantee can be made about the performance of a given program between releases. 
+
+ Although these expectations apply to Go 1 itself, we hope similar considerations would be made for the development of externally developed software based on Go 1. 
+
+## Sub-repositories
+
+ Code in sub-repositories of the main go tree, such as [golang.org/x/net](https://golang.org/x/net), may be developed under looser compatibility requirements. However, the sub-repositories will be tagged as appropriate to identify versions that are compatible with the Go 1 point releases. 
+
+## Operating systems
+
+ It is impossible to guarantee long-term compatibility with operating system interfaces, which are changed by outside parties. The [syscall](/pkg/syscall/) package is therefore outside the purview of the guarantees made here. As of Go version 1.4, the `syscall` package is frozen. Any evolution of the system call interface must be supported elsewhere, such as in the [go.sys](https://golang.org/x/sys) subrepository. For details and background, see [this document](/s/go1.4-syscall). 
+
+## Tools
+
+ Finally, the Go toolchain (compilers, linkers, build tools, and so on) is under active development and may change behavior. This means, for instance, that scripts that depend on the location and properties of the tools may be broken by a point release. 
+
+ These caveats aside, we believe that Go 1 will be a firm foundation for the development of Go and its ecosystem. 
+
+[Why Go](/solutions/)[Use Cases](/solutions/use-cases)[Case Studies](/solutions/case-studies)[Get Started](/learn/)[Playground](/play)[Tour](/tour/)[Stack Overflow](https://stackoverflow.com/questions/tagged/go?tab=Newest)[Help](/help/)[Packages](https://pkg.go.dev)[Standard Library](/pkg/)[About Go Packages](https://pkg.go.dev/about)[About](/project)[Download](/dl/)[Blog](/blog/)[Issue Tracker](https://github.com/golang/go/issues)[Release Notes](/doc/devel/release)[Brand Guidelines](/brand)[Code of Conduct](/conduct)[Connect](https://www.twitter.com/golang)[Twitter](https://www.twitter.com/golang)[GitHub](https://github.com/golang)[Slack](https://invite.slack.golangbridge.org/)[r/golang](https://reddit.com/r/golang)[Meetup](https://www.meetup.com/pro/go)[Golang Weekly](https://golangweekly.com/) Opens in new window. 
+
+- [Copyright](/copyright)
+- [Terms of Service](/tos)
+- [Privacy Policy](http://www.google.com/intl/en/policies/privacy/)
+- [Report an Issue](/s/website-issue)
+- 
+
+https://google.comgo.dev uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic. [Learn more.](https://policies.google.com/technologies/cookies)Okay

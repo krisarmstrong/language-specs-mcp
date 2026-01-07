@@ -1,3 +1,14 @@
+HTML-validate - Require a specific style for empty attributes (attribute-empty-style)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -52,3 +63,5 @@ This rule takes an optional object:
 
 - `omit` require empty attributes to omit value, e.g. `<a download></a>`
 - `empty` require empty attributes to be empty string, e.g. `<a download=""></a>`
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/attribute-empty-style.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/attribute-empty-style.ts)

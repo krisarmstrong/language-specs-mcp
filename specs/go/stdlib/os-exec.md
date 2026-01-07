@@ -1,431 +1,262 @@
-package exec // import "os/exec"
-
-Package exec runs external commands. It wraps os.StartProcess to make it easier
-to remap stdin and stdout, connect I/O with pipes, and do other adjustments.
-
-Unlike the "system" library call from C and other languages, the os/exec
-package intentionally does not invoke the system shell and does not expand any
-glob patterns or handle other expansions, pipelines, or redirections typically
-done by shells. The package behaves more like C's "exec" family of functions.
-To expand glob patterns, either call the shell directly, taking care to escape
-any dangerous input, or use the path/filepath package's Glob function. To expand
-environment variables, use package os's ExpandEnv.
-
-Note that the examples in this package assume a Unix system. They may not run on
-Windows, and they do not run in the Go Playground used by go.dev and pkg.go.dev.
-
-# Executables in the current directory
-
-The functions Command and LookPath look for a program in the directories listed
-in the current path, following the conventions of the host operating system.
-Operating systems have for decades included the current directory in this
-search, sometimes implicitly and sometimes configured explicitly that way by
-default. Modern practice is that including the current directory is usually
-unexpected and often leads to security problems.
-
-To avoid those security problems, as of Go 1.19, this package will not resolve
-a program using an implicit or explicit path entry relative to the current
-directory. That is, if you run LookPath("go"), it will not successfully return
-./go on Unix nor .\go.exe on Windows, no matter how the path is configured.
-Instead, if the usual path algorithms would result in that answer, these
-functions return an error err satisfying errors.Is(err, ErrDot).
-
-For example, consider these two program snippets:
-
-    path, err := exec.LookPath("prog")
-    if err != nil {
-    	log.Fatal(err)
-    }
-    use(path)
-
-and
-
-    cmd := exec.Command("prog")
-    if err := cmd.Run(); err != nil {
-    	log.Fatal(err)
-    }
-
-These will not find and run ./prog or .\prog.exe, no matter how the current path
-is configured.
-
-Code that always wants to run a program from the current directory can be
-rewritten to say "./prog" instead of "prog".
-
-Code that insists on including results from relative path entries can instead
-override the error using an errors.Is check:
-
-    path, err := exec.LookPath("prog")
-    if errors.Is(err, exec.ErrDot) {
-    	err = nil
-    }
-    if err != nil {
-    	log.Fatal(err)
-    }
-    use(path)
-
-and
-
-    cmd := exec.Command("prog")
-    if errors.Is(cmd.Err, exec.ErrDot) {
-    	cmd.Err = nil
-    }
-    if err := cmd.Run(); err != nil {
-    	log.Fatal(err)
-    }
-
-Setting the environment variable GODEBUG=execerrdot=0 disables generation of
-ErrDot entirely, temporarily restoring the pre-Go 1.19 behavior for programs
-that are unable to apply more targeted fixes. A future version of Go may remove
-support for this variable.
-
-Before adding such overrides, make sure you understand the security implications
-of doing so. See https://go.dev/blog/path-security for more information.
-
-VARIABLES
-
-var ErrDot = errors.New("cannot run executable found relative to current directory")
-    ErrDot indicates that a path lookup resolved to an executable in the current
-    directory due to ‘.’ being in the path, either implicitly or explicitly.
-    See the package documentation for details.
-
-    Note that functions in this package do not return ErrDot directly.
-    Code should use errors.Is(err, ErrDot), not err == ErrDot, to test whether a
-    returned error err is due to this condition.
-
-var ErrNotFound = errors.New("executable file not found in $PATH")
-    ErrNotFound is the error resulting if a path search failed to find an
-    executable file.
-
-var ErrWaitDelay = errors.New("exec: WaitDelay expired before I/O complete")
-    ErrWaitDelay is returned by Cmd.Wait if the process exits with a successful
-    status code but its output pipes are not closed before the command's
-    WaitDelay expires.
-
-
-FUNCTIONS
-
-func LookPath(file string) (string, error)
-    LookPath searches for an executable named file in the directories named
-    by the PATH environment variable. If file contains a slash, it is tried
-    directly and the PATH is not consulted. Otherwise, on success, the result is
-    an absolute path.
-
-    In older versions of Go, LookPath could return a path relative to the
-    current directory. As of Go 1.19, LookPath will instead return that path
-    along with an error satisfying errors.Is(err, ErrDot). See the package
-    documentation for more details.
-
-
-TYPES
-
-type Cmd struct {
-	// Path is the path of the command to run.
-	//
-	// This is the only field that must be set to a non-zero
-	// value. If Path is relative, it is evaluated relative
-	// to Dir.
-	Path string
-
-	// Args holds command line arguments, including the command as Args[0].
-	// If the Args field is empty or nil, Run uses {Path}.
-	//
-	// In typical use, both Path and Args are set by calling Command.
-	Args []string
-
-	// Env specifies the environment of the process.
-	// Each entry is of the form "key=value".
-	// If Env is nil, the new process uses the current process's
-	// environment.
-	// If Env contains duplicate environment keys, only the last
-	// value in the slice for each duplicate key is used.
-	// As a special case on Windows, SYSTEMROOT is always added if
-	// missing and not explicitly set to the empty string.
-	//
-	// See also the Dir field, which may set PWD in the environment.
-	Env []string
-
-	// Dir specifies the working directory of the command.
-	// If Dir is the empty string, Run runs the command in the
-	// calling process's current directory.
-	//
-	// On Unix systems, the value of Dir also determines the
-	// child process's PWD environment variable if not otherwise
-	// specified. A Unix process represents its working directory
-	// not by name but as an implicit reference to a node in the
-	// file tree. So, if the child process obtains its working
-	// directory by calling a function such as C's getcwd, which
-	// computes the canonical name by walking up the file tree, it
-	// will not recover the original value of Dir if that value
-	// was an alias involving symbolic links. However, if the
-	// child process calls Go's [os.Getwd] or GNU C's
-	// get_current_dir_name, and the value of PWD is an alias for
-	// the current directory, those functions will return the
-	// value of PWD, which matches the value of Dir.
-	Dir string
-
-	// Stdin specifies the process's standard input.
-	//
-	// If Stdin is nil, the process reads from the null device (os.DevNull).
-	//
-	// If Stdin is an *os.File, the process's standard input is connected
-	// directly to that file.
-	//
-	// Otherwise, during the execution of the command a separate
-	// goroutine reads from Stdin and delivers that data to the command
-	// over a pipe. In this case, Wait does not complete until the goroutine
-	// stops copying, either because it has reached the end of Stdin
-	// (EOF or a read error), or because writing to the pipe returned an error,
-	// or because a nonzero WaitDelay was set and expired.
-	Stdin io.Reader
-
-	// Stdout and Stderr specify the process's standard output and error.
-	//
-	// If either is nil, Run connects the corresponding file descriptor
-	// to the null device (os.DevNull).
-	//
-	// If either is an *os.File, the corresponding output from the process
-	// is connected directly to that file.
-	//
-	// Otherwise, during the execution of the command a separate goroutine
-	// reads from the process over a pipe and delivers that data to the
-	// corresponding Writer. In this case, Wait does not complete until the
-	// goroutine reaches EOF or encounters an error or a nonzero WaitDelay
-	// expires.
-	//
-	// If Stdout and Stderr are the same writer, and have a type that can
-	// be compared with ==, at most one goroutine at a time will call Write.
-	Stdout io.Writer
-	Stderr io.Writer
-
-	// ExtraFiles specifies additional open files to be inherited by the
-	// new process. It does not include standard input, standard output, or
-	// standard error. If non-nil, entry i becomes file descriptor 3+i.
-	//
-	// ExtraFiles is not supported on Windows.
-	ExtraFiles []*os.File
-
-	// SysProcAttr holds optional, operating system-specific attributes.
-	// Run passes it to os.StartProcess as the os.ProcAttr's Sys field.
-	SysProcAttr *syscall.SysProcAttr
-
-	// Process is the underlying process, once started.
-	Process *os.Process
-
-	// ProcessState contains information about an exited process.
-	// If the process was started successfully, Wait or Run will
-	// populate its ProcessState when the command completes.
-	ProcessState *os.ProcessState
-
-	Err error // LookPath error, if any.
-
-	// If Cancel is non-nil, the command must have been created with
-	// CommandContext and Cancel will be called when the command's
-	// Context is done. By default, CommandContext sets Cancel to
-	// call the Kill method on the command's Process.
-	//
-	// Typically a custom Cancel will send a signal to the command's
-	// Process, but it may instead take other actions to initiate cancellation,
-	// such as closing a stdin or stdout pipe or sending a shutdown request on a
-	// network socket.
-	//
-	// If the command exits with a success status after Cancel is
-	// called, and Cancel does not return an error equivalent to
-	// os.ErrProcessDone, then Wait and similar methods will return a non-nil
-	// error: either an error wrapping the one returned by Cancel,
-	// or the error from the Context.
-	// (If the command exits with a non-success status, or Cancel
-	// returns an error that wraps os.ErrProcessDone, Wait and similar methods
-	// continue to return the command's usual exit status.)
-	//
-	// If Cancel is set to nil, nothing will happen immediately when the command's
-	// Context is done, but a nonzero WaitDelay will still take effect. That may
-	// be useful, for example, to work around deadlocks in commands that do not
-	// support shutdown signals but are expected to always finish quickly.
-	//
-	// Cancel will not be called if Start returns a non-nil error.
-	Cancel func() error
-
-	// If WaitDelay is non-zero, it bounds the time spent waiting on two sources
-	// of unexpected delay in Wait: a child process that fails to exit after the
-	// associated Context is canceled, and a child process that exits but leaves
-	// its I/O pipes unclosed.
-	//
-	// The WaitDelay timer starts when either the associated Context is done or a
-	// call to Wait observes that the child process has exited, whichever occurs
-	// first. When the delay has elapsed, the command shuts down the child process
-	// and/or its I/O pipes.
-	//
-	// If the child process has failed to exit — perhaps because it ignored or
-	// failed to receive a shutdown signal from a Cancel function, or because no
-	// Cancel function was set — then it will be terminated using os.Process.Kill.
-	//
-	// Then, if the I/O pipes communicating with the child process are still open,
-	// those pipes are closed in order to unblock any goroutines currently blocked
-	// on Read or Write calls.
-	//
-	// If pipes are closed due to WaitDelay, no Cancel call has occurred,
-	// and the command has otherwise exited with a successful status, Wait and
-	// similar methods will return ErrWaitDelay instead of nil.
-	//
-	// If WaitDelay is zero (the default), I/O pipes will be read until EOF,
-	// which might not occur until orphaned subprocesses of the command have
-	// also closed their descriptors for the pipes.
-	WaitDelay time.Duration
-
-	// Has unexported fields.
-}
-    Cmd represents an external command being prepared or run.
-
-    A Cmd cannot be reused after calling its Cmd.Run, Cmd.Output or
-    Cmd.CombinedOutput methods.
-
-func Command(name string, arg ...string) *Cmd
-    Command returns the Cmd struct to execute the named program with the given
-    arguments.
-
-    It sets only the Path and Args in the returned structure.
-
-    If name contains no path separators, Command uses LookPath to resolve name
-    to a complete path if possible. Otherwise it uses name directly as Path.
-
-    The returned Cmd's Args field is constructed from the command name followed
-    by the elements of arg, so arg should not include the command name itself.
-    For example, Command("echo", "hello"). Args[0] is always name, not the
-    possibly resolved Path.
-
-    On Windows, processes receive the whole command line as a single string
-    and do their own parsing. Command combines and quotes Args into a
-    command line string with an algorithm compatible with applications using
-    CommandLineToArgvW (which is the most common way). Notable exceptions are
-    msiexec.exe and cmd.exe (and thus, all batch files), which have a different
-    unquoting algorithm. In these or other similar cases, you can do the quoting
-    yourself and provide the full command line in SysProcAttr.CmdLine, leaving
-    Args empty.
-
-func CommandContext(ctx context.Context, name string, arg ...string) *Cmd
-    CommandContext is like Command but includes a context.
-
-    The provided context is used to interrupt the process (by calling cmd.Cancel
-    or os.Process.Kill) if the context becomes done before the command completes
-    on its own.
-
-    CommandContext sets the command's Cancel function to invoke the Kill method
-    on its Process, and leaves its WaitDelay unset. The caller may change the
-    cancellation behavior by modifying those fields before starting the command.
-
-func (c *Cmd) CombinedOutput() ([]byte, error)
-    CombinedOutput runs the command and returns its combined standard output and
-    standard error.
-
-func (c *Cmd) Environ() []string
-    Environ returns a copy of the environment in which the command would be run
-    as it is currently configured.
-
-func (c *Cmd) Output() ([]byte, error)
-    Output runs the command and returns its standard output. Any returned error
-    will usually be of type *ExitError. If c.Stderr was nil and the returned
-    error is of type *ExitError, Output populates the Stderr field of the
-    returned error.
-
-func (c *Cmd) Run() error
-    Run starts the specified command and waits for it to complete.
-
-    The returned error is nil if the command runs, has no problems copying
-    stdin, stdout, and stderr, and exits with a zero exit status.
-
-    If the command starts but does not complete successfully, the error is of
-    type *ExitError. Other error types may be returned for other situations.
-
-    If the calling goroutine has locked the operating system thread with
-    runtime.LockOSThread and modified any inheritable OS-level thread state
-    (for example, Linux or Plan 9 name spaces), the new process will inherit the
-    caller's thread state.
-
-func (c *Cmd) Start() error
-    Start starts the specified command but does not wait for it to complete.
-
-    If Start returns successfully, the c.Process field will be set.
-
-    After a successful call to Start the Cmd.Wait method must be called in order
-    to release associated system resources.
-
-func (c *Cmd) StderrPipe() (io.ReadCloser, error)
-    StderrPipe returns a pipe that will be connected to the command's standard
-    error when the command starts.
-
-    Cmd.Wait will close the pipe after seeing the command exit, so most callers
-    need not close the pipe themselves. It is thus incorrect to call Wait
-    before all reads from the pipe have completed. For the same reason, it is
-    incorrect to use Cmd.Run when using StderrPipe. See the StdoutPipe example
-    for idiomatic usage.
-
-func (c *Cmd) StdinPipe() (io.WriteCloser, error)
-    StdinPipe returns a pipe that will be connected to the command's standard
-    input when the command starts. The pipe will be closed automatically after
-    Cmd.Wait sees the command exit. A caller need only call Close to force the
-    pipe to close sooner. For example, if the command being run will not exit
-    until standard input is closed, the caller must close the pipe.
-
-func (c *Cmd) StdoutPipe() (io.ReadCloser, error)
-    StdoutPipe returns a pipe that will be connected to the command's standard
-    output when the command starts.
-
-    Cmd.Wait will close the pipe after seeing the command exit, so most callers
-    need not close the pipe themselves. It is thus incorrect to call Wait before
-    all reads from the pipe have completed. For the same reason, it is incorrect
-    to call Cmd.Run when using StdoutPipe. See the example for idiomatic usage.
-
-func (c *Cmd) String() string
-    String returns a human-readable description of c. It is intended only for
-    debugging. In particular, it is not suitable for use as input to a shell.
-    The output of String may vary across Go releases.
-
-func (c *Cmd) Wait() error
-    Wait waits for the command to exit and waits for any copying to stdin or
-    copying from stdout or stderr to complete.
-
-    The command must have been started by Cmd.Start.
-
-    The returned error is nil if the command runs, has no problems copying
-    stdin, stdout, and stderr, and exits with a zero exit status.
-
-    If the command fails to run or doesn't complete successfully, the error is
-    of type *ExitError. Other error types may be returned for I/O problems.
-
-    If any of c.Stdin, c.Stdout or c.Stderr are not an *os.File, Wait also waits
-    for the respective I/O loop copying to or from the process to complete.
-
-    Wait releases any resources associated with the Cmd.
-
-type Error struct {
-	// Name is the file name for which the error occurred.
-	Name string
-	// Err is the underlying error.
-	Err error
-}
-    Error is returned by LookPath when it fails to classify a file as an
-    executable.
-
-func (e *Error) Error() string
-
-func (e *Error) Unwrap() error
-
-type ExitError struct {
-	*os.ProcessState
-
-	// Stderr holds a subset of the standard error output from the
-	// Cmd.Output method if standard error was not otherwise being
-	// collected.
-	//
-	// If the error output is long, Stderr may contain only a prefix
-	// and suffix of the output, with the middle replaced with
-	// text about the number of omitted bytes.
-	//
-	// Stderr is provided for debugging, for inclusion in error messages.
-	// Users with other needs should redirect Cmd.Stderr as needed.
-	Stderr []byte
-}
-    An ExitError reports an unsuccessful exit by a command.
-
-func (e *ExitError) Error() string
+Command PATH security in Go - The Go Programming Language/[Skip to Main Content](#main-content)
 
+- [Why Go arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
+
+  - [Case Studies](/solutions/case-studies)
+
+Common problems companies solve with Go
+
+  - [Use Cases](/solutions/use-cases)
+
+Stories about how and why companies use Go
+
+  - [Security](/security/)
+
+How Go can help keep you secure by default
+
+- [Learn](/learn/) Press Enter to activate/deactivate dropdown 
+- [Docs arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
+
+  - [Go Spec](/ref/spec)
+
+The official Go language specification
+
+  - [Go User Manual](/doc)
+
+A complete introduction to building software with Go
+
+  - [Standard library](https://pkg.go.dev/std)
+
+Reference documentation for Go's standard library
+
+  - [Release Notes](/doc/devel/release)
+
+Learn what's new in each Go release
+
+  - [Effective Go](/doc/effective_go)
+
+Tips for writing clear, performant, and idiomatic Go code
+
+- [Packages](https://pkg.go.dev) Press Enter to activate/deactivate dropdown 
+- [Community arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
+
+  - [Recorded Talks](/talks/)
+
+Videos from prior events
+
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+
+Meet other local Go developers
+
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+
+Learn and network with Go developers from around the world
+
+  - [Go blog](/blog)
+
+The Go project's official blog.
+
+  - [Go project](/help)
+
+Get help and stay informed from Go
+
+  -  Get connected 
+
+https://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
+
+/
+
+- [Why Go navigate_next](#)[navigate_beforeWhy Go](#)
+
+  - [Case Studies](/solutions/case-studies)
+  - [Use Cases](/solutions/use-cases)
+  - [Security](/security/)
+
+- [Learn](/learn/)
+- [Docs navigate_next](#)[navigate_beforeDocs](#)
+
+  - [Go Spec](/ref/spec)
+  - [Go User Manual](/doc)
+  - [Standard library](https://pkg.go.dev/std)
+  - [Release Notes](/doc/devel/release)
+  - [Effective Go](/doc/effective_go)
+
+- [Packages](https://pkg.go.dev)
+- [Community navigate_next](#)[navigate_beforeCommunity](#)
+
+  - [Recorded Talks](/talks/)
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+  - [Go blog](/blog)
+  - [Go project](/help)
+  - Get connectedhttps://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
+
+# [The Go Blog](/blog/)
+
+# Command PATH security in Go
+
+ Russ Cox
+ 19 January 2021 
+
+Today’s [Go security release](/s/go-security-release-jan-2021) fixes an issue involving PATH lookups in untrusted directories that can lead to remote execution during the `go``get` command. We expect people to have questions about what exactly this means and whether they might have issues in their own programs. This post details the bug, the fixes we have applied, how to decide whether your own programs are vulnerable to similar problems, and what you can do if they are.
+
+## Go command & remote execution
+
+One of the design goals for the `go` command is that most commands – including `go``build`, `go``doc`, `go``get`, `go``install`, and `go``list` – do not run arbitrary code downloaded from the internet. There are a few obvious exceptions: clearly `go``run`, `go``test`, and `go``generate`do run arbitrary code – that’s their job. But the others must not, for a variety of reasons including reproducible builds and security. So when `go``get` can be tricked into executing arbitrary code, we consider that a security bug.
+
+If `go``get` must not run arbitrary code, then unfortunately that means all the programs it invokes, such as compilers and version control systems, are also inside the security perimeter. For example, we’ve had issues in the past in which clever use of obscure compiler features or remote execution bugs in version control systems became remote execution bugs in Go. (On that note, Go 1.16 aims to improve the situation by introducing a GOVCS setting that allows configuration of exactly which version control systems are allowed and when.)
+
+Today’s bug, however, was entirely our fault, not a bug or obscure feature of `gcc` or `git`. The bug involves how Go and other programs find other executables, so we need to spend a little time looking at that before we can get to the details.
+
+## Commands and PATHs and Go
+
+All operating systems have a concept of an executable path (`$PATH` on Unix, `%PATH%` on Windows; for simplicity, we’ll just use the term PATH), which is a list of directories. When you type a command into a shell prompt, the shell looks in each of the listed directories, in turn, for an executable with the name you typed. It runs the first one it finds, or it prints a message like “command not found.”
+
+On Unix, this idea first appeared in Seventh Edition Unix’s Bourne shell (1979). The manual explained:
+
+The shell parameter `$PATH` defines the search path for the directory containing the command. Each alternative directory name is separated by a colon (`:`). The default path is `:/bin:/usr/bin`. If the command name contains a / then the search path is not used. Otherwise, each directory in the path is searched for an executable file.
+
+Note the default: the current directory (denoted here by an empty string, but let’s call it “dot”) is listed ahead of `/bin` and `/usr/bin`. MS-DOS and then Windows chose to hard-code that behavior: on those systems, dot is always searched first, automatically, before considering any directories listed in `%PATH%`.
+
+As Grampp and Morris pointed out in their classic paper “[UNIX Operating System Security](https://people.engr.ncsu.edu/gjin2/Classes/246/Spring2019/Security.pdf)” (1984), placing dot ahead of system directories in the PATH means that if you `cd` into a directory and run `ls`, you might get a malicious copy from that directory instead of the system utility. And if you can trick a system administrator to run `ls` in your home directory while logged in as `root`, then you can run any code you want. Because of this problem and others like it, essentially all modern Unix distributions set a new user’s default PATH to exclude dot. But Windows systems continue to search dot first, no matter what PATH says.
+
+For example, when you type the command
+
+```
+go version
+```
+
+on a typically-configured Unix, the shell runs a `go` executable from a system directory in your PATH. But when you type that command on Windows, `cmd.exe` checks dot first. If `.\go.exe` (or `.\go.bat` or many other choices) exists, `cmd.exe` runs that executable, not one from your PATH.
+
+For Go, PATH searches are handled by [exec.LookPath](https://pkg.go.dev/os/exec#LookPath), called automatically by [exec.Command](https://pkg.go.dev/os/exec#Command). And to fit well into the host system, Go’s `exec.LookPath` implements the Unix rules on Unix and the Windows rules on Windows. For example, this command
+
+```
+out, err := exec.Command("go", "version").CombinedOutput()
+```
+
+behaves the same as typing `go``version` into the operating system shell. On Windows, it runs `.\go.exe` when that exists.
+
+(It is worth noting that Windows PowerShell changed this behavior, dropping the implicit search of dot, but `cmd.exe` and the Windows C library [SearchPath function](https://docs.microsoft.com/en-us/windows/win32/api/processenv/nf-processenv-searchpatha) continue to behave as they always have. Go continues to match `cmd.exe`.)
+
+## The Bug
+
+When `go``get` downloads and builds a package that contains `import``"C"`, it runs a program called `cgo` to prepare the Go equivalent of the relevant C code. The `go` command runs `cgo` in the directory containing the package sources. Once `cgo` has generated its Go output files, the `go` command itself invokes the Go compiler on the generated Go files and the host C compiler (`gcc` or `clang`) to build any C sources included with the package. All this works well. But where does the `go` command find the host C compiler? It looks in the PATH, of course. Luckily, while it runs the C compiler in the package source directory, it does the PATH lookup from the original directory where the `go` command was invoked:
+
+```
+cmd := exec.Command("gcc", "file.c")
+cmd.Dir = "badpkg"
+cmd.Run()
+```
+
+So even if `badpkg\gcc.exe` exists on a Windows system, this code snippet will not find it. The lookup that happens in `exec.Command` does not know about the `badpkg` directory.
+
+The `go` command uses similar code to invoke `cgo`, and in that case there’s not even a path lookup, because `cgo` always comes from GOROOT:
+
+```
+cmd := exec.Command(GOROOT+"/pkg/tool/"+GOOS_GOARCH+"/cgo", "file.go")
+cmd.Dir = "badpkg"
+cmd.Run()
+```
+
+This is even safer than the previous snippet: there’s no chance of running any bad `cgo.exe` that may exist.
+
+But it turns out that cgo itself also invokes the host C compiler, on some temporary files it creates, meaning it executes this code itself:
+
+```
+// running in cgo in badpkg dir
+cmd := exec.Command("gcc", "tmpfile.c")
+cmd.Run()
+```
+
+Now, because cgo itself is running in `badpkg`, not in the directory where the `go` command was run, it will run `badpkg\gcc.exe` if that file exists, instead of finding the system `gcc`.
+
+So an attacker can create a malicious package that uses cgo and includes a `gcc.exe`, and then any Windows user that runs `go``get` to download and build the attacker’s package will run the attacker-supplied `gcc.exe` in preference to any `gcc` in the system path.
+
+Unix systems avoid the problem first because dot is typically not in the PATH and second because module unpacking does not set execute bits on the files it writes. But Unix users who have dot ahead of system directories in their PATH and are using GOPATH mode would be as susceptible as Windows users. (If that describes you, today is a good day to remove dot from your path and to start using Go modules.)
+
+(Thanks to [RyotaK](https://twitter.com/ryotkak) for [reporting this issue](/security) to us.)
+
+## The Fixes
+
+It’s obviously unacceptable for the `go``get` command to download and run a malicious `gcc.exe`. But what’s the actual mistake that allows that? And then what’s the fix?
+
+One possible answer is that the mistake is that `cgo` does the search for the host C compiler in the untrusted source directory instead of in the directory where the `go` command was invoked. If that’s the mistake, then the fix is to change the `go` command to pass `cgo` the full path to the host C compiler, so that `cgo` need not do a PATH lookup in to the untrusted directory.
+
+Another possible answer is that the mistake is to look in dot during PATH lookups, whether happens automatically on Windows or because of an explicit PATH entry on a Unix system. A user may want to look in dot to find a command they typed in a console or shell window, but it’s unlikely they also want to look there to find a subprocess of a subprocess of a typed command. If that’s the mistake, then the fix is to change the `cgo` command not to look in dot during a PATH lookup.
+
+We decided both were mistakes, so we applied both fixes. The `go` command now passes the full host C compiler path to `cgo`. On top of that, `cgo`, `go`, and every other command in the Go distribution now use a variant of the `os/exec` package that reports an error if it would have previously used an executable from dot. The packages `go/build` and `go/import` use the same policy for their invocation of the `go` command and other tools. This should shut the door on any similar security problems that may be lurking.
+
+Out of an abundance of caution, we also made a similar fix in commands like `goimports` and `gopls`, as well as the libraries `golang.org/x/tools/go/analysis` and `golang.org/x/tools/go/packages`, which invoke the `go` command as a subprocess. If you run these programs in untrusted directories – for example, if you `git``checkout` untrusted repositories and `cd` into them and then run programs like these, and you use Windows or use Unix with dot in your PATH – then you should update your copies of these commands too. If the only untrusted directories on your computer are the ones in the module cache managed by `go``get`, then you only need the new Go release.
+
+After updating to the new Go release, you can update to the latest `gopls` by using:
+
+```
+GO111MODULE=on \
+go get golang.org/x/tools/gopls@v0.6.4
+```
+
+and you can update to the latest `goimports` or other tools by using:
+
+```
+GO111MODULE=on \
+go get golang.org/x/tools/cmd/goimports@v0.1.0
+```
+
+You can update programs that depend on `golang.org/x/tools/go/packages`, even before their authors do, by adding an explicit upgrade of the dependency during `go``get`:
+
+```
+GO111MODULE=on \
+go get example.com/cmd/thecmd golang.org/x/tools@v0.1.0
+```
+
+For programs that use `go/build`, it is sufficient for you to recompile them using the updated Go release.
+
+Again, you only need to update these other programs if you are a Windows user or a Unix user with dot in the PATH and you run these programs in source directories you do not trust that may contain malicious programs.
+
+## Are your own programs affected?
+
+If you use `exec.LookPath` or `exec.Command` in your own programs, you only need to be concerned if you (or your users) run your program in a directory with untrusted contents. If so, then a subprocess could be started using an executable from dot instead of from a system directory. (Again, using an executable from dot happens always on Windows and only with uncommon PATH settings on Unix.)
+
+If you are concerned, then we’ve published the more restricted variant of `os/exec` as [golang.org/x/sys/execabs](https://pkg.go.dev/golang.org/x/sys/execabs). You can use it in your program by simply replacing
+
+```
+import "os/exec"
+```
+
+with
+
+```
+import exec "golang.org/x/sys/execabs"
+```
+
+and recompiling.
+
+## Securing os/exec by default
+
+We have been discussing on [golang.org/issue/38736](/issue/38736) whether the Windows behavior of always preferring the current directory in PATH lookups (during `exec.Command` and `exec.LookPath`) should be changed. The argument in favor of the change is that it closes the kinds of security problems discussed in this blog post. A supporting argument is that although the Windows `SearchPath` API and `cmd.exe` still always search the current directory, PowerShell, the successor to `cmd.exe`, does not, an apparent recognition that the original behavior was a mistake. The argument against the change is that it could break existing Windows programs that intend to find programs in the current directory. We don’t know how many such programs exist, but they would get unexplained failures if the PATH lookups started skipping the current directory entirely.
+
+The approach we have taken in `golang.org/x/sys/execabs` may be a reasonable middle ground. It finds the result of the old PATH lookup and then returns a clear error rather than use a result from the current directory. The error returned from `exec.Command("prog")` when `prog.exe` exists looks like:
+
+```
+prog resolves to executable in current directory (.\prog.exe)
+```
+
+For programs that do change behavior, this error should make very clear what has happened. Programs that intend to run a program from the current directory can use `exec.Command("./prog")` instead (that syntax works on all systems, even Windows).
+
+We have filed this idea as a new proposal, [golang.org/issue/43724](/issue/43724).
+
+Next article: [Gopls on by default in the VS Code Go extension](/blog/gopls-vscode-go)
+Previous article: [A Proposal for Adding Generics to Go](/blog/generics-proposal)
+[Blog Index](/blog/all)[Why Go](/solutions/)[Use Cases](/solutions/use-cases)[Case Studies](/solutions/case-studies)[Get Started](/learn/)[Playground](/play)[Tour](/tour/)[Stack Overflow](https://stackoverflow.com/questions/tagged/go?tab=Newest)[Help](/help/)[Packages](https://pkg.go.dev)[Standard Library](/pkg/)[About Go Packages](https://pkg.go.dev/about)[About](/project)[Download](/dl/)[Blog](/blog/)[Issue Tracker](https://github.com/golang/go/issues)[Release Notes](/doc/devel/release)[Brand Guidelines](/brand)[Code of Conduct](/conduct)[Connect](https://www.twitter.com/golang)[Twitter](https://www.twitter.com/golang)[GitHub](https://github.com/golang)[Slack](https://invite.slack.golangbridge.org/)[r/golang](https://reddit.com/r/golang)[Meetup](https://www.meetup.com/pro/go)[Golang Weekly](https://golangweekly.com/) Opens in new window. 
+
+- [Copyright](/copyright)
+- [Terms of Service](/tos)
+- [Privacy Policy](http://www.google.com/intl/en/policies/privacy/)
+- [Report an Issue](/s/website-issue)
+- 
+
+https://google.comgo.dev uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic. [Learn more.](https://policies.google.com/technologies/cookies)Okay

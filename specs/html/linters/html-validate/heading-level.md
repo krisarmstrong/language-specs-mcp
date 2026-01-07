@@ -1,3 +1,14 @@
+HTML-validate - Require headings to start at h1 and increment by one (heading-level)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -98,3 +109,5 @@ With this option the following is considered valid:
 
 - 7.14.0 - `[role="alertdialog"]` added as default sectioning root.
 - 5.5.0 - `minInitialRank` option added.
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/heading-level.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/heading-level.ts)

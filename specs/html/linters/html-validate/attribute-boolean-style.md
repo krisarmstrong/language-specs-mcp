@@ -1,3 +1,14 @@
+HTML-validate - Require a specific style for boolean attributes (attribute-boolean-style)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -66,3 +77,5 @@ This rule takes an optional object:
 - `omit` require boolean attributes to omit value, e.g. `<input required>`
 - `empty` require boolean attributes to be empty string, e.g. `<input required="">`
 - `name` require boolean attributes to be the attributes name, e.g. `<input required="required">`
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/attribute-boolean-style.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/attribute-boolean-style.ts)

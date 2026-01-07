@@ -1,179 +1,206 @@
-# HTMLTableElement
+content/files/en-us/web/api/htmltableelement/index.md at main · mdn/content · GitHub[Skip to content](#start-of-content)
 
- Baseline  Widely available  * 
+## Navigation Menu
 
- This feature is well established and works across many devices and browser versions. It’s been available across browsers since ⁨July 2015⁩. 
+Toggle navigation/[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fhtmltableelement%2Findex.md%3Fplain%3D1)Appearance settings
 
-* Some parts of this feature may have varying levels of support.
+- Platform
 
-- [Learn more](/en-US/docs/Glossary/Baseline/Compatibility)
-- [See full compatibility](#browser_compatibility)
-- [Report feedback](https://survey.alchemer.com/s3/7634825/MDN-baseline-feedback?page=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FHTMLTableElement&level=high)
+  - AI CODE CREATION
 
-The `HTMLTableElement` interface provides special properties and methods (beyond the regular [HTMLElement](/en-US/docs/Web/API/HTMLElement) object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document.
+    - [GitHub CopilotWrite better code with AI](https://github.com/features/copilot)
+    - [GitHub SparkBuild and deploy intelligent apps](https://github.com/features/spark)
+    - [GitHub ModelsManage and compare prompts](https://github.com/features/models)
+    - [MCP RegistryNewIntegrate external tools](https://github.com/mcp)
 
-## In this article
+  - DEVELOPER WORKFLOWS
 
-- [Instance properties](#instance_properties)
-- [Instance methods](#instance_methods)
-- [Examples](#examples)
-- [Specifications](#specifications)
-- [Browser compatibility](#browser_compatibility)
-- [See also](#see_also)
+    - [ActionsAutomate any workflow](https://github.com/features/actions)
+    - [CodespacesInstant dev environments](https://github.com/features/codespaces)
+    - [IssuesPlan and track work](https://github.com/features/issues)
+    - [Code ReviewManage code changes](https://github.com/features/code-review)
 
-## [Instance properties](#instance_properties)
+  - APPLICATION SECURITY
 
-Inherits properties from its parent, [HTMLElement](/en-US/docs/Web/API/HTMLElement).
+    - [GitHub Advanced SecurityFind and fix vulnerabilities](https://github.com/security/advanced-security)
+    - [Code securitySecure your code as you build](https://github.com/security/advanced-security/code-security)
+    - [Secret protectionStop leaks before they start](https://github.com/security/advanced-security/secret-protection)
 
-[HTMLTableElement.caption](/en-US/docs/Web/API/HTMLTableElement/caption)
+  - EXPLORE
 
-A [HTMLTableCaptionElement](/en-US/docs/Web/API/HTMLTableCaptionElement) representing the first [<caption>](/en-US/docs/Web/HTML/Reference/Elements/caption) that is a child of the element, or `null` if none is found. When set, if the object doesn't represent a `<caption>`, a [DOMException](/en-US/docs/Web/API/DOMException) with the `HierarchyRequestError` name is thrown. If a correct object is given, it is inserted in the tree as the first child of this element and the first `<caption>` that is a child of this element is removed from the tree, if any.
+    - [Why GitHub](https://github.com/why-github)
+    - [Documentation](https://docs.github.com)
+    - [Blog](https://github.blog)
+    - [Changelog](https://github.blog/changelog)
+    - [Marketplace](https://github.com/marketplace)
 
-[HTMLTableElement.tHead](/en-US/docs/Web/API/HTMLTableElement/tHead)
+[View all features](https://github.com/features)
+- Solutions
 
-A [HTMLTableSectionElement](/en-US/docs/Web/API/HTMLTableSectionElement) representing the first [<thead>](/en-US/docs/Web/HTML/Reference/Elements/thead) that is a child of the element, or `null` if none is found. When set, if the object doesn't represent a `<thead>`, a [DOMException](/en-US/docs/Web/API/DOMException) with the `HierarchyRequestError` name is thrown. If a correct object is given, it is inserted in the tree immediately before the first element that is neither a [<caption>](/en-US/docs/Web/HTML/Reference/Elements/caption), nor a [<colgroup>](/en-US/docs/Web/HTML/Reference/Elements/colgroup), or as the last child if there is no such element, and the first `<thead>` that is a child of this element is removed from the tree, if any.
+  - BY COMPANY SIZE
 
-[HTMLTableElement.tFoot](/en-US/docs/Web/API/HTMLTableElement/tFoot)
+    - [Enterprises](https://github.com/enterprise)
+    - [Small and medium teams](https://github.com/team)
+    - [Startups](https://github.com/enterprise/startups)
+    - [Nonprofits](https://github.com/solutions/industry/nonprofits)
 
-A [HTMLTableSectionElement](/en-US/docs/Web/API/HTMLTableSectionElement) representing the first [<tfoot>](/en-US/docs/Web/HTML/Reference/Elements/tfoot) that is a child of the element, or `null` if none is found. When set, if the object doesn't represent a `<tfoot>`, a [DOMException](/en-US/docs/Web/API/DOMException) with the `HierarchyRequestError` name is thrown. If a correct object is given, it is inserted in the tree immediately before the first element that is neither a [<caption>](/en-US/docs/Web/HTML/Reference/Elements/caption), a [<colgroup>](/en-US/docs/Web/HTML/Reference/Elements/colgroup), nor a [<thead>](/en-US/docs/Web/HTML/Reference/Elements/thead), or as the last child if there is no such element, and the first `<tfoot>` that is a child of this element is removed from the tree, if any.
+  - BY USE CASE
 
-[HTMLTableElement.rows](/en-US/docs/Web/API/HTMLTableElement/rows)Read only
+    - [App Modernization](https://github.com/solutions/use-case/app-modernization)
+    - [DevSecOps](https://github.com/solutions/use-case/devsecops)
+    - [DevOps](https://github.com/solutions/use-case/devops)
+    - [CI/CD](https://github.com/solutions/use-case/ci-cd)
+    - [View all use cases](https://github.com/solutions/use-case)
 
-Returns a live [HTMLCollection](/en-US/docs/Web/API/HTMLCollection) containing all the rows of the element, that is all [<tr>](/en-US/docs/Web/HTML/Reference/Elements/tr) that are a child of the element, or a child of one of its [<thead>](/en-US/docs/Web/HTML/Reference/Elements/thead), [<tbody>](/en-US/docs/Web/HTML/Reference/Elements/tbody) and [<tfoot>](/en-US/docs/Web/HTML/Reference/Elements/tfoot) children. The rows members of a `<thead>` appear first, in tree order, and those members of a `<tbody>` last, also in tree order. The `HTMLCollection` is live and is automatically updated when the `HTMLTableElement` changes.
+  - BY INDUSTRY
 
-[HTMLTableElement.tBodies](/en-US/docs/Web/API/HTMLTableElement/tBodies)Read only
+    - [Healthcare](https://github.com/solutions/industry/healthcare)
+    - [Financial services](https://github.com/solutions/industry/financial-services)
+    - [Manufacturing](https://github.com/solutions/industry/manufacturing)
+    - [Government](https://github.com/solutions/industry/government)
+    - [View all industries](https://github.com/solutions/industry)
 
-Returns a live [HTMLCollection](/en-US/docs/Web/API/HTMLCollection) containing all the [<tbody>](/en-US/docs/Web/HTML/Reference/Elements/tbody) of the element. The `HTMLCollection` is live and is automatically updated when the `HTMLTableElement` changes.
+[View all solutions](https://github.com/solutions)
+- Resources
 
-### [Obsolete Properties](#obsolete_properties)
+  - EXPLORE BY TOPIC
 
-Warning: The following properties are obsolete. You should avoid using them.
+    - [AI](https://github.com/resources/articles?topic=ai)
+    - [Software Development](https://github.com/resources/articles?topic=software-development)
+    - [DevOps](https://github.com/resources/articles?topic=devops)
+    - [Security](https://github.com/resources/articles?topic=security)
+    - [View all topics](https://github.com/resources/articles)
 
-[HTMLTableElement.align](/en-US/docs/Web/API/HTMLTableElement/align)Deprecated
+  - EXPLORE BY TYPE
 
-A string containing an enumerated value reflecting the [align](/en-US/docs/Web/HTML/Reference/Elements/table#align) attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.
+    - [Customer stories](https://github.com/customer-stories)
+    - [Events & webinars](https://github.com/resources/events)
+    - [Ebooks & reports](https://github.com/resources/whitepapers)
+    - [Business insights](https://github.com/solutions/executive-insights)
+    - [GitHub Skills](https://skills.github.com)
 
-[HTMLTableElement.bgColor](/en-US/docs/Web/API/HTMLTableElement/bgColor)Deprecated
+  - SUPPORT & SERVICES
 
-A string containing the background color of the cells. It reflects the obsolete [bgColor](/en-US/docs/Web/HTML/Reference/Elements/table#bgcolor) attribute.
+    - [Documentation](https://docs.github.com)
+    - [Customer support](https://support.github.com)
+    - [Community forum](https://github.com/orgs/community/discussions)
+    - [Trust center](https://github.com/trust-center)
+    - [Partners](https://github.com/partners)
 
-[HTMLTableElement.border](/en-US/docs/Web/API/HTMLTableElement/border)Deprecated
+- Open Source
 
-A string containing the width in pixels of the border of the table. It reflects the obsolete [border](/en-US/docs/Web/HTML/Reference/Elements/table#border) attribute.
+  - COMMUNITY
 
-[HTMLTableElement.cellPadding](/en-US/docs/Web/API/HTMLTableElement/cellPadding)Deprecated
+    - [GitHub SponsorsFund open source developers](https://github.com/sponsors)
 
-A string containing the width in pixels of the horizontal and vertical space between cell content and cell borders. It reflects the obsolete [cellpadding](/en-US/docs/Web/HTML/Reference/Elements/table#cellpadding) attribute.
+  - PROGRAMS
 
-[HTMLTableElement.cellSpacing](/en-US/docs/Web/API/HTMLTableElement/cellSpacing)Deprecated
+    - [Security Lab](https://securitylab.github.com)
+    - [Maintainer Community](https://maintainers.github.com)
+    - [Accelerator](https://github.com/accelerator)
+    - [Archive Program](https://archiveprogram.github.com)
 
-A string containing the width in pixels of the horizontal and vertical separation between cells. It reflects the obsolete [cellspacing](/en-US/docs/Web/HTML/Reference/Elements/table#cellspacing) attribute.
+  - REPOSITORIES
 
-[HTMLTableElement.frame](/en-US/docs/Web/API/HTMLTableElement/frame)Deprecated
+    - [Topics](https://github.com/topics)
+    - [Trending](https://github.com/trending)
+    - [Collections](https://github.com/collections)
 
-A string containing the type of the external borders of the table. It reflects the obsolete [frame](/en-US/docs/Web/HTML/Reference/Elements/table#frame) attribute and can take one of the following values: `"void"`, `"above"`, `"below"`, `"hsides"`, `"vsides"`, `"lhs"`, `"rhs"`, `"box"`, or `"border"`.
+- Enterprise
 
-[HTMLTableElement.rules](/en-US/docs/Web/API/HTMLTableElement/rules)Deprecated
+  - ENTERPRISE SOLUTIONS
 
-A string containing the type of the internal borders of the table. It reflects the obsolete [rules](/en-US/docs/Web/HTML/Reference/Elements/table#rules) attribute and can take one of the following values: `"none"`, `"groups"`, `"rows"`, `"cols"`, or `"all"`.
+    - [Enterprise platformAI-powered developer platform](https://github.com/enterprise)
 
-[HTMLTableElement.summary](/en-US/docs/Web/API/HTMLTableElement/summary)Deprecated
+  - AVAILABLE ADD-ONS
 
-A string containing a description of the purpose or the structure of the table. It reflects the obsolete [summary](/en-US/docs/Web/HTML/Reference/Elements/table#summary) attribute.
+    - [GitHub Advanced SecurityEnterprise-grade security features](https://github.com/security/advanced-security)
+    - [Copilot for BusinessEnterprise-grade AI features](https://github.com/features/copilot/copilot-business)
+    - [Premium SupportEnterprise-grade 24/7 support](https://github.com/premium-support)
 
-[HTMLTableElement.width](/en-US/docs/Web/API/HTMLTableElement/width)Deprecated
+- [Pricing](https://github.com/pricing)
 
-A string containing the length in pixels or in percentage of the desired width of the entire table. It reflects the obsolete [width](/en-US/docs/Web/HTML/Reference/Elements/table#width) attribute.
+Search or jump to...
 
-## [Instance methods](#instance_methods)
+# Search code, repositories, users, issues, pull requests...
 
-Inherits methods from its parent, [HTMLElement](/en-US/docs/Web/API/HTMLElement).
+ Search Clear
 
-[HTMLTableElement.createTHead()](/en-US/docs/Web/API/HTMLTableElement/createTHead)
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
 
-Returns an [HTMLTableSectionElement](/en-US/docs/Web/API/HTMLTableSectionElement) representing the first [<thead>](/en-US/docs/Web/HTML/Reference/Elements/thead) that is a child of the element. If none is found, a new one is created and inserted in the tree immediately before the first element that is neither a [<caption>](/en-US/docs/Web/HTML/Reference/Elements/caption), nor a [<colgroup>](/en-US/docs/Web/HTML/Reference/Elements/colgroup), or as the last child if there is no such element.
+#  Provide feedback 
 
-[HTMLTableElement.deleteTHead()](/en-US/docs/Web/API/HTMLTableElement/deleteTHead)
+We read every piece of feedback, and take your input very seriously.
 
-Removes the first [<thead>](/en-US/docs/Web/HTML/Reference/Elements/thead) that is a child of the element.
+Include my email address so I can be contacted Cancel  Submit feedback 
 
-[HTMLTableElement.createTFoot()](/en-US/docs/Web/API/HTMLTableElement/createTFoot)
+#  Saved searches 
 
-Returns an [HTMLTableSectionElement](/en-US/docs/Web/API/HTMLTableSectionElement) representing the first [<tfoot>](/en-US/docs/Web/HTML/Reference/Elements/tfoot) that is a child of the element. If none is found, a new one is created and inserted in the tree as the last child.
+## Use saved searches to filter your results more quickly
 
-[HTMLTableElement.deleteTFoot()](/en-US/docs/Web/API/HTMLTableElement/deleteTFoot)
+NameQuery
 
-Removes the first [<tfoot>](/en-US/docs/Web/HTML/Reference/Elements/tfoot) that is a child of the element.
+ To see all available qualifiers, see our [documentation](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax). 
 
-[HTMLTableElement.createTBody()](/en-US/docs/Web/API/HTMLTableElement/createTBody)
+ Cancel  Create saved search [Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fhtmltableelement%2Findex.md%3Fplain%3D1)[Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&source=header-repo&source_repo=mdn%2Fcontent)Appearance settingsResetting focusYou signed in with another tab or window. Reload to refresh your session.You signed out in another tab or window. Reload to refresh your session.You switched accounts on another tab or window. Reload to refresh your session.Dismiss alert{{ message }}[mdn](/mdn)/[content](/mdn/content)Public
 
-Returns a [HTMLTableSectionElement](/en-US/docs/Web/API/HTMLTableSectionElement) representing a new [<tbody>](/en-US/docs/Web/HTML/Reference/Elements/tbody) that is a child of the element. It is inserted in the tree after the last element that is a [<tbody>](/en-US/docs/Web/HTML/Reference/Elements/tbody), or as the last child if there is no such element.
+- [Notifications](/login?return_to=%2Fmdn%2Fcontent)You must be signed in to change notification settings
+- [Fork
+    23.1k](/login?return_to=%2Fmdn%2Fcontent)
+- [Star
+          10.4k](/login?return_to=%2Fmdn%2Fcontent)
 
-[HTMLTableElement.createCaption()](/en-US/docs/Web/API/HTMLTableElement/createCaption)
+- [Code](/mdn/content)
+- [Issues
+          320](/mdn/content/issues)
+- [Pull requests
+          96](/mdn/content/pulls)
+- [Actions](/mdn/content/actions)
+- [Projects
+          0](/mdn/content/projects)
+- 
 
-Returns an [HTMLElement](/en-US/docs/Web/API/HTMLElement) representing the first [<caption>](/en-US/docs/Web/HTML/Reference/Elements/caption) that is a child of the element. If none is found, a new one is created and inserted in the tree as the first child of the [<table>](/en-US/docs/Web/HTML/Reference/Elements/table) element.
+### 
 
-[HTMLTableElement.deleteCaption()](/en-US/docs/Web/API/HTMLTableElement/deleteCaption)
+[Security
+          
+  
+  
+    
+  
+    
+      
 
-Removes the first [<caption>](/en-US/docs/Web/HTML/Reference/Elements/caption) that is a child of the element.
+              Uh oh!
 
-[HTMLTableElement.insertRow()](/en-US/docs/Web/API/HTMLTableElement/insertRow)
+              There was an error while loading. Please reload this page](/mdn/content/security).
 
-Returns an [HTMLTableRowElement](/en-US/docs/Web/API/HTMLTableRowElement) representing a new row of the table. It inserts it in the rows collection immediately before the [<tr>](/en-US/docs/Web/HTML/Reference/Elements/tr) element at the given `index` position. If necessary a [<tbody>](/en-US/docs/Web/HTML/Reference/Elements/tbody) is created. If the `index` is `-1`, the new row is appended to the collection. If the `index` is smaller than `-1` or greater than the number of rows in the collection, a [DOMException](/en-US/docs/Web/API/DOMException) with the value `IndexSizeError` is raised.
+- [Insights](/mdn/content/pulse)
 
-[HTMLTableElement.deleteRow()](/en-US/docs/Web/API/HTMLTableElement/deleteRow)
+Additional navigation options
 
-Removes the row corresponding to the `index` given in parameter. If the `index` value is `-1` the last row is removed; if it is smaller than `-1` or greater than the amount of rows in the collection, a [DOMException](/en-US/docs/Web/API/DOMException) with the value `IndexSizeError` is raised.
+- [Code](/mdn/content)
+- [Issues](/mdn/content/issues)
+- [Pull requests](/mdn/content/pulls)
+- [Actions](/mdn/content/actions)
+- [Projects](/mdn/content/projects)
+- [Security](/mdn/content/security)
+- [Insights](/mdn/content/pulse)
 
-## [Examples](#examples)
+## Footer
 
-### [Using the DOM Table Interface](#using_the_dom_table_interface)
+https://github.com © 2026 GitHub, Inc. 
 
-The `HTMLTableElement` interface provides some convenience methods for creating and manipulating tables. Two frequently used methods are [HTMLTableElement.insertRow](/en-US/docs/Web/API/HTMLTableElement/insertRow) and [HTMLTableRowElement.insertCell](/en-US/docs/Web/API/HTMLTableRowElement/insertCell).
+### Footer navigation
 
-To add a row and some cells to an existing table:
+- [Terms](https://docs.github.com/site-policy/github-terms/github-terms-of-service)
+- [Privacy](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement)
+- [Security](https://github.com/security)
+- [Status](https://www.githubstatus.com/)
+- [Community](https://github.community/)
+- [Docs](https://docs.github.com/)
+- [Contact](https://support.github.com?tags=dotcom-footer)
+-  Manage cookies 
+-  Do not share my personal information 
 
-html
-
-```
-<table id="table0">
-  <tbody>
-    <tr>
-      <td>Row 0 Cell 0</td>
-      <td>Row 0 Cell 1</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-js
-
-```
-const table = document.getElementById("table0");
-const row = table.insertRow(-1);
-
-for (let i = 0; i < 2; i++) {
-  const cell = row.insertCell(-1);
-  const text = `Row ${row.rowIndex} Cell ${i}`;
-  cell.appendChild(document.createTextNode(text));
-}
-```
-
-## [Specifications](#specifications)
-
-Specification
-[HTML# htmltableelement](https://html.spec.whatwg.org/multipage/tables.html#htmltableelement)
-
-## [Browser compatibility](#browser_compatibility)
-
-## [See also](#see_also)
-
-- The HTML element implementing this interface: [<table>](/en-US/docs/Web/HTML/Reference/Elements/table).
-
-## Help improve MDN
-
-Was this page helpful to you?YesNo[Learn how to contribute](/en-US/docs/MDN/Community/Getting_started)
-
- This page was last modified on ⁨Nov 3, 2025⁩ by [MDN contributors](/en-US/docs/Web/API/HTMLTableElement/contributors.txt). 
-
-[View this page on GitHub](https://github.com/mdn/content/blob/main/files/en-us/web/api/htmltableelement/index.md?plain=1) • [Report a problem with this content](https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FHTMLTableElement&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Fhtmltableelement%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FHTMLTableElement%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fhtmltableelement%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2F0b5859108411e47d228a4bb9f30a5556ab17f63c%0A*+Document+last+modified%3A+2025-11-03T18%3A14%3A11.000Z%0A%0A%3C%2Fdetails%3E)
+ You can’t perform that action at this time.

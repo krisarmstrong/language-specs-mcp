@@ -1,4 +1,31 @@
-Module[java.desktop](../../../module-summary.html)
+javax.print.attribute (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../index.html)
+- [Module](../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../preview-list.html)
+- [New](../../../../new-list.html)
+- [Deprecated](../../../../deprecated-list.html)
+- [Index](../../../../index-files/index-1.html)
+- [Help](../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../search.html)Module[java.desktop](../../../module-summary.html)
 
 # Package javax.print.attribute
 
@@ -163,3 +190,9 @@ Since:1.4
 
 - Related PackagesPackageDescription[javax.print](../package-summary.html)Provides the principal classes and interfaces for the Java Print Service API.[javax.print.attribute.standard](standard/package-summary.html)Package `javax.print.attribute.standard` contains classes for specific printing attributes.[javax.print.event](../event/package-summary.html)Package `javax.print.event` contains event classes and listener interfaces.
 - All Classes and InterfacesInterfacesClassesException ClassesClassDescription[Attribute](Attribute.html)Interface `Attribute` is the base interface implemented by any and every printing attribute class to indicate that the class represents a printing attribute.[AttributeSet](AttributeSet.html)Interface `AttributeSet` specifies the interface for a set of printing attributes.[AttributeSetUtilities](AttributeSetUtilities.html)Class `AttributeSetUtilities` provides static methods for manipulating `AttributeSets`.[DateTimeSyntax](DateTimeSyntax.html)Class `DateTimeSyntax` is an abstract base class providing the common implementation of all attributes whose value is a date and time.[DocAttribute](DocAttribute.html)Interface `DocAttribute` is a tagging interface which a printing attribute class implements to indicate the attribute denotes a setting for a doc.[DocAttributeSet](DocAttributeSet.html)Interface `DocAttributeSet` specifies the interface for a set of doc attributes, i.e. printing attributes that implement interface [DocAttribute](DocAttribute.html).[EnumSyntax](EnumSyntax.html)Class `EnumSyntax` is an abstract base class providing the common implementation of all "type safe enumeration" objects.[HashAttributeSet](HashAttributeSet.html)Class `HashAttributeSet` provides an `AttributeSet` implementation with characteristics of a hash map.[HashDocAttributeSet](HashDocAttributeSet.html)Class `HashDocAttributeSet` provides an attribute set which inherits its implementation from class [HashAttributeSet](HashAttributeSet.html) and enforces the semantic restrictions of interface [DocAttributeSet](DocAttributeSet.html).[HashPrintJobAttributeSet](HashPrintJobAttributeSet.html)Class `HashPrintJobAttributeSet` provides an attribute set which inherits its implementation from class [HashAttributeSet](HashAttributeSet.html) and enforces the semantic restrictions of interface [PrintJobAttributeSet](PrintJobAttributeSet.html).[HashPrintRequestAttributeSet](HashPrintRequestAttributeSet.html)Class `HashPrintRequestAttributeSet` inherits its implementation from class [HashAttributeSet](HashAttributeSet.html) and enforces the semantic restrictions of interface [PrintRequestAttributeSet](PrintRequestAttributeSet.html).[HashPrintServiceAttributeSet](HashPrintServiceAttributeSet.html)Class `HashPrintServiceAttributeSet` provides an attribute set which inherits its implementation from class [HashAttributeSet](HashAttributeSet.html) and enforces the semantic restrictions of interface [PrintServiceAttributeSet](PrintServiceAttributeSet.html).[IntegerSyntax](IntegerSyntax.html)Class `IntegerSyntax` is an abstract base class providing the common implementation of all attributes with integer values.[PrintJobAttribute](PrintJobAttribute.html)`PrintJobAttribute` is a tagging interface which a printing attribute class implements to indicate the attribute describes the status of a Print Job or some other characteristic of a Print Job.[PrintJobAttributeSet](PrintJobAttributeSet.html)Interface `PrintJobAttributeSet` specifies the interface for a set of print job attributes, i.e. printing attributes that implement interface [PrintJobAttribute](PrintJobAttribute.html).[PrintRequestAttribute](PrintRequestAttribute.html)Interface `PrintRequestAttribute` is a tagging interface which a printing attribute class implements to indicate the attribute denotes a requested setting for a print job.[PrintRequestAttributeSet](PrintRequestAttributeSet.html)Interface `PrintRequestAttributeSet` specifies the interface for a set of print request attributes, i.e. printing attributes that implement interface [PrintRequestAttribute](PrintRequestAttribute.html).[PrintServiceAttribute](PrintServiceAttribute.html)Interface `PrintServiceAttribute` is a tagging interface which a printing attribute class implements to indicate the attribute describes the status of a Print Service or some other characteristic of a Print Service.[PrintServiceAttributeSet](PrintServiceAttributeSet.html)Interface `PrintServiceAttributeSet` specifies the interface for a set of print job attributes, i.e. printing attributes that implement interface [PrintServiceAttribute](PrintServiceAttribute.html).[ResolutionSyntax](ResolutionSyntax.html)Class `ResolutionSyntax` is an abstract base class providing the common implementation of all attributes denoting a printer resolution.[SetOfIntegerSyntax](SetOfIntegerSyntax.html)Class `SetOfIntegerSyntax` is an abstract base class providing the common implementation of all attributes whose value is a set of nonnegative integers.[Size2DSyntax](Size2DSyntax.html)Class `Size2DSyntax` is an abstract base class providing the common implementation of all attributes denoting a size in two dimensions.[SupportedValuesAttribute](SupportedValuesAttribute.html)Interface `SupportedValuesAttribute` is a tagging interface which a printing attribute class implements to indicate the attribute describes the supported values for another attribute.[TextSyntax](TextSyntax.html)Class `TextSyntax` is an abstract base class providing the common implementation of all attributes whose value is a string.[UnmodifiableSetException](UnmodifiableSetException.html)Thrown to indicate that the requested operation cannot be performed because the set is unmodifiable.[URISyntax](URISyntax.html)Class `URISyntax` is an abstract base class providing the common implementation of all attributes whose value is a Uniform Resource Identifier (URI).
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

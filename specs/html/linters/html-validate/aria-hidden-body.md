@@ -1,3 +1,14 @@
+HTML-validate - disallow `aria-hidden` from being set on `<body>` (aria-hidden-body)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -45,3 +56,5 @@ This rule takes no options.
 ## [Version history](#version-history)
 
 -- 6.3.0 - Rule added.
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/aria-hidden-body.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/aria-hidden-body.ts)

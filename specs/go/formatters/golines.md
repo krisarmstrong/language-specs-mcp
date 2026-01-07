@@ -1,399 +1,282 @@
-This repository was archived by the owner on Dec 19, 2025. It is now read-only. [segmentio](/segmentio)/[golines](/segmentio/golines)Public archive
+Archiving repositories - GitHub Docs[Skip to main content](#main-content)[GitHub Docs](/en)Version: Free, Pro, & TeamSearch or ask CopilotSearch or askCopilotSelect language: current language is EnglishSearch or ask CopilotSearch or askCopilotOpen menuOpen Sidebar
+
+- [Repositories](/en/repositories)/
+- [Archive a repository](/en/repositories/archiving-a-github-repository)/
+- [Archiving repositories](/en/repositories/archiving-a-github-repository/archiving-repositories)
+
+[Home](/en)
+
+## [Repositories](/en/repositories)
+
+- Create & manage repositories
+
+  - [About repositories](/en/repositories/creating-and-managing-repositories/about-repositories)
+  - [Best practices](/en/repositories/creating-and-managing-repositories/best-practices-for-repositories)
+  - [Quickstart for repositories](/en/repositories/creating-and-managing-repositories/quickstart-for-repositories)
+  - [Repository limits](/en/repositories/creating-and-managing-repositories/repository-limits)
+  - [Creating a new repository](/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+  - [Access to repositories](/en/repositories/creating-and-managing-repositories/access-to-repositories)
+  - [Create from a template](/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+  - [Create a template repo](/en/repositories/creating-and-managing-repositories/creating-a-template-repository)
+  - [Issues-only repository](/en/repositories/creating-and-managing-repositories/creating-an-issues-only-repository)
+  - [Duplicating a repository](/en/repositories/creating-and-managing-repositories/duplicating-a-repository)
+  - [Cloning a repository](/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+  - [Troubleshooting cloning errors](/en/repositories/creating-and-managing-repositories/troubleshooting-cloning-errors)
+  - [Renaming a repository](/en/repositories/creating-and-managing-repositories/renaming-a-repository)
+  - [Transferring a repository](/en/repositories/creating-and-managing-repositories/transferring-a-repository)
+  - [Deleting a repository](/en/repositories/creating-and-managing-repositories/deleting-a-repository)
+  - [Restore deleted repository](/en/repositories/creating-and-managing-repositories/restoring-a-deleted-repository)
+  - [View all repositories](/en/repositories/creating-and-managing-repositories/viewing-all-your-repositories)
+
+- Manage repository settings
+
+  - Repository access and collaboration
+
+    - [Invite collaborators](/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository)
+    - [Remove a collaborator](/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/removing-a-collaborator-from-a-personal-repository)
+    - [Repository permissions](/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/permission-levels-for-a-personal-account-repository)
+    - [Remove yourself](/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/removing-yourself-from-a-collaborators-repository)
+    - [Ownership continuity](/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/maintaining-ownership-continuity-of-your-personal-accounts-repositories)
+
+  - Customize your repository
+
+    - [About READMEs](/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+    - [Licensing a repository](/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
+    - [Display a sponsor button](/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository)
+    - [Social media preview](/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview)
+    - [Classify with topics](/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics)
+    - [About code owners](/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
+    - [Repository languages](/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-repository-languages)
+    - [About CITATION files](/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files)
+
+  - Enable features
+
+    - [Disabling issues](/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-issues)
+    - [Disable projects](/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/disabling-projects-in-a-repository)
+    - [Manage GitHub Actions settings](/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository)
+    - [Discussions](/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository)
+    - [Security & analysis](/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-security-and-analysis-settings-for-your-repository)
+
+  - Manage repository settings
+
+    - [Repository visibility](/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility)
+    - [Teams & people](/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository)
+    - [Manage the forking policy](/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-the-forking-policy-for-your-repository)
+    - [Manage pull request reviews](/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-pull-request-reviews-in-your-repository)
+    - [Manage default branch name](/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-the-default-branch-name-for-your-repositories)
+    - [Manage the commit signoff policy](/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-the-commit-signoff-policy-for-your-repository)
+    - [Manage the push policy](/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-the-push-policy-for-your-repository)
+    - [Managing Git LFS objects in archives](/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-git-lfs-objects-in-archives-of-your-repository)
+    - [Email notifications for pushes](/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/about-email-notifications-for-pushes-to-your-repository)
+    - [Configure autolinks](/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/configuring-autolinks-to-reference-external-resources)
+    - [Manage auto-closing issues](/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-auto-closing-issues)
+    - [Manage models](/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-github-models-in-your-repository)
+
+- Branches and merges
+
+  - Manage branches
+
+    - [View branches](/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/viewing-branches-in-your-repository)
+    - [Renaming a branch](/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/renaming-a-branch)
+    - [Change the default branch](/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch)
+    - [Delete & restore branches](/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/deleting-and-restoring-branches-in-a-pull-request)
+
+  - Configure PR merges
+
+    - [About merge methods](/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github)
+    - [Configure commit merging](/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/configuring-commit-merging-for-pull-requests)
+    - [Configure commit squashing](/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/configuring-commit-squashing-for-pull-requests)
+    - [Configure commit rebasing](/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/configuring-commit-rebasing-for-pull-requests)
+    - [Managing merge queue](/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue)
+    - [Manage branch updates](/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-suggestions-to-update-pull-request-branches)
+    - [Manage auto merge](/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-auto-merge-for-pull-requests-in-your-repository)
+    - [Automatic branch deletion](/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-the-automatic-deletion-of-branches)
+
+  - Manage protected branches
 
-- [Notifications](/login?return_to=%2Fsegmentio%2Fgolines)You must be signed in to change notification settings
-- [Fork
-    75](/login?return_to=%2Fsegmentio%2Fgolines)
-- [Star
-          1.1k](/login?return_to=%2Fsegmentio%2Fgolines)
+    - [About protected branches](/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
+    - [Branch protection rule](/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)
 
- A golang formatter that fixes long lines 
+  - Manage rulesets
 
-### License
+    - [About rulesets](/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets)
+    - [Create a ruleset](/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository)
+    - [Manage a ruleset](/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/managing-rulesets-for-a-repository)
+    - [Available rules](/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets)
+    - [Troubleshooting](/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/troubleshooting-rules)
 
-[MIT license](/segmentio/golines/blob/master/LICENSE)[1.1k
-          stars](/segmentio/golines/stargazers)[75
-          forks](/segmentio/golines/forks)[Branches](/segmentio/golines/branches)[Tags](/segmentio/golines/tags)[Activity](/segmentio/golines/activity)[Star](/login?return_to=%2Fsegmentio%2Fgolines)[Notifications](/login?return_to=%2Fsegmentio%2Fgolines)You must be signed in to change notification settings
+- Work with files
 
-- [Code](/segmentio/golines)
-- [Issues
-          58](/segmentio/golines/issues)
-- [Pull requests
-          17](/segmentio/golines/pulls)
-- [Actions](/segmentio/golines/actions)
-- [Projects
-          0](/segmentio/golines/projects)
-- 
+  - Managing files
 
-### 
+    - [Creating new files](/en/repositories/working-with-files/managing-files/creating-new-files)
+    - [Add a file](/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository)
+    - [Move a file](/en/repositories/working-with-files/managing-files/moving-a-file-to-a-new-location)
+    - [Edit files](/en/repositories/working-with-files/managing-files/editing-files)
+    - [Renaming a file](/en/repositories/working-with-files/managing-files/renaming-a-file)
+    - [Delete files](/en/repositories/working-with-files/managing-files/deleting-files-in-a-repository)
+    - [How changed files appear](/en/repositories/working-with-files/managing-files/customizing-how-changed-files-appear-on-github)
 
-[Security
-          
-  
-  
-    
-  
-    
-      
+  - Using files
 
-              Uh oh!
+    - [Navigating code on GitHub](/en/repositories/working-with-files/using-files/navigating-code-on-github)
+    - [View and understand files](/en/repositories/working-with-files/using-files/viewing-and-understanding-files)
+    - [Permanent links to files](/en/repositories/working-with-files/using-files/getting-permanent-links-to-files)
+    - [Source code archives](/en/repositories/working-with-files/using-files/downloading-source-code-archives)
+    - [Working with non-code files](/en/repositories/working-with-files/using-files/working-with-non-code-files)
 
-              There was an error while loading. Please reload this page](/segmentio/golines/security).
+  - Managing large files
 
-- [Insights](/segmentio/golines/pulse)
+    - [Large files](/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
+    - [Git Large File Storage](/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage)
+    - [Install Git LFS](/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)
+    - [Configure Git LFS](/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage)
+    - [Collaboration](/en/repositories/working-with-files/managing-large-files/collaboration-with-git-large-file-storage)
+    - [Move a file to Git LFS](/en/repositories/working-with-files/managing-large-files/moving-a-file-in-your-repository-to-git-large-file-storage)
+    - [Remove files](/en/repositories/working-with-files/managing-large-files/removing-files-from-git-large-file-storage)
+    - [Resolve upload failures](/en/repositories/working-with-files/managing-large-files/resolving-git-large-file-storage-upload-failures)
 
-Additional navigation options
+- Release projects
 
-- [Code](/segmentio/golines)
-- [Issues](/segmentio/golines/issues)
-- [Pull requests](/segmentio/golines/pulls)
-- [Actions](/segmentio/golines/actions)
-- [Projects](/segmentio/golines/projects)
-- [Security](/segmentio/golines/security)
-- [Insights](/segmentio/golines/pulse)
+  - [About releases](/en/repositories/releasing-projects-on-github/about-releases)
+  - [Manage releases](/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
+  - [View releases & tags](/en/repositories/releasing-projects-on-github/viewing-your-repositorys-releases-and-tags)
+  - [Searching releases](/en/repositories/releasing-projects-on-github/searching-a-repositorys-releases)
+  - [Linking to releases](/en/repositories/releasing-projects-on-github/linking-to-releases)
+  - [Comparing releases](/en/repositories/releasing-projects-on-github/comparing-releases)
+  - [Automated release notes](/en/repositories/releasing-projects-on-github/automatically-generated-release-notes)
+  - [Automate release forms](/en/repositories/releasing-projects-on-github/automation-for-release-forms-with-query-parameters)
 
-# segmentio/golines
-Version: 0.13.0
+- View activity and data
 
-Source: https://github.com/segmentio/golines
+  - [View deployment activity](/en/repositories/viewing-activity-and-data-for-your-repository/viewing-deployment-activity-for-your-repository)
+  - [About repository graphs](/en/repositories/viewing-activity-and-data-for-your-repository/about-repository-graphs)
+  - [Using Pulse](/en/repositories/viewing-activity-and-data-for-your-repository/using-pulse-to-view-a-summary-of-repository-activity)
+  - [View repository traffic](/en/repositories/viewing-activity-and-data-for-your-repository/viewing-traffic-to-a-repository)
+  - [View project contributors](/en/repositories/viewing-activity-and-data-for-your-repository/viewing-a-projects-contributors)
+  - [Analyze changes](/en/repositories/viewing-activity-and-data-for-your-repository/analyzing-changes-to-a-repositorys-content)
+  - [Connections between repositories](/en/repositories/viewing-activity-and-data-for-your-repository/understanding-connections-between-repositories)
+  - [Using the activity view](/en/repositories/viewing-activity-and-data-for-your-repository/using-the-activity-view-to-see-changes-to-a-repository)
 
+- Archive a repository
 
-master[Branches](/segmentio/golines/branches)[Tags](/segmentio/golines/tags)/segmentio/golines/branches/segmentio/golines/tagsGo to fileCodeOpen more actions menu
+  - [Archiving repositories](/en/repositories/archiving-a-github-repository/archiving-repositories)
+  - [Archive content & data](/en/repositories/archiving-a-github-repository/about-archiving-content-and-data-on-github)
+  - [Reference & cite content](/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
+  - [Backing up a repository](/en/repositories/archiving-a-github-repository/backing-up-a-repository)
 
-## Folders and files
+- [Repositories](/en/repositories)/
+- [Archive a repository](/en/repositories/archiving-a-github-repository)/
+- [Archiving repositories](/en/repositories/archiving-a-github-repository/archiving-repositories)
 
-NameNameLast commit messageLast commit date
+# Archiving repositories
 
-## Latest commit
+You can archive a repository to make it read-only for all users and indicate that it's no longer actively maintained. You can also unarchive repositories that have been archived.
 
-## History
+## In this article
 
-[77 Commits](/segmentio/golines/commits/master/)/segmentio/golines/commits/master/[.github/workflows](/segmentio/golines/tree/master/.github/workflows)[.github/workflows](/segmentio/golines/tree/master/.github/workflows)[_fixtures](/segmentio/golines/tree/master/_fixtures)[_fixtures](/segmentio/golines/tree/master/_fixtures)[generate](/segmentio/golines/tree/master/generate)[generate](/segmentio/golines/tree/master/generate)[.gitattributes](/segmentio/golines/blob/master/.gitattributes)[.gitattributes](/segmentio/golines/blob/master/.gitattributes)[.gitignore](/segmentio/golines/blob/master/.gitignore)[.gitignore](/segmentio/golines/blob/master/.gitignore)[.golangci.yml](/segmentio/golines/blob/master/.golangci.yml)[.golangci.yml](/segmentio/golines/blob/master/.golangci.yml)[.goreleaser.yaml](/segmentio/golines/blob/master/.goreleaser.yaml)[.goreleaser.yaml](/segmentio/golines/blob/master/.goreleaser.yaml)[.pre-commit-hooks.yaml](/segmentio/golines/blob/master/.pre-commit-hooks.yaml)[.pre-commit-hooks.yaml](/segmentio/golines/blob/master/.pre-commit-hooks.yaml)[LICENSE](/segmentio/golines/blob/master/LICENSE)[LICENSE](/segmentio/golines/blob/master/LICENSE)[Makefile](/segmentio/golines/blob/master/Makefile)[Makefile](/segmentio/golines/blob/master/Makefile)[README.md](/segmentio/golines/blob/master/README.md)[README.md](/segmentio/golines/blob/master/README.md)[annotation.go](/segmentio/golines/blob/master/annotation.go)[annotation.go](/segmentio/golines/blob/master/annotation.go)[annotation_test.go](/segmentio/golines/blob/master/annotation_test.go)[annotation_test.go](/segmentio/golines/blob/master/annotation_test.go)[diff.go](/segmentio/golines/blob/master/diff.go)[diff.go](/segmentio/golines/blob/master/diff.go)[diff_test.go](/segmentio/golines/blob/master/diff_test.go)[diff_test.go](/segmentio/golines/blob/master/diff_test.go)[doc.go](/segmentio/golines/blob/master/doc.go)[doc.go](/segmentio/golines/blob/master/doc.go)[go.mod](/segmentio/golines/blob/master/go.mod)[go.mod](/segmentio/golines/blob/master/go.mod)[go.sum](/segmentio/golines/blob/master/go.sum)[go.sum](/segmentio/golines/blob/master/go.sum)[graph.go](/segmentio/golines/blob/master/graph.go)[graph.go](/segmentio/golines/blob/master/graph.go)[graph_generated.go](/segmentio/golines/blob/master/graph_generated.go)[graph_generated.go](/segmentio/golines/blob/master/graph_generated.go)[graph_test.go](/segmentio/golines/blob/master/graph_test.go)[graph_test.go](/segmentio/golines/blob/master/graph_test.go)[main.go](/segmentio/golines/blob/master/main.go)[main.go](/segmentio/golines/blob/master/main.go)[main_test.go](/segmentio/golines/blob/master/main_test.go)[main_test.go](/segmentio/golines/blob/master/main_test.go)[shortener.go](/segmentio/golines/blob/master/shortener.go)[shortener.go](/segmentio/golines/blob/master/shortener.go)[shortener_test.go](/segmentio/golines/blob/master/shortener_test.go)[shortener_test.go](/segmentio/golines/blob/master/shortener_test.go)[tags.go](/segmentio/golines/blob/master/tags.go)[tags.go](/segmentio/golines/blob/master/tags.go)[tags_test.go](/segmentio/golines/blob/master/tags_test.go)[tags_test.go](/segmentio/golines/blob/master/tags_test.go)View all files
+- [About repository archival](#about-repository-archival)
+- [Archiving a repository](#archiving-a-repository)
+- [Unarchiving a repository](#unarchiving-a-repository)
 
-## Repository files navigation
+## [About repository archival](#about-repository-archival)
 
-- [README](#)
-- [MIT license](#)
+Note
 
-https://github.com/segmentio/golines/actions/workflows/test.ymlhttps://goreportcard.com/report/github.com/segmentio/golineshttps://godoc.org/github.com/segmentio/golines
+ If you have a legacy per-repository billing plan, you will still be charged for your archived repository. If you don't want to be charged for an archived repository, you must upgrade to a new product. For more information, see [GitHub’s plans](/en/get-started/learning-about-github/githubs-plans).
 
-# golines
+Note
 
-#golines
+ Customers who use GitHub Secret Protection can enable secret scanning on archived repositories. For more information, see [About secret scanning](/en/code-security/secret-scanning/introduction/about-secret-scanning).
 
-Golines is a Go code formatter that shortens long lines, in addition to all of the formatting fixes done by [gofmt](https://golang.org/cmd/gofmt/).
+We recommend that you close all issues and pull requests, as well as update the README file and description, before you archive a repository.
 
-## Maintenance & Archiving
+Once a repository is archived, you cannot add or remove collaborators or teams. Contributors with access to the repository can only fork or star your project.
 
-#maintenance--archiving
+When a repository is archived, its issues, pull requests, code, labels, milestones, projects, wiki, releases, commits, tags, branches, reactions, code scanning alerts, comments and permissions become read-only. To make changes in an archived repository, you must unarchive the repository first.
 
-Important
+You can search for archived repositories. For more information, see [Searching for repositories](/en/search-github/searching-on-github/searching-for-repositories#search-based-on-whether-a-repository-is-archived). You can also search for issues and pull requests within archived repositories. For more information, see [Searching issues and pull requests](/en/search-github/searching-on-github/searching-issues-and-pull-requests#search-based-on-whether-a-repository-is-archived).
 
-As of late 2024, [segmentio/golines](https://github.com/segmentio/golines/) has functionally been in maintenance mode and several dependencies appear to be similarly unmaintained.
+To archive all repositories in an organization at once, you can archive the entire organization. For more information, see [Archiving an organization](/en/organizations/managing-organization-settings/archiving-an-organization).
 
-As of 2025-12-19, this repository [has been archived](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories). At the time this repo was archived, the maintainers of golangci-lint [maintain a fork](https://github.com/golangci/golines/) that incorporates several patches and fixes. This project is unaffiliated with Twilio Segment.
+## [Archiving a repository](#archiving-a-repository)
 
-The original code will remain available and the terms of the license will not be changed.
+We recommend that you close all issues and pull requests, as well as update the README file and description, before you archive a repository.
 
-## Motivation
+1. 
 
-#motivation
+On GitHub, navigate to the main page of the repository.
 
-The standard Go formatting tools (`gofmt`, `goimports`, etc.) are great, but [deliberately don't shorten long lines](https://github.com/golang/go/issues/11915); instead, this is an activity left to developers.
+2. 
 
-While there are different tastes when it comes to line lengths in go, we've generally found that very long lines are more difficult to read than their shortened alternatives. As an example:
+Under your repository name, click  Settings. If you cannot see the "Settings" tab, select the  dropdown menu, then click Settings.
 
-```
-myMap := map[string]string{"first key": "first value", "second key": "second value", "third key": "third value", "fourth key": "fourth value", "fifth key": "fifth value"}
-```
+3. 
 
-vs.
+Under "Danger Zone", click Archive this repository
 
-```
-myMap := map[string]string{
-	"first key": "first value",
-	"second key": "second value",
-	"third key": "third value",
-	"fourth key": "fourth value",
-	"fifth key": "fifth value",
-}
-```
+4. 
 
-We built `golines` to give Go developers the option to automatically shorten long lines, like the one above, according to their preferences.
+Read the warnings.
 
-More background and technical details are available in [this blog post](https://yolken.net/blog/cleaner-go-code-golines).
+5. 
 
-## Examples
+In the text field, type the name of the repository you want to archive. 
 
-#examples
+6. 
 
-See this [before](/segmentio/golines/blob/master/_fixtures/end_to_end.go) and [after](/segmentio/golines/blob/master/_fixtures/end_to_end__exp.go) view of a file with very long lines. More example pairs can be found in the [_fixtures](/segmentio/golines/blob/master/_fixtures) directory.
+Click I understand the consequences, archive this repository.
 
-## Version support
+## [Unarchiving a repository](#unarchiving-a-repository)
 
-#version-support
+1. 
 
-Since v0.10.0, releases of `golines` have required at least Go 1.18 due to generics-related dependencies. As of v0.13.0, `golines` requires a minimum of Go 1.23 due to transitive requirements introduced by dependencies.
+On GitHub, navigate to the main page of the repository.
 
-Generally, the [minimum version](https://go.dev/ref/mod#go-mod-file-go) in [go.mod](/segmentio/golines/blob/master/go.mod) is the absolute minimum required version of Go for any given version of `golines.`
+2. 
 
-If you need to use `golines` with an older version of go, install the tool from the `v0.9.x` or `v0.12.x` releases.
+Under your repository name, click  Settings. If you cannot see the "Settings" tab, select the  dropdown menu, then click Settings.
 
-## Usage
+3. 
 
-#usage
+In the "Danger Zone" section, click Unarchive this repository
 
-First, install the tool. If you're using Go 1.21 or newer, run:
+4. 
 
-```
-go install github.com/segmentio/golines@latest
-```
+Read the warnings.
 
-Otherwise, for older Go versions, run:
+5. 
 
-```
-go install github.com/segmentio/golines@v0.9.0
-```
+In the text box, type the name of the repository you want to unarchive.
 
-Then, run:
+6. 
 
-```
-golines [paths to format]
-```
+Click I understand the consequences, unarchive this repository.
 
-The paths can be either directories or individual files. If no paths are provided, then input is taken from `stdin` (as with `gofmt`).
+## Help and support
 
-By default, the results are printed to `stdout`. To overwrite the existing files in place, use the `-w` flag.
+### Did you find what you needed?
 
-## Options
+YesNo[Privacy policy](/en/site-policy/privacy-policies/github-privacy-statement)
 
-#options
+### Help us make these docs great!
 
-Some other options are described in the sections below. Run `golines --help` to see all available flags and settings.
+All GitHub docs are open source. See something that's wrong or unclear? Submit a pull request.
 
-### Line length settings
+[Make a contribution](https://github.com/github/docs/blob/main/content/repositories/archiving-a-github-repository/archiving-repositories.md)
 
-#line-length-settings
+[Learn how to contribute](/contributing)
 
-By default, the tool tries to shorten lines that are longer than 100 columns and assumes that 1 tab = 4 columns. The latter can be changed via the `-m` and `-t` flags respectively.
+### Still need help?
 
-#### Dry-run mode
+[Ask the GitHub community](https://github.com/orgs/community/discussions)[Contact support](https://support.github.com)
 
-#dry-run-mode
+## Legal
 
-Running the tool with the `--dry-run` flag will show pretty, git-style diffs.
-
-#### Comment shortening
-
-#comment-shortening
-
-Shortening long comment lines is harder than shortening code because comments can have arbitrary structure and format. `golines` includes some basic logic for shortening single-line (i.e., `//`-prefixed) comments, but this is turned off by default since the quality isn't great. To enable this feature anyway, run with the `--shorten-comments` flag.
-
-#### Custom formatters
-
-#custom-formatters
-
-By default, the tool will use [goimports](https://godoc.org/golang.org/x/tools/cmd/goimports) as the base formatter (if found), otherwise it will revert to `gofmt`. An explicit formatter can be set via the `--base-formatter` flag; the command provided here should accept its input via `stdin` and write its output to `stdout`.
-
-#### Generated files
-
-#generated-files
-
-By default, the tool will not format any files that look like they're generated. If you want to reformat these too, run with the flag `--ignore-generated=false`.
-
-#### Chained method splitting
-
-#chained-method-splitting
-
-There are several possible ways to split lines that are part of [method chains](https://en.wikipedia.org/wiki/Method_chaining). The original approach taken by `golines` was to split on the args, e.g.:
-
-```
-myObj.Method(
-	arg1,
-	arg2,
-	arg3,
-).AnotherMethod(
-	arg1,
-	arg2,
-).AThirdMethod(
-	arg1,
-	arg2,
-)
-```
-
-Starting in version 0.3.0, the tool now splits on the dots by default, e.g.:
-
-```
-myObj.Method(arg1, arg2, arg3).
-	AnotherMethod(arg1, arg2).
-	AThirdMethod(arg1, arg2)
-```
-
-The original behavior can be used by running the tool with the `--no-chain-split-dots` flag.
-
-#### Struct tag reformatting
-
-#struct-tag-reformatting
-
-In addition to shortening long lines, the tool also aligns struct tag keys; see the associated [before](/segmentio/golines/blob/master/_fixtures/struct_tags.go) and [after](/segmentio/golines/blob/master/_fixtures/struct_tags__exp.go) examples in the `_fixtures` directory. To turn this behavior off, run with `--no-reformat-tags`.
-
-## Developer Tooling Integration
-
-#developer-tooling-integration
-
-### vim-go
-
-#vim-go
-
-Add the following lines to your vimrc, substituting `128` with your preferred line length:
-
-```
-let g:go_fmt_command = "golines"
-let g:go_fmt_options = {
-    \ 'golines': '-m 128',
-    \ }
-```
-
-### Visual Studio Code
-
-#visual-studio-code
-
-1. Install the [Run on Save](https://marketplace.visualstudio.com/items?itemName=emeraldwalk.RunOnSave) extension
-2. Go into the VSCode settings menu, scroll down to the section for the "Run on Save" extension, click the "Edit in settings.json" link
-3. Set the `emeraldwalk.runonsave` key as follows (adding other flags to the `golines` command as desired):
-
-```
-    "emeraldwalk.runonsave": {
-        "commands": [
-            {
-                "match": "\\.go$",
-                "cmd": "golines ${file} -w"
-            }
-        ]
-    }
-```
-
-1. Save the settings and restart VSCode
-
-### Goland
-
-#goland
-
-1. Go into the Goland settings and click "Tools" -> "File Watchers" then click the plus to create a new file watcher
-2. Set the following properties: 
-
-  - Name:`golines`
-  - File type:`Go files`
-  - Scope:`Project Files`
-  - Program:`golines`
-  - Arguments:`$FilePath$ -w`
-  - Output paths to refresh:`$FilePath$`
-
-3. In the "Advanced Options" section uncheck the Auto-save edited files to trigger the watcher setting
-4. Confirm by clicking OK
-5. Activate your newly created file watcher in the Goland settings under "Tools" -> "Actions on save"
-
-### Others
-
-#others
-
-Coming soon.
-
-## How It Works
-
-#how-it-works
-
-For each input source file, `golines` runs through the following process:
-
-1. Read the file, break it into lines
-2. Add a specially-formatted annotation (comment) to each line that's longer than the configured maximum
-3. Use [Dave Brophy's](https://github.com/dave) excellent [decorated syntax tree](https://github.com/dave/dst) library to parse the code plus added annotations
-4. Do a depth-first traversal of the resulting tree, looking for nodes that have an annotation on them
-5. If a node is part of a line that's too long, shorten it by altering the newlines around the node and/or its children
-6. Repeat steps 2-5 until no more shortening can be done
-7. Run the base formatter (e.g., `gofmt`) over the results, write these to either `stdout` or the source file
-
-See [this blog post](https://yolken.net/blog/cleaner-go-code-golines) for more technical details.
-
-## Limitations
-
-#limitations
-
-The tool has been tested on a variety of inputs, but it's not perfect. Among other examples, the handling of long lines in comments could be improved. If you see anything particularly egregious, please report via an issue.
-
-## About
-
- A golang formatter that fixes long lines 
-
-### Resources
-
-[Readme](#readme-ov-file)
-
-### License
-
-[MIT license](#MIT-1-ov-file)
-
-###  Uh oh! 
-
-There was an error while loading. Please reload this page.
-
-[Activity](/segmentio/golines/activity)[Custom properties](/segmentio/golines/custom-properties)
-
-### Stars
-
-[1.1k
-        stars](/segmentio/golines/stargazers)
-
-### Watchers
-
-[23
-        watching](/segmentio/golines/watchers)
-
-### Forks
-
-[75
-        forks](/segmentio/golines/forks)[Report repository](/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fsegmentio%2Fgolines&report=segmentio+%28user%29)
-
-## [Releases
-      15](/segmentio/golines/releases)
-
-[v0.13.0
-        
-          Latest
-      
-      Aug 21, 2025](/segmentio/golines/releases/tag/v0.13.0)[+ 14 releases](/segmentio/golines/releases)
-
-## [Packages
-      0](/orgs/segmentio/packages?repo_name=golines)
-
- No packages published 
-
-###  Uh oh! 
-
-There was an error while loading. Please reload this page.
-
-## [Contributors
-      23](/segmentio/golines/graphs/contributors)
-
-- https://github.com/yolken-segment
-- https://github.com/yolken
-- https://github.com/mckern
-- https://github.com/telemachus
-- https://github.com/echarrod
-- https://github.com/sjackman
-- https://github.com/wdbetts
-- https://github.com/urbanyeti
-- https://github.com/falzm
-- https://github.com/bhavanki
-- https://github.com/chenrui333
-- https://github.com/asaf-erlich
-- https://github.com/kgritesh
-- https://github.com/momaek
-
-[+ 9 contributors](/segmentio/golines/graphs/contributors)
-
-## Languages
-
-- [Go
-          99.5%](/segmentio/golines/search?l=go)
-- [Makefile
-          0.5%](/segmentio/golines/search?l=makefile)
+- © 2026 GitHub, Inc.
+- [Terms](/en/site-policy/github-terms/github-terms-of-service)
+- [Privacy](/en/site-policy/privacy-policies/github-privacy-statement)
+- [Status](https://www.githubstatus.com/)
+- [Pricing](https://github.com/pricing)
+- [Expert services](https://services.github.com)
+- [Blog](https://github.blog)

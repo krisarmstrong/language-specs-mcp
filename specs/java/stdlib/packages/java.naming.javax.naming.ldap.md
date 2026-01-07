@@ -1,4 +1,31 @@
-Module[java.naming](../../../module-summary.html)
+javax.naming.ldap (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../index.html)
+- [Module](../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../preview-list.html)
+- [New](../../../../new-list.html)
+- [Deprecated](../../../../deprecated-list.html)
+- [Index](../../../../index-files/index-1.html)
+- [Help](../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../search.html)Module[java.naming](../../../module-summary.html)
 
 # Package javax.naming.ldap
 
@@ -178,3 +205,9 @@ public class VendorXControlFactory extends ControlFactory {
 - All Classes and InterfacesInterfacesClassesException ClassesClassDescription[BasicControl](BasicControl.html)This class provides a basic implementation of the `Control` interface.[Control](Control.html)This interface represents an LDAPv3 control as defined in [RFC 2251](http://www.ietf.org/rfc/rfc2251.txt).[ControlFactory](ControlFactory.html)This abstract class represents a factory for creating LDAPv3 controls.[ExtendedRequest](ExtendedRequest.html)This interface represents an LDAPv3 extended operation request as defined in [RFC 2251](http://www.ietf.org/rfc/rfc2251.txt).[ExtendedResponse](ExtendedResponse.html)This interface represents an LDAP extended operation response as defined in [RFC 2251](http://www.ietf.org/rfc/rfc2251.txt).[HasControls](HasControls.html)This interface is for returning controls with objects returned in NamingEnumerations.[InitialLdapContext](InitialLdapContext.html)This class is the starting context for performing LDAPv3-style extended operations and controls.[LdapContext](LdapContext.html)This interface represents a context in which you can perform operations with LDAPv3-style controls and perform LDAPv3-style extended operations.[LdapName](LdapName.html)This class represents a distinguished name as specified by [RFC 2253](http://www.ietf.org/rfc/rfc2253.txt).[LdapReferralException](LdapReferralException.html)This abstract class is used to represent an LDAP referral exception.[ManageReferralControl](ManageReferralControl.html)Requests that referral and other special LDAP objects be manipulated as normal LDAP objects.[PagedResultsControl](PagedResultsControl.html)Requests that the results of a search operation be returned by the LDAP server in batches of a specified size.[PagedResultsResponseControl](PagedResultsResponseControl.html)Indicates the end of a batch of search results.[Rdn](Rdn.html)This class represents a relative distinguished name, or RDN, which is a component of a distinguished name as specified by [RFC 2253](http://www.ietf.org/rfc/rfc2253.txt).[SortControl](SortControl.html)Requests that the results of a search operation be sorted by the LDAP server before being returned.[SortKey](SortKey.html)A sort key and its associated sort parameters.[SortResponseControl](SortResponseControl.html)Indicates whether the requested sort of search results was successful or not.[StartTlsRequest](StartTlsRequest.html)This class implements the LDAPv3 Extended Request for StartTLS as defined in [Lightweight Directory
  Access Protocol (v3): Extension for Transport Layer Security](http://www.ietf.org/rfc/rfc2830.txt) The object identifier for StartTLS is 1.3.6.1.4.1.1466.20037 and no extended request value is defined.[StartTlsResponse](StartTlsResponse.html)This class implements the LDAPv3 Extended Response for StartTLS as defined in [Lightweight Directory
  Access Protocol (v3): Extension for Transport Layer Security](http://www.ietf.org/rfc/rfc2830.txt) The object identifier for StartTLS is 1.3.6.1.4.1.1466.20037 and no extended response value is defined.[UnsolicitedNotification](UnsolicitedNotification.html)This interface represents an unsolicited notification as defined in [RFC 2251](http://www.ietf.org/rfc/rfc2251.txt).[UnsolicitedNotificationEvent](UnsolicitedNotificationEvent.html)This class represents an event fired in response to an unsolicited notification sent by the LDAP server.[UnsolicitedNotificationListener](UnsolicitedNotificationListener.html)This interface is for handling `UnsolicitedNotificationEvent`.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

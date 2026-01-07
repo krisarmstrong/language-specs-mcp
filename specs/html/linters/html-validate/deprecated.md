@@ -1,3 +1,14 @@
+HTML-validate - Disallow usage of deprecated elements (deprecated)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -94,3 +105,5 @@ If set elements listed in this array is ignored.
 
 - v4.11.0 - `include` and `exclude` options added.
 - v1.13.0 - Rule added.
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/deprecated.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/deprecated.ts)

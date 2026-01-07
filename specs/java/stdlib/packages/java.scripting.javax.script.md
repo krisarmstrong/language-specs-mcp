@@ -1,4 +1,31 @@
-Module[java.scripting](../../module-summary.html)
+javax.script (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../index.html)
+- [Module](../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../preview-list.html)
+- [New](../../../new-list.html)
+- [Deprecated](../../../deprecated-list.html)
+- [Index](../../../index-files/index-1.html)
+- [Help](../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - Related Packages
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- Related Packages | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../search.html)Module[java.scripting](../../module-summary.html)
 
 # Package javax.script
 
@@ -31,3 +58,9 @@ Script engine discovery: Applications written to the Scripting API might have sp
 Since:1.6
 
 - All Classes and InterfacesInterfacesClassesException ClassesClassDescription[AbstractScriptEngine](AbstractScriptEngine.html)Provides a standard implementation for several of the variants of the `eval` method.[Bindings](Bindings.html)A mapping of key/value pairs, all of whose keys are `Strings`.[Compilable](Compilable.html)The optional interface implemented by ScriptEngines whose methods compile scripts to a form that can be executed repeatedly without recompilation.[CompiledScript](CompiledScript.html)Extended by classes that store results of compilations.[Invocable](Invocable.html)The optional interface implemented by ScriptEngines whose methods allow the invocation of procedures in scripts that have previously been executed.[ScriptContext](ScriptContext.html)The interface whose implementing classes are used to connect Script Engines with objects, such as scoped Bindings, in hosting applications.[ScriptEngine](ScriptEngine.html)`ScriptEngine` is the fundamental interface whose methods must be fully functional in every implementation of this specification.[ScriptEngineFactory](ScriptEngineFactory.html)`ScriptEngineFactory` is used to describe and instantiate `ScriptEngines`.[ScriptEngineManager](ScriptEngineManager.html)The `ScriptEngineManager` implements a discovery and instantiation mechanism for `ScriptEngine` classes and also maintains a collection of key/value pairs storing state shared by all engines created by the Manager.[ScriptException](ScriptException.html)The generic `Exception` class for the Scripting APIs.[SimpleBindings](SimpleBindings.html)A simple implementation of Bindings backed by a `HashMap` or some other specified `Map`.[SimpleScriptContext](SimpleScriptContext.html)Simple implementation of ScriptContext.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

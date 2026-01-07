@@ -1,4 +1,10 @@
-Table of contents Exit editor modeAsk LearnAsk LearnFocus modeTable of contents[Read in English](#)AddAdd to plan[Edit](https://github.com/MicrosoftDocs/windowsserverdocs/blob/main/WindowsServerDocs/administration/windows-commands/windows-commands.md)
+Windows commands | Microsoft Learn[Skip to main content](#main)[Skip to Ask Learn chat experience](#)
+
+This browser is no longer supported.
+
+ Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support. 
+
+[Download Microsoft Edge](https://go.microsoft.com/fwlink/p/?LinkID=2092881 )[More info about Internet Explorer and Microsoft Edge](https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge) Table of contents Exit editor modeAsk LearnAsk LearnFocus modeTable of contents[Read in English](#)AddAdd to plan[Edit](https://github.com/MicrosoftDocs/windowsserverdocs/blob/main/WindowsServerDocs/administration/windows-commands/windows-commands.md)
 
 #### Share via
 
@@ -980,4 +986,30 @@ Ask LearnAsk Learn Suggest a fix?
 
 ##  Additional resources 
 
-- Last updated on  2025-07-29
+- Last updated on  2025-07-29 
+
+### In this article
+
+Was this page helpful?
+
+YesNoNo
+
+ Need help with this topic? 
+
+ Want to try using Ask Learn to clarify or guide you through this topic? 
+
+Ask LearnAsk Learn Suggest a fix? [en-us](#)[Your Privacy Choices](https://aka.ms/yourcaliforniaprivacychoices)Theme
+
+-  Light 
+-  Dark 
+-  High contrast 
+
+- 
+- [AI Disclaimer](https://learn.microsoft.com/en-us/principles-for-ai-generated-content)
+- [Previous Versions](https://learn.microsoft.com/en-us/previous-versions/)
+- [Blog](https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog)
+- [Contribute](https://learn.microsoft.com/en-us/contribute)
+- [Privacy](https://go.microsoft.com/fwlink/?LinkId=521839)
+- [Terms of Use](https://learn.microsoft.com/en-us/legal/termsofuse)
+- [Trademarks](https://www.microsoft.com/legal/intellectualproperty/Trademarks/)
+- © Microsoft 2025

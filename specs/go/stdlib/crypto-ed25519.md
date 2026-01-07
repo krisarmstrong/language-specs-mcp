@@ -1,113 +1,55 @@
-package ed25519 // import "crypto/ed25519"
+Introduction 
 
-Package ed25519 implements the Ed25519 signature algorithm. See
-https://ed25519.cr.yp.to/.
+# Ed25519: high-speed high-security signatures
 
-These functions are also compatible with the “Ed25519” function defined in
-RFC 8032. However, unlike RFC 8032's formulation, this package's private key
-representation includes a public key suffix to make multiple signing operations
-with the same key more efficient. This package refers to the RFC 8032 private
-key as the “seed”.
+Introduction[Software](software.html)[Papers](papers.html)
 
-Operations involving private keys are implemented using constant-time
-algorithms.
+# Introduction
 
-CONSTANTS
+ Ed25519 is a public-key signature system with several attractive features: 
 
-const (
-	// PublicKeySize is the size, in bytes, of public keys as used in this package.
-	PublicKeySize = 32
-	// PrivateKeySize is the size, in bytes, of private keys as used in this package.
-	PrivateKeySize = 64
-	// SignatureSize is the size, in bytes, of signatures generated and verified by this package.
-	SignatureSize = 64
-	// SeedSize is the size, in bytes, of private key seeds. These are the private key representations used by RFC 8032.
-	SeedSize = 32
-)
+- Fast single-signature verification. The [software](software.html) takes only 273364 cycles to verify a signature on Intel's widely deployed Nehalem/Westmere lines of CPUs. (This performance measurement is for short messages; for very long messages, verification time is dominated by hashing time.) Nehalem and Westmere include all Core i7, i5, and i3 CPUs released between 2008 and 2010, and most Xeon CPUs released in the same period. 
+- Even faster batch verification. The software performs a batch of 64 separate signature verifications (verifying 64 signatures of 64 messages under 64 public keys) in only 8.55 million cycles, i.e., under 134000 cycles per signature. The software fits easily into L1 cache, so contention between cores is negligible: a quad-core 2.4GHz Westmere verifies 71000 signatures per second, while keeping the maximum verification latency below 4 milliseconds. 
+- Very fast signing. The software takes only 87548 cycles to sign a message. A quad-core 2.4GHz Westmere signs 109000 messages per second. 
+- Fast key generation. Key generation is almost as fast as signing. There is a slight penalty for key generation to obtain a secure random number from the operating system; /dev/urandom under Linux costs about 6000 cycles. 
+- High security level. This system has a 2^128 security target; breaking it has similar difficulty to breaking NIST P-256, RSA with ~3000-bit keys, strong 128-bit block ciphers, etc. The best attacks known actually cost more than 2^140 bit operations on average, and degrade quadratically in success probability as the number of bit operations drops. 
+- Foolproof session keys. Signatures are generated deterministically; key generation consumes new randomness but new signatures do not. This is not only a speed feature but also a security feature, directly relevant to the recent collapse of the Sony PlayStation 3 security system. 
+- Collision resilience. Hash-function collisions do not break this system. This adds a layer of defense against the possibility of weakness in the selected hash function. 
+- No secret array indices. The software never reads or writes data from secret addresses in RAM; the pattern of addresses is completely predictable. The software is therefore immune to cache-timing attacks, hyperthreading attacks, and other side-channel attacks that rely on leakage of addresses through the CPU cache. 
+- No secret branch conditions. The software never performs conditional branches based on secret data; the pattern of jumps is completely predictable. The software is therefore immune to side-channel attacks that rely on leakage of information through the branch-prediction unit. 
+- Small signatures. Signatures fit into 64 bytes. These signatures are actually compressed versions of longer signatures; the times for compression and decompression are included in the cycle counts reported above. 
+- Small keys. Public keys consume only 32 bytes. The times for compression and decompression are again included. 
 
-FUNCTIONS
+ The numbers 87548 and 273364 shown above are official [eBATS](https://bench.cr.yp.to) reports for a Westmere CPU (Intel Xeon E5620, hydra2). 
 
-func GenerateKey(rand io.Reader) (PublicKey, PrivateKey, error)
-    GenerateKey generates a public/private key pair using entropy from rand.
-    If rand is nil, crypto/rand.Reader will be used.
+ Ed25519 signatures are elliptic-curve signatures, carefully engineered at several levels of design and implementation to achieve very high speeds without compromising security. 
 
-    The output of this function is deterministic, and equivalent to reading
-    SeedSize bytes from rand, and passing them to NewKeyFromSeed.
+## Contributors (alphabetical order)
 
-func Sign(privateKey PrivateKey, message []byte) []byte
-    Sign signs the message with privateKey and returns a signature. It will
-    panic if len(privateKey) is not PrivateKeySize.
+[Daniel J. Bernstein](https://cr.yp.to/djb.html), University of Illinois at Chicago 
 
-func Verify(publicKey PublicKey, message, sig []byte) bool
-    Verify reports whether sig is a valid signature of message by publicKey.
-    It will panic if len(publicKey) is not PublicKeySize.
+[Niels Duif](http://www.nielsduif.nl/), Technische Universiteit Eindhoven 
 
-    The inputs are not considered confidential, and may leak through timing side
-    channels, or if an attacker has control of part of the inputs.
+[Tanja Lange](https://hyperelliptic.org/tanja), Technische Universiteit Eindhoven 
 
-func VerifyWithOptions(publicKey PublicKey, message, sig []byte, opts *Options) error
-    VerifyWithOptions reports whether sig is a valid signature of message by
-    publicKey. A valid signature is indicated by returning a nil error. It will
-    panic if len(publicKey) is not PublicKeySize.
+[Peter Schwabe](http://www.cryptojedi.org/users/peter/), National Taiwan University 
 
-    If opts.Hash is crypto.SHA512, the pre-hashed variant Ed25519ph is used
-    and message is expected to be a SHA-512 hash, otherwise opts.Hash must be
-    crypto.Hash(0) and the message must not be hashed, as Ed25519 performs two
-    passes over messages to be signed.
+[Bo-Yin Yang](http://www.iis.sinica.edu.tw/pages/byyang/), Academia Sinica 
 
-    The inputs are not considered confidential, and may leak through timing side
-    channels, or if an attacker has control of part of the inputs.
+## Acknowledgments
 
+ This work was supported by the U.S. National Science Foundation under grant 1018836. "Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation." 
 
-TYPES
+ This work was supported by the European Commission under Contract ICT-2007-216676 ECRYPT II. 
 
-type Options struct {
-	// Hash can be zero for regular Ed25519, or crypto.SHA512 for Ed25519ph.
-	Hash crypto.Hash
+ This work was supported by the National Science Council, National Taiwan University and Intel Corporation under Grants NSC99-2911-I-002-001 and 99-2218-E-001-007. 
 
-	// Context, if not empty, selects Ed25519ctx or provides the context string
-	// for Ed25519ph. It can be at most 255 bytes in length.
-	Context string
-}
-    Options can be used with PrivateKey.Sign or VerifyWithOptions to select
-    Ed25519 variants.
+ This work was supported by an Academia Sinica Career Award. 
 
-func (o *Options) HashFunc() crypto.Hash
-    HashFunc returns o.Hash.
+ Part of this work was carried out when Peter Schwabe was employed by Academia Sinica, Taiwan. 
 
-type PrivateKey []byte
-    PrivateKey is the type of Ed25519 private keys. It implements crypto.Signer.
+ Part of this work was carried out when Niels Duif was employed by Compumatica secure networks BV, the Netherlands. 
 
-func NewKeyFromSeed(seed []byte) PrivateKey
-    NewKeyFromSeed calculates a private key from a seed. It will panic if
-    len(seed) is not SeedSize. This function is provided for interoperability
-    with RFC 8032. RFC 8032's private keys correspond to seeds in this package.
+## Version
 
-func (priv PrivateKey) Equal(x crypto.PrivateKey) bool
-    Equal reports whether priv and x have the same value.
-
-func (priv PrivateKey) Public() crypto.PublicKey
-    Public returns the PublicKey corresponding to priv.
-
-func (priv PrivateKey) Seed() []byte
-    Seed returns the private key seed corresponding to priv. It is provided for
-    interoperability with RFC 8032. RFC 8032's private keys correspond to seeds
-    in this package.
-
-func (priv PrivateKey) Sign(rand io.Reader, message []byte, opts crypto.SignerOpts) (signature []byte, err error)
-    Sign signs the given message with priv. rand is ignored and can be nil.
-
-    If opts.HashFunc() is crypto.SHA512, the pre-hashed variant Ed25519ph is
-    used and message is expected to be a SHA-512 hash, otherwise opts.HashFunc()
-    must be crypto.Hash(0) and the message must not be hashed, as Ed25519
-    performs two passes over messages to be signed.
-
-    A value of type Options can be used as opts, or crypto.Hash(0) or
-    crypto.SHA512 directly to select plain Ed25519 or Ed25519ph, respectively.
-
-type PublicKey []byte
-    PublicKey is the type of Ed25519 public keys.
-
-func (pub PublicKey) Equal(x crypto.PublicKey) bool
-    Equal reports whether pub and x have the same value.
-
+ This is version 2017.01.22 of the index.html web page.

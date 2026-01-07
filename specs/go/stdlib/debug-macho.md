@@ -1,586 +1,222 @@
-package macho // import "debug/macho"
-
-Package macho implements access to Mach-O object files.
-
-# Security
-
-This package is not designed to be hardened against adversarial inputs,
-and is outside the scope of https://go.dev/security/policy. In particular,
-only basic validation is done when parsing object files. As such, care should
-be taken when parsing untrusted inputs, as parsing malformed files may consume
-significant resources, or cause panics.
-
-CONSTANTS
-
-const (
-	Magic32  uint32 = 0xfeedface
-	Magic64  uint32 = 0xfeedfacf
-	MagicFat uint32 = 0xcafebabe
-)
-const (
-	FlagNoUndefs              uint32 = 0x1
-	FlagIncrLink              uint32 = 0x2
-	FlagDyldLink              uint32 = 0x4
-	FlagBindAtLoad            uint32 = 0x8
-	FlagPrebound              uint32 = 0x10
-	FlagSplitSegs             uint32 = 0x20
-	FlagLazyInit              uint32 = 0x40
-	FlagTwoLevel              uint32 = 0x80
-	FlagForceFlat             uint32 = 0x100
-	FlagNoMultiDefs           uint32 = 0x200
-	FlagNoFixPrebinding       uint32 = 0x400
-	FlagPrebindable           uint32 = 0x800
-	FlagAllModsBound          uint32 = 0x1000
-	FlagSubsectionsViaSymbols uint32 = 0x2000
-	FlagCanonical             uint32 = 0x4000
-	FlagWeakDefines           uint32 = 0x8000
-	FlagBindsToWeak           uint32 = 0x10000
-	FlagAllowStackExecution   uint32 = 0x20000
-	FlagRootSafe              uint32 = 0x40000
-	FlagSetuidSafe            uint32 = 0x80000
-	FlagNoReexportedDylibs    uint32 = 0x100000
-	FlagPIE                   uint32 = 0x200000
-	FlagDeadStrippableDylib   uint32 = 0x400000
-	FlagHasTLVDescriptors     uint32 = 0x800000
-	FlagNoHeapExecution       uint32 = 0x1000000
-	FlagAppExtensionSafe      uint32 = 0x2000000
-)
-
-VARIABLES
-
-var ErrNotFat = &FormatError{0, "not a fat Mach-O file", nil}
-    ErrNotFat is returned from NewFatFile or OpenFat when the file is not a
-    universal binary but may be a thin binary, based on its magic number.
-
-
-TYPES
-
-type Cpu uint32
-    A Cpu is a Mach-O cpu type.
-
-const (
-	Cpu386   Cpu = 7
-	CpuAmd64 Cpu = Cpu386 | cpuArch64
-	CpuArm   Cpu = 12
-	CpuArm64 Cpu = CpuArm | cpuArch64
-	CpuPpc   Cpu = 18
-	CpuPpc64 Cpu = CpuPpc | cpuArch64
-)
-func (i Cpu) GoString() string
-
-func (i Cpu) String() string
-
-type Dylib struct {
-	LoadBytes
-	Name           string
-	Time           uint32
-	CurrentVersion uint32
-	CompatVersion  uint32
-}
-    A Dylib represents a Mach-O load dynamic library command.
-
-type DylibCmd struct {
-	Cmd            LoadCmd
-	Len            uint32
-	Name           uint32
-	Time           uint32
-	CurrentVersion uint32
-	CompatVersion  uint32
-}
-    A DylibCmd is a Mach-O load dynamic library command.
-
-type Dysymtab struct {
-	LoadBytes
-	DysymtabCmd
-	IndirectSyms []uint32 // indices into Symtab.Syms
-}
-    A Dysymtab represents a Mach-O dynamic symbol table command.
-
-type DysymtabCmd struct {
-	Cmd            LoadCmd
-	Len            uint32
-	Ilocalsym      uint32
-	Nlocalsym      uint32
-	Iextdefsym     uint32
-	Nextdefsym     uint32
-	Iundefsym      uint32
-	Nundefsym      uint32
-	Tocoffset      uint32
-	Ntoc           uint32
-	Modtaboff      uint32
-	Nmodtab        uint32
-	Extrefsymoff   uint32
-	Nextrefsyms    uint32
-	Indirectsymoff uint32
-	Nindirectsyms  uint32
-	Extreloff      uint32
-	Nextrel        uint32
-	Locreloff      uint32
-	Nlocrel        uint32
-}
-    A DysymtabCmd is a Mach-O dynamic symbol table command.
-
-type FatArch struct {
-	FatArchHeader
-	*File
-}
-    A FatArch is a Mach-O File inside a FatFile.
-
-type FatArchHeader struct {
-	Cpu    Cpu
-	SubCpu uint32
-	Offset uint32
-	Size   uint32
-	Align  uint32
-}
-    A FatArchHeader represents a fat header for a specific image architecture.
-
-type FatFile struct {
-	Magic  uint32
-	Arches []FatArch
-	// Has unexported fields.
-}
-    A FatFile is a Mach-O universal binary that contains at least one
-    architecture.
-
-func NewFatFile(r io.ReaderAt) (*FatFile, error)
-    NewFatFile creates a new FatFile for accessing all the Mach-O images in a
-    universal binary. The Mach-O binary is expected to start at position 0 in
-    the ReaderAt.
-
-func OpenFat(name string) (*FatFile, error)
-    OpenFat opens the named file using os.Open and prepares it for use as a
-    Mach-O universal binary.
-
-func (ff *FatFile) Close() error
-
-type File struct {
-	FileHeader
-	ByteOrder binary.ByteOrder
-	Loads     []Load
-	Sections  []*Section
-
-	Symtab   *Symtab
-	Dysymtab *Dysymtab
-
-	// Has unexported fields.
-}
-    A File represents an open Mach-O file.
-
-func NewFile(r io.ReaderAt) (*File, error)
-    NewFile creates a new File for accessing a Mach-O binary in an underlying
-    reader. The Mach-O binary is expected to start at position 0 in the
-    ReaderAt.
-
-func Open(name string) (*File, error)
-    Open opens the named file using os.Open and prepares it for use as a Mach-O
-    binary.
-
-func (f *File) Close() error
-    Close closes the File. If the File was created using NewFile directly
-    instead of Open, Close has no effect.
-
-func (f *File) DWARF() (*dwarf.Data, error)
-    DWARF returns the DWARF debug information for the Mach-O file.
-
-func (f *File) ImportedLibraries() ([]string, error)
-    ImportedLibraries returns the paths of all libraries referred to by the
-    binary f that are expected to be linked with the binary at dynamic link
-    time.
-
-func (f *File) ImportedSymbols() ([]string, error)
-    ImportedSymbols returns the names of all symbols referred to by the binary f
-    that are expected to be satisfied by other libraries at dynamic load time.
-
-func (f *File) Section(name string) *Section
-    Section returns the first section with the given name, or nil if no such
-    section exists.
-
-func (f *File) Segment(name string) *Segment
-    Segment returns the first Segment with the given name, or nil if no such
-    segment exists.
-
-type FileHeader struct {
-	Magic  uint32
-	Cpu    Cpu
-	SubCpu uint32
-	Type   Type
-	Ncmd   uint32
-	Cmdsz  uint32
-	Flags  uint32
-}
-    A FileHeader represents a Mach-O file header.
-
-type FormatError struct {
-	// Has unexported fields.
-}
-    FormatError is returned by some operations if the data does not have the
-    correct format for an object file.
-
-func (e *FormatError) Error() string
-
-type Load interface {
-	Raw() []byte
-}
-    A Load represents any Mach-O load command.
-
-type LoadBytes []byte
-    A LoadBytes is the uninterpreted bytes of a Mach-O load command.
-
-func (b LoadBytes) Raw() []byte
-
-type LoadCmd uint32
-    A LoadCmd is a Mach-O load command.
-
-const (
-	LoadCmdSegment    LoadCmd = 0x1
-	LoadCmdSymtab     LoadCmd = 0x2
-	LoadCmdThread     LoadCmd = 0x4
-	LoadCmdUnixThread LoadCmd = 0x5 // thread+stack
-	LoadCmdDysymtab   LoadCmd = 0xb
-	LoadCmdDylib      LoadCmd = 0xc // load dylib command
-	LoadCmdDylinker   LoadCmd = 0xf // id dylinker command (not load dylinker command)
-	LoadCmdSegment64  LoadCmd = 0x19
-	LoadCmdRpath      LoadCmd = 0x8000001c
-)
-func (i LoadCmd) GoString() string
-
-func (i LoadCmd) String() string
-
-type Nlist32 struct {
-	Name  uint32
-	Type  uint8
-	Sect  uint8
-	Desc  uint16
-	Value uint32
-}
-    An Nlist32 is a Mach-O 32-bit symbol table entry.
-
-type Nlist64 struct {
-	Name  uint32
-	Type  uint8
-	Sect  uint8
-	Desc  uint16
-	Value uint64
-}
-    An Nlist64 is a Mach-O 64-bit symbol table entry.
-
-type Regs386 struct {
-	AX    uint32
-	BX    uint32
-	CX    uint32
-	DX    uint32
-	DI    uint32
-	SI    uint32
-	BP    uint32
-	SP    uint32
-	SS    uint32
-	FLAGS uint32
-	IP    uint32
-	CS    uint32
-	DS    uint32
-	ES    uint32
-	FS    uint32
-	GS    uint32
-}
-    Regs386 is the Mach-O 386 register structure.
-
-type RegsAMD64 struct {
-	AX    uint64
-	BX    uint64
-	CX    uint64
-	DX    uint64
-	DI    uint64
-	SI    uint64
-	BP    uint64
-	SP    uint64
-	R8    uint64
-	R9    uint64
-	R10   uint64
-	R11   uint64
-	R12   uint64
-	R13   uint64
-	R14   uint64
-	R15   uint64
-	IP    uint64
-	FLAGS uint64
-	CS    uint64
-	FS    uint64
-	GS    uint64
-}
-    RegsAMD64 is the Mach-O AMD64 register structure.
-
-type Reloc struct {
-	Addr  uint32
-	Value uint32
-	// when Scattered == false && Extern == true, Value is the symbol number.
-	// when Scattered == false && Extern == false, Value is the section number.
-	// when Scattered == true, Value is the value that this reloc refers to.
-	Type      uint8
-	Len       uint8 // 0=byte, 1=word, 2=long, 3=quad
-	Pcrel     bool
-	Extern    bool // valid if Scattered == false
-	Scattered bool
-}
-    A Reloc represents a Mach-O relocation.
-
-type RelocTypeARM int
-
-const (
-	ARM_RELOC_VANILLA        RelocTypeARM = 0
-	ARM_RELOC_PAIR           RelocTypeARM = 1
-	ARM_RELOC_SECTDIFF       RelocTypeARM = 2
-	ARM_RELOC_LOCAL_SECTDIFF RelocTypeARM = 3
-	ARM_RELOC_PB_LA_PTR      RelocTypeARM = 4
-	ARM_RELOC_BR24           RelocTypeARM = 5
-	ARM_THUMB_RELOC_BR22     RelocTypeARM = 6
-	ARM_THUMB_32BIT_BRANCH   RelocTypeARM = 7
-	ARM_RELOC_HALF           RelocTypeARM = 8
-	ARM_RELOC_HALF_SECTDIFF  RelocTypeARM = 9
-)
-func (r RelocTypeARM) GoString() string
-
-func (i RelocTypeARM) String() string
-
-type RelocTypeARM64 int
-
-const (
-	ARM64_RELOC_UNSIGNED            RelocTypeARM64 = 0
-	ARM64_RELOC_SUBTRACTOR          RelocTypeARM64 = 1
-	ARM64_RELOC_BRANCH26            RelocTypeARM64 = 2
-	ARM64_RELOC_PAGE21              RelocTypeARM64 = 3
-	ARM64_RELOC_PAGEOFF12           RelocTypeARM64 = 4
-	ARM64_RELOC_GOT_LOAD_PAGE21     RelocTypeARM64 = 5
-	ARM64_RELOC_GOT_LOAD_PAGEOFF12  RelocTypeARM64 = 6
-	ARM64_RELOC_POINTER_TO_GOT      RelocTypeARM64 = 7
-	ARM64_RELOC_TLVP_LOAD_PAGE21    RelocTypeARM64 = 8
-	ARM64_RELOC_TLVP_LOAD_PAGEOFF12 RelocTypeARM64 = 9
-	ARM64_RELOC_ADDEND              RelocTypeARM64 = 10
-)
-func (r RelocTypeARM64) GoString() string
-
-func (i RelocTypeARM64) String() string
-
-type RelocTypeGeneric int
-
-const (
-	GENERIC_RELOC_VANILLA        RelocTypeGeneric = 0
-	GENERIC_RELOC_PAIR           RelocTypeGeneric = 1
-	GENERIC_RELOC_SECTDIFF       RelocTypeGeneric = 2
-	GENERIC_RELOC_PB_LA_PTR      RelocTypeGeneric = 3
-	GENERIC_RELOC_LOCAL_SECTDIFF RelocTypeGeneric = 4
-	GENERIC_RELOC_TLV            RelocTypeGeneric = 5
-)
-func (r RelocTypeGeneric) GoString() string
-
-func (i RelocTypeGeneric) String() string
-
-type RelocTypeX86_64 int
-
-const (
-	X86_64_RELOC_UNSIGNED   RelocTypeX86_64 = 0
-	X86_64_RELOC_SIGNED     RelocTypeX86_64 = 1
-	X86_64_RELOC_BRANCH     RelocTypeX86_64 = 2
-	X86_64_RELOC_GOT_LOAD   RelocTypeX86_64 = 3
-	X86_64_RELOC_GOT        RelocTypeX86_64 = 4
-	X86_64_RELOC_SUBTRACTOR RelocTypeX86_64 = 5
-	X86_64_RELOC_SIGNED_1   RelocTypeX86_64 = 6
-	X86_64_RELOC_SIGNED_2   RelocTypeX86_64 = 7
-	X86_64_RELOC_SIGNED_4   RelocTypeX86_64 = 8
-	X86_64_RELOC_TLV        RelocTypeX86_64 = 9
-)
-func (r RelocTypeX86_64) GoString() string
-
-func (i RelocTypeX86_64) String() string
-
-type Rpath struct {
-	LoadBytes
-	Path string
-}
-    A Rpath represents a Mach-O rpath command.
-
-type RpathCmd struct {
-	Cmd  LoadCmd
-	Len  uint32
-	Path uint32
-}
-    A RpathCmd is a Mach-O rpath command.
-
-type Section struct {
-	SectionHeader
-	Relocs []Reloc
-
-	// Embed ReaderAt for ReadAt method.
-	// Do not embed SectionReader directly
-	// to avoid having Read and Seek.
-	// If a client wants Read and Seek it must use
-	// Open() to avoid fighting over the seek offset
-	// with other clients.
-	io.ReaderAt
-	// Has unexported fields.
-}
-
-func (s *Section) Data() ([]byte, error)
-    Data reads and returns the contents of the Mach-O section.
-
-func (s *Section) Open() io.ReadSeeker
-    Open returns a new ReadSeeker reading the Mach-O section.
-
-type Section32 struct {
-	Name     [16]byte
-	Seg      [16]byte
-	Addr     uint32
-	Size     uint32
-	Offset   uint32
-	Align    uint32
-	Reloff   uint32
-	Nreloc   uint32
-	Flags    uint32
-	Reserve1 uint32
-	Reserve2 uint32
-}
-    A Section32 is a 32-bit Mach-O section header.
-
-type Section64 struct {
-	Name     [16]byte
-	Seg      [16]byte
-	Addr     uint64
-	Size     uint64
-	Offset   uint32
-	Align    uint32
-	Reloff   uint32
-	Nreloc   uint32
-	Flags    uint32
-	Reserve1 uint32
-	Reserve2 uint32
-	Reserve3 uint32
-}
-    A Section64 is a 64-bit Mach-O section header.
-
-type SectionHeader struct {
-	Name   string
-	Seg    string
-	Addr   uint64
-	Size   uint64
-	Offset uint32
-	Align  uint32
-	Reloff uint32
-	Nreloc uint32
-	Flags  uint32
-}
-
-type Segment struct {
-	LoadBytes
-	SegmentHeader
-
-	// Embed ReaderAt for ReadAt method.
-	// Do not embed SectionReader directly
-	// to avoid having Read and Seek.
-	// If a client wants Read and Seek it must use
-	// Open() to avoid fighting over the seek offset
-	// with other clients.
-	io.ReaderAt
-	// Has unexported fields.
-}
-    A Segment represents a Mach-O 32-bit or 64-bit load segment command.
-
-func (s *Segment) Data() ([]byte, error)
-    Data reads and returns the contents of the segment.
-
-func (s *Segment) Open() io.ReadSeeker
-    Open returns a new ReadSeeker reading the segment.
-
-type Segment32 struct {
-	Cmd     LoadCmd
-	Len     uint32
-	Name    [16]byte
-	Addr    uint32
-	Memsz   uint32
-	Offset  uint32
-	Filesz  uint32
-	Maxprot uint32
-	Prot    uint32
-	Nsect   uint32
-	Flag    uint32
-}
-    A Segment32 is a 32-bit Mach-O segment load command.
-
-type Segment64 struct {
-	Cmd     LoadCmd
-	Len     uint32
-	Name    [16]byte
-	Addr    uint64
-	Memsz   uint64
-	Offset  uint64
-	Filesz  uint64
-	Maxprot uint32
-	Prot    uint32
-	Nsect   uint32
-	Flag    uint32
-}
-    A Segment64 is a 64-bit Mach-O segment load command.
-
-type SegmentHeader struct {
-	Cmd     LoadCmd
-	Len     uint32
-	Name    string
-	Addr    uint64
-	Memsz   uint64
-	Offset  uint64
-	Filesz  uint64
-	Maxprot uint32
-	Prot    uint32
-	Nsect   uint32
-	Flag    uint32
-}
-    A SegmentHeader is the header for a Mach-O 32-bit or 64-bit load segment
-    command.
-
-type Symbol struct {
-	Name  string
-	Type  uint8
-	Sect  uint8
-	Desc  uint16
-	Value uint64
-}
-    A Symbol is a Mach-O 32-bit or 64-bit symbol table entry.
-
-type Symtab struct {
-	LoadBytes
-	SymtabCmd
-	Syms []Symbol
-}
-    A Symtab represents a Mach-O symbol table command.
-
-type SymtabCmd struct {
-	Cmd     LoadCmd
-	Len     uint32
-	Symoff  uint32
-	Nsyms   uint32
-	Stroff  uint32
-	Strsize uint32
-}
-    A SymtabCmd is a Mach-O symbol table command.
-
-type Thread struct {
-	Cmd  LoadCmd
-	Len  uint32
-	Type uint32
-	Data []uint32
-}
-    A Thread is a Mach-O thread state command.
-
-type Type uint32
-    A Type is the Mach-O file type, e.g. an object file, executable, or dynamic
-    library.
-
-const (
-	TypeObj    Type = 1
-	TypeExec   Type = 2
-	TypeDylib  Type = 6
-	TypeBundle Type = 8
-)
-func (t Type) GoString() string
-
-func (t Type) String() string
+Go Security Policy - The Go Programming Language/[Skip to Main Content](#main-content)
 
+- [Why Go arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
+
+  - [Case Studies](/solutions/case-studies)
+
+Common problems companies solve with Go
+
+  - [Use Cases](/solutions/use-cases)
+
+Stories about how and why companies use Go
+
+  - [Security](/security/)
+
+How Go can help keep you secure by default
+
+- [Learn](/learn/) Press Enter to activate/deactivate dropdown 
+- [Docs arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
+
+  - [Go Spec](/ref/spec)
+
+The official Go language specification
+
+  - [Go User Manual](/doc)
+
+A complete introduction to building software with Go
+
+  - [Standard library](https://pkg.go.dev/std)
+
+Reference documentation for Go's standard library
+
+  - [Release Notes](/doc/devel/release)
+
+Learn what's new in each Go release
+
+  - [Effective Go](/doc/effective_go)
+
+Tips for writing clear, performant, and idiomatic Go code
+
+- [Packages](https://pkg.go.dev) Press Enter to activate/deactivate dropdown 
+- [Community arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
+
+  - [Recorded Talks](/talks/)
+
+Videos from prior events
+
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+
+Meet other local Go developers
+
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+
+Learn and network with Go developers from around the world
+
+  - [Go blog](/blog)
+
+The Go project's official blog.
+
+  - [Go project](/help)
+
+Get help and stay informed from Go
+
+  -  Get connected 
+
+https://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
+
+/
+
+- [Why Go navigate_next](#)[navigate_beforeWhy Go](#)
+
+  - [Case Studies](/solutions/case-studies)
+  - [Use Cases](/solutions/use-cases)
+  - [Security](/security/)
+
+- [Learn](/learn/)
+- [Docs navigate_next](#)[navigate_beforeDocs](#)
+
+  - [Go Spec](/ref/spec)
+  - [Go User Manual](/doc)
+  - [Standard library](https://pkg.go.dev/std)
+  - [Release Notes](/doc/devel/release)
+  - [Effective Go](/doc/effective_go)
+
+- [Packages](https://pkg.go.dev)
+- [Community navigate_next](#)[navigate_beforeCommunity](#)
+
+  - [Recorded Talks](/talks/)
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+  - [Go blog](/blog)
+  - [Go project](/help)
+  - Get connectedhttps://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
+
+1. [Documentation](/doc/)
+2. [Security](/doc/security/)
+3. [Go Security Policy](/doc/security/policy)
+
+# Go Security Policy
+
+## Overview
+
+This document explains the Go Security team’s process for handling issues reported and what to expect in return.
+
+## Reporting a Security Bug
+
+All security bugs in the Go distribution should be reported by email to [security@golang.org](mailto:security@golang.org). This mail is delivered to the Go Security team.
+
+To ensure your report is not marked as spam, please include the word “vulnerability” anywhere in your email. Please use a descriptive subject line for your report email.
+
+Your email will be acknowledged within 7 days, and you’ll be kept up to date with the progress until resolution. Your issue will be fixed or made public within 90 days.
+
+If you have not received a reply to your email within 7 days, please follow up with the Go Security team again at [security@golang.org](mailto:security@golang.org). Please make sure the word vulnerability is in your email.
+
+If after 3 more days you have still not received an acknowledgement of your report, it is possible that your email might have been marked as spam. In that case, please [file an issue here](https://g.co/vulnz). Select “I want to report a technical security or an abuse risk related bug in a Google product (SQLi, XSS, etc.)”, and list “Go” as the affected product.
+
+## Tracks
+
+Depending on the nature of your issue, it will be categorized by the Go Security team as an issue in the PUBLIC, PRIVATE, or URGENT track. All security issues will be issued CVE numbers.
+
+The Go Security team does not assign traditional fine-grained severity labels (e.g CRITICAL, HIGH, MEDIUM, LOW) to security issues because severity depends highly on how a user is using the affected API or functionality.
+
+For example, the impact of a resource exhaustion issue in the `encoding/json` parser depends on what is being parsed. If the user is parsing trusted JSON files from their local filesystem, the impact is likely to be low. If the user is parsing untrusted arbitrary JSON from an HTTP request body, the impact may be much higher.
+
+That said, the following issue tracks do signal how severe and/or wide-reaching the Security team believes an issue to be. For example, an issue with medium to significant impact for many users is a PRIVATE track issue in this policy, and an issue with negligible to minor impact, or which affects only a small subset of users, is a PUBLIC track issue.
+
+### PUBLIC
+
+Issues in the PUBLIC track affect niche configurations, have very limited impact, or are already widely known.
+
+PUBLIC track issues are labeled with [Proposal-Security](https://github.com/golang/go/labels/Proposal-Security), discussed through the [Go proposal review process](https://go.googlesource.com/proposal/+/master/README.md#proposal-review)fixed in public, and get backported to the next scheduled [minor
+releases](/wiki/MinorReleases) (which occur ~monthly). The release announcement includes details of these issues, but there is no pre-announcement.
+
+Examples of past PUBLIC issues include:
+
+- [#44916](/issue/44916): archive/zip: can panic when calling Reader.Open
+- [#44913](/issue/44913): encoding/xml: infinite loop when using xml.NewTokenDecoder with a custom TokenReader
+- [#43786](/issue/43786): crypto/elliptic: incorrect operations on the P-224 curve
+- [#40928](/issue/40928): net/http/cgi,net/http/fcgi: Cross-Site Scripting (XSS) when Content-Type is not specified
+- [#40618](/issue/40618): encoding/binary: ReadUvarint and ReadVarint can read an unlimited number of bytes from invalid inputs
+- [#36834](/issue/36834): crypto/x509: certificate validation bypass on Windows 10
+
+### PRIVATE
+
+Issues in the PRIVATE track are violations of committed security properties.
+
+PRIVATE track issues are fixed in the next scheduled [minor
+releases](/wiki/MinorReleases), and are kept private until then.
+
+Three to seven days before the release, a pre-announcement is sent to golang-announce, announcing the presence of one or more security fixes in the upcoming releases, and whether the issues affect the standard library, the toolchain, or both, as well as reserved CVE IDs for each of the fixes.
+
+For issues that are present in a [major version release candidate](/s/release), we follow the same process, including fixes in the next scheduled release candidate.
+
+Some examples of past PRIVATE issues include:
+
+- [#53416](/issue/53416): path/filepath: stack exhaustion in Glob
+- [#53616](/issue/53616): go/parser: stack exhaustion in all Parse* functions
+- [#54658](/issue/54658): net/http: handle server errors after sending GOAWAY
+- [#56284](/issue/56284): syscall, os/exec: unsanitized NUL in environment variables
+
+### URGENT
+
+URGENT track issues are a threat to the Go ecosystem’s integrity, or are being actively exploited in the wild leading to severe damage. There are no recent examples, but they would include remote code execution in net/http, or practical key recovery in crypto/tls.
+
+URGENT track issues are fixed in private, and trigger an immediate dedicated security release, possibly with no pre-announcement.
+
+## Flagging Existing Issues as Security-related
+
+If you believe that an [existing issue](/issue) is security-related, we ask that you send an email to [security@golang.org](mailto:security@golang.org). The email should include the issue ID and a short description of why it should be handled according to this security policy.
+
+## Disclosure Process
+
+The Go project uses the following disclosure process:
+
+1. 
+
+Once the security report is received it is assigned a primary handler. This person coordinates the fix and release process.
+
+2. 
+
+The issue is confirmed and a list of affected software is determined.
+
+3. 
+
+Code is audited to find any potential similar problems.
+
+4. 
+
+If it is determined, in consultation with the submitter, that a CVE number is required, the primary handler will obtain one.
+
+5. 
+
+Fixes are prepared for the two most recent major releases and the head/master revision. Fixes are prepared for the two most recent major releases and merged to head/master.
+
+6. 
+
+On the date that the fixes are applied, announcements are sent to [golang-announce](https://groups.google.com/group/golang-announce), [golang-dev](https://groups.google.com/group/golang-dev), and [golang-nuts](https://groups.google.com/group/golang-nuts).
+
+This process can take some time, especially when coordination is required with maintainers of other projects. Every effort will be made to handle the bug in as timely a manner as possible, however it’s important that we follow the process described above to ensure that disclosures are handled consistently.
+
+For security issues that include the assignment of a CVE number, the issue is listed publicly under the [“Golang” product on the CVEDetails website](https://www.cvedetails.com/vulnerability-list/vendor_id-14185/Golang.html) as well as the [National Vulnerability Disclosure site](https://web.nvd.nist.gov/view/vuln/search).
+
+## Receiving Security Updates
+
+The best way to receive security announcements is to subscribe to the [golang-announce](https://groups.google.com/forum/#!forum/golang-announce) mailing list. Any messages pertaining to a security issue will be prefixed with `[security]`.
+
+## Comments on This Policy
+
+If you have any suggestions to improve this policy, please [file an issue](/issue/new) for discussion.
+
+[Why Go](/solutions/)[Use Cases](/solutions/use-cases)[Case Studies](/solutions/case-studies)[Get Started](/learn/)[Playground](/play)[Tour](/tour/)[Stack Overflow](https://stackoverflow.com/questions/tagged/go?tab=Newest)[Help](/help/)[Packages](https://pkg.go.dev)[Standard Library](/pkg/)[About Go Packages](https://pkg.go.dev/about)[About](/project)[Download](/dl/)[Blog](/blog/)[Issue Tracker](https://github.com/golang/go/issues)[Release Notes](/doc/devel/release)[Brand Guidelines](/brand)[Code of Conduct](/conduct)[Connect](https://www.twitter.com/golang)[Twitter](https://www.twitter.com/golang)[GitHub](https://github.com/golang)[Slack](https://invite.slack.golangbridge.org/)[r/golang](https://reddit.com/r/golang)[Meetup](https://www.meetup.com/pro/go)[Golang Weekly](https://golangweekly.com/) Opens in new window. 
+
+- [Copyright](/copyright)
+- [Terms of Service](/tos)
+- [Privacy Policy](http://www.google.com/intl/en/policies/privacy/)
+- [Report an Issue](/s/website-issue)
+- 
+
+https://google.comgo.dev uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic. [Learn more.](https://policies.google.com/technologies/cookies)Okay

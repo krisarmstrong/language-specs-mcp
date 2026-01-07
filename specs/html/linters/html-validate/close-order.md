@@ -1,3 +1,14 @@
+HTML-validate - Require elements to be closed in correct order (close-order)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -141,3 +152,5 @@ Examples of correct code for this rule:
 ```
 <div></div>
 ```
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/close-order.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/close-order.ts)

@@ -1,296 +1,684 @@
-package context // import "context"
+Go Concurrency Patterns: Pipelines and cancellation - The Go Programming Language/[Skip to Main Content](#main-content)
 
-Package context defines the Context type, which carries deadlines, cancellation
-signals, and other request-scoped values across API boundaries and between
-processes.
+- [Why Go arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
 
-Incoming requests to a server should create a Context, and outgoing calls to
-servers should accept a Context. The chain of function calls between them must
-propagate the Context, optionally replacing it with a derived Context created
-using WithCancel, WithDeadline, WithTimeout, or WithValue.
+  - [Case Studies](/solutions/case-studies)
 
-A Context may be canceled to indicate that work done on its behalf should stop.
-A Context with a deadline is canceled after the deadline passes. When a Context
-is canceled, all Contexts derived from it are also canceled.
+Common problems companies solve with Go
 
-The WithCancel, WithDeadline, and WithTimeout functions take a Context (the
-parent) and return a derived Context (the child) and a CancelFunc. Calling the
-CancelFunc directly cancels the child and its children, removes the parent's
-reference to the child, and stops any associated timers. Failing to call the
-CancelFunc leaks the child and its children until the parent is canceled.
-The go vet tool checks that CancelFuncs are used on all control-flow paths.
+  - [Use Cases](/solutions/use-cases)
 
-The WithCancelCause, WithDeadlineCause, and WithTimeoutCause functions return a
-CancelCauseFunc, which takes an error and records it as the cancellation cause.
-Calling Cause on the canceled context or any of its children retrieves the
-cause. If no cause is specified, Cause(ctx) returns the same value as ctx.Err().
+Stories about how and why companies use Go
 
-Programs that use Contexts should follow these rules to keep interfaces
-consistent across packages and enable static analysis tools to check context
-propagation:
+  - [Security](/security/)
 
-Do not store Contexts inside a struct type; instead, pass a Context
-explicitly to each function that needs it. This is discussed further in
-https://go.dev/blog/context-and-structs. The Context should be the first
-parameter, typically named ctx:
+How Go can help keep you secure by default
 
-    func DoSomething(ctx context.Context, arg Arg) error {
-    	// ... use ctx ...
+- [Learn](/learn/) Press Enter to activate/deactivate dropdown 
+- [Docs arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
+
+  - [Go Spec](/ref/spec)
+
+The official Go language specification
+
+  - [Go User Manual](/doc)
+
+A complete introduction to building software with Go
+
+  - [Standard library](https://pkg.go.dev/std)
+
+Reference documentation for Go's standard library
+
+  - [Release Notes](/doc/devel/release)
+
+Learn what's new in each Go release
+
+  - [Effective Go](/doc/effective_go)
+
+Tips for writing clear, performant, and idiomatic Go code
+
+- [Packages](https://pkg.go.dev) Press Enter to activate/deactivate dropdown 
+- [Community arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
+
+  - [Recorded Talks](/talks/)
+
+Videos from prior events
+
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+
+Meet other local Go developers
+
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+
+Learn and network with Go developers from around the world
+
+  - [Go blog](/blog)
+
+The Go project's official blog.
+
+  - [Go project](/help)
+
+Get help and stay informed from Go
+
+  -  Get connected 
+
+https://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
+
+/
+
+- [Why Go navigate_next](#)[navigate_beforeWhy Go](#)
+
+  - [Case Studies](/solutions/case-studies)
+  - [Use Cases](/solutions/use-cases)
+  - [Security](/security/)
+
+- [Learn](/learn/)
+- [Docs navigate_next](#)[navigate_beforeDocs](#)
+
+  - [Go Spec](/ref/spec)
+  - [Go User Manual](/doc)
+  - [Standard library](https://pkg.go.dev/std)
+  - [Release Notes](/doc/devel/release)
+  - [Effective Go](/doc/effective_go)
+
+- [Packages](https://pkg.go.dev)
+- [Community navigate_next](#)[navigate_beforeCommunity](#)
+
+  - [Recorded Talks](/talks/)
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+  - [Go blog](/blog)
+  - [Go project](/help)
+  - Get connectedhttps://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
+
+# [The Go Blog](/blog/)
+
+# Go Concurrency Patterns: Pipelines and cancellation
+
+ Sameer Ajmani
+ 13 March 2014 
+
+## Introduction
+
+Go’s concurrency primitives make it easy to construct streaming data pipelines that make efficient use of I/O and multiple CPUs. This article presents examples of such pipelines, highlights subtleties that arise when operations fail, and introduces techniques for dealing with failures cleanly.
+
+## What is a pipeline?
+
+There’s no formal definition of a pipeline in Go; it’s just one of many kinds of concurrent programs. Informally, a pipeline is a series of stages connected by channels, where each stage is a group of goroutines running the same function. In each stage, the goroutines
+
+- receive values from upstream via inbound channels
+- perform some function on that data, usually producing new values
+- send values downstream via outbound channels
+
+Each stage has any number of inbound and outbound channels, except the first and last stages, which have only outbound or inbound channels, respectively. The first stage is sometimes called the source or producer; the last stage, the sink or consumer.
+
+We’ll begin with a simple example pipeline to explain the ideas and techniques. Later, we’ll present a more realistic example.
+
+## Squaring numbers
+
+Consider a pipeline with three stages.
+
+The first stage, `gen`, is a function that converts a list of integers to a channel that emits the integers in the list. The `gen` function starts a goroutine that sends the integers on the channel and closes the channel when all the values have been sent:
+
+```
+func gen(nums ...int) <-chan int {
+    out := make(chan int)
+    go func() {
+        for _, n := range nums {
+            out <- n
+        }
+        close(out)
+    }()
+    return out
+}
+```
+
+The second stage, `sq`, receives integers from a channel and returns a channel that emits the square of each received integer. After the inbound channel is closed and this stage has sent all the values downstream, it closes the outbound channel:
+
+```
+func sq(in <-chan int) <-chan int {
+    out := make(chan int)
+    go func() {
+        for n := range in {
+            out <- n * n
+        }
+        close(out)
+    }()
+    return out
+}
+```
+
+The `main` function sets up the pipeline and runs the final stage: it receives values from the second stage and prints each one, until the channel is closed:
+
+```
+func main() {
+    // Set up the pipeline.
+    c := gen(2, 3)
+    out := sq(c)
+
+    // Consume the output.
+    fmt.Println(<-out) // 4
+    fmt.Println(<-out) // 9
+}
+```
+
+Since `sq` has the same type for its inbound and outbound channels, we can compose it any number of times. We can also rewrite `main` as a range loop, like the other stages:
+
+```
+func main() {
+    // Set up the pipeline and consume the output.
+    for n := range sq(sq(gen(2, 3))) {
+        fmt.Println(n) // 16 then 81
+    }
+}
+```
+
+## Fan-out, fan-in
+
+Multiple functions can read from the same channel until that channel is closed; this is called fan-out. This provides a way to distribute work amongst a group of workers to parallelize CPU use and I/O.
+
+A function can read from multiple inputs and proceed until all are closed by multiplexing the input channels onto a single channel that’s closed when all the inputs are closed. This is called fan-in.
+
+We can change our pipeline to run two instances of `sq`, each reading from the same input channel. We introduce a new function, merge, to fan in the results:
+
+```
+func main() {
+    in := gen(2, 3)
+
+    // Distribute the sq work across two goroutines that both read from in.
+    c1 := sq(in)
+    c2 := sq(in)
+
+    // Consume the merged output from c1 and c2.
+    for n := range merge(c1, c2) {
+        fmt.Println(n) // 4 then 9, or 9 then 4
+    }
+}
+```
+
+The `merge` function converts a list of channels to a single channel by starting a goroutine for each inbound channel that copies the values to the sole outbound channel. Once all the `output` goroutines have been started, `merge` starts one more goroutine to close the outbound channel after all sends on that channel are done.
+
+Sends on a closed channel panic, so it’s important to ensure all sends are done before calling close. The [sync.WaitGroup](/pkg/sync/#WaitGroup) type provides a simple way to arrange this synchronization:
+
+```
+func merge(cs ...<-chan int) <-chan int {
+    var wg sync.WaitGroup
+    out := make(chan int)
+
+    // Start an output goroutine for each input channel in cs.  output
+    // copies values from c to out until c is closed, then calls wg.Done.
+    output := func(c <-chan int) {
+        for n := range c {
+            out <- n
+        }
+        wg.Done()
+    }
+    wg.Add(len(cs))
+    for _, c := range cs {
+        go output(c)
     }
 
-Do not pass a nil Context, even if a function permits it. Pass context.TODO if
-you are unsure about which Context to use.
-
-Use context Values only for request-scoped data that transits processes and
-APIs, not for passing optional parameters to functions.
-
-The same Context may be passed to functions running in different goroutines;
-Contexts are safe for simultaneous use by multiple goroutines.
-
-See https://go.dev/blog/context for example code for a server that uses
-Contexts.
-
-VARIABLES
-
-var Canceled = errors.New("context canceled")
-    Canceled is the error returned by [Context.Err] when the context is canceled
-    for some reason other than its deadline passing.
-
-var DeadlineExceeded error = deadlineExceededError{}
-    DeadlineExceeded is the error returned by [Context.Err] when the context is
-    canceled due to its deadline passing.
-
-
-FUNCTIONS
-
-func AfterFunc(ctx Context, f func()) (stop func() bool)
-    AfterFunc arranges to call f in its own goroutine after ctx is canceled. If
-    ctx is already canceled, AfterFunc calls f immediately in its own goroutine.
-
-    Multiple calls to AfterFunc on a context operate independently; one does not
-    replace another.
-
-    Calling the returned stop function stops the association of ctx with f.
-    It returns true if the call stopped f from being run. If stop returns false,
-    either the context is canceled and f has been started in its own goroutine;
-    or f was already stopped. The stop function does not wait for f to complete
-    before returning. If the caller needs to know whether f is completed,
-    it must coordinate with f explicitly.
-
-    If ctx has a "AfterFunc(func()) func() bool" method, AfterFunc will use it
-    to schedule the call.
-
-func Cause(c Context) error
-    Cause returns a non-nil error explaining why c was canceled. The first
-    cancellation of c or one of its parents sets the cause. If that cancellation
-    happened via a call to CancelCauseFunc(err), then Cause returns err.
-    Otherwise Cause(c) returns the same value as c.Err(). Cause returns nil if c
-    has not been canceled yet.
-
-func WithCancel(parent Context) (ctx Context, cancel CancelFunc)
-    WithCancel returns a derived context that points to the parent context but
-    has a new Done channel. The returned context's Done channel is closed when
-    the returned cancel function is called or when the parent context's Done
-    channel is closed, whichever happens first.
-
-    Canceling this context releases resources associated with it, so code should
-    call cancel as soon as the operations running in this Context complete.
-
-func WithCancelCause(parent Context) (ctx Context, cancel CancelCauseFunc)
-    WithCancelCause behaves like WithCancel but returns a CancelCauseFunc
-    instead of a CancelFunc. Calling cancel with a non-nil error (the "cause")
-    records that error in ctx; it can then be retrieved using Cause(ctx).
-    Calling cancel with nil sets the cause to Canceled.
-
-    Example use:
-
-        ctx, cancel := context.WithCancelCause(parent)
-        cancel(myError)
-        ctx.Err() // returns context.Canceled
-        context.Cause(ctx) // returns myError
-
-func WithDeadline(parent Context, d time.Time) (Context, CancelFunc)
-    WithDeadline returns a derived context that points to the parent context but
-    has the deadline adjusted to be no later than d. If the parent's deadline is
-    already earlier than d, WithDeadline(parent, d) is semantically equivalent
-    to parent. The returned [Context.Done] channel is closed when the deadline
-    expires, when the returned cancel function is called, or when the parent
-    context's Done channel is closed, whichever happens first.
-
-    Canceling this context releases resources associated with it, so code should
-    call cancel as soon as the operations running in this Context complete.
-
-func WithDeadlineCause(parent Context, d time.Time, cause error) (Context, CancelFunc)
-    WithDeadlineCause behaves like WithDeadline but also sets the cause of the
-    returned Context when the deadline is exceeded. The returned CancelFunc does
-    not set the cause.
-
-func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)
-    WithTimeout returns WithDeadline(parent, time.Now().Add(timeout)).
-
-    Canceling this context releases resources associated with it, so code should
-    call cancel as soon as the operations running in this Context complete:
-
-        func slowOperationWithTimeout(ctx context.Context) (Result, error) {
-        	ctx, cancel := context.WithTimeout(ctx, 100*time.Millisecond)
-        	defer cancel()  // releases resources if slowOperation completes before timeout elapses
-        	return slowOperation(ctx)
-        }
-
-func WithTimeoutCause(parent Context, timeout time.Duration, cause error) (Context, CancelFunc)
-    WithTimeoutCause behaves like WithTimeout but also sets the cause of the
-    returned Context when the timeout expires. The returned CancelFunc does not
-    set the cause.
-
-
-TYPES
-
-type CancelCauseFunc func(cause error)
-    A CancelCauseFunc behaves like a CancelFunc but additionally sets the
-    cancellation cause. This cause can be retrieved by calling Cause on the
-    canceled Context or on any of its derived Contexts.
-
-    If the context has already been canceled, CancelCauseFunc does not set the
-    cause. For example, if childContext is derived from parentContext:
-      - if parentContext is canceled with cause1 before childContext is canceled
-        with cause2, then Cause(parentContext) == Cause(childContext) == cause1
-      - if childContext is canceled with cause2 before parentContext is canceled
-        with cause1, then Cause(parentContext) == cause1 and Cause(childContext)
-        == cause2
-
-type CancelFunc func()
-    A CancelFunc tells an operation to abandon its work. A CancelFunc does not
-    wait for the work to stop. A CancelFunc may be called by multiple goroutines
-    simultaneously. After the first call, subsequent calls to a CancelFunc do
-    nothing.
-
-type Context interface {
-	// Deadline returns the time when work done on behalf of this context
-	// should be canceled. Deadline returns ok==false when no deadline is
-	// set. Successive calls to Deadline return the same results.
-	Deadline() (deadline time.Time, ok bool)
-
-	// Done returns a channel that's closed when work done on behalf of this
-	// context should be canceled. Done may return nil if this context can
-	// never be canceled. Successive calls to Done return the same value.
-	// The close of the Done channel may happen asynchronously,
-	// after the cancel function returns.
-	//
-	// WithCancel arranges for Done to be closed when cancel is called;
-	// WithDeadline arranges for Done to be closed when the deadline
-	// expires; WithTimeout arranges for Done to be closed when the timeout
-	// elapses.
-	//
-	// Done is provided for use in select statements:
-	//
-	//  // Stream generates values with DoSomething and sends them to out
-	//  // until DoSomething returns an error or ctx.Done is closed.
-	//  func Stream(ctx context.Context, out chan<- Value) error {
-	//  	for {
-	//  		v, err := DoSomething(ctx)
-	//  		if err != nil {
-	//  			return err
-	//  		}
-	//  		select {
-	//  		case <-ctx.Done():
-	//  			return ctx.Err()
-	//  		case out <- v:
-	//  		}
-	//  	}
-	//  }
-	//
-	// See https://blog.golang.org/pipelines for more examples of how to use
-	// a Done channel for cancellation.
-	Done() <-chan struct{}
-
-	// If Done is not yet closed, Err returns nil.
-	// If Done is closed, Err returns a non-nil error explaining why:
-	// DeadlineExceeded if the context's deadline passed,
-	// or Canceled if the context was canceled for some other reason.
-	// After Err returns a non-nil error, successive calls to Err return the same error.
-	Err() error
-
-	// Value returns the value associated with this context for key, or nil
-	// if no value is associated with key. Successive calls to Value with
-	// the same key returns the same result.
-	//
-	// Use context values only for request-scoped data that transits
-	// processes and API boundaries, not for passing optional parameters to
-	// functions.
-	//
-	// A key identifies a specific value in a Context. Functions that wish
-	// to store values in Context typically allocate a key in a global
-	// variable then use that key as the argument to context.WithValue and
-	// Context.Value. A key can be any type that supports equality;
-	// packages should define keys as an unexported type to avoid
-	// collisions.
-	//
-	// Packages that define a Context key should provide type-safe accessors
-	// for the values stored using that key:
-	//
-	//	// Package user defines a User type that's stored in Contexts.
-	//	package user
-	//
-	//	import "context"
-	//
-	//	// User is the type of value stored in the Contexts.
-	//	type User struct {...}
-	//
-	//	// key is an unexported type for keys defined in this package.
-	//	// This prevents collisions with keys defined in other packages.
-	//	type key int
-	//
-	//	// userKey is the key for user.User values in Contexts. It is
-	//	// unexported; clients use user.NewContext and user.FromContext
-	//	// instead of using this key directly.
-	//	var userKey key
-	//
-	//	// NewContext returns a new Context that carries value u.
-	//	func NewContext(ctx context.Context, u *User) context.Context {
-	//		return context.WithValue(ctx, userKey, u)
-	//	}
-	//
-	//	// FromContext returns the User value stored in ctx, if any.
-	//	func FromContext(ctx context.Context) (*User, bool) {
-	//		u, ok := ctx.Value(userKey).(*User)
-	//		return u, ok
-	//	}
-	Value(key any) any
+    // Start a goroutine to close out once all the output goroutines are
+    // done.  This must start after the wg.Add call.
+    go func() {
+        wg.Wait()
+        close(out)
+    }()
+    return out
 }
-    A Context carries a deadline, a cancellation signal, and other values across
-    API boundaries.
+```
 
-    Context's methods may be called by multiple goroutines simultaneously.
+## Stopping short
 
-func Background() Context
-    Background returns a non-nil, empty Context. It is never canceled, has no
-    values, and has no deadline. It is typically used by the main function,
-    initialization, and tests, and as the top-level Context for incoming
-    requests.
+There is a pattern to our pipeline functions:
 
-func TODO() Context
-    TODO returns a non-nil, empty Context. Code should use context.TODO when
-    it's unclear which Context to use or it is not yet available (because
-    the surrounding function has not yet been extended to accept a Context
-    parameter).
+- stages close their outbound channels when all the send operations are done.
+- stages keep receiving values from inbound channels until those channels are closed.
 
-func WithValue(parent Context, key, val any) Context
-    WithValue returns a derived context that points to the parent Context.
-    In the derived context, the value associated with key is val.
+This pattern allows each receiving stage to be written as a `range` loop and ensures that all goroutines exit once all values have been successfully sent downstream.
 
-    Use context Values only for request-scoped data that transits processes and
-    APIs, not for passing optional parameters to functions.
+But in real pipelines, stages don’t always receive all the inbound values. Sometimes this is by design: the receiver may only need a subset of values to make progress. More often, a stage exits early because an inbound value represents an error in an earlier stage. In either case the receiver should not have to wait for the remaining values to arrive, and we want earlier stages to stop producing values that later stages don’t need.
 
-    The provided key must be comparable and should not be of type string or any
-    other built-in type to avoid collisions between packages using context.
-    Users of WithValue should define their own types for keys. To avoid
-    allocating when assigning to an interface{}, context keys often have
-    concrete type struct{}. Alternatively, exported context key variables'
-    static type should be a pointer or interface.
+In our example pipeline, if a stage fails to consume all the inbound values, the goroutines attempting to send those values will block indefinitely:
 
-func WithoutCancel(parent Context) Context
-    WithoutCancel returns a derived context that points to the parent context
-    and is not canceled when parent is canceled. The returned context returns no
-    Deadline or Err, and its Done channel is nil. Calling Cause on the returned
-    context returns nil.
+```
+    // Consume the first value from the output.
+    out := merge(c1, c2)
+    fmt.Println(<-out) // 4 or 9
+    return
+    // Since we didn't receive the second value from out,
+    // one of the output goroutines is hung attempting to send it.
+}
+```
 
+This is a resource leak: goroutines consume memory and runtime resources, and heap references in goroutine stacks keep data from being garbage collected. Goroutines are not garbage collected; they must exit on their own.
+
+We need to arrange for the upstream stages of our pipeline to exit even when the downstream stages fail to receive all the inbound values. One way to do this is to change the outbound channels to have a buffer. A buffer can hold a fixed number of values; send operations complete immediately if there’s room in the buffer:
+
+```
+c := make(chan int, 2) // buffer size 2
+c <- 1  // succeeds immediately
+c <- 2  // succeeds immediately
+c <- 3  // blocks until another goroutine does <-c and receives 1
+```
+
+When the number of values to be sent is known at channel creation time, a buffer can simplify the code. For example, we can rewrite `gen` to copy the list of integers into a buffered channel and avoid creating a new goroutine:
+
+```
+func gen(nums ...int) <-chan int {
+    out := make(chan int, len(nums))
+    for _, n := range nums {
+        out <- n
+    }
+    close(out)
+    return out
+}
+```
+
+Returning to the blocked goroutines in our pipeline, we might consider adding a buffer to the outbound channel returned by `merge`:
+
+```
+func merge(cs ...<-chan int) <-chan int {
+    var wg sync.WaitGroup
+    out := make(chan int, 1) // enough space for the unread inputs
+    // ... the rest is unchanged ...
+```
+
+While this fixes the blocked goroutine in this program, this is bad code. The choice of buffer size of 1 here depends on knowing the number of values `merge` will receive and the number of values downstream stages will consume. This is fragile: if we pass an additional value to `gen`, or if the downstream stage reads any fewer values, we will again have blocked goroutines.
+
+Instead, we need to provide a way for downstream stages to indicate to the senders that they will stop accepting input.
+
+## Explicit cancellation
+
+When `main` decides to exit without receiving all the values from `out`, it must tell the goroutines in the upstream stages to abandon the values they’re trying to send. It does so by sending values on a channel called `done`. It sends two values since there are potentially two blocked senders:
+
+```
+func main() {
+    in := gen(2, 3)
+
+    // Distribute the sq work across two goroutines that both read from in.
+    c1 := sq(in)
+    c2 := sq(in)
+
+    // Consume the first value from output.
+    done := make(chan struct{}, 2)
+    out := merge(done, c1, c2)
+    fmt.Println(<-out) // 4 or 9
+
+    // Tell the remaining senders we're leaving.
+    done <- struct{}{}
+    done <- struct{}{}
+}
+```
+
+The sending goroutines replace their send operation with a `select` statement that proceeds either when the send on `out` happens or when they receive a value from `done`. The value type of `done` is the empty struct because the value doesn’t matter: it is the receive event that indicates the send on `out` should be abandoned. The `output` goroutines continue looping on their inbound channel, `c`, so the upstream stages are not blocked. (We’ll discuss in a moment how to allow this loop to return early.)
+
+```
+func merge(done <-chan struct{}, cs ...<-chan int) <-chan int {
+    var wg sync.WaitGroup
+    out := make(chan int)
+
+    // Start an output goroutine for each input channel in cs.  output
+    // copies values from c to out until c is closed or it receives a value
+    // from done, then output calls wg.Done.
+    output := func(c <-chan int) {
+        for n := range c {
+            select {
+            case out <- n:
+            case <-done:
+            }
+        }
+        wg.Done()
+    }
+    // ... the rest is unchanged ...
+```
+
+This approach has a problem: each downstream receiver needs to know the number of potentially blocked upstream senders and arrange to signal those senders on early return. Keeping track of these counts is tedious and error-prone.
+
+We need a way to tell an unknown and unbounded number of goroutines to stop sending their values downstream. In Go, we can do this by closing a channel, because [a receive operation on a closed channel can always proceed immediately, yielding the element type’s zero value.](/ref/spec#Receive_operator)
+
+This means that `main` can unblock all the senders simply by closing the `done` channel. This close is effectively a broadcast signal to the senders. We extend each of our pipeline functions to accept `done` as a parameter and arrange for the close to happen via a `defer` statement, so that all return paths from `main` will signal the pipeline stages to exit.
+
+```
+func main() {
+    // Set up a done channel that's shared by the whole pipeline,
+    // and close that channel when this pipeline exits, as a signal
+    // for all the goroutines we started to exit.
+    done := make(chan struct{})
+    defer close(done)          
+
+    in := gen(done, 2, 3)
+
+    // Distribute the sq work across two goroutines that both read from in.
+    c1 := sq(done, in)
+    c2 := sq(done, in)
+
+    // Consume the first value from output.
+    out := merge(done, c1, c2)
+    fmt.Println(<-out) // 4 or 9
+
+    // done will be closed by the deferred call.      
+}
+```
+
+Each of our pipeline stages is now free to return as soon as `done` is closed. The `output` routine in `merge` can return without draining its inbound channel, since it knows the upstream sender, `sq`, will stop attempting to send when `done` is closed. `output` ensures `wg.Done` is called on all return paths via a `defer` statement:
+
+```
+func merge(done <-chan struct{}, cs ...<-chan int) <-chan int {
+    var wg sync.WaitGroup
+    out := make(chan int)
+
+    // Start an output goroutine for each input channel in cs.  output
+    // copies values from c to out until c or done is closed, then calls
+    // wg.Done.
+    output := func(c <-chan int) {
+        defer wg.Done()
+        for n := range c {
+            select {
+            case out <- n:
+            case <-done:
+                return
+            }
+        }
+    }
+    // ... the rest is unchanged ...
+```
+
+Similarly, `sq` can return as soon as `done` is closed. `sq` ensures its `out` channel is closed on all return paths via a `defer` statement:
+
+```
+func sq(done <-chan struct{}, in <-chan int) <-chan int {
+    out := make(chan int)
+    go func() {
+        defer close(out)
+        for n := range in {
+            select {
+            case out <- n * n:
+            case <-done:
+                return
+            }
+        }
+    }()
+    return out
+}
+```
+
+Here are the guidelines for pipeline construction:
+
+- stages close their outbound channels when all the send operations are done.
+- stages keep receiving values from inbound channels until those channels are closed or the senders are unblocked.
+
+Pipelines unblock senders either by ensuring there’s enough buffer for all the values that are sent or by explicitly signalling senders when the receiver may abandon the channel.
+
+## Digesting a tree
+
+Let’s consider a more realistic pipeline.
+
+MD5 is a message-digest algorithm that’s useful as a file checksum. The command line utility `md5sum` prints digest values for a list of files.
+
+```
+% md5sum *.go
+d47c2bbc28298ca9befdfbc5d3aa4e65  bounded.go
+ee869afd31f83cbb2d10ee81b2b831dc  parallel.go
+b88175e65fdcbc01ac08aaf1fd9b5e96  serial.go
+```
+
+Our example program is like `md5sum` but instead takes a single directory as an argument and prints the digest values for each regular file under that directory, sorted by path name.
+
+```
+% go run serial.go .
+d47c2bbc28298ca9befdfbc5d3aa4e65  bounded.go
+ee869afd31f83cbb2d10ee81b2b831dc  parallel.go
+b88175e65fdcbc01ac08aaf1fd9b5e96  serial.go
+```
+
+The main function of our program invokes a helper function `MD5All`, which returns a map from path name to digest value, then sorts and prints the results:
+
+```
+func main() {
+    // Calculate the MD5 sum of all files under the specified directory,
+    // then print the results sorted by path name.
+    m, err := MD5All(os.Args[1])
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    var paths []string
+    for path := range m {
+        paths = append(paths, path)
+    }
+    sort.Strings(paths)
+    for _, path := range paths {
+        fmt.Printf("%x  %s\n", m[path], path)
+    }
+}
+```
+
+The `MD5All` function is the focus of our discussion. In [serial.go](pipelines/serial.go), the implementation uses no concurrency and simply reads and sums each file as it walks the tree.
+
+```
+// MD5All reads all the files in the file tree rooted at root and returns a map
+// from file path to the MD5 sum of the file's contents.  If the directory walk
+// fails or any read operation fails, MD5All returns an error.
+func MD5All(root string) (map[string][md5.Size]byte, error) {
+    m := make(map[string][md5.Size]byte)
+    err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
+        if err != nil {
+            return err
+        }
+        if !info.Mode().IsRegular() {
+            return nil
+        }
+        data, err := ioutil.ReadFile(path)
+        if err != nil {
+            return err
+        }
+        m[path] = md5.Sum(data)
+        return nil
+    })
+    if err != nil {
+        return nil, err
+    }
+    return m, nil
+}
+```
+
+## Parallel digestion
+
+In [parallel.go](pipelines/parallel.go), we split `MD5All` into a two-stage pipeline. The first stage, `sumFiles`, walks the tree, digests each file in a new goroutine, and sends the results on a channel with value type `result`:
+
+```
+type result struct {
+    path string
+    sum  [md5.Size]byte
+    err  error
+}
+```
+
+`sumFiles` returns two channels: one for the `results` and another for the error returned by `filepath.Walk`. The walk function starts a new goroutine to process each regular file, then checks `done`. If `done` is closed, the walk stops immediately:
+
+```
+func sumFiles(done <-chan struct{}, root string) (<-chan result, <-chan error) {
+    // For each regular file, start a goroutine that sums the file and sends
+    // the result on c.  Send the result of the walk on errc.
+    c := make(chan result)
+    errc := make(chan error, 1)
+    go func() {
+        var wg sync.WaitGroup
+        err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
+            if err != nil {
+                return err
+            }
+            if !info.Mode().IsRegular() {
+                return nil
+            }
+            wg.Add(1)
+            go func() {
+                data, err := ioutil.ReadFile(path)
+                select {
+                case c <- result{path, md5.Sum(data), err}:
+                case <-done:
+                }
+                wg.Done()
+            }()
+            // Abort the walk if done is closed.
+            select {
+            case <-done:
+                return errors.New("walk canceled")
+            default:
+                return nil
+            }
+        })
+        // Walk has returned, so all calls to wg.Add are done.  Start a
+        // goroutine to close c once all the sends are done.
+        go func() {
+            wg.Wait()
+            close(c)
+        }()
+        // No select needed here, since errc is buffered.
+        errc <- err
+    }()
+    return c, errc
+}
+```
+
+`MD5All` receives the digest values from `c`. `MD5All` returns early on error, closing `done` via a `defer`:
+
+```
+func MD5All(root string) (map[string][md5.Size]byte, error) {
+    // MD5All closes the done channel when it returns; it may do so before
+    // receiving all the values from c and errc.
+    done := make(chan struct{})
+    defer close(done)          
+
+    c, errc := sumFiles(done, root)
+
+    m := make(map[string][md5.Size]byte)
+    for r := range c {
+        if r.err != nil {
+            return nil, r.err
+        }
+        m[r.path] = r.sum
+    }
+    if err := <-errc; err != nil {
+        return nil, err
+    }
+    return m, nil
+}
+```
+
+## Bounded parallelism
+
+The `MD5All` implementation in [parallel.go](pipelines/parallel.go) starts a new goroutine for each file. In a directory with many large files, this may allocate more memory than is available on the machine.
+
+We can limit these allocations by bounding the number of files read in parallel. In [bounded.go](pipelines/bounded.go), we do this by creating a fixed number of goroutines for reading files. Our pipeline now has three stages: walk the tree, read and digest the files, and collect the digests.
+
+The first stage, `walkFiles`, emits the paths of regular files in the tree:
+
+```
+func walkFiles(done <-chan struct{}, root string) (<-chan string, <-chan error) {
+    paths := make(chan string)
+    errc := make(chan error, 1)
+    go func() {
+        // Close the paths channel after Walk returns.
+        defer close(paths)
+        // No select needed for this send, since errc is buffered.
+        errc <- filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
+            if err != nil {
+                return err
+            }
+            if !info.Mode().IsRegular() {
+                return nil
+            }
+            select {
+            case paths <- path:
+            case <-done:
+                return errors.New("walk canceled")
+            }
+            return nil
+        })
+    }()
+    return paths, errc
+}
+```
+
+The middle stage starts a fixed number of `digester` goroutines that receive file names from `paths` and send `results` on channel `c`:
+
+```
+func digester(done <-chan struct{}, paths <-chan string, c chan<- result) {
+    for path := range paths {
+        data, err := ioutil.ReadFile(path)
+        select {
+        case c <- result{path, md5.Sum(data), err}:
+        case <-done:
+            return
+        }
+    }
+}
+```
+
+Unlike our previous examples, `digester` does not close its output channel, as multiple goroutines are sending on a shared channel. Instead, code in `MD5All` arranges for the channel to be closed when all the `digesters` are done:
+
+```
+    // Start a fixed number of goroutines to read and digest files.
+    c := make(chan result)
+    var wg sync.WaitGroup
+    const numDigesters = 20
+    wg.Add(numDigesters)
+    for i := 0; i < numDigesters; i++ {
+        go func() {
+            digester(done, paths, c)
+            wg.Done()
+        }()
+    }
+    go func() {
+        wg.Wait()
+        close(c)
+    }()
+```
+
+We could instead have each digester create and return its own output channel, but then we would need additional goroutines to fan-in the results.
+
+The final stage receives all the `results` from `c` then checks the error from `errc`. This check cannot happen any earlier, since before this point, `walkFiles` may block sending values downstream:
+
+```
+    m := make(map[string][md5.Size]byte)
+    for r := range c {
+        if r.err != nil {
+            return nil, r.err
+        }
+        m[r.path] = r.sum
+    }
+    // Check whether the Walk failed.
+    if err := <-errc; err != nil {
+        return nil, err
+    }
+    return m, nil
+}
+```
+
+## Conclusion
+
+This article has presented techniques for constructing streaming data pipelines in Go. Dealing with failures in such pipelines is tricky, since each stage in the pipeline may block attempting to send values downstream, and the downstream stages may no longer care about the incoming data. We showed how closing a channel can broadcast a “done” signal to all the goroutines started by a pipeline and defined guidelines for constructing pipelines correctly.
+
+Further reading:
+
+- [Go Concurrency Patterns](/talks/2012/concurrency.slide#1) ([video](https://www.youtube.com/watch?v=f6kdp27TYZs)) presents the basics of Go’s concurrency primitives and several ways to apply them.
+- [Advanced Go Concurrency Patterns](/blog/advanced-go-concurrency-patterns) ([video](http://www.youtube.com/watch?v=QDDwwePbDtw)) covers more complex uses of Go’s primitives, especially `select`.
+- Douglas McIlroy’s paper [Squinting at Power Series](https://swtch.com/~rsc/thread/squint.pdf) shows how Go-like concurrency provides elegant support for complex calculations.
+
+Next article: [The Go Gopher](/blog/gopher)
+Previous article: [Go talks at FOSDEM 2014](/blog/fosdem14)
+[Blog Index](/blog/all)[Why Go](/solutions/)[Use Cases](/solutions/use-cases)[Case Studies](/solutions/case-studies)[Get Started](/learn/)[Playground](/play)[Tour](/tour/)[Stack Overflow](https://stackoverflow.com/questions/tagged/go?tab=Newest)[Help](/help/)[Packages](https://pkg.go.dev)[Standard Library](/pkg/)[About Go Packages](https://pkg.go.dev/about)[About](/project)[Download](/dl/)[Blog](/blog/)[Issue Tracker](https://github.com/golang/go/issues)[Release Notes](/doc/devel/release)[Brand Guidelines](/brand)[Code of Conduct](/conduct)[Connect](https://www.twitter.com/golang)[Twitter](https://www.twitter.com/golang)[GitHub](https://github.com/golang)[Slack](https://invite.slack.golangbridge.org/)[r/golang](https://reddit.com/r/golang)[Meetup](https://www.meetup.com/pro/go)[Golang Weekly](https://golangweekly.com/) Opens in new window. 
+
+- [Copyright](/copyright)
+- [Terms of Service](/tos)
+- [Privacy Policy](http://www.google.com/intl/en/policies/privacy/)
+- [Report an Issue](/s/website-issue)
+- 
+
+https://google.comgo.dev uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic. [Learn more.](https://policies.google.com/technologies/cookies)Okay

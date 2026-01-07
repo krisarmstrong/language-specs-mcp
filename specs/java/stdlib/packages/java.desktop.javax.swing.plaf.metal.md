@@ -1,4 +1,31 @@
-Module[java.desktop](../../../../module-summary.html)
+javax.swing.plaf.metal (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../../index.html)
+- [Module](../../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../../preview-list.html)
+- [New](../../../../../new-list.html)
+- [Deprecated](../../../../../deprecated-list.html)
+- [Index](../../../../../index-files/index-1.html)
+- [Help](../../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../../search.html)Module[java.desktop](../../../../module-summary.html)
 
 # Package javax.swing.plaf.metal
 
@@ -12,3 +39,9 @@ Since:1.2
 
 - Related PackagesPackageDescription[javax.swing.plaf](../package-summary.html)Provides one interface and many abstract classes that Swing uses to provide its pluggable look-and-feel capabilities.[javax.swing.plaf.basic](../basic/package-summary.html)Provides user interface objects built according to the Basic look and feel.[javax.swing.plaf.multi](../multi/package-summary.html)Provides user interface objects that combine two or more look and feels.[javax.swing.plaf.nimbus](../nimbus/package-summary.html)Provides user interface objects built according to the cross-platform Nimbus look and feel.[javax.swing.plaf.synth](../synth/package-summary.html)Synth is a skinnable look and feel in which all painting is delegated.
 - ClassesClassDescription[DefaultMetalTheme](DefaultMetalTheme.html)A concrete implementation of `MetalTheme` providing the original look of the Java Look and Feel, code-named "Steel".[MetalBorders](MetalBorders.html)Factory object that can vend Borders appropriate for the metal L & F.[MetalBorders.ButtonBorder](MetalBorders.ButtonBorder.html)The class represents the border of a `JButton`.[MetalBorders.Flush3DBorder](MetalBorders.Flush3DBorder.html)The class represents the 3D border.[MetalBorders.InternalFrameBorder](MetalBorders.InternalFrameBorder.html)The class represents the border of a `JInternalFrame`.[MetalBorders.MenuBarBorder](MetalBorders.MenuBarBorder.html)The class represents the border of a `JMenuBar`.[MetalBorders.MenuItemBorder](MetalBorders.MenuItemBorder.html)The class represents the border of a `JMenuItem`.[MetalBorders.OptionDialogBorder](MetalBorders.OptionDialogBorder.html)The class represents the border of an option dialog.[MetalBorders.PaletteBorder](MetalBorders.PaletteBorder.html)Border for a Palette.[MetalBorders.PopupMenuBorder](MetalBorders.PopupMenuBorder.html)The class represents the border of a `JPopupMenu`.[MetalBorders.RolloverButtonBorder](MetalBorders.RolloverButtonBorder.html)The class represents the border of a rollover `Button`.[MetalBorders.ScrollPaneBorder](MetalBorders.ScrollPaneBorder.html)The class represents the border of a `JScrollPane`.[MetalBorders.TableHeaderBorder](MetalBorders.TableHeaderBorder.html)Border for a Table Header[MetalBorders.TextFieldBorder](MetalBorders.TextFieldBorder.html)Border for a `JTextField`.[MetalBorders.ToggleButtonBorder](MetalBorders.ToggleButtonBorder.html)Border for a `JToggleButton`.[MetalBorders.ToolBarBorder](MetalBorders.ToolBarBorder.html)The class represents the border of a `JToolBar`.[MetalButtonUI](MetalButtonUI.html)MetalButtonUI implementation[MetalCheckBoxIcon](MetalCheckBoxIcon.html)CheckboxIcon implementation for OrganicCheckBoxUI[MetalCheckBoxUI](MetalCheckBoxUI.html)CheckboxUI implementation for MetalCheckboxUI[MetalComboBoxButton](MetalComboBoxButton.html)JButton subclass to help out MetalComboBoxUI[MetalComboBoxEditor](MetalComboBoxEditor.html)The default editor for Metal editable combo boxes[MetalComboBoxEditor.UIResource](MetalComboBoxEditor.UIResource.html)A subclass of BasicComboBoxEditor that implements UIResource.[MetalComboBoxIcon](MetalComboBoxIcon.html)This utility class draws the horizontal bars which indicate a MetalComboBox[MetalComboBoxUI](MetalComboBoxUI.html)Metal UI for JComboBox[MetalDesktopIconUI](MetalDesktopIconUI.html)Metal desktop icon.[MetalFileChooserUI](MetalFileChooserUI.html)Metal L&F implementation of a FileChooser.[MetalIconFactory](MetalIconFactory.html)Factory object that vends `Icon`s for the Java look and feel (Metal).[MetalIconFactory.FileIcon16](MetalIconFactory.FileIcon16.html)Warning: Serialized objects of this class will not be compatible with future Swing releases.[MetalIconFactory.FolderIcon16](MetalIconFactory.FolderIcon16.html)Warning: Serialized objects of this class will not be compatible with future Swing releases.[MetalIconFactory.PaletteCloseIcon](MetalIconFactory.PaletteCloseIcon.html)Defines an icon for Palette close[MetalIconFactory.TreeControlIcon](MetalIconFactory.TreeControlIcon.html)Warning: Serialized objects of this class will not be compatible with future Swing releases.[MetalIconFactory.TreeFolderIcon](MetalIconFactory.TreeFolderIcon.html)Warning: Serialized objects of this class will not be compatible with future Swing releases.[MetalIconFactory.TreeLeafIcon](MetalIconFactory.TreeLeafIcon.html)The class represents a tree leaf icon.[MetalInternalFrameTitlePane](MetalInternalFrameTitlePane.html)Class that manages a JLF title bar[MetalInternalFrameUI](MetalInternalFrameUI.html)Metal implementation of JInternalFrame.[MetalLabelUI](MetalLabelUI.html)A Windows L&F implementation of LabelUI.[MetalLookAndFeel](MetalLookAndFeel.html)The Java Look and Feel, otherwise known as Metal.[MetalMenuBarUI](MetalMenuBarUI.html)Metal implementation of `MenuBarUI`.[MetalPopupMenuSeparatorUI](MetalPopupMenuSeparatorUI.html)A Metal L&F implementation of PopupMenuSeparatorUI.[MetalProgressBarUI](MetalProgressBarUI.html)The Metal implementation of ProgressBarUI.[MetalRadioButtonUI](MetalRadioButtonUI.html)RadioButtonUI implementation for MetalRadioButtonUI[MetalRootPaneUI](MetalRootPaneUI.html)Provides the metal look and feel implementation of `RootPaneUI`.[MetalScrollBarUI](MetalScrollBarUI.html)Implementation of ScrollBarUI for the Metal Look and Feel[MetalScrollButton](MetalScrollButton.html)JButton object for Metal scrollbar arrows.[MetalScrollPaneUI](MetalScrollPaneUI.html)A Metal L&F implementation of ScrollPaneUI.[MetalSeparatorUI](MetalSeparatorUI.html)A Metal L&F implementation of SeparatorUI.[MetalSliderUI](MetalSliderUI.html)A Java L&F implementation of SliderUI.[MetalSplitPaneUI](MetalSplitPaneUI.html)Metal split pane.[MetalTabbedPaneUI](MetalTabbedPaneUI.html)The Metal subclass of BasicTabbedPaneUI.[MetalTextFieldUI](MetalTextFieldUI.html)Basis of a look and feel for a JTextField.[MetalTheme](MetalTheme.html)`MetalTheme` provides the color palette and fonts used by the Java Look and Feel.[MetalToggleButtonUI](MetalToggleButtonUI.html)MetalToggleButton implementation[MetalToolBarUI](MetalToolBarUI.html)A Metal Look and Feel implementation of ToolBarUI.[MetalToolTipUI](MetalToolTipUI.html)A Metal L&F extension of BasicToolTipUI.[MetalTreeUI](MetalTreeUI.html)The metal look and feel implementation of `TreeUI`.[OceanTheme](OceanTheme.html)The default theme for the `MetalLookAndFeel`.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

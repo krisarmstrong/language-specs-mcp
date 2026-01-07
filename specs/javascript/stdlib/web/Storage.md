@@ -1,110 +1,206 @@
-# Storage
+content/files/en-us/web/api/storage/index.md at main · mdn/content · GitHub[Skip to content](#start-of-content)
 
- Baseline  Widely available 
+## Navigation Menu
 
- This feature is well established and works across many devices and browser versions. It’s been available across browsers since ⁨July 2015⁩. 
+Toggle navigation/[Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fstorage%2Findex.md%3Fplain%3D1)Appearance settings
 
-- [Learn more](/en-US/docs/Glossary/Baseline/Compatibility)
-- [See full compatibility](#browser_compatibility)
-- [Report feedback](https://survey.alchemer.com/s3/7634825/MDN-baseline-feedback?page=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FStorage&level=high)
+- Platform
 
-The `Storage` interface of the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.
+  - AI CODE CREATION
 
-To manipulate, for instance, the session storage for a domain, a call to [Window.sessionStorage](/en-US/docs/Web/API/Window/sessionStorage) is made; whereas for local storage the call is made to [Window.localStorage](/en-US/docs/Web/API/Window/localStorage).
+    - [GitHub CopilotWrite better code with AI](https://github.com/features/copilot)
+    - [GitHub SparkBuild and deploy intelligent apps](https://github.com/features/spark)
+    - [GitHub ModelsManage and compare prompts](https://github.com/features/models)
+    - [MCP RegistryNewIntegrate external tools](https://github.com/mcp)
 
-## In this article
+  - DEVELOPER WORKFLOWS
 
-- [Instance properties](#instance_properties)
-- [Instance methods](#instance_methods)
-- [Examples](#examples)
-- [Specifications](#specifications)
-- [Browser compatibility](#browser_compatibility)
-- [See also](#see_also)
+    - [ActionsAutomate any workflow](https://github.com/features/actions)
+    - [CodespacesInstant dev environments](https://github.com/features/codespaces)
+    - [IssuesPlan and track work](https://github.com/features/issues)
+    - [Code ReviewManage code changes](https://github.com/features/code-review)
 
-## [Instance properties](#instance_properties)
+  - APPLICATION SECURITY
 
-[Storage.length](/en-US/docs/Web/API/Storage/length)Read only
+    - [GitHub Advanced SecurityFind and fix vulnerabilities](https://github.com/security/advanced-security)
+    - [Code securitySecure your code as you build](https://github.com/security/advanced-security/code-security)
+    - [Secret protectionStop leaks before they start](https://github.com/security/advanced-security/secret-protection)
 
-Returns an integer representing the number of data items stored in the `Storage` object.
+  - EXPLORE
 
-## [Instance methods](#instance_methods)
+    - [Why GitHub](https://github.com/why-github)
+    - [Documentation](https://docs.github.com)
+    - [Blog](https://github.blog)
+    - [Changelog](https://github.blog/changelog)
+    - [Marketplace](https://github.com/marketplace)
 
-[Storage.key()](/en-US/docs/Web/API/Storage/key)
+[View all features](https://github.com/features)
+- Solutions
 
-When passed a number `n`, this method will return the name of the nth key in the storage.
+  - BY COMPANY SIZE
 
-[Storage.getItem()](/en-US/docs/Web/API/Storage/getItem)
+    - [Enterprises](https://github.com/enterprise)
+    - [Small and medium teams](https://github.com/team)
+    - [Startups](https://github.com/enterprise/startups)
+    - [Nonprofits](https://github.com/solutions/industry/nonprofits)
 
-When passed a key name, will return that key's value.
+  - BY USE CASE
 
-[Storage.setItem()](/en-US/docs/Web/API/Storage/setItem)
+    - [App Modernization](https://github.com/solutions/use-case/app-modernization)
+    - [DevSecOps](https://github.com/solutions/use-case/devsecops)
+    - [DevOps](https://github.com/solutions/use-case/devops)
+    - [CI/CD](https://github.com/solutions/use-case/ci-cd)
+    - [View all use cases](https://github.com/solutions/use-case)
 
-When passed a key name and value, will add that key to the storage, or update that key's value if it already exists.
+  - BY INDUSTRY
 
-[Storage.removeItem()](/en-US/docs/Web/API/Storage/removeItem)
+    - [Healthcare](https://github.com/solutions/industry/healthcare)
+    - [Financial services](https://github.com/solutions/industry/financial-services)
+    - [Manufacturing](https://github.com/solutions/industry/manufacturing)
+    - [Government](https://github.com/solutions/industry/government)
+    - [View all industries](https://github.com/solutions/industry)
 
-When passed a key name, will remove that key from the storage.
+[View all solutions](https://github.com/solutions)
+- Resources
 
-[Storage.clear()](/en-US/docs/Web/API/Storage/clear)
+  - EXPLORE BY TOPIC
 
-When invoked, will empty all keys out of the storage.
+    - [AI](https://github.com/resources/articles?topic=ai)
+    - [Software Development](https://github.com/resources/articles?topic=software-development)
+    - [DevOps](https://github.com/resources/articles?topic=devops)
+    - [Security](https://github.com/resources/articles?topic=security)
+    - [View all topics](https://github.com/resources/articles)
 
-## [Examples](#examples)
+  - EXPLORE BY TYPE
 
-Here we access a `Storage` object by calling `localStorage`. We first test whether the local storage contains data items using `!localStorage.getItem('bgcolor')`. If it does, we run a function called `setStyles()` that grabs the data items using [Storage.getItem()](/en-US/docs/Web/API/Storage/getItem) and uses those values to update page styles. If it doesn't, we run another function, `populateStorage()`, which uses [Storage.setItem()](/en-US/docs/Web/API/Storage/setItem) to set the item values, then runs `setStyles()`.
+    - [Customer stories](https://github.com/customer-stories)
+    - [Events & webinars](https://github.com/resources/events)
+    - [Ebooks & reports](https://github.com/resources/whitepapers)
+    - [Business insights](https://github.com/solutions/executive-insights)
+    - [GitHub Skills](https://skills.github.com)
 
-js
+  - SUPPORT & SERVICES
 
-```
-if (!localStorage.getItem("bgcolor")) {
-  populateStorage();
-} else {
-  setStyles();
-}
+    - [Documentation](https://docs.github.com)
+    - [Customer support](https://support.github.com)
+    - [Community forum](https://github.com/orgs/community/discussions)
+    - [Trust center](https://github.com/trust-center)
+    - [Partners](https://github.com/partners)
 
-function populateStorage() {
-  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
-  localStorage.setItem("font", document.getElementById("font").value);
-  localStorage.setItem("image", document.getElementById("image").value);
+- Open Source
 
-  setStyles();
-}
+  - COMMUNITY
 
-function setStyles() {
-  const currentColor = localStorage.getItem("bgcolor");
-  const currentFont = localStorage.getItem("font");
-  const currentImage = localStorage.getItem("image");
+    - [GitHub SponsorsFund open source developers](https://github.com/sponsors)
 
-  document.getElementById("bgcolor").value = currentColor;
-  document.getElementById("font").value = currentFont;
-  document.getElementById("image").value = currentImage;
+  - PROGRAMS
 
-  htmlElem.style.backgroundColor = `#${currentColor}`;
-  pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute("src", currentImage);
-}
-```
+    - [Security Lab](https://securitylab.github.com)
+    - [Maintainer Community](https://maintainers.github.com)
+    - [Accelerator](https://github.com/accelerator)
+    - [Archive Program](https://archiveprogram.github.com)
 
-Note: To see this running as a complete working example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+  - REPOSITORIES
 
-## [Specifications](#specifications)
+    - [Topics](https://github.com/topics)
+    - [Trending](https://github.com/trending)
+    - [Collections](https://github.com/collections)
 
-Specification
-[HTML# storage](https://html.spec.whatwg.org/multipage/webstorage.html#storage)
+- Enterprise
 
-## [Browser compatibility](#browser_compatibility)
+  - ENTERPRISE SOLUTIONS
 
-## [See also](#see_also)
+    - [Enterprise platformAI-powered developer platform](https://github.com/enterprise)
 
-- [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Window.localStorage](/en-US/docs/Web/API/Window/localStorage)
-- [Window.sessionStorage](/en-US/docs/Web/API/Window/sessionStorage)
-- [CacheStorage](/en-US/docs/Web/API/CacheStorage)
+  - AVAILABLE ADD-ONS
 
-## Help improve MDN
+    - [GitHub Advanced SecurityEnterprise-grade security features](https://github.com/security/advanced-security)
+    - [Copilot for BusinessEnterprise-grade AI features](https://github.com/features/copilot/copilot-business)
+    - [Premium SupportEnterprise-grade 24/7 support](https://github.com/premium-support)
 
-Was this page helpful to you?YesNo[Learn how to contribute](/en-US/docs/MDN/Community/Getting_started)
+- [Pricing](https://github.com/pricing)
 
- This page was last modified on ⁨Jul 26, 2024⁩ by [MDN contributors](/en-US/docs/Web/API/Storage/contributors.txt). 
+Search or jump to...
 
-[View this page on GitHub](https://github.com/mdn/content/blob/main/files/en-us/web/api/storage/index.md?plain=1) • [Report a problem with this content](https://github.com/mdn/content/issues/new?template=page-report.yml&mdn-url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FStorage&metadata=%3C%21--+Do+not+make+changes+below+this+line+--%3E%0A%3Cdetails%3E%0A%3Csummary%3EPage+report+details%3C%2Fsummary%3E%0A%0A*+Folder%3A+%60en-us%2Fweb%2Fapi%2Fstorage%60%0A*+MDN+URL%3A+https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FStorage%0A*+GitHub+URL%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fstorage%2Findex.md%0A*+Last+commit%3A+https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fcommit%2F22080a7cc403f7f45c8e85065b182c9f0d4d383c%0A*+Document+last+modified%3A+2024-07-26T15%3A28%3A56.000Z%0A%0A%3C%2Fdetails%3E)
+# Search code, repositories, users, issues, pull requests...
+
+ Search Clear
+
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
+
+#  Provide feedback 
+
+We read every piece of feedback, and take your input very seriously.
+
+Include my email address so I can be contacted Cancel  Submit feedback 
+
+#  Saved searches 
+
+## Use saved searches to filter your results more quickly
+
+NameQuery
+
+ To see all available qualifiers, see our [documentation](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax). 
+
+ Cancel  Create saved search [Sign in](/login?return_to=https%3A%2F%2Fgithub.com%2Fmdn%2Fcontent%2Fblob%2Fmain%2Ffiles%2Fen-us%2Fweb%2Fapi%2Fstorage%2Findex.md%3Fplain%3D1)[Sign up](/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&source=header-repo&source_repo=mdn%2Fcontent)Appearance settingsResetting focusYou signed in with another tab or window. Reload to refresh your session.You signed out in another tab or window. Reload to refresh your session.You switched accounts on another tab or window. Reload to refresh your session.Dismiss alert{{ message }}[mdn](/mdn)/[content](/mdn/content)Public
+
+- [Notifications](/login?return_to=%2Fmdn%2Fcontent)You must be signed in to change notification settings
+- [Fork
+    23.1k](/login?return_to=%2Fmdn%2Fcontent)
+- [Star
+          10.4k](/login?return_to=%2Fmdn%2Fcontent)
+
+- [Code](/mdn/content)
+- [Issues
+          320](/mdn/content/issues)
+- [Pull requests
+          96](/mdn/content/pulls)
+- [Actions](/mdn/content/actions)
+- [Projects
+          0](/mdn/content/projects)
+- 
+
+### 
+
+[Security
+          
+  
+  
+    
+  
+    
+      
+
+              Uh oh!
+
+              There was an error while loading. Please reload this page](/mdn/content/security).
+
+- [Insights](/mdn/content/pulse)
+
+Additional navigation options
+
+- [Code](/mdn/content)
+- [Issues](/mdn/content/issues)
+- [Pull requests](/mdn/content/pulls)
+- [Actions](/mdn/content/actions)
+- [Projects](/mdn/content/projects)
+- [Security](/mdn/content/security)
+- [Insights](/mdn/content/pulse)
+
+## Footer
+
+https://github.com © 2026 GitHub, Inc. 
+
+### Footer navigation
+
+- [Terms](https://docs.github.com/site-policy/github-terms/github-terms-of-service)
+- [Privacy](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement)
+- [Security](https://github.com/security)
+- [Status](https://www.githubstatus.com/)
+- [Community](https://github.community/)
+- [Docs](https://docs.github.com/)
+- [Contact](https://support.github.com?tags=dotcom-footer)
+-  Manage cookies 
+-  Do not share my personal information 
+
+ You can’t perform that action at this time.

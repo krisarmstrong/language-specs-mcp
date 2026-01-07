@@ -1,4 +1,31 @@
-Module[java.desktop](../../../module-summary.html)
+java.awt.dnd (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../index.html)
+- [Module](../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../preview-list.html)
+- [New](../../../../new-list.html)
+- [Deprecated](../../../../deprecated-list.html)
+- [Index](../../../../index-files/index-1.html)
+- [Help](../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../search.html)Module[java.desktop](../../../module-summary.html)
 
 # Package java.awt.dnd
 
@@ -34,3 +61,9 @@ Since:1.2
 
 - Related PackagesPackageDescription[java.awt](../package-summary.html)Contains all of the classes for creating user interfaces and for painting graphics and images.
 - All Classes and InterfacesInterfacesClassesException ClassesClassDescription[Autoscroll](Autoscroll.html)During DnD operations it is possible that a user may wish to drop the subject of the operation on a region of a scrollable GUI control that is not currently visible to the user.[DnDConstants](DnDConstants.html)This class contains constant values representing the type of action(s) to be performed by a Drag and Drop operation.[DragGestureEvent](DragGestureEvent.html)A `DragGestureEvent` is passed to `DragGestureListener`'s dragGestureRecognized() method when a particular `DragGestureRecognizer` detects that a platform dependent drag initiating gesture has occurred on the `Component` that it is tracking.[DragGestureListener](DragGestureListener.html)The listener interface for receiving drag gesture events.[DragGestureRecognizer](DragGestureRecognizer.html)The `DragGestureRecognizer` is an abstract base class for the specification of a platform-dependent listener that can be associated with a particular `Component` in order to identify platform-dependent drag initiating gestures.[DragSource](DragSource.html)The `DragSource` is the entity responsible for the initiation of the Drag and Drop operation, and may be used in a number of scenarios: 1 default instance per JVM for the lifetime of that JVM.[DragSourceAdapter](DragSourceAdapter.html)An abstract adapter class for receiving drag source events.[DragSourceContext](DragSourceContext.html)The `DragSourceContext` class is responsible for managing the initiator side of the Drag and Drop protocol.[DragSourceDragEvent](DragSourceDragEvent.html)The `DragSourceDragEvent` is delivered from the `DragSourceContextPeer`, via the `DragSourceContext`, to the `DragSourceListener` registered with that `DragSourceContext` and with its associated `DragSource`.[DragSourceDropEvent](DragSourceDropEvent.html)The `DragSourceDropEvent` is delivered from the `DragSourceContextPeer`, via the `DragSourceContext`, to the `dragDropEnd` method of `DragSourceListener`s registered with that `DragSourceContext` and with its associated `DragSource`.[DragSourceEvent](DragSourceEvent.html)This class is the base class for `DragSourceDragEvent` and `DragSourceDropEvent`.[DragSourceListener](DragSourceListener.html)The `DragSourceListener` defines the event interface for originators of Drag and Drop operations to track the state of the user's gesture, and to provide appropriate "drag over" feedback to the user throughout the Drag and Drop operation.[DragSourceMotionListener](DragSourceMotionListener.html)A listener interface for receiving mouse motion events during a drag operation.[DropTarget](DropTarget.html)The `DropTarget` is associated with a `Component` when that `Component` wishes to accept drops during Drag and Drop operations.[DropTarget.DropTargetAutoScroller](DropTarget.DropTargetAutoScroller.html)this protected nested class implements autoscrolling[DropTargetAdapter](DropTargetAdapter.html)An abstract adapter class for receiving drop target events.[DropTargetContext](DropTargetContext.html)A `DropTargetContext` is created whenever the logical cursor associated with a Drag and Drop operation coincides with the visible geometry of a `Component` associated with a `DropTarget`.[DropTargetDragEvent](DropTargetDragEvent.html)The `DropTargetDragEvent` is delivered to a `DropTargetListener` via its dragEnter() and dragOver() methods.[DropTargetDropEvent](DropTargetDropEvent.html)The `DropTargetDropEvent` is delivered via the `DropTargetListener` drop() method.[DropTargetEvent](DropTargetEvent.html)The `DropTargetEvent` is the base class for both the `DropTargetDragEvent` and the `DropTargetDropEvent`.[DropTargetListener](DropTargetListener.html)The `DropTargetListener` interface is the callback interface used by the `DropTarget` class to provide notification of DnD operations that involve the subject `DropTarget`.[InvalidDnDOperationException](InvalidDnDOperationException.html)This exception is thrown by various methods in the java.awt.dnd package.[MouseDragGestureRecognizer](MouseDragGestureRecognizer.html)This abstract subclass of `DragGestureRecognizer` defines a `DragGestureRecognizer` for mouse-based gestures.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

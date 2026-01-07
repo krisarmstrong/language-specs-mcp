@@ -1,851 +1,394 @@
-[mvdan](/mvdan)/[gofumpt](/mvdan/gofumpt)Public
-
-- 
-
-###  Uh oh! 
-
-There was an error while loading. Please reload this page.
-
-- [Notifications](/login?return_to=%2Fmvdan%2Fgofumpt)You must be signed in to change notification settings
-- [Fork
-    124](/login?return_to=%2Fmvdan%2Fgofumpt)
-- [Star
-          3.8k](/login?return_to=%2Fmvdan%2Fgofumpt)
-
- A stricter gofmt 
-
-[pkg.go.dev/mvdan.cc/gofumpt](https://pkg.go.dev/mvdan.cc/gofumpt)
-
-### License
-
- BSD-3-Clause, BSD-3-Clause licenses found 
-
-### Licenses found
-
-[BSD-3-Clause
-              LICENSE](/mvdan/gofumpt/blob/master/./LICENSE)[BSD-3-Clause
-              LICENSE.google](/mvdan/gofumpt/blob/master/./LICENSE.google)[3.8k
-          stars](/mvdan/gofumpt/stargazers)[124
-          forks](/mvdan/gofumpt/forks)[Branches](/mvdan/gofumpt/branches)[Tags](/mvdan/gofumpt/tags)[Activity](/mvdan/gofumpt/activity)[Star](/login?return_to=%2Fmvdan%2Fgofumpt)[Notifications](/login?return_to=%2Fmvdan%2Fgofumpt)You must be signed in to change notification settings
-
-- [Code](/mvdan/gofumpt)
-- [Issues
-          28](/mvdan/gofumpt/issues)
-- [Pull requests
-          1](/mvdan/gofumpt/pulls)
-- [Discussions](/mvdan/gofumpt/discussions)
-- [Actions](/mvdan/gofumpt/actions)
-- 
-
-### 
-
-[Security
-          
-  
-  
-    
-  
-    
-      
-
-              Uh oh!
-
-              There was an error while loading. Please reload this page](/mvdan/gofumpt/security).
-
-- [Insights](/mvdan/gofumpt/pulse)
-
-Additional navigation options
-
-- [Code](/mvdan/gofumpt)
-- [Issues](/mvdan/gofumpt/issues)
-- [Pull requests](/mvdan/gofumpt/pulls)
-- [Discussions](/mvdan/gofumpt/discussions)
-- [Actions](/mvdan/gofumpt/actions)
-- [Security](/mvdan/gofumpt/security)
-- [Insights](/mvdan/gofumpt/pulse)
-
-# mvdan/gofumpt
-Version: 0.9.2
-
-Source: https://github.com/mvdan/gofumpt
-
-
-master[Branches](/mvdan/gofumpt/branches)[Tags](/mvdan/gofumpt/tags)/mvdan/gofumpt/branches/mvdan/gofumpt/tagsGo to fileCodeOpen more actions menu
-
-## Folders and files
-
-NameNameLast commit messageLast commit date
-
-## Latest commit
-
-## History
-
-[316 Commits](/mvdan/gofumpt/commits/master/)/mvdan/gofumpt/commits/master/[.github](/mvdan/gofumpt/tree/master/.github)[.github](/mvdan/gofumpt/tree/master/.github)[format](/mvdan/gofumpt/tree/master/format)[format](/mvdan/gofumpt/tree/master/format)[internal](/mvdan/gofumpt/tree/master/internal)[internal](/mvdan/gofumpt/tree/master/internal)[testdata](/mvdan/gofumpt/tree/master/testdata)[testdata](/mvdan/gofumpt/tree/master/testdata)[.gitattributes](/mvdan/gofumpt/blob/master/.gitattributes)[.gitattributes](/mvdan/gofumpt/blob/master/.gitattributes)[CHANGELOG.md](/mvdan/gofumpt/blob/master/CHANGELOG.md)[CHANGELOG.md](/mvdan/gofumpt/blob/master/CHANGELOG.md)[LICENSE](/mvdan/gofumpt/blob/master/LICENSE)[LICENSE](/mvdan/gofumpt/blob/master/LICENSE)[LICENSE.google](/mvdan/gofumpt/blob/master/LICENSE.google)[LICENSE.google](/mvdan/gofumpt/blob/master/LICENSE.google)[README.md](/mvdan/gofumpt/blob/master/README.md)[README.md](/mvdan/gofumpt/blob/master/README.md)[doc.go](/mvdan/gofumpt/blob/master/doc.go)[doc.go](/mvdan/gofumpt/blob/master/doc.go)[gen_govendor.go](/mvdan/gofumpt/blob/master/gen_govendor.go)[gen_govendor.go](/mvdan/gofumpt/blob/master/gen_govendor.go)[go.mod](/mvdan/gofumpt/blob/master/go.mod)[go.mod](/mvdan/gofumpt/blob/master/go.mod)[go.sum](/mvdan/gofumpt/blob/master/go.sum)[go.sum](/mvdan/gofumpt/blob/master/go.sum)[gofmt.go](/mvdan/gofumpt/blob/master/gofmt.go)[gofmt.go](/mvdan/gofumpt/blob/master/gofmt.go)[internal.go](/mvdan/gofumpt/blob/master/internal.go)[internal.go](/mvdan/gofumpt/blob/master/internal.go)[main_test.go](/mvdan/gofumpt/blob/master/main_test.go)[main_test.go](/mvdan/gofumpt/blob/master/main_test.go)[ulimit_linux_test.go](/mvdan/gofumpt/blob/master/ulimit_linux_test.go)[ulimit_linux_test.go](/mvdan/gofumpt/blob/master/ulimit_linux_test.go)View all files
-
-## Repository files navigation
-
-- [README](#)
-- [BSD-3-Clause license](#)
-- [BSD-3-Clause license](#)
-
-# gofumpt
-
-#gofumpt
-
-https://pkg.go.dev/mvdan.cc/gofumpt/format
-
-```
-go install mvdan.cc/gofumpt@latest
-```
-
-Enforce a stricter format than `gofmt`, while being backwards compatible. That is, `gofumpt` is happy with a subset of the formats that `gofmt` is happy with.
-
-The tool is a fork of `gofmt` as of Go 1.25.0, and requires Go 1.24 or later. It can be used as a drop-in replacement to format your Go code, and running `gofmt` after `gofumpt` should produce no changes. For example:
-
-```
-gofumpt -l -w .
-```
-
-Some of the Go source files in this repository belong to the Go project. The project includes copies of `go/printer` and `go/doc/comment` as of Go 1.25.0 to ensure consistent formatting independent of what Go version is being used. The [added formatting rules](#Added-rules) are implemented in the `format` package.
-
-`vendor` and `testdata` directories are skipped unless given as explicit arguments. Similarly, the added rules do not apply to generated Go files unless they are given as explicit arguments.
-
-[ignore directives](https://go.dev/ref/mod#go-mod-file-ignore) in `go.mod` files are obeyed as well, unless directories or files within them are given as explicit arguments.
-
-Finally, note that the `-r` rewrite flag is removed in favor of `gofmt -r`, and the `-s` flag is hidden as it is always enabled.
-
-### Added rules
-
-#added-rules
-
-No empty lines following an assignment operator
-
-Example
-
-```
-func foo() {
-    foo :=
-        "bar"
-}
-```
-
-```
-func foo() {
-	foo := "bar"
-}
-```
-
-No empty lines around function bodies
-
-Example
-
-```
-func foo() {
-
-	println("bar")
-
-}
-```
-
-```
-func foo() {
-	println("bar")
-}
-```
-
-Functions should separate `) {` where the indentation helps readability
-
-Example
-
-```
-func foo(s string,
-	i int) {
-	println("bar")
-}
-
-// With an empty line it's slightly better, but still not great.
-func bar(s string,
-	i int) {
-
-	println("bar")
-}
-```
-
-```
-func foo(s string,
-	i int,
-) {
-	println("bar")
-}
-
-// With an empty line it's slightly better, but still not great.
-func bar(s string,
-	i int,
-) {
-	println("bar")
-}
-```
-
-No empty lines around a lone statement (or comment) in a block
-
-Example
-
-```
-if err != nil {
-
-	return err
-}
-```
-
-```
-if err != nil {
-	return err
-}
-```
-
-No empty lines before a simple error check
-
-Example
-
-```
-foo, err := processFoo()
-
-if err != nil {
-	return err
-}
-```
-
-```
-foo, err := processFoo()
-if err != nil {
-	return err
-}
-```
-
-Composite literals should use newlines consistently
-
-Example
-
-```
-// A newline before or after an element requires newlines for the opening and
-// closing braces.
-var ints = []int{1, 2,
-	3, 4}
-
-// A newline between consecutive elements requires a newline between all
-// elements.
-var matrix = [][]int{
-	{1},
-	{2}, {
-		3,
-	},
-}
-```
-
-```
-var ints = []int{
-	1, 2,
-	3, 4,
-}
-
-var matrix = [][]int{
-	{1},
-	{2},
-	{
-		3,
-	},
-}
-```
-
-Empty field lists should use a single line
-
-Example
-
-```
-var V interface {
-} = 3
-
-type T struct {
-}
-
-func F(
-)
-```
-
-```
-var V interface{} = 3
-
-type T struct{}
-
-func F()
-```
-
-`std` imports must be in a separate group at the top
-
-Example
-
-```
-import (
-	"foo.com/bar"
-
-	"io"
-
-	"io/ioutil"
-)
-```
-
-```
-import (
-	"io"
-	"io/ioutil"
-
-	"foo.com/bar"
-)
-```
-
-Short case clauses should take a single line
-
-Example
-
-```
-switch c {
-case 'a', 'b',
-	'c', 'd':
-}
-```
-
-```
-switch c {
-case 'a', 'b', 'c', 'd':
-}
-```
-
-Multiline top-level declarations must be separated by empty lines
-
-Example
-
-```
-func foo() {
-	println("multiline foo")
-}
-func bar() {
-	println("multiline bar")
-}
-```
-
-```
-func foo() {
-	println("multiline foo")
-}
-
-func bar() {
-	println("multiline bar")
-}
-```
-
-Single var declarations should not be grouped with parentheses
-
-Example
-
-```
-var (
-	foo = "bar"
-)
-```
-
-```
-var foo = "bar"
-```
-
-Contiguous top-level declarations should be grouped together
-
-Example
-
-```
-var nicer = "x"
-var with = "y"
-var alignment = "z"
-```
-
-```
-var (
-	nicer     = "x"
-	with      = "y"
-	alignment = "z"
-)
-```
-
-Simple var-declaration statements should use short assignments
-
-Example
-
-```
-var s = "somestring"
-```
-
-```
-s := "somestring"
-```
-
-The `-s` code simplification flag is enabled by default
-
-Example
-
-```
-var _ = [][]int{[]int{1}}
-```
-
-```
-var _ = [][]int{{1}}
-```
-
-Octal integer literals should use the `0o` prefix on modules using Go 1.13 and later
-
-Example
-
-```
-const perm = 0755
-```
-
-```
-const perm = 0o755
-```
-
-Comments which aren't Go directives should start with a whitespace
-
-Example
-
-```
-//go:noinline
-
-//Foo is awesome.
-func Foo() {}
-```
-
-```
-//go:noinline
-
-// Foo is awesome.
-func Foo() {}
-```
-
-Composite literals should not have leading or trailing empty lines
-
-Example
-
-```
-var _ = []string{
-
-	"foo",
-
-}
-
-var _ = map[string]string{
-
-	"foo": "bar",
-
-}
-```
-
-```
-var _ = []string{
-	"foo",
-}
-
-var _ = map[string]string{
-	"foo": "bar",
-}
-```
-
-Field lists should not have leading or trailing empty lines
-
-Example
-
-```
-type Person interface {
-
-	Name() string
-
-	Age() int
-
-}
-
-type ZeroFields struct {
-
-	// No fields are needed here.
-
-}
-```
-
-```
-type Person interface {
-	Name() string
-
-	Age() int
-}
-
-type ZeroFields struct {
-	// No fields are needed here.
-}
-```
-
-### Extra rules behind `-extra`
-
-#extra-rules-behind--extra
-
-Adjacent parameters with the same type should be grouped together
-
-Example
-
-```
-func Foo(bar string, baz string) {}
-```
-
-```
-func Foo(bar, baz string) {}
-```
-
-Avoid naked returns for the sake of clarity
-
-Example
-
-```
-func Foo() (err error) {
-	return
-}
-```
-
-```
-func Foo() (err error) {
-	return err
-}
-```
-
-### Installation
-
-#installation
-
-`gofumpt` is a replacement for `gofmt`, so you can simply `go install` it as described at the top of this README and use it.
-
-When using an IDE or editor with Go integration based on `gopls`, it's best to configure the editor to use the `gofumpt` support built into `gopls`.
-
-The instructions below show how to set up `gofumpt` for some of the major editors out there.
-
-#### Visual Studio Code
-
-#visual-studio-code
-
-Enable the language server following [the official docs](https://github.com/golang/vscode-go#readme), and then enable gopls's `gofumpt` option. Note that VS Code will complain about the `gopls` settings, but they will still work.
-
-```
-"go.useLanguageServer": true,
-"gopls": {
-	"formatting.gofumpt": true,
-},
-```
-
-#### GoLand
-
-#goland
-
-GoLand doesn't use `gopls` so it should be configured to use `gofumpt` directly. Once `gofumpt` is installed, follow the steps below:
-
-- Open Settings (File > Settings)
-- Open the Tools section
-- Find the File Watchers sub-section
-- Click on the `+` on the right side to add a new file watcher
-- Choose Custom Template
-
-When a window asks for settings, you can enter the following:
-
-- File Types: Select all .go files
-- Scope: Project Files
-- Program: Select your `gofumpt` executable
-- Arguments: `-w $FilePath$`
-- Output path to refresh: `$FilePath$`
-- Working directory: `$ProjectFileDir$`
-- Environment variables: `GOROOT=$GOROOT$;GOPATH=$GOPATH$;PATH=$GoBinDirs$`
-
-To avoid unnecessary runs, you should disable all checkboxes in the Advanced section.
-
-#### Vim
-
-#vim
-
-The configuration depends on the plugin you are using: [vim-go](https://github.com/fatih/vim-go) or [govim](https://github.com/govim/govim).
-
-##### vim-go
-
-#vim-go
-
-To configure `gopls` to use `gofumpt`:
-
-```
-let g:go_fmt_command="gopls"
-let g:go_gopls_gofumpt=1
-```
-
-##### govim
-
-#govim
-
-To configure `gopls` to use `gofumpt`:
-
-```
-call govim#config#Set("Gofumpt", 1)
-```
-
-#### Neovim
-
-#neovim
-
-When using [lspconfig](https://github.com/neovim/nvim-lspconfig), pass the `gofumpt` setting to `gopls`:
-
-```
-require('lspconfig').gopls.setup({
-    settings = {
-        gopls = {
-            gofumpt = true
-        }
-    }
-})
-```
-
-#### Emacs
-
-#emacs
-
-For [lsp-mode](https://emacs-lsp.github.io/lsp-mode/) users on version 8.0.0 or higher:
-
-```
-(setq lsp-go-use-gofumpt t)
-```
-
-For users of `lsp-mode` before `8.0.0`:
-
-```
-(lsp-register-custom-settings
- '(("gopls.gofumpt" t)))
-```
-
-For [eglot](https://github.com/joaotavora/eglot) users:
-
-```
-(setq-default eglot-workspace-configuration
- '((:gopls . ((gofumpt . t)))))
-```
-
-#### Helix
-
-#helix
-
-When using the `gopls` language server, modify the Go settings in `~/.config/helix/languages.toml`:
-
-```
-[language-server.gopls.config]
-"formatting.gofumpt" = true
-```
-
-#### Sublime Text
-
-#sublime-text
-
-With ST4, install the Sublime Text LSP extension according to [the documentation](https://github.com/sublimelsp/LSP), and enable `gopls`'s `gofumpt` option in the LSP package settings, including setting `lsp_format_on_save` to `true`.
-
-```
-"lsp_format_on_save": true,
-"clients":
-{
-	"gopls":
-	{
-		"enabled": true,
-		"initializationOptions": {
-			"gofumpt": true,
-		}
-	}
-}
-```
-
-### Zed
-
-#zed
-
-For `gofumpt` to be used in Zed, you need to set the `gofumpt` option in the LSP settings. This is done by providing the `"gofumpt": true` in `initialization_options`.
-
-```
-"lsp": {
-  "gopls": {
-    "initialization_options": {
-      "gofumpt": true
-    }
-  }
-}
-```
-
-### Roadmap
-
-#roadmap
-
-This tool is a place to experiment. In the long term, the features that work well might be proposed for `gofmt` itself.
-
-The tool is also compatible with `gofmt` and is aimed to be stable, so you can rely on it for your code as long as you pin a version of it.
-
-### Frequently Asked Questions
-
-#frequently-asked-questions
-
-Why attempt to replace `gofmt` instead of building on top of it?
-
-Our design is to build on top of `gofmt`, and we'll never add rules which disagree with its formatting. So we extend `gofmt` rather than compete with it.
-
-The tool is a modified copy of `gofmt`, for the purpose of allowing its use as a drop-in replacement in editors and scripts.
-
-Why are my module imports being grouped with standard library imports?
-
-Any import paths that don't start with a domain name like `foo.com` are effectively [reserved by the Go toolchain](https://github.com/golang/go/issues/32819). Third party modules should either start with a domain name, even a local one like `foo.local`, or use [a reserved path prefix](https://github.com/golang/go/issues/37641).
-
-For backwards compatibility with modules set up before these rules were clear, `gofumpt` will treat any import path sharing a prefix with the current module path as third party. For example, if the current module is `mycorp/mod1`, then all import paths in `mycorp/...` will be considered third party.
-
-How can I use `gofumpt` if I already use `goimports` to replace `gofmt`?
-
-Most editors have replaced the `goimports` program with the same functionality provided by a language server like `gopls`. This mechanism is significantly faster and more powerful, since the language server has more information that is kept up to date, necessary to add missing imports.
-
-As such, the general recommendation is to let your editor fix your imports - either via `gopls`, such as VSCode or vim-go, or via their own custom implementation, such as GoLand. Then follow the install instructions above to enable the use of `gofumpt` instead of `gofmt`.
-
-If you want to avoid integrating with `gopls`, and are OK with the overhead of calling `goimports` from scratch on each save, you should be able to call both tools; for example, `goimports file.go && gofumpt file.go`.
-
-### Contributing
-
-#contributing
-
-Issues and pull requests are welcome! Please open an issue to discuss a feature before sending a pull request.
-
-We also use the `#gofumpt` channel over at the [Gophers Slack](https://invite.slack.golangbridge.org/) to chat.
-
-When reporting a formatting bug, insert a `//gofumpt:diagnose` comment. The comment will be rewritten to include useful debugging information. For instance:
-
-```
-$ cat f.go
-package p
-
-//gofumpt:diagnose
-$ gofumpt f.go
-package p
-
-//gofumpt:diagnose v0.1.1-0.20211103104632-bdfa3b02e50a -lang=go1.16
-```
-
-### License
-
-#license
-
-Note that much of the code is copied from Go's `gofmt` command. You can tell which files originate from the Go repository from their copyright headers. Their license file is `LICENSE.google`.
-
-`gofumpt`'s original source files are also under the 3-clause BSD license, with the separate file `LICENSE`.
-
-## About
-
- A stricter gofmt 
-
-[pkg.go.dev/mvdan.cc/gofumpt](https://pkg.go.dev/mvdan.cc/gofumpt)
-
-### Topics
-
-[go](/topics/go)[format](/topics/format)[style](/topics/style)[gofmt](/topics/gofmt)[goimports](/topics/goimports)[idiomatic](/topics/idiomatic)
-
-### Resources
-
-[Readme](#readme-ov-file)
-
-### License
-
- BSD-3-Clause, BSD-3-Clause licenses found 
-
-### Licenses found
-
-[BSD-3-Clause
-              LICENSE](/mvdan/gofumpt/blob/master/./LICENSE)[BSD-3-Clause
-              LICENSE.google](/mvdan/gofumpt/blob/master/./LICENSE.google)
-
-###  Uh oh! 
-
-There was an error while loading. Please reload this page.
-
-[Activity](/mvdan/gofumpt/activity)
-
-### Stars
-
-[3.8k
-        stars](/mvdan/gofumpt/stargazers)
-
-### Watchers
-
-[12
-        watching](/mvdan/gofumpt/watchers)
-
-### Forks
-
-[124
-        forks](/mvdan/gofumpt/forks)[Report repository](/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fmvdan%2Fgofumpt&report=mvdan+%28user%29)
-
-## [Releases
-      14](/mvdan/gofumpt/releases)
-
-[v0.9.2
-        
-          Latest
-      
-      Oct 21, 2025](/mvdan/gofumpt/releases/tag/v0.9.2)[+ 13 releases](/mvdan/gofumpt/releases)
-
-## Sponsor this project
-
- Sponsor 
-
-###  Uh oh! 
-
-There was an error while loading. Please reload this page.
-
-[Learn more about GitHub Sponsors](/sponsors)
-
-## [Packages
-      0](/users/mvdan/packages?repo_name=gofumpt)
-
- No packages published 
-
-## [Used by 13.6k](/mvdan/gofumpt/network/dependents)
-
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-
-[+ 13,585](/mvdan/gofumpt/network/dependents)
-
-## [Contributors
-      42](/mvdan/gofumpt/graphs/contributors)
-
-- https://github.com/mvdan
-- https://github.com/tsnewaz
-- https://github.com/twpayne
-- https://github.com/scop
-- https://github.com/tklauser
-- https://github.com/jakebailey
-- https://github.com/ebati
-- https://github.com/adamroyjones
-- https://github.com/AlekSi
-- https://github.com/karelbilek
-- https://github.com/moorereason
-- https://github.com/muesli
-- https://github.com/ravishi
-- https://github.com/sbaildon
-
-[+ 28 contributors](/mvdan/gofumpt/graphs/contributors)
-
-## Languages
-
-- [Go
-          100.0%](/mvdan/gofumpt/search?l=go)
+LSP Mode - Language Server Protocol support for Emacs - LSP Mode - LSP support for Emacs[Skip to content](#language-server-protocol-support-for-emacs). LSP Mode - LSP support for Emacs  LSP Mode - Language Server Protocol support for Emacs  Initializing search 
+
+[emacs-lsp/lsp-mode](https://github.com/emacs-lsp/lsp-mode/)
+
+- [Home](.)
+- [Settings](page/settings/mode/)
+- [Languages](page/languages/)
+- [Debugging](https://emacs-lsp.github.io/dap-mode)
+- [Gallery](page/gallery/)
+- [Changelog](page/CHANGELOG/)
+- [Tutorials](tutorials/CPP-guide/)
+- [Blog](blog/2020/7.0-release/)
+- [Support us](https://github.com/sponsors/emacs-lsp)
+
+. LSP Mode - LSP support for Emacs [emacs-lsp/lsp-mode](https://github.com/emacs-lsp/lsp-mode/)
+
+-  Home  Home 
+
+  -  Overview [Overview](.) Table of contents 
+
+    - [Why?](#why)
+    - [Overview](#overview)
+    - [Presentations/demos](#presentationsdemos)
+    - [See also](#see-also)
+    - [Contributions](#contributions)
+    - [Support the project](#support-the-project)
+
+      - [Members](#members)
+
+  -  Setup  Setup 
+
+    - [Installation](page/installation/)
+    - [Performance](page/performance/)
+
+  - [Main features](page/main-features/)
+  - [Keybindings](page/keybindings/)
+  -  Extensions  Extensions 
+
+    - [UI](https://emacs-lsp.github.io/lsp-ui)
+    - [Treemacs](https://github.com/emacs-lsp/lsp-treemacs)
+    - [Helm](https://github.com/emacs-lsp/helm-lsp)
+    - [Ivy](https://github.com/emacs-lsp/lsp-ivy)
+    - [Iedit](page/integration/iedit/)
+    - [Ido](page/integration/ido/)
+
+  - [File watchers](page/file-watchers/)
+  - [Remote](page/remote/)
+  - [FAQ](page/faq/)
+  - [Troubleshooting](page/troubleshooting/)
+  - [Adding new language](page/adding-new-language/)
+
+-  Settings  Settings 
+
+  -  Features  Features 
+
+    - [Core](page/settings/mode/)
+    - [Completion](page/settings/completion/)
+    - [Diagnostics](page/settings/diagnostics/)
+    - [Headerline](page/settings/headerline/)
+    - [Modeline](page/settings/modeline/)
+    - [Lens](page/settings/lens/)
+    - [Icons](page/settings/icons/)
+    - [Semantic Tokens](page/settings/semantic-tokens/)
+
+  -  Extensions  Extensions 
+
+    - [UI](https://emacs-lsp.github.io/lsp-ui)
+    - [Treemacs](https://github.com/emacs-lsp/lsp-treemacs)
+    - [Helm](https://github.com/emacs-lsp/helm-lsp)
+    - [Ivy](https://github.com/emacs-lsp/lsp-ivy)
+    - [Consult](https://github.com/gagbo/consult-lsp)
+    - [Dired](page/settings/dired/)
+    - [Iedit](page/settings/iedit/)
+    - [Ido](page/settings/ido/)
+
+-  Languages  Languages 
+
+  - [Languages](page/languages/)
+  - [ActionScript](page/lsp-actionscript/)
+  - [Ada](page/lsp-ada/)
+  - [Angular](page/lsp-angular/)
+  - [Ansible](page/lsp-ansible/)
+  - [Assembly](page/lsp-asm/)
+  - [Astro](page/lsp-astro/)
+  - [Autotools](page/lsp-autotools/)
+  - [AWK](page/lsp-awk/)
+  - [Bash](page/lsp-bash/)
+  - [Beancount](page/lsp-beancount/)
+  - [Buf/Protocol Buffers (Buf CLI)](page/lsp-buf/)
+  - [Buf/Protocol Buffers (Buf Language Server)](page/lsp-bufls/)
+  - [Camel](page/lsp-camel/)
+  - [C++ (ccls)](page/lsp-ccls/)
+  - [C++ (clangd)](page/lsp-clangd/)
+  - [C# (omnisharp-roslyn)](page/lsp-csharp-omnisharp/)
+  - [C# (csharp-roslyn)](page/lsp-csharp-roslyn/)
+  - [C# (csharp-ls)](page/lsp-csharp-ls/)
+  - [C3 (c3-lsp)](page/lsp-c3-lsp/)
+  - [Clojure](page/lsp-clojure/)
+  - [CMake](page/lsp-cmake/)
+  - [COBOL](page/lsp-cobol/)
+  - [Crystal](page/lsp-crystal/)
+  - [CSS/LessCSS/SASS/SCSS](page/lsp-css/)
+  - [Cucumber](page/lsp-cucumber/)
+  - [Cypher](page/lsp-cypher/)
+  - [D](page/lsp-d/)
+  - [Dart](https://emacs-lsp.github.io/lsp-dart)
+  - [Dhall](page/lsp-dhall/)
+  - [Dockerfile](page/lsp-dockerfile/)
+  - [Earthfile](page/lsp-earthly/)
+  - [Elixir](page/lsp-elixir/)
+  - [Elm](page/lsp-elm/)
+  - [Emacs Lisp (Ellsp)](https://github.com/elisp-lsp/ellsp)
+  - [Emacs Lisp (Elsa)](https://github.com/emacs-elsa/Elsa)
+  - [Emmet](page/lsp-emmet/)
+  - [Erlang](page/lsp-erlang.md)
+  - [ESLint](page/lsp-eslint/)
+  - [F#](page/lsp-fsharp/)
+  - [Fortran](page/lsp-fortran/)
+  - [Futhark](page/lsp-futhark/)
+  - [GDScript](page/lsp-gdscript/)
+  - [GitHub Copilot](page/lsp-copilot/)
+  - [Gleam](page/lsp-gleam/)
+  - [GLSL](page/lsp-glsl/)
+  - [GNAT Project](page/lsp-gpr/)
+  - [Go (gopls)](manual-language-docs/lsp-gopls/)
+  - [Grammarly](page/lsp-grammarly/)
+  - [GraphQL](page/lsp-graphql/)
+  - [Groovy](page/lsp-groovy/)
+  - [Hack](page/lsp-hack/)
+  - [HTML](page/lsp-html/)
+  - [Haskell](https://emacs-lsp.github.io/lsp-haskell)
+  - [Hy (hyuga)](page/lsp-hy.md)
+  - [Idris](page/lsp-idris/)
+  - [Java](https://emacs-lsp.github.io/lsp-java)
+  - [Javascript/Typescript (deno)](page/lsp-deno/)
+  - [JavaScript/TypeScript (sourcegraph)](page/lsp-typescript-javascript/)
+  - [JavaScript/TypeScript (theia-ide)](page/lsp-typescript/)
+  - [JavaScript Flow](page/lsp-flow/)
+  - [Json](page/lsp-json/)
+  - [Jsonnet](page/lsp-jsonnet/)
+  - [Julia](page/lsp-julia/)
+  - [Just](page/lsp-just/)
+  - [Kotlin](page/lsp-kotlin/)
+  - [LanguageTool (LTEX)](page/lsp-ltex/)
+  - [LanguageTool (LTEX+)](page/lsp-ltex-plus/)
+  - [Lisp](page/lsp-lisp/)
+  - [Lua (EmmyLua)](page/lsp-emmy-lua/)
+  - [Lua (Lua Language Server)](page/lsp-lua-language-server/)
+  - [Lua (Lua-Lsp)](page/lsp-lua-lsp/)
+  - [Fennel](page/lsp-fennel/)
+  - [Magik](page/lsp-magik/)
+  - [Markdown](page/lsp-markdown/)
+  - [Marksman](page/lsp-marksman/)
+  - [MATLAB](page/lsp-matlab/)
+  - [Meson](page/lsp-meson/)
+  - [Move](page/lsp-move/)
+  - [MDX](page/lsp-mdx/)
+  - [MSSQL](https://emacs-lsp.github.io/lsp-mssql)
+  - [Nextflow](page/lsp-nextflow/)
+  - [Nginx](page/lsp-nginx/)
+  - [Nim](page/lsp-nim/)
+  - [Nix (nixd-lsp)](page/lsp-nix-nixd/)
+  - [Nix (rnix-lsp)](page/lsp-nix-rnix/)
+  - [Nix (nil)](page/lsp-nix-nil/)
+  - [Nushell](page/lsp-nushell/)
+  - [OCaml (ocaml-lsp)](page/lsp-ocaml-lsp-server/)
+  - [Odin (ols)](page/lsp-odin-ols-server.md)
+  - [OpenSCAD](page/lsp-openscad/)
+  - [Pascal/Object Pascal](page/lsp-pascal/)
+  - [Perl (PLS)](page/lsp-pls/)
+  - [Perl (Perl::LanguageServer)](page/lsp-perl/)
+  - [Perl (Navigator)](page/lsp-perlnavigator/)
+  - [PHP (intelephense)](page/lsp-intelephense/)
+  - [PHP (Serenata)](page/lsp-serenata/)
+  - [PHP (felixbecker)](page/lsp-php/)
+  - [PHP (phpactor)](page/lsp-phpactor/)
+  - [Powershell](page/lsp-pwsh/)
+  - [Prolog](page/lsp-prolog/)
+  - [PureScript](page/lsp-purescript/)
+  - [Python (Pylsp)](page/lsp-pylsp/)
+  - [Python (Jedi Language Server)](page/lsp-jedi/)
+  - [Python (Palantir deprecated)](page/lsp-pyls/)
+  - [Python (Pyright)](https://emacs-lsp.github.io/lsp-pyright)
+  - [Python (Microsoft)](https://emacs-lsp.github.io/lsp-python-ms)
+  - [Python (Ruff)](page/lsp-ruff/)
+  - [Python (ty)](https://github.com/astral-sh/ty)
+  - [QML](page/lsp-qml.md)
+  - [R](page/lsp-r/)
+  - [Racket (jeapostrophe)](page/lsp-racket-langserver/)
+  - [Racket (Theia)](page/lsp-racket-language-server/)
+  - [Roc](page/lsp-roc/)
+  - [RON](page/ron-lsp.md)
+  - [RPM Spec](page/lsp-rpm-spec/)
+  - [Ruby (RuboCop)](page/lsp-rubocop/)
+  - [Ruby (ruby-lsp)](page/lsp-ruby-lsp/)
+  - [Ruby (Solargraph)](page/lsp-solargraph/)
+  - [Ruby (Sorbet)](page/lsp-sorbet/)
+  - [Ruby (Steep)](page/lsp-steep/)
+  - [Ruby (TypeProf)](page/lsp-typeprof/)
+  - [Rust (rust-analyzer)](page/lsp-rust-analyzer/)
+  - [Rust (rls)](page/lsp-rust-rls/)
+  - [Scala](https://emacs-lsp.github.io/lsp-metals)
+  - [Semgrep](page/lsp-semgrep/)
+  - [ShaderLab](page/lsp-shader/)
+  - [SQL (sql)](page/lsp-sql/)
+  - [SQL (sqls)](page/lsp-sqls/)
+  - [SQL (postgres-ls)](page/lsp-postgres/)
+  - [Standard ML (Millet)](page/lsp-sml.md)
+  - [Svelte](page/lsp-svelte/)
+  - [Swift](https://emacs-lsp.github.io/lsp-sourcekit)
+  - [Terraform (terraform-lsp)](page/lsp-terraform/)
+  - [Terraform (terraform-ls)](page/lsp-terraform-ls/)
+  - [TeX, LaTeX, etc (digestif)](page/lsp-tex/)
+  - [TeX, LaTeX, etc (texlab)](page/lsp-texlab/)
+  - [TeX, LaTeX, etc (texlab, external)](page/lsp-latex/)
+  - [Tilt](page/lsp-tilt/)
+  - [TOML (Taplo)](page/lsp-toml/)
+  - [TOML (Tombi)](page/lsp-toml-tombi/)
+  - [Tree-sitter Query](page/lsp-ts-query/)
+  - [Trunk](page/lsp-trunk/)
+  - [TTCN3](page/lsp-ttcn3/)
+  - [TypeSpec](page/lsp-typespec/)
+  - [Typst](page/lsp-typst/)
+  - [V](page/lsp-v/)
+  - [Vala](page/lsp-vala/)
+  - [Verilog/SystemVerilog (hdl-checker)](page/lsp-verilog/)
+  - [Verilog/SystemVerilog (svlangserver)](page/lsp-svlangserver/)
+  - [Verilog/SystemVerilog (verible)](page/lsp-verible/)
+  - [VHDL](page/lsp-vhdl/)
+  - [Vimscript](page/lsp-vimscript/)
+  - [Vue 2](page/lsp-vetur/)
+  - [Vue 3](page/lsp-volar/)
+  - [wgsl](page/lsp-wgsl.md)
+  - [XML](page/lsp-xml/)
+  - [YAML](page/lsp-yaml/)
+  - [YAML (helm-ls)](page/lsp-kubernetes-helm/)
+  - [YANG](page/lsp-yang/)
+  - [Zig](page/lsp-zig/)
+
+-  Debugging  Debugging 
+
+  - [None](https://emacs-lsp.github.io/dap-mode)
+
+-  Gallery  Gallery 
+
+  - [Gallery](page/gallery/)
+
+-  Changelog  Changelog 
+
+  - [Changelog](page/CHANGELOG/)
+
+-  Tutorials  Tutorials 
+
+  - [Configuring Emacs as a C/C++ IDE](tutorials/CPP-guide/)
+  - [Configuring Emacs as a PHP IDE](tutorials/php-guide/)
+  - [A guide on disabling/enabling lsp-mode features](tutorials/how-to-turn-off/)
+  - [React JavaScript Tutorial in Emacs](tutorials/reactjs-tutorial/)
+  - [Configuring Emacs as a Clojure IDE](tutorials/clojure-guide/)
+  - [Debugging Clojurescript](tutorials/debugging-clojure-script/)
+  - [Python, debugging with poetry + pyenv](https://emacs-lsp.github.io/dap-mode/page/python-poetry-pyenv/)
+  - [Configuring Emacs as a Crystal IDE](tutorials/crystal-guide/)
+
+-  Blog  Blog 
+
+  -  2020  2020 
+
+    - [7.0 Release](blog/2020/7.0-release/)
+
+-  Support us  Support us 
+
+  - [None](https://github.com/sponsors/emacs-lsp)
+
+ Table of contents 
+
+- [Why?](#why)
+- [Overview](#overview)
+- [Presentations/demos](#presentationsdemos)
+- [See also](#see-also)
+- [Contributions](#contributions)
+- [Support the project](#support-the-project)
+
+  - [Members](#members)
+
+https://github.com/emacs-lsp/lsp-mode/edit/master/README.md
+
+https://melpa.org/#/lsp-modehttps://stable.melpa.org/#/lsp-modehttps://discord.gg/swuxy5AAgThttps://github.com/emacs-lsp/lsp-mode/actions/workflows/test.yml
+
+# Language Server Protocol Support for Emacs[#](#language-server-protocol-support-for-emacs)
+
+[homepage](https://emacs-lsp.github.io/lsp-mode) • [installation](https://emacs-lsp.github.io/lsp-mode/page/installation) • [languages](https://emacs-lsp.github.io/lsp-mode/page/languages) • [settings](https://emacs-lsp.github.io/lsp-mode/page/settings/mode/) • [tutorials](https://emacs-lsp.github.io/lsp-mode/tutorials/CPP-guide/) • [troubleshooting](https://emacs-lsp.github.io/lsp-mode/page/troubleshooting) • [screenshots](https://emacs-lsp.github.io/lsp-mode/page/gallery) • [FAQ](https://emacs-lsp.github.io/lsp-mode/page/faq)
+
+## Why?[#](#why)
+
+- Community Driven
+- Fully featured - supports all features in Language Server Protocol v3.14.
+- Fast - see [performance section](https://emacs-lsp.github.io/lsp-mode/page/performance).
+- Flexible - choose between full-blown IDE with flashy UI or minimal distraction free.
+- Easy to configure - works out of the box and automatically upgrades if additional packages are present.
+
+## Overview[#](#overview)
+
+Client for [Language Server
+Protocol](https://github.com/Microsoft/language-server-protocol/) (v3.14). [lsp-mode](https://emacs-lsp.github.io/lsp-mode) aims to provide IDE-like experience by providing optional integration with the most popular Emacs packages like `company`, `flycheck` and `projectile`.
+
+- Non-blocking asynchronous calls
+- Real-time Diagnostics/linting via [flycheck](https://github.com/flycheck/flycheck) (recommended) or `flymake` when Emacs > 26 (requires flymake>=1.0.5)
+- Code completion - `company-capf` / `completion-at-point` (note that [company-lsp](https://github.com/tigersoldier/company-lsp) is no longer supported).
+- Hovers - using [lsp-ui](https://emacs-lsp.github.io/lsp-ui)
+- Code actions - via `lsp-execute-code-action`, [modeline](https://emacs-lsp.github.io/lsp-mode/page/main-features/#code-actions-on-modeline) (recommended) or [lsp-ui](https://emacs-lsp.github.io/lsp-ui) sideline.
+- Code outline - using builtin [imenu](https://www.gnu.org/software/emacs/manual/html_node/emacs/Imenu.html) or `helm-imenu`
+- Code navigation - using builtin [xref](https://www.gnu.org/software/emacs/manual/html_node/emacs/Xref.html), [lsp-treemacs](https://github.com/emacs-lsp/lsp-treemacs) tree views or [lsp-ui](https://emacs-lsp.github.io/lsp-ui) peek functions.
+- Code lens
+- Symbol highlights
+- Formatting
+- [Project errors](https://emacs-lsp.github.io/lsp-mode/page/main-features/#project-errors-on-modeline) on modeline
+- Debugger - [dap-mode](https://emacs-lsp.github.io/dap-mode/)
+- [Breadcrumb on headerline](https://emacs-lsp.github.io/lsp-mode/page/main-features/#breadcrumb-on-headerline)
+- Helm integration - [helm-lsp](https://github.com/emacs-lsp/helm-lsp/)
+- Ivy integration - [lsp-ivy](https://github.com/emacs-lsp/lsp-ivy/)
+- Consult integration - [consult-lsp](https://github.com/gagbo/consult-lsp)
+- Treemacs integration - [lsp-treemacs](https://github.com/emacs-lsp/lsp-treemacs)
+- Semantic tokens as defined by LSP 3.16 (compatible language servers include recent development builds of clangd and rust-analyzer)
+- [which-key](https://github.com/justbur/emacs-which-key/) integration for better discovery
+- [iedit](https://emacs-lsp.github.io/lsp-mode/page/main-features/#iedit)
+- [dired](https://emacs-lsp.github.io/lsp-mode/page/main-features/#dired)
+- [ido](https://emacs-lsp.github.io/lsp-mode/page/main-features/#integrations)
+
+## Presentations/demos[#](#presentationsdemos)
+
+- [System Crafters](https://twitter.com/SystemCrafters) channel [Emacs IDE Videos](https://www.youtube.com/playlist?list=PLEoMzSkcN8oNvsrtk_iZSb94krGRofFjN)
+- [skybert](https://github.com/skybert)'s emacsconf [presentation](https://media.emacsconf.org/2019/19.html) (Java)
+- [thatwist](https://github.com/thatwist)'s ScalaUA Conference [presentation](https://www.youtube.com/watch?v=x7ey0ifcqAg&feature=youtu.be) (Scala)
+
+## See also[#](#see-also)
+
+- [lsp-docker](https://github.com/emacs-lsp/lsp-docker/) - provide docker image with preconfigured language servers with corresponding emacs configuration.
+- [company-box](https://github.com/sebastiencs/company-box/) - `company` frontend with icons.
+- [dap-mode](https://github.com/emacs-lsp/dap-mode) - Debugger integration for `lsp-mode`.
+- [eglot](https://www.gnu.org/software/emacs/manual/html_node/eglot/) - A minimal LSP implementation built in to Emacs.
+- [which-key](https://github.com/justbur/emacs-which-key/) - Emacs package that displays available keybindings in popup
+- [projectile](https://github.com/bbatsov/projectile/) - Project Interaction Library for Emacs
+- [emacs-tree-sitter](https://github.com/ubolonton/emacs-tree-sitter) - Faster, fine-grained code highlighting via [tree-sitter](https://github.com/tree-sitter/tree-sitter).
+- [gccemacs](https://akrl.sdf.org/gccemacs.html) - modified Emacs capable of compiling and running Emacs Lisp as native code.
+
+## Contributions[#](#contributions)
+
+Contributions are very much welcome!
+
+NOTE Documentation for clients is generated from doc comments in the clients themselves (see [lsp-doc.el](https://github.com/emacs-lsp/lsp-mode/blob/master/docs/lsp-doc.el)) and some metadata (see [lsp-clients.json](https://github.com/emacs-lsp/lsp-mode/blob/master/docs/lsp-clients.json)) so please submit corrections accordingly.
+
+## Support the project[#](#support-the-project)
+
+The `emacs-lsp` organization has more than 20,000 lines of code, to keep all of this working, we need to implement new features and help the community on a lot of issues.
+
+You can help us keep going and improving it by [supporting the project](https://github.com/sponsors/emacs-lsp)
+
+https://opencollective.com/emacs-lsp
+
+### Members[#](#members)
+
+Here is a list of the current `lsp-mode` members and what they are primarily working on/responsible for.
+
+[totbwf](https://github.com/totbwf)
+ F# 
+[brotzeit](https://github.com/brotzeit)
+ Rust 
+[dsyzling](https://github.com/dsyzling)
+ Scala 
+[kurnevsky](https://github.com/kurnevsky)
+ Scala | Rust 
+[seagle0128](https://github.com/seagle0128)
+ Go | Python MS 
+[sebastiansturm](https://github.com/sebastiansturm)
+ lsp-mode core | C++ 
+[vibhavp](https://github.com/vibhavp)
+ lsp-mode core 
+[yyoncho](https://github.com/yyoncho)
+ lsp-mode core | Java 
+[ericdallo](https://github.com/ericdallo)
+ Dart/Flutter | Clojure 
+[danielmartin](https://github.com/danielmartin)
+ C++ | Swift 
+[kiennq](https://github.com/kiennq)
+ completions | pwsh 
+[nbfalcon](https://github.com/nbfalcon)
+ lsp-mode core | iedit 
+[psibi](https://github.com/psibi)
+ Terraform | Nix 
+[razzmatazz](https://github.com/razzmatazz)
+ C# | F# 
+[jcs090218](https://github.com/jcs090218)
+ lsp-mode core  Last update: January 6, 2026[Next
+              
+              Installation](page/installation/) Made with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)https://github.com/emacs-lsp/lsp-modehttps://twitter.com/yonchovskihttps://discord.gg/swuxy5AAgT

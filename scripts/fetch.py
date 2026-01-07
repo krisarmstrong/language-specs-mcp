@@ -201,10 +201,25 @@ def get_languages() -> list[str]:
 def main() -> int:
     args = sys.argv[1:]
 
+    # Show help
+    if "-h" in args or "--help" in args:
+        print(__doc__)
+        print("Options:")
+        print("  --dry-run    Show what would be fetched without fetching")
+        print("  --delta      Only fetch stale specs (older than FETCH_STALE_DAYS)")
+        print("  -h, --help   Show this help message")
+        print()
+        print("Environment:")
+        print(f"  FETCH_WORKERS={MAX_WORKERS}     Number of parallel workers")
+        print(f"  FETCH_STALE_DAYS={STALE_DAYS}   Days before spec is considered stale")
+        print(f"  FETCH_TIMEOUT={TIMEOUT_SECONDS}      Request timeout in seconds")
+        print(f"  FETCH_RATE_LIMIT={RATE_LIMIT_SECONDS}   Seconds between requests to same domain")
+        return 0
+
     # Parse flags
     dry_run = "--dry-run" in args
     delta_mode = "--delta" in args
-    args = [a for a in args if not a.startswith("--")]
+    args = [a for a in args if not a.startswith("-")]
 
     # Determine which languages to fetch
     if args:

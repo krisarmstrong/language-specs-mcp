@@ -1,477 +1,401 @@
-# golangci-lint Config (.golangci.yml)
+Go FAQ | Protocol Buffers Documentation[Protocol Buffers Documentation](/)
 
-Source: https://raw.githubusercontent.com/maratori/golangci-lint-config/main/.golangci.yml
+- [Protocol Buffers](/)
 
-```yaml
-# This file is licensed under the terms of the MIT license https://opensource.org/license/mit
-# Copyright (c) 2021-2025 Marat Reimers
+  - [Overview](/overview/)
+  - [Protoc Installation](/installation/)
+  - [News](/news/)
+  - [Programming Guides](/programming-guides/)
 
-## Golden config for golangci-lint v2.7.2
-#
-# This is the best config for golangci-lint based on my experience and opinion.
-# It is very strict, but not extremely strict.
-# Feel free to adapt it to suit your needs.
-# If this config helps you, please consider keeping a link to this repo (see the next comment).
+    - [Language Guide (editions)](/programming-guides/editions/)
+    - [Language Guide (proto 2)](/programming-guides/proto2/)
+    - [Language Guide (proto 3)](/programming-guides/proto3/)
+    - [Proto Limits](/programming-guides/proto-limits/)
+    - [Style Guide](/programming-guides/style/)
+    - [Enum Behavior](/programming-guides/enum/)
+    - [Encoding](/programming-guides/encoding/)
+    - [ProtoJSON Format](/programming-guides/json/)
+    - [Techniques](/programming-guides/techniques/)
+    - [Add-ons](/programming-guides/addons/)
+    - [Extension Declarations](/programming-guides/extension_declarations/)
+    - [Field Presence](/programming-guides/field_presence/)
+    - [Proto Serialization Is Not Canonical](/programming-guides/serialization-not-canonical/)
+    - [Deserializing Debug Proto Representations](/programming-guides/deserialize-debug/)
 
-# Based on https://github.com/maratori/golangci-lint-config
+  - [Protobuf Editions](/editions/)
 
-version: "2"
+    - [Overview](/editions/overview/)
+    - [Feature Settings for Editions](/editions/features/)
+    - [Implementing Editions Support](/editions/implementation/)
 
-issues:
-  # Maximum count of issues with the same text.
-  # Set to 0 to disable.
-  # Default: 3
-  max-same-issues: 50
+  - [Design Decisions](/design-decisions/)
 
-formatters:
-  enable:
-    - goimports # checks if the code and import statements are formatted according to the 'goimports' command
-    - golines # checks if code is formatted, and fixes long lines
+    - [No Nullable Setters/Getters Support](/design-decisions/nullable-getters-setters/)
 
-    ## you may want to enable
-    #- gci # checks if code and import statements are formatted, with additional rules
-    #- gofmt # checks if the code is formatted according to 'gofmt' command
-    #- gofumpt # enforces a stricter format than 'gofmt', while being backwards compatible
-    #- swaggo # formats swaggo comments
+  - [Proto Best Practices](/best-practices/)
 
-  # All settings can be found here https://github.com/golangci/golangci-lint/blob/HEAD/.golangci.reference.yml
-  settings:
-    goimports:
-      # A list of prefixes, which, if set, checks import paths
-      # with the given prefixes are grouped after 3rd-party packages.
-      # Default: []
-      local-prefixes:
-        - github.com/my/project
+    - [Avoid Cargo Culting](/best-practices/no-cargo-cults/)
+    - [Proto Best Practices](/best-practices/dos-donts/)
+    - [1-1-1 Best Practice](/best-practices/1-1-1/)
 
-    golines:
-      # Target maximum line length.
-      # Default: 100
-      max-len: 120
+  - [Tutorials](/getting-started/)
 
-linters:
-  enable:
-    - asasalint # checks for pass []any as any in variadic func(...any)
-    - asciicheck # checks that your code does not contain non-ASCII identifiers
-    - bidichk # checks for dangerous unicode character sequences
-    - bodyclose # checks whether HTTP response body is closed successfully
-    - canonicalheader # checks whether net/http.Header uses canonical header
-    - copyloopvar # detects places where loop variables are copied (Go 1.22+)
-    - cyclop # checks function and package cyclomatic complexity
-    - depguard # checks if package imports are in a list of acceptable packages
-    - dupl # tool for code clone detection
-    - durationcheck # checks for two durations multiplied together
-    - embeddedstructfieldcheck # checks embedded types in structs
-    - errcheck # checking for unchecked errors, these unchecked errors can be critical bugs in some cases
-    - errname # checks that sentinel errors are prefixed with the Err and error types are suffixed with the Error
-    - errorlint # finds code that will cause problems with the error wrapping scheme introduced in Go 1.13
-    - exhaustive # checks exhaustiveness of enum switch statements
-    - exptostd # detects functions from golang.org/x/exp/ that can be replaced by std functions
-    - fatcontext # detects nested contexts in loops
-    - forbidigo # forbids identifiers
-    - funcorder # checks the order of functions, methods, and constructors
-    - funlen # tool for detection of long functions
-    - gocheckcompilerdirectives # validates go compiler directive comments (//go:)
-    - gochecknoglobals # checks that no global variables exist
-    - gochecknoinits # checks that no init functions are present in Go code
-    - gochecksumtype # checks exhaustiveness on Go "sum types"
-    - gocognit # computes and checks the cognitive complexity of functions
-    - goconst # finds repeated strings that could be replaced by a constant
-    - gocritic # provides diagnostics that check for bugs, performance and style issues
-    - gocyclo # computes and checks the cyclomatic complexity of functions
-    - godoclint # checks Golang's documentation practice
-    - godot # checks if comments end in a period
-    - gomoddirectives # manages the use of 'replace', 'retract', and 'excludes' directives in go.mod
-    - goprintffuncname # checks that printf-like functions are named with f at the end
-    - gosec # inspects source code for security problems
-    - govet # reports suspicious constructs, such as Printf calls whose arguments do not align with the format string
-    - iface # checks the incorrect use of interfaces, helping developers avoid interface pollution
-    - ineffassign # detects when assignments to existing variables are not used
-    - intrange # finds places where for loops could make use of an integer range
-    - iotamixing # checks if iotas are being used in const blocks with other non-iota declarations
-    - loggercheck # checks key value pairs for common logger libraries (kitlog,klog,logr,zap)
-    - makezero # finds slice declarations with non-zero initial length
-    - mirror # reports wrong mirror patterns of bytes/strings usage
-    - mnd # detects magic numbers
-    - modernize # suggests simplifications to Go code, using modern language and library features
-    - musttag # enforces field tags in (un)marshaled structs
-    - nakedret # finds naked returns in functions greater than a specified function length
-    - nestif # reports deeply nested if statements
-    - nilerr # finds the code that returns nil even if it checks that the error is not nil
-    - nilnesserr # reports that it checks for err != nil, but it returns a different nil value error (powered by nilness and nilerr)
-    - nilnil # checks that there is no simultaneous return of nil error and an invalid value
-    - noctx # finds sending http request without context.Context
-    - nolintlint # reports ill-formed or insufficient nolint directives
-    - nonamedreturns # reports all named returns
-    - nosprintfhostport # checks for misuse of Sprintf to construct a host with port in a URL
-    - perfsprint # checks that fmt.Sprintf can be replaced with a faster alternative
-    - predeclared # finds code that shadows one of Go's predeclared identifiers
-    - promlinter # checks Prometheus metrics naming via promlint
-    - protogetter # reports direct reads from proto message fields when getters should be used
-    - reassign # checks that package variables are not reassigned
-    - recvcheck # checks for receiver type consistency
-    - revive # fast, configurable, extensible, flexible, and beautiful linter for Go, drop-in replacement of golint
-    - rowserrcheck # checks whether Err of rows is checked successfully
-    - sloglint # ensure consistent code style when using log/slog
-    - spancheck # checks for mistakes with OpenTelemetry/Census spans
-    - sqlclosecheck # checks that sql.Rows and sql.Stmt are closed
-    - staticcheck # is a go vet on steroids, applying a ton of static analysis checks
-    - testableexamples # checks if examples are testable (have an expected output)
-    - testifylint # checks usage of github.com/stretchr/testify
-    - testpackage # makes you use a separate _test package
-    - tparallel # detects inappropriate usage of t.Parallel() method in your Go test codes
-    - unconvert # removes unnecessary type conversions
-    - unparam # reports unused function parameters
-    - unqueryvet # detects SELECT * in SQL queries and SQL builders, encouraging explicit column selection
-    - unused # checks for unused constants, variables, functions and types
-    - usestdlibvars # detects the possibility to use variables/constants from the Go standard library
-    - usetesting # reports uses of functions with replacement inside the testing package
-    - wastedassign # finds wasted assignment statements
-    - whitespace # detects leading and trailing whitespace
+    - [C++](/getting-started/cpptutorial/)
+    - [C#](/getting-started/csharptutorial/)
+    - [Dart](/getting-started/darttutorial/)
+    - [Go](/getting-started/gotutorial/)
+    - [Java](/getting-started/javatutorial/)
+    - [Kotlin](/getting-started/kotlintutorial/)
+    - [Python](/getting-started/pythontutorial/)
 
-    ## you may want to enable
-    #- arangolint # opinionated best practices for arangodb client
-    #- decorder # checks declaration order and count of types, constants, variables and functions
-    #- exhaustruct # [highly recommend to enable] checks if all structure fields are initialized
-    #- ginkgolinter # [if you use ginkgo/gomega] enforces standards of using ginkgo and gomega
-    #- godox # detects usage of FIXME, TODO and other keywords inside comments
-    #- goheader # checks is file header matches to pattern
-    #- inamedparam # [great idea, but too strict, need to ignore a lot of cases by default] reports interfaces with unnamed method parameters
-    #- interfacebloat # checks the number of methods inside an interface
-    #- ireturn # accept interfaces, return concrete types
-    #- noinlineerr # disallows inline error handling `if err := ...; err != nil {`
-    #- prealloc # [premature optimization, but can be used in some cases] finds slice declarations that could potentially be preallocated
-    #- tagalign # checks that struct tags are well aligned
-    #- varnamelen # [great idea, but too many false positives] checks that the length of a variable's name matches its scope
-    #- wrapcheck # checks that errors returned from external packages are wrapped
-    #- zerologlint # detects the wrong usage of zerolog that a user forgets to dispatch zerolog.Event
+  - [Reference Guides](/reference/)
 
-    ## disabled
-    #- containedctx # detects struct contained context.Context field
-    #- contextcheck # [too many false positives] checks the function whether use a non-inherited context
-    #- dogsled # checks assignments with too many blank identifiers (e.g. x, _, _, _, := f())
-    #- dupword # [useless without config] checks for duplicate words in the source code
-    #- err113 # [too strict] checks the errors handling expressions
-    #- errchkjson # [don't see profit + I'm against of omitting errors like in the first example https://github.com/breml/errchkjson] checks types passed to the json encoding functions. Reports unsupported types and optionally reports occasions, where the check for the returned error can be omitted
-    #- forcetypeassert # [replaced by errcheck] finds forced type assertions
-    #- gomodguard # [use more powerful depguard] allow and block lists linter for direct Go module dependencies
-    #- gosmopolitan # reports certain i18n/l10n anti-patterns in your Go codebase
-    #- grouper # analyzes expression groups
-    #- importas # enforces consistent import aliases
-    #- lll # [replaced by golines] reports long lines
-    #- maintidx # measures the maintainability index of each function
-    #- misspell # [useless] finds commonly misspelled English words in comments
-    #- nlreturn # [too strict and mostly code is not more readable] checks for a new line before return and branch statements to increase code clarity
-    #- paralleltest # [too many false positives] detects missing usage of t.Parallel() method in your Go test
-    #- tagliatelle # checks the struct tags
-    #- thelper # detects golang test helpers without t.Helper() call and checks the consistency of test helpers
-    #- wsl # [too strict and mostly code is not more readable] whitespace linter forces you to use empty lines
-    #- wsl_v5 # [too strict and mostly code is not more readable] add or remove empty lines
+    - [C++](/reference/cpp/)
 
-  # All settings can be found here https://github.com/golangci/golangci-lint/blob/HEAD/.golangci.reference.yml
-  settings:
-    cyclop:
-      # The maximal code complexity to report.
-      # Default: 10
-      max-complexity: 30
-      # The maximal average package complexity.
-      # If it's higher than 0.0 (float) the check is enabled.
-      # Default: 0.0
-      package-average: 10.0
+      - [Generated Code Guide](/reference/cpp/cpp-generated/)
+      - [String View APIs](/reference/cpp/string-view/)
+      - [Arena Allocation Guide](/reference/cpp/arenas/)
+      - [Abseil Support](/reference/cpp/abseil/)
+      - [C++ API](/reference/cpp/api-docs/)
 
-    depguard:
-      # Rules to apply.
-      #
-      # Variables:
-      # - File Variables
-      #   Use an exclamation mark `!` to negate a variable.
-      #   Example: `!$test` matches any file that is not a go test file.
-      #
-      #   `$all` - matches all go files
-      #   `$test` - matches all go test files
-      #
-      # - Package Variables
-      #
-      #   `$gostd` - matches all of go's standard library (Pulled from `GOROOT`)
-      #
-      # Default (applies if no custom rules are defined): Only allow $gostd in all files.
-      rules:
-        "deprecated":
-          # List of file globs that will match this list of settings to compare against.
-          # By default, if a path is relative, it is relative to the directory where the golangci-lint command is executed.
-          # The placeholder '${base-path}' is substituted with a path relative to the mode defined with `run.relative-path-mode`.
-          # The placeholder '${config-path}' is substituted with a path relative to the configuration file.
-          # Default: $all
-          files:
-            - "$all"
-          # List of packages that are not allowed.
-          # Entries can be a variable (starting with $), a string prefix, or an exact match (if ending with $).
-          # Default: []
-          deny:
-            - pkg: github.com/golang/protobuf
-              desc: Use google.golang.org/protobuf instead, see https://developers.google.com/protocol-buffers/docs/reference/go/faq#modules
-            - pkg: github.com/satori/go.uuid
-              desc: Use github.com/google/uuid instead, satori's package is not maintained
-            - pkg: github.com/gofrs/uuid$
-              desc: Use github.com/gofrs/uuid/v5 or later, it was not a go module before v5
-        "non-test files":
-          files:
-            - "!$test"
-          deny:
-            - pkg: math/rand$
-              desc: Use math/rand/v2 instead, see https://go.dev/blog/randv2
-        "non-main files":
-          files:
-            - "!**/main.go"
-          deny:
-            - pkg: log$
-              desc: Use log/slog instead, see https://go.dev/blog/slog
+    - [C#](/reference/csharp/)
 
-    embeddedstructfieldcheck:
-      # Checks that sync.Mutex and sync.RWMutex are not used as embedded fields.
-      # Default: false
-      forbid-mutex: true
+      - [Generated Code Guide](/reference/csharp/csharp-generated/)
+      - [C# API](/reference/csharp/api-docs)
 
-    errcheck:
-      # Report about not checking of errors in type assertions: `a := b.(MyStruct)`.
-      # Such cases aren't reported by default.
-      # Default: false
-      check-type-assertions: true
+    - [Dart](/reference/dart/)
 
-    exhaustive:
-      # Program elements to check for exhaustiveness.
-      # Default: [ switch ]
-      check:
-        - switch
-        - map
+      - [Generated Code](/reference/dart/dart-generated/)
+      - [Dart API](https://pub.dartlang.org/documentation/protobuf)
 
-    exhaustruct:
-      # List of regular expressions to match type names that should be excluded from processing.
-      # Anonymous structs can be matched by '<anonymous>' alias.
-      # Has precedence over `include`.
-      # Each regular expression must match the full type name, including package path.
-      # For example, to match type `net/http.Cookie` regular expression should be `.*/http\.Cookie`,
-      # but not `http\.Cookie`.
-      # Default: []
-      exclude:
-        # std libs
-        - ^net/http.Client$
-        - ^net/http.Cookie$
-        - ^net/http.Request$
-        - ^net/http.Response$
-        - ^net/http.Server$
-        - ^net/http.Transport$
-        - ^net/url.URL$
-        - ^os/exec.Cmd$
-        - ^reflect.StructField$
-        # public libs
-        - ^github.com/Shopify/sarama.Config$
-        - ^github.com/Shopify/sarama.ProducerMessage$
-        - ^github.com/mitchellh/mapstructure.DecoderConfig$
-        - ^github.com/prometheus/client_golang/.+Opts$
-        - ^github.com/spf13/cobra.Command$
-        - ^github.com/spf13/cobra.CompletionOptions$
-        - ^github.com/stretchr/testify/mock.Mock$
-        - ^github.com/testcontainers/testcontainers-go.+Request$
-        - ^github.com/testcontainers/testcontainers-go.FromDockerfile$
-        - ^golang.org/x/tools/go/analysis.Analyzer$
-        - ^google.golang.org/protobuf/.+Options$
-        - ^gopkg.in/yaml.v3.Node$
-      # Allows empty structures in return statements.
-      # Default: false
-      allow-empty-returns: true
+    - [Go](/reference/go/)
 
-    funcorder:
-      # Checks if the exported methods of a structure are placed before the non-exported ones.
-      # Default: true
-      struct-method: false
+      - [Generated Code Guide (Open)](/reference/go/go-generated/)
+      - [Generated Code Guide (Opaque)](/reference/go/go-generated-opaque/)
+      - [FAQ](/reference/go/faq/)
+      - [Size Semantics](/reference/go/size/)
+      - [Go API](https://pkg.go.dev/google.golang.org/protobuf/proto)
+      - [Opaque API Migration](/reference/go/opaque-migration/)
+      - [Opaque API: Manual Migration](/reference/go/opaque-migration-manual/)
+      - [Opaque API FAQ](/reference/go/opaque-faq/)
 
-    funlen:
-      # Checks the number of lines in a function.
-      # If lower than 0, disable the check.
-      # Default: 60
-      lines: 100
-      # Checks the number of statements in a function.
-      # If lower than 0, disable the check.
-      # Default: 40
-      statements: 50
+    - [Java](/reference/java/)
 
-    gochecksumtype:
-      # Presence of `default` case in switch statements satisfies exhaustiveness, if all members are not listed.
-      # Default: true
-      default-signifies-exhaustive: false
+      - [Generated Code Guide](/reference/java/java-generated/)
+      - [Generated Proto Names](/reference/java/java-proto-names/)
+      - [Java API](/reference/java/api-docs/overview-summary.html)
 
-    gocognit:
-      # Minimal code complexity to report.
-      # Default: 30 (but we recommend 10-20)
-      min-complexity: 20
+    - [Kotlin](/reference/kotlin/)
 
-    gocritic:
-      # Settings passed to gocritic.
-      # The settings key is the name of a supported gocritic checker.
-      # The list of supported checkers can be found at https://go-critic.com/overview.
-      settings:
-        captLocal:
-          # Whether to restrict checker to params only.
-          # Default: true
-          paramsOnly: false
-        underef:
-          # Whether to skip (*x).method() calls where x is a pointer receiver.
-          # Default: true
-          skipRecvDeref: false
+      - [Kotlin](/reference/kotlin/api-docs/)
+      - [Generated Code Guide](/reference/kotlin/kotlin-generated/)
 
-    godoclint:
-      # List of rules to enable in addition to the default set.
-      # Default: empty
-      enable:
-        # Assert no unused link in godocs.
-        # https://github.com/godoc-lint/godoc-lint?tab=readme-ov-file#no-unused-link
-        - no-unused-link
+    - [Objective-C](/reference/objective-c/)
 
-    govet:
-      # Enable all analyzers.
-      # Default: false
-      enable-all: true
-      # Disable analyzers by name.
-      # Run `GL_DEBUG=govet golangci-lint run --enable=govet` to see default, all available analyzers, and enabled analyzers.
-      # Default: []
-      disable:
-        - fieldalignment # too strict
-      # Settings per analyzer.
-      settings:
-        shadow:
-          # Whether to be strict about shadowing; can be noisy.
-          # Default: false
-          strict: true
+      - [Generated Code Guide](/reference/objective-c/objective-c-generated/)
 
-    inamedparam:
-      # Skips check for interface methods with only a single parameter.
-      # Default: false
-      skip-single-param: true
+    - [PHP](/reference/php/)
 
-    mnd:
-      # List of function patterns to exclude from analysis.
-      # Values always ignored: `time.Date`,
-      # `strconv.FormatInt`, `strconv.FormatUint`, `strconv.FormatFloat`,
-      # `strconv.ParseInt`, `strconv.ParseUint`, `strconv.ParseFloat`.
-      # Default: []
-      ignored-functions:
-        - args.Error
-        - flag.Arg
-        - flag.Duration.*
-        - flag.Float.*
-        - flag.Int.*
-        - flag.Uint.*
-        - os.Chmod
-        - os.Mkdir.*
-        - os.OpenFile
-        - os.WriteFile
-        - prometheus.ExponentialBuckets.*
-        - prometheus.LinearBuckets
+      - [Generated Code Guide](/reference/php/php-generated/)
+      - [PHP API](/reference/php/api-docs/)
 
-    nakedret:
-      # Make an issue if func has more lines of code than this setting, and it has naked returns.
-      # Default: 30
-      max-func-lines: 0
+    - [Python](/reference/python/)
 
-    nolintlint:
-      # Exclude following linters from requiring an explanation.
-      # Default: []
-      allow-no-explanation: [ funlen, gocognit, golines ]
-      # Enable to require an explanation of nonzero length after each nolint directive.
-      # Default: false
-      require-explanation: true
-      # Enable to require nolint directives to mention the specific linter being suppressed.
-      # Default: false
-      require-specific: true
+      - [Generated Code Guide](/reference/python/python-generated/)
+      - [Python Comparison](/reference/python/python-comparison/)
+      - [Python API](https://googleapis.dev/python/protobuf/latest/)
 
-    perfsprint:
-      # Optimizes into strings concatenation.
-      # Default: true
-      strconcat: false
+    - [Ruby](/reference/ruby/)
 
-    reassign:
-      # Patterns for global variable names that are checked for reassignment.
-      # See https://github.com/curioswitch/go-reassign#usage
-      # Default: ["EOF", "Err.*"]
-      patterns:
-        - ".*"
+      - [Generated Code Guide](/reference/ruby/ruby-generated/)
 
-    rowserrcheck:
-      # database/sql is always checked.
-      # Default: []
-      packages:
-        - github.com/jmoiron/sqlx
+    - [Rust](/reference/rust/)
 
-    sloglint:
-      # Enforce not using global loggers.
-      # Values:
-      # - "": disabled
-      # - "all": report all global loggers
-      # - "default": report only the default slog logger
-      # https://github.com/go-simpler/sloglint?tab=readme-ov-file#no-global
-      # Default: ""
-      no-global: all
-      # Enforce using methods that accept a context.
-      # Values:
-      # - "": disabled
-      # - "all": report all contextless calls
-      # - "scope": report only if a context exists in the scope of the outermost function
-      # https://github.com/go-simpler/sloglint?tab=readme-ov-file#context-only
-      # Default: ""
-      context: scope
+      - [Generated Code Guide](/reference/rust/rust-generated/)
+      - [Redaction in Rust](/reference/rust/rust-redaction/)
+      - [Building Rust Protos](/reference/rust/building-rust-protos/)
+      - [Design Decisions](/reference/rust/rust-design-decisions/)
 
-    staticcheck:
-      # SAxxxx checks in https://staticcheck.dev/docs/configuration/options/#checks
-      # Example (to disable some checks): [ "all", "-SA1000", "-SA1001"]
-      # Default: ["all", "-ST1000", "-ST1003", "-ST1016", "-ST1020", "-ST1021", "-ST1022"]
-      checks:
-        - all
-        # Incorrect or missing package comment.
-        # https://staticcheck.dev/docs/checks/#ST1000
-        - -ST1000
-        # Use consistent method receiver names.
-        # https://staticcheck.dev/docs/checks/#ST1016
-        - -ST1016
-        # Omit embedded fields from selector expression.
-        # https://staticcheck.dev/docs/checks/#QF1008
-        - -QF1008
+    - [Protocol Buffers](/reference/protobuf/)
 
-    usetesting:
-      # Enable/disable `os.TempDir()` detections.
-      # Default: false
-      os-temp-dir: true
+      - [2023 Language Specification](/reference/protobuf/edition-2023-spec/)
+      - [Language Specification (Proto2 Syntax)](/reference/protobuf/proto2-spec/)
+      - [2024 Language Specification](/reference/protobuf/edition-2024-spec/)
+      - [Language Specification (Proto3)](/reference/protobuf/proto3-spec/)
+      - [Text Format Language Specification](/reference/protobuf/textformat-spec/)
+      - [MIME Types](/reference/protobuf/mime-types/)
+      - [Well-Known Types](/reference/protobuf/google.protobuf/)
 
-  exclusions:
-    # Log a warning if an exclusion rule is unused.
-    # Default: false
-    warn-unused: true
-    # Predefined exclusion rules.
-    # Default: []
-    presets:
-      - std-error-handling
-      - common-false-positives
-    # Excluding configuration per-path, per-linter, per-text and per-source.
-    rules:
-      - source: 'TODO'
-        linters: [ godot ]
-      - text: 'should have a package comment'
-        linters: [ revive ]
-      - text: 'exported \S+ \S+ should have comment( \(or a comment on this block\))? or be unexported'
-        linters: [ revive ]
-      - text: 'package comment should be of the form ".+"'
-        source: '// ?(nolint|TODO)'
-        linters: [ revive ]
-      - text: 'comment on exported \S+ \S+ should be of the form ".+"'
-        source: '// ?(nolint|TODO)'
-        linters: [ revive, staticcheck ]
-      - path: '_test\.go'
-        linters:
-          - bodyclose
-          - dupl
-          - errcheck
-          - funlen
-          - goconst
-          - gosec
-          - noctx
-          - wrapcheck
+    - [Other Languages](/reference/other/)
+
+  - [Support](/support/)
+
+    - [Version Support](/support/version-support/)
+    - [Migration Guide](/support/migration/)
+    - [Cross-Version Runtime Guarantee](/support/cross-version-runtime-guarantee/)
+
+  - [Downloads](/downloads/)
+  - [History](/history/)
+  - [Forum](https://groups.google.com/g/protobuf)
+  - /navbar/
+  - [Search Results](/search/)
+
+[View page source](https://github.com/protocolbuffers/protocolbuffers.github.io/tree/main/content/reference/go/faq.md)[Edit this page](https://github.com/protocolbuffers/protocolbuffers.github.io/edit/main/content/reference/go/faq.md)[Create child page](https://github.com/protocolbuffers/protocolbuffers.github.io/new/main/content/reference/go/faq.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A)[Create documentation issue](https://github.com/protocolbuffers/protocolbuffers.github.io/issues/new?title=Go%20FAQ)[Create project issue](https://github.com/protocolbuffers/protobuf/issues/new)
+
+- [Versions](#versions)
+
+  - [What’s the difference between github.com/golang/protobuf and google.golang.org/protobuf?](#modules)
+  - [What are proto1, proto2, proto3, and editions?](#proto-versions)
+  - [There are several different Message types. Which should I use?](#message-types)
+
+- [Common problems](#common-problems)
+
+  - [“go install”: working directory is not part of a module](#working-directory)
+  - [constant -1 overflows protoimpl.EnforceVersion](#enforce-version)
+  - [undefined: "github.com/golang/protobuf/proto".ProtoPackageIsVersion4](#enforce-version-apiv1)
+  - [What is a protocol buffer namespace conflict?](#namespace-conflict)
+  - [How do I fix a protocol buffer namespace conflict?](#fix-namespace-conflict)
+  - [How do I use protocol buffer editions?](#using-editions)
+  - [How do I control the behavior of my generated Go code?](#controlling-generated-code)
+  - [Why does reflect.DeepEqual behave unexpectedly with protobuf messages?](#deepequal)
+
+- [Hyrum’s Law](#hyrums-law)
+
+  - [What is Hyrum’s Law, and why is it in this FAQ?](#hyrums-law)
+  - [Why does the text of errors keep changing?](#unstable-errors)
+  - [protojson](https://pkg.go.dev/google.golang.org/protobuf/encoding/protojson) keep changing?
+  - [prototext](https://pkg.go.dev/google.golang.org/protobuf/encoding/prototext) keep changing?
+
+- [Miscellaneous](#miscellaneous)
+
+  - [How do I use a protocol buffer message as a hash key?](#hash)
+  - [Can I add a new feature to the Go protocol buffer implementation?](#new-feature)
+  - [Can I add an option to Marshal or Unmarshal to customize it?](#new-marshal-option)
+  - [Can I customize the code generated by protoc-gen-go?](#custom-code)
+
+1. [Reference Guides](/reference/)
+2. [Go](/reference/go/)
+3. FAQ
+
+# Go FAQ
+
+A list of frequently asked questions about implementing protocol buffers in Go, with answer for each.
+
+## Versions
+
+### What’s the difference between `github.com/golang/protobuf` and `google.golang.org/protobuf`?
+
+The [github.com/golang/protobuf](https://pkg.go.dev/github.com/golang/protobuf?tab=overview) module is the original Go protocol buffer API.
+
+The [google.golang.org/protobuf](https://pkg.go.dev/google.golang.org/protobuf?tab=overview) module is an updated version of this API designed for simplicity, ease of use, and safety. The flagship features of the updated API are support for reflection and a separation of the user-facing API from the underlying implementation.
+
+We recommend that you use `google.golang.org/protobuf` in new code.
+
+Version `v1.4.0` and higher of `github.com/golang/protobuf` wrap the new implementation and permit programs to adopt the new API incrementally. For example, the well-known types defined in `github.com/golang/protobuf/ptypes` are simply aliases of those defined in the newer module. Thus, [google.golang.org/protobuf/types/known/emptypb](https://pkg.go.dev/google.golang.org/protobuf/types/known/emptypb) and [github.com/golang/protobuf/ptypes/empty](https://pkg.go.dev/github.com/golang/protobuf/ptypes/empty) may be used interchangeably.
+
+### What are `proto1`, `proto2`, `proto3`, and editions?
+
+These are revisions of the protocol buffer language. It is different from the Go implementation of protobufs.
+
+- 
+
+Editions are the newest and recommended way of writing Protocol Buffers. New features will be released as part of new editions. For more information, see [Protocol Buffer Editions](/editions).
+
+- 
+
+`proto3` is a legacy version of the language. We encourage new code to use editions.
+
+- 
+
+`proto2` is a legacy version of the language. Despite being superseded by proto3 and editions, proto2 is still fully supported.
+
+- 
+
+`proto1` is an obsolete version of the language. It was never released as open source.
+
+### There are several different `Message` types. Which should I use?
+
+- 
+
+["google.golang.org/protobuf/proto".Message](https://pkg.go.dev/google.golang.org/protobuf/proto?tab=doc#Message) is an interface type implemented by all messages generated by the current version of the protocol buffer compiler. Functions that operate on arbitrary messages, such as [proto.Marshal](https://pkg.go.dev/google.golang.org/protobuf/proto?tab=doc#Marshal) or [proto.Clone](https://pkg.go.dev/google.golang.org/protobuf/proto?tab=doc#Clone), accept or return this type.
+
+- 
+
+["google.golang.org/protobuf/reflect/protoreflect".Message](https://pkg.go.dev/google.golang.org/protobuf/reflect/protoreflect?tab=doc#Message) is an interface type describing a reflection view of a message.
+
+Call the `ProtoReflect` method on a `proto.Message` to get a `protoreflect.Message`.
+
+- 
+
+["google.golang.org/protobuf/reflect/protoreflect".ProtoMessage](https://pkg.go.dev/google.golang.org/protobuf/reflect/protoreflect?tab=doc#ProtoMessage) is an alias of `"google.golang.org/protobuf/proto".Message`. The two types are interchangeable.
+
+- 
+
+["github.com/golang/protobuf/proto".Message](https://pkg.go.dev/github.com/golang/protobuf/proto?tab=doc#Message) is an interface type defined by the legacy Go protocol buffer API. All generated message types implement this interface, but the interface does not describe the behavior expected from these messages. New code should avoid using this type.
+
+## Common problems
+
+### “`go install`”: `working directory is not part of a module`
+
+On Go 1.15 and below, you have set the environment variable `GO111MODULE=on` and are running the `go install` command outside of a module directory. Set `GO111MODULE=auto`, or unset the environment variable.
+
+On Go 1.16 and above, `go install` can be invoked outside of a module by specifying an explicit version: `go install google.golang.org/protobuf/cmd/protoc-gen-go@latest`
+
+### `constant -1 overflows protoimpl.EnforceVersion`
+
+You are using a generated `.pb.go` file which requires a newer version of the `"google.golang.org/protobuf"` module.
+
+Update to a newer version with:
+
 ```
+go get -u google.golang.org/protobuf/proto
+```
+
+### `undefined: "github.com/golang/protobuf/proto".ProtoPackageIsVersion4`
+
+You are using a generated `.pb.go` file which requires a newer version of the `"github.com/golang/protobuf"` module.
+
+Update to a newer version with:
+
+```
+go get -u github.com/golang/protobuf/proto
+```
+
+### What is a protocol buffer namespace conflict?
+
+All protocol buffers declarations linked into a Go binary are inserted into a global registry.
+
+Every protobuf declaration (for example, enums, enum values, or messages) has an absolute name, which is the concatenation of the [package name](/programming-guides/proto2#packages) with the relative name of the declaration in the `.proto` source file (for example, `my.proto.package.MyMessage.NestedMessage`). The protobuf language assumes that all declarations are universally unique.
+
+If two protobuf declarations linked into a Go binary have the same name, then this leads to a namespace conflict, and it is impossible for the registry to properly resolve that declaration by name. Depending on which version of Go protobufs is being used, this will either panic at init-time or silently drop the conflict and lead to a potential bug later during runtime.
+
+### How do I fix a protocol buffer namespace conflict?
+
+The way to best fix a namespace conflict depends on the reason why a conflict is occurring.
+
+Common ways that namespace conflicts occur:
+
+- 
+
+Vendored .proto files. When a single `.proto` file is generated into two or more Go packages and linked into the same Go binary, it conflicts on every protobuf declaration in the generated Go packages. This typically occurs when a `.proto` file is vendored and a Go package is generated from it, or the generated Go package itself is vendored. Users should avoid vendoring and instead depend on a centralized Go package for that `.proto` file.
+
+  - If a `.proto` file is owned by an external party and is lacking a `go_package` option, then you should coordinate with the owner of that `.proto` file to specify a centralized Go package that a plurality of users can all depend on.
+
+- 
+
+Missing or generic proto package names. If a `.proto` file does not specify a package name or uses an overly generic package name (for example, “my_service”), then there is a high probability that declarations within that file will conflict with other declarations elsewhere in the universe. We recommend that every `.proto` file have a package name that is deliberately chosen to be universally unique (for example, prefixed with the name of a company).
+
+#### Warning
+
+Retroactively changing the package name on a `.proto` file is not backwards compatible for types used as extension fields, stored in `google.protobuf.Any`, or for gRPC Service definitions.
+
+Starting with v1.26.0 of the `google.golang.org/protobuf` module, a hard error will be reported when a Go program starts up that has multiple conflicting protobuf names linked into it. While it is preferable that the source of the conflict be fixed, the fatal error can be immediately worked around in one of two ways:
+
+1. 
+
+At compile time. The default behavior for handling conflicts can be specified at compile time with a linker-initialized variable: `go build -ldflags "-X google.golang.org/protobuf/reflect/protoregistry.conflictPolicy=warn"`
+
+2. 
+
+At program execution. The behavior for handling conflicts when executing a particular Go binary can be set with an environment variable: `GOLANG_PROTOBUF_REGISTRATION_CONFLICT=warn ./main`
+
+### How do I use protocol buffer editions?
+
+To use a protobuf edition, you must specify the edition in your `.proto` file. For example, to use the 2023 edition, add the following to the top of your `.proto` file:
+
+```
+edition = "2023";
+```
+
+The protocol buffer compiler will then generate Go code that is compatible with the specified edition. With editions, you can also enable or disable specific features for your `.proto` file. For more information, see [Protocol Buffer Editions](/editions/overview).
+
+### How do I control the behavior of my generated Go code?
+
+With editions, you can control the behavior of the generated Go code by enabling or disabling specific features in your `.proto` file. For example, to set the API behavior for your implementation, you would add the following to your `.proto` file:
+
+```
+edition = "2023";
+
+option features.(pb.go).api_level = API_OPAQUE;
+```
+
+When `api_level` is set to `API_OPAQUE`, the Go code generated by the protocol buffer compiler hides struct fields so they can no longer be directly accessed. Instead, new accessor methods are created for getting, setting, or clearing a field.
+
+For a complete list of available features and their descriptions, see [Features for Editions](/editions/features).
+
+### Why does `reflect.DeepEqual` behave unexpectedly with protobuf messages?
+
+Generated protocol buffer message types include internal state which can vary even between equivalent messages.
+
+In addition, the `reflect.DeepEqual` function is not aware of the semantics of protocol buffer messages, and can report differences where none exist. For example, a map field containing a `nil` map and one containing a zero-length, non-`nil` map are semantically equivalent, but will be reported as unequal by `reflect.DeepEqual`.
+
+Use the [proto.Equal](https://pkg.go.dev/google.golang.org/protobuf/proto#Equal) function to compare message values.
+
+In tests, you can also use the ["github.com/google/go-cmp/cmp"](https://pkg.go.dev/github.com/google/go-cmp/cmp?tab=doc) package with the [protocmp.Transform()](https://pkg.go.dev/google.golang.org/protobuf/testing/protocmp#Transform) option. The `cmp` package can compare arbitrary data structures, and [cmp.Diff](https://pkg.go.dev/github.com/google/go-cmp/cmp#Diff) produces human-readable reports of the differences between values.
+
+```
+if diff := cmp.Diff(a, b, protocmp.Transform()); diff != "" {
+  t.Errorf("unexpected difference:\n%v", diff)
+}
+```
+
+## Hyrum’s Law
+
+### What is Hyrum’s Law, and why is it in this FAQ?
+
+[Hyrum’s Law](https://www.hyrumslaw.com/) states:
+
+With a sufficient number of users of an API, it does not matter what you promise in the contract: all observable behaviors of your system will be depended on by somebody.
+
+A design goal of the latest version of the Go protocol buffer API is to avoid, where possible, providing observable behaviors that we cannot promise to keep stable in the future. It is our philosophy that deliberate instability in areas where we make no promises is better than giving the illusion of stability, only for that to change in the future after a project has potentially been long depending on that false assumption.
+
+### Why does the text of errors keep changing?
+
+Tests depending on the exact text of errors are brittle and break often when that text changes. To discourage unsafe use of error text in tests, the text of errors produced by this module is deliberately unstable.
+
+If you need to identify whether an error is produced by the [protobuf](https://pkg.go.dev/mod/google.golang.org/protobuf) module, we guarantee that all errors will match [proto.Error](https://pkg.go.dev/google.golang.org/protobuf/proto?tab=doc#Error) according to [errors.Is](https://pkg.go.dev/errors?tab=doc#Is).
+
+### Why does the output of [protojson](https://pkg.go.dev/google.golang.org/protobuf/encoding/protojson) keep changing?
+
+We make no promises about the long-term stability of Go’s implementation of the [JSON format for protocol buffers](/programming-guides/proto3#json). The specification only specifies what is valid JSON, but provides no specification for a canonical format for how a marshaler ought to exactly format a given message. To avoid giving the illusion that the output is stable, we deliberately introduce minor differences so that byte-for-byte comparisons are likely to fail.
+
+To gain some degree of output stability, we recommend running the output through a JSON formatter.
+
+### Why does the output of [prototext](https://pkg.go.dev/google.golang.org/protobuf/encoding/prototext) keep changing?
+
+We make no promises about the long-term stability of Go’s implementation of the text format. There is no canonical specification of the protobuf text format, and we would like to preserve the ability to make improvements in the `prototext` package output in the future. Since we don’t promise stability in the package’s output, we’ve deliberately introduced instability to discourage users from depending on it.
+
+To obtain some degree of stability, we recommend passing the output of `prototext` through the [txtpbfmt](https://github.com/protocolbuffers/txtpbfmt) program. The formatter can be directly invoked in Go using [parser.Format](https://pkg.go.dev/github.com/protocolbuffers/txtpbfmt/parser?tab=doc#Format).
+
+## Miscellaneous
+
+### How do I use a protocol buffer message as a hash key?
+
+You need canonical serialization, where the marshaled output of a protocol buffer message is guaranteed to be stable over time. Unfortunately, no specification for canonical serialization exists at this time. You’ll need to write your own or find a way to avoid needing one.
+
+### Can I add a new feature to the Go protocol buffer implementation?
+
+Maybe. We always like suggestions, but we’re very cautious about adding new things.
+
+The Go implementation of protocol buffers strives to be consistent with the other language implementations. As such, we tend to shy away from feature that are overly specialized to just Go. Go-specific features hinder the goal of protocol buffers being a language-neutral data interchange format.
+
+Unless your idea is specific to the Go implementation, you should join the [protobuf discussion group](http://groups.google.com/group/protobuf) and suggest it there.
+
+If you have an idea for the Go implementation, file an issue on our issue tracker: [https://github.com/golang/protobuf/issues](https://github.com/golang/protobuf/issues)
+
+### Can I add an option to `Marshal` or `Unmarshal` to customize it?
+
+Only if that option exists in other implementations (e.g., C++, Java). The encoding of protocol buffers (binary, JSON, and text) must be consistent across implementations, so a program written in one language is able to read messages written by another one.
+
+We will not add any options to the Go implementation that affect the data output by `Marshal` functions or read by `Unmarshal` functions unless an equivalent option exist in at least one other supported implementation.
+
+### Can I customize the code generated by `protoc-gen-go`?
+
+In general, no. Protocol buffers are intended to be a language-agnostic data interchange format, and implementation-specific customizations run counter to that intent.
+
+- https://stackoverflow.com/questions/tagged/protocol-buffers
+
+- https://github.com/protocolbuffers/protobuf
+- https://groups.google.com/g/protobuf
+
+© 2026 Google LLC All Rights Reserved[Privacy Policy](https://policies.google.com/privacy)Hosted by GitHub Pages.[GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)

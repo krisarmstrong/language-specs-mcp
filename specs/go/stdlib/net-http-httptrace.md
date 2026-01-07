@@ -1,162 +1,217 @@
-package httptrace // import "net/http/httptrace"
+Introducing HTTP Tracing - The Go Programming Language/[Skip to Main Content](#main-content)
 
-Package httptrace provides mechanisms to trace the events within HTTP client
-requests.
+- [Why Go arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
 
-FUNCTIONS
+  - [Case Studies](/solutions/case-studies)
 
-func WithClientTrace(ctx context.Context, trace *ClientTrace) context.Context
-    WithClientTrace returns a new context based on the provided parent ctx.
-    HTTP client requests made with the returned context will use the provided
-    trace hooks, in addition to any previous hooks registered with ctx.
-    Any hooks defined in the provided trace will be called first.
+Common problems companies solve with Go
 
+  - [Use Cases](/solutions/use-cases)
 
-TYPES
+Stories about how and why companies use Go
 
-type ClientTrace struct {
-	// GetConn is called before a connection is created or
-	// retrieved from an idle pool. The hostPort is the
-	// "host:port" of the target or proxy. GetConn is called even
-	// if there's already an idle cached connection available.
-	GetConn func(hostPort string)
+  - [Security](/security/)
 
-	// GotConn is called after a successful connection is
-	// obtained. There is no hook for failure to obtain a
-	// connection; instead, use the error from
-	// Transport.RoundTrip.
-	GotConn func(GotConnInfo)
+How Go can help keep you secure by default
 
-	// PutIdleConn is called when the connection is returned to
-	// the idle pool. If err is nil, the connection was
-	// successfully returned to the idle pool. If err is non-nil,
-	// it describes why not. PutIdleConn is not called if
-	// connection reuse is disabled via Transport.DisableKeepAlives.
-	// PutIdleConn is called before the caller's Response.Body.Close
-	// call returns.
-	// For HTTP/2, this hook is not currently used.
-	PutIdleConn func(err error)
+- [Learn](/learn/) Press Enter to activate/deactivate dropdown 
+- [Docs arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
 
-	// GotFirstResponseByte is called when the first byte of the response
-	// headers is available.
-	GotFirstResponseByte func()
+  - [Go Spec](/ref/spec)
 
-	// Got100Continue is called if the server replies with a "100
-	// Continue" response.
-	Got100Continue func()
+The official Go language specification
 
-	// Got1xxResponse is called for each 1xx informational response header
-	// returned before the final non-1xx response. Got1xxResponse is called
-	// for "100 Continue" responses, even if Got100Continue is also defined.
-	// If it returns an error, the client request is aborted with that error value.
-	Got1xxResponse func(code int, header textproto.MIMEHeader) error
+  - [Go User Manual](/doc)
 
-	// DNSStart is called when a DNS lookup begins.
-	DNSStart func(DNSStartInfo)
+A complete introduction to building software with Go
 
-	// DNSDone is called when a DNS lookup ends.
-	DNSDone func(DNSDoneInfo)
+  - [Standard library](https://pkg.go.dev/std)
 
-	// ConnectStart is called when a new connection's Dial begins.
-	// If net.Dialer.DualStack (IPv6 "Happy Eyeballs") support is
-	// enabled, this may be called multiple times.
-	ConnectStart func(network, addr string)
+Reference documentation for Go's standard library
 
-	// ConnectDone is called when a new connection's Dial
-	// completes. The provided err indicates whether the
-	// connection completed successfully.
-	// If net.Dialer.DualStack ("Happy Eyeballs") support is
-	// enabled, this may be called multiple times.
-	ConnectDone func(network, addr string, err error)
+  - [Release Notes](/doc/devel/release)
 
-	// TLSHandshakeStart is called when the TLS handshake is started. When
-	// connecting to an HTTPS site via an HTTP proxy, the handshake happens
-	// after the CONNECT request is processed by the proxy.
-	TLSHandshakeStart func()
+Learn what's new in each Go release
 
-	// TLSHandshakeDone is called after the TLS handshake with either the
-	// successful handshake's connection state, or a non-nil error on handshake
-	// failure.
-	TLSHandshakeDone func(tls.ConnectionState, error)
+  - [Effective Go](/doc/effective_go)
 
-	// WroteHeaderField is called after the Transport has written
-	// each request header. At the time of this call the values
-	// might be buffered and not yet written to the network.
-	WroteHeaderField func(key string, value []string)
+Tips for writing clear, performant, and idiomatic Go code
 
-	// WroteHeaders is called after the Transport has written
-	// all request headers.
-	WroteHeaders func()
+- [Packages](https://pkg.go.dev) Press Enter to activate/deactivate dropdown 
+- [Community arrow_drop_down](#) Press Enter to activate/deactivate dropdown 
 
-	// Wait100Continue is called if the Request specified
-	// "Expect: 100-continue" and the Transport has written the
-	// request headers but is waiting for "100 Continue" from the
-	// server before writing the request body.
-	Wait100Continue func()
+  - [Recorded Talks](/talks/)
 
-	// WroteRequest is called with the result of writing the
-	// request and any body. It may be called multiple times
-	// in the case of retried requests.
-	WroteRequest func(WroteRequestInfo)
+Videos from prior events
+
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+
+Meet other local Go developers
+
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+
+Learn and network with Go developers from around the world
+
+  - [Go blog](/blog)
+
+The Go project's official blog.
+
+  - [Go project](/help)
+
+Get help and stay informed from Go
+
+  -  Get connected 
+
+https://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
+
+/
+
+- [Why Go navigate_next](#)[navigate_beforeWhy Go](#)
+
+  - [Case Studies](/solutions/case-studies)
+  - [Use Cases](/solutions/use-cases)
+  - [Security](/security/)
+
+- [Learn](/learn/)
+- [Docs navigate_next](#)[navigate_beforeDocs](#)
+
+  - [Go Spec](/ref/spec)
+  - [Go User Manual](/doc)
+  - [Standard library](https://pkg.go.dev/std)
+  - [Release Notes](/doc/devel/release)
+  - [Effective Go](/doc/effective_go)
+
+- [Packages](https://pkg.go.dev)
+- [Community navigate_next](#)[navigate_beforeCommunity](#)
+
+  - [Recorded Talks](/talks/)
+  - [Meetups
+                           open_in_new](https://www.meetup.com/pro/go)
+  - [Conferences
+                           open_in_new](/wiki/Conferences)
+  - [Go blog](/blog)
+  - [Go project](/help)
+  - Get connectedhttps://groups.google.com/g/golang-nutshttps://github.com/golanghttps://twitter.com/golanghttps://www.reddit.com/r/golang/https://invite.slack.golangbridge.org/https://stackoverflow.com/tags/go
+
+# [The Go Blog](/blog/)
+
+# Introducing HTTP Tracing
+
+ Jaana Burcu Dogan
+ 4 October 2016 
+
+## Introduction
+
+In Go 1.7 we introduced HTTP tracing, a facility to gather fine-grained information throughout the lifecycle of an HTTP client request. Support for HTTP tracing is provided by the [net/http/httptrace](/pkg/net/http/httptrace/) package. The collected information can be used for debugging latency issues, service monitoring, writing adaptive systems, and more.
+
+## HTTP events
+
+The `httptrace` package provides a number of hooks to gather information during an HTTP round trip about a variety of events. These events include:
+
+- Connection creation
+- Connection reuse
+- DNS lookups
+- Writing the request to the wire
+- Reading the response
+
+## Tracing events
+
+You can enable HTTP tracing by putting an [*httptrace.ClientTrace](/pkg/net/http/httptrace/#ClientTrace) containing hook functions into a request’s [context.Context](/pkg/context/#Context). Various [http.RoundTripper](/pkg/net/http/#RoundTripper) implementations report the internal events by looking for context’s `*httptrace.ClientTrace` and calling the relevant hook functions.
+
+The tracing is scoped to the request’s context and users should put a `*httptrace.ClientTrace` to the request context before they start a request.
+
+```
+    req, _ := http.NewRequest("GET", "http://example.com", nil)
+    trace := &httptrace.ClientTrace{
+        DNSDone: func(dnsInfo httptrace.DNSDoneInfo) {
+            fmt.Printf("DNS Info: %+v\n", dnsInfo)
+        },
+        GotConn: func(connInfo httptrace.GotConnInfo) {
+            fmt.Printf("Got Conn: %+v\n", connInfo)
+        },
+    }
+    req = req.WithContext(httptrace.WithClientTrace(req.Context(), trace))
+    if _, err := http.DefaultTransport.RoundTrip(req); err != nil {
+        log.Fatal(err)
+    }
+```
+
+During a round trip, `http.DefaultTransport` will invoke each hook as an event happens. The program above will print the DNS information as soon as the DNS lookup is complete. It will similarly print connection information when a connection is established to the request’s host.
+
+## Tracing with http.Client
+
+The tracing mechanism is designed to trace the events in the lifecycle of a single `http.Transport.RoundTrip`. However, a client may make multiple round trips to complete an HTTP request. For example, in the case of a URL redirection, the registered hooks will be called as many times as the client follows HTTP redirects, making multiple requests. Users are responsible for recognizing such events at the `http.Client` level. The program below identifies the current request by using an `http.RoundTripper` wrapper.
+
+```
+package main
+
+import (
+    "fmt"
+    "log"
+    "net/http"
+    "net/http/httptrace"
+)
+
+// transport is an http.RoundTripper that keeps track of the in-flight
+// request and implements hooks to report HTTP tracing events.
+type transport struct {
+    current *http.Request
 }
-    ClientTrace is a set of hooks to run at various stages of an outgoing
-    HTTP request. Any particular hook may be nil. Functions may be called
-    concurrently from different goroutines and some may be called after the
-    request has completed or failed.
 
-    ClientTrace currently traces a single HTTP request & response during
-    a single round trip and has no hooks that span a series of redirected
-    requests.
-
-    See https://blog.golang.org/http-tracing for more.
-
-func ContextClientTrace(ctx context.Context) *ClientTrace
-    ContextClientTrace returns the ClientTrace associated with the provided
-    context. If none, it returns nil.
-
-type DNSDoneInfo struct {
-	// Addrs are the IPv4 and/or IPv6 addresses found in the DNS
-	// lookup. The contents of the slice should not be mutated.
-	Addrs []net.IPAddr
-
-	// Err is any error that occurred during the DNS lookup.
-	Err error
-
-	// Coalesced is whether the Addrs were shared with another
-	// caller who was doing the same DNS lookup concurrently.
-	Coalesced bool
+// RoundTrip wraps http.DefaultTransport.RoundTrip to keep track
+// of the current request.
+func (t *transport) RoundTrip(req *http.Request) (*http.Response, error) {
+    t.current = req
+    return http.DefaultTransport.RoundTrip(req)
 }
-    DNSDoneInfo contains information about the results of a DNS lookup.
 
-type DNSStartInfo struct {
-	Host string
+// GotConn prints whether the connection has been used previously
+// for the current request.
+func (t *transport) GotConn(info httptrace.GotConnInfo) {
+    fmt.Printf("Connection reused for %v? %v\n", t.current.URL, info.Reused)
 }
-    DNSStartInfo contains information about a DNS request.
 
-type GotConnInfo struct {
-	// Conn is the connection that was obtained. It is owned by
-	// the http.Transport and should not be read, written or
-	// closed by users of ClientTrace.
-	Conn net.Conn
+func main() {
+    t := &transport{}
 
-	// Reused is whether this connection has been previously
-	// used for another HTTP request.
-	Reused bool
+    req, _ := http.NewRequest("GET", "https://google.com", nil)
+    trace := &httptrace.ClientTrace{
+        GotConn: t.GotConn,
+    }
+    req = req.WithContext(httptrace.WithClientTrace(req.Context(), trace))
 
-	// WasIdle is whether this connection was obtained from an
-	// idle pool.
-	WasIdle bool
-
-	// IdleTime reports how long the connection was previously
-	// idle, if WasIdle is true.
-	IdleTime time.Duration
+    client := &http.Client{Transport: t}
+    if _, err := client.Do(req); err != nil {
+        log.Fatal(err)
+    }
 }
-    GotConnInfo is the argument to the [ClientTrace.GotConn] function and
-    contains information about the obtained connection.
+```
 
-type WroteRequestInfo struct {
-	// Err is any error encountered while writing the Request.
-	Err error
-}
-    WroteRequestInfo contains information provided to the WroteRequest hook.
+The program will follow the redirect of google.com to [www.google.com](http://www.google.com) and will output:
 
+```
+Connection reused for https://google.com? false
+Connection reused for https://www.google.com/? false
+```
+
+The Transport in the `net/http` package supports tracing of both HTTP/1 and HTTP/2 requests.
+
+If you are an author of a custom `http.RoundTripper` implementation, you can support tracing by checking the request context for an `*httptest.ClientTrace` and invoking the relevant hooks as the events occur.
+
+## Conclusion
+
+HTTP tracing is a valuable addition to Go for those who are interested in debugging HTTP request latency and writing tools for network debugging for outbound traffic. By enabling this new facility, we hope to see HTTP debugging, benchmarking and visualization tools from the community — such as [httpstat](https://github.com/davecheney/httpstat).
+
+Next article: [Seven years of Go](/blog/7years)
+Previous article: [Using Subtests and Sub-benchmarks](/blog/subtests)
+[Blog Index](/blog/all)[Why Go](/solutions/)[Use Cases](/solutions/use-cases)[Case Studies](/solutions/case-studies)[Get Started](/learn/)[Playground](/play)[Tour](/tour/)[Stack Overflow](https://stackoverflow.com/questions/tagged/go?tab=Newest)[Help](/help/)[Packages](https://pkg.go.dev)[Standard Library](/pkg/)[About Go Packages](https://pkg.go.dev/about)[About](/project)[Download](/dl/)[Blog](/blog/)[Issue Tracker](https://github.com/golang/go/issues)[Release Notes](/doc/devel/release)[Brand Guidelines](/brand)[Code of Conduct](/conduct)[Connect](https://www.twitter.com/golang)[Twitter](https://www.twitter.com/golang)[GitHub](https://github.com/golang)[Slack](https://invite.slack.golangbridge.org/)[r/golang](https://reddit.com/r/golang)[Meetup](https://www.meetup.com/pro/go)[Golang Weekly](https://golangweekly.com/) Opens in new window. 
+
+- [Copyright](/copyright)
+- [Terms of Service](/tos)
+- [Privacy Policy](http://www.google.com/intl/en/policies/privacy/)
+- [Report an Issue](/s/website-issue)
+- 
+
+https://google.comgo.dev uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic. [Learn more.](https://policies.google.com/technologies/cookies)Okay

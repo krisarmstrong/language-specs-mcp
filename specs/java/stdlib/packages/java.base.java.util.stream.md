@@ -1,4 +1,31 @@
-Module[java.base](../../../module-summary.html)
+java.util.stream (Java SE 21 & JDK 21)[Skip navigation links](#skip-navbar-top)Java SE 21 & JDK 21
+
+- [Overview](../../../../index.html)
+- [Module](../../../module-summary.html)
+- Package
+- Class
+- [Use](package-use.html)
+- [Tree](package-tree.html)
+- [Preview](../../../../preview-list.html)
+- [New](../../../../new-list.html)
+- [Deprecated](../../../../deprecated-list.html)
+- [Index](../../../../index-files/index-1.html)
+- [Help](../../../../help-doc.html#package)
+
+- 
+
+Package:
+
+  - [Description](#package-description)
+  - [Related Packages](#related-package-summary)
+  - [Classes and Interfaces](#class-summary)
+
+- Package: 
+- [Description](#package-description) | 
+- [Related Packages](#related-package-summary) | 
+- [Classes and Interfaces](#class-summary)
+
+[SEARCH](../../../../search.html)Module[java.base](../../../module-summary.html)
 
 # Package java.util.stream
 
@@ -409,3 +436,9 @@ Since:1.8
 
 - Related PackagesPackageDescription[java.util](../package-summary.html)Contains the collections framework, some internationalization support classes, a service loader, properties, random number generation, string parsing and scanning classes, base64 encoding and decoding, a bit array, and several miscellaneous utility classes.
 - All Classes and InterfacesInterfacesClassesEnum ClassesClassDescription[BaseStream](BaseStream.html)<T,S extends [BaseStream](BaseStream.html)<T,S>>Base interface for streams, which are sequences of elements supporting sequential and parallel aggregate operations.[Collector](Collector.html)<T,A,R>A [mutable reduction operation](package-summary.html#Reduction) that accumulates input elements into a mutable result container, optionally transforming the accumulated result into a final representation after all input elements have been processed.[Collector.Characteristics](Collector.Characteristics.html)Characteristics indicating properties of a `Collector`, which can be used to optimize reduction implementations.[Collectors](Collectors.html)Implementations of [Collector](Collector.html) that implement various useful reduction operations, such as accumulating elements into collections, summarizing elements according to various criteria, etc.[DoubleStream](DoubleStream.html)A sequence of primitive double-valued elements supporting sequential and parallel aggregate operations.[DoubleStream.Builder](DoubleStream.Builder.html)A mutable builder for a `DoubleStream`.[DoubleStream.DoubleMapMultiConsumer](DoubleStream.DoubleMapMultiConsumer.html)Represents an operation that accepts a `double`-valued argument and a DoubleConsumer, and returns no result.[IntStream](IntStream.html)A sequence of primitive int-valued elements supporting sequential and parallel aggregate operations.[IntStream.Builder](IntStream.Builder.html)A mutable builder for an `IntStream`.[IntStream.IntMapMultiConsumer](IntStream.IntMapMultiConsumer.html)Represents an operation that accepts an `int`-valued argument and an IntConsumer, and returns no result.[LongStream](LongStream.html)A sequence of primitive long-valued elements supporting sequential and parallel aggregate operations.[LongStream.Builder](LongStream.Builder.html)A mutable builder for a `LongStream`.[LongStream.LongMapMultiConsumer](LongStream.LongMapMultiConsumer.html)Represents an operation that accepts a `long`-valued argument and a LongConsumer, and returns no result.[Stream](Stream.html)<T>A sequence of elements supporting sequential and parallel aggregate operations.[Stream.Builder](Stream.Builder.html)<T>A mutable builder for a `Stream`.[StreamSupport](StreamSupport.html)Low-level utility methods for creating and manipulating streams.
+
+[Report a bug or suggest an enhancement](https://bugreport.java.com/bugreport/)
+ For further API reference and developer documentation see the [Java SE Documentation](https://docs.oracle.com/pls/topic/lookup?ctx=javase21&id=homepage), which contains more detailed, developer-targeted descriptions with conceptual overviews, definitions of terms, workarounds, and working code examples. [Other versions.](https://docs.oracle.com/en/java/javase/index.html)
+ Java is a trademark or registered trademark of Oracle and/or its affiliates in the US and other countries.
+[Copyright](../../../../../legal/copyright.html) © 1993, 2025, Oracle and/or its affiliates, 500 Oracle Parkway, Redwood Shores, CA 94065 USA.
+All rights reserved. Use is subject to [license terms](https://www.oracle.com/java/javase/terms/license/java21speclicense.html) and the [documentation redistribution policy](https://www.oracle.com/technetwork/java/redist-137594.html).

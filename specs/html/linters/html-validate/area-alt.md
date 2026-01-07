@@ -1,3 +1,14 @@
+HTML-validate - Require alternative text on `<area>` elements (area-alt)Toggle navigation[HTML-validate v10.5.0](/)
+
+- [User guide](../usage/index.html)
+- [Elements](../guide/metadata/simple-component.html)
+- [Rules](index.html)
+- [Developers guide](../dev/using-api.html)
+- [Changelog](../changelog/index.html)
+- [About](../about/index.html)
+
+html-validate-10.5.0
+
 ## Rules
 
 Rules
@@ -108,3 +119,5 @@ With this option disabled the following is correct:
 ## [Version history](#version-history)
 
 - 7.7.0 - Rule added.
+
+[Edit this page](https://gitlab.com/html-validate/html-validate/edit/master/docs/rules/area-alt.md)[View rule source](https://gitlab.com/html-validate/html-validate/blob/master/src/rules/area-alt.ts)
