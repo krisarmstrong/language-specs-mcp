@@ -21,7 +21,10 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.14.2"
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install pytest pytest-cov ruff mypy
 
       - name: Install
         run: npm ci
@@ -29,8 +32,17 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Test
+      - name: Test (Node)
         run: npm test
+
+      - name: Test (Python)
+        run: pytest tests/unit/ -v
+
+      - name: Lint (Python)
+        run: ruff check scripts/
+
+      - name: Type check (Python)
+        run: mypy scripts/ --ignore-missing-imports
 
       - name: Verify specs
         run: npm run verify
