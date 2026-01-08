@@ -1,6 +1,6 @@
 [project]
 name = "specforge-mcp"
-version = "1.6.2"
+version = "1.7.1"
 description = "Language specification server for LLMs"
 requires-python = ">=3.11"
 
