@@ -106,6 +106,12 @@ ignore = [
     "ANN",     # Type annotations optional in tests
     "PLR2004", # Magic values OK in tests
     "ARG",     # Unused args OK (fixtures)
+    "SIM117",  # Nested with OK in tests (clearer)
+    "DTZ007",  # Naive datetime OK in tests
+    "FURB162", # Timezone replacement OK in tests
+    "F841",    # Unused variables OK in tests (setup)
+    "E741",    # Ambiguous variable names OK in tests
+    "SIM222",  # or True OK in tests (clarity)
 ]
 
 [tool.ruff.lint.mccabe]

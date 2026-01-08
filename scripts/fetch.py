@@ -21,6 +21,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
 from threading import Lock
+from typing import Any
 
 from _common import (
     SPECS_DIR,
@@ -75,12 +76,13 @@ class LanguageResult:
     errors: list[str] = field(default_factory=list)
 
 
-def load_sources(language: str) -> dict:
+def load_sources(language: str) -> dict[str, Any]:
     """Load sources.json for a language."""
     path = SPECS_DIR / language / "sources.json"
     if not path.exists():
         return {"language": language, "files": []}
-    return json.loads(path.read_text(encoding="utf-8"))
+    result: dict[str, Any] = json.loads(path.read_text(encoding="utf-8"))
+    return result
 
 
 def is_stale(language: str) -> bool:
@@ -98,7 +100,7 @@ def is_stale(language: str) -> bool:
         return True
 
 
-def fetch_file(language: str, file_spec: dict) -> FetchResult:
+def fetch_file(language: str, file_spec: dict[str, Any]) -> FetchResult:
     """Fetch a single file based on its sources.json entry."""
     path = file_spec.get("path", "")
     urls = file_spec.get("urls", [])
