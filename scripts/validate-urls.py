@@ -17,7 +17,7 @@ import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from threading import Lock
 from typing import Any, Literal
 from urllib.error import HTTPError, URLError
@@ -86,7 +86,7 @@ class URLResult:
     redirect_url: str | None = None
     error_message: str | None = None
     response_time_ms: int | None = None
-    checked_at: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
+    checked_at: str = field(default_factory=lambda: datetime.now(UTC).isoformat())
 
     def to_dict(self) -> dict[str, str | int | None]:
         result: dict[str, str | int | None] = {
@@ -114,6 +114,7 @@ def build_ssl_context() -> ssl.SSLContext | None:
         return ssl.create_default_context(cafile=cafile)
     try:
         import certifi
+
         return ssl.create_default_context(cafile=certifi.where())
     except ImportError:
         return None
@@ -258,15 +259,20 @@ def validate_all_urls(urls_by_language: dict[str, set[str]]) -> dict:
 
                 # Log issues
                 if result.status == "error":
-                    log(f"[{completed}/{len(all_urls)}] ERROR: {url} - {result.error_message}", level="error")
+                    log(
+                        f"[{completed}/{len(all_urls)}] ERROR: {url} - {result.error_message}",
+                        level="error",
+                    )
                 elif result.status == "redirect":
-                    log(f"[{completed}/{len(all_urls)}] REDIRECT: {url} -> {result.redirect_url}", level="warning")
+                    log(
+                        f"[{completed}/{len(all_urls)}] REDIRECT: {url} -> {result.redirect_url}",
+                        level="warning",
+                    )
                 elif result.status == "timeout":
                     log(f"[{completed}/{len(all_urls)}] TIMEOUT: {url}", level="warning")
-                else:
-                    # Only log every 10th success to reduce noise
-                    if completed % 10 == 0:
-                        log(f"[{completed}/{len(all_urls)}] Validated {completed} URLs...")
+                # Only log every 10th success to reduce noise
+                elif completed % 10 == 0:
+                    log(f"[{completed}/{len(all_urls)}] Validated {completed} URLs...")
 
             except Exception as exc:
                 results[url] = URLResult(
@@ -298,7 +304,7 @@ def build_summary(results: dict[str, URLResult], url_to_languages: dict[str, lis
         summary[result.status] += 1
         languages = url_to_languages.get(url, [])
 
-        if result.status == "error" or result.status == "timeout":
+        if result.status in {"error", "timeout"}:
             for lang in languages:
                 if lang not in errors_by_language:
                     errors_by_language[lang] = []
@@ -325,21 +331,25 @@ def suggest_fixes(results: dict[str, URLResult]) -> list[dict[str, Any]]:
         if result.status == "redirect" and result.redirect_url:
             # Permanent redirect - suggest update
             if result.http_code == 301:
-                suggestions.append({
-                    "type": "permanent_redirect",
-                    "oldUrl": url,
-                    "newUrl": result.redirect_url,
-                    "action": "Update URL in sources",
-                    "autoFixable": True,
-                })
+                suggestions.append(
+                    {
+                        "type": "permanent_redirect",
+                        "oldUrl": url,
+                        "newUrl": result.redirect_url,
+                        "action": "Update URL in sources",
+                        "autoFixable": True,
+                    }
+                )
             else:
-                suggestions.append({
-                    "type": "temporary_redirect",
-                    "oldUrl": url,
-                    "newUrl": result.redirect_url,
-                    "action": "Monitor - may be temporary",
-                    "autoFixable": False,
-                })
+                suggestions.append(
+                    {
+                        "type": "temporary_redirect",
+                        "oldUrl": url,
+                        "newUrl": result.redirect_url,
+                        "action": "Monitor - may be temporary",
+                        "autoFixable": False,
+                    }
+                )
 
         elif result.status == "error":
             # Try to suggest alternatives
@@ -388,7 +398,7 @@ def main() -> int:
 
     # Build output
     output = {
-        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "generatedAt": datetime.now(UTC).isoformat(),
         "summary": summary_data["summary"],
         "errorsByLanguage": summary_data["errorsByLanguage"],
         "redirectsByLanguage": summary_data["redirectsByLanguage"],
@@ -403,7 +413,9 @@ def main() -> int:
     # Log summary
     s = summary_data["summary"]
     log("=== URL Validation Complete ===")
-    log(f"Total: {s['total']} | OK: {s['ok']} | Redirects: {s['redirect']} | Errors: {s['error']} | Timeouts: {s['timeout']}")
+    log(
+        f"Total: {s['total']} | OK: {s['ok']} | Redirects: {s['redirect']} | Errors: {s['error']} | Timeouts: {s['timeout']}"
+    )
     log(f"Results written to {OUTPUT_FILE}")
 
     if suggestions:

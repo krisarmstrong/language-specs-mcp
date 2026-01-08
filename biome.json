@@ -24,7 +24,8 @@
     "indentStyle": "space",
     "indentWidth": 2,
     "lineWidth": 100,
-    "lineEnding": "lf"
+    "lineEnding": "lf",
+    "formatWithErrors": false
   },
   "javascript": {
     "formatter": {
@@ -41,11 +42,14 @@
       "recommended": true,
       "correctness": {
         "noUnusedVariables": "error",
-        "noUnusedImports": "error"
+        "noUnusedImports": "error",
+        "noUnusedFunctionParameters": "error"
       },
       "style": {
         "useImportType": "error",
-        "noNonNullAssertion": "error"
+        "noNonNullAssertion": "error",
+        "useConst": "error",
+        "noDefaultExport": "off"
       },
       "suspicious": {
         "noConsole": {
@@ -66,7 +70,12 @@
           "options": {
             "maxAllowedComplexity": 20
           }
-        }
+        },
+        "noForEach": "warn"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "error",
+        "noGlobalEval": "error"
       }
     }
   },

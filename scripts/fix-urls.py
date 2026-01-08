@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from _common import SPECS_DIR, log
 
@@ -58,20 +58,21 @@ def find_and_replace_url_in_sources(old_url: str, new_url: str) -> list[dict]:
                     new_urls = [new_url if u == old_url else u for u in urls]
                     file_entry["urls"] = new_urls
                     modified = True
-                    changes.append({
-                        "language": lang_dir.name,
-                        "file": file_entry.get("path", ""),
-                        "oldUrl": old_url,
-                        "newUrl": new_url,
-                    })
+                    changes.append(
+                        {
+                            "language": lang_dir.name,
+                            "file": file_entry.get("path", ""),
+                            "oldUrl": old_url,
+                            "newUrl": new_url,
+                        }
+                    )
 
             if modified:
                 # Update timestamp
-                data["generatedAt"] = datetime.now(timezone.utc).isoformat()
+                data["generatedAt"] = datetime.now(UTC).isoformat()
                 # Write back
                 sources_file.write_text(
-                    json.dumps(data, indent=2, ensure_ascii=False),
-                    encoding="utf-8"
+                    json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8"
                 )
                 log(f"Updated {sources_file}")
 
@@ -87,7 +88,9 @@ def apply_auto_fixes(dry_run: bool = False) -> dict:
     suggestions = url_status.get("suggestions", [])
 
     # Filter to auto-fixable suggestions
-    auto_fixable = [s for s in suggestions if s.get("autoFixable") and s.get("type") == "permanent_redirect"]
+    auto_fixable = [
+        s for s in suggestions if s.get("autoFixable") and s.get("type") == "permanent_redirect"
+    ]
 
     if not auto_fixable:
         log("No auto-fixable URL changes found")
@@ -105,11 +108,13 @@ def apply_auto_fixes(dry_run: bool = False) -> dict:
 
         if dry_run:
             log(f"[DRY RUN] Would replace: {old_url} -> {new_url}")
-            all_changes.append({
-                "oldUrl": old_url,
-                "newUrl": new_url,
-                "dryRun": True,
-            })
+            all_changes.append(
+                {
+                    "oldUrl": old_url,
+                    "newUrl": new_url,
+                    "dryRun": True,
+                }
+            )
         else:
             log(f"Applying fix: {old_url} -> {new_url}")
             changes = find_and_replace_url_in_sources(old_url, new_url)
@@ -161,9 +166,9 @@ def main() -> int:
             log(f"=== Manual Fixes Required ({len(manual_fixes)}) ===")
             for fix in manual_fixes:
                 log(f"  [{fix['type']}] {fix['url']}")
-                if fix.get('error'):
+                if fix.get("error"):
                     log(f"    Error: {fix['error']}")
-                if fix.get('searchHint'):
+                if fix.get("searchHint"):
                     log(f"    Hint: {fix['searchHint']}")
         else:
             log("No manual fixes required")
@@ -179,7 +184,7 @@ def main() -> int:
 
         # Save fix log
         fix_log = {
-            "generatedAt": datetime.now(timezone.utc).isoformat(),
+            "generatedAt": datetime.now(UTC).isoformat(),
             "dryRun": dry_run,
             "totalChanges": result["applied"],
             "changes": result["changes"],

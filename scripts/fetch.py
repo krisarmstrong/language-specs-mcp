@@ -19,7 +19,7 @@ import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from threading import Lock
 
 from _common import (
@@ -57,6 +57,7 @@ def rate_limit(domain: str) -> None:
 @dataclass
 class FetchResult:
     """Result of fetching a single file."""
+
     path: str
     success: bool
     url: str | None = None
@@ -66,6 +67,7 @@ class FetchResult:
 @dataclass
 class LanguageResult:
     """Result of fetching all files for a language."""
+
     language: str
     success: int = 0
     failed: int = 0
@@ -89,8 +91,8 @@ def is_stale(language: str) -> bool:
 
     try:
         content = fetched_at_path.read_text(encoding="utf-8").strip()
-        fetched_time = datetime.fromisoformat(content.replace("Z", "+00:00"))
-        cutoff = datetime.now(timezone.utc) - timedelta(days=STALE_DAYS)
+        fetched_time = datetime.fromisoformat(content)
+        cutoff = datetime.now(UTC) - timedelta(days=STALE_DAYS)
         return fetched_time < cutoff
     except (ValueError, OSError):
         return True
@@ -116,6 +118,7 @@ def fetch_file(language: str, file_spec: dict) -> FetchResult:
         try:
             # Rate limit by domain
             from urllib.parse import urlparse
+
             domain = urlparse(url).netloc
             rate_limit(domain)
 
@@ -192,10 +195,13 @@ def fetch_language(language: str, dry_run: bool = False) -> LanguageResult:
 
 def get_languages() -> list[str]:
     """Get list of language directories."""
-    return sorted([
-        d.name for d in SPECS_DIR.iterdir()
-        if d.is_dir() and not d.name.startswith("_") and (d / "sources.json").exists()
-    ])
+    return sorted(
+        [
+            d.name
+            for d in SPECS_DIR.iterdir()
+            if d.is_dir() and not d.name.startswith("_") and (d / "sources.json").exists()
+        ]
+    )
 
 
 def main() -> int:
@@ -222,10 +228,7 @@ def main() -> int:
     args = [a for a in args if not a.startswith("-")]
 
     # Determine which languages to fetch
-    if args:
-        languages = args
-    else:
-        languages = get_languages()
+    languages = args or get_languages()
 
     # Filter to stale only in delta mode
     if delta_mode:
@@ -245,10 +248,7 @@ def main() -> int:
     all_results: list[LanguageResult] = []
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        futures = {
-            executor.submit(fetch_language, lang, dry_run): lang
-            for lang in languages
-        }
+        futures = {executor.submit(fetch_language, lang, dry_run): lang for lang in languages}
 
         for future in as_completed(futures):
             lang = futures[future]

@@ -10,13 +10,13 @@ import sys
 from pathlib import Path
 
 from _common import (
-    FetchError,
     SPECS_DIR,
+    FetchError,
     _simple_html_to_markdown,
     extract_main,
     fetch_bytes,
-    fetch_markdown_or_html,
     fetch_markdown,
+    fetch_markdown_or_html,
     fetch_section,
     fetch_url,
     find_unique,
@@ -56,18 +56,17 @@ def _extract_markdown_sections(markdown: str) -> dict[str, str]:
             current = line[3:].strip()
             buffer = []
             continue
-        if current:
-            if line.strip():
-                buffer.append(line)
+        if current and line.strip():
+            buffer.append(line)
     if current and buffer:
         sections[current] = "\n".join(buffer).strip()
     return sections
 
 
-def _extract_golangci_lint_descriptions(
-    html_text: str, linter_names: list[str]
-) -> dict[str, str]:
-    cleaned = re.sub(r"<(script|style)[^>]*>.*?</\\1>", " ", html_text, flags=re.I | re.S)
+def _extract_golangci_lint_descriptions(html_text: str, linter_names: list[str]) -> dict[str, str]:
+    cleaned = re.sub(
+        r"<(script|style)[^>]*>.*?</\\1>", " ", html_text, flags=re.IGNORECASE | re.DOTALL
+    )
     cleaned = re.sub(r"<[^>]+>", " ", cleaned)
     cleaned = html.unescape(cleaned)
     cleaned = re.sub(r"\\s+", " ", cleaned).strip()
@@ -218,6 +217,7 @@ def fetch_assembly() -> None:
     stamp_versions()
     log("=== Assembly specs complete ===")
 
+
 def fetch_javascript() -> None:
     specs_dir = SPECS_DIR / "javascript"
     log("=== Fetching JavaScript Specs ===")
@@ -362,9 +362,7 @@ def fetch_javascript() -> None:
             xo_config = fetch_url(
                 "https://raw.githubusercontent.com/xojs/eslint-config-xo/main/index.js"
             )
-            xo_rules = find_unique(
-                xo_config, r"['\"]([a-z][a-z0-9-]+(?:/[a-z0-9-]+)?)['\"]\\s*:"
-            )
+            xo_rules = find_unique(xo_config, r"['\"]([a-z][a-z0-9-]+(?:/[a-z0-9-]+)?)['\"]\\s*:")
         except FetchError as exc:
             log(f"Failed to fetch XO rules: {exc}")
             xo_rules = []
@@ -378,16 +376,21 @@ def fetch_javascript() -> None:
         }
 
         for rule in xo_rules:
-            if rule in {"rules", "overrides", "env", "parserOptions", "settings", "plugins", "extends"}:
+            if rule in {
+                "rules",
+                "overrides",
+                "env",
+                "parserOptions",
+                "settings",
+                "plugins",
+                "extends",
+            }:
                 continue
             log(f"  - xo/{rule}")
             if "/" in rule:
                 prefix, name = rule.split("/", 1)
                 doc_url = plugin_docs.get(prefix)
-                if doc_url:
-                    url = doc_url.format(name=name)
-                else:
-                    url = "https://github.com/xojs/xo"
+                url = doc_url.format(name=name) if doc_url else "https://github.com/xojs/xo"
             else:
                 url = f"https://eslint.org/docs/latest/rules/{rule}"
             fetch_markdown(
@@ -1166,7 +1169,9 @@ def fetch_go() -> None:
                 else:
                     optional_rules.append(name)
 
-        all_rules = sorted({*enabled_rules, *optional_rules, *disabled_rules, "embeddedstructfieldcheck"})
+        all_rules = sorted(
+            {*enabled_rules, *optional_rules, *disabled_rules, "embeddedstructfieldcheck"}
+        )
 
         linter_index_url = "https://golangci-lint.run/docs/linters/"
         linter_descriptions: dict[str, str] = {}
@@ -1362,9 +1367,7 @@ def fetch_java() -> None:
 
         try:
             checkstyle_html = fetch_url("https://checkstyle.sourceforge.io/checks.html")
-            checkstyle_rules = find_unique(
-                checkstyle_html, r"checks/([a-zA-Z0-9_/-]+)\\.html"
-            )
+            checkstyle_rules = find_unique(checkstyle_html, r"checks/([a-zA-Z0-9_/-]+)\\.html")
         except FetchError as exc:
             log(f"Failed to fetch Checkstyle rule list: {exc}")
             checkstyle_rules = []
@@ -1511,16 +1514,16 @@ def fetch_python() -> None:
                     "| Variables | `lowercase_with_underscores` |",
                     "| Constants | `UPPERCASE_WITH_UNDERSCORES` |",
                     "| Private | `_single_leading_underscore` |",
-                    "| \"Mangled\" | `__double_leading_underscore` |",
+                    '| "Mangled" | `__double_leading_underscore` |',
                     "",
                     "## Type Hints (PEP 484)",
                     "",
                     "```python",
                     "def greeting(name: str) -> str:",
-                    "    return f\"Hello, {name}\"",
+                    '    return f"Hello, {name}"',
                     "",
                     "def process(items: list[int]) -> dict[str, int]:",
-                    "    return {\"count\": len(items)}",
+                    '    return {"count": len(items)}',
                     "```",
                 ]
             ),
@@ -1536,11 +1539,11 @@ def fetch_python() -> None:
                     "```python",
                     "# BAD",
                     "def process(data):",
-                    "    return data.get(\"value\")",
+                    '    return data.get("value")',
                     "",
                     "# GOOD",
                     "def process(data: dict[str, Any]) -> str | None:",
-                    "    return data.get(\"value\")",
+                    '    return data.get("value")',
                     "```",
                     "",
                     "## Match Statements (3.10+)",
@@ -1570,7 +1573,7 @@ def fetch_python() -> None:
                     "        self.age = age",
                     "    ",
                     "    def __repr__(self):",
-                    "        return f\"User(name={self.name!r}, age={self.age})\"",
+                    '        return f"User(name={self.name!r}, age={self.age})"',
                     "",
                     "# GOOD",
                     "@dataclass",
@@ -1583,13 +1586,13 @@ def fetch_python() -> None:
                     "",
                     "```python",
                     "# File handling",
-                    "with open(\"file.txt\") as f:",
+                    'with open("file.txt") as f:',
                     "    content = f.read()",
                     "",
                     "# Multiple contexts",
                     "with (",
-                    "    open(\"input.txt\") as infile,",
-                    "    open(\"output.txt\", \"w\") as outfile,",
+                    '    open("input.txt") as infile,',
+                    '    open("output.txt", "w") as outfile,',
                     "):",
                     "    outfile.write(infile.read())",
                     "",
@@ -1600,7 +1603,7 @@ def fetch_python() -> None:
                     "def timer():",
                     "    start = time.time()",
                     "    yield",
-                    "    print(f\"Elapsed: {time.time() - start:.2f}s\")",
+                    '    print(f"Elapsed: {time.time() - start:.2f}s")',
                     "```",
                     "",
                     "## List/Dict/Set Comprehensions",
@@ -1635,13 +1638,13 @@ def fetch_python() -> None:
                     "",
                     "```python",
                     "# BAD",
-                    "\"Hello, \" + name + \"!\"",
-                    "\"Hello, {}!\".format(name)",
-                    "\"Hello, %s!\" % name",
+                    '"Hello, " + name + "!"',
+                    '"Hello, {}!".format(name)',
+                    '"Hello, %s!" % name',
                     "",
                     "# GOOD",
-                    "f\"Hello, {name}!\"",
-                    "f\"Value: {value:.2f}\"",
+                    'f"Hello, {name}!"',
+                    'f"Value: {value:.2f}"',
                     "f\"Debug: {obj=}\"  # Shows 'obj=<value>'",
                     "```",
                     "",
@@ -1650,7 +1653,7 @@ def fetch_python() -> None:
                     "```python",
                     "# Specific exceptions",
                     "try:",
-                    "    value = data[\"key\"]",
+                    '    value = data["key"]',
                     "except KeyError:",
                     "    value = default",
                     "",
@@ -1669,14 +1672,14 @@ def fetch_python() -> None:
                     "```python",
                     "# BAD",
                     "import os",
-                    "path = os.path.join(base, \"subdir\", \"file.txt\")",
+                    'path = os.path.join(base, "subdir", "file.txt")',
                     "if os.path.exists(path):",
                     "    with open(path) as f:",
                     "        pass",
                     "",
                     "# GOOD",
                     "from pathlib import Path",
-                    "path = Path(base) / \"subdir\" / \"file.txt\"",
+                    'path = Path(base) / "subdir" / "file.txt"',
                     "if path.exists():",
                     "    content = path.read_text()",
                     "```",
@@ -1782,19 +1785,19 @@ def fetch_python() -> None:
                     "# pyproject.toml",
                     "[tool.ruff]",
                     "line-length = 100",
-                    "target-version = \"py312\"",
+                    'target-version = "py312"',
                     "",
                     "[tool.ruff.lint]",
                     "select = [",
-                    "    \"E\",   # pycodestyle errors",
-                    "    \"W\",   # pycodestyle warnings",
-                    "    \"F\",   # pyflakes",
-                    "    \"I\",   # isort",
-                    "    \"UP\",  # pyupgrade",
-                    "    \"N\",   # pep8-naming",
-                    "    \"RUF\", # ruff-specific",
+                    '    "E",   # pycodestyle errors',
+                    '    "W",   # pycodestyle warnings',
+                    '    "F",   # pyflakes',
+                    '    "I",   # isort',
+                    '    "UP",  # pyupgrade',
+                    '    "N",   # pep8-naming',
+                    '    "RUF", # ruff-specific',
                     "]",
-                    "ignore = [\"E501\"]  # if you want longer lines",
+                    'ignore = ["E501"]  # if you want longer lines',
                     "```",
                 ]
             ),
@@ -1826,9 +1829,7 @@ def fetch_python() -> None:
             pylint_html = fetch_url(
                 "https://pylint.readthedocs.io/en/stable/user_guide/messages/index.html"
             )
-            pylint_messages = find_unique(
-                pylint_html, r"/user_guide/messages/([a-z0-9_-]+)\\.html"
-            )
+            pylint_messages = find_unique(pylint_html, r"/user_guide/messages/([a-z0-9_-]+)\\.html")
         except FetchError as exc:
             log(f"Failed to fetch Pylint message list: {exc}")
             pylint_messages = []
@@ -1973,7 +1974,7 @@ def fetch_python() -> None:
                     "Handler = Callable[[Request], Response]",
                     "",
                     "# Generic",
-                    "T = TypeVar(\"T\")",
+                    'T = TypeVar("T")',
                     "",
                     "class Stack(Generic[T]):",
                     "    def push(self, item: T) -> None: ...",
@@ -1987,10 +1988,10 @@ def fetch_python() -> None:
                     "",
                     "# defaultdict - auto-initialize missing keys",
                     "counts = defaultdict(int)",
-                    "counts[\"a\"] += 1",
+                    'counts["a"] += 1',
                     "",
                     "# Counter - count occurrences",
-                    "c = Counter(\"abracadabra\")",
+                    'c = Counter("abracadabra")',
                     "c.most_common(3)  # [('a', 5), ('b', 2), ('r', 2)]",
                     "",
                     "# deque - efficient double-ended queue",
@@ -1999,7 +2000,7 @@ def fetch_python() -> None:
                     "d.appendleft(0)",
                     "",
                     "# namedtuple (prefer dataclass for new code)",
-                    "Point = namedtuple(\"Point\", [\"x\", \"y\"])",
+                    'Point = namedtuple("Point", ["x", "y"])',
                     "```",
                 ]
             ),
@@ -2168,7 +2169,7 @@ def fetch_batch() -> None:
                     "## Quote paths",
                     "",
                     "```bat",
-                    "if exist \"%~f0\" echo Running",
+                    'if exist "%~f0" echo Running',
                     "```",
                     "",
                     "## Prefer CALL for subroutines",
@@ -2295,15 +2296,15 @@ def fetch_bash() -> None:
                     "## Prefer [[ ]] tests",
                     "",
                     "```bash",
-                    "if [[ -f \"$path\" ]]; then",
-                    "  echo \"exists\"",
+                    'if [[ -f "$path" ]]; then',
+                    '  echo "exists"',
                     "fi",
                     "```",
                     "",
                     "## Quote variables",
                     "",
                     "```bash",
-                    "echo \"$var\"",
+                    'echo "$var"',
                     "```",
                 ]
             ),
@@ -3160,7 +3161,13 @@ def fetch_powershell() -> None:
 def fetch_c() -> None:
     specs_dir = SPECS_DIR / "c"
     log("=== Fetching C Specs ===")
-    for subdir in ["stdlib/headers", "patterns", "formatters", "linters/clang-tidy", "linters/cppcheck"]:
+    for subdir in [
+        "stdlib/headers",
+        "patterns",
+        "formatters",
+        "linters/clang-tidy",
+        "linters/cppcheck",
+    ]:
         (specs_dir / subdir).mkdir(parents=True, exist_ok=True)
 
     if fetch_section("spec"):
@@ -3295,7 +3302,13 @@ def fetch_c() -> None:
 def fetch_cpp() -> None:
     specs_dir = SPECS_DIR / "cpp"
     log("=== Fetching C++ Specs ===")
-    for subdir in ["stdlib/headers", "patterns", "formatters", "linters/clang-tidy", "linters/cppcheck"]:
+    for subdir in [
+        "stdlib/headers",
+        "patterns",
+        "formatters",
+        "linters/clang-tidy",
+        "linters/cppcheck",
+    ]:
         (specs_dir / subdir).mkdir(parents=True, exist_ok=True)
 
     if fetch_section("patterns"):
@@ -3660,9 +3673,7 @@ def fetch_kotlin() -> None:
         )
         try:
             packages_html = fetch_url("https://kotlinlang.org/api/core/kotlin-stdlib/")
-            packages = find_unique(
-                packages_html, r'href="([a-zA-Z0-9_./-]+)/package-summary.html"'
-            )
+            packages = find_unique(packages_html, r'href="([a-zA-Z0-9_./-]+)/package-summary.html"')
         except FetchError as exc:
             log(f"Failed to fetch Kotlin packages: {exc}")
             packages = []
@@ -3879,6 +3890,7 @@ def fetch_lua() -> None:
     write_fetched_at(specs_dir)
     stamp_versions()
     log("=== Lua specs complete ===")
+
 
 def fetch_php() -> None:
     specs_dir = SPECS_DIR / "php"
@@ -4906,7 +4918,9 @@ def fetch_dockerfile() -> None:
             "Hadolint Rules",
         )
         try:
-            rules_md = fetch_url("https://raw.githubusercontent.com/hadolint/hadolint/master/README.md")
+            rules_md = fetch_url(
+                "https://raw.githubusercontent.com/hadolint/hadolint/master/README.md"
+            )
             rules = find_unique(rules_md, r"\b(DL[0-9]{4})\b")
         except FetchError as exc:
             log(f"Failed to fetch hadolint rules: {exc}")

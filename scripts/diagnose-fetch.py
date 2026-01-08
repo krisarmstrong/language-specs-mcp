@@ -10,7 +10,6 @@ import time
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-
 DEFAULT_URLS = [
     "https://www.google.com",
     "https://eslint.org/docs/latest/rules/",
@@ -36,7 +35,9 @@ def diagnose(url: str, timeout: float = 15.0) -> None:
             elapsed = time.monotonic() - start
             status = getattr(response, "status", "unknown")
             content_type = response.headers.get("Content-Type", "unknown")
-            sys.stdout.write(f"[ok] {url} status={status} type={content_type} time={elapsed:.2f}s\n")
+            sys.stdout.write(
+                f"[ok] {url} status={status} type={content_type} time={elapsed:.2f}s\n"
+            )
     except HTTPError as exc:
         elapsed = time.monotonic() - start
         sys.stdout.write(

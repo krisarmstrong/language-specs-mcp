@@ -29,6 +29,10 @@ jobs:
       - name: Install
         run: npm ci
 
+      - name: Security audit (npm)
+        run: npm audit --audit-level=high
+        continue-on-error: true  # Don't fail on upstream vulnerabilities
+
       - name: Build
         run: npm run build
 
@@ -36,13 +40,26 @@ jobs:
         run: npm test
 
       - name: Test (Python)
-        run: pytest tests/unit/ -v
+        run: pytest tests/unit/ -v --tb=short -W error
 
-      - name: Lint (Python)
-        run: ruff check scripts/
+      - name: Coverage (Python)
+        run: pytest tests/unit/ --cov=scripts --cov-report=term-missing --cov-fail-under=80
+        continue-on-error: true  # Target, not blocker
 
-      - name: Type check (Python)
-        run: mypy scripts/ --ignore-missing-imports
+      - name: Lint (TypeScript - Biome)
+        run: npx biome check src/ --error-on-warnings
+
+      - name: Format check (TypeScript - Biome)
+        run: npx biome format src/ --error-on-warnings
+
+      - name: Lint (Python - Ruff)
+        run: ruff check scripts/ --output-format=github
+
+      - name: Format check (Python - Ruff)
+        run: ruff format scripts/ --check
+
+      - name: Type check (Python - mypy strict)
+        run: mypy scripts/ --strict --ignore-missing-imports
 
       - name: Verify specs
         run: npm run verify

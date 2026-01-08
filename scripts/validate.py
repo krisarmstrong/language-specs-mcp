@@ -18,7 +18,7 @@ from __future__ import annotations
 
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -28,11 +28,12 @@ SPECS_ROOT = ROOT_DIR / "specs"
 
 # --- Freshness Command ---
 
+
 def cmd_freshness() -> int:
     """Check spec freshness."""
     max_age_days = int(os.getenv("MAX_AGE_DAYS", "90"))
     max_age_seconds = max_age_days * 24 * 60 * 60
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
 
     failures: list[str] = []
     languages = sorted([p for p in SPECS_ROOT.iterdir() if p.is_dir()])
@@ -49,7 +50,7 @@ def cmd_freshness() -> int:
             continue
 
         try:
-            parsed = datetime.fromisoformat(trimmed.replace("Z", "+00:00"))
+            parsed = datetime.fromisoformat(trimmed)
         except ValueError:
             failures.append(f"{lang_dir.name}: invalid .fetched-at ({trimmed})")
             continue
@@ -68,6 +69,7 @@ def cmd_freshness() -> int:
 
 
 # --- Stubs Command ---
+
 
 def is_stub_file(path: Path) -> bool:
     """Check if a file is a stub (1-2 lines starting with 'See:')."""
@@ -126,6 +128,7 @@ def cmd_stubs() -> int:
 
 
 # --- All Command ---
+
 
 def cmd_all() -> int:
     """Run all validators."""

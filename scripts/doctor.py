@@ -8,9 +8,8 @@ import os
 import shutil
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 SPECS_DIR = ROOT_DIR / "specs"
@@ -37,7 +36,7 @@ def parse_env_file() -> dict[str, str]:
 
 def parse_iso(value: str) -> datetime | None:
     try:
-        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return datetime.fromisoformat(value)
     except ValueError:
         return None
 
@@ -149,7 +148,7 @@ def main() -> int:
 
     latest = latest_fetched_at()
     if latest:
-        age_days = (datetime.now(timezone.utc) - latest).days
+        age_days = (datetime.now(UTC) - latest).days
         print(status_line("Last refresh", True, f"{latest.isoformat()} ({age_days} days ago)"))
     else:
         print(status_line("Last refresh", False, "no .fetched-at files"))

@@ -1,0 +1,164 @@
+[project]
+name = "specforge-mcp"
+version = "1.6.2"
+description = "Language specification server for LLMs"
+requires-python = ">=3.11"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["scripts", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "F",      # Pyflakes
+    "I",      # isort
+    "B",      # flake8-bugbear
+    "C4",     # flake8-comprehensions
+    "UP",     # pyupgrade
+    "ARG",    # flake8-unused-arguments
+    "SIM",    # flake8-simplify
+    "TCH",    # flake8-type-checking
+    "PTH",    # flake8-use-pathlib
+    "ERA",    # eradicate (commented code)
+    "PL",     # Pylint
+    "RUF",    # Ruff-specific
+    "PERF",   # Perflint
+    "FURB",   # refurb
+    "LOG",    # flake8-logging
+    "G",      # flake8-logging-format
+    "TRY",    # tryceratops
+    "FLY",    # flynt
+    "S",      # flake8-bandit (security)
+    "A",      # flake8-builtins
+    "COM",    # flake8-commas
+    "C90",    # mccabe complexity
+    "N",      # pep8-naming
+    "ANN",    # flake8-annotations
+    "ASYNC",  # flake8-async
+    "BLE",    # flake8-blind-except
+    "FBT",    # flake8-boolean-trap
+    "DTZ",    # flake8-datetimez
+    "T10",    # flake8-debugger
+    "DJ",     # flake8-django
+    "EM",     # flake8-errmsg
+    "EXE",    # flake8-executable
+    "ISC",    # flake8-implicit-str-concat
+    "ICN",    # flake8-import-conventions
+    "PIE",    # flake8-pie
+    "T20",    # flake8-print
+    "PYI",    # flake8-pyi
+    "Q",      # flake8-quotes
+    "RSE",    # flake8-raise
+    "RET",    # flake8-return
+    "SLF",    # flake8-self
+    "SLOT",   # flake8-slots
+    "TID",    # flake8-tidy-imports
+    "INT",    # flake8-gettext
+    "YTT",    # flake8-2020
+]
+
+ignore = [
+    "ANN401",  # Dynamically typed expressions (Any)
+    "PLR0913", # Too many arguments
+    "PLR2004", # Magic value comparison
+    "S101",    # assert usage (OK in tests)
+    "T201",    # print statements (OK in CLI scripts)
+    "EM101",   # Exception must not use a string literal
+    "EM102",   # Exception must not use f-string
+    "TRY003",  # Avoid specifying long messages outside exception class
+    "COM812",  # Trailing comma (conflicts with formatter)
+    "ISC001",  # Implicit string concat (conflicts with formatter)
+    "FBT001",  # Boolean positional arg (too strict)
+    "FBT002",  # Boolean default value (too strict)
+    "C901",    # McCabe complexity (will refactor later)
+    "PLR0911", # Too many return statements
+    "PLR0912", # Too many branches
+    "SLF001",  # Private member access (needed for HTML parser)
+    "EXE001",  # Shebang without executable (scripts run via python)
+    "PLW0603", # Global statement (needed for logger singleton)
+    "S603",    # Subprocess security (trusted input)
+    "S310",    # URL open audit (controlled URLs)
+    "S323",    # SSL unverified context (intentional option)
+    "PLC0415", # Import at top level (lazy imports OK)
+    "TRY301",  # Abstract raise (over-strict)
+    "TRY300",  # Move to else block (over-strict)
+    "S607",    # Partial executable path (pandoc is fine)
+    "BLE001",  # Blind except (sometimes needed)
+    "S110",    # Try-except-pass (handled intentionally)
+    "PERF401", # Use list.extend (readability preferred)
+    "SIM113",  # Use enumerate (style preference)
+    "E501",    # Line too long (formatter handles)
+    "PLW2901", # Loop variable overwrite (intentional)
+    "ANN002",  # Missing *args annotation
+    "ANN003",  # Missing **kwargs annotation
+    "A002",    # Shadowing builtin (log_message override)
+    "S104",    # Binding to all interfaces (local dev)
+    "FBT003",  # Boolean positional (status_line helper)
+    "PLR0915", # Too many statements (legacy code)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+    "S101",    # assert OK in tests
+    "ANN",     # Type annotations optional in tests
+    "PLR2004", # Magic values OK in tests
+    "ARG",     # Unused args OK (fixtures)
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 15
+
+[tool.ruff.lint.pylint]
+max-args = 8
+max-branches = 15
+max-returns = 6
+max-statements = 50
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+docstring-code-format = true
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = false
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = false
+show_error_codes = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = true
+no_implicit_optional = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short --strict-markers -W error"
+filterwarnings = ["error"]
+
+[tool.coverage.run]
+source = ["scripts"]
+branch = true
+omit = ["tests/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+]
+fail_under = 5
+show_missing = true

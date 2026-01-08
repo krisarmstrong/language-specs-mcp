@@ -46,7 +46,7 @@ def update_content(content: str, label: str, version: str, fallback_heading: str
             return "\n".join(lines)
 
     insert_at = heading_index + 1
-    if lines[insert_at:insert_at + 1] != [""]:
+    if lines[insert_at : insert_at + 1] != [""]:
         lines.insert(insert_at, "")
         insert_at += 1
     lines.insert(insert_at, new_line)

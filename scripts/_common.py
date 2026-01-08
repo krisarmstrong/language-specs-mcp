@@ -13,12 +13,15 @@ import subprocess
 import sys
 import time
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from html.parser import HTMLParser
 from pathlib import Path
-from typing import Iterable
+from typing import TYPE_CHECKING
 from urllib.error import URLError
 from urllib.request import Request, urlopen
+
+if TYPE_CHECKING:
+    from collections.abc import Iterable
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT_DIR = SCRIPT_DIR.parent
@@ -233,11 +236,11 @@ def _configure_logger() -> logging.Logger:
 
 
 def fetch_section(section: str) -> bool:
-    return FETCH_SCOPE == "all" or FETCH_SCOPE == section
+    return FETCH_SCOPE in ("all", section)
 
 
 def utc_now() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def ensure_dir(path: Path) -> None:
@@ -368,8 +371,7 @@ def html_to_markdown(html: str, output: Path) -> bool:
                 ["pandoc", "-f", "html", "-t", "markdown", "-o", str(output)],
                 input=html.encode("utf-8"),
                 check=True,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
+                capture_output=True,
                 timeout=PANDOC_TIMEOUT,
             )
             return True
@@ -475,12 +477,13 @@ def strip_tag_prefix(value: str, prefix: str | None) -> str:
     """Strip tag prefix from version string if present."""
     if not prefix:
         return value
-    return value[len(prefix):] if value.startswith(prefix) else value
+    return value.removeprefix(prefix)
 
 
 def fetch_json(url: str) -> dict:
     """Fetch URL and parse as JSON."""
     import json
+
     return json.loads(fetch_url(url))
 
 

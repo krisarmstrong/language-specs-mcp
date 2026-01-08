@@ -36,10 +36,10 @@ PLACEHOLDER_DOMAINS = {
 
 # URL patterns that indicate malformed URLs
 MALFORMED_PATTERNS = [
-    r'`$',           # Trailing backtick
-    r'`',            # Any backtick
-    r'\]\(https?://',  # Markdown link artifact
-    r'\)$',          # Trailing parenthesis from markdown
+    r"`$",  # Trailing backtick
+    r"`",  # Any backtick
+    r"\]\(https?://",  # Markdown link artifact
+    r"\)$",  # Trailing parenthesis from markdown
 ]
 
 
@@ -48,17 +48,14 @@ def is_placeholder_url(url: str) -> bool:
     try:
         parsed = urlparse(url)
         domain = parsed.netloc.lower()
-        return domain in PLACEHOLDER_DOMAINS or domain.endswith('.example.com')
+        return domain in PLACEHOLDER_DOMAINS or domain.endswith(".example.com")
     except Exception:
         return False
 
 
 def is_malformed_url(url: str) -> bool:
     """Check if URL has malformed characters."""
-    for pattern in MALFORMED_PATTERNS:
-        if re.search(pattern, url):
-            return True
-    return False
+    return any(re.search(pattern, url) for pattern in MALFORMED_PATTERNS)
 
 
 def fix_malformed_url(url: str) -> str | None:
@@ -66,22 +63,22 @@ def fix_malformed_url(url: str) -> str | None:
     fixed = url
 
     # Remove trailing backticks
-    fixed = fixed.rstrip('`')
+    fixed = fixed.rstrip("`")
 
     # Remove markdown link artifacts
-    if '](http' in fixed:
+    if "](http" in fixed:
         # Extract just the first URL
-        match = re.match(r'(https?://[^\]]+)', fixed)
+        match = re.match(r"(https?://[^\]]+)", fixed)
         if match:
             fixed = match.group(1)
 
     # Remove trailing parenthesis
-    fixed = fixed.rstrip(')')
+    fixed = fixed.rstrip(")")
 
     # Validate the fixed URL
     try:
         parsed = urlparse(fixed)
-        if parsed.scheme in ('http', 'https') and parsed.netloc:
+        if parsed.scheme in ("http", "https") and parsed.netloc:
             return fixed
     except Exception:
         pass
@@ -120,10 +117,7 @@ def build_error_set(status_data: dict) -> set[str]:
 
 
 def process_sources_file(
-    sources_path: Path,
-    redirect_map: dict[str, str],
-    error_urls: set[str],
-    dry_run: bool = False
+    sources_path: Path, redirect_map: dict[str, str], error_urls: set[str], dry_run: bool = False
 ) -> dict:
     """Process a single sources.json file and clean up URLs."""
     stats = {
@@ -193,8 +187,7 @@ def process_sources_file(
 
     if modified and not dry_run:
         sources_path.write_text(
-            json.dumps(data, indent=2, ensure_ascii=False) + "\n",
-            encoding="utf-8"
+            json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
         )
 
     return stats
@@ -243,11 +236,11 @@ def main() -> int:
                 total_stats[key] += stats[key]
 
         changes = (
-            stats["placeholders_removed"] +
-            stats["malformed_fixed"] +
-            stats["malformed_removed"] +
-            stats["redirects_updated"] +
-            stats["errors_removed"]
+            stats["placeholders_removed"]
+            + stats["malformed_fixed"]
+            + stats["malformed_removed"]
+            + stats["redirects_updated"]
+            + stats["errors_removed"]
         )
 
         if changes > 0:

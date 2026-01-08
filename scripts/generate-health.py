@@ -4,12 +4,14 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
-from pathlib import Path
-from typing import Iterable
+from datetime import UTC, datetime
+from typing import TYPE_CHECKING
 
 from _common import SPECS_DIR, log
 
+if TYPE_CHECKING:
+    from collections.abc import Iterable
+    from pathlib import Path
 
 ROOT_DIR = SPECS_DIR.parent
 TOOLS_JSON = ROOT_DIR / "tools" / "versions.json"
@@ -50,7 +52,7 @@ def read_fetched_at(lang_dir: Path) -> datetime | None:
         return None
     value = path.read_text(encoding="utf-8").strip()
     try:
-        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return datetime.fromisoformat(value)
     except ValueError:
         return None
 
@@ -122,7 +124,7 @@ def gather_formatters(lang_dir: Path) -> list[dict]:
 def build_language_record(language: str, tools: dict[str, dict], url_status: dict) -> dict:
     lang_dir = SPECS_DIR / language
     fetched_at = read_fetched_at(lang_dir)
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     freshness_days = None
     if fetched_at:
         freshness_days = (now - fetched_at).days
@@ -180,7 +182,7 @@ def main() -> None:
     search_generated_at, search_counts = load_search_summary()
     url_status = load_url_status()
     languages = sorted([entry.name for entry in SPECS_DIR.iterdir() if entry.is_dir()])
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     records = []
     for language in languages:
         if language.startswith("."):
@@ -216,8 +218,10 @@ def main() -> None:
 
     # Log URL status summary if available
     if url_validated_at:
-        log(f"URL validation from {url_validated_at}: {url_summary.get('ok', 0)} OK, "
-            f"{url_summary.get('redirect', 0)} redirects, {url_summary.get('error', 0)} errors")
+        log(
+            f"URL validation from {url_validated_at}: {url_summary.get('ok', 0)} OK, "
+            f"{url_summary.get('redirect', 0)} redirects, {url_summary.get('error', 0)} errors"
+        )
 
 
 if __name__ == "__main__":

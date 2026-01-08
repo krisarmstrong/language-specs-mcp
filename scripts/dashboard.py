@@ -11,14 +11,13 @@ from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-
 ROOT_DIR = Path(__file__).resolve().parent.parent
 SITE_DIR = ROOT_DIR / "docs" / "site"
 GENERATE_HEALTH = ROOT_DIR / "scripts" / "generate-health.py"
 
 
 class _DashboardHandler(SimpleHTTPRequestHandler):
-    def __init__(self, *args, directory: str | Path = SITE_DIR, **kwargs):
+    def __init__(self, *args, directory: str | Path = SITE_DIR, **kwargs) -> None:
         super().__init__(*args, directory=str(directory), **kwargs)
 
     def log_message(self, format: str, *args) -> None:

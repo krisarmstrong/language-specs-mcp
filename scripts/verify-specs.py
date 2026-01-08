@@ -96,7 +96,9 @@ def main() -> None:
     if failures:
         failures_text = "\n".join(f"- {item}" for item in failures)
         table_text = "\n".join(coverage_table)
-        raise SystemExit(f"Spec verification failed:\n{failures_text}\n\nCoverage summary:\n{table_text}")
+        raise SystemExit(
+            f"Spec verification failed:\n{failures_text}\n\nCoverage summary:\n{table_text}"
+        )
 
     print(f"Spec verification passed for {len(languages)} languages.")
     print("\nCoverage summary:")

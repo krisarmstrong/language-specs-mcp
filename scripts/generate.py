@@ -14,7 +14,7 @@ from __future__ import annotations
 
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -24,6 +24,7 @@ SPECS_ROOT = ROOT_DIR / "specs"
 
 
 # --- Shared Utilities ---
+
 
 def list_markdown_files(dir_path: Path) -> list[Path]:
     """Recursively list all markdown files in a directory."""
@@ -49,13 +50,11 @@ def read_fetched_at(lang_dir: Path) -> str:
 
 def get_language_dirs() -> list[Path]:
     """Get all language directories."""
-    return sorted([
-        p for p in SPECS_ROOT.iterdir()
-        if p.is_dir() and not p.name.startswith("_")
-    ])
+    return sorted([p for p in SPECS_ROOT.iterdir() if p.is_dir() and not p.name.startswith("_")])
 
 
 # --- Index Command ---
+
 
 def to_entry(category: str, lang_dir: Path, file_path: Path) -> dict[str, str]:
     """Create an index entry for a file."""
@@ -69,7 +68,7 @@ def cmd_index() -> int:
     language_dirs = get_language_dirs()
 
     root_index: dict[str, Any] = {
-        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "generatedAt": datetime.now(UTC).isoformat(),
         "languages": [],
     }
 
@@ -78,10 +77,7 @@ def cmd_index() -> int:
         fetched_at = read_fetched_at(lang_dir)
 
         # Top-level spec files
-        top_level = [
-            f for f in lang_dir.iterdir()
-            if f.is_file() and f.name.endswith(".md")
-        ]
+        top_level = [f for f in lang_dir.iterdir() if f.is_file() and f.name.endswith(".md")]
         spec_entries = [to_entry("spec", lang_dir, f) for f in top_level]
 
         # Standard library
@@ -89,13 +85,20 @@ def cmd_index() -> int:
         stdlib_entries = [to_entry("stdlib", lang_dir, f) for f in list_markdown_files(stdlib_dir)]
 
         # Linters
-        linter_entries = [to_entry("linters", lang_dir, f) for f in list_markdown_files(lang_dir / "linters")]
+        linter_entries = [
+            to_entry("linters", lang_dir, f) for f in list_markdown_files(lang_dir / "linters")
+        ]
 
         # Formatters
-        formatter_entries = [to_entry("formatters", lang_dir, f) for f in list_markdown_files(lang_dir / "formatters")]
+        formatter_entries = [
+            to_entry("formatters", lang_dir, f)
+            for f in list_markdown_files(lang_dir / "formatters")
+        ]
 
         # Patterns
-        pattern_entries = [to_entry("patterns", lang_dir, f) for f in list_markdown_files(lang_dir / "patterns")]
+        pattern_entries = [
+            to_entry("patterns", lang_dir, f) for f in list_markdown_files(lang_dir / "patterns")
+        ]
 
         categories = {
             "spec": spec_entries,
@@ -107,7 +110,13 @@ def cmd_index() -> int:
 
         counts = {k: len(v) for k, v in categories.items()}
 
-        items = [*spec_entries, *stdlib_entries, *linter_entries, *formatter_entries, *pattern_entries]
+        items = [
+            *spec_entries,
+            *stdlib_entries,
+            *linter_entries,
+            *formatter_entries,
+            *pattern_entries,
+        ]
 
         lang_index = {
             "language": language,
@@ -118,7 +127,9 @@ def cmd_index() -> int:
         }
 
         (lang_dir / "index.json").write_text(json.dumps(lang_index, indent=2), encoding="utf-8")
-        root_index["languages"].append({"language": language, "fetchedAt": fetched_at, "counts": counts})
+        root_index["languages"].append(
+            {"language": language, "fetchedAt": fetched_at, "counts": counts}
+        )
 
     (SPECS_ROOT / "index.json").write_text(json.dumps(root_index, indent=2), encoding="utf-8")
     print(f"Generated index for {len(language_dirs)} languages")
@@ -126,6 +137,7 @@ def cmd_index() -> int:
 
 
 # --- Search Command ---
+
 
 def detect_category(rel_path: str) -> str:
     """Detect the category of a file from its path."""
@@ -145,7 +157,7 @@ def cmd_search() -> int:
     language_dirs = get_language_dirs()
 
     root_index: dict[str, Any] = {
-        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "generatedAt": datetime.now(UTC).isoformat(),
         "languages": [],
     }
 
@@ -157,16 +169,18 @@ def cmd_search() -> int:
         for file_path in files:
             rel_path = file_path.relative_to(lang_dir).as_posix()
             content = file_path.read_text(encoding="utf-8")
-            entries.append({
-                "path": rel_path,
-                "category": detect_category(rel_path),
-                "name": rel_path.replace(".md", ""),
-                "content": content,
-            })
+            entries.append(
+                {
+                    "path": rel_path,
+                    "category": detect_category(rel_path),
+                    "name": rel_path.replace(".md", ""),
+                    "content": content,
+                }
+            )
 
         language_index = {
             "language": language,
-            "generatedAt": datetime.now(timezone.utc).isoformat(),
+            "generatedAt": datetime.now(UTC).isoformat(),
             "entries": entries,
         }
 
@@ -179,6 +193,7 @@ def cmd_search() -> int:
 
 
 # --- All Command ---
+
 
 def cmd_all() -> int:
     """Run all generators."""

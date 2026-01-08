@@ -8,7 +8,6 @@ from pathlib import Path
 
 from _common import FetchError, extract_main, fetch_url, html_to_markdown, log, write_fetched_at
 
-
 ROOT_DIR = Path(__file__).resolve().parent.parent
 SPECS_DIR = ROOT_DIR / "specs"
 
@@ -77,7 +76,9 @@ def iter_stub_files(include_all: bool) -> list[Path]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Replace stub markdown files by fetching sources.")
-    parser.add_argument("--all", action="store_true", help="Process all stub files, not just spec/overview.")
+    parser.add_argument(
+        "--all", action="store_true", help="Process all stub files, not just spec/overview."
+    )
     parser.add_argument("--limit", type=int, default=0, help="Limit number of files processed.")
     parser.add_argument("--dry-run", action="store_true", help="Log actions without writing files.")
     args = parser.parse_args()
