@@ -32,7 +32,7 @@ def sample_language(specs_dir):
         "files": [
             {"path": "spec.md", "urls": ["https://example.com/spec"]},
             {"path": "stdlib/os.md", "urls": ["https://example.com/os"]},
-        ]
+        ],
     }
     (lang_dir / "sources.json").write_text(json.dumps(sources))
     return lang_dir
@@ -58,7 +58,7 @@ def sample_registry(tmp_path):
                 "version": "5.3.0",
                 "label": "version",
                 "files": ["specs/typescript/spec.md"],
-            }
+            },
         ]
     }
     (tools_dir / "versions.json").write_text(json.dumps(registry))
@@ -68,9 +68,9 @@ def sample_registry(tmp_path):
 @pytest.fixture
 def mock_fetch(monkeypatch):
     """Mock fetch_url to avoid actual network requests."""
+
     def fake_fetch(url: str) -> str:
         return f"# Content from {url}\n\nSample markdown content."
 
-    from _common import fetch_url
     monkeypatch.setattr("_common.fetch_url", fake_fetch)
     return fake_fetch
