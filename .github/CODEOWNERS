@@ -1,0 +1,33 @@
+# CODEOWNERS - Define code ownership for automated PR reviews
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything
+* @krisarmstrong
+
+# TypeScript MCP server
+src/ @krisarmstrong
+
+# Python data pipeline
+scripts/ @krisarmstrong
+
+# Specifications (auto-generated, but changes should be reviewed)
+specs/ @krisarmstrong
+
+# Configuration files
+*.json @krisarmstrong
+*.yml @krisarmstrong
+*.yaml @krisarmstrong
+
+# Documentation
+*.md @krisarmstrong
+docs/ @krisarmstrong
+
+# CI/CD workflows
+.github/ @krisarmstrong
+
+# Security-sensitive files
+SECURITY.md @krisarmstrong
+package-lock.json @krisarmstrong
+
+# Test files
+tests/ @krisarmstrong
