@@ -118,7 +118,7 @@ Requirements:
 Clone, install, and refresh from GitHub:
 
 ```bash
-git clone https://github.com/openai/specforge-mcp.git
+git clone https://github.com/krisarmstrong/language-specs-mcp.git
 cd specforge-mcp
 npm install
 npm run refresh
