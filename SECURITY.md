@@ -4,8 +4,8 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.6.x   | :white_check_mark: |
-| < 1.6   | :x:                |
+| 1.7.x   | :white_check_mark: |
+| < 1.7   | :x:                |
 
 ## Reporting a Vulnerability
 
@@ -42,7 +42,7 @@ FETCH_INSECURE=1 python scripts/fetch.py
 
 Known security considerations:
 
-- **MCP SDK**: Contains a ReDoS vulnerability ([GHSA-8r9q-7v3j-jr4g](https://github.com/advisories/GHSA-8r9q-7v3j-jr4g)) - upstream issue, no fix available yet. Monitor for updates.
+- **MCP SDK**: ReDoS vulnerability ([GHSA-8r9q-7v3j-jr4g](https://github.com/advisories/GHSA-8r9q-7v3j-jr4g)) was patched in v1.25.2+. Ensure you're running the latest version.
 - **Node.js dependencies**: Run `npm audit` to check for vulnerabilities
 - **Python dependencies**: Minimal external dependencies used
 
