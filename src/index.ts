@@ -545,6 +545,223 @@ async function getChecklist(language: string): Promise<string> {
   return `No generation checklist available for ${language} yet.\n\nGeneral best practices:\n- Follow language idioms and conventions\n- Use the language's standard formatting tools\n- Handle errors explicitly\n- Prefer immutable data where possible\n- Write self-documenting code with clear names`;
 }
 
+async function getSecurityChecklist(): Promise<string> {
+  const checklistPath = resolveSpecPath("_shared", "security", "owasp-checklist.md");
+  if (checklistPath && (await fileExists(checklistPath))) {
+    return await readFile(checklistPath, "utf-8");
+  }
+  return "Security checklist not available.";
+}
+
+async function getAntiPatterns(): Promise<string> {
+  const antiPatternsPath = resolveSpecPath("_shared", "patterns", "llm-anti-patterns.md");
+  if (antiPatternsPath && (await fileExists(antiPatternsPath))) {
+    return await readFile(antiPatternsPath, "utf-8");
+  }
+  return "Anti-patterns database not available.";
+}
+
+const FRAMEWORKS: Record<string, string[]> = {
+  javascript: ["react", "express", "nextjs", "vue"],
+  typescript: ["react", "express", "nextjs", "vue", "angular"],
+  python: ["fastapi", "django", "flask"],
+};
+
+async function getFrameworkChecklist(language: string, framework: string): Promise<string> {
+  if (!isSupportedLanguage(language)) {
+    return `Unsupported language: ${language}`;
+  }
+  if (!isNonEmptyString(framework)) {
+    return "Framework must be a non-empty string.";
+  }
+
+  const checklistPath = resolveSpecPath(language, "frameworks", framework, "checklist.md");
+  if (checklistPath && (await fileExists(checklistPath))) {
+    return await readFile(checklistPath, "utf-8");
+  }
+
+  // Try patterns file as fallback
+  const patternsPath = resolveSpecPath(language, "frameworks", framework, "patterns.md");
+  if (patternsPath && (await fileExists(patternsPath))) {
+    return await readFile(patternsPath, "utf-8");
+  }
+
+  const availableFrameworks = FRAMEWORKS[language] ?? [];
+  return `Framework checklist not found: ${language}/${framework}\n\nAvailable frameworks for ${language}: ${availableFrameworks.join(", ") || "none"}`;
+}
+
+interface ProjectConfig {
+  language: string;
+  configType: string;
+  rules: string[];
+  summary: string;
+}
+
+async function getProjectRules(configPath: string): Promise<string> {
+  const resolvedPath = resolve(configPath);
+
+  if (!(await fileExists(resolvedPath))) {
+    return `Config file not found: ${configPath}`;
+  }
+
+  try {
+    const content = await readFile(resolvedPath, "utf-8");
+    const fileName = configPath.split(/[/\\]/).pop() ?? "";
+    const config = parseProjectConfig(fileName, content);
+
+    if (!config) {
+      return `Unable to parse config file: ${fileName}. Supported formats: pyproject.toml, .eslintrc.json, .eslintrc.js, biome.json, tsconfig.json, .prettierrc`;
+    }
+
+    return formatProjectConfig(config);
+  } catch (error) {
+    return `Error reading config: ${error instanceof Error ? error.message : String(error)}`;
+  }
+}
+
+function parseProjectConfig(fileName: string, content: string): ProjectConfig | null {
+  const lowerName = fileName.toLowerCase();
+
+  if (lowerName === "pyproject.toml") {
+    return parsePyprojectToml(content);
+  }
+  if (lowerName.includes("eslint") && lowerName.endsWith(".json")) {
+    return parseEslintConfig(content);
+  }
+  if (lowerName === "biome.json" || lowerName === "biome.jsonc") {
+    return parseBiomeConfig(content);
+  }
+  if (lowerName === "tsconfig.json") {
+    return parseTsConfig(content);
+  }
+
+  return null;
+}
+
+function parsePyprojectToml(content: string): ProjectConfig {
+  const rules: string[] = [];
+  let summary = "";
+
+  // Extract ruff config
+  const ruffSelectMatch = content.match(/\[tool\.ruff\.lint\][\s\S]*?select\s*=\s*\[([\s\S]*?)\]/);
+  if (ruffSelectMatch) {
+    const selected = ruffSelectMatch[1].match(/"([^"]+)"/g) ?? [];
+    rules.push(`Ruff rules enabled: ${selected.map((s) => s.replace(/"/g, "")).join(", ")}`);
+  }
+
+  const ruffIgnoreMatch = content.match(/ignore\s*=\s*\[([\s\S]*?)\]/);
+  if (ruffIgnoreMatch) {
+    const ignored = ruffIgnoreMatch[1].match(/"([^"]+)"/g) ?? [];
+    rules.push(`Ruff rules ignored: ${ignored.map((s) => s.replace(/"/g, "")).join(", ")}`);
+  }
+
+  const lineLengthMatch = content.match(/line-length\s*=\s*(\d+)/);
+  if (lineLengthMatch) {
+    rules.push(`Line length: ${lineLengthMatch[1]}`);
+  }
+
+  const targetVersionMatch = content.match(/target-version\s*=\s*"([^"]+)"/);
+  if (targetVersionMatch) {
+    rules.push(`Target Python version: ${targetVersionMatch[1]}`);
+  }
+
+  summary = rules.length > 0 ? "Python project with Ruff configuration" : "Python project (no lint config found)";
+
+  return { language: "python", configType: "pyproject.toml", rules, summary };
+}
+
+function parseEslintConfig(content: string): ProjectConfig {
+  const rules: string[] = [];
+
+  try {
+    const config = JSON.parse(content);
+
+    if (config.rules) {
+      const enabledRules = Object.entries(config.rules)
+        .filter(([, v]) => v !== "off" && v !== 0)
+        .map(([k]) => k);
+      if (enabledRules.length > 0) {
+        rules.push(`ESLint rules: ${enabledRules.slice(0, 20).join(", ")}${enabledRules.length > 20 ? ` (+${enabledRules.length - 20} more)` : ""}`);
+      }
+    }
+
+    if (config.extends) {
+      const extends_ = Array.isArray(config.extends) ? config.extends : [config.extends];
+      rules.push(`Extends: ${extends_.join(", ")}`);
+    }
+  } catch {
+    rules.push("Unable to parse ESLint config");
+  }
+
+  return { language: "javascript", configType: "eslint", rules, summary: "JavaScript/TypeScript project with ESLint" };
+}
+
+function parseBiomeConfig(content: string): ProjectConfig {
+  const rules: string[] = [];
+
+  try {
+    const config = JSON.parse(content);
+
+    if (config.linter?.rules) {
+      const categories = Object.keys(config.linter.rules);
+      rules.push(`Biome lint categories: ${categories.join(", ")}`);
+    }
+
+    if (config.formatter) {
+      if (config.formatter.indentStyle) rules.push(`Indent: ${config.formatter.indentStyle}`);
+      if (config.formatter.lineWidth) rules.push(`Line width: ${config.formatter.lineWidth}`);
+    }
+  } catch {
+    rules.push("Unable to parse Biome config");
+  }
+
+  return { language: "typescript", configType: "biome", rules, summary: "TypeScript project with Biome" };
+}
+
+function parseTsConfig(content: string): ProjectConfig {
+  const rules: string[] = [];
+
+  try {
+    // Remove comments for JSON parsing
+    const cleanContent = content.replace(/\/\*[\s\S]*?\*\/|\/\/.*/g, "");
+    const config = JSON.parse(cleanContent);
+
+    if (config.compilerOptions) {
+      const opts = config.compilerOptions;
+      if (opts.strict) rules.push("strict mode enabled");
+      if (opts.noImplicitAny) rules.push("noImplicitAny");
+      if (opts.strictNullChecks) rules.push("strictNullChecks");
+      if (opts.target) rules.push(`target: ${opts.target}`);
+      if (opts.module) rules.push(`module: ${opts.module}`);
+    }
+  } catch {
+    rules.push("Unable to parse tsconfig");
+  }
+
+  return { language: "typescript", configType: "tsconfig", rules, summary: "TypeScript project configuration" };
+}
+
+function formatProjectConfig(config: ProjectConfig): string {
+  let output = `# Project Configuration: ${config.configType}\n\n`;
+  output += `**Language:** ${config.language}\n`;
+  output += `**Summary:** ${config.summary}\n\n`;
+
+  if (config.rules.length > 0) {
+    output += "## Active Rules\n\n";
+    for (const rule of config.rules) {
+      output += `- ${rule}\n`;
+    }
+  }
+
+  output += "\n## Recommendations\n\n";
+  output += "When generating code for this project:\n";
+  output += "- Follow the configured lint rules\n";
+  output += "- Match the project's formatting settings\n";
+  output += "- Use the target language version features only\n";
+
+  return output;
+}
+
 const server = new Server(
   {
     name: "SpecForge",
@@ -663,6 +880,61 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
         required: ["language"],
       },
     },
+    {
+      name: "get_security_checklist",
+      description:
+        "Get OWASP-based security checklist. Call this BEFORE writing code that handles user input, authentication, or sensitive data. Returns SQL injection, XSS, CSRF, and other security guidelines.",
+      inputSchema: {
+        type: "object" as const,
+        properties: {},
+        required: [],
+      },
+    },
+    {
+      name: "get_anti_patterns",
+      description:
+        "Get common anti-patterns that LLMs generate. Call this to review AI-generated code for hallucinated APIs, outdated patterns, missing error handling, SQL injection, and other common mistakes.",
+      inputSchema: {
+        type: "object" as const,
+        properties: {},
+        required: [],
+      },
+    },
+    {
+      name: "get_framework_checklist",
+      description:
+        "Get framework-specific checklist (React, FastAPI, Django, Express, etc.). Call this BEFORE writing framework code to follow best practices.",
+      inputSchema: {
+        type: "object" as const,
+        properties: {
+          language: {
+            type: "string",
+            enum: LANGUAGES,
+            description: "Programming language",
+          },
+          framework: {
+            type: "string",
+            description: "Framework name (e.g., 'react', 'fastapi', 'django', 'express')",
+          },
+        },
+        required: ["language", "framework"],
+      },
+    },
+    {
+      name: "get_project_rules",
+      description:
+        "Parse project configuration files (pyproject.toml, .eslintrc.json, biome.json, tsconfig.json) to extract active lint rules and settings. Use this to understand a project's coding standards.",
+      inputSchema: {
+        type: "object" as const,
+        properties: {
+          config_path: {
+            type: "string",
+            description: "Path to the project config file",
+          },
+        },
+        required: ["config_path"],
+      },
+    },
   ],
 }));
 
@@ -735,6 +1007,29 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     case "get_checklist": {
       const language = parseString(typedArgs.language);
       const content = await getChecklist(language);
+      return { content: [{ type: "text", text: content }] };
+    }
+
+    case "get_security_checklist": {
+      const content = await getSecurityChecklist();
+      return { content: [{ type: "text", text: content }] };
+    }
+
+    case "get_anti_patterns": {
+      const content = await getAntiPatterns();
+      return { content: [{ type: "text", text: content }] };
+    }
+
+    case "get_framework_checklist": {
+      const language = parseString(typedArgs.language);
+      const framework = parseString(typedArgs.framework);
+      const content = await getFrameworkChecklist(language, framework);
+      return { content: [{ type: "text", text: content }] };
+    }
+
+    case "get_project_rules": {
+      const configPath = parseString(typedArgs.config_path);
+      const content = await getProjectRules(configPath);
       return { content: [{ type: "text", text: content }] };
     }
 
