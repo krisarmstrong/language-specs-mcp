@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "specforge": {
+      "command": "node",
+      "args": ["/Users/krisarmstrong/Developer/_tools/specforge-mcp/dist/index.js"]
+    }
+  }
+}

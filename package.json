@@ -1,6 +1,6 @@
 {
   "name": "specforge-mcp",
-  "version": "1.7.1",
+  "version": "1.8.1",
   "description": "SpecForge MCP server providing authoritative language specifications",
   "type": "module",
   "main": "dist/index.js",

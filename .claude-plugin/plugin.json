@@ -1,0 +1,8 @@
+{
+  "name": "specforge",
+  "description": "Language specifications MCP server providing authoritative coding standards, linter rules, and generation checklists for 35+ programming languages. Use for consistent code generation and style compliance.",
+  "version": "1.7.1",
+  "author": {
+    "name": "Kris Armstrong"
+  }
+}
