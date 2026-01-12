@@ -1,0 +1,18 @@
+{
+  "name": "specforge-local",
+  "owner": "krisarmstrong",
+  "description": "Local SpecForge plugin marketplace",
+  "plugins": [
+    {
+      "name": "specforge",
+      "version": "1.9.0",
+      "description": "Authoritative language specifications, linter rules, and coding patterns for LLMs",
+      "source": {
+        "source": "directory",
+        "path": "/Users/krisarmstrong/Developer/_tools/specforge-mcp"
+      },
+      "category": "development",
+      "tags": ["language-specs", "linter-rules", "best-practices", "coding-standards"]
+    }
+  ]
+}
