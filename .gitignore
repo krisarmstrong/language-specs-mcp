@@ -10,3 +10,5 @@ docs/site/build/
 
 # Don't ignore specs - they're the whole point
 # !specs/
+webui/.next/
+webui/node_modules/

@@ -1,8 +1,21 @@
 {
   "name": "specforge",
-  "description": "Language specifications MCP server providing authoritative coding standards, linter rules, and generation checklists for 35+ programming languages. Use for consistent code generation and style compliance.",
-  "version": "1.7.1",
+  "version": "1.8.1",
+  "description": "Authoritative language specifications, linter rules, and coding patterns for LLMs. Replace Stack Overflow with actual best practices.",
   "author": {
-    "name": "Kris Armstrong"
-  }
+    "name": "Kris Armstrong",
+    "url": "https://github.com/krisarmstrong"
+  },
+  "homepage": "https://github.com/krisarmstrong/specforge-mcp",
+  "repository": "https://github.com/krisarmstrong/specforge-mcp",
+  "license": "MIT",
+  "keywords": [
+    "language-specs",
+    "linter-rules",
+    "code-standards",
+    "best-practices",
+    "coding-patterns",
+    "security-checklist",
+    "framework-guidelines"
+  ]
 }

@@ -1,4 +1,4 @@
-# SpecForge MCP Server
+# SpecForge MCP Server & Claude Code Plugin
 
 Make LLMs write better code, not just code that works.
 
@@ -7,6 +7,27 @@ Make LLMs write better code, not just code that works.
 ## Quick Start
 
 **New here?** See [QUICKSTART.md](QUICKSTART.md) for 5-minute setup.
+
+**Claude Code Plugin:** See [PLUGIN.md](PLUGIN.md) for plugin installation and usage.
+
+### Install as Claude Code Plugin
+
+```bash
+/plugin install github:krisarmstrong/specforge-mcp
+```
+
+Then use slash commands like:
+- `/checklist python` - Get pre-coding checklist
+- `/spec typescript stdlib` - Get TypeScript stdlib docs
+- `/lint-rule python ruff E501` - Explain a linter rule
+- `/search-specs async error handling` - Search all specs
+
+### WebUI
+
+```bash
+npm run webui:install  # First time
+npm run dev:webui      # Start at http://localhost:3847
+```
 
 **LLM Integration:** See [System Prompt Template](docs/SYSTEM_PROMPT_TEMPLATE.md) to configure LLMs to use SpecForge automatically.
 

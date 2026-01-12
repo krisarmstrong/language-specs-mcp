@@ -1,0 +1,24 @@
+{
+  "SessionStart": [
+    {
+      "tool": "*",
+      "hooks": [
+        {
+          "type": "prompt",
+          "prompt": "SpecForge is available. Use /checklist <language> before writing code, /spec for documentation, /lint-rule for linter help, and /search-specs to find patterns."
+        }
+      ]
+    }
+  ],
+  "PreToolUse": [
+    {
+      "tool": "Write|Edit",
+      "hooks": [
+        {
+          "type": "prompt",
+          "prompt": "Before writing code, consider using get_checklist for the target language to ensure best practices."
+        }
+      ]
+    }
+  ]
+}
