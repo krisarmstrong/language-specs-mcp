@@ -5,7 +5,7 @@
   "plugins": [
     {
       "name": "specforge",
-      "version": "1.9.0",
+      "version": "1.9.1",
       "description": "Authoritative language specifications, linter rules, and coding patterns for LLMs",
       "source": {
         "source": "directory",

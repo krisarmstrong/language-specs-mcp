@@ -762,16 +762,58 @@ function formatProjectConfig(config: ProjectConfig): string {
   return output;
 }
 
+const SERVER_INSTRUCTIONS = `
+You have access to SpecForge, which provides authoritative language specifications, linter rules, and coding patterns.
+
+## MANDATORY: Use SpecForge Before Writing Code
+
+**ALWAYS call get_checklist BEFORE writing code in any language.** This provides critical rules, security guidelines, and anti-patterns to avoid.
+
+Example: get_checklist({ language: "python" })
+
+## When to Use Each Tool
+
+| Tool | When to Use |
+|------|-------------|
+| get_checklist | BEFORE writing ANY code - provides critical rules |
+| get_security_checklist | For code handling user input, auth, databases, files, or network |
+| get_framework_checklist | When using React, FastAPI, Django, Express, etc. |
+| get_linter_rule | When encountering lint errors - understand WHY before fixing |
+| get_anti_patterns | Review generated code for hallucinated APIs and common mistakes |
+| get_spec | For specific language features or stdlib documentation |
+| search_specs | To find patterns, best practices, or documentation |
+
+## Security-Sensitive Code
+
+Call get_security_checklist when writing code that handles:
+- User input or form data
+- Authentication/authorization
+- Database queries (SQL injection risk)
+- File operations (path traversal risk)
+- Network requests
+- Sensitive data
+
+## Linter Errors
+
+ALWAYS call get_linter_rule to understand WHY a rule exists before suppressing or working around it.
+Example: get_linter_rule({ language: "python", linter: "ruff", rule: "E501" })
+
+## Supported Languages
+
+assembly, bash, c, cpp, csharp, css, dart, dockerfile, elixir, clojure, go, git, haskell, html, java, javascript, julia, kotlin, lua, markdown, ocaml, php, powershell, python, r, ruby, rust, scala, sql, swift, typescript, yaml, zig
+`.trim();
+
 const server = new Server(
   {
     name: "SpecForge",
-    version: "1.0.0",
+    version: "1.9.0",
   },
   {
     capabilities: {
       tools: {},
       resources: {},
     },
+    instructions: SERVER_INSTRUCTIONS,
   },
 );
 

@@ -1,6 +1,6 @@
 {
   "name": "specforge-mcp",
-  "version": "1.8.1",
+  "version": "1.9.1",
   "description": "SpecForge MCP server and Claude Code plugin providing authoritative language specifications",
   "type": "module",
   "main": "dist/index.js",

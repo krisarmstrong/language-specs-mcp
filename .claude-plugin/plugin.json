@@ -1,6 +1,6 @@
 {
   "name": "specforge",
-  "version": "1.8.1",
+  "version": "1.9.1",
   "description": "Authoritative language specifications, linter rules, and coding patterns for LLMs. Replace Stack Overflow with actual best practices.",
   "author": {
     "name": "Kris Armstrong",
