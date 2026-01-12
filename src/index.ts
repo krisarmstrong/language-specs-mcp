@@ -763,50 +763,102 @@ function formatProjectConfig(config: ProjectConfig): string {
 }
 
 const SERVER_INSTRUCTIONS = `
-You have access to SpecForge, which provides authoritative language specifications, linter rules, and coding patterns.
+You are a professional coding agent with access to SpecForge.
+SpecForge provides authoritative language specifications, linter rules, security guidelines, and coding patterns.
+You rely heavily on SpecForge tools to ensure code quality and correctness.
 
-## MANDATORY: Use SpecForge Before Writing Code
+## CRITICAL: Mandatory Tool Usage
 
-**ALWAYS call get_checklist BEFORE writing code in any language.** This provides critical rules, security guidelines, and anti-patterns to avoid.
+You MUST use SpecForge tools at specific points in your workflow. This is not optional.
 
-Example: get_checklist({ language: "python" })
+### Before Writing ANY Code (REQUIRED)
 
-## When to Use Each Tool
+**ALWAYS call \`prepare_for_coding\` BEFORE you write, edit, or generate any code.**
 
-| Tool | When to Use |
-|------|-------------|
-| get_checklist | BEFORE writing ANY code - provides critical rules |
-| get_security_checklist | For code handling user input, auth, databases, files, or network |
-| get_framework_checklist | When using React, FastAPI, Django, Express, etc. |
-| get_linter_rule | When encountering lint errors - understand WHY before fixing |
-| get_anti_patterns | Review generated code for hallucinated APIs and common mistakes |
-| get_spec | For specific language features or stdlib documentation |
-| search_specs | To find patterns, best practices, or documentation |
+This tool:
+- Returns the language checklist with critical rules
+- Includes security guidelines if the code handles sensitive operations
+- Includes framework guidelines if a framework is detected
+- Provides anti-patterns to avoid
 
-## Security-Sensitive Code
+Example: prepare_for_coding({ language: "python", context: "API endpoint handling user auth" })
 
-Call get_security_checklist when writing code that handles:
-- User input or form data
-- Authentication/authorization
-- Database queries (SQL injection risk)
-- File operations (path traversal risk)
-- Network requests
-- Sensitive data
+Do NOT skip this step. Do NOT write code without first calling prepare_for_coding.
 
-## Linter Errors
+### After Writing Code (REQUIRED)
 
-ALWAYS call get_linter_rule to understand WHY a rule exists before suppressing or working around it.
+**ALWAYS call \`review_code_quality\` AFTER you finish writing a code block or making edits.**
+
+This tool helps you catch:
+- Hallucinated APIs that don't exist
+- Outdated patterns from training data
+- Missing error handling
+- Security vulnerabilities
+- Violations of the checklist rules
+
+### When Encountering Linter Errors (REQUIRED)
+
+**ALWAYS call \`get_linter_rule\` to understand WHY a lint rule exists before attempting to fix or suppress it.**
+
+Do NOT:
+- Blindly add type: ignore comments
+- Suppress warnings without understanding them
+- Work around lint errors without learning the correct pattern
+
 Example: get_linter_rule({ language: "python", linter: "ruff", rule: "E501" })
+
+## Tool Reference
+
+| Tool | When to Call | Required? |
+|------|--------------|-----------|
+| prepare_for_coding | BEFORE writing any code | YES - ALWAYS |
+| review_code_quality | AFTER writing code | YES - ALWAYS |
+| get_linter_rule | When you see lint errors | YES - ALWAYS |
+| get_spec | For language feature details | As needed |
+| search_specs | To find patterns or docs | As needed |
+| get_initial_instructions | Start of session | Recommended |
+
+## Security-Sensitive Code Detection
+
+The prepare_for_coding tool automatically detects and includes security guidelines when your context mentions:
+- User input, forms, or request data
+- Authentication, authorization, sessions, or tokens
+- Database queries, SQL, or ORM operations
+- File operations, uploads, or path handling
+- Network requests, APIs, or external services
+- Passwords, secrets, or sensitive data
+- HTML output, templates, or rendering
+
+## Workflow Example
+
+1. User asks: "Add a login endpoint"
+2. You call: prepare_for_coding({ language: "python", context: "login endpoint with password validation" })
+3. You receive: Python checklist + OWASP security guidelines + FastAPI framework tips
+4. You write the code following the guidelines
+5. You call: review_code_quality({ language: "python", code_summary: "login endpoint with bcrypt" })
+6. You verify no anti-patterns were introduced
+7. You present the code to the user
 
 ## Supported Languages
 
 assembly, bash, c, cpp, csharp, css, dart, dockerfile, elixir, clojure, go, git, haskell, html, java, javascript, julia, kotlin, lua, markdown, ocaml, php, powershell, python, r, ruby, rust, scala, sql, swift, typescript, yaml, zig
+
+## Remember
+
+- You are a professional coding agent
+- Quality and security matter more than speed
+- The tools exist to help you write better code
+- Skipping the tools leads to bugs and vulnerabilities
+- When in doubt, consult the specs
 `.trim();
+
+// Track if prepare_for_coding was called (for review_code_quality context)
+let lastPrepareContext: { language: string; context?: string; timestamp: number } | null = null;
 
 const server = new Server(
   {
     name: "SpecForge",
-    version: "1.9.0",
+    version: "1.10.0",
   },
   {
     capabilities: {
@@ -977,6 +1029,63 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
         required: ["config_path"],
       },
     },
+    {
+      name: "prepare_for_coding",
+      description:
+        "MANDATORY: Call this BEFORE writing ANY code. Returns language checklist, security guidelines (if relevant), framework tips (if detected), and anti-patterns to avoid. This tool MUST be called before you write, edit, or generate code.",
+      inputSchema: {
+        type: "object" as const,
+        properties: {
+          language: {
+            type: "string",
+            enum: LANGUAGES,
+            description: "Programming language you will write code in",
+          },
+          context: {
+            type: "string",
+            description:
+              "Brief description of what code you will write (e.g., 'API endpoint for user login', 'database migration', 'React form component'). This helps detect if security guidelines are needed.",
+          },
+          framework: {
+            type: "string",
+            description:
+              "Framework being used, if any (e.g., 'react', 'fastapi', 'django', 'express')",
+          },
+        },
+        required: ["language"],
+      },
+    },
+    {
+      name: "review_code_quality",
+      description:
+        "MANDATORY: Call this AFTER writing code. Returns anti-patterns checklist and review guidelines to verify your code doesn't have hallucinated APIs, security issues, or common mistakes. This tool MUST be called after you finish writing a code block.",
+      inputSchema: {
+        type: "object" as const,
+        properties: {
+          language: {
+            type: "string",
+            enum: LANGUAGES,
+            description: "Programming language of the code you wrote",
+          },
+          code_summary: {
+            type: "string",
+            description:
+              "Brief summary of what code you wrote (e.g., 'login endpoint with bcrypt hashing')",
+          },
+        },
+        required: ["language"],
+      },
+    },
+    {
+      name: "get_initial_instructions",
+      description:
+        "Get the SpecForge instructions manual. Call this at the start of a coding session to understand how to use SpecForge tools effectively. Returns the complete workflow and tool usage guide.",
+      inputSchema: {
+        type: "object" as const,
+        properties: {},
+        required: [],
+      },
+    },
   ],
 }));
 
@@ -1073,6 +1182,109 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       const configPath = parseString(typedArgs.config_path);
       const content = await getProjectRules(configPath);
       return { content: [{ type: "text", text: content }] };
+    }
+
+    case "prepare_for_coding": {
+      const language = parseString(typedArgs.language);
+      const context = parseString(typedArgs.context) || "";
+      const framework = parseString(typedArgs.framework) || "";
+
+      // Track this call for review_code_quality
+      lastPrepareContext = { language, context, timestamp: Date.now() };
+
+      // Build combined response
+      const sections: string[] = [];
+
+      // Always include language checklist
+      sections.push("# Pre-Coding Checklist\n");
+      sections.push(await getChecklist(language));
+
+      // Detect if security guidelines needed based on context
+      const securityKeywords = [
+        "auth",
+        "login",
+        "password",
+        "user",
+        "input",
+        "form",
+        "database",
+        "sql",
+        "query",
+        "file",
+        "upload",
+        "path",
+        "network",
+        "api",
+        "request",
+        "secret",
+        "token",
+        "session",
+        "cookie",
+        "html",
+        "template",
+        "render",
+        "sanitize",
+        "validate",
+      ];
+      const contextLower = context.toLowerCase();
+      const needsSecurity = securityKeywords.some((kw) => contextLower.includes(kw));
+
+      if (needsSecurity) {
+        sections.push("\n---\n\n# Security Guidelines (Auto-detected)\n");
+        sections.push(await getSecurityChecklist());
+      }
+
+      // Include framework checklist if specified
+      if (framework) {
+        sections.push(`\n---\n\n# ${framework} Framework Guidelines\n`);
+        sections.push(await getFrameworkChecklist(language, framework));
+      }
+
+      // Always include anti-patterns to watch for
+      sections.push("\n---\n\n# Anti-Patterns to Avoid\n");
+      sections.push(await getAntiPatterns());
+
+      // Add reminder
+      sections.push("\n---\n\n## Reminder\n");
+      sections.push("After writing code, call `review_code_quality` to verify your implementation.");
+
+      return { content: [{ type: "text", text: sections.join("\n") }] };
+    }
+
+    case "review_code_quality": {
+      const language = parseString(typedArgs.language);
+      const codeSummary = parseString(typedArgs.code_summary) || "code";
+
+      const sections: string[] = [];
+
+      sections.push("# Post-Coding Review\n");
+      sections.push(`Reviewing: ${codeSummary}\n`);
+
+      // Check if prepare_for_coding was called recently
+      const fiveMinutes = 5 * 60 * 1000;
+      if (!lastPrepareContext || Date.now() - lastPrepareContext.timestamp > fiveMinutes) {
+        sections.push("\n⚠️ **Warning**: `prepare_for_coding` was not called before writing this code.\n");
+        sections.push("For best results, always call `prepare_for_coding` before writing code.\n");
+      }
+
+      sections.push("\n## Review Checklist\n");
+      sections.push("Verify your code against these common issues:\n");
+
+      // Include anti-patterns
+      sections.push(await getAntiPatterns());
+
+      sections.push("\n## Manual Verification Steps\n");
+      sections.push("1. **API Calls**: Verify all APIs/methods exist in the target version\n");
+      sections.push("2. **Error Handling**: Check all error paths are handled\n");
+      sections.push("3. **Security**: Review for injection, XSS, path traversal\n");
+      sections.push("4. **Types**: Ensure types are correct (no `any` unless justified)\n");
+      sections.push("5. **Edge Cases**: Consider null, empty, and boundary values\n");
+
+      return { content: [{ type: "text", text: sections.join("\n") }] };
+    }
+
+    case "get_initial_instructions": {
+      return { content: [{ type: "text", text: SERVER_INSTRUCTIONS }] };
     }
 
     default:
