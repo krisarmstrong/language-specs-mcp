@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.4.14/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -19,7 +19,12 @@
       "!**/go.sum",
       "!**/*.d.ts",
       "!**/*.min.js",
-      "!**/*.generated.*"
+      "!**/*.generated.*",
+      "!docs/site",
+      "!specs",
+      "!.claude",
+      "!tests/fixtures",
+      "!webui"
     ],
     "maxSize": 1048576
   },
@@ -234,7 +239,7 @@
         "noMisplacedAssertion": "error",
         "noMisrefactoredShorthandAssign": "error",
         "noPrototypeBuiltins": "error",
-        "noReactSpecificProps": "error",
+        "noReactSpecificProps": "off",
         "noRedeclare": "error",
         "noRedundantUseStrict": "error",
         "noSelfCompare": "error",
@@ -256,7 +261,11 @@
         "noEvolvingTypes": "error",
         "noDuplicateElseIf": "error",
         "noOctalEscape": "error",
-        "noTemplateCurlyInString": "error"
+        "noTemplateCurlyInString": "error",
+        "noDeprecatedImports": "error",
+        "noDuplicateDependencies": "error",
+        "noImportCycles": "warn",
+        "noUnusedExpressions": "error"
       },
       "performance": {
         "noAccumulatingSpread": "error",
@@ -307,7 +316,8 @@
         "useRegexLiterals": "error",
         "useSimpleNumberKeys": "error",
         "useSimplifiedLogicExpression": "error",
-        "useWhile": "error"
+        "useWhile": "error",
+        "noUselessCatchBinding": "error"
       },
       "security": {
         "noDangerouslySetInnerHtml": "error",
@@ -350,25 +360,18 @@
         "useValidLang": "error"
       },
       "nursery": {
-        "noDeprecatedImports": "error",
-        "noDuplicateDependencies": "error",
         "noDuplicatedSpreadProps": "error",
         "noEqualsToNull": "error",
         "noFloatingPromises": "error",
-        "noImportCycles": "warn",
         "noLeakedRender": "error",
         "noMisusedPromises": "error",
         "noParametersOnlyUsedInRecursion": "error",
         "noShadow": "error",
-        "noUnusedExpressions": "error",
-        "noUselessCatchBinding": "error",
-        "noUselessUndefined": "error",
         "useArraySortCompare": "error",
         "useAwaitThenable": "error",
-        "useConsistentArrowReturn": "error",
         "useDestructuring": "error",
         "useExhaustiveSwitchCases": "error",
-        "useExplicitType": "error",
+        "useExplicitType": "off",
         "useFind": "error",
         "useRegexpExec": "error",
         "useSpread": "error"

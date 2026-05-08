@@ -5,17 +5,17 @@
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { dirname, join } from "node:path";
-import { test, describe, before, after } from "node:test";
+import { after, before, describe, test } from "node:test";
 import { fileURLToPath } from "node:url";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const projectRoot = join(__dirname, "..", "..");
+const DIRNAME = dirname(fileURLToPath(import.meta.url));
+const projectRoot = join(DIRNAME, "..", "..");
 const serverPath = join(projectRoot, "dist", "index.js");
 
 /**
  * Helper to send JSON-RPC request to MCP server via stdio
  */
-class MCPClient {
+class McpClient {
   constructor() {
     this.process = null;
     this.requestId = 0;
@@ -123,7 +123,7 @@ describe("MCP Server Integration Tests", () => {
   let client;
 
   before(async () => {
-    client = new MCPClient();
+    client = new McpClient();
     await client.start();
   });
 
@@ -153,7 +153,7 @@ describe("MCP Server Integration Tests", () => {
     assert.ok(result.content[0].text.length > 100, "Should return substantial content");
     assert.ok(
       result.content[0].text.includes("Python") || result.content[0].text.includes("python"),
-      "Should mention Python"
+      "Should mention Python",
     );
   });
 
@@ -196,7 +196,7 @@ describe("MCP Server Integration Tests", () => {
     assert.ok(result.content, "Should return content");
     assert.ok(
       result.content[0].text.includes("ruff") || result.content[0].text.includes("Ruff"),
-      "Should list ruff linter"
+      "Should list ruff linter",
     );
   });
 
@@ -210,7 +210,7 @@ describe("MCP Server Integration Tests", () => {
     const text = result.content[0].text;
     assert.ok(
       text.includes("Unsupported") || text.includes("not found") || text.includes("Invalid"),
-      `Should indicate language not supported, got: ${text.substring(0, 100)}`
+      `Should indicate language not supported, got: ${text.substring(0, 100)}`,
     );
   });
 
@@ -222,8 +222,9 @@ describe("MCP Server Integration Tests", () => {
 
     assert.ok(result.content, "Should return content");
     assert.ok(
-      result.content[0].text.includes("not found") || result.content[0].text.includes("Spec not found"),
-      "Should block path traversal"
+      result.content[0].text.includes("not found") ||
+        result.content[0].text.includes("Spec not found"),
+      "Should block path traversal",
     );
   });
 
@@ -236,7 +237,7 @@ describe("MCP Server Integration Tests", () => {
   test("reads a spec resource", async () => {
     const listResult = await client.request("resources/list", {});
     const pythonSpec = listResult.resources.find(
-      (r) => r.uri.includes("python") && r.uri.includes("spec")
+      (r) => r.uri.includes("python") && r.uri.includes("spec"),
     );
 
     if (pythonSpec) {
@@ -251,7 +252,7 @@ describe("MCP Server Security Tests", () => {
   let client;
 
   before(async () => {
-    client = new MCPClient();
+    client = new McpClient();
     await client.start();
   });
 
@@ -269,7 +270,7 @@ describe("MCP Server Security Tests", () => {
     const text = result.content[0].text;
     assert.ok(
       text.includes("Unsupported") || text.includes("not found") || text.includes("Invalid"),
-      `Should reject traversal in language, got: ${text.substring(0, 100)}`
+      `Should reject traversal in language, got: ${text.substring(0, 100)}`,
     );
   });
 
@@ -283,7 +284,7 @@ describe("MCP Server Security Tests", () => {
     const text = result.content[0].text;
     assert.ok(
       text.includes("not found") || text.includes("Unsupported") || text.includes("Invalid"),
-      `Should reject traversal in category, got: ${text.substring(0, 100)}`
+      `Should reject traversal in category, got: ${text.substring(0, 100)}`,
     );
   });
 

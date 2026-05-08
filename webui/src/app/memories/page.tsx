@@ -1,101 +1,99 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { Brain, Plus, Trash2, Edit2, Save, X } from 'lucide-react'
+import { Brain, Edit2, Plus, Save, Trash2, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 interface Memory {
-  id: string
-  name: string
-  content: string
-  createdAt: string
-  updatedAt: string
+  id: string;
+  name: string;
+  content: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export default function MemoriesPage() {
-  const [memories, setMemories] = useState<Memory[]>([])
-  const [selectedMemory, setSelectedMemory] = useState<Memory | null>(null)
-  const [isEditing, setIsEditing] = useState(false)
-  const [editContent, setEditContent] = useState('')
-  const [newMemoryName, setNewMemoryName] = useState('')
-  const [showNewForm, setShowNewForm] = useState(false)
+  const [memories, setMemories] = useState<Memory[]>([]);
+  const [selectedMemory, setSelectedMemory] = useState<Memory | null>(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editContent, setEditContent] = useState("");
+  const [newMemoryName, setNewMemoryName] = useState("");
+  const [showNewForm, setShowNewForm] = useState(false);
 
   useEffect(() => {
-    fetchMemories()
-  }, [])
+    fetchMemories();
+  }, []);
 
   const fetchMemories = async () => {
     try {
-      const res = await fetch('/api/memories')
-      const data = await res.json()
-      setMemories(data.memories || [])
+      const res = await fetch("/api/memories");
+      const data = await res.json();
+      setMemories(data.memories || []);
     } catch (err) {
-      console.error('Failed to fetch memories:', err)
+      console.error("Failed to fetch memories:", err);
     }
-  }
+  };
 
   const createMemory = async () => {
-    if (!newMemoryName.trim()) return
+    if (!newMemoryName.trim()) return;
     try {
-      const res = await fetch('/api/memories', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: newMemoryName, content: '' })
-      })
+      const res = await fetch("/api/memories", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: newMemoryName, content: "" }),
+      });
       if (res.ok) {
-        setNewMemoryName('')
-        setShowNewForm(false)
-        fetchMemories()
+        setNewMemoryName("");
+        setShowNewForm(false);
+        fetchMemories();
       }
     } catch (err) {
-      console.error('Failed to create memory:', err)
+      console.error("Failed to create memory:", err);
     }
-  }
+  };
 
   const saveMemory = async () => {
-    if (!selectedMemory) return
+    if (!selectedMemory) return;
     try {
-      const res = await fetch('/api/memories/' + selectedMemory.id, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ content: editContent })
-      })
+      const res = await fetch("/api/memories/" + selectedMemory.id, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ content: editContent }),
+      });
       if (res.ok) {
-        setIsEditing(false)
-        fetchMemories()
-        setSelectedMemory({ ...selectedMemory, content: editContent })
+        setIsEditing(false);
+        fetchMemories();
+        setSelectedMemory({ ...selectedMemory, content: editContent });
       }
     } catch (err) {
-      console.error('Failed to save memory:', err)
+      console.error("Failed to save memory:", err);
     }
-  }
+  };
 
   const deleteMemory = async (id: string) => {
-    if (!confirm('Are you sure you want to delete this memory?')) return
+    if (!confirm("Are you sure you want to delete this memory?")) return;
     try {
-      const res = await fetch('/api/memories/' + id, { method: 'DELETE' })
+      const res = await fetch("/api/memories/" + id, { method: "DELETE" });
       if (res.ok) {
-        if (selectedMemory?.id === id) setSelectedMemory(null)
-        fetchMemories()
+        if (selectedMemory?.id === id) setSelectedMemory(null);
+        fetchMemories();
       }
     } catch (err) {
-      console.error('Failed to delete memory:', err)
+      console.error("Failed to delete memory:", err);
     }
-  }
+  };
 
   const startEditing = () => {
-    if (!selectedMemory) return
-    setEditContent(selectedMemory.content)
-    setIsEditing(true)
-  }
+    if (!selectedMemory) return;
+    setEditContent(selectedMemory.content);
+    setIsEditing(true);
+  };
 
   return (
     <div className="min-h-screen p-8">
       <div className="max-w-6xl mx-auto">
         <header className="mb-8 flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
-              Memories
-            </h1>
+            <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Memories</h1>
             <p className="text-slate-600 dark:text-slate-300">
               Store project-specific notes and context for future sessions
             </p>
@@ -146,14 +144,14 @@ export default function MemoriesPage() {
                   <div
                     key={memory.id}
                     className={[
-                      'p-3 rounded-lg cursor-pointer transition-colors group',
+                      "p-3 rounded-lg cursor-pointer transition-colors group",
                       selectedMemory?.id === memory.id
-                        ? 'bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800'
-                        : 'bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-750'
-                    ].join(' ')}
+                        ? "bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800"
+                        : "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-750",
+                    ].join(" ")}
                     onClick={() => {
-                      setSelectedMemory(memory)
-                      setIsEditing(false)
+                      setSelectedMemory(memory);
+                      setIsEditing(false);
                     }}
                   >
                     <div className="flex items-center justify-between">
@@ -165,8 +163,8 @@ export default function MemoriesPage() {
                       </div>
                       <button
                         onClick={(e) => {
-                          e.stopPropagation()
-                          deleteMemory(memory.id)
+                          e.stopPropagation();
+                          deleteMemory(memory.id);
                         }}
                         className="opacity-0 group-hover:opacity-100 p-1 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/30 rounded transition-opacity"
                       >
@@ -180,9 +178,7 @@ export default function MemoriesPage() {
                 ))}
               </div>
             ) : (
-              <p className="text-sm text-slate-500 dark:text-slate-400">
-                No memories saved yet
-              </p>
+              <p className="text-sm text-slate-500 dark:text-slate-400">No memories saved yet</p>
             )}
           </div>
 
@@ -233,7 +229,7 @@ export default function MemoriesPage() {
                   ) : (
                     <div className="prose dark:prose-invert max-w-none">
                       <pre className="whitespace-pre-wrap text-sm bg-slate-50 dark:bg-slate-900 p-4 rounded-lg">
-                        {selectedMemory.content || 'No content yet. Click Edit to add notes.'}
+                        {selectedMemory.content || "No content yet. Click Edit to add notes."}
                       </pre>
                     </div>
                   )}
@@ -251,5 +247,5 @@ export default function MemoriesPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

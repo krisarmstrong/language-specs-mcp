@@ -18,13 +18,26 @@ body {
 }
 
 .prose pre {
-  @apply bg-slate-100 dark:bg-slate-800 rounded-lg p-4 overflow-x-auto;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  background: rgb(241 245 249);
+  padding: 1rem;
 }
 
 .prose code {
-  @apply bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded text-sm;
+  border-radius: 0.25rem;
+  background: rgb(241 245 249);
+  padding: 0.125rem 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .prose pre code {
-  @apply bg-transparent p-0;
+  background: transparent;
+  padding: 0;
+}
+
+.dark .prose pre,
+.dark .prose code {
+  background: rgb(30 41 59);
 }

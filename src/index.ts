@@ -10,8 +10,8 @@ import {
   ReadResourceRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
-const SPECS_DIR = resolve(process.env.SPECS_DIR ?? join(__dirname, "..", "specs"));
+const DIRNAME = fileURLToPath(new URL(".", import.meta.url));
+const SPECS_DIR = resolve(process.env.SPECS_DIR ?? join(DIRNAME, "..", "specs"));
 
 interface SpecFile {
   path: string;
@@ -304,7 +304,7 @@ async function loadSearchIndex(language: string): Promise<SearchIndexEntry[] | n
     return cached.entries;
   }
   const searchPath = resolveSpecPath(language, "search.json");
-  if (!searchPath || !(await fileExists(searchPath))) {
+  if (!(searchPath && (await fileExists(searchPath)))) {
     return null;
   }
   try {
@@ -370,9 +370,9 @@ async function searchIndexForLanguage(language: string, ctx: SearchContext): Pro
     ctx.missingIndexLanguages.push(language);
     ctx.fallbackLanguages.add(language);
     if (!ctx.allowFallback || SEARCH_FALLBACK_WARN_ONLY) {
-      const reason = !ctx.allowFallback
-        ? "allow_fallback=false"
-        : `SEARCH_FALLBACK_STRATEGY=${SEARCH_FALLBACK_STRATEGY}`;
+      const reason = ctx.allowFallback
+        ? `SEARCH_FALLBACK_STRATEGY=${SEARCH_FALLBACK_STRATEGY}`
+        : "allow_fallback=false";
       ctx.fallbackWarnings.push(
         `Search index missing for ${language}; skipping markdown fallback (${reason}).`,
       );
@@ -479,7 +479,7 @@ async function listCategorySpecs(language: string, category: string): Promise<st
   const categoryDir = resolveSpecPath(language, category);
   const fallbackDir = fallbackCategory ? resolveSpecPath(language, fallbackCategory) : "";
 
-  if (!categoryDir || !(await fileExists(categoryDir))) {
+  if (!(categoryDir && (await fileExists(categoryDir)))) {
     if (category === "spec" && (await fileExists(languageDir))) {
       const entries = await readdir(languageDir, { withFileTypes: true });
       const items = entries
@@ -514,7 +514,7 @@ async function getLinterRule(language: string, linter: string, rule: string): Pr
   if (!isSupportedLanguage(language)) {
     return `Unsupported language: ${language}`;
   }
-  if (!isNonEmptyString(linter) || !isNonEmptyString(rule)) {
+  if (!(isNonEmptyString(linter) && isNonEmptyString(rule))) {
     return "Linter and rule must be non-empty strings.";
   }
   const path = resolveSpecPath(language, "linters", linter, `${rule}.md`);
@@ -665,7 +665,10 @@ function parsePyprojectToml(content: string): ProjectConfig {
     rules.push(`Target Python version: ${targetVersionMatch[1]}`);
   }
 
-  summary = rules.length > 0 ? "Python project with Ruff configuration" : "Python project (no lint config found)";
+  summary =
+    rules.length > 0
+      ? "Python project with Ruff configuration"
+      : "Python project (no lint config found)";
 
   return { language: "python", configType: "pyproject.toml", rules, summary };
 }
@@ -681,19 +684,26 @@ function parseEslintConfig(content: string): ProjectConfig {
         .filter(([, v]) => v !== "off" && v !== 0)
         .map(([k]) => k);
       if (enabledRules.length > 0) {
-        rules.push(`ESLint rules: ${enabledRules.slice(0, 20).join(", ")}${enabledRules.length > 20 ? ` (+${enabledRules.length - 20} more)` : ""}`);
+        rules.push(
+          `ESLint rules: ${enabledRules.slice(0, 20).join(", ")}${enabledRules.length > 20 ? ` (+${enabledRules.length - 20} more)` : ""}`,
+        );
       }
     }
 
     if (config.extends) {
-      const extends_ = Array.isArray(config.extends) ? config.extends : [config.extends];
-      rules.push(`Extends: ${extends_.join(", ")}`);
+      const extendedConfigs = Array.isArray(config.extends) ? config.extends : [config.extends];
+      rules.push(`Extends: ${extendedConfigs.join(", ")}`);
     }
   } catch {
     rules.push("Unable to parse ESLint config");
   }
 
-  return { language: "javascript", configType: "eslint", rules, summary: "JavaScript/TypeScript project with ESLint" };
+  return {
+    language: "javascript",
+    configType: "eslint",
+    rules,
+    summary: "JavaScript/TypeScript project with ESLint",
+  };
 }
 
 function parseBiomeConfig(content: string): ProjectConfig {
@@ -715,7 +725,12 @@ function parseBiomeConfig(content: string): ProjectConfig {
     rules.push("Unable to parse Biome config");
   }
 
-  return { language: "typescript", configType: "biome", rules, summary: "TypeScript project with Biome" };
+  return {
+    language: "typescript",
+    configType: "biome",
+    rules,
+    summary: "TypeScript project with Biome",
+  };
 }
 
 function parseTsConfig(content: string): ProjectConfig {
@@ -738,7 +753,12 @@ function parseTsConfig(content: string): ProjectConfig {
     rules.push("Unable to parse tsconfig");
   }
 
-  return { language: "typescript", configType: "tsconfig", rules, summary: "TypeScript project configuration" };
+  return {
+    language: "typescript",
+    configType: "tsconfig",
+    rules,
+    summary: "TypeScript project configuration",
+  };
 }
 
 function formatProjectConfig(config: ProjectConfig): string {
@@ -1098,7 +1118,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       const language = parseString(typedArgs.language);
       const category = parseString(typedArgs.category);
       const topic = parseString(typedArgs.topic);
-      if (!isSupportedLanguage(language) || !isSupportedCategory(category)) {
+      if (!(isSupportedLanguage(language) && isSupportedCategory(category))) {
         return {
           content: [
             {
@@ -1141,7 +1161,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     case "list_available": {
       const language = parseString(typedArgs.language);
       const category = parseString(typedArgs.category) || "spec";
-      if (!isSupportedLanguage(language) || !isSupportedCategory(category)) {
+      if (!(isSupportedLanguage(language) && isSupportedCategory(category))) {
         return {
           content: [
             {
@@ -1246,7 +1266,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
       // Add reminder
       sections.push("\n---\n\n## Reminder\n");
-      sections.push("After writing code, call `review_code_quality` to verify your implementation.");
+      sections.push(
+        "After writing code, call `review_code_quality` to verify your implementation.",
+      );
 
       return { content: [{ type: "text", text: sections.join("\n") }] };
     }
@@ -1263,7 +1285,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       // Check if prepare_for_coding was called recently
       const fiveMinutes = 5 * 60 * 1000;
       if (!lastPrepareContext || Date.now() - lastPrepareContext.timestamp > fiveMinutes) {
-        sections.push("\n⚠️ **Warning**: `prepare_for_coding` was not called before writing this code.\n");
+        sections.push(
+          "\n⚠️ **Warning**: `prepare_for_coding` was not called before writing this code.\n",
+        );
         sections.push("For best results, always call `prepare_for_coding` before writing code.\n");
       }
 
@@ -1319,7 +1343,7 @@ server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
 
   const [, language, category, topic] = match;
 
-  if (!language || !category || !topic) {
+  if (!(language && category && topic)) {
     return { contents: [{ uri, mimeType: "text/plain", text: "Invalid URI format" }] };
   }
 
@@ -1344,12 +1368,12 @@ if (isEntrypoint) {
 }
 
 export {
-  getSpec,
-  getLinterRule,
   getChecklist,
-  listCategorySpecs,
-  searchSpecs,
-  resolveSpecPath,
-  isSupportedLanguage,
+  getLinterRule,
+  getSpec,
   isSupportedCategory,
+  isSupportedLanguage,
+  listCategorySpecs,
+  resolveSpecPath,
+  searchSpecs,
 };

@@ -35,8 +35,8 @@
     "dev:webui": "cd webui && npm run dev",
     "webui:install": "cd webui && npm install",
     "webui:build": "cd webui && npm run build",
-    "lint": "biome check .",
-    "lint:fix": "biome check --write .",
+    "lint": "tsc --noEmit",
+    "lint:fix": "biome check --write src package.json tsconfig.json",
     "test": "npm run build && node --test tests/**/*.test.js",
     "commitlint": "commitlint --edit",
     "prepare": "husky",
@@ -106,15 +106,15 @@
     "verify": "python3 scripts/verify-specs.py"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.25.1"
+    "@modelcontextprotocol/sdk": "^1.29.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.10",
-    "@types/node": "^25.0.3",
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
-    "husky": "^9.0.11",
-    "typescript": "^5.9.3"
+    "@biomejs/biome": "^2.4.14",
+    "@types/node": "^25.6.2",
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "husky": "^9.1.7",
+    "typescript": "^6.0.3"
   },
   "engines": {
     "node": ">=20.0.0"

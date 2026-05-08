@@ -1,45 +1,43 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Search, FileText, Loader2 } from 'lucide-react'
+import { FileText, Loader2, Search } from "lucide-react";
+import { useState } from "react";
 
 interface SearchResult {
-  language: string
-  category: string
-  name: string
-  matches: string[]
+  language: string;
+  category: string;
+  name: string;
+  matches: string[];
 }
 
 export default function SearchPage() {
-  const [query, setQuery] = useState('')
-  const [results, setResults] = useState<SearchResult[]>([])
-  const [loading, setLoading] = useState(false)
-  const [searched, setSearched] = useState(false)
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [searched, setSearched] = useState(false);
 
   const handleSearch = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!query.trim()) return
+    e.preventDefault();
+    if (!query.trim()) return;
 
-    setLoading(true)
-    setSearched(true)
+    setLoading(true);
+    setSearched(true);
     try {
-      const res = await fetch('/api/search?q=' + encodeURIComponent(query))
-      const data = await res.json()
-      setResults(data.results || [])
+      const res = await fetch("/api/search?q=" + encodeURIComponent(query));
+      const data = await res.json();
+      setResults(data.results || []);
     } catch (err) {
-      console.error('Search failed:', err)
-      setResults([])
+      console.error("Search failed:", err);
+      setResults([]);
     }
-    setLoading(false)
-  }
+    setLoading(false);
+  };
 
   return (
     <div className="min-h-screen p-8">
       <div className="max-w-4xl mx-auto">
         <header className="mb-8">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
-            Search Specs
-          </h1>
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Search Specs</h1>
           <p className="text-slate-600 dark:text-slate-300">
             Search across all language specifications and patterns
           </p>
@@ -62,7 +60,11 @@ export default function SearchPage() {
               disabled={loading || !query.trim()}
               className="px-6 py-3 bg-blue-500 hover:bg-blue-600 disabled:bg-slate-300 dark:disabled:bg-slate-600 text-white rounded-xl font-medium transition-colors flex items-center gap-2"
             >
-              {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Search className="w-5 h-5" />}
+              {loading ? (
+                <Loader2 className="w-5 h-5 animate-spin" />
+              ) : (
+                <Search className="w-5 h-5" />
+              )}
               Search
             </button>
           </div>
@@ -102,9 +104,7 @@ export default function SearchPage() {
         ) : searched ? (
           <div className="text-center py-12">
             <Search className="w-12 h-12 mx-auto text-slate-400 mb-4" />
-            <p className="text-slate-500 dark:text-slate-400">
-              No results found for "{query}"
-            </p>
+            <p className="text-slate-500 dark:text-slate-400">No results found for "{query}"</p>
           </div>
         ) : (
           <div className="text-center py-12">
@@ -113,7 +113,13 @@ export default function SearchPage() {
               Enter a search term to find relevant documentation
             </p>
             <div className="mt-6 flex flex-wrap gap-2 justify-center">
-              {['error handling', 'async await', 'null safety', 'type guards', 'dependency injection'].map((term) => (
+              {[
+                "error handling",
+                "async await",
+                "null safety",
+                "type guards",
+                "dependency injection",
+              ].map((term) => (
                 <button
                   key={term}
                   onClick={() => setQuery(term)}
@@ -127,5 +133,5 @@ export default function SearchPage() {
         )}
       </div>
     </div>
-  )
+  );
 }

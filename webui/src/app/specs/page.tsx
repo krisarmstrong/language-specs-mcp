@@ -1,76 +1,106 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { Book, FileCode, Folder } from 'lucide-react'
+import { Book, FileCode, Folder } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const LANGUAGES = [
-  'assembly', 'basic', 'bash', 'batch', 'c', 'cpp', 'csharp', 'css',
-  'dart', 'dockerfile', 'elixir', 'clojure', 'go', 'git', 'haskell',
-  'html', 'java', 'javascript', 'julia', 'kotlin', 'lua', 'markdown',
-  'ocaml', 'php', 'powershell', 'python', 'r', 'ruby', 'rust',
-  'scala', 'sql', 'swift', 'typescript', 'yaml', 'zig'
-]
+  "assembly",
+  "basic",
+  "bash",
+  "batch",
+  "c",
+  "cpp",
+  "csharp",
+  "css",
+  "dart",
+  "dockerfile",
+  "elixir",
+  "clojure",
+  "go",
+  "git",
+  "haskell",
+  "html",
+  "java",
+  "javascript",
+  "julia",
+  "kotlin",
+  "lua",
+  "markdown",
+  "ocaml",
+  "php",
+  "powershell",
+  "python",
+  "r",
+  "ruby",
+  "rust",
+  "scala",
+  "sql",
+  "swift",
+  "typescript",
+  "yaml",
+  "zig",
+];
 
-const CATEGORIES = ['spec', 'stdlib', 'linters', 'patterns', 'formatters']
+const CATEGORIES = ["spec", "stdlib", "linters", "patterns", "formatters"];
 
 export default function SpecsPage() {
-  const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null)
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
-  const [specs, setSpecs] = useState<string[]>([])
-  const [specContent, setSpecContent] = useState<string | null>(null)
-  const [loading, setLoading] = useState(false)
+  const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [specs, setSpecs] = useState<string[]>([]);
+  const [specContent, setSpecContent] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const fetchSpecs = async (language: string, category: string) => {
-    setLoading(true)
+    setLoading(true);
     try {
-      const res = await fetch('/api/specs?language=' + language + '&category=' + category)
-      const data = await res.json()
-      setSpecs(data.specs || [])
+      const res = await fetch("/api/specs?language=" + language + "&category=" + category);
+      const data = await res.json();
+      setSpecs(data.specs || []);
     } catch (err) {
-      console.error('Failed to fetch specs:', err)
-      setSpecs([])
+      console.error("Failed to fetch specs:", err);
+      setSpecs([]);
     }
-    setLoading(false)
-  }
+    setLoading(false);
+  };
 
   const fetchSpecContent = async (language: string, category: string, topic: string) => {
-    setLoading(true)
+    setLoading(true);
     try {
-      const res = await fetch('/api/specs?language=' + language + '&category=' + category + '&topic=' + topic)
-      const data = await res.json()
-      setSpecContent(data.content || 'No content available')
+      const res = await fetch(
+        "/api/specs?language=" + language + "&category=" + category + "&topic=" + topic,
+      );
+      const data = await res.json();
+      setSpecContent(data.content || "No content available");
     } catch (err) {
-      console.error('Failed to fetch spec content:', err)
-      setSpecContent('Failed to load content')
+      console.error("Failed to fetch spec content:", err);
+      setSpecContent("Failed to load content");
     }
-    setLoading(false)
-  }
+    setLoading(false);
+  };
 
   useEffect(() => {
     if (selectedLanguage && selectedCategory) {
-      fetchSpecs(selectedLanguage, selectedCategory)
+      fetchSpecs(selectedLanguage, selectedCategory);
     }
-  }, [selectedLanguage, selectedCategory])
+  }, [selectedLanguage, selectedCategory]);
 
   const selectLanguage = (lang: string) => {
-    setSelectedLanguage(lang)
-    setSelectedCategory(null)
-    setSpecs([])
-    setSpecContent(null)
-  }
+    setSelectedLanguage(lang);
+    setSelectedCategory(null);
+    setSpecs([]);
+    setSpecContent(null);
+  };
 
   const selectCategory = (cat: string) => {
-    setSelectedCategory(cat)
-    setSpecContent(null)
-  }
+    setSelectedCategory(cat);
+    setSpecContent(null);
+  };
 
   return (
     <div className="min-h-screen p-8">
       <div className="max-w-7xl mx-auto">
         <header className="mb-8">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
-            Spec Browser
-          </h1>
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Spec Browser</h1>
           <p className="text-slate-600 dark:text-slate-300">
             Browse language specifications, linter rules, and coding patterns
           </p>
@@ -87,11 +117,11 @@ export default function SpecsPage() {
                   key={lang}
                   onClick={() => selectLanguage(lang)}
                   className={[
-                    'w-full text-left px-3 py-2 rounded-lg text-sm transition-colors',
+                    "w-full text-left px-3 py-2 rounded-lg text-sm transition-colors",
                     selectedLanguage === lang
-                      ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
-                      : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'
-                  ].join(' ')}
+                      ? "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
+                      : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700",
+                  ].join(" ")}
                 >
                   {lang}
                 </button>
@@ -110,11 +140,11 @@ export default function SpecsPage() {
                     key={cat}
                     onClick={() => selectCategory(cat)}
                     className={[
-                      'w-full text-left px-3 py-2 rounded-lg text-sm transition-colors flex items-center gap-2',
+                      "w-full text-left px-3 py-2 rounded-lg text-sm transition-colors flex items-center gap-2",
                       selectedCategory === cat
-                        ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
-                        : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700'
-                    ].join(' ')}
+                        ? "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
+                        : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700",
+                    ].join(" ")}
                   >
                     <Folder className="w-4 h-4" />
                     {cat}
@@ -169,5 +199,5 @@ export default function SpecsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

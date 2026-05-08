@@ -3,8 +3,8 @@ import { dirname, join } from "node:path";
 import { test } from "node:test";
 import { fileURLToPath } from "node:url";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const fixturesDir = join(__dirname, "fixtures", "specs");
+const DIRNAME = dirname(fileURLToPath(import.meta.url));
+const fixturesDir = join(DIRNAME, "fixtures", "specs");
 process.env.SPECS_DIR = fixturesDir;
 
 const modulePath = new URL("../dist/index.js", import.meta.url);
