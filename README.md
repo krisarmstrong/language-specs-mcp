@@ -72,18 +72,18 @@ specs/rust/generation-checklist.md       # Ownership, ?, no unwrap...
 | Batch | ✅ | ✅ | - | - | ✅ |
 | Go | ✅ | ✅ | golangci-lint | gofmt, goimports, gofumpt, golines | ✅ |
 | C# | ✅ | ✅ (namespace pages) | .NET analyzers, StyleCop | dotnet format | ✅ |
-| JavaScript | ✅ | ✅ (Node + Web APIs) | ESLint, standardjs, xo | Prettier, Biome | ✅ |
-| TypeScript | ✅ | ✅ | Biome | Prettier, Biome | ✅ |
+| JavaScript | ✅ | ✅ (Node + Web APIs) | Biome | Biome | ✅ |
+| TypeScript | ✅ | ✅ | Biome | Biome | ✅ |
 | C | ✅ | ✅ | clang-tidy, cppcheck | clang-format | ✅ |
 | C++ | ✅ | ✅ | clang-tidy, cppcheck | clang-format | ✅ |
-| CSS | ✅ | ✅ | stylelint | Prettier | ✅ |
-| HTML | ✅ | ✅ | html-validate, htmlhint | Prettier | ✅ |
+| CSS | ✅ | ✅ | Biome | Biome | ✅ |
+| HTML | ✅ | ✅ | html-validate, htmlhint | Biome | ✅ |
 | Git | ✅ | ✅ | gitlint, commitlint | commitlint/commitizen | ✅ |
 | Java | ✅ | ✅ (package pages) | Error Prone, SpotBugs, Checkstyle, PMD | google-java-format | ✅ |
 | Kotlin | ✅ | ✅ (package pages) | detekt, ktlint | ktlint, ktfmt | ✅ |
 | Lua | ✅ | ✅ | luacheck | stylua | ✅ |
 | PowerShell | ✅ | ✅ | PSScriptAnalyzer | - | ✅ |
-| Python | ✅ | ✅ (module pages) | Ruff, Pylint, Flake8, mypy | black | ✅ |
+| Python | ✅ | ✅ (module pages) | Ruff, mypy | Ruff | ✅ |
 | Rust | ✅ | ✅ (module pages) | clippy | rustfmt | ✅ |
 | SQL | ✅ | ✅ (Postgres/MySQL/SQLite/SQL Server) | sqlfluff | sqlfluff | ✅ |
 | Swift | ✅ | ✅ (module pages) | SwiftLint | swift-format | ✅ |

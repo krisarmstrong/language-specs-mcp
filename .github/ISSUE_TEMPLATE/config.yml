@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Security Vulnerability
-    url: https://docs.github.com/en/code-security/security-advisories/creating-a-security-advisory
-    about: Please report security issues privately via GitHub Security Advisories.
+  - name: Questions and Discussions
+    url: https://github.com/krisarmstrong/language-specs-mcp/discussions
+    about: Ask usage questions or discuss ideas before filing a tracked issue.
