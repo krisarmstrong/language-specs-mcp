@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.4.14/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.0/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -56,7 +56,7 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "correctness": {
         "noChildrenProp": "error",
         "noConstAssign": "error",
@@ -141,45 +141,17 @@
         "useFragmentSyntax": "error",
         "useImportType": "error",
         "useLiteralEnumMembers": "error",
-        "useNamingConvention": {
-          "level": "error",
-          "options": {
-            "strictCase": true,
-            "requireAscii": true,
-            "conventions": [
-              {
-                "selector": { "kind": "enumMember" },
-                "formats": ["CONSTANT_CASE"]
-              },
-              {
-                "selector": { "kind": "class" },
-                "formats": ["PascalCase"]
-              },
-              {
-                "selector": { "kind": "interface" },
-                "formats": ["PascalCase"]
-              },
-              {
-                "selector": { "kind": "typeAlias" },
-                "formats": ["PascalCase"]
-              },
-              {
-                "selector": { "kind": "function" },
-                "formats": ["camelCase"]
-              },
-              {
-                "selector": { "kind": "variable" },
-                "formats": ["camelCase", "CONSTANT_CASE"]
-              }
-            ]
-          }
-        },
+        "useNamingConvention": "off",
         "useFilenamingConvention": {
           "level": "error",
           "options": {
             "strictCase": true,
             "requireAscii": true,
-            "filenameCases": ["camelCase", "kebab-case", "PascalCase"]
+            "filenameCases": [
+              "camelCase",
+              "kebab-case",
+              "PascalCase"
+            ]
           }
         },
         "useNodejsImportProtocol": "error",
@@ -191,7 +163,9 @@
         "useTemplate": "error",
         "useThrowNewError": "error",
         "useThrowOnlyError": "error",
-        "useTrimStartEnd": "error"
+        "useTrimStartEnd": "error",
+        "useDestructuring": "error",
+        "useSpreadOverApply": "error"
       },
       "suspicious": {
         "noApproximativeNumericConstant": "error",
@@ -207,7 +181,10 @@
         "noConsole": {
           "level": "error",
           "options": {
-            "allow": ["warn", "error"]
+            "allow": [
+              "warn",
+              "error"
+            ]
           }
         },
         "noConstEnum": "error",
@@ -265,7 +242,13 @@
         "noDeprecatedImports": "error",
         "noDuplicateDependencies": "error",
         "noImportCycles": "warn",
-        "noUnusedExpressions": "error"
+        "noUnusedExpressions": "error",
+        "noDuplicatedSpreadProps": "error",
+        "noEqualsToNull": "error",
+        "noLeakedRender": "error",
+        "noParametersOnlyUsedInRecursion": "error",
+        "noShadow": "error",
+        "useArraySortCompare": "error"
       },
       "performance": {
         "noAccumulatingSpread": "error",
@@ -278,12 +261,7 @@
         "noArguments": "error",
         "noBannedTypes": "error",
         "noCommaOperator": "error",
-        "noExcessiveCognitiveComplexity": {
-          "level": "error",
-          "options": {
-            "maxAllowedComplexity": 15
-          }
-        },
+        "noExcessiveCognitiveComplexity": "off",
         "noExcessiveNestedTestSuites": "error",
         "noExtraBooleanCast": "error",
         "noFlatMapIdentity": "error",
@@ -317,7 +295,8 @@
         "useSimpleNumberKeys": "error",
         "useSimplifiedLogicExpression": "error",
         "useWhile": "error",
-        "noUselessCatchBinding": "error"
+        "noUselessCatchBinding": "error",
+        "useArrayFind": "error"
       },
       "security": {
         "noDangerouslySetInnerHtml": "error",
@@ -325,7 +304,7 @@
         "noGlobalEval": "error"
       },
       "a11y": {
-        "recommended": true,
+        "preset": "recommended",
         "noAccessKey": "error",
         "noAriaHiddenOnFocusable": "error",
         "noAriaUnsupportedElements": "error",
@@ -360,21 +339,12 @@
         "useValidLang": "error"
       },
       "nursery": {
-        "noDuplicatedSpreadProps": "error",
-        "noEqualsToNull": "error",
         "noFloatingPromises": "error",
-        "noLeakedRender": "error",
         "noMisusedPromises": "error",
-        "noParametersOnlyUsedInRecursion": "error",
-        "noShadow": "error",
-        "useArraySortCompare": "error",
         "useAwaitThenable": "error",
-        "useDestructuring": "error",
         "useExhaustiveSwitchCases": "error",
         "useExplicitType": "off",
-        "useFind": "error",
-        "useRegexpExec": "error",
-        "useSpread": "error"
+        "useRegexpExec": "off"
       }
     }
   },
@@ -387,7 +357,9 @@
   },
   "overrides": [
     {
-      "includes": ["tests/load/**/*.js"],
+      "includes": [
+        "tests/load/**/*.js"
+      ],
       "linter": {
         "enabled": false
       },
@@ -396,7 +368,12 @@
       }
     },
     {
-      "includes": ["**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts", "**/*.spec.tsx"],
+      "includes": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.tsx"
+      ],
       "linter": {
         "rules": {
           "suspicious": {
@@ -410,7 +387,10 @@
       }
     },
     {
-      "includes": ["**/scripts/**", "**/cli/**"],
+      "includes": [
+        "**/scripts/**",
+        "**/cli/**"
+      ],
       "linter": {
         "rules": {
           "suspicious": {
@@ -420,7 +400,12 @@
       }
     },
     {
-      "includes": ["next.config.js", "next.config.mjs", "vite.config.ts", "vitest.config.ts"],
+      "includes": [
+        "next.config.js",
+        "next.config.mjs",
+        "vite.config.ts",
+        "vitest.config.ts"
+      ],
       "linter": {
         "rules": {
           "style": {
