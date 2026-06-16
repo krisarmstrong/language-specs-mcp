@@ -248,7 +248,7 @@ async function getAllSpecs(): Promise<SpecFile[]> {
     for (const fullPath of files) {
       const relPath = relative(langDir, fullPath);
       const parts = relPath.split(/[/\\]/);
-      const filename = parts[parts.length - 1] ?? "";
+      const filename = parts.at(-1) ?? "";
       const baseName = filename.replace(".md", "");
       const category = parts.length > 1 ? (parts[0] ?? "spec") : "spec";
       const name = parts.length > 1 ? parts.slice(1).join("/").replace(".md", "") : baseName;
@@ -341,7 +341,7 @@ function formatSearchResult(
 }
 
 function buildFallbackSummary(warnings: string[]): string {
-  return warnings.length ? `Search fallback notes:\n${warnings.join("\n")}` : "";
+  return warnings.length > 0 ? `Search fallback notes:\n${warnings.join("\n")}` : "";
 }
 
 function buildNoResultsMessage(query: string, ctx: SearchContext, fallbackSummary: string): string {
@@ -380,19 +380,29 @@ async function searchIndexForLanguage(language: string, ctx: SearchContext): Pro
     return false;
   }
   for (const entry of entries) {
-    if (!entry.content.toLowerCase().includes(ctx.queryLower)) continue;
+    if (!entry.content.toLowerCase().includes(ctx.queryLower)) {
+      continue;
+    }
     const matches = extractLineMatches(entry.content, ctx.queryLower);
-    if (matches.length === 0) continue;
+    if (matches.length === 0) {
+      continue;
+    }
     ctx.results.push(formatSearchResult(language, entry.category, entry.name, matches));
-    if (ctx.results.length >= 10) return true;
+    if (ctx.results.length >= 10) {
+      return true;
+    }
   }
   return false;
 }
 
 async function searchFallbackSpecs(specs: SpecFile[], ctx: SearchContext): Promise<void> {
-  if (!ctx.allowFallback || SEARCH_FALLBACK_WARN_ONLY || ctx.fallbackLanguages.size === 0) return;
+  if (!ctx.allowFallback || SEARCH_FALLBACK_WARN_ONLY || ctx.fallbackLanguages.size === 0) {
+    return;
+  }
   for (const spec of specs) {
-    if (!ctx.fallbackLanguages.has(spec.language) || ctx.results.length >= 10) continue;
+    if (!ctx.fallbackLanguages.has(spec.language) || ctx.results.length >= 10) {
+      continue;
+    }
     try {
       const content = await readFile(spec.path, "utf-8");
       const matches = extractLineMatches(content, ctx.queryLower);
@@ -420,7 +430,9 @@ async function searchSpecs(query: string, options: SearchOptions = {}): Promise<
 
   for (const language of LANGUAGES) {
     const earlyExit = await searchIndexForLanguage(language, ctx);
-    if (earlyExit) return ctx.results.join("\n\n===\n\n");
+    if (earlyExit) {
+      return ctx.results.join("\n\n===\n\n");
+    }
   }
 
   const specs = await getAllSpecsCached();
@@ -643,24 +655,24 @@ function parsePyprojectToml(content: string): ProjectConfig {
   let summary = "";
 
   // Extract ruff config
-  const ruffSelectMatch = content.match(/\[tool\.ruff\.lint\][\s\S]*?select\s*=\s*\[([\s\S]*?)\]/);
+  const ruffSelectMatch = /\[tool\.ruff\.lint\][\s\S]*?select\s*=\s*\[([\s\S]*?)\]/.exec(content);
   if (ruffSelectMatch) {
     const selected = ruffSelectMatch[1].match(/"([^"]+)"/g) ?? [];
     rules.push(`Ruff rules enabled: ${selected.map((s) => s.replace(/"/g, "")).join(", ")}`);
   }
 
-  const ruffIgnoreMatch = content.match(/ignore\s*=\s*\[([\s\S]*?)\]/);
+  const ruffIgnoreMatch = /ignore\s*=\s*\[([\s\S]*?)\]/.exec(content);
   if (ruffIgnoreMatch) {
     const ignored = ruffIgnoreMatch[1].match(/"([^"]+)"/g) ?? [];
     rules.push(`Ruff rules ignored: ${ignored.map((s) => s.replace(/"/g, "")).join(", ")}`);
   }
 
-  const lineLengthMatch = content.match(/line-length\s*=\s*(\d+)/);
+  const lineLengthMatch = /line-length\s*=\s*(\d+)/.exec(content);
   if (lineLengthMatch) {
     rules.push(`Line length: ${lineLengthMatch[1]}`);
   }
 
-  const targetVersionMatch = content.match(/target-version\s*=\s*"([^"]+)"/);
+  const targetVersionMatch = /target-version\s*=\s*"([^"]+)"/.exec(content);
   if (targetVersionMatch) {
     rules.push(`Target Python version: ${targetVersionMatch[1]}`);
   }
@@ -718,8 +730,12 @@ function parseBiomeConfig(content: string): ProjectConfig {
     }
 
     if (config.formatter) {
-      if (config.formatter.indentStyle) rules.push(`Indent: ${config.formatter.indentStyle}`);
-      if (config.formatter.lineWidth) rules.push(`Line width: ${config.formatter.lineWidth}`);
+      if (config.formatter.indentStyle) {
+        rules.push(`Indent: ${config.formatter.indentStyle}`);
+      }
+      if (config.formatter.lineWidth) {
+        rules.push(`Line width: ${config.formatter.lineWidth}`);
+      }
     }
   } catch {
     rules.push("Unable to parse Biome config");
@@ -743,11 +759,21 @@ function parseTsConfig(content: string): ProjectConfig {
 
     if (config.compilerOptions) {
       const opts = config.compilerOptions;
-      if (opts.strict) rules.push("strict mode enabled");
-      if (opts.noImplicitAny) rules.push("noImplicitAny");
-      if (opts.strictNullChecks) rules.push("strictNullChecks");
-      if (opts.target) rules.push(`target: ${opts.target}`);
-      if (opts.module) rules.push(`module: ${opts.module}`);
+      if (opts.strict) {
+        rules.push("strict mode enabled");
+      }
+      if (opts.noImplicitAny) {
+        rules.push("noImplicitAny");
+      }
+      if (opts.strictNullChecks) {
+        rules.push("strictNullChecks");
+      }
+      if (opts.target) {
+        rules.push(`target: ${opts.target}`);
+      }
+      if (opts.module) {
+        rules.push(`module: ${opts.module}`);
+      }
     }
   } catch {
     rules.push("Unable to parse tsconfig");
@@ -875,6 +901,96 @@ assembly, bash, c, cpp, csharp, css, dart, dockerfile, elixir, clojure, go, git,
 // Track if prepare_for_coding was called (for review_code_quality context)
 let lastPrepareContext: { language: string; context?: string; timestamp: number } | null = null;
 
+type TextToolResult = { content: Array<{ type: "text"; text: string }> };
+
+const ARG_ALLOW_FALLBACK = "allow_fallback";
+const ARG_CODE_SUMMARY = "code_summary";
+const ARG_CONFIG_PATH = "config_path";
+
+const SECURITY_CONTEXT_KEYWORDS = [
+  "auth",
+  "login",
+  "password",
+  "user",
+  "input",
+  "form",
+  "database",
+  "sql",
+  "query",
+  "file",
+  "upload",
+  "path",
+  "network",
+  "api",
+  "request",
+  "secret",
+  "token",
+  "session",
+  "cookie",
+  "html",
+  "template",
+  "render",
+  "sanitize",
+  "validate",
+];
+
+function textResult(text: string): TextToolResult {
+  return { content: [{ type: "text", text }] };
+}
+
+async function prepareForCodingResponse(
+  language: string,
+  context: string,
+  framework: string,
+): Promise<TextToolResult> {
+  lastPrepareContext = { language, context, timestamp: Date.now() };
+
+  const sections: string[] = ["# Pre-Coding Checklist\n", await getChecklist(language)];
+  const contextLower = context.toLowerCase();
+  const needsSecurity = SECURITY_CONTEXT_KEYWORDS.some((kw) => contextLower.includes(kw));
+
+  if (needsSecurity) {
+    sections.push("\n---\n\n# Security Guidelines (Auto-detected)\n");
+    sections.push(await getSecurityChecklist());
+  }
+
+  if (framework) {
+    sections.push(`\n---\n\n# ${framework} Framework Guidelines\n`);
+    sections.push(await getFrameworkChecklist(language, framework));
+  }
+
+  sections.push("\n---\n\n# Anti-Patterns to Avoid\n");
+  sections.push(await getAntiPatterns());
+  sections.push("\n---\n\n## Reminder\n");
+  sections.push("After writing code, call `review_code_quality` to verify your implementation.");
+
+  return textResult(sections.join("\n"));
+}
+
+async function reviewCodeQualityResponse(codeSummary: string): Promise<TextToolResult> {
+  const sections: string[] = ["# Post-Coding Review\n", `Reviewing: ${codeSummary}\n`];
+  const fiveMinutes = 5 * 60 * 1000;
+
+  if (!lastPrepareContext || Date.now() - lastPrepareContext.timestamp > fiveMinutes) {
+    sections.push(
+      "\n⚠️ **Warning**: `prepare_for_coding` was not called before writing this code.\n",
+    );
+    sections.push("For best results, always call `prepare_for_coding` before writing code.\n");
+  }
+
+  sections.push("\n## Review Checklist\n");
+  sections.push("Verify your code against these common issues:\n");
+  sections.push(await getAntiPatterns());
+  sections.push("\n## Manual Verification Steps\n");
+  sections.push("1. **API Calls**: Verify all APIs/methods exist in the target version\n");
+  sections.push("2. **Error Handling**: Check all error paths are handled\n");
+  sections.push("3. **Security**: Review for injection, XSS, path traversal\n");
+  sections.push("4. **Types**: Ensure types are correct (no `any` unless justified)\n");
+  sections.push("5. **Edge Cases**: Consider null, empty, and boundary values\n");
+
+  return textResult(sections.join("\n"));
+}
+
 const server = new Server(
   {
     name: "SpecForge",
@@ -950,7 +1066,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
             type: "string",
             description: "Search term",
           },
-          allow_fallback: {
+          [ARG_ALLOW_FALLBACK]: {
             type: "boolean",
             description: "When false, only use search indexes and skip file scanning fallback",
           },
@@ -1041,7 +1157,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
       inputSchema: {
         type: "object" as const,
         properties: {
-          config_path: {
+          [ARG_CONFIG_PATH]: {
             type: "string",
             description: "Path to the project config file",
           },
@@ -1087,7 +1203,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
             enum: LANGUAGES,
             description: "Programming language of the code you wrote",
           },
-          code_summary: {
+          [ARG_CODE_SUMMARY]: {
             type: "string",
             description:
               "Brief summary of what code you wrote (e.g., 'login endpoint with bcrypt hashing')",
@@ -1151,7 +1267,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     }
 
     case "search_specs": {
-      const allowFallback = parseBoolean(typedArgs.allow_fallback);
+      const allowFallback = parseBoolean(typedArgs[ARG_ALLOW_FALLBACK]);
       const content = await searchSpecs(parseString(typedArgs.query), {
         allowFallback,
       });
@@ -1199,7 +1315,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     }
 
     case "get_project_rules": {
-      const configPath = parseString(typedArgs.config_path);
+      const configPath = parseString(typedArgs[ARG_CONFIG_PATH]);
       const content = await getProjectRules(configPath);
       return { content: [{ type: "text", text: content }] };
     }
@@ -1208,103 +1324,12 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       const language = parseString(typedArgs.language);
       const context = parseString(typedArgs.context) || "";
       const framework = parseString(typedArgs.framework) || "";
-
-      // Track this call for review_code_quality
-      lastPrepareContext = { language, context, timestamp: Date.now() };
-
-      // Build combined response
-      const sections: string[] = [];
-
-      // Always include language checklist
-      sections.push("# Pre-Coding Checklist\n");
-      sections.push(await getChecklist(language));
-
-      // Detect if security guidelines needed based on context
-      const securityKeywords = [
-        "auth",
-        "login",
-        "password",
-        "user",
-        "input",
-        "form",
-        "database",
-        "sql",
-        "query",
-        "file",
-        "upload",
-        "path",
-        "network",
-        "api",
-        "request",
-        "secret",
-        "token",
-        "session",
-        "cookie",
-        "html",
-        "template",
-        "render",
-        "sanitize",
-        "validate",
-      ];
-      const contextLower = context.toLowerCase();
-      const needsSecurity = securityKeywords.some((kw) => contextLower.includes(kw));
-
-      if (needsSecurity) {
-        sections.push("\n---\n\n# Security Guidelines (Auto-detected)\n");
-        sections.push(await getSecurityChecklist());
-      }
-
-      // Include framework checklist if specified
-      if (framework) {
-        sections.push(`\n---\n\n# ${framework} Framework Guidelines\n`);
-        sections.push(await getFrameworkChecklist(language, framework));
-      }
-
-      // Always include anti-patterns to watch for
-      sections.push("\n---\n\n# Anti-Patterns to Avoid\n");
-      sections.push(await getAntiPatterns());
-
-      // Add reminder
-      sections.push("\n---\n\n## Reminder\n");
-      sections.push(
-        "After writing code, call `review_code_quality` to verify your implementation.",
-      );
-
-      return { content: [{ type: "text", text: sections.join("\n") }] };
+      return prepareForCodingResponse(language, context, framework);
     }
 
     case "review_code_quality": {
-      const language = parseString(typedArgs.language);
-      const codeSummary = parseString(typedArgs.code_summary) || "code";
-
-      const sections: string[] = [];
-
-      sections.push("# Post-Coding Review\n");
-      sections.push(`Reviewing: ${codeSummary}\n`);
-
-      // Check if prepare_for_coding was called recently
-      const fiveMinutes = 5 * 60 * 1000;
-      if (!lastPrepareContext || Date.now() - lastPrepareContext.timestamp > fiveMinutes) {
-        sections.push(
-          "\n⚠️ **Warning**: `prepare_for_coding` was not called before writing this code.\n",
-        );
-        sections.push("For best results, always call `prepare_for_coding` before writing code.\n");
-      }
-
-      sections.push("\n## Review Checklist\n");
-      sections.push("Verify your code against these common issues:\n");
-
-      // Include anti-patterns
-      sections.push(await getAntiPatterns());
-
-      sections.push("\n## Manual Verification Steps\n");
-      sections.push("1. **API Calls**: Verify all APIs/methods exist in the target version\n");
-      sections.push("2. **Error Handling**: Check all error paths are handled\n");
-      sections.push("3. **Security**: Review for injection, XSS, path traversal\n");
-      sections.push("4. **Types**: Ensure types are correct (no `any` unless justified)\n");
-      sections.push("5. **Edge Cases**: Consider null, empty, and boundary values\n");
-
-      return { content: [{ type: "text", text: sections.join("\n") }] };
+      const codeSummary = parseString(typedArgs[ARG_CODE_SUMMARY]) || "code";
+      return reviewCodeQualityResponse(codeSummary);
     }
 
     case "get_initial_instructions": {
@@ -1334,8 +1359,10 @@ server.setRequestHandler(ListResourcesRequestSchema, async (request) => {
 });
 
 server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
-  const uri = request.params.uri;
-  const match = uri.match(/^spec:\/\/(\w+)\/(\w+)\/(.+)$/);
+  const {
+    params: { uri },
+  } = request;
+  const match = /^spec:\/\/(\w+)\/(\w+)\/(.+)$/.exec(uri);
 
   if (!match) {
     return { contents: [{ uri, mimeType: "text/plain", text: "Invalid URI format" }] };
