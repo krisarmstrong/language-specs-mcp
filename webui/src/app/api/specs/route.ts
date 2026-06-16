@@ -2,7 +2,11 @@ import { readdir, readFile, stat } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { type NextRequest, NextResponse } from "next/server";
 
-const SPECS_DIR = process.env.SPECS_DIR || resolve(process.cwd(), "..", "specs");
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
+const SPECS_DIR =
+  process.env.SPECS_DIR || resolve(/* turbopackIgnore: true */ process.cwd(), "..", "specs");
 
 async function fileExists(path: string): Promise<boolean> {
   try {
@@ -16,7 +20,7 @@ async function fileExists(path: string): Promise<boolean> {
 async function collectMarkdownFiles(dir: string, files: string[]): Promise<void> {
   const entries = await readdir(dir, { withFileTypes: true });
   for (const entry of entries) {
-    const fullPath = join(dir, entry.name);
+    const fullPath = join(/* turbopackIgnore: true */ dir, entry.name);
     if (entry.isDirectory()) {
       await collectMarkdownFiles(fullPath, files);
     } else if (entry.isFile() && entry.name.endsWith(".md")) {
@@ -35,7 +39,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "Language is required" }, { status: 400 });
   }
 
-  const languageDir = join(SPECS_DIR, language);
+  const languageDir = join(/* turbopackIgnore: true */ SPECS_DIR, language);
 
   if (!(await fileExists(languageDir))) {
     return NextResponse.json({ error: "Language not found" }, { status: 404 });
@@ -43,8 +47,8 @@ export async function GET(request: NextRequest) {
 
   // If topic is specified, return spec content
   if (topic && category) {
-    const specPath = join(languageDir, category, topic + ".md");
-    const altPath = join(languageDir, topic + ".md");
+    const specPath = join(/* turbopackIgnore: true */ languageDir, category, topic + ".md");
+    const altPath = join(/* turbopackIgnore: true */ languageDir, topic + ".md");
 
     let content = "";
     if (await fileExists(specPath)) {
@@ -60,7 +64,7 @@ export async function GET(request: NextRequest) {
 
   // If category is specified, list specs in category
   if (category) {
-    const categoryDir = join(languageDir, category);
+    const categoryDir = join(/* turbopackIgnore: true */ languageDir, category);
     if (!(await fileExists(categoryDir))) {
       return NextResponse.json({ specs: [] });
     }

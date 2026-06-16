@@ -2,8 +2,12 @@ import { mkdir, readdir, readFile, stat, unlink, writeFile } from "node:fs/promi
 import { join, resolve } from "node:path";
 import { type NextRequest, NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 const MEMORIES_DIR =
-  process.env.MEMORIES_DIR || resolve(process.cwd(), "..", ".specforge", "memories");
+  process.env.MEMORIES_DIR ||
+  resolve(/* turbopackIgnore: true */ process.cwd(), "..", ".specforge", "memories");
 
 interface Memory {
   id: string;
@@ -40,7 +44,7 @@ export async function GET() {
     for (const file of files) {
       if (!file.endsWith(".md")) continue;
 
-      const filePath = join(MEMORIES_DIR, file);
+      const filePath = join(/* turbopackIgnore: true */ MEMORIES_DIR, file);
       const content = await readFile(filePath, "utf-8");
       const stats = await stat(filePath);
 
@@ -72,7 +76,7 @@ export async function POST(request: NextRequest) {
     }
 
     const safeName = name.replace(/[^a-zA-Z0-9-_]/g, "-");
-    const filePath = join(MEMORIES_DIR, safeName + ".md");
+    const filePath = join(/* turbopackIgnore: true */ MEMORIES_DIR, safeName + ".md");
 
     if (await fileExists(filePath)) {
       return NextResponse.json({ error: "Memory already exists" }, { status: 409 });

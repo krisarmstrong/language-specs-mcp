@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
+  turbopack: {
+    root: new URL(".", import.meta.url).pathname,
+  },
   experimental: {
     serverActions: {
       bodySizeLimit: "2mb",
