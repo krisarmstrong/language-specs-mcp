@@ -42,7 +42,7 @@ def load_url_status() -> dict:
         return {}
     try:
         return json.loads(URL_STATUS_FILE.read_text(encoding="utf-8"))
-    except (json.JSONDecodeError, OSError):
+    except json.JSONDecodeError, OSError:
         return {}
 
 

@@ -375,7 +375,7 @@ def html_to_markdown(html: str, output: Path) -> bool:
                 timeout=PANDOC_TIMEOUT,
             )
             return True
-        except (OSError, subprocess.SubprocessError):
+        except OSError, subprocess.SubprocessError:
             pass
     markdown = _simple_html_to_markdown(html)
     if markdown:

@@ -96,7 +96,7 @@ def is_stale(language: str) -> bool:
         fetched_time = datetime.fromisoformat(content)
         cutoff = datetime.now(UTC) - timedelta(days=STALE_DAYS)
         return fetched_time < cutoff
-    except (ValueError, OSError):
+    except ValueError, OSError:
         return True
 
 

@@ -2,10 +2,10 @@
 name = "specforge-mcp"
 version = "1.7.1"
 description = "Language specification server for LLMs"
-requires-python = ">=3.11"
+requires-python = ">=3.14"
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py314"
 line-length = 100
 src = ["scripts", "tests"]
 
@@ -130,7 +130,7 @@ line-ending = "lf"
 docstring-code-format = true
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.14"
 warn_return_any = false
 warn_unused_configs = true
 warn_redundant_casts = true
@@ -141,11 +141,6 @@ disallow_incomplete_defs = false
 check_untyped_defs = true
 no_implicit_optional = true
 strict_equality = true
-
-[[tool.mypy.overrides]]
-module = ["tests.*"]
-disallow_untyped_defs = false
-disallow_incomplete_defs = false
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

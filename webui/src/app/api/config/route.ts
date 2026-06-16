@@ -2,8 +2,13 @@ import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { type NextRequest, NextResponse } from "next/server";
 
-const CONFIG_DIR = process.env.CONFIG_DIR || resolve(process.cwd(), "..", ".specforge");
-const CONFIG_FILE = join(CONFIG_DIR, "config.json");
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
+const CONFIG_DIR =
+  process.env.CONFIG_DIR ||
+  resolve(/* turbopackIgnore: true */ process.cwd(), "..", ".specforge");
+const CONFIG_FILE = join(/* turbopackIgnore: true */ CONFIG_DIR, "config.json");
 
 interface Config {
   specsDir: string;
@@ -15,7 +20,7 @@ interface Config {
 }
 
 const DEFAULT_CONFIG: Config = {
-  specsDir: resolve(process.cwd(), "..", "specs"),
+  specsDir: resolve(/* turbopackIgnore: true */ process.cwd(), "..", "specs"),
   cacheEnabled: true,
   cacheTTL: 60000,
   searchFallback: true,

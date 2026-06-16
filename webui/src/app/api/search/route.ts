@@ -2,7 +2,11 @@ import { readdir, readFile, stat } from "node:fs/promises";
 import { join, relative, resolve } from "node:path";
 import { type NextRequest, NextResponse } from "next/server";
 
-const SPECS_DIR = process.env.SPECS_DIR || resolve(process.cwd(), "..", "specs");
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
+const SPECS_DIR =
+  process.env.SPECS_DIR || resolve(/* turbopackIgnore: true */ process.cwd(), "..", "specs");
 
 const LANGUAGES = [
   "assembly",
@@ -104,7 +108,7 @@ async function collectAndSearchFiles(
     for (const entry of entries) {
       if (results.length >= 10) return;
 
-      const fullPath = join(dir, entry.name);
+      const fullPath = join(/* turbopackIgnore: true */ dir, entry.name);
       if (entry.isDirectory()) {
         await collectAndSearchFiles(fullPath, query, language, entry.name, results);
       } else if (entry.isFile() && entry.name.endsWith(".md")) {
@@ -133,7 +137,7 @@ export async function GET(request: NextRequest) {
   for (const language of LANGUAGES) {
     if (results.length >= 10) break;
 
-    const languageDir = join(SPECS_DIR, language);
+    const languageDir = join(/* turbopackIgnore: true */ SPECS_DIR, language);
     if (!(await fileExists(languageDir))) continue;
 
     await collectAndSearchFiles(languageDir, query.trim(), language, "spec", results);

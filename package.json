@@ -26,16 +26,16 @@
     "VERSIONING.md"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsgo",
     "build:all": "npm run build && npm run webui:build",
     "start": "node dist/index.js",
     "start:mcp": "node dist/index.js",
     "start:webui": "cd webui && npm run start",
-    "dev": "tsc --watch",
+    "dev": "tsgo --watch",
     "dev:webui": "cd webui && npm run dev",
     "webui:install": "cd webui && npm install",
     "webui:build": "cd webui && npm run build",
-    "lint": "tsc --noEmit",
+    "lint": "tsgo --noEmit",
     "lint:fix": "biome check --write src package.json tsconfig.json",
     "test": "npm run build && node --test tests/**/*.test.js",
     "commitlint": "commitlint --edit",
@@ -78,7 +78,7 @@
     "fetch:all": "python3 scripts/fetch.py",
     "fetch:delta": "python3 scripts/fetch.py --delta",
     "fetch:dry-run": "python3 scripts/fetch.py --dry-run",
-    "build:site": "tsc -p tsconfig.site.json && cp docs/site/build/health.js docs/site/health.js",
+    "build:site": "tsgo -p tsconfig.site.json && cp docs/site/build/health.js docs/site/health.js",
     "generate:health": "npm run build:site && python3 scripts/generate-health.py",
     "generate:index": "python3 scripts/generate.py index",
     "generate:search": "python3 scripts/generate.py search",
@@ -106,17 +106,24 @@
     "verify": "python3 scripts/verify-specs.py"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.29.0"
+    "@modelcontextprotocol/sdk": "1.29.0"
+  },
+  "overrides": {
+    "fast-uri": "3.1.2",
+    "hono": "4.12.25",
+    "qs": "6.15.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.14",
-    "@types/node": "^25.6.2",
-    "@commitlint/cli": "^20.5.3",
-    "@commitlint/config-conventional": "^20.5.3",
-    "husky": "^9.1.7",
-    "typescript": "^6.0.3"
+    "@biomejs/biome": "2.5.0",
+    "@commitlint/cli": "21.0.2",
+    "@commitlint/config-conventional": "21.0.2",
+    "@types/node": "25.9.3",
+    "@typescript/native-preview": "7.0.0-dev.20260616.1",
+    "husky": "9.1.7"
   },
   "engines": {
-    "node": ">=20.0.0"
-  }
+    "node": "26.3.0",
+    "npm": "11.17.0"
+  },
+  "packageManager": "npm@11.17.0"
 }

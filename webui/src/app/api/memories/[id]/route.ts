@@ -2,8 +2,12 @@ import { readFile, stat, unlink, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { type NextRequest, NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 const MEMORIES_DIR =
-  process.env.MEMORIES_DIR || resolve(process.cwd(), "..", ".specforge", "memories");
+  process.env.MEMORIES_DIR ||
+  resolve(/* turbopackIgnore: true */ process.cwd(), "..", ".specforge", "memories");
 
 async function fileExists(path: string): Promise<boolean> {
   try {
@@ -18,7 +22,7 @@ type MemoryRouteContext = { params: Promise<{ id: string }> };
 
 export async function GET(_request: NextRequest, { params }: MemoryRouteContext) {
   const { id } = await params;
-  const filePath = join(MEMORIES_DIR, `${id}.md`);
+  const filePath = join(/* turbopackIgnore: true */ MEMORIES_DIR, `${id}.md`);
 
   if (!(await fileExists(filePath))) {
     return NextResponse.json({ error: "Memory not found" }, { status: 404 });
@@ -40,7 +44,7 @@ export async function GET(_request: NextRequest, { params }: MemoryRouteContext)
 
 export async function PUT(request: NextRequest, { params }: MemoryRouteContext) {
   const { id } = await params;
-  const filePath = join(MEMORIES_DIR, `${id}.md`);
+  const filePath = join(/* turbopackIgnore: true */ MEMORIES_DIR, `${id}.md`);
 
   if (!(await fileExists(filePath))) {
     return NextResponse.json({ error: "Memory not found" }, { status: 404 });
@@ -74,7 +78,7 @@ export async function PUT(request: NextRequest, { params }: MemoryRouteContext) 
 
 export async function DELETE(_request: NextRequest, { params }: MemoryRouteContext) {
   const { id } = await params;
-  const filePath = join(MEMORIES_DIR, `${id}.md`);
+  const filePath = join(/* turbopackIgnore: true */ MEMORIES_DIR, `${id}.md`);
 
   if (!(await fileExists(filePath))) {
     return NextResponse.json({ error: "Memory not found" }, { status: 404 });
