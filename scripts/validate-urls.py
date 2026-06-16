@@ -155,26 +155,28 @@ def validate_url(url: str) -> URLResult:
 
     except HTTPError as exc:
         elapsed_ms = int((time.monotonic() - start) * 1000)
+        try:
+            # 301/302/307/308 redirects
+            if exc.code in (301, 302, 307, 308):
+                redirect_url = exc.headers.get("Location")
+                return URLResult(
+                    url=url,
+                    status="redirect",
+                    http_code=exc.code,
+                    redirect_url=redirect_url,
+                    response_time_ms=elapsed_ms,
+                )
 
-        # 301/302/307/308 redirects
-        if exc.code in (301, 302, 307, 308):
-            redirect_url = exc.headers.get("Location")
+            # Client/server errors
             return URLResult(
                 url=url,
-                status="redirect",
+                status="error",
                 http_code=exc.code,
-                redirect_url=redirect_url,
+                error_message=f"HTTP {exc.code}: {exc.reason}",
                 response_time_ms=elapsed_ms,
             )
-
-        # Client/server errors
-        return URLResult(
-            url=url,
-            status="error",
-            http_code=exc.code,
-            error_message=f"HTTP {exc.code}: {exc.reason}",
-            response_time_ms=elapsed_ms,
-        )
+        finally:
+            exc.close()
 
     except (URLError, ssl.SSLError) as exc:
         elapsed_ms = int((time.monotonic() - start) * 1000)
